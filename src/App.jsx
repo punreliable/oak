@@ -1,11 +1,44 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+import './App.scss'
+import Output from "./components/Output";
+import Footer from "./components/Footer";
+import '../node_modules/bootstrap/scss/bootstrap.scss';
+import * as bootstrap from 'bootstrap'
 
 function App() {
-  const [count, setCount] = useState(0)
 
+  let pokemonContent = <p>No content was found</p>;
+
+  const starterValue = 1;
+
+  const [count, setCount] = useState(0);
+
+  // const [pokedex, setPokedex] = useState(1);
+
+  const onButtonClickHandler = () => {};
+
+  const onChangeInputValueHandler = () => {};
+  
+  const fetchDataHandler = () => {};
+
+  const displayDataHandler = () => {};
+
+  const isChangeInputValueEnabled = () => {
+
+    return false;
+
+  };
+
+  const isButtonEnabled = () => {
+
+    return false;
+
+  };
+
+  const searchResult = 1;
+  
   return (
     <div className="App">
       <div>
@@ -18,16 +51,24 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <form>
+        <div class="form-group">
+          <fieldset>
+            <label for="pokedexNumber">Number</label>
+            <input className="form-control" name="pokedexNumber" value={starterValue} type="number" min="1" max="151" step="1" />
+          </fieldset>
+          </div>
+        </form>
+        <button  type="submit" className="btn btn-primary mt-2" onClick={ () => {} }>
+          Ask the Professor
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      { searchResult.length === 0 && pokemonContent }
+      { searchResult.length > 0 && Output }
+      
+      <Footer />
+
     </div>
   )
 }
