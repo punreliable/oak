@@ -7,7 +7,7 @@ const Footer = () => {
       <p className="readTheDocs">
         Click on the Vite and React logos to learn more
       </p>
-      <p className="readTheDocs">{year}</p>
+      <p className="readTheDocs">&copy;{year}</p>
     </>
   );
 };

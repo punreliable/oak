@@ -33,11 +33,27 @@ function App() {
     return false;
   };
 
+  const pokemon = [
+    {
+      id: "p0",
+      name: "Toilet Paper",
+      hp: 12,
+      type: "",
+      description: "",
+      height: "",
+      length: "",
+      weakness: "",
+      resistance: "",
+      entryNumber: "000",
+      baseXP: 0,
+    },
+  ];
+
   const searchResult = 1;
 
   return (
     <>
-      <SingleView />
+      <SingleView data={pokemon} />
       <div className="App">
         <div>
           <a href="https://vitejs.dev" target="_blank">
@@ -76,7 +92,7 @@ function App() {
           </button>
         </div>
         {searchResult.length === 0 && pokemonContent}
-        {searchResult.length > 0 && Output}
+        {searchResult.length > 0 && <Output />}
 
         <Footer />
       </div>

@@ -1,0 +1,63 @@
+// SingleView Component Styles
+:root {
+  font-size: 16px;
+}
+
+.name {
+  font-size: 1.6rem;
+}
+
+.hp {
+  font-size: 0.8rem;
+}
+
+.weight {
+  font-size: 0.8rem;
+}
+
+.type {
+  font-size: 0.8rem;
+}
+
+.image {
+  margin: 1rem auto;
+  padding: 1rem;
+  border: solid 0.5px black;
+  border-radius: 1rem;
+}
+
+.description {
+  font-size: 0.5rem;
+}
+
+.length {
+  font-size: 1rem;
+}
+
+.height {
+  font-size: 1rem;
+}
+
+.move {
+  font-size: 1rem;
+}
+
+.weakness {
+  font-size: 1rem;
+}
+
+.resistance {
+  font-size: 1rem;
+}
+
+.summary {
+  font-size: 1rem;
+}
+
+.level {
+  font-size: 1rem;
+}
+
+.entryNumber {
+  font-size: 1rem;
+}
