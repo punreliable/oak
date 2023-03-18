@@ -4,10 +4,10 @@ const Footer = () => {
 
   return (
     <>
-      <p className="readTheDocs">
+      {/* <p className="readTheDocs">
         Click on the Vite and React logos to learn more
-      </p>
-      <p className="readTheDocs">&copy;{year}</p>
+      </p> */}
+      <p className="readTheDocs mt-4">&copy;{year} Punreliable</p>
     </>
   );
 };

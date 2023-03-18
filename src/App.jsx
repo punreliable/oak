@@ -1,21 +1,24 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
 import "./App.scss";
 import Output from "./components/Output";
-import Footer from "./components/Footer";
+import Navbar from "./components/UI/Navbar";
+import Footer from "./components/UI/Footer";
+
 import "../node_modules/bootstrap/scss/bootstrap.scss";
 import * as bootstrap from "bootstrap";
 import SingleView from "./components/SingleView";
+import HomePage from "./pages/Home";
+import ResultsPage from "./pages/Results";
+import SearchForm from "./components/SearchForm";
 
-function App() {
+const App = () => {
   let pokemonContent = <p>No content was found</p>;
 
   const starterValue = 1;
 
   const [count, setCount] = useState(0);
-
-  // const [pokedex, setPokedex] = useState(1);
 
   const onButtonClickHandler = () => {};
 
@@ -30,13 +33,13 @@ function App() {
   };
 
   const isButtonEnabled = () => {
-    return false;
+    return false;o
   };
 
   const pokemon = [
     {
-      id: "p0",
-      name: "Toilet Paper",
+      id: "p25",
+      name: "Pikachu",
       hp: 12,
       type: "",
       description: "",
@@ -44,7 +47,7 @@ function App() {
       length: "",
       weakness: "",
       resistance: "",
-      entryNumber: "000",
+      entryNumber: 25,
       baseXP: 0,
     },
   ];
@@ -53,51 +56,14 @@ function App() {
 
   return (
     <>
+      {/* <Navbar /> */}
       <SingleView data={pokemon} />
       <div className="App">
-        <div>
-          <a href="https://vitejs.dev" target="_blank">
-            <img src={viteLogo} className="logo" alt="Vite logo" />
-          </a>
-          <a href="https://reactjs.org" target="_blank">
-            <img src={reactLogo} className="logo react" alt="React logo" />
-          </a>
-        </div>
-        <h1>Vite + React</h1>
-        <div className="card">
-          <form>
-            <div class="form-group">
-              <fieldset>
-                <label for="entryNumber">Number</label>
-                <input
-                  className="form-control"
-                  name="entryNumber"
-                  type="number"
-                  min="1"
-                  max="151"
-                  step="1"
-                  inputmode="numeric"
-                  pattern="\d*"
-                  placeholder="25"
-                />
-              </fieldset>
-            </div>
-          </form>
-          <button
-            type="submit"
-            className="btn btn-primary mt-2"
-            onClick={() => {}}
-          >
-            Ask the Professor
-          </button>
-        </div>
-        {searchResult.length === 0 && pokemonContent}
-        {searchResult.length > 0 && <Output />}
-
-        <Footer />
+      {/* <SearchForm /> */}
       </div>
+      <Footer />
     </>
   );
-}
+};
 
 export default App;
