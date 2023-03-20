@@ -16,7 +16,6 @@ import ResultsPage from "./pages/Results";
 // import SearchForm from "./components/SearchForm";
 
 const App = () => {
-
   let pokemonContent = <p>No content was found</p>;
   const starterValue = 1;
   const [count, setCount] = useState(0);
@@ -29,7 +28,8 @@ const App = () => {
   };
 
   const isButtonEnabled = () => {
-    return false;o
+    return false;
+    o;
   };
 
   const router = createBrowserRouter([
@@ -49,24 +49,23 @@ const App = () => {
     },
   ]);
 
-//   const pokemon = [
-//     {
-//       id: "p25",
-//       name: "Pikachu",
-//       hp: 12,
-//       type: "",
-//       description: "",
-//       height: "",
-//       length: "",
-//       weakness: "",
-//       resistance: "",
-//       entryNumber: 25,
-//       baseXP: 0,
-//     },
-//   ];
-//
-//   const searchResult = 1;
-
+  //   const pokemon = [
+  //     {
+  //       id: "p25",
+  //       name: "Pikachu",
+  //       hp: 12,
+  //       type: "",
+  //       description: "",
+  //       height: "",
+  //       length: "",
+  //       weakness: "",
+  //       resistance: "",
+  //       entryNumber: 25,
+  //       baseXP: 0,
+  //     },
+  //   ];
+  //
+  //   const searchResult = 1;
 
   return (
     <div className="App">

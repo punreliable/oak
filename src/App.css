@@ -11,13 +11,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
-
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em rgba(100, 108, 255, 0.6666666667));
 }
-
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em rgba(97, 218, 251, 0.6666666667));
 }
 
 @keyframes logo-spin {
