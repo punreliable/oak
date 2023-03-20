@@ -1,5 +1,6 @@
 import SearchForm from "../components/SearchForm";
 import reactLogo from "../assets/react.svg";
+import pokeball from "../assets/pokeball.svg";
 
 const Search = (props) => {
   const submitEntryDataHandler = (enteredData) => {
@@ -15,7 +16,7 @@ const Search = (props) => {
     <div className="App">
       <div>
         <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+          <img src={pokeball} className="logo react" alt="React logo" />
         </a>
       </div>
       <h1 className="title">Search the Pokedex</h1>
