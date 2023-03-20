@@ -78,9 +78,9 @@ const SingleView = (props) => {
   const MovesList = moves.map( move => <div className="row"><div className="col-md-12 col-sm-12"><h4 className={styles.move}>{move.name}</h4></div></div> );
   */
   return (
-    <div className="container card">
+    <div className={styles.card}>
       <div className={styles.contents}>
-      <div className="row">
+      <div className={styles.row}>
         <div className="offset-md-6 col-md-3 col-sm-6">
           <h2 className={styles.hp}>HP:</h2>
         </div>
@@ -88,7 +88,7 @@ const SingleView = (props) => {
           <h2 className={styles.type}>Type</h2>
         </div>
       </div>
-      <div className="row">
+      <div className={styles.row}>
         <div className="col-md-6 col-sm-12">
           <h1 className={styles.name}>{capitalizeFirstLetter(pokemon.name)}</h1>
         </div>
@@ -103,7 +103,7 @@ const SingleView = (props) => {
           />
         </div>
       </div>
-      <div className="row">
+      <div className={styles.row}>
         <div className="col-md-6 col-sm-12">
           <h3 className={styles.description}>Description: </h3>
         </div>
@@ -118,7 +118,7 @@ const SingleView = (props) => {
 
 
 
-{ moveList }
+      { moveList }
 
 
 
