@@ -1,13 +1,12 @@
 import React from "react";
 import { useState } from "react";
-import reactLogo from "../assets/react.svg";
 
 const SearchForm = (props) => {
   const [enteredNumber, setEnteredNumber] = useState("");
 
   const numberChangeHandler = (event) => {
-    console.log("changing numbers!");
     setEnteredNumber(event.target.value);
+    console.log("Number changed to: " + event.target.value);
   };
 
   const submitHandler = (event) => {

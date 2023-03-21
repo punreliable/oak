@@ -1,6 +1,5 @@
-import SearchForm from "../components/SearchForm";
-import reactLogo from "../assets/react.svg";
 import pokeball from "../assets/pokeball.svg";
+import SearchForm from "../components/SearchForm";
 
 const Search = (props) => {
   const entryDataHandler = (enteredData) => {
@@ -12,10 +11,23 @@ const Search = (props) => {
     // console.log(entryData);
     props.enteredData(entryData);
   };
+
+  const saveExpenseDataHandler = (enteredExpenseData) => {
+    const expenseData = {
+      ...enteredExpenseData,
+      id: Math.random().toString(),
+    };
+    props.onAddExpense(expenseData);
+  };
+
   return (
     <div className="App">
       <div>
-        <a href="https://reactjs.org" target="_blank">
+        <a
+          href="http://pokeapi.co"
+          target="_blank"
+          title="Official Pokémon API"
+        >
           <img src={pokeball} className="logo react" alt="React logo" />
         </a>
       </div>

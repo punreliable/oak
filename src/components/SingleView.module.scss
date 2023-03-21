@@ -3,6 +3,19 @@
   font-size: 16px;
 }
 
+.card {
+  background-color: #ffffff;
+  border-radius: 0.25rem;
+  border: solid 0.25rem #ffffff;
+  filter: drop-shadow(10px 10px 4px darken(#ffffff, 10%));
+}
+
+.contents {
+  background-color: #fafafa;
+  border-radius: 0.25rem;
+  border: solid 0.0635rem darken(#fafafa, 0.9);
+}
+
 .name {
   font-size: 1.6rem;
 }
