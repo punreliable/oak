@@ -12,52 +12,15 @@ const SingleView = (props) => {
 
   const number = props.entryNumber;
   const url = 'https://pokeapi.co/api/v2/pokemon';
-  //onst requestURL = url + number.toString();
 
   const single = useEffect( () => {
 
     axios.get(`${url}/ditto`).then((response) => {
 
       getPokemon(response.data);
-     // setName(response.data);
-      // console.log(response.data);
     });
   }, []);
 
-
-
-//   const [name, setName] = useState('');
-//
-//   const nameHandler = () => {
-//     if(!response.data.name) return 'Not Found';
-//     return response.data.name;
-//   };
-
-
-
-//   const singlePokemon = [
-//     {
-//       id: "p0",
-//       name: "Pikachu",
-//       hp: 12,
-//       type: "",
-//       description: "",
-//       height: "",
-//       length: "",
-//       weakness: "",
-//       resistance: "",
-//       entryNumber: 25,
-//       baseXP: 0,
-//       image:
-//         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png",
-//     },
-//   ];
-//
-//   const name = singlePokemon.name;
-//   const entryNumber = singlePokemon.entryNumber;
-//   const image = singlePokemon.image;
-//   const hp = singlePokemon.hp;
-//
 
   if(!pokemon) return "No Pokemon";
 
@@ -74,9 +37,6 @@ const SingleView = (props) => {
 }
 );
 
-  /*
-  const MovesList = moves.map( move => <div className="row"><div className="col-md-12 col-sm-12"><h4 className={styles.move}>{move.name}</h4></div></div> );
-  */
   return (
     <div className={styles.card}>
       <div className={styles.contents}>
@@ -115,13 +75,7 @@ const SingleView = (props) => {
         </div>
       </div>
 
-
-
-
       { moveList }
-
-
-
 
       <div className="row">
         <div className="col-md-12 col-sm-12">

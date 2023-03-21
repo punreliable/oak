@@ -3,13 +3,13 @@ import reactLogo from "../assets/react.svg";
 import pokeball from "../assets/pokeball.svg";
 
 const Search = (props) => {
-  const submitEntryDataHandler = (enteredData) => {
-    console.log("hello");
+  const entryDataHandler = (enteredData) => {
+    // console.log("hello");
     const entryData = {
       ...enteredData,
       id: Math.random().toString(),
     };
-    console.log(entryData);
+    // console.log(entryData);
     props.enteredData(entryData);
   };
   return (
@@ -21,7 +21,7 @@ const Search = (props) => {
       </div>
       <h1 className="title">Search the Pokedex</h1>
       <div className="card">
-        <SearchForm onSubmitEntryData={submitEntryDataHandler} />
+        <SearchForm onSubmitEntryData={entryDataHandler} />
       </div>
     </div>
   );

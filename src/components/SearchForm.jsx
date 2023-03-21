@@ -21,7 +21,7 @@ const SearchForm = (props) => {
     props.onSubmitEntryData(entryData);
     //console.log(entryData);
     setEnteredNumber(1);
-    this.props.history.push("/results");
+    // this.props.history.push("/results");
   };
 
   return (
