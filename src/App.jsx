@@ -3,11 +3,13 @@ import { useState, useEffect } from "react";
 import * as bootstrap from "bootstrap";
 import "./App.scss";
 import "../node_modules/bootstrap/scss/bootstrap.scss";
-import {professor} from "./assets/oak.svg";
+// import {professor} from "./assets/oak.svg";
 //import RootLayout from "./pages/Root";
 //import HomePage from "./pages/Home";
 //import ResultsPage from "./pages/Results";
 import axios from 'axios';
+import styled from "styled-components";
+import professorOak from "./assets/oak.png";
 
 const App = () => {
   
@@ -48,13 +50,25 @@ const App = () => {
 
   return (
     <div className="App">
-      <img className="professorOak" src={professor} alt="Picture of Professor Oak" width="256" height="256" />
+      <Professor>
+        <img className="professorOak" src={professorOak} alt="Picture of Professor Oak" width="256" height="256" />
+      </Professor>
       { pokemon && (
         <h1>Hello, { prettyName( pokemon.name ) }!</h1>
       )}
       {/* <RouterProvider router={router} /> */}
     </div>
   );
+  
+  const Professor = styled.div`
+  background-size: cover;
+  background-repeat:norepeat;
+  background-position: center center;
+  height:256px;
+  width: 100%;
+  margin: 0 auto;
+  `;
+  
 };
 
 export default App;
