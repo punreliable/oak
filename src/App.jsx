@@ -5,6 +5,11 @@ import "./App.scss";
 import "../node_modules/bootstrap/scss/bootstrap.scss";
 // import ProfessorOak from "./components/professorOak";
 
+import { gsap } from "gsap/dist/gsap";  
+import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
+
+gsap.registerPlugin(MotionPathPlugin);
+
 import professorOak from "./assets/oak.svg";
 //import RootLayout from "./pages/Root";
 //import HomePage from "./pages/Home";
@@ -23,10 +28,11 @@ const App = () => {
   const [pokemonAbilities, setPokemonAbilities] = useState( null );
   const [pokemonHeight, setPokemonHeight] = useState( null );
   const [pokemonWeight, setPokemonWeight] = useState( null );
+  const [pokemonXP, setPokemonXP] = useState( null );
   
-  // let pokemonMoves = {};
-  // let pokemonIMGs = {};
-  // let pokemonSpecies = {};
+  let pokemonMoves = {};
+  let pokemonIMGs = {};
+  let pokemonSpecies = {};
   
   const prettyName = (name) => {
     return name.charAt(0).toUpperCase() + name.slice(1);
@@ -36,51 +42,47 @@ const App = () => {
     axios.get( requestURL )
     .then( res => { 
       setPokemon(res.data)
-      setPokemonHeight(res.data)
-      setPokemonWeight(res.data)
-      console.log(res.data.base_experience)
+      setPokemonHeight(res.data.height)
+      setPokemonWeight(res.data.weight)
+      setPokemonXP(res.data.base_experience)
+      for ( res.data.abilities.ability in res.data.abilities ) {
+        console(ability.name);
+      }
+      console.log(res.data.abilities)
      })
     .catch( err => { console.log(err) })
   }, [])
 
-
-
   return (
     <div className="App">
       { pokemon && (
-        <>
-        <div className="row">
-          <img src={professorOak} id="imgProfessorOak" alt="Professor Oak" height="128" width="128" />
-        </div>
-        <h1>
-          Hello,<br />{ prettyName( pokemon.name ) } <sup> #{pokemon.id}!</sup>
-        </h1>
+        <section className="nes-container">
+        <h1>Hello,<br />&nbsp;{ prettyName( pokemon.name ) }</h1>
+        <img 
+        className="nes-avatar is-large avatar" 
+        alt="Gravatar image example" 
+        src="https://www.gravatar.com/avatar?s=15" />
         <p>Height: {pokemon.height}in</p>
         <p>Weight: {pokemon.weight}lb</p>
         <p>Base Experience: {pokemon.base_experience}xp</p>
-        </>
+
+          <section className="message-list" id="professorMessages">
+            <section className="message -right">
+              <div className="nes-balloon from-right">
+                <p>#{pokemon.id} in Kanto Pokedex!</p>
+              </div>
+              <div className="wrapperOak">
+                <img src={professorOak} id="imgProfessorOak" alt="Professor Oak" height="64" width="64" />
+              </div>
+            </section>
+          </section>
+        </section>
+        
+
       )}
     </div>
   ); 
   
-  // const Professor = styled.div`
-  // background-size: cover;
-  // background-repeat:norepeat;
-  // background-position: center center;
-  // height:256px;
-  // width: 100%;
-  // margin: 0 auto;
-  // `;
-  
-  // const Professorh1 = styled.h1`
-  // font-size: 3.2rem;
-  // margin: 4rem;
-  // sup {
-  //   font-size: 1.6rem;
-  //   top: -0.8rem;
-  // }
-  // `;
-  // 
 };
 
 export default App;
