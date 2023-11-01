@@ -57,7 +57,7 @@ const App = () => {
     <div className="App">
       { pokemon && (
         <section className="nes-container">
-        <h1>Hello,<br />&nbsp;{ prettyName( pokemon.name ) }</h1>
+        <h1 className="oakHello">Hello, { prettyName( pokemon.name ) }</h1>
         <img 
         className="nes-avatar is-large avatar" 
         alt="Gravatar image example" 
@@ -69,7 +69,7 @@ const App = () => {
           <section className="message-list" id="professorMessages">
             <section className="message -right">
               <div className="nes-balloon from-right">
-                <p>#{pokemon.id} in Kanto Pokedex!</p>
+                <p>Entry #{pokemon.id} in <br />Kanto Pokedex!</p>
               </div>
               <div className="wrapperOak">
                 <img src={professorOak} id="imgProfessorOak" alt="Professor Oak" height="64" width="64" />
