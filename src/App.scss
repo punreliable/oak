@@ -3,12 +3,24 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: 'Press Start 2P', serif;
 }
 
-.professorOak {
-  height: 512px;
-  width: 512px;
+
+.row {
   
+  margin: 2rem;
+    
+  .imgProfessorOak {
+    
+    //padding: 0 1rem;
+    //margin: 1rem;
+    margin-bottom: 2rem;
+    height: 256px;
+    width: 256px;
+    
+  }
+
 }
 
 
