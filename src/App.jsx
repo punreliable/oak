@@ -21,6 +21,8 @@ const App = () => {
   const [pokemon, setPokemon] = useState( null );
   const [pokemonID, setPokemonID] = useState( null );
   const [pokemonAbilities, setPokemonAbilities] = useState( null );
+  const [pokemonHeight, setPokemonHeight] = useState( null );
+  const [pokemonWeight, setPokemonWeight] = useState( null );
   
   // let pokemonMoves = {};
   // let pokemonIMGs = {};
@@ -34,7 +36,9 @@ const App = () => {
     axios.get( requestURL )
     .then( res => { 
       setPokemon(res.data)
-      console.log(res.data)
+      setPokemonHeight(res.data)
+      setPokemonWeight(res.data)
+      console.log(res.data.base_experience)
      })
     .catch( err => { console.log(err) })
   }, [])
@@ -48,9 +52,12 @@ const App = () => {
         <div className="row">
           <img src={professorOak} id="imgProfessorOak" alt="Professor Oak" height="128" width="128" />
         </div>
-        <professorh1>
-          Hello, { prettyName( pokemon.name ) } <sup> #{pokemon.id}!</sup>
-        </professorh1>
+        <h1>
+          Hello,<br />{ prettyName( pokemon.name ) } <sup> #{pokemon.id}!</sup>
+        </h1>
+        <p>Height: {pokemon.height}in</p>
+        <p>Weight: {pokemon.weight}lb</p>
+        <p>Base Experience: {pokemon.base_experience}xp</p>
         </>
       )}
     </div>
@@ -65,15 +72,15 @@ const App = () => {
   // margin: 0 auto;
   // `;
   
-  const professorh1 = styled.h1`
-  font-size: 3.2rem;
-  margin: 4rem;
-  sup {
-    font-size: 1.6rem;
-    top: -0.8rem;
-  }
-  `;
-  
+  // const Professorh1 = styled.h1`
+  // font-size: 3.2rem;
+  // margin: 4rem;
+  // sup {
+  //   font-size: 1.6rem;
+  //   top: -0.8rem;
+  // }
+  // `;
+  // 
 };
 
 export default App;
