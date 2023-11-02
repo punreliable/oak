@@ -65,7 +65,7 @@ const App = () => {
           <h1 className="pokemonName">{ prettyName( pokemon.name ) }</h1>
           
           <img 
-            className="nes-avatar is-large avatar" 
+            className="nes-avatar avatar pokemonAvatar" 
             alt="Gravatar image example" 
             src={pokemon.sprites.front_default} />
         
