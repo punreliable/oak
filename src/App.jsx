@@ -28,7 +28,7 @@ const App = () => {
   
   const [pokemon, setPokemon] = useState( null );
   const [pokemonID, setPokemonID] = useState( null );
-  // const [pokemonAbilities, setPokemonAbilities] = useState( null );
+  const [pokemonAbilities, setPokemonAbilities] = useState( null );
   const [pokemonHeight, setPokemonHeight] = useState( null );
   const [pokemonWeight, setPokemonWeight] = useState( null );
   const [pokemonXP, setPokemonXP] = useState( null );
@@ -37,19 +37,6 @@ const App = () => {
   let pokemonMoves = {};
   let pokemonIMGs = {};
   let pokemonSpecies = {};
-
-  const getPokemonTypes = (res.data.types) => {
-    return(
-      for (let i = 0; i < res.data.types.length; i++ ) {
-        
-        <PokemonTypes type={res.data.types[i]} />
-        
-      }
-      
-    );
-  };
-
-
   
   let imageSrc = 'https://www.gravatar.com/avatar?s=15';
   
@@ -62,10 +49,7 @@ const App = () => {
       setPokemonWeight(res.data.weight)
       setPokemonXP(res.data.base_experience)
       setPokemonTypes(res.data.types)
-      // for ( res.data.abilities.ability in res.data.abilities ) {
-      //  console.log(res.data.types)
-      // }
-      // console.log(res.data.abilities)
+      console.log(res.data.types)
      })
     .catch( err => { console.log(err) })
   }, [])
