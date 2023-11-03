@@ -1,6 +1,6 @@
 import react from 'React';
 
-const PokemonAbilities = () => {
+const PokemonAbilities = (props) => {
 	return(
 		<div className="pokemonAbilities">
 			<h2 className="sectionHeadline">Abilities</h2>

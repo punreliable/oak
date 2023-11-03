@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import * as bootstrap from "bootstrap";
 import "./App.scss";
 import "../node_modules/bootstrap/scss/bootstrap.scss";
+import prettyName from "./utilities/prettyName";
 // import ProfessorOak from "./components/professorOak";
 
 import { gsap } from "gsap/dist/gsap";  
@@ -17,6 +18,8 @@ import professorOak from "./assets/oak.svg";
 import axios from 'axios';
 import styled from "styled-components";
 
+import PokemonTypes from "./components/PokemonTypes";
+
 const App = () => {
   
   const number = Math.floor(Math.random() * 151) + 1;
@@ -29,14 +32,24 @@ const App = () => {
   const [pokemonHeight, setPokemonHeight] = useState( null );
   const [pokemonWeight, setPokemonWeight] = useState( null );
   const [pokemonXP, setPokemonXP] = useState( null );
+  const [pokemonTypes, setPokemonTypes] = useState( null );
   
   let pokemonMoves = {};
   let pokemonIMGs = {};
   let pokemonSpecies = {};
-  
-  const prettyName = (name) => {
-    return name.charAt(0).toUpperCase() + name.slice(1);
-  }
+
+  const getPokemonTypes = (res.data.types) => {
+    return(
+      for (let i = 0; i < res.data.types.length; i++ ) {
+        
+        <PokemonTypes type={res.data.types[i]} />
+        
+      }
+      
+    );
+  };
+
+
   
   let imageSrc = 'https://www.gravatar.com/avatar?s=15';
   
@@ -48,8 +61,9 @@ const App = () => {
       setPokemonHeight(res.data.height)
       setPokemonWeight(res.data.weight)
       setPokemonXP(res.data.base_experience)
+      setPokemonTypes(res.data.types)
       // for ( res.data.abilities.ability in res.data.abilities ) {
-      // console.log(res.data.sprites)
+      //  console.log(res.data.types)
       // }
       // console.log(res.data.abilities)
      })
@@ -60,7 +74,7 @@ const App = () => {
     <div className="App">
       { pokemon && (
         <section className="nes-container">
-          
+           
           <h1 className="oakHello">Hello,</h1>
           <h1 className="pokemonName">{ prettyName( pokemon.name ) }</h1>
           
@@ -72,6 +86,8 @@ const App = () => {
           <p>Height: {pokemon.height}in</p>
           <p>Weight: {pokemon.weight}lb</p>
           <p>Base XP: {pokemon.base_experience}xp</p>
+          
+          <PokemonTypes types={pokemon.types}></PokemonTypes>
 
           <section className="message-list" id="professorMessages">
             
