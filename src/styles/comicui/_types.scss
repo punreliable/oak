@@ -1,0 +1,317 @@
+// List Box Styles for Pokemon Types
+
+// There are 18 Types of Pokemon they are:
+
+
+
+//	01. Normal
+.type-normal {	
+	$color-normal: #A8A878;
+	$border-color-normal: #6D6D4E;
+}
+	
+//	02. Fighting
+.type-fighting {	
+	$color-fighting: #C03028;
+	$border-color-fighting: #7D1F1A;
+}	
+	
+//	03. Flying
+.type-flying {	
+	$color-flying: #A890F0;
+	$border-color-flying: #6D5E9C;
+}	
+	
+//	04. Posion
+.type-posion {	
+	$color-poison: #A040A0;
+	$border-color-poison: #682A68;
+}	
+	
+//	05. Ground
+.type-ground {	
+	$color-ground: #E0C068;
+	$border-color-ground: #927D44;
+}
+	
+//	06. Rock
+.type-rock {	
+	$color-rock: #B8A038;
+	$border-color-rock: #786824;
+}	
+	
+//	07. Bug
+.type-bug {	
+	$color-bug: #A8B820;
+	$border-color-bug: #6D7815;
+}	
+	
+//	08. Ghost
+.type-ghost {	
+	$color-ghost: #705898;
+	$border-color-ghost: #493963;
+}	
+	
+//	09. Steel
+.type-steel {	
+	$color-steel: #B8B8D0;
+	$border-color-steel: #787887;
+}	
+	
+//	10. Fire
+.type-fire {	
+	$color-fire: #F08030;
+	$border-color-fire: #9C531F;
+}	
+	
+//	11. Water
+.type-water {	
+	$color-water: #6890F0;
+	$border-color-water: #445E9C;
+}	
+	
+//	12. Grass
+.type-grass {	
+	$color-grass: #78C850;
+	$border-color-grass: #4E8234;
+}	
+	
+//	13. Electric
+.type-electric {	
+	$color-electric: #F8D030;
+	$border-color-: #A1871F;
+}	
+	
+//	14. Psychic
+.type-psyhic {	
+	$color-psychic: #F85888;
+	$border-color-psychic: #A13959;
+}	
+	
+//	15. Ice
+.type-ice {	
+	$color-ice: #98D8D8;
+	$border-color-ice: #638D8D;
+}	
+	
+//	16. Dragon
+.type-dragon {	
+	$color-dragon: #7038F8;
+	$border-color-: #4924A1;
+}
+	
+//	17. Dark
+.type-dark {	
+	$color-dark: #705848;
+	$border-color-dark: #49392F;	
+}	
+//	18. Fairy
+.type-fairy {	
+	$color-fairy: #EE99AC;
+	$border-color-fairy: #9B6470;
+}
+
+// LINKS
+
+//	01. Normal
+
+a.type-normal {
+
+	$color-normal: #A8A878;
+	$border-color-normal: #6D6D4E;
+
+	&:hover {
+
+		background-color: darken($color-normal, 10%);
+	}
+}
+
+//	02. Fighting
+a.type-fighting {
+	$color-fighting: #C03028;
+	$border-color-fighting: #7D1F1A;
+
+	&:hover {
+
+		background-color: darken($color-fighting, 10%);
+	}
+}
+
+//	03. Flying
+a.type-flying {
+	$color-flying: #A890F0;
+	$border-color-flying: #6D5E9C;
+
+	&:hover {
+
+		background-color: darken($color-flying, 10%);
+	}
+}
+
+//	04. Posion
+a.type-posion {
+	$color-poison: #A040A0;
+	$border-color-poison: #682A68;
+
+	&:hover {
+
+		background-color: darken($color-poison, 10%);
+	}
+}
+
+//	05. Ground
+a.type-ground {
+	$color-ground: #E0C068;
+	$border-color-ground: #927D44;
+
+	&:hover {
+
+		background-color: darken($color-ground, 10%);
+	}
+}
+
+//	06. Rock
+a.type-rock {
+	$color-rock: #B8A038;
+	$border-color-rock: #786824;
+
+	&:hover {
+
+		background-color: darken($color-rock, 10%);
+	}
+}
+
+//	07. Bug
+a.type-bug {
+	$color-bug: #A8B820;
+	$border-color-bug: #6D7815;
+
+	&:hover {
+
+		background-color: darken($color-bug, 10%);
+	}
+}
+
+//	08. Ghost
+a.type-ghost {
+	$color-ghost: #705898;
+	$border-color-ghost: #493963;
+
+	&:hover {
+
+		background-color: darken($color-ghost, 10%);
+	}
+}
+
+//	09. Steel
+a.type-steel {
+	$color-steel: #B8B8D0;
+	$border-color-steel: #787887;
+
+	&:hover {
+
+		background-color: darken($color-steel, 10%);
+	}
+}
+
+//	10. Fire
+a.type-fire {
+	$color-fire: #F08030;
+	$border-color-fire: #9C531F;
+
+	&:hover {
+
+		background-color: darken($color-fire, 10%);
+	}
+}
+
+//	11. Water
+a.type-water {
+	$color-water: #6890F0;
+	$border-color-water: #445E9C;
+
+	&:hover {
+
+		background-color: darken($color-water, 10%);
+	}
+}
+
+//	12. Grass
+a.type-grass {
+
+	$color-grass: #78C850;
+	$border-color-grass: #4E8234;
+
+	&:hover {
+
+		background-color: darken($color-grass, 10%);
+	}
+}
+
+//	13. Electric
+a.type-electric {
+	$color-electric: #F8D030;
+	$border-color-: #A1871F;
+
+	&:hover {
+
+		background-color: darken($color-electric, 10%);
+	}
+}
+
+//	14. Psychic
+a.type-psychic {
+	$color-psychic: #F85888;
+	$border-color-psychic: #A13959;
+
+	&:hover {
+
+		background-color: darken($color-psychic, 10%);
+	}
+}
+
+//	15. Ice
+a.type-ice {
+	$color-ice: #98D8D8;
+	$border-color-ice: #638D8D;
+
+	&:hover {
+
+		background-color: darken($color-ice, 10%);
+	}
+}
+
+//	16. Dragon
+a.type-dragon {
+
+	$color-dragon: #7038F8;
+	$border-color-dragon: #4924A1;
+
+	&:hover {
+
+		background-color: darken($color-dragon, 10%);
+	}
+}
+
+//	17. Dark
+a.type-dark {
+	$color-dark: #705848;
+	$border-color-dark: #49392F;
+
+	&:hover {
+
+		background-color: darken($color-dark, 10%);
+	}
+}
+
+//	18. Fairy
+a.type-fairy {
+
+	$color-fairy: #EE99AC;
+	$border-color-fairy: #9B6470;
+
+	&:hover {
+
+		background-color: darken($color-fairy, 10%);
+	}
+}

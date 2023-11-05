@@ -1,0 +1,17 @@
+/* Error: Undefined variable.
+ *    ,
+ * 22 |   $colors: ($base-color, map-get($default-colors, "shadow"));
+ *    |             ^^^^^^^^^^^
+ *    '
+ *   /Volumes/Macintosh HD/Users/brian/Sites/comicui/poke/styles/nes/form/radios.scss 22:13  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Undefined variable.\a    \2577 \a 22 \2502    $colors: ($base-color, map-get($default-colors, "shadow"));\a    \2502              ^^^^^^^^^^^\a    \2575 \a   /Volumes/Macintosh HD/Users/brian/Sites/comicui/poke/styles/nes/form/radios.scss 22:13  root stylesheet';
+}

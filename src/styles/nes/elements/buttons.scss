@@ -1,0 +1,109 @@
+@mixin btn-style($color, $background, $hover-background, $shadow) {
+  color: $color;
+  background-color: $background;
+
+  &::after {
+    position: absolute;
+    top: -$border-size;
+    right: -$border-size;
+    bottom: -$border-size;
+    left: -$border-size;
+    content: "";
+    box-shadow: inset -4px -4px $shadow;
+  }
+
+  &:hover {
+    color: $color;
+    text-decoration: none;
+    background-color: $hover-background;
+
+    &::after {
+      box-shadow: inset -6px -6px $shadow;
+    }
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 6px rgba($shadow, 0.3);
+  }
+
+  &:active:not(.is-disabled)::after {
+    box-shadow: inset 4px 4px $shadow;
+  }
+}
+
+// Default style
+.nes-btn {
+  @include compact-rounded-corners();
+
+  position: relative;
+  display: inline-block;
+  padding: 6px 8px;
+  margin: $border-size;
+  text-align: center;
+  vertical-align: middle;
+  cursor: $cursor-click-url, pointer;
+  user-select: none;
+
+  @include btn-style(
+    $base-color,
+    map-get($default-colors, "normal"),
+    map-get($default-colors, "hover"),
+    map-get($default-colors, "shadow")
+  );
+
+  &:focus {
+    outline: 0;
+  }
+
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus {
+    color: $base-color;
+    cursor: not-allowed;
+    background-color: map-get($disabled-colors, "normal");
+    box-shadow: inset -4px -4px map-get($disabled-colors, "shadow");
+    opacity: 0.6;
+  }
+
+  &.is-disabled:hover::after {
+    box-shadow: inset -4px -4px map-get($disabled-colors, "shadow");
+  }
+
+  // Other styles
+  // prettier-ignore
+  $types:
+    "primary" $background-color map-get($primary-colors, "normal") map-get($primary-colors, "hover") map-get($primary-colors, "shadow"),
+    "success" $background-color map-get($success-colors, "normal") map-get($success-colors, "hover") map-get($success-colors, "shadow"),
+    "warning" $base-color map-get($warning-colors, "normal") map-get($warning-colors, "hover") map-get($warning-colors, "shadow"),
+    "error" $background-color map-get($error-colors, "normal") map-get($error-colors, "hover") map-get($error-colors, "shadow"),
+    "bug" $background-color map-get($bug-type-colors, "normal") map-get($bug-type-colors, "hover") map-get($bug-type-colors, "shadow"),
+    "dark" $background-color map-get($dark-type-colors, "normal") map-get($dark-type-colors, "hover") map-get($dark-type-colors, "shadow"),
+    "dragon" $background-color map-get($dragon-type-colors, "normal") map-get($dragon-type-colors, "hover") map-get($dragon-type-colors, "shadow"),
+    "electric" $base-color map-get($electric-type-colors, "normal") map-get($electric-type-colors, "hover") map-get($electric-type-colors, "shadow"),
+    "fairy" $background-color map-get($fairy-type-colors, "normal") map-get($fairy-type-colors, "hover") map-get($fairy-type-colors, "shadow"),
+    "fight" $background-color map-get($fighting-type-colors, "normal") map-get($fighting-type-colors, "hover") map-get($fighting-type-colors, "shadow"),
+    "fire" $base-color map-get($fire-type-colors, "normal") map-get($fire-type-colors, "hover") map-get($fire-type-colors, "shadow"),
+    "flying" $background-color map-get($flying-type-colors, "normal") map-get($flying-type-colors, "hover") map-get($flying-type-colors, "shadow"),
+    "ghost" $background-color map-get($ghost-type-colors, "normal") map-get($ghost-type-colors, "hover") map-get($ghost-type-colors, "shadow"),
+    "grass" $background-color map-get($grass-type-colors, "normal") map-get($grass-type-colors, "hover") map-get($grass-type-colors, "shadow"),
+    "ground" $base-color map-get($ground-type-colors, "normal") map-get($ground-type-colors, "hover") map-get($ground-type-colors, "shadow"),
+    "ice" $background-color map-get($ice-type-colors, "normal") map-get($ice-type-colors, "hover") map-get($ice-type-colors, "shadow"),
+    "normal" $base-color map-get($normal-type-colors, "normal") map-get($normal-type-colors, "hover") map-get($normal-type-colors, "shadow"),
+    "poison" $background-color map-get($poison-type-colors, "normal") map-get($poison-type-colors, "hover") map-get($poison-type-colors, "shadow"),
+    "psychic" $background-color map-get($psychic-type-colors, "normal") map-get($psychic-type-colors, "hover") map-get($psychic-type-colors, "shadow"),
+    "rock" $background-color map-get($rock-type-colors, "normal") map-get($rock-type-colors, "hover") map-get($rock-type-colors, "shadow"),
+    "steel" $base-color map-get($steel-type-colors, "normal") map-get($steel-type-colors, "hover") map-get($steel-type-colors, "shadow"),
+    "water" $background-color map-get($water-type-colors, "normal") map-get($water-type-colors, "hover") map-get($water-type-colors, "shadow");
+
+  @each $type in $types {
+    &.is-#{nth($type, 1)} {
+      @include btn-style(nth($type, 2), nth($type, 3), nth($type, 4), nth($type, 5));
+    }
+  }
+
+  input[type="file"] {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+  }
+}

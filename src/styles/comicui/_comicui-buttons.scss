@@ -1,0 +1,287 @@
+.btn-apps {
+    background: $apps-color;
+    &:hover,
+    &:focus {
+        background-color: lighten( $apps-color, 3%)!important;
+    }
+    &.active {
+        background-color: darken( $apps-color, 15%)!important;
+        @extend .z-depth-1-half;
+    }
+}
+
+.btn-boot {
+    background: $boot-color;
+    &:hover,
+    &:focus {
+        background-color: lighten( $boot-color, 3%)!important;
+    }
+    &.active {
+        background-color: darken( $boot-color, 15%)!important;
+        @extend .z-depth-1-half;
+    }
+}
+
+.btn-card {
+    background: $card-color;
+    &:hover,
+    &:focus {
+        background-color: lighten( $card-color, 3%)!important;
+    }
+    &.active {
+        background-color: darken( $card-color, 15%)!important;
+        @extend .z-depth-1-half;
+    }
+}
+
+.btn-cite {
+    background: $cite-color;
+    &:hover,
+    &:focus {
+        background-color: lighten( $cite-color, 3%)!important;
+    }
+    &.active {
+        background-color: darken( $cite-color, 15%)!important;
+        @extend .z-depth-1-half;
+    }
+}
+
+.btn-code {
+    background: $code-color;
+    &:hover,
+    &:focus {
+        background-color: lighten( $code-color, 3%)!important;
+    }
+    &.active {
+        background-color: darken( $code-color, 15%)!important;
+        @extend .z-depth-1-half;
+    }
+}
+
+.btn-doom {
+    background: $doom-color;
+    &:hover,
+    &:focus {
+        background-color: lighten( $doom-color, 3%)!important;
+    }
+    &.active {
+        background-color: darken( $doom-color, 15%)!important;
+        @extend .z-depth-1-half;
+    }
+}
+
+.btn-film {
+    background: $film-color;
+    &:hover,
+    &:focus {
+        background-color: lighten( $film-color, 3%)!important;
+    }
+    &.active {
+        background-color: darken( $film-color, 15%)!important;
+        @extend .z-depth-1-half;
+    }
+}
+
+.btn-find {
+    background: $find-color;
+    &:hover,
+    &:focus {
+        background-color: lighten( $find-color, 3%)!important;
+    }
+    &.active {
+        background-color: darken( $find-color, 15%)!important;
+        @extend .z-depth-1-half;
+    }
+}
+
+.btn-font {
+    background: $font-color;
+    &:hover,
+    &:focus {
+        background-color: lighten( $font-color, 3%)!important;
+    }
+    &.active {
+        background-color: darken( $font-color, 15%)!important;
+        @extend .z-depth-1-half;
+    }
+}
+
+.btn-give {
+    background: $give-color;
+    &:hover,
+    &:focus {
+        background-color: lighten( $give-color, 3%)!important;
+    }
+    &.active {
+        background-color: darken( $give-color, 15%)!important;
+        @extend .z-depth-1-half;
+    }
+}
+
+.btn-join {
+    background: $join-color;
+    &:hover,
+    &:focus {
+        background-color: lighten( $join-color, 3%)!important;
+    }
+    &.active {
+        background-color: darken( $join-color, 15%)!important;
+        @extend .z-depth-1-half;
+    }
+}
+
+.btn-logo {
+    background: $logo-color;
+    &:hover,
+    &:focus {
+        background-color: lighten( $logo-color, 3%)!important;
+    }
+    &.active {
+        background-color: darken( $logo-color, 15%)!important;
+        @extend .z-depth-1-half;
+    }
+}
+
+.btn-meme {
+    background: $meme-color;
+    &:hover,
+    &:focus {
+        background-color: lighten( $meme-color, 3%)!important;
+    }
+    &.active {
+        background-color: darken( $meme-color, 15%)!important;
+        @extend .z-depth-1-half;
+    }
+}
+
+.btn-more {
+    background: $more-color;
+    &:hover,
+    &:focus {
+        background-color: lighten( $more-color, 3%)!important;
+    }
+    &.active {
+        background-color: darken( $more-color, 15%)!important;
+        @extend .z-depth-1-half;
+    }
+}
+
+.btn-news {
+    background: $news-color;
+    &:hover,
+    &:focus {
+        background-color: lighten( $news-color, 3%)!important;
+    }
+    &.active {
+        background-color: darken( $news-color, 15%)!important;
+        @extend .z-depth-1-half;
+    }
+}
+
+.btn-odds {
+    background: $odds-color;
+    &:hover,
+    &:focus {
+        background-color: lighten( $odds-color, 3%)!important;
+    }
+    &.active {
+        background-color: darken( $odds-color, 15%)!important;
+        @extend .z-depth-1-half;
+    }
+}
+
+.btn-pick {
+    background: $pick-color;
+    &:hover,
+    &:focus {
+        background-color: lighten( $pick-color, 3%)!important;
+    }
+    &.active {
+        background-color: darken( $pick-color, 15%)!important;
+        @extend .z-depth-1-half;
+    }
+}
+
+.btn-poke {
+    background: $poke-color;
+    &:hover,
+    &:focus {
+        background-color: lighten( $poke-color, 3%)!important;
+    }
+    &.active {
+        background-color: darken( $poke-color, 15%)!important;
+        @extend .z-depth-1-half;
+    }
+}
+
+.btn-poll {
+    background: $poll-color;
+    &:hover,
+    &:focus {
+        background-color: lighten( $poll-color, 3%)!important;
+    }
+    &.active {
+        background-color: darken( $poll-color, 15%)!important;
+        @extend .z-depth-1-half;
+    }
+}
+
+.btn-rest {
+    background: $rest-color;
+    &:hover,
+    &:focus {
+        background-color: lighten( $rest-color, 3%)!important;
+    }
+    &.active {
+        background-color: darken( $rest-color, 15%)!important;
+        @extend .z-depth-1-half;
+    }
+}
+
+.btn-shop {
+    background: $shop-color;
+    &:hover,
+    &:focus {
+        background-color: lighten( $shop-color, 3%)!important;
+    }
+    &.active {
+        background-color: darken( $shop-color, 15%)!important;
+        @extend .z-depth-1-half;
+    }
+}
+
+.btn-spin {
+    background: $spin-color;
+    &:hover,
+    &:focus {
+        background-color: lighten( $spin-color, 3%)!important;
+    }
+    &.active {
+        background-color: darken( $spin-color, 15%)!important;
+        @extend .z-depth-1-half;
+    }
+}
+
+.btn-user {
+    background: $user-color;
+    &:hover,
+    &:focus {
+        background-color: lighten( $user-color, 3%)!important;
+    }
+    &.active {
+        background-color: darken( $user-color, 15%)!important;
+        @extend .z-depth-1-half;
+    }
+}
+
+.btn-vote {
+    background: $vote-color;
+    &:hover,
+    &:focus {
+        background-color: lighten( $vote-color, 3%)!important;
+    }
+    &.active {
+        background-color: darken( $vote-color, 15%)!important;
+        @extend .z-depth-1-half;
+    }
+}

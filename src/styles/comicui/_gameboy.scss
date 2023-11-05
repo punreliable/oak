@@ -1,0 +1,111 @@
+// Gameboy Color Palette
+
+$darkest-green: #202119;
+
+$darker-green: #4d513a;
+
+$primary-green: #8d956e;
+
+$brighter-green: #c5d1a3;
+
+$brightest-green: #e6ecca;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+a,
+button {
+
+  font-family: "Press Start 2P", cursive !important;
+
+  &.gameboy {
+
+    font-family: "Press Start 2P", cursive !important;
+
+    // color: $darker-green;
+
+  }
+
+}
+
+input[type="text"].gameboy {
+  background-color: $brighter-green;
+  font-family: "Press Start 2P", cursive;
+  margin-left: 2em;
+}
+
+// Gameboy Styles
+
+.btn-gameboy {
+  background: $darkest-green;
+  font-family: "Press Start 2P", cursive;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($darker-green, 3%) !important;
+  }
+
+  &.active {
+    background-color: darken($darker-green, 15%) !important;
+    @extend .z-depth-1-half;
+  }
+}
+
+body.gameboy {
+  background-color: $brightest-green;
+}
+
+nav.gameboy {
+  background-color: $darker-green;
+}
+
+.jumbotron {
+  &.gameboy {
+    color: $darker-green;
+    background-color: $brighter-green !important;
+  }
+}
+
+div {
+
+	&.card-body {
+
+		&.gameboy {
+
+			background-color: $brighter-green;
+
+		}
+
+	}
+
+}
+
+footer.gameboy {
+
+color: $color-white;
+background-color: $darker-green;
+font-family: "Press Start 2P", cursive;
+
+}
+
+a {
+
+	color: $color-white;
+	text-decoration: none;
+
+	&.btn-gameboy {
+
+		font-family: "Press Start 2P", cursive !important;
+		text-decoration: none;
+
+		&:hover {
+
+			text-decoration: none;
+		}
+	}
+}
