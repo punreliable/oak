@@ -1,27 +1,20 @@
 import { useState, useEffect } from "react";
-// import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { gsap } from "gsap/dist/gsap";
+import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
+import axios from 'axios';
+import styled from "styled-components";
 import * as bootstrap from "bootstrap";
 import "./App.scss";
 import "../node_modules/bootstrap/scss/bootstrap.scss";
 import prettyName from "./utilities/prettyName";
-// import ProfessorOak from "./components/professorOak";
-
-import { gsap } from "gsap/dist/gsap";
-import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
+import professorOak from "./assets/oak.svg";
 
 gsap.registerPlugin(MotionPathPlugin);
 
-import professorOak from "./assets/oak.svg";
-//import RootLayout from "./pages/Root";
-//import HomePage from "./pages/Home";
-//import ResultsPage from "./pages/Results";
-import axios from 'axios';
-import styled from "styled-components";
-
-import PokemonTypes from "./components/PokemonTypes";
+import PokemonTypeList from "./components/PokemonTypeList";
 
 const App = () => {
-
+  
   const number = Math.floor(Math.random() * 151) + 1;
   const pokeNo = number.toString();
   const requestURL = 'https://pokeapi.co/api/v2/pokemon/'+ pokeNo;
@@ -50,9 +43,12 @@ const App = () => {
       setPokemonXP(res.data.base_experience)
       setPokemonTypes(res.data.types)
       console.log(res.data.types)
+      console.log(res.data.types.length)
      })
     .catch( err => { console.log(err) })
   }, [])
+  
+  //console.log(pokemon.types);
 
   return (
     <div className="App">
@@ -70,6 +66,8 @@ const App = () => {
           <p>Height: {pokemon.height}in</p>
           <p>Weight: {pokemon.weight}lb</p>
           <p>Base XP: {pokemon.base_experience}xp</p>
+          
+          {/* <PokemonTypeList types={pokemon.types} /> */}
 
           <section className="message-list" id="professorMessages">
 

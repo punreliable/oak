@@ -1,42 +1,11 @@
 // Styles exclusive to poke.ComicUI
-@import "comicui/variables";
-@import "comicui/comicui-buttons";
-@import "comicui/palette-town";
-@import "comicui/gameboy";
+// @import "comicui/variables";
+// @import "comicui/comicui-buttons";
+// @import "comicui/palette-town";
+// @import "comicui/gameboy";
 
-@import "comicui/home";
+// @import "comicui/home";
 
 //@import 'comicui/random';
 
-.z-depth-1-half {
-  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-}
 
-div.card-type-list {
-  display: flex;
-  flex-flow: row wrap;
-
-  div.chip {
-    justify-content: space-between;
-  }
-}
-
-header {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    color: #ffffff;
-    opacity: 1;
-    text-shadow: 2px 2px #880e4f;
-  }
-}
-
-header {
-  h2 {
-    text-shadow: 1px 1px #880e4f;
-  }
-}

@@ -6,21 +6,18 @@
   font-family: 'Press Start 2P', serif;
 }
 
-
 .nes-container {
   
   padding: 2rem !important;
   
 }
 
-
 .row {
+  
+  display: flex block;
     
   .imgProfessorOak {
-    
-    // padding: 0 1rem;
-    // margin: 1rem;
-    // margin-bottom: 2rem;
+
     margin-top: 3rem;
     height: 256px;
     width: 256px;

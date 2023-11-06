@@ -1,9 +1,11 @@
 import "./PokemonTypes.scss";
 
+import { useState } from "React";
+
 import prettyName from "../utilities/prettyName";
 
 const PokemonTypes = (props) => {
-
+  	const [pokemon, setPokemon] = useState( null );
 	console.log(props)
 
 	let typeList = [];
