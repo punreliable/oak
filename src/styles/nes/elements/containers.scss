@@ -39,7 +39,7 @@
     }
   }
 
-  &.is-dark {
+  &.is-dark, .isDark {
     position: relative;
     margin: $border-size;
     color: $background-color;
@@ -89,7 +89,7 @@
       }
     }
 
-    &.is-dark {
+    &.is-dark, .isDark {
       @include rounded-corners(true);
       &::after {
         content: none;
