@@ -8,10 +8,9 @@ import "./App.scss";
 import "../node_modules/bootstrap/scss/bootstrap.scss";
 import prettyName from "./utilities/prettyName";
 import professorOak from "./assets/oak.svg";
+import PokemonTypeList from "./components/PokemonTypeList";
 
 gsap.registerPlugin(MotionPathPlugin);
-
-import PokemonTypeList from "./components/PokemonTypeList";
 
 const App = () => {
   
@@ -42,8 +41,8 @@ const App = () => {
       setPokemonWeight(res.data.weight)
       setPokemonXP(res.data.base_experience)
       setPokemonTypes(res.data.types)
-      console.log(res.data.types)
-      console.log(res.data.types.length)
+      // console.log(res.data.types)
+      // console.log(res.data.types.length)
      })
     .catch( err => { console.log(err) })
   }, [])

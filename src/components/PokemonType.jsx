@@ -1,21 +1,23 @@
-import { useState } from "React";
-import prettyName from "../utilities/prettyName";
-import "./PokemonType.scss";
+import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
+import "./PokemonType.scss";
 
-
-const getID = () => {
-	return uuidv4()
-};
+import OnePokemonType from "./OnePokemonType";
+import TwoPokemonTypes from "./TwoPokemonTypes";
 
 const PokemonType = (props) => {
 	
+	console.log( props )
+	console.log( props.type.length )
+	
 	return(
-		<div className="row">
-			<a href="#" className="nesBadge" key={getID}>
-			  <span className="isDark">{prettyName(props.types[0].type.name)}</span>
-			</a>
-		</div>
+		<>
+			<div className="row">
+				<a href="#" className="nes-badge" key={ props.type.name }>
+					<span className="is-dark">{ props.type.name }</span>
+				</a>
+			</div>
+		</>
 	);
 	
 };
