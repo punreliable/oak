@@ -2,9 +2,9 @@ import { useState } from "React";
 import prettyName from "../utilities/prettyName";
 import styled from "styled-components";
 import PokemonType from "./PokemonType";
-import "./PokemonType.scss";
+import "./PokemonTypeList.scss";
 
-const PokemonTypeList = () => {
+const PokemonTypeList = (props) => {
 	
 	const getCountOfTypes = props => {
 
@@ -23,10 +23,8 @@ const PokemonTypeList = () => {
 	}
 
 	return(
-		// console.log(props);
 		<StyledPokemonTypeList>
-			<h1>Hello World</h1>
-			<p>{passTypeData}</p>
+			<PokemonType type={props} />
 		</StyledPokemonTypeList>
 		
 	);

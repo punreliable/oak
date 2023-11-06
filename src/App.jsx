@@ -47,7 +47,7 @@ const App = () => {
      })
     .catch( err => { console.log(err) })
   }, [])
-  
+
   //console.log(pokemon.types);
 
   return (
@@ -66,8 +66,7 @@ const App = () => {
           <p>Height: {pokemon.height}in</p>
           <p>Weight: {pokemon.weight}lb</p>
           <p>Base XP: {pokemon.base_experience}xp</p>
-          
-          {/* <PokemonTypeList types={pokemon.types} /> */}
+          <PokemonTypeList types={pokemon.types} />
 
           <section className="message-list" id="professorMessages">
 

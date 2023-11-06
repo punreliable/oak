@@ -1,13 +1,8 @@
 @import 'styles/variables';
 @import 'styles/mixins';
-// @import 'styles/palette-town';
+@import 'styles/palette-town';
 @import 'styles/types';
-// @import 'styles/gameboy';
-
-
-
-
-
+@import 'styles/gameboy';
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
