@@ -40,7 +40,8 @@ const App = () => {
       setPokemonHeight(res.data.height)
       setPokemonWeight(res.data.weight)
       setPokemonXP(res.data.base_experience)
-      setPokemonTypes(res.data.types)
+      // setPokemonTypes(res.data.types)
+      // console.log(pokemon.types)
       // console.log(res.data.types)
       // console.log(res.data.types.length)
      })
@@ -66,7 +67,7 @@ const App = () => {
           <p>Weight: {pokemon.weight}lb</p>
           <p>Base XP: {pokemon.base_experience}xp</p>
 
-          <PokemonTypeList />
+          <PokemonTypeList types={pokemon.types} />
 
           <section className="message-list" id="professorMessages">
 
