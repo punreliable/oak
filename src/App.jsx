@@ -10,11 +10,11 @@ import prettyName from "./utilities/prettyName";
 import professorOak from "./assets/oak.svg";
 import PokemonTypeList from "./components/PokemonTypeList";
 
-gsap.registerPlugin(MotionPathPlugin);
+gsap.registerPlugin( MotionPathPlugin );
 
 const App = () => {
   
-  const number = Math.floor(Math.random() * 151) + 1;
+  const number = Math.floor( Math.random() * 151 ) + 1;
   const pokeNo = number.toString();
   const requestURL = 'https://pokeapi.co/api/v2/pokemon/'+ pokeNo;
 
@@ -44,7 +44,7 @@ const App = () => {
       // console.log(res.data.types)
       // console.log(res.data.types.length)
      })
-    .catch( err => { console.log(err) })
+    .catch( err => { console.log( err ) })
   }, [])
 
   //console.log(pokemon.types);
@@ -65,17 +65,23 @@ const App = () => {
           <p>Height: {pokemon.height}in</p>
           <p>Weight: {pokemon.weight}lb</p>
           <p>Base XP: {pokemon.base_experience}xp</p>
-          <PokemonTypeList types={pokemon.types} />
+
+          <PokemonTypeList />
 
           <section className="message-list" id="professorMessages">
 
             <section className="message -right">
 
               <div className="nes-balloon from-right">
+              
                 <p>Entry #{pokemon.id} in <br />Kanto Pokedex!</p>
+                
               </div>
+              
               <div className="wrapperOak">
+              
                 <img src={professorOak} id="imgProfessorOak" alt="Professor Oak" height="64" width="64" />
+              
               </div>
 
             </section>

@@ -16,6 +16,7 @@
     "axios": "^1.5.1",
     "bootstrap": "^5.2.3",
     "css-loader": "^6.7.3",
+    "framer-motion": "^10.16.4",
     "gsap": "^3.12.2",
     "jquery": "^3.4.1",
     "nes.css": "^2.3.0",
