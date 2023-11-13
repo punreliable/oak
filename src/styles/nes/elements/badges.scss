@@ -1,3 +1,5 @@
+@import '../../variables';
+
 @mixin span-style-is-icon($color, $background-color, $display, $width, $font-size) {
   display: $display;
   align-items: center;
@@ -74,17 +76,41 @@
   white-space: nowrap;
   vertical-align: top;
   user-select: none;
+  
+  
+
 
   // Other styles
   // prettier-ignore
   $types:
-    "dark" $background-color $base-color,
     "primary" $background-color map-get($primary-colors, "normal"),
     "success" $background-color map-get($success-colors, "normal"),
     "warning" $base-color map-get($warning-colors, "normal"),
-    "error" $background-color map-get($error-colors, "normal");
-
+    "error" $background-color map-get($error-colors, "normal"), 
+    "normal" $color-type-normal-highlight $color-type-normal-shadow,
+    "fighting" $color-type-fighting-highlight $color-type-fighting-shadow,
+    "flying" $color-type-flying-highlight $color-type-flying-shadow,
+    "poison" $color-type-poison-highlight $color-type-poison-shadow,
+    "ground" $color-type-ground-highlight $color-type-ground-shadow,
+    "rock" $color-type-rock-highlight $color-type-rock-shadow,
+    "bug" $color-type-bug-highlight $color-type-bug-shadow,
+    "ghost" $color-type-ghost-highlight $color-type-ghost-shadow,
+    "steel" $color-type-steel-highlight $color-type-steel-shadow,
+    "fire" $color-type-fire-highlight $color-type-fire-shadow,
+    "water" $color-type-water-highlight $color-type-water-shadow,
+    "grass" $color-type-grass-highlight $color-type-grass-shadow,
+    "electric" $color-type-electric-highlight $color-type-electric-shadow,
+    "psychic" $color-type-psychic-highlight $color-type-psychic-shadow,
+    "ice" $color-type-ice-highlight $color-type-ice-shadow,
+    "dragon" $color-type-dragon-highlight $color-type-dragon-shadow,
+    "dark" $color-type-dark-highlight $color-type-dark-shadow,
+    "fairy" $color-type-fairy-highlight $color-type-fairy-shadow,
+    "unknown" $color-type-unknown-highlight $color-type-unknown-shadow;
+  //  "shadow" $color-type-shadow-highlight $color-type-shadow-shadow
+  
+  
   @each $type in $types {
+
     &.is-splited, // deprecated. Please use .is-split
     &.is-split {
       & span.is-#{nth($type, 1)} {
@@ -102,5 +128,9 @@
     & span.is-#{nth($type, 1)} {
       @include badge-style(nth($type, 2), nth($type, 3));
     }
+    a { 
+      color: $color-text;
+    }
   }
+
 }
