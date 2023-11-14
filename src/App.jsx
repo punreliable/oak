@@ -10,28 +10,26 @@ import prettyName from "./utilities/prettyName";
 import professorOak from "./assets/oak.svg";
 import PokemonTypeList from "./components/PokemonTypeList";
 
-gsap.registerPlugin( MotionPathPlugin );
+gsap.registerPlugin( MotionPathPlugin )
 
 const App = () => {
   
-  const number = Math.floor( Math.random() * 151 ) + 1;
-  const pokeNo = number.toString();
-  const requestURL = 'https://pokeapi.co/api/v2/pokemon/'+ pokeNo;
+  const number = Math.floor( Math.random() * 151 ) + 1
+  const pokeNo = number.toString()
+  const requestURL = 'https://pokeapi.co/api/v2/pokemon/'+ pokeNo
 
-  const [pokemon, setPokemon] = useState( null );
-  const [pokemonID, setPokemonID] = useState( null );
-  const [pokemonAbilities, setPokemonAbilities] = useState( null );
-  const [pokemonHeight, setPokemonHeight] = useState( null );
-  const [pokemonWeight, setPokemonWeight] = useState( null );
-  const [pokemonXP, setPokemonXP] = useState( null );
-  const [pokemonTypes, setPokemonTypes] = useState( null );
+  const [pokemon, setPokemon] = useState( null )
+  const [pokemonID, setPokemonID] = useState( null )
+  const [pokemonAbilities, setPokemonAbilities] = useState( null )
+  const [pokemonHeight, setPokemonHeight] = useState( null )
+  const [pokemonWeight, setPokemonWeight] = useState( null )
+  const [pokemonXP, setPokemonXP] = useState( null )
+  const [pokemonTypes, setPokemonTypes] = useState( null )
+  let pokemonMoves = {}
+  let pokemonIMGs = {}
+  let pokemonSpecies = {}
 
-  let pokemonMoves = {};
-  let pokemonIMGs = {};
-  let pokemonSpecies = {};
-
-  let imageSrc = 'https://www.gravatar.com/avatar?s=15';
-
+  let imageSrc = 'https://www.gravatar.com/avatar?s=15'
 
   useEffect(() => {
     axios.get( requestURL )
@@ -40,20 +38,14 @@ const App = () => {
       setPokemonHeight(res.data.height)
       setPokemonWeight(res.data.weight)
       setPokemonXP(res.data.base_experience)
-      // setPokemonTypes(res.data.types)
-      // console.log(pokemon.types)
-      // console.log(res.data.types)
-      // console.log(res.data.types.length)
      })
     .catch( err => { console.log( err ) })
   }, [])
 
-  //console.log(pokemon.types);
-
   return (
     <div className="App">
       { pokemon && (
-        <section className="nes-container">
+        <section className="nesContainer nes-container">
 
           <h1 className="oakHello">Hello,</h1>
           <h1 className="pokemonName">{ prettyName( pokemon.name ) }</h1>

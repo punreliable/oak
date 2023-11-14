@@ -64,7 +64,7 @@
 }
 
 // Default style
-.nes-badge {
+.nes-badge, .nesBadge {
   $em: 0.75em;
 
   position: relative;
@@ -104,8 +104,7 @@
     "ice" $color-type-ice-highlight $color-type-ice-shadow,
     "dragon" $color-type-dragon-highlight $color-type-dragon-shadow,
     "dark" $color-type-dark-highlight $color-type-dark-shadow,
-    "fairy" $color-type-fairy-highlight $color-type-fairy-shadow,
-    "unknown" $color-type-unknown-highlight $color-type-unknown-shadow;
+    "fairy" $color-type-fairy-highlight $color-type-fairy-shadow;
   //  "shadow" $color-type-shadow-highlight $color-type-shadow-shadow
   
   
