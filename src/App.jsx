@@ -9,6 +9,8 @@ import "../node_modules/bootstrap/scss/bootstrap.scss";
 import prettyName from "./utilities/prettyName";
 import professorOak from "./assets/oak.svg";
 import PokemonTypeList from "./components/PokemonTypeList";
+// import PokemonDetails from "./components/PokemonDetails";
+
 
 gsap.registerPlugin( MotionPathPlugin )
 
