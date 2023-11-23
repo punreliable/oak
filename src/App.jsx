@@ -12,7 +12,53 @@ import PokemonTypeList from "./components/PokemonTypeList";
 
 gsap.registerPlugin( MotionPathPlugin )
 
+const getCurrentMonth = () => {
+
+  const month = new Date().getMonth() + 1
+  if(month < 10) {
+    return `0${month}`
+  }
+  return month
+}
+
+const getCurrentDay = () => {
+
+  const day = new Date().getDate();
+  if( day < 10 ) {
+    return `0${day}`;
+  } else {
+    return day;
+  }
+
+};
+
+
+
+const currentYear = new Date().getFullYear();
+const currentMonth = getCurrentMonth();
+const currentDay = getCurrentDay();
+const currentDate = `${currentYear}-${currentMonth}-${currentDay}`;
+
+const getPokemonNumber = () => {
+
+  const number = Math.floor( Math.random() * 151 ) + 1
+
+  // const month = new Date().getMonth() + 1;
+  console.log(number);
+  if(number < 10) {
+    return `0${number}`;
+  }
+
+}
+
 const App = () => {
+
+console.log(currentDay);
+console.log(currentMonth);
+console.log(currentYear);
+console.log(currentDate);
+// console.log(getPokemonNumber());
+
   // OMG GSAP is working!
   //gsap.to("#avatar", { x: 100, duration: 2 });
   //gsap.to("#imgProfessorOak", {x: 100, duration: 1 });
@@ -20,6 +66,11 @@ const App = () => {
   const number = Math.floor( Math.random() * 151 ) + 1
   const pokeNo = number.toString()
   const requestURL = 'https://pokeapi.co/api/v2/pokemon/'+ pokeNo
+
+
+
+
+
 
   const [pokemon, setPokemon] = useState( null )
   const [pokemonID, setPokemonID] = useState( null )
