@@ -9,14 +9,70 @@ import "../node_modules/bootstrap/scss/bootstrap.scss";
 import prettyName from "./utilities/prettyName";
 import professorOak from "./assets/oak.svg";
 import PokemonTypeList from "./components/PokemonTypeList";
+// import PokemonDetails from "./components/PokemonDetails";
+
 
 gsap.registerPlugin( MotionPathPlugin )
 
+const getCurrentMonth = () => {
+
+  const month = new Date().getMonth() + 1
+  if(month < 10) {
+    return `0${month}`
+  }
+  return month
+}
+
+const getCurrentDay = () => {
+
+  const day = new Date().getDate();
+  if( day < 10 ) {
+    return `0${day}`;
+  } else {
+    return day;
+  }
+
+};
+
+
+
+const currentYear = new Date().getFullYear();
+const currentMonth = getCurrentMonth();
+const currentDay = getCurrentDay();
+const currentDate = `${currentYear}-${currentMonth}-${currentDay}`;
+
+const getPokemonNumber = () => {
+
+  const number = Math.floor( Math.random() * 151 ) + 1
+
+  // const month = new Date().getMonth() + 1;
+  console.log(number);
+  if(number < 10) {
+    return `0${number}`;
+  }
+
+}
+
 const App = () => {
-  
+
+console.log(currentDay);
+console.log(currentMonth);
+console.log(currentYear);
+console.log(currentDate);
+// console.log(getPokemonNumber());
+
+  // OMG GSAP is working!
+  //gsap.to("#avatar", { x: 100, duration: 2 });
+  //gsap.to("#imgProfessorOak", {x: 100, duration: 1 });
+
   const number = Math.floor( Math.random() * 151 ) + 1
   const pokeNo = number.toString()
   const requestURL = 'https://pokeapi.co/api/v2/pokemon/'+ pokeNo
+
+
+
+
+
 
   const [pokemon, setPokemon] = useState( null )
   const [pokemonID, setPokemonID] = useState( null )
@@ -53,6 +109,7 @@ const App = () => {
           <img
             className="nes-avatar avatar pokemonAvatar"
             alt="Gravatar image example"
+            id="avatar"
             src={pokemon.sprites.front_default} />
 
           <p>Height: {pokemon.height}in</p>
@@ -66,15 +123,15 @@ const App = () => {
             <section className="message -right">
 
               <div className="nes-balloon from-right">
-              
+
                 <p>Entry #{pokemon.id} in <br />Kanto Pokedex!</p>
-                
+
               </div>
-              
+
               <div className="wrapperOak">
-              
+
                 <img src={professorOak} id="imgProfessorOak" alt="Professor Oak" height="64" width="64" />
-              
+
               </div>
 
             </section>
