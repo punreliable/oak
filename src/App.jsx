@@ -156,7 +156,7 @@ gsap.fromTo(
 
           <PokemonTypeList types={pokemon.types} />
 
-          <section className="message-list" id="professorMessages">
+          <section className="message-list" id="professorMessages" unresolved>
 
             <section className="message -right">
 
