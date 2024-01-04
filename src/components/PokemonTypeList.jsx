@@ -8,20 +8,19 @@ const PokemonTypeList = (props) => {
 	let types = props.types
 
 	let minified = types.map( x =>
-		<div className="row">
-			<a href="#" className="nesBadge nes-badge" key={uuidv4()}>
-				<span className={`type-${x.type.name }`}>{ prettyName( x.type.name ) }</span>
-			</a>
+		<div className="col-md-12">
+			<button type="button" className={`type-${x.type.name } nes-btn is-${x.type.name }`} key={uuidv4()}>
+				{ prettyName( x.type.name ) }
+			</button>
 		</div>
 	)
 
 	let prettyMinified = types.map( x => prettyName(x.type.name) )
 
 	return(
-		<>
+		<div className="row">
 			{minified}
-		</>
-
+		</div>
 	);
 
 };
