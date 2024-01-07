@@ -2,6 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import prettyName from "../utilities/prettyName";
 import { v4 as uuidv4 } from 'uuid';
+import './PokemonTypeList.scss';
 
 const PokemonTypeList = (props) => {
 
@@ -9,8 +10,8 @@ const PokemonTypeList = (props) => {
 
 	let minified = types.map( x =>
 		<div className="row">
-			<a href="#" className="nesBadge nes-badge" key={uuidv4()}>
-				<span className={`type-${x.type.name }`}>{ prettyName( x.type.name ) }</span>
+			<a href="#" className={`nes-btn type-${x.type.name } is-${x.type.name }`} key={uuidv4()}>
+				<span className={`is-${x.type.name }`}>{ prettyName( x.type.name ) }</span>
 			</a>
 		</div>
 	)
