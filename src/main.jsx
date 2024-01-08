@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from './App'
 import PageTeam from './components/PageTeam';
+import PagePokemonTypeWater from './components/PagePokemonTypeWater';
 import './index.scss'
 
 import { createStore } from 'redux'
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "/team",
     element: <PageTeam />,
+  },
+  {
+    path: "/pokemon/type/water",
+    element: <PagePokemonTypeWater />,
   },
 ]);
 
