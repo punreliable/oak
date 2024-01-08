@@ -11,7 +11,7 @@ const PokemonTypeList = (props) => {
 	let minified = types.map( x =>
 
 		<div className="row">
-			<a href="#" className={`nes-btn type-${x.type.name } is-${x.type.name }`} key={uuidv4()}>
+			<a href={`/pokemon/type/${x.type.name }`} className={`nes-btn type-${x.type.name } is-${x.type.name }`} key={uuidv4()}>
 				<span className={`is-${x.type.name }`}>{ prettyName( x.type.name ) }</span>
 			</a>
 		</div>
