@@ -10,6 +10,7 @@ import PagePokemonTypeFairy from './components/PagePokemonTypeFairy';
 import PagePokemonTypeFighting from './components/PagePokemonTypeFighting';
 import PagePokemonTypeFire from './components/PagePokemonTypeFire';
 import PagePokemonTypeFlying from './components/PagePokemonTypeFlying';
+import PagePokemonTypeGhost from './components/PagePokemonTypeGhost';
 import PagePokemonTypeGrass from './components/PagePokemonTypeGrass';
 import PagePokemonTypeGround from './components/PagePokemonTypeGround';
 import PagePokemonTypeIce from './components/PagePokemonTypeIce';
@@ -76,6 +77,10 @@ const router = createBrowserRouter([
   {
     path: "/pokemon/type/flying",
     element: <PagePokemonTypeFlying />,
+  },
+  {
+    path: "/pokemon/type/ghost",
+    element: <PagePokemonTypeGhost />,
   },
   {
     path: "/pokemon/type/grass",

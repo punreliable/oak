@@ -1,15 +1,15 @@
-import './PagePokemonTypeWater.scss';
+import './PagePokemonTypeDragon.scss';
 
-const PagePokemonTypeWater = () => {
+const PagePokemonTypeDragon = () => {
 	return(
 		<div className="container">
 
-			<div className="type-icon water"></div>
-			<h1>Water Type</h1>
+			<div className="type-icon dragon"></div>
+			<h1>Dragon Type</h1>
 			<p>More details coming soon!</p>
 
 		</div>
 	);
 };
 
-export default PagePokemonTypeWater;
+export default PagePokemonTypeDragon;
