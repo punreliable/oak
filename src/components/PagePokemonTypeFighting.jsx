@@ -1,6 +1,6 @@
 import './PagePokemonTypeFighting.scss';
 
-const PagePokemonTypeWater = () => {
+const PagePokemonTypeFighting = () => {
 	return(
 		<div className="container">
 
