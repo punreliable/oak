@@ -9,6 +9,7 @@ import "../node_modules/bootstrap/scss/bootstrap.scss";
 import prettyName from "./utilities/prettyName";
 import professorOak from "./assets/oak.svg";
 import PokemonTypeList from "./components/PokemonTypeList";
+import MainNavigation from "./components/MainNavigation";
 // import PokemonDetails from "./components/PokemonDetails";
 
 
@@ -107,11 +108,6 @@ gsap.fromTo(
   const pokeNo = number.toString()
   const requestURL = 'https://pokeapi.co/api/v2/pokemon/'+ pokeNo
 
-
-
-
-
-
   const [pokemon, setPokemon] = useState( null )
   const [pokemonID, setPokemonID] = useState( null )
   const [pokemonAbilities, setPokemonAbilities] = useState( null )
@@ -140,41 +136,42 @@ gsap.fromTo(
     <div className="App">
       { pokemon && (
         <section className="nesContainer nes-container">
+          <MainNavigation />
 
           <h1 className="oakHello">Hello,</h1>
           <h1 className="pokemonName">{ prettyName( pokemon.name ) }</h1>
 
-          <img
+          {/* <img
             className="nes-avatar avatar pokemonAvatar"
             alt="Gravatar image example"
             id="avatar"
-            src={pokemon.sprites.front_default} />
+            src={pokemon.sprites.front_default} /> */}
 
-          <p>Height: {pokemon.height}in</p>
+          {/* <p>Height: {pokemon.height}in</p>
           <p>Weight: {pokemon.weight}lb</p>
-          <p>Base XP: {pokemon.base_experience}xp</p>
+          <p>Base XP: {pokemon.base_experience}xp</p> */}
 
-          <PokemonTypeList types={pokemon.types} />
+          {/* <PokemonTypeList types={pokemon.types} /> */}
 
-          <section className="message-list" id="professorMessages" unresolved>
+          {/* <section className="message-list" id="professorMessages" unresolved> */}
 
-            <section className="message -right">
+            {/* <section className="message -right"> */}
 
-              <div className="nes-balloon from-right">
+              {/* <div className="nes-balloon from-right">
 
                 <p>Entry #{pokemon.id} in <br />Kanto Pokedex!</p>
 
-              </div>
+              </div> */}
 
-              <div className="wrapperOak">
+              {/* <div className="wrapperOak">
 
                 <img src={professorOak} id="imgProfessorOak" alt="Professor Oak" height="64" width="64" />
 
-              </div>
+              </div> */}
 
-            </section>
-
-          </section>
+            {/* </section> */}
+{/* 
+          </section> */}
 
         </section>
 
