@@ -1,7 +1,19 @@
-import { NavLink } from 'react-router-dom';
-import styles from './MainNavigation.module.scss';
+import { NavLink } from 'react-router-dom'
+import { useRef } from 'react'
+import onSubmitChange from '../utilities/onSelectChange'
+import classes from './MainNavigation.module.scss'
+
+// const formSubmitHandler = (event) => {
+//     event.preventDefault()
+//     if ( event ) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
 
 const MainNavigation = () => {
+
     return(
     <header className={classes.header}>
         <nav>
@@ -16,13 +28,18 @@ const MainNavigation = () => {
                     >Home
                     </NavLink>
                 </li>
+
+                <li>
+                {onSubmitChange}
+                </li>
+
                 <li>
                     <NavLink
-                        to="/pokemon/types"
+                        to="/types"
                         className={({ isActive }) =>
                         isActive ? classes.active : undefined
                         }
-                    >Blog
+                    >Types
                     </NavLink>
                 </li>
             </ul>
@@ -30,3 +47,5 @@ const MainNavigation = () => {
     </header>
     )
 }
+
+export default MainNavigation

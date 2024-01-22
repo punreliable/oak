@@ -1,40 +1,23 @@
-import { useState, useEffect } from "react";
-import { gsap } from "gsap/dist/gsap";
-import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
-import axios from 'axios';
-import styled from "styled-components";
-import * as bootstrap from "bootstrap";
-import "./App.scss";
-import "../node_modules/bootstrap/scss/bootstrap.scss";
-import prettyName from "./utilities/prettyName";
-import professorOak from "./assets/oak.svg";
-import PokemonTypeList from "./components/PokemonTypeList";
-import MainNavigation from "./components/MainNavigation";
-// import PokemonDetails from "./components/PokemonDetails";
+import { lazy, Suspense, useState, useEffect } from "react"
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { gsap } from "gsap/dist/gsap"
+import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin"
+import axios from 'axios'
+import styled from "styled-components"
+import * as bootstrap from "bootstrap"
+import prettyName from './utilities/prettyName'
+import getCurrentMonth from './utilities/getCurrentMonth'
+import getCurrentDay from './utilities/getCurrentDay'
+import PokemonTypeList from "./components/PokemonTypeList"
+import MainNavigation from "./components/MainNavigation"
 
+// import PokemonDetails from "./components/PokemonDetails"
+
+import "./App.scss";
+import "../node_modules/bootstrap/scss/bootstrap.scss"
+import professorOak from "./assets/oak.svg"
 
 gsap.registerPlugin( MotionPathPlugin )
-
-const getCurrentMonth = () => {
-
-  const month = new Date().getMonth() + 1
-  if(month < 10) {
-    return `0${month}`
-  }
-  return month
-}
-
-const getCurrentDay = () => {
-
-  const day = new Date().getDate();
-  if( day < 10 ) {
-    return `0${day}`;
-  } else {
-    return day;
-  }
-
-};
-
 
 
 const currentYear = new Date().getFullYear();
@@ -79,18 +62,18 @@ console.log(currentDate);
 //   }
 // );
 
-gsap.fromTo(
-  "#professorMessages", 
-  1, 
-  {
-    opacity: 0, 
-    y: 50
-  },
-  {
-    opacity: 1, 
-    y: 0
-  }
-);
+// gsap.fromTo(
+//   "#professorMessages", 
+//   1, 
+//   {
+//     opacity: 0, 
+//     y: 50
+//   },
+//   {
+//     opacity: 1, 
+//     y: 0
+//   }
+// );
 
 // gsap.to(
 //   "#imgProfessorOak", { 
@@ -101,8 +84,8 @@ gsap.fromTo(
 // );
 
 
-  //gsap.to("#avatar", { x: 100, duration: 2 });
-  //gsap.to("#imgProfessorOak", {x: 100, duration: 1 });
+  // gsap.to("#avatar", { x: 100, duration: 2 });
+  // gsap.to("#imgProfessorOak", {x: 100, duration: 1 });
 
   const number = Math.floor( Math.random() * 151 ) + 1
   const pokeNo = number.toString()
@@ -136,46 +119,48 @@ gsap.fromTo(
     <div className="App">
       { pokemon && (
         <section className="nesContainer nes-container">
+
           <MainNavigation />
 
           <h1 className="oakHello">Hello,</h1>
           <h1 className="pokemonName">{ prettyName( pokemon.name ) }</h1>
 
-          {/* <img
+          <img
             className="nes-avatar avatar pokemonAvatar"
             alt="Gravatar image example"
             id="avatar"
-            src={pokemon.sprites.front_default} /> */}
+            src={pokemon.sprites.front_default} />
 
-          {/* <p>Height: {pokemon.height}in</p>
+          <p>Height: {pokemon.height}in</p>
           <p>Weight: {pokemon.weight}lb</p>
-          <p>Base XP: {pokemon.base_experience}xp</p> */}
+          <p>Base XP: {pokemon.base_experience}xp</p>
 
-          {/* <PokemonTypeList types={pokemon.types} /> */}
+          <PokemonTypeList types={pokemon.types} />
 
-          {/* <section className="message-list" id="professorMessages" unresolved> */}
+          <section className="message-list" id="professorMessages" unresolved>
 
-            {/* <section className="message -right"> */}
+            <section className="message -right">
 
-              {/* <div className="nes-balloon from-right">
+              <div className="nes-balloon from-right">
 
                 <p>Entry #{pokemon.id} in <br />Kanto Pokedex!</p>
 
-              </div> */}
+              </div>
 
-              {/* <div className="wrapperOak">
+              <div className="wrapperOak">
 
                 <img src={professorOak} id="imgProfessorOak" alt="Professor Oak" height="64" width="64" />
 
-              </div> */}
+              </div>
 
-            {/* </section> */}
-{/* 
-          </section> */}
+            </section>
+
+          </section>
 
         </section>
 
       )}
+
     </div>
   );
 

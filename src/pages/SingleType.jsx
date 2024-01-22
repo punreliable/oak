@@ -1,5 +1,3 @@
-
-
 const PageSingleType = (props) => {
   return (
     <>
