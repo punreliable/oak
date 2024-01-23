@@ -32,7 +32,6 @@ const MainNavigation = () => {
                 <li>
                 {onSubmitChange}
                 </li>
-
                 <li>
                     <NavLink
                         to="/types"
@@ -40,6 +39,15 @@ const MainNavigation = () => {
                         isActive ? classes.active : undefined
                         }
                     >Types
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to="/type/ghost"
+                        className={({ isActive }) =>
+                        isActive ? classes.active : undefined
+                        }
+                    >Ghost Type
                     </NavLink>
                 </li>
             </ul>

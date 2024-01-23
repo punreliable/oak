@@ -1,15 +1,15 @@
-import { lazy, Suspense, useState, useEffect } from "react"
+import { lazy, Suspense, useState, useEffect } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { gsap } from "gsap/dist/gsap"
-import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin"
+import { gsap } from 'gsap/dist/gsap'
+import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin'
 import axios from 'axios'
-import styled from "styled-components"
-import * as bootstrap from "bootstrap"
+import styled from 'styled-components'
+import * as bootstrap from 'bootstrap'
 import prettyName from './utilities/prettyName'
 import getCurrentMonth from './utilities/getCurrentMonth'
 import getCurrentDay from './utilities/getCurrentDay'
-import PokemonTypeList from "./components/PokemonTypeList"
-import MainNavigation from "./components/MainNavigation"
+import PokemonTypeList from './components/PokemonTypeList'
+import MainNavigation from './components/MainNavigation'
 
 // import PokemonDetails from "./components/PokemonDetails"
 
