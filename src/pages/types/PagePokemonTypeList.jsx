@@ -1,11 +1,9 @@
-// import './PagePokemonTypeBug.scss';
-
 const PagePokemonTypeList = () => {
 	return(
     <>
         <div className="container">
             <h1>List of Types</h1>
-            <div className="type-icon bug"></div>
+            <div className="type-icon normal"></div>
             <h2>Normal Type</h2>
             <p>More details coming soon!</p>
         </div>
@@ -88,4 +86,4 @@ const PagePokemonTypeList = () => {
 	);
 };
 
-export default PagePokemonTypeBug;
+export default PagePokemonTypeList

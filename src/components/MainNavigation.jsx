@@ -34,22 +34,67 @@ const MainNavigation = () => {
                 </li>
                 <li>
                     <NavLink
-                        to="/types"
+                        to="/pokemon/types/"
                         className={({ isActive }) =>
                         isActive ? classes.active : undefined
                         }
                     >Types
                     </NavLink>
                 </li>
+
+
+
                 <li>
                     <NavLink
-                        to="/type/ghost"
+                        to="/pokemon/type/normal"
+                        className={({ isActive }) =>
+                        isActive ? classes.active : undefined
+                        }
+                    >Normal Type
+                    </NavLink>
+                </li>
+
+                <li>
+                    <NavLink
+                        to="/pokemon/type/fighting"
+                        className={({ isActive }) =>
+                        isActive ? classes.active : undefined
+                        }
+                    >Fighting Type
+                    </NavLink>
+                </li>
+
+                <li>
+                    <NavLink
+                        to="/pokemon/type/flying"
+                        className={({ isActive }) =>
+                        isActive ? classes.active : undefined
+                        }
+                    >Flying Type
+                    </NavLink>
+                </li>
+
+                <li>
+                    <NavLink
+                        to="/pokemon/type/bug"
+                        className={({ isActive }) =>
+                        isActive ? classes.active : undefined
+                        }
+                    >Bug Type
+                    </NavLink>
+                </li>                
+
+
+                <li>
+                    <NavLink
+                        to="/pokemon/type/ghost"
                         className={({ isActive }) =>
                         isActive ? classes.active : undefined
                         }
                     >Ghost Type
                     </NavLink>
                 </li>
+
             </ul>
         </nav>
     </header>

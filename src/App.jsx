@@ -10,12 +10,9 @@ import getCurrentMonth from './utilities/getCurrentMonth'
 import getCurrentDay from './utilities/getCurrentDay'
 import PokemonTypeList from './components/PokemonTypeList'
 import MainNavigation from './components/MainNavigation'
-
-// import PokemonDetails from "./components/PokemonDetails"
-
-import "./App.scss";
-import "../node_modules/bootstrap/scss/bootstrap.scss"
-import professorOak from "./assets/oak.svg"
+import './App.scss'
+import '../node_modules/bootstrap/scss/bootstrap.scss'
+import professorOak from './assets/oak.svg'
 
 gsap.registerPlugin( MotionPathPlugin )
 
