@@ -73,7 +73,33 @@ const MainNavigation = () => {
                     >Flying Type
                     </NavLink>
                 </li>
-
+                <li>
+                    <NavLink
+                        to="/pokemon/type/poison"
+                        className={({ isActive }) =>
+                        isActive ? classes.active : undefined
+                        }
+                    >Poison Type
+                    </NavLink>
+                </li>    
+                <li>
+                    <NavLink
+                        to="/pokemon/type/ground"
+                        className={({ isActive }) =>
+                        isActive ? classes.active : undefined
+                        }
+                    >Ground Type
+                    </NavLink>
+                </li>    
+                <li>
+                    <NavLink
+                        to="/pokemon/type/rock"
+                        className={({ isActive }) =>
+                        isActive ? classes.active : undefined
+                        }
+                    >Rock Type
+                    </NavLink>
+                </li>    
                 <li>
                     <NavLink
                         to="/pokemon/type/bug"
@@ -94,7 +120,105 @@ const MainNavigation = () => {
                     >Ghost Type
                     </NavLink>
                 </li>
-
+                <li>
+                    <NavLink
+                        to="/pokemon/type/steel"
+                        className={({ isActive }) =>
+                        isActive ? classes.active : undefined
+                        }
+                    >Steel Type
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to="/pokemon/type/steel"
+                        className={({ isActive }) =>
+                        isActive ? classes.active : undefined
+                        }
+                    >Steel Type
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to="/pokemon/type/fire"
+                        className={({ isActive }) =>
+                        isActive ? classes.active : undefined
+                        }
+                    >Fire Type
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to="/pokemon/type/water"
+                        className={({ isActive }) =>
+                        isActive ? classes.active : undefined
+                        }
+                    >Water Type
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to="/pokemon/type/grass"
+                        className={({ isActive }) =>
+                        isActive ? classes.active : undefined
+                        }
+                    >Grass Type
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to="/pokemon/type/electric"
+                        className={({ isActive }) =>
+                        isActive ? classes.active : undefined
+                        }
+                    >Electric Type
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to="/pokemon/type/psychic"
+                        className={({ isActive }) =>
+                        isActive ? classes.active : undefined
+                        }
+                    >Psychic Type
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to="/pokemon/type/ice"
+                        className={({ isActive }) =>
+                        isActive ? classes.active : undefined
+                        }
+                    >Ice Type
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to="/pokemon/type/dragon"
+                        className={({ isActive }) =>
+                        isActive ? classes.active : undefined
+                        }
+                    >Dragon Type
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to="/pokemon/type/dark"
+                        className={({ isActive }) =>
+                        isActive ? classes.active : undefined
+                        }
+                    >Dark Type
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to="/pokemon/type/fairy"
+                        className={({ isActive }) =>
+                        isActive ? classes.active : undefined
+                        }
+                    >Fairy Type
+                    </NavLink>
+                </li>
             </ul>
         </nav>
     </header>
