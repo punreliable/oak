@@ -1,6 +1,7 @@
+import getCurrentYear from "../utilities/getCurrentYear"
+
 const Footer = () => {
-  const date = new Date();
-  const year = date.getFullYear().toString();
+const year = getCurrentYear();
 
   return (
     <>
