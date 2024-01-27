@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import App from './App'
 import PageTeam from './components/PageTeam'
+import PageKantoPokemon from './components/dataFetching/PageKantoPokemon'
 import PagePokemonTypesList from './components/pages/PagePokemonTypesList'
 import PagePokemonTypeBug from './components/PagePokemonTypeBug'
 import PagePokemonTypeDark from './components/PagePokemonTypeDark'
@@ -21,12 +22,14 @@ import PagePokemonTypePsychic from './components/PagePokemonTypePsychic'
 import PagePokemonTypeRock from './components/PagePokemonTypeRock'
 import PagePokemonTypeSteel from './components/PagePokemonTypeSteel'
 import PagePokemonTypeWater from './components/PagePokemonTypeWater'
+import { useQuery, QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 import './index.scss'
 
 import { createStore } from 'redux'
 import rootReducer from './reducers'
 import { Provider } from 'react-redux'
+const queryClient = new QueryClient()
 
 const store = createStore(
   rootReducer,
@@ -41,6 +44,10 @@ const router = createBrowserRouter([
   {
     path: "/team",
     element: <PageTeam />,
+  },
+  {
+    path: "/kanto",
+    element: <PageKantoPokemon />,
   },
   {
     path: "/pokemon",
@@ -124,8 +131,10 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <QueryClientProvider client={queryClient}>
     <Provider store={store}>
       <RouterProvider router={router} />
     </Provider>
+    </QueryClientProvider>
   </React.StrictMode>
 );
