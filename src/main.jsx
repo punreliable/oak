@@ -1,25 +1,26 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import App from './App'
-import PageTeam from './components/PageTeam';
-import PagePokemonTypeBug from './components/PagePokemonTypeBug';
-import PagePokemonTypeDark from './components/PagePokemonTypeDark';
-import PagePokemonTypeElectric from './components/PagePokemonTypeElectric';
-import PagePokemonTypeFairy from './components/PagePokemonTypeFairy';
-import PagePokemonTypeFighting from './components/PagePokemonTypeFighting';
-import PagePokemonTypeFire from './components/PagePokemonTypeFire';
-import PagePokemonTypeFlying from './components/PagePokemonTypeFlying';
-import PagePokemonTypeGhost from './components/PagePokemonTypeGhost';
-import PagePokemonTypeGrass from './components/PagePokemonTypeGrass';
-import PagePokemonTypeGround from './components/PagePokemonTypeGround';
-import PagePokemonTypeIce from './components/PagePokemonTypeIce';
-import PagePokemonTypeNormal from './components/PagePokemonTypeNormal';
-import PagePokemonTypePoison from './components/PagePokemonTypePoison';
-import PagePokemonTypePsychic from './components/PagePokemonTypePsychic';
-import PagePokemonTypeRock from './components/PagePokemonTypeRock';
-import PagePokemonTypeSteel from './components/PagePokemonTypeSteel';
-import PagePokemonTypeWater from './components/PagePokemonTypeWater';
+import PageTeam from './components/PageTeam'
+import PagePokemonTypesList from './components/pages/PagePokemonTypesList'
+import PagePokemonTypeBug from './components/PagePokemonTypeBug'
+import PagePokemonTypeDark from './components/PagePokemonTypeDark'
+import PagePokemonTypeElectric from './components/PagePokemonTypeElectric'
+import PagePokemonTypeFairy from './components/PagePokemonTypeFairy'
+import PagePokemonTypeFighting from './components/PagePokemonTypeFighting'
+import PagePokemonTypeFire from './components/PagePokemonTypeFire'
+import PagePokemonTypeFlying from './components/PagePokemonTypeFlying'
+import PagePokemonTypeGhost from './components/PagePokemonTypeGhost'
+import PagePokemonTypeGrass from './components/PagePokemonTypeGrass'
+import PagePokemonTypeGround from './components/PagePokemonTypeGround'
+import PagePokemonTypeIce from './components/PagePokemonTypeIce'
+import PagePokemonTypeNormal from './components/PagePokemonTypeNormal'
+import PagePokemonTypePoison from './components/PagePokemonTypePoison'
+import PagePokemonTypePsychic from './components/PagePokemonTypePsychic'
+import PagePokemonTypeRock from './components/PagePokemonTypeRock'
+import PagePokemonTypeSteel from './components/PagePokemonTypeSteel'
+import PagePokemonTypeWater from './components/PagePokemonTypeWater'
 
 import './index.scss'
 
@@ -47,7 +48,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/pokemon/type",
-    element: <App />,
+    element: <PagePokemonTypesList />,
   },
   {
     path: "/pokemon/type/bug",
