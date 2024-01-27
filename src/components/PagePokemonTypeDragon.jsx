@@ -1,5 +1,5 @@
 import MainNavigation from './MainNavigation'
-import './PagePokemonTypeDragon.scss';
+import './PagePokemonTypeDragon.scss'
 
 const PagePokemonTypeDragon = () => {
 	return(
@@ -13,4 +13,4 @@ const PagePokemonTypeDragon = () => {
 	);
 };
 
-export default PagePokemonTypeDragon;
+export default PagePokemonTypeDragon

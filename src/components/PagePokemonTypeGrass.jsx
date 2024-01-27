@@ -1,9 +1,10 @@
-import './PagePokemonTypeGrass.scss';
+import MainNavigation from './MainNavigation'
+import './PagePokemonTypeGrass.scss'
 
 const PagePokemonTypeGrass = () => {
 	return(
 		<div className="container">
-
+			<MainNavigation />
 			<div className="type-icon grass"></div>
 			<h1>Grass Type</h1>
 			<p>More details coming soon!</p>
@@ -12,4 +13,4 @@ const PagePokemonTypeGrass = () => {
 	);
 };
 
-export default PagePokemonTypeGrass;
+export default PagePokemonTypeGrass

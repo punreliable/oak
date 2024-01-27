@@ -1,3 +1,5 @@
+@import '../styles/variables.scss';
+
 .header {
 
     display: flex;
@@ -38,4 +40,9 @@
   
 .formLabel {
     background-color: none;
+}
+
+.NESdialog {
+background-color: $color-white;
+
 }

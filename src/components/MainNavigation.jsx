@@ -11,10 +11,19 @@ import classes from './MainNavigation.module.scss'
 //         return false
 //     }
 // }
+const showModal = () => {
+    document.getElementById('dialog-default').showModal();
+}
+
+const closeModal = () => {
+    document.getElementById('dialog-default').close();
+}
+
 
 const MainNavigation = () => {
 
     return(
+        <>
     <header className={classes.header}>
         <nav>
             <ul>
@@ -33,24 +42,32 @@ const MainNavigation = () => {
                 {onSubmitChange}
                 </li>
                 <li>
-                    <NavLink
+                    {/* <NavLink
                         to="/pokemon/types/"
                         className={({ isActive }) =>
                         isActive ? classes.active : undefined
                         }
                     >Types
-                    </NavLink>
+                    </NavLink> */}
+                    <button type="button" className="nes-btn is-primary" onClick={showModal}>
+                        Types
+                    </button>
                 </li>
+            </ul>
+        </nav>
+    </header>
 
-
-
-                <li>
+    <dialog className="nes-dialog" id="dialog-default">
+        <form method="dialog">
+          <p class="title">Types</p>
+          <ul>
+            <li>
                     <NavLink
                         to="/pokemon/type/normal"
                         className={({ isActive }) =>
                         isActive ? classes.active : undefined
                         }
-                    >Normal Type
+                    >Normal
                     </NavLink>
                 </li>
 
@@ -60,7 +77,7 @@ const MainNavigation = () => {
                         className={({ isActive }) =>
                         isActive ? classes.active : undefined
                         }
-                    >Fighting Type
+                    >Fighting
                     </NavLink>
                 </li>
 
@@ -70,7 +87,7 @@ const MainNavigation = () => {
                         className={({ isActive }) =>
                         isActive ? classes.active : undefined
                         }
-                    >Flying Type
+                    >Flying
                     </NavLink>
                 </li>
                 <li>
@@ -79,7 +96,7 @@ const MainNavigation = () => {
                         className={({ isActive }) =>
                         isActive ? classes.active : undefined
                         }
-                    >Poison Type
+                    >Poison
                     </NavLink>
                 </li>    
                 <li>
@@ -88,7 +105,7 @@ const MainNavigation = () => {
                         className={({ isActive }) =>
                         isActive ? classes.active : undefined
                         }
-                    >Ground Type
+                    >Ground
                     </NavLink>
                 </li>    
                 <li>
@@ -97,7 +114,7 @@ const MainNavigation = () => {
                         className={({ isActive }) =>
                         isActive ? classes.active : undefined
                         }
-                    >Rock Type
+                    >Rock
                     </NavLink>
                 </li>    
                 <li>
@@ -106,18 +123,16 @@ const MainNavigation = () => {
                         className={({ isActive }) =>
                         isActive ? classes.active : undefined
                         }
-                    >Bug Type
+                    >Bug
                     </NavLink>
-                </li>                
-
-
+                </li>
                 <li>
                     <NavLink
                         to="/pokemon/type/ghost"
                         className={({ isActive }) =>
                         isActive ? classes.active : undefined
                         }
-                    >Ghost Type
+                    >Ghost
                     </NavLink>
                 </li>
                 <li>
@@ -126,16 +141,7 @@ const MainNavigation = () => {
                         className={({ isActive }) =>
                         isActive ? classes.active : undefined
                         }
-                    >Steel Type
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink
-                        to="/pokemon/type/steel"
-                        className={({ isActive }) =>
-                        isActive ? classes.active : undefined
-                        }
-                    >Steel Type
+                    >Steel
                     </NavLink>
                 </li>
                 <li>
@@ -144,7 +150,7 @@ const MainNavigation = () => {
                         className={({ isActive }) =>
                         isActive ? classes.active : undefined
                         }
-                    >Fire Type
+                    >Fire
                     </NavLink>
                 </li>
                 <li>
@@ -153,7 +159,7 @@ const MainNavigation = () => {
                         className={({ isActive }) =>
                         isActive ? classes.active : undefined
                         }
-                    >Water Type
+                    >Water
                     </NavLink>
                 </li>
                 <li>
@@ -162,7 +168,7 @@ const MainNavigation = () => {
                         className={({ isActive }) =>
                         isActive ? classes.active : undefined
                         }
-                    >Grass Type
+                    >Grass
                     </NavLink>
                 </li>
                 <li>
@@ -171,7 +177,7 @@ const MainNavigation = () => {
                         className={({ isActive }) =>
                         isActive ? classes.active : undefined
                         }
-                    >Electric Type
+                    >Electric
                     </NavLink>
                 </li>
                 <li>
@@ -180,7 +186,7 @@ const MainNavigation = () => {
                         className={({ isActive }) =>
                         isActive ? classes.active : undefined
                         }
-                    >Psychic Type
+                    >Psychic
                     </NavLink>
                 </li>
                 <li>
@@ -189,7 +195,7 @@ const MainNavigation = () => {
                         className={({ isActive }) =>
                         isActive ? classes.active : undefined
                         }
-                    >Ice Type
+                    >Ice
                     </NavLink>
                 </li>
                 <li>
@@ -198,7 +204,7 @@ const MainNavigation = () => {
                         className={({ isActive }) =>
                         isActive ? classes.active : undefined
                         }
-                    >Dragon Type
+                    >Dragon
                     </NavLink>
                 </li>
                 <li>
@@ -207,7 +213,7 @@ const MainNavigation = () => {
                         className={({ isActive }) =>
                         isActive ? classes.active : undefined
                         }
-                    >Dark Type
+                    >Dark
                     </NavLink>
                 </li>
                 <li>
@@ -216,12 +222,17 @@ const MainNavigation = () => {
                         className={({ isActive }) =>
                         isActive ? classes.active : undefined
                         }
-                    >Fairy Type
+                    >Fairy
                     </NavLink>
                 </li>
-            </ul>
-        </nav>
-    </header>
+                </ul>
+          <menu class="dialog-menu">
+            <button class="nes-btn is-error" onClick={closeModal}>Close</button>
+            {/* <button class="nes-btn is-primary">Confirm</button> */}
+          </menu>
+        </form>
+      </dialog>
+</>
     )
 }
 
