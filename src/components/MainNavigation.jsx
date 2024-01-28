@@ -34,12 +34,14 @@ const MainNavigation = () => {
                         isActive ? classes.active : undefined
                         }
                         end
-                    >Home
+                        >
+                        <button type="button" className="nes-btn is-primary" onClick={showModal}>
+                            Home
+                        </button>
                     </NavLink>
                 </li>
-
                 <li>
-                {onSubmitChange}
+                    {onSubmitChange}
                 </li>
                 <li>
                     {/* <NavLink
@@ -231,7 +233,7 @@ const MainNavigation = () => {
             {/* <button class="nes-btn is-primary">Confirm</button> */}
           </menu>
         </form>
-      </dialog>
+    </dialog>
 </>
     )
 }

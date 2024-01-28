@@ -26,6 +26,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  width: 100%;
 }
 
 .z-depth-1-half {
@@ -56,6 +57,7 @@ header {
 }
 
 header {
+  width: 100%;
   h2 {
     text-shadow: 1px 1px #880e4f;
   }

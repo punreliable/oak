@@ -56,26 +56,32 @@ const PageKantoPokemon = () => {
 
 	return(
 		<div className="container">
-		<h1>Kanto Pokemon</h1>
+			<h1>Kanto Pokemon</h1>
 
-		{users.data?.map((pokemons) => {
-			return(
-				<div className="nes-container with-title is-centered" key={pokemons.id}>
-					<p className="title">Name: {pokemons.name}</p>
-					<div className="nes-container is-rounded">
-						<img src={pokemons.sprites.front_default} alt={pokemons.name} />
+			{users.data?.map((pokemons) => {
+				return(
+					<div className="nes-container with-title is-centered" key={pokemons.id}>
+						<p className="title">Name: {pokemons.name}</p>
+						<div className="nes-container is-rounded">
+							<img src={pokemons.sprites.front_default} alt={pokemons.name} />
+						</div>
 					</div>
-				</div>
-			)
-		})}
+				)
+			})}
 
-		<ContainerButtons>
-			<button type="button" className="nes-btn is-primary">Previous</button>
-			<span>&nbsp;</span>
-			<button type="button" className="nes-btn is-primary">Next</button>
-		</ContainerButtons>
+	
+			<div className="row">
+		
+				<ContainerButtons>
+					<button type="button" className="nes-btn is-primary">Previous</button>
+						<span>&nbsp;</span>
+					<button type="button" className="nes-btn is-primary">Next</button>
+				</ContainerButtons>
+
+			</div>
 
 		</div>
+
 	)
 }
 
