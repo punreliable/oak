@@ -35,14 +35,14 @@ const MainNavigation = () => {
                         }
                         end
                         >
-                        <button type="button" className="nes-btn is-primary" onClick={showModal}>
+                        <button type="button" className="nes-btn is-primary" to="/">
                             Home
                         </button>
                     </NavLink>
                 </li>
-                <li>
+                {/* <li>
                     {onSubmitChange}
-                </li>
+                </li> */}
                 <li>
                     {/* <NavLink
                         to="/pokemon/types/"
@@ -61,7 +61,7 @@ const MainNavigation = () => {
 
     <dialog className="nes-dialog" id="dialog-default">
         <form method="dialog">
-          <p class="title">Types</p>
+          <p className="title">Types</p>
           <ul>
             <li>
                     <NavLink
