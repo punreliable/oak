@@ -11,6 +11,7 @@ import classes from './MainNavigation.module.scss'
 //         return false
 //     }
 // }
+
 const showModal = () => {
     document.getElementById('dialog-default').showModal();
 }
@@ -19,13 +20,12 @@ const closeModal = () => {
     document.getElementById('dialog-default').close();
 }
 
-
 const MainNavigation = () => {
 
     return(
         <>
     <header className={classes.header}>
-        <nav>
+        <nav className={classes.navbar}>
             <ul>
                 <li>
                     <NavLink

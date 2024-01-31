@@ -52,20 +52,20 @@ const PageKantoPokemon = () => {
 	console.log(pokemons?.data?.data)
 
 
-
-
 	return(
 		<div className="container">
 			<h1>Kanto Pokemon</h1>
 
 			{users.data?.map((pokemons) => {
 				return(
+					<>
 					<div className="nes-container with-title is-centered" key={pokemons.id}>
-						<p className="title">Name: {pokemons.name}</p>
-						<div className="nes-container is-rounded">
-							<img src={pokemons.sprites.front_default} alt={pokemons.name} />
-						</div>
+					{/* // 	<p className="title">Name: {pokemons.name}</p>
+					// 	<div className="nes-container is-rounded">
+					// 		<img src={pokemons.sprites.front_default} alt={pokemons.name} />
+					// 	</div> */}
 					</div>
+					</>
 				)
 			})}
 

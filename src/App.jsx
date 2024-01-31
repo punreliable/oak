@@ -16,7 +16,6 @@ import professorOak from './assets/oak.svg'
 
 gsap.registerPlugin( MotionPathPlugin )
 
-
 const currentYear = new Date().getFullYear();
 const currentMonth = getCurrentMonth();
 const currentDay = getCurrentDay();
@@ -87,7 +86,6 @@ console.log(currentDate);
   const number = Math.floor( Math.random() * 151 ) + 1
   const pokeNo = number.toString()
   const requestURL = 'https://pokeapi.co/api/v2/pokemon/'+ pokeNo
-
   const [pokemon, setPokemon] = useState( null )
   const [pokemonID, setPokemonID] = useState( null )
   const [pokemonAbilities, setPokemonAbilities] = useState( null )
@@ -98,7 +96,6 @@ console.log(currentDate);
   let pokemonMoves = {}
   let pokemonIMGs = {}
   let pokemonSpecies = {}
-
   let imageSrc = 'https://www.gravatar.com/avatar?s=15'
 
   useEffect(() => {

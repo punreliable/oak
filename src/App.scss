@@ -27,6 +27,13 @@
 
 }
 
+
+.nes-balloon {
+
+  
+justify-content: flex-end;
+}
+
 .avatar {
   
   margin-top: 1.5rem;
@@ -124,3 +131,17 @@ h1.oakHello {
 .read-the-docs {
   color: #888;
 }
+
+
+// .custom-class {
+//   display: none;
+// }
+
+
+// @include media-breakpoint-up() {
+//   .custom-class {
+//     display: block;
+//   }
+// }
+
+
