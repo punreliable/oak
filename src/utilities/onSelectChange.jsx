@@ -4,7 +4,7 @@ export default function SelectOnChange () {
     return (
         <form ref={selectForm} method="get" onChange={handleSubmit}>
             <label className="formLabel" for="default_select">Select a Type</label>
-            <div class="nes-select">
+            <div className="nes-select">
                 <select required id="default_select">
                     <option value="" disabled selected hidden>Select a Type...</option>
                     <option value="1">Normal</option>

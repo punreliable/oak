@@ -16,8 +16,8 @@ const PokemonList051to100 = () => {
     }, []);
 
     return (
-		<div class="lists">
-  			<ul class="nes-list is-disc">
+		<div className="lists">
+  			<ul className="nes-list is-disc">
             	{pokemonList.map((pokemon, index) => (
                 	<li key={index}>{prettyName(pokemon.name)}</li>
             	))}

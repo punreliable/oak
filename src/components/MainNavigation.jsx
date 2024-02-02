@@ -228,9 +228,8 @@ const MainNavigation = () => {
                     </NavLink>
                 </li>
                 </ul>
-          <menu class="dialog-menu">
-            <button class="nes-btn is-error" onClick={closeModal}>Close</button>
-            {/* <button class="nes-btn is-primary">Confirm</button> */}
+          <menu className="dialog-menu">
+            <button className="nes-btn is-error" onClick={closeModal}>Close</button>
           </menu>
         </form>
     </dialog>
