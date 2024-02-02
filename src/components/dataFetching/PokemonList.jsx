@@ -1,28 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import prettyName from '../../utilities/prettyName'
+import PokemonList001to050 from './PokemonList001to050'
+import PokemonList051to100 from './PokemonList051to100'
+import PokemonList101to151 from './PokemonList101to151'
 
 const PokemonList = () => {
-    const [pokemonList, setPokemonList] = useState([]);
-
-    useEffect(() => {
-        axios.get('https://pokeapi.co/api/v2/pokemon?limit=50&offset=0')
-            .then(response => {
-                setPokemonList(response.data.results);
-            })
-            .catch(error => {
-                console.error('Error fetching data: ', error);
-            });
-    }, []);
 
     return (
-		<div class="lists">
-  			<ul class="nes-list is-disc">
-            	{pokemonList.map((pokemon, index) => (
-                	<li key={index}>{prettyName(pokemon.name)}</li>
-            	))}
-        	</ul>
-		</div>
+		<>
+			<PokemonList001to050 />
+			<PokemonList051to100 />
+			<PokemonList101to151 />
+		</>
     )
 }
 
