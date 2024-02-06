@@ -28,6 +28,7 @@ import PagePokemonTypeRock from './components/PagePokemonTypeRock'
 import PagePokemonTypeSteel from './components/PagePokemonTypeSteel'
 import PagePokemonTypeWater from './components/PagePokemonTypeWater'
 import PageKantoPokemon from './components/dataFetching/PageKantoPokemon'
+import PagePokemonSpecies from './components/PagePokemonSpecies'
 // import PagePokemonTypeList from './components/PagePokemonTypeList'
 
 const router = createBrowserRouter([
@@ -124,6 +125,18 @@ const router = createBrowserRouter([
 	  path: "/pokemon/type/water",
 	  element: <PagePokemonTypeWater />,
 	},
+	{
+		path: "/pokemon/species",
+		element: <PagePokemonSpecies />,
+	},
+	{
+		path: "/species",
+		element: <PagePokemonSpecies />,
+	},
+	{
+		path: "/pokemon-species",
+		element: <PagePokemonSpecies />,
+	}
 
   ])
 
