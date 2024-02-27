@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import { useQuery, QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { createStore } from 'redux'
 import rootReducer from './reducers'
 import { Provider } from 'react-redux'
@@ -28,6 +29,7 @@ import PagePokemonTypeRock from './components/PagePokemonTypeRock'
 import PagePokemonTypeSteel from './components/PagePokemonTypeSteel'
 import PagePokemonTypeWater from './components/PagePokemonTypeWater'
 import PageKantoPokemon from './components/dataFetching/PageKantoPokemon'
+import KantoPokedex from './pages/pokedex/KantoPokedex'
 // import PagePokemonTypeList from './components/PagePokemonTypeList'
 
 const router = createBrowserRouter([
@@ -124,7 +126,14 @@ const router = createBrowserRouter([
 	  path: "/pokemon/type/water",
 	  element: <PagePokemonTypeWater />,
 	},
-
+	{
+		path: "/pokedex",
+		element: <KantoPokedex />,
+	},
+  	{
+		path: "/pokedex/kanto",
+		element: <KantoPokedex />,
+	  },
   ])
 
 import './index.scss'
@@ -143,6 +152,7 @@ root.render(
     <Provider store={store}>
       <RouterProvider router={router} />
     </Provider>
+	<ReactQueryDevtools />
     </QueryClientProvider>
   </React.StrictMode>
 );
