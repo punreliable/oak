@@ -13,6 +13,7 @@ import MainNavigation from './components/MainNavigation'
 import './App.scss'
 import '../node_modules/bootstrap/scss/bootstrap.scss'
 import professorOak from './assets/oak.svg'
+import PokemonDescription from './components/PokemonDescription'
 
 gsap.registerPlugin( MotionPathPlugin )
 
@@ -35,10 +36,10 @@ const getPokemonNumber = () => {
 
 const App = () => {
 
-console.log(currentDay);
-console.log(currentMonth);
-console.log(currentYear);
-console.log(currentDate);
+// console.log(currentDay);
+// console.log(currentMonth);
+// console.log(currentYear);
+// console.log(currentDate);
 // console.log(getPokemonNumber());
 
   // OMG GSAP is working!
@@ -109,6 +110,9 @@ console.log(currentDate);
     .catch( err => { console.log( err ) })
   }, [])
 
+
+
+
   return (
     <div className="App">
       { pokemon && (
@@ -125,11 +129,31 @@ console.log(currentDate);
             id="avatar"
             src={pokemon.sprites.front_default} />
 
-          <p>Height: {pokemon.height}in</p>
-          <p>Weight: {pokemon.weight}lb</p>
-          <p>Base XP: {pokemon.base_experience}xp</p>
+          <div className="row">
+            <div className="col-md-12 col-lg-3">
 
+              <p>Height: {pokemon.height}in</p>
+              <p>Weight: {pokemon.weight}lb</p>
+              <p>Base XP: {pokemon.base_experience}xp</p>
+
+            </div>
+            <div className="col-md-12 col-lg-9">
+              <PokemonDescription pokemon={pokemon.id} /> 
+            </div>
+          </div>
+           
           <PokemonTypeList types={pokemon.types} />
+
+          <div className="row">
+
+              <div className="col-md-12">
+
+                {/* <p>Would you like to learn more about { prettyName( pokemon.name ) }? Click the button below.</p> */}
+
+                <button type="button" className="nes-btn">More Details</button>
+
+              </div>
+            </div>
 
           <section className="message-list" id="professorMessages" unresolved>
 
