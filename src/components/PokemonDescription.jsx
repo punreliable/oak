@@ -21,13 +21,16 @@ const fetchPokemonBaseHappiness = async (requestURL) => {
 
 const PokemonDescription = ( pokemonId ) => {
 
-	const requestURL = `https://pokeapi.co/api/v2/pokemon-species/${pokemonId}`
+	//console.log(pokemonId)
+
+	const requestURL = `https://pokeapi.co/api/v2/pokemon-species/${pokemonId.pokemon}`
+	// console.log(requestURL)
 	const [description, setDescription] = useState( null )
 	
 	useEffect(() => {
 		axios.get( requestURL )
 		.then( response => {
-			setDescription(data.base_happiness)
+			setDescription(data?.base_happiness)
 			})
 		.catch( err => { console.log( err ) })
 		}, [])
@@ -47,7 +50,7 @@ const PokemonDescription = ( pokemonId ) => {
 
   return (
 	<div className="nesContainer">
-		<p>Base Happiness:{data.base_happiness}</p>
+		<p>Base Happiness:{data?.base_happiness}</p>
 	</div>
   )
 }
