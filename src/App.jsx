@@ -1,5 +1,5 @@
 import { lazy, Suspense, useState, useEffect } from 'react'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider, useNavigate } from 'react-router-dom'
 import { gsap } from 'gsap/dist/gsap'
 import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin'
 import axios from 'axios'
@@ -17,19 +17,19 @@ import PokemonDescription from './components/PokemonDescription'
 
 gsap.registerPlugin( MotionPathPlugin )
 
-const currentYear = new Date().getFullYear();
-const currentMonth = getCurrentMonth();
-const currentDay = getCurrentDay();
-const currentDate = `${currentYear}-${currentMonth}-${currentDay}`;
+const currentYear = new Date().getFullYear()
+const currentMonth = getCurrentMonth()
+const currentDay = getCurrentDay()
+const currentDate = `${currentYear}-${currentMonth}-${currentDay}`
 
 const getPokemonNumber = () => {
 
   const number = Math.floor( Math.random() * 151 ) + 1
 
   // const month = new Date().getMonth() + 1;
-  console.log(number);
+  console.log(number)
   if(number < 10) {
-    return `0${number}`;
+    return `0${number}`
   }
 
 }
@@ -110,8 +110,12 @@ const App = () => {
     .catch( err => { console.log( err ) })
   }, [])
 
-
-
+  // let navigate = useNavigate()
+  const gotoMoreDetails = (id) => {
+  //  const routeChange = () => {}
+  //  let path = `more/${id}` 
+  //  navigate(path)
+  }
 
   return (
     <div className="App">
@@ -125,12 +129,12 @@ const App = () => {
 
           <img
             className="nes-avatar avatar pokemonAvatar"
-            alt="Gravatar image example"
+            alt={ "Image of a " + prettyName( pokemon.name ) }
             id="avatar"
             src={pokemon.sprites.front_default} />
 
-          <div className="row">
-            <div className="col-md-12 col-lg-3">
+          <div className="row rowStats">
+            <div className="col-md-12 col-lg-3 stats">
 
               <p>Height: {pokemon.height}in</p>
               <p>Weight: {pokemon.weight}lb</p>
@@ -150,7 +154,7 @@ const App = () => {
 
                 {/* <p>Would you like to learn more about { prettyName( pokemon.name ) }? Click the button below.</p> */}
 
-                <button type="button" className="nes-btn">More Details</button>
+                <button type="button" className="nes-btn" onClick={gotoMoreDetails(pokemon.id)}>More Details</button>
 
               </div>
             </div>

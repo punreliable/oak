@@ -145,3 +145,13 @@ h1.oakHello {
 // }
 
 
+.rowStats {
+
+  display: flex;
+  flex-direction: row;
+  
+  .stats {
+    align-self: center;
+  }
+
+}

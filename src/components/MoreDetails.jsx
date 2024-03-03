@@ -6,7 +6,7 @@ import prettyName from '../utilities/prettyName'
 const MoreDetails = () => {
 
 	return(
-		<div className="nesContainer nes-container">
+		<div className="nesContainer">
 			<h1>Hello World</h1>
 		</div>
 	)

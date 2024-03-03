@@ -30,7 +30,7 @@ import PagePokemonTypeSteel from './components/PagePokemonTypeSteel'
 import PagePokemonTypeWater from './components/PagePokemonTypeWater'
 import PageKantoPokemon from './components/dataFetching/PageKantoPokemon'
 import KantoPokedex from './pages/pokedex/KantoPokedex'
-import MoreDetails from './components/MoreDetails'
+// import MoreDetails from './components/MoreDetails'
 // import PagePokemonTypeList from './components/PagePokemonTypeList'
 
 const router = createBrowserRouter([
@@ -135,10 +135,10 @@ const router = createBrowserRouter([
 		path: "/pokedex/kanto",
 		element: <KantoPokedex />,
 	},
-	{
-		path: "/more-details",
-		element: <MoreDetails />,
-	},
+	// {
+	// 	path: "/more",
+	// 	element: <MoreDetails />,
+	// },
   ])
 
 import './index.scss'

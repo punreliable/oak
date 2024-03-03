@@ -13,6 +13,10 @@ const fetchPokemonBaseHappiness = async (requestURL) => {
 
 }
 
+const style = {
+	textAlign: 'left'
+}
+
 const PokemonDescription = ( pokemonId ) => {
 
 	// const [description, setDescription] = useState( null )
@@ -41,10 +45,11 @@ const PokemonDescription = ( pokemonId ) => {
 
   console.log(data.data.description)
   return (
-	<div className="nesContainer">
+	<div className="nesContainer" style={style}>
+		<p className="text-left">Description: {data.data.flavor_text_entries[0].flavor_text}</p>
 		<p className="text-left">Base Happiness: {data.data.base_happiness}</p>
 		<p className="text-left">Shape: {prettyName(data.data.shape.name)}</p>
-		<p className="text-left">Description: {data.data.flavor_text_entries[0].flavor_text}</p>
+
 	</div>
   )
 }
