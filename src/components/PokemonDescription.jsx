@@ -1,14 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
-
-const fetchPokemonDetails = async ( pokemonId ) => {
-	const response = await fetch(requestURL)
-	if( !response.ok ) {
-	throw new Error('Network response was not ok')
-	}
-	return response
-}
+import prettyName from '../utilities/prettyName'
 
 const fetchPokemonBaseHappiness = async (requestURL) => {
 
@@ -17,26 +10,24 @@ const fetchPokemonBaseHappiness = async (requestURL) => {
 		new Error('Happiness could not be found.')
 	}
 	return response
+
 }
 
 const PokemonDescription = ( pokemonId ) => {
 
-	//console.log(pokemonId)
-
+	// const [description, setDescription] = useState( null )
 	const requestURL = `https://pokeapi.co/api/v2/pokemon-species/${pokemonId.pokemon}`
-	// console.log(requestURL)
-	const [description, setDescription] = useState( null )
-	
+
 	useEffect(() => {
 		axios.get( requestURL )
 		.then( response => {
-			setDescription(data?.base_happiness)
+			setDescription(data.base_happiness)
 			})
 		.catch( err => { console.log( err ) })
 		}, [])
 
   const { data, error, isLoading, isError } = useQuery({
-	queryKey:['pokemon-species', pokemonId],
+	queryKey:['pokemon-species', requestURL ],
 	queryFn: () => fetchPokemonBaseHappiness(requestURL) 
   })
 
@@ -48,9 +39,12 @@ const PokemonDescription = ( pokemonId ) => {
 	return <div>Error: {error.message}</div>
   }
 
+  console.log(data.data.description)
   return (
 	<div className="nesContainer">
-		<p>Base Happiness:{data?.base_happiness}</p>
+		<p className="text-left">Base Happiness: {data.data.base_happiness}</p>
+		<p className="text-left">Shape: {prettyName(data.data.shape.name)}</p>
+		<p className="text-left">Description: {data.data.flavor_text_entries[0].flavor_text}</p>
 	</div>
   )
 }
