@@ -1,6 +1,6 @@
 // Water Pokemon Stylesheet
 
-.container {
+.container, .nesContainer {
 	
 	width: 100%;
 	height: 100%;		
@@ -24,7 +24,7 @@
 		
 	}
 
-	.type-icon {
+	.type-icon, .typeIcon {
 		
 		height: 128px;
 		width: 128px;
@@ -40,4 +40,12 @@
 		}
 	}
 
+}
+
+button {
+	&.btnPokemon {
+
+	margin: .5rem;
+
+	}
 }

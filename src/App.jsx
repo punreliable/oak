@@ -154,7 +154,7 @@ const App = () => {
 
                 {/* <p>Would you like to learn more about { prettyName( pokemon.name ) }? Click the button below.</p> */}
 
-                <button type="button" className="nes-btn" onClick={gotoMoreDetails(pokemon.id)}>More Details</button>
+                {/* <button type="button" className="nes-btn" onClick={gotoMoreDetails(pokemon.id)}>More Details</button> */}
 
               </div>
             </div>

@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import prettyName from '../utilities/prettyName'
@@ -19,7 +19,7 @@ const style = {
 
 const PokemonDescription = ( pokemonId ) => {
 
-	// const [description, setDescription] = useState( null )
+	const [description, setDescription] = useState( null )
 	const requestURL = `https://pokeapi.co/api/v2/pokemon-species/${pokemonId.pokemon}`
 
 	useEffect(() => {
