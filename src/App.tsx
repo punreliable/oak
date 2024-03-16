@@ -1,10 +1,10 @@
 import { lazy, Suspense, useState, useEffect } from 'react'
 import { createBrowserRouter, RouterProvider, useNavigate } from 'react-router-dom'
-import { gsap } from 'gsap/dist/gsap'
-import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin'
+// import { gsap } from 'gsap/dist/gsap'
+// import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin'
 import axios from 'axios'
 import styled from 'styled-components'
-import * as bootstrap from 'bootstrap'
+// import * as bootstrap from 'bootstrap'
 import prettyName from './utilities/prettyName'
 import getCurrentMonth from './utilities/getCurrentMonth'
 import getCurrentDay from './utilities/getCurrentDay'
@@ -16,7 +16,7 @@ import professorOak from './assets/oak.svg'
 import PokemonDescription from './components/PokemonDescription'
 import React from 'react'
 
-gsap.registerPlugin( MotionPathPlugin )
+// gsap.registerPlugin( MotionPathPlugin )
 
 const currentYear = new Date().getFullYear()
 const currentMonth = getCurrentMonth()
@@ -27,8 +27,6 @@ const getPokemonNumber = () => {
 
   const number = Math.floor( Math.random() * 151 ) + 1
 
-  // const month = new Date().getMonth() + 1;
-  console.log(number)
   if(number < 10) {
     return `0${number}`
   }
@@ -80,15 +78,14 @@ const App = () => {
 //     opacity: 1
 //   } 
 // );
-
-
-  // gsap.to("#avatar", { x: 100, duration: 2 });
-  // gsap.to("#imgProfessorOak", {x: 100, duration: 1 });
+// gsap.to("#avatar", { x: 100, duration: 2 });
+// gsap.to("#imgProfessorOak", {x: 100, duration: 1 });
 
   const number = Math.floor( Math.random() * 151 ) + 1
   const pokeNo = number.toString()
   const requestURL = 'https://pokeapi.co/api/v2/pokemon/'+ pokeNo
   const [pokemon, setPokemon] = useState( null )
+  const [pokemonName, setPokemonName] = useState( null )
   const [pokemonID, setPokemonID] = useState( null )
   const [pokemonAbilities, setPokemonAbilities] = useState( null )
   const [pokemonHeight, setPokemonHeight] = useState( null )
@@ -107,6 +104,7 @@ const App = () => {
       setPokemonHeight(res.data.height)
       setPokemonWeight(res.data.weight)
       setPokemonXP(res.data.base_experience)
+      setPokemonName(res.data.name)
      })
     .catch( err => { console.log( err ) })
   }, [])
@@ -126,11 +124,11 @@ const App = () => {
           <MainNavigation />
 
           <h1 className="oakHello">Hello,</h1>
-          <h1 className="pokemonName">{ prettyName( pokemon.name ) }</h1>
+            {pokemon && pokemonName && <h1 className="pokemonName">{ prettyName( pokemonName ) }</h1>}
 
           <img
             className="nes-avatar avatar pokemonAvatar"
-            alt={ "Image of a " + prettyName( pokemon.name ) }
+            alt={ "Image of a " + prettyName( pokemonName ) }
             id="avatar"
             src={pokemon.sprites.front_default} />
 
