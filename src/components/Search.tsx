@@ -1,8 +1,8 @@
-import pokeball from "../assets/pokeball.svg";
-import SearchForm from "../components/SearchForm";
+import pokeball from "../assets/pokeball.svg"
+import SearchForm from "./SearchForm";
 
-const Search = (props) => {
-  const entryDataHandler = (enteredData) => {
+const Search = (props: any) => {
+  const entryDataHandler = (enteredData: any) => {
     // console.log("hello");
     const entryData = {
       ...enteredData,
@@ -12,7 +12,7 @@ const Search = (props) => {
     props.enteredData(entryData);
   };
 
-  const saveExpenseDataHandler = (enteredExpenseData) => {
+  const saveExpenseDataHandler = (enteredExpenseData: any) => {
     const expenseData = {
       ...enteredExpenseData,
       id: Math.random().toString(),
