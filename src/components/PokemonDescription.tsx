@@ -4,6 +4,9 @@ import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import prettyName from '../utilities/prettyName'
 import { R } from '@tanstack/react-query-devtools/build/legacy/devtools-dKCOqp9Q'
+// import { R } from '@tanstack/react-query-devtools/build/legacy/devtools-dKCOqp9Q'
+
+
 
 const fetchPokemonBaseHappiness = async (requestURL:string) => {
 
@@ -21,19 +24,23 @@ const style: React.CSSProperties = {
 
 
 
-const PokemonDescription = ( pokemonId: number ) => {
+const PokemonDescription = ( pokemonId: object ) => {
 
-	useEffect(() => {
-		axios.get( requestURL )
-		.then( response => {
-			setDescription(response.data.base_happiness) // Access the 'data' property of the 'response' object
-			})
-		.catch( err => { console.log( err ) })
-		}, [])
+	// useEffect(() => {
+	// 	axios.get( requestURL )
+	// 	.then( response => {
+	// 		setDescription(response.data.flavor_text_entries[0].flavor_text) 
+	// 		setBaseHappiness(response.data.base_happiness)// Access the 'data' property of the 'response' object
+	// 		})
+	// 	.catch( err => { console.log( err ) 
+	// 	}, [])
 
-	const [description, setDescription] = useState( null )
-		const requestURL = `https://pokeapi.co/api/v2/pokemon-species/${pokemonId.pokemon}`
+		const [baseHappiness, setBaseHappiness] = useState(0)
+		const [description, setDescription] = useState('Loading...')
 
+		const requestURL = `https://pokeapi.co/api/v2/pokemon-species/${parseInt(pokemonId.pokemon)}`
+
+		console.log(requestURL)
 		const { data, error, isLoading, isError } = useQuery({
 			queryKey:['pokemon-species', requestURL ],
 			queryFn: () => fetchPokemonBaseHappiness(requestURL) 
@@ -49,8 +56,9 @@ const PokemonDescription = ( pokemonId: number ) => {
 
 		  return (
 			<div style={style}>
-				<h2>{prettyName(pokemonId.pokemon)}</h2>
-				</div>
+				<p>Description: {data.data.flavor_text_entries[0].flavor_text}</p>
+				<p>Base Happiness: {data.data.base_happiness}</p>
+			</div>
 		  )
 		
 

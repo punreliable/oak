@@ -15,6 +15,7 @@ import '../node_modules/bootstrap/scss/bootstrap.scss'
 import professorOak from './assets/oak.svg'
 import PokemonDescription from './components/PokemonDescription'
 import React from 'react'
+import { Pokemon } from './pokemon'
 
 // gsap.registerPlugin( MotionPathPlugin )
 
@@ -84,7 +85,7 @@ const App = () => {
   const number = Math.floor( Math.random() * 151 ) + 1
   const pokeNo = number.toString()
   const requestURL = 'https://pokeapi.co/api/v2/pokemon/'+ pokeNo
-  const [pokemon, setPokemon] = useState( null )
+  const [pokemon, setPokemon] = useState<Pokemon | null>(null);
   const [pokemonName, setPokemonName] = useState( null )
   const [pokemonID, setPokemonID] = useState( null )
   const [pokemonAbilities, setPokemonAbilities] = useState( null )
@@ -116,6 +117,17 @@ const App = () => {
   //  navigate(path)
   }
 
+  const pokemonModel = {
+    id: 0,
+    name: '',
+    sprites: {
+      front_default: '',
+    },
+    height: 0,
+    weight: 0,
+  }
+
+
   return (
     <div className="App">
       { pokemon && (
@@ -126,22 +138,25 @@ const App = () => {
           <h1 className="oakHello">Hello,</h1>
             {pokemon && pokemonName && <h1 className="pokemonName">{ prettyName( pokemonName ) }</h1>}
 
-          <img
-            className="nes-avatar avatar pokemonAvatar"
-            alt={ "Image of a " + prettyName( pokemonName ) }
-            id="avatar"
-            src={pokemon.sprites.front_default} />
+          {pokemon && (
+            <img
+              className="nes-avatar avatar pokemonAvatar"
+              alt={"Image of a " + prettyName(pokemonName)}
+              id="avatar"
+              src={pokemon?.sprites.front_default}
+            />
+          )}
 
           <div className="row rowStats">
             <div className="col-md-12 col-lg-3 stats">
 
-              <p>Height: {pokemon.height}in</p>
+              {pokemon.height && (<p>Height: {pokemon.height}in</p>)}
               <p>Weight: {pokemon.weight}lb</p>
               <p>Base XP: {pokemon.base_experience}xp</p>
 
             </div>
             <div className="col-md-12 col-lg-9">
-              <PokemonDescription pokemon={pokemon.id} /> 
+              <PokemonDescription pokemon={pokemon.id as number} /> 
             </div>
           </div>
            
@@ -158,7 +173,7 @@ const App = () => {
               </div>
             </div>
 
-          <section className="message-list" id="professorMessages" unresolved>
+          <section className="message-list messageList" id="professorMessages" unresolved>
 
             <section className="message -right">
 
