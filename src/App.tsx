@@ -1,10 +1,10 @@
 import { lazy, Suspense, useState, useEffect } from 'react'
 import { createBrowserRouter, RouterProvider, useNavigate } from 'react-router-dom'
-//import { gsap } from 'gsap/dist/gsap'
+import { gsap } from 'gsap/dist/gsap'
 import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin'
 import axios from 'axios'
 import styled from 'styled-components'
-//import * as bootstrap from 'bootstrap'
+import * as bootstrap from 'bootstrap'
 import prettyName from './utilities/prettyName'
 import getCurrentMonth from './utilities/getCurrentMonth'
 import getCurrentDay from './utilities/getCurrentDay'
@@ -14,6 +14,7 @@ import './App.scss'
 import '../node_modules/bootstrap/scss/bootstrap.scss'
 import professorOak from './assets/oak.svg'
 import PokemonDescription from './components/PokemonDescription'
+import React from 'react'
 
 gsap.registerPlugin( MotionPathPlugin )
 
@@ -111,7 +112,7 @@ const App = () => {
   }, [])
 
   // let navigate = useNavigate()
-  const gotoMoreDetails = (id) => {
+  const gotoMoreDetails = (id:number) => {
   //  const routeChange = () => {}
   //  let path = `more/${id}` 
   //  navigate(path)
