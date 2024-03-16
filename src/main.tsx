@@ -1,15 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import { useQuery, QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { createStore } from 'redux'
 import rootReducer from './reducers'
 import { Provider } from 'react-redux'
-import { TanStackRouterDevtools } from '@tanstack/router-devtools'
 import App from './App'
 import PageTeam from './components/PageTeam'
-import PageKantoPokemo from './components/dataFetching/PageKantoPokemon'
 import PagePokemonTypesList from './components/pages/PagePokemonTypesList'
 import PagePokemonTypeBug from './components/PagePokemonTypeBug'
 import PagePokemonTypeDark from './components/PagePokemonTypeDark'
@@ -31,9 +29,6 @@ import PagePokemonTypeSteel from './components/PagePokemonTypeSteel'
 import PagePokemonTypeWater from './components/PagePokemonTypeWater'
 import PageKantoPokemon from './components/dataFetching/PageKantoPokemon'
 import KantoPokedex from './pages/pokedex/KantoPokedex'
-
-// import MoreDetails from './components/MoreDetails'
-// import PagePokemonTypeList from './components/PagePokemonTypeList'
 
 const router = createBrowserRouter([
 	{
@@ -148,18 +143,19 @@ import './index.scss'
 const queryClient = new QueryClient()
 
 const store = createStore(
-  rootReducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEV
+	rootReducer,
+	(window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__()
 );
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const rootElement = document.getElementById('root');
+const root = ReactDOM.createRoot(rootElement || document.createElement('div'));
 root.render(
-  <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
-    <Provider store={store}>
-      <RouterProvider router={router} />
-    </Provider>
+	<React.StrictMode>
+		<QueryClientProvider client={queryClient}>
+		<Provider store={store}>
+			<RouterProvider router={router} />
+		</Provider>
 	<ReactQueryDevtools />
-    </QueryClientProvider>
-  </React.StrictMode>
+		</QueryClientProvider>
+	</React.StrictMode>
 );

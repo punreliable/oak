@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import axios from 'axios'
 import prettyName from '../../utilities/prettyName'
+import React from 'react'
 
 const PokemonList101to151 = () => {
     const [pokemonList, setPokemonList] = useState([]);
@@ -16,13 +17,13 @@ const PokemonList101to151 = () => {
     }, []);
 
     return (
-		<div className="lists">
-  			<ul className="nes-list is-disc">
-            	{pokemonList.map((pokemon, index) => (
-                	<li key={index}>{prettyName(pokemon.name)}</li>
-            	))}
-        	</ul>
-		</div>
+        <div className="lists">
+            <ul className="nes-list is-disc">
+                {pokemonList.map((pokemon: { name: string }, index: number) => (
+                    <li key={index}>{prettyName(pokemon.name)}</li>
+                ))}
+            </ul>
+        </div>
     )
 }
 
