@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import prettyName from '../utilities/prettyName'
+import { R } from '@tanstack/react-query-devtools/build/legacy/devtools-dKCOqp9Q'
 
 const fetchPokemonBaseHappiness = async (requestURL:string) => {
 
@@ -14,45 +15,45 @@ const fetchPokemonBaseHappiness = async (requestURL:string) => {
 
 }
 
-const style = {
+const style: React.CSSProperties = {
 	textAlign: 'left'
 }
 
-const PokemonDescription = ( pokemonId: number ) => {
 
-	const [description, setDescription] = useState( null )
-	const requestURL = `https://pokeapi.co/api/v2/pokemon-species/${pokemonId.pokemon}`
+
+const PokemonDescription = ( pokemonId: number ) => {
 
 	useEffect(() => {
 		axios.get( requestURL )
 		.then( response => {
-			setDescription(data?.base_happiness: number)
+			setDescription(response.data.base_happiness) // Access the 'data' property of the 'response' object
 			})
 		.catch( err => { console.log( err ) })
 		}, [])
 
-  const { data, error, isLoading, isError } = useQuery({
-	queryKey:['pokemon-species', requestURL ],
-	queryFn: () => fetchPokemonBaseHappiness(requestURL) 
-  })
+	const [description, setDescription] = useState( null )
+		const requestURL = `https://pokeapi.co/api/v2/pokemon-species/${pokemonId.pokemon}`
 
-  if( isLoading ) {
-	return <div>Loading...</div>
-  }
+		const { data, error, isLoading, isError } = useQuery({
+			queryKey:['pokemon-species', requestURL ],
+			queryFn: () => fetchPokemonBaseHappiness(requestURL) 
+		  })
+	
+		  if( isLoading ) {
+			return <div>Loading...</div>
+		  }
 
-  if( isError ) {
-	return <div>Error: {error.message}</div>
-  }
+		  if( isError ) {
+			return <div>Error: {error.message}</div>
+		  }
 
-//  console.log(data.data.description)
-  return (
-	<div className="nesContainer" style={style}>
-		<p className="text-left">Description: {data.data.flavor_text_entries[0].flavor_text}</p>
-		<p className="text-left">Base Happiness: {data.data.base_happiness}</p>
-		<p className="text-left">Shape: {prettyName(data.data.shape.name)}</p>
+		  return (
+			<div style={style}>
+				<h2>{prettyName(pokemonId.pokemon)}</h2>
+				</div>
+		  )
+		
 
-	</div>
-  )
 }
 
 export default PokemonDescription
