@@ -6,7 +6,7 @@ const initState = {
 };
 
 
-const pokemonReducer = ( state=initState, action ) => {
+const pokemonReducer = ( state=initState, action: any ) => {
 
 	switch(action.type) {
 		case "FETCH_POKEMON":
