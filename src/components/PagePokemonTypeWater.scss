@@ -30,6 +30,15 @@
 		width: 128px;
 		margin: auto;
 		
+		&.bug {
+			height: 128px;
+			width: 128px;
+			background-image: url( '../assets/type-icons-color/07-bug.svg' );
+			background-size: contain;
+			background-repeat: no-repeat;
+
+		}
+
 		&.water {
 			height: 128px;
 			width: 128px;
@@ -38,14 +47,7 @@
 			background-repeat: no-repeat;
 			
 		}
+		
 	}
 
-}
-
-button {
-	&.btnPokemon {
-
-	margin: .5rem;
-
-	}
 }

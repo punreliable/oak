@@ -622,3 +622,42 @@ a.type-fairy {
 		color: $color-fairy;
 	}
 }
+
+
+.single-type-page {
+
+	@media screen and (min-width: 768px) {
+		
+
+		h2 {
+
+			padding-top: 6rem;
+			padding-bottom: 3rem;
+
+		}
+
+	}
+
+	@media screen and (max-width: 768px) {
+		
+
+		h2 {
+
+			padding-top: 4rem;
+			padding-bottom: 2rem;
+
+		}
+
+	}
+
+}
+
+
+button {
+	&.btnPokemon {
+
+	margin: .5rem;
+
+	}
+}
+

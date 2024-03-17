@@ -1,6 +1,6 @@
 // Bug Pokemon Stylesheet
 
-.container {
+.container, .nesContainer {
 
 	width: 100%;
 	height: 100%;
@@ -24,20 +24,12 @@
 
 	}
 
-	.type-icon {
+	.type-icon, .typeIcon {
 
 		height: 128px;
 		width: 128px;
 		margin: auto;
 
-		&.bug {
-			height: 128px;
-			width: 128px;
-			background-image: url( '../assets/type-icons-color/07-bug.svg' );
-			background-size: contain;
-			background-repeat: no-repeat;
-
-		}
 	}
 
 }
