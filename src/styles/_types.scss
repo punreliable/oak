@@ -2,8 +2,6 @@
 
 // There are 18 Types of Pokemon they are:
 
-
-
 //	01. Normal
 .type-normal {	
 	$color-normal: #A8A878;
@@ -109,6 +107,150 @@
 .type-fairy {	
 	$color-fairy: #EE99AC;
 	$border-color-fairy: #9B6470;
+}
+
+// WRAPPERS
+//	01. Normal
+.wrapper-normal {	
+	$color-normal: #A8A878;
+	$border-color-normal: #6D6D4E;
+	color: $border-color-normal;
+	background-color: lighten($color-normal, .1);
+}
+	
+//	02. Fighting
+.wrapper-fighting {	
+	$color-fighting: #C03028;
+	$border-color-fighting: #7D1F1A;
+	color: $border-color-fighting;
+	background-color: lighten($color-fighting, .1);
+}	
+	
+//	03. Flying
+.wrapper-flying {	
+	$color-flying: #A890F0;
+	$border-color-flying: #6D5E9C;
+	color: $border-color-flying;
+	background-color: lighten($color-flying, .1);
+}	
+	
+//	04. Posion
+.wrapper-posion {	
+	$color-poison: #A040A0;
+	$border-color-poison: #682A68;
+	color: $border-color-poison;
+	background-color: lighten($color-poison, .1);
+}	
+	
+//	05. Ground
+.wrapper-ground {	
+	$color-ground: #E0C068;
+	$border-color-ground: #927D44;
+	color: $border-color-ground;
+	background-color: lighten($color-ground, .1);
+}
+	
+//	06. Rock
+.wrapper-rock {	
+	$color-rock: #B8A038;
+	$border-color-rock: #786824;
+	color: $border-color-rock;
+	background-color: lighten($color-rock, .1);
+}	
+	
+//	07. Bug
+.wrapper-bug {	
+	$color-bug: #A8B820;
+	$border-color-bug: #6D7815;
+	color: $border-color-bug;
+	background-color: lighten($color-bug, .1);
+}	
+	
+//	08. Ghost
+.wrapper-ghost {	
+	$color-ghost: #705898;
+	$border-color-ghost: #493963;
+	color: $border-color-ghost;
+	background-color: lighten($color-ghost, .1);
+}	
+	
+//	09. Steel
+.wrapper-steel {	
+	$color-steel: #B8B8D0;
+	$border-color-steel: #787887;
+	color: $border-color-steel;
+	background-color: lighten($color-steel, .1);
+}	
+	
+//	10. Fire
+.wrapper-fire {	
+	$color-fire: #F08030;
+	$border-color-fire: #9C531F;
+	color: $border-color-fire;
+	background-color: lighten($color-fire, .1);
+}	
+	
+//	11. Water
+.wrapper-water {	
+	$color-water: #6890F0;
+	$border-color-water: #445E9C;
+	color: $border-color-water;
+	background-color: lighten($color-water, .1);
+}	
+	
+//	12. Grass
+.wrapper-grass {	
+	$color-grass: #78C850;
+	$border-color-grass: #4E8234;
+	color: $border-color-grass;
+	background-color: lighten($color-grass, .1);
+}	
+	
+//	13. Electric
+.wrapper-electric {	
+	$color-electric: #F8D030;
+	$border-color-electric: #A1871F;
+	color: $border-color-electric;
+	background-color: lighten($color-electric, .1);
+}	
+	
+//	14. Psychic
+.wrapper-psyhic {	
+	$color-psychic: #F85888;
+	$border-color-psychic: #A13959;
+	color: $border-color-psychic;
+	background-color: lighten($color-psychic, .1);
+}	
+	
+//	15. Ice
+.wrapper-ice {	
+	$color-ice: #98D8D8;
+	$border-color-ice: #638D8D;
+	color: $border-color-ice;
+	background-color: lighten($color-ice, .1);
+}	
+	
+//	16. Dragon
+.wrapper-dragon {	
+	$color-dragon: #7038F8;
+	$border-color-dragon: #4924A1;
+	color: $border-color-dragon;
+	background-color: lighten($color-dragon, .1);
+}
+	
+//	17. Dark
+.wrapper-dark {	
+	$color-dark: #705848;
+	$border-color-dark: #49392F;	
+	color: $border-color-dark;
+	background-color: lighten($color-dark, .1);
+}	
+//	18. Fairy
+.wrapper-fairy {	
+	$color-fairy: #EE99AC;
+	$border-color-fairy: #9B6470;
+	color: $border-color-fairy;
+	background-color: lighten($color-fairy, .1);
 }
 
 // LINKS
@@ -313,5 +455,170 @@ a.type-fairy {
 	&:hover {
 
 		background-color: darken($color-fairy, 10%);
+	}
+}
+
+// TEXT
+//	01. Normal
+.text-normal {
+	$color-normal: #A8A878;
+	color: $color-normal;
+
+	&.dark{
+		$color-normal: #6D6D4E;
+		color: $color-normal;
+	}
+}
+//	02. Fighting
+.text-fighting {	
+	$color-fighting: #C03028;
+	color: $color-fighting;
+	&.dark{
+		$color-fighting: #7D1F1A;
+		color: $color-fighting;
+	}
+}
+//	03. Flying
+.text-flying {	
+	$color-flying: #A890F0;
+	color: $color-flying;
+	&.dark{
+		$color-flying: #6D5E9C;
+		color: $color-fighting;
+	}
+}
+//	04. Posion
+.text-posion {	
+	$color-poison: #A040A0;
+	color: $color-poison;
+	&.dark{
+		$color-poison: #682A68;
+		color: $color-poison;
+	}
+}
+//	05. Ground
+.text-ground {	
+	$color-ground: #E0C068;
+	color: $color-ground;
+	&.dark{
+		$color-ground: #927D44;
+		color: $color-ground;
+	}
+}
+//	06. Rock
+.text-rock {	
+	$color-rock: #B8A038;
+	color: $color-rock;
+	&.dark{
+		$color-rock: #786824;
+		color: $color-rock;
+	}
+}
+//	07. Bug
+.text-bug {	
+	$color-bug: #A8B820;
+	color: $color-bug;
+	&.dark{
+		$color-bug: #6D7815;
+		color: $color-bug;
+	}
+}
+//	08. Ghost
+.text-ghost {	
+	$color-ghost: #705898;
+	color: $color-ghost;
+	&.dark{
+		$color-ghost: #493963;
+		color: $color-ghost;
+	}
+}
+//	09. Steel
+.text-steel {	
+	$color-steel: #B8B8D0;
+	color: $color-steel;
+	&.dark{
+		$color-steel: #787887;
+		color: $color-steel;
+	}
+}
+//	10. Fire
+.text-fire {	
+	$color-fire: #F08030;
+	color: $color-fire;
+	&.dark{
+		$color-fire: #9C531F;
+		color: $color-fire;
+	}
+}
+//	11. Water
+.text-water {	
+	$color-water: #6890F0;
+	color: $color-water;
+	&.dark{
+		$color-water: #445E9C;
+		color: $color-water;
+	}
+}
+//	12. Grass
+.text-grass {	
+	$color-grass: #78C850;
+	color: $color-grass;
+	&.dark{
+		$color-grass: #4E8234;
+		color: $color-grass;
+	}
+}
+//	13. Electric
+.text-electric {	
+	$color-electric: #F8D030;
+	color: $color-electric;
+	&.dark{
+		$color-electric: #A1871F;
+		color: $color-electric;
+	}
+}
+//	14. Psychic
+.text-psyhic {	
+	$color-psychic: #F85888;
+	color: $color-psychic;
+	&.dark{
+		$color-psychic: #A13959;
+		color: $color-psychic;
+	}
+}
+//	15. Ice
+.text-ice {	
+	$color-ice: #98D8D8;
+	color: $color-ice;
+	&.dark{
+		$color-ice: #638D8D;
+		color: $color-ice;
+	}
+}
+//	16. Dragon
+.text-dragon {	
+	$color-dragon: #7038F8;
+	color: $color-dragon;	
+	&.dark{
+		$color-dragon: #4924A1;
+		color: $color-dragon;
+	}
+}
+//	17. Dark
+.text-dark {	
+	$color-dark: #705848;
+	color: $color-dark;
+	&.dark{
+		$color-dark: #49392F;	
+		color: $color-dark;
+	}
+}
+//	18. Fairy
+.text-fairy {	
+	$color-fairy: #EE99AC;
+	color: $color-fairy;
+	&.dark{
+		$color-fairy: #9B6470;
+		color: $color-fairy;
 	}
 }
