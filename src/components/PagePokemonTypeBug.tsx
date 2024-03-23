@@ -65,6 +65,7 @@ const PagePokemonTypeBug = () => {
 				<div>
 					<h2 className="text-bug dark">Damage Relations</h2>
 					<div className="damageRelations">
+						{data?.data.damage_relations.double_damage_from.length > 0 && ((
 						<div className="damageRelations__doubleDamageFrom">
 							<h3>Double Damage From</h3>
 							<ul>
@@ -82,6 +83,102 @@ const PagePokemonTypeBug = () => {
 						}
 							</ul>
 						</div>
+						))}
+						{data?.data.damage_relations.double_damage_to.length > 0 && ((
+						<div className="damageRelations__doubleDamageTo">
+							<h3>Double Damage To</h3>
+							<ul>
+							{ data?.data.damage_relations.double_damage_to.map((double_damage_to: any, index: number) => {
+								return (
+									<>
+										<li>
+											<button type="button" className="nes-btn nesBtn isPrimary is-primary btnPokemon" key={index}>
+												{prettyName(double_damage_to.name)}
+											</button>
+										</li>
+									</>
+								)
+							})
+						}
+							</ul>
+						</div>
+						))}
+						{ data?.data.damage_relations.half_damage_to.length > 0 && ((
+						<div className="damageRelations__halfDamageTo">
+							<h3>Half Damage To</h3>
+							<ul>
+							{ data?.data.damage_relations.half_damage_to.map((half_damage_to: any, index: number) => {
+								return (
+									<>
+										<li>
+											<button type="button" className="nes-btn nesBtn isPrimary is-primary btnPokemon" key={index}>
+												{prettyName(half_damage_to.name)}
+											</button>
+										</li>
+									</>
+								)
+							})
+						}
+							</ul>
+						</div>
+						))}
+						{ data?.data.damage_relations.half_damage_from.length > 0 && ((
+						<div className="damageRelations__halfDamageFrom">
+							<h3>Half Damage From</h3>
+							<ul>
+							{ data?.data.damage_relations.half_damage_from.map((half_damage_from: any, index: number) => {
+								return (
+									<>
+										<li>
+											<button type="button" className="nes-btn nesBtn isPrimary is-primary btnPokemon" key={index}>
+												{prettyName(half_damage_from.name)}
+											</button>
+										</li>
+									</>
+								)
+							})
+						}
+							</ul>
+						</div>
+						))}
+						{ data?.data.damage_relations.no_damage_to.length > 0 && ((
+						<div className="damageRelations__noDamageTo">
+							<h3>No Damage To</h3>
+							<ul>
+							{ data?.data.damage_relations.no_damage_to.map((no_damage_to: any, index: number) => {
+								return (
+									<>
+										<li key={index}>
+											<button type="button" className="nes-btn nesBtn isPrimary is-primary btnPokemon">
+												{prettyName(no_damage_to.name)}
+											</button>
+										</li>
+									</>
+								)
+							})
+						}
+							</ul>
+						</div>
+						))}
+						{ data?.data.damage_relations.no_damage_from.length > 0 && ((
+						<div className="damageRelations__noDamageFrom">
+							<h3>No Damage From</h3>
+							<ul>
+							{ data?.data.damage_relations.no_damage_from.map((no_damage_from: any, index: number) => {
+								return (
+									<>
+										<li>
+											<button type="button" className="nes-btn nesBtn isPrimary is-primary btnPokemon" key={index}>
+												{prettyName(no_damage_from.name)}
+											</button>
+										</li>
+									</>
+								)
+							})
+						}
+							</ul>
+						</div>
+						))}
 					</div>
 				</div>
 			</section>
