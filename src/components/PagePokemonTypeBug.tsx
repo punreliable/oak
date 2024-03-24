@@ -4,6 +4,7 @@ import axios from 'axios'
 import type { Pokemon } from '../../pokemon.d.ts'
 import type { PokemonType } from '../../pokemon-type.d.ts'
 import DoubleDamageFrom from './DoubleDamageFrom'
+import DoubleDamageTo from './DoubleDamageTo'
 import MainNavigation from './MainNavigation'
 import prettyName from '../utilities/prettyName'
 
@@ -71,6 +72,11 @@ const PagePokemonTypeBug = () => {
 						{data?.data.damage_relations.double_damage_from.length > 0 && ((
 						<DoubleDamageFrom data={data?.data.damage_relations.double_damage_from} />
 						))}
+
+						{data?.data.damage_relations.double_damage_to.length > 0 && ((
+						<DoubleDamageTo data={data?.data.damage_relations.double_damage_to} />
+						))}
+
 						{data?.data.damage_relations.double_damage_to.length > 0 && ((
 						<div className="damageRelations__doubleDamageTo">
 							<h3>Double Damage To</h3>
@@ -112,23 +118,9 @@ const PagePokemonTypeBug = () => {
 						))}
 
 						{ data?.data.damage_relations.half_damage_from.length > 0 && ((
-						<div className="damageRelations__halfDamageFrom">
-							<h3>Half Damage From</h3>
-							<ul>
-							{ data?.data.damage_relations.half_damage_from.map((half_damage_from: any, index: number) => {
-								return (
-									<>
-										<li>
-											<button type="button" className="nes-btn nesBtn isPrimary is-primary btnPokemon" key={index}>
-												{prettyName(half_damage_from.name)}
-											</button>
-										</li>
-									</>
-								)
-							})
-						}
-							</ul>
-						</div>
+
+
+
 						))}
 
 						{ data?.data.damage_relations.no_damage_to.length > 0 && ((
