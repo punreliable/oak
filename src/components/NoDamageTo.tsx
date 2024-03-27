@@ -2,17 +2,17 @@ import React from "react"
 import prettyName from "../utilities/prettyName"
 import type { PokemonType } from "../../pokemon-type.d.ts"
 
-const HalfDamageTo = ( props: PokemonType ) => {
+const NoDamageTo = ( props: PokemonType ) => {
 	return (
-		<div className="damageRelations__HalfDamageTo">
-			<h3>Half Damage To</h3>
+		<div className="damageRelations__noDamageTo">
+			<h3>No Damage To</h3>
 			<ul className="list-pokemon-types">
-				{ props.data.damage_relations.half_damage_to.map(
-					(half_damage_to: any, index: number) => {						
+				{ props.data.damage_relations.no_damage_to.map(
+					(no_damage_to: any, index: number) => {						
 						return (
 							<li key={index}>
 								<button type="button" className="nes-btn nesBtn isPrimary is-primary btnPokemon">
-									{prettyName(half_damage_to.name)}
+									{prettyName(no_damage_to.name)}
 								</button>
 							</li>
 						)
@@ -23,4 +23,4 @@ const HalfDamageTo = ( props: PokemonType ) => {
 	)
 }
 
-export default HalfDamageTo
+export default NoDamageTo
