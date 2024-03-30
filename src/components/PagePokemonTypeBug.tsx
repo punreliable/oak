@@ -7,8 +7,8 @@ import DoubleDamageFrom from './DoubleDamageFrom'
 import DoubleDamageTo from './DoubleDamageTo'
 import HalfDamageFrom from './HalfDamageFrom'
 import HalfDamageTo from './HalfDamageTo'
-import NoDamamgeFrom from './NoDamageFrom'
-import NoDamamgeTo from './NoDamageTo'
+import NoDamageFrom from './NoDamageFrom'
+import NoDamageTo from './NoDamageTo'
 import MainNavigation from './MainNavigation'
 import prettyName from '../utilities/prettyName'
 import './PagePokemonTypeBug.scss'
@@ -104,29 +104,26 @@ const PagePokemonTypeBug = () => {
 							<HalfDamageFrom data={data?.data.damage_relations.half_damage_from} id={0} name={''}  />
 						))
 						}
+						{ 
+						data?.data.damage_relations.no_damage_from.length > 0 && ((
+							<NoDamageFrom data={data?.data.damage_relations.no_damage_from} id={0} name={''}  />
+						))
+						}
 
-						{
-						data?.data.damage_relations.double_damage_to.length > 0 && ((
-							<DoubleDamageTo data={data?.data.damage_relations.double_damage_to} id={0} name={''} />
+						{ 
+						data?.data.damage_relations.no_damage_to.length > 0 && ((
+							<NoDamageTo data={data?.data.damage_relations.no_damage_to} id={0} name={''}  />
 						))
 						}
 						{ data?.data.damage_relations.half_damage_to.length > 0 && ((
 							<HalfDamageTo data={data?.data.damage_relations.half_damage_to} id={0} name={''}  />
 						))
 						}
-
-						{ 
-						// data?.data.damage_relations.no_damage_from.length > 0 && ((
-						// <NoDamamgeFrom data={data?.data.damage_relations.no_damage_from} id={0} name={''}  />
-						// ))
+						{
+						data?.data.damage_relations.double_damage_to.length > 0 && ((
+							<DoubleDamageTo data={data?.data.damage_relations.double_damage_to} id={0} name={''} />
+						))
 						}
-
-						{ 
-						// data?.data.damage_relations.no_damage_to.length > 0 && ((
-						// <NoDamamgeTo data={data?.data.damage_relations.no_damage_to} id={0} name={''}  />
-						// ))
-						}
-
 					</div>
 
 				</div>

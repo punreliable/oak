@@ -42,13 +42,23 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	max-width: 300px;
+
 	//border: $border-size;
 	
 	.nes-container, .nesContainer {
 
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		max-width: 300px;
+		margin: .3rem;
+
 		&.damageRelations__doubleDamageFrom {
-		// 	background-color: $color-error-normal;
+			background-color: $color-error-normal;
+			color: $background-color;
+			h3{
+				color: $background-color;
+			}
 
 		}
 		
