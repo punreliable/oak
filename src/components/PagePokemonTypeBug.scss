@@ -62,7 +62,16 @@
 
 		}
 		
-		&.damageRelations__doubleDamageTo {}
+		&.damageRelations__doubleDamageTo {
+
+			background-color: $color-success-normal;
+			color: $background-color;
+			h3{
+				color: $background-color;
+			}
+
+			
+		}
 		
 		&.damageRelations__halfDamageFrom {}
 	
