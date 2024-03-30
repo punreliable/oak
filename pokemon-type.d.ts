@@ -3,6 +3,8 @@ export type PokemonType = {
 	id: number;
 	name: string;
 	data: {
+		id: number;
+		name: string;
 		damage_relations: {
 			double_damage_from: {
 				name: string;
@@ -23,5 +25,6 @@ export type PokemonType = {
 				name: string;
 			}[];
 		};
+		
 	}
 };
