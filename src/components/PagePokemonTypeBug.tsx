@@ -99,34 +99,31 @@ const PagePokemonTypeBug = () => {
 						{data?.data.damage_relations.double_damage_from.length > 0 && ((
 							<DoubleDamageFrom data={data?.data.damage_relations.double_damage_from} id={0} name={''} />
 						))}
-
 						{
-							/*
-						data?.data.damage_relations.double_damage_to.length > 0 && ((
-							<DoubleDamageTo data={data?.data.damage_relations.double_damage_to} />
+						data?.data.damage_relations.half_damage_from.length > 0 && ((
+							<HalfDamageFrom data={data?.data.damage_relations.half_damage_from} id={0} name={''}  />
 						))
-						*/
 						}
 
-						{ /*
-						data?.data.damage_relations.half_damage_from.length > 0 && ((
-							<HalfDamageFrom data={data?.data.damage_relations.half_damage_from} />
+						{
+						data?.data.damage_relations.double_damage_to.length > 0 && ((
+							<DoubleDamageTo data={data?.data.damage_relations.double_damage_to} id={0} name={''} />
 						))
-						*/ }
-
-						{ /* data?.data.damage_relations.half_damage_to.length > 0 && ((
-							<HalfDamageTo data={data?.data.damage_relations.half_damage_to} />
-						)) */ }
+						}
+						{ data?.data.damage_relations.half_damage_to.length > 0 && ((
+							<HalfDamageTo data={data?.data.damage_relations.half_damage_to} id={0} name={''}  />
+						))
+						}
 
 						{ 
 						// data?.data.damage_relations.no_damage_from.length > 0 && ((
-						// 	<NoDamamgeFrom data={data?.data.damage_relations.no_damage_from} />
+						// <NoDamamgeFrom data={data?.data.damage_relations.no_damage_from} id={0} name={''}  />
 						// ))
 						}
 
 						{ 
 						// data?.data.damage_relations.no_damage_to.length > 0 && ((
-						// 	<NoDamamgeTo data={data?.data.damage_relations.no_damage_to} />
+						// <NoDamamgeTo data={data?.data.damage_relations.no_damage_to} id={0} name={''}  />
 						// ))
 						}
 
