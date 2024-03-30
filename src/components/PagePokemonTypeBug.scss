@@ -43,34 +43,37 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	max-width: 300px;
-	border: $border-size;
+	//border: $border-size;
 	
 	.nes-container, .nesContainer {
+
 		&.damageRelations__doubleDamageFrom {
-			background-color: $color-error-normal;
+		// 	background-color: $color-error-normal;
 
 		}
 		
-	.damageRelations__doubleDamageTo {}
-
-	.damageRelations__halfDamageFrom {}
+		&.damageRelations__doubleDamageTo {}
 		
-	.damageRelations__halfDamageTo {}
-
-	.damageRelations__noDamageFrom {}
+		&.damageRelations__halfDamageFrom {}
 	
-	.damageRelations__noDamageTo {
-	h3 {
-		font-size: 1.6rem;
-	}
-	ul {
-		&.list-pokemon-types {
-			list-style: none;
-			li {
-				list-style-type: none;
-				button {
+		&.damageRelations__halfDamageTo {}
+		
+		&.damageRelations__noDamageFrom {}
+		
+		&.damageRelations__noDamageTo {}
+	
+		h3 {
+			font-size: 1.6rem;
+		}
+		ul {
+			&.list-pokemon-types {
+				list-style: none;
+				li {
+					list-style-type: none;
+					//  button {}
 				}
 			}
 		}
 	}
+
 }

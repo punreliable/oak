@@ -1,17 +1,15 @@
-// pokemon-type.d.ts
-export type PokemonType = {
+// pokemon-type-double-damage-from.d.ts
+export type PokemonTypeDoubleDamageFrom = {
 	id: number;
 	name: string;
 	data: {
 		id: number;
 		name: string;
-		damage_relations: {
-			double_damage_from: [
-				{
-					name: string;
-					url: string;
-				},
-			],
+		damage_relations: [
+			double_damage_from: {
+				name: string;
+				url: string;
+			},
 			double_damage_to: {
 				name: string;
 				url: string;
@@ -32,6 +30,6 @@ export type PokemonType = {
 				name: string;
 				url: string;
 			},
-		},
+		],
 	},
 };

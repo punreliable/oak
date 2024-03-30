@@ -11,6 +11,7 @@ import NoDamamgeFrom from './NoDamageFrom'
 import NoDamamgeTo from './NoDamageTo'
 import MainNavigation from './MainNavigation'
 import prettyName from '../utilities/prettyName'
+import './PagePokemonTypeBug.scss'
 
 const requestURL: string = `https://pokeapi.co/api/v2/type/bug`
 
@@ -32,7 +33,7 @@ const fetchBugTypePokemon = async (requestURL:string) => {
 
 	const response = await axios.get(requestURL)
 	if (response.status !== 200) {
-		throw new Error('Water type Pokemon could not be found.')
+		throw new Error('Bug type Pokemon could not be found.')
 	}
 	return response
 
@@ -51,7 +52,18 @@ const PagePokemonTypeBug = () => {
 		}
 	})
 
-	const [doubleDMFrom, setDoubleDMFrom] = useState<PokemonType|null> (null);
+// 	const [doubleDMFrom, setDoubleDMFrom] = useState<PokemonType>({
+// 	id: 0,
+// 	name: 'Not Found',
+// 	data: {
+// 		damage_relations: {
+// 			double_damage_from: [],
+// 		},
+// 		id: 0,
+// 		name: 'Not Found'
+// 	}
+// });
+	// console.log(doubleDMFrom)
 	
 	if (isLoading) {
 		return(<div>Loading...</div>)
@@ -61,13 +73,11 @@ const PagePokemonTypeBug = () => {
 		return(<div>Error: {error.message}</div>)
 	}
 
-	useEffect( () => {
-		if(data) {
-			if(data?.data.damage_relations.double_damage_from.length > 0) {
-				setDoubleDMFrom(data.data.damage_relations.double_damage_from)
-			}
-		}
-	}, [data] );
+	// useEffect( () => {
+	// 	setDoubleDMFrom(data?.data.damage_relations.double_damage_from)
+	// }, [data] )
+	
+	// console.log( data?.data.damage_relations.double_damage_from.length )
  
 	return(
 		<div className="nesContainer single-type-page">
@@ -86,13 +96,9 @@ const PagePokemonTypeBug = () => {
 					
 					<div className="damageRelations">
 
-						{
-						
-						data?.data.damage_relations.double_damage_from.length > 0 && ((
-							<DoubleDamageFrom data={doubleDMFrom} />
-						))
-						
-					}
+						{data?.data.damage_relations.double_damage_from.length > 0 && ((
+							<DoubleDamageFrom data={data?.data.damage_relations.double_damage_from} id={0} name={''} />
+						))}
 
 						{
 							/*
@@ -112,13 +118,17 @@ const PagePokemonTypeBug = () => {
 							<HalfDamageTo data={data?.data.damage_relations.half_damage_to} />
 						)) */ }
 
-						{ data?.data.damage_relations.no_damage_from.length > 0 && ((
-							<NoDamamgeFrom data={data?.data.damage_relations.no_damage_from} />
-						))}
+						{ 
+						// data?.data.damage_relations.no_damage_from.length > 0 && ((
+						// 	<NoDamamgeFrom data={data?.data.damage_relations.no_damage_from} />
+						// ))
+						}
 
-						{ data?.data.damage_relations.no_damage_to.length > 0 && ((
-							<NoDamamgeTo data={data?.data.damage_relations.no_damage_to} />
-						))}
+						{ 
+						// data?.data.damage_relations.no_damage_to.length > 0 && ((
+						// 	<NoDamamgeTo data={data?.data.damage_relations.no_damage_to} />
+						// ))
+						}
 
 					</div>
 
