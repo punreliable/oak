@@ -52,6 +52,7 @@
 		flex-wrap: wrap;
 		max-width: 300px;
 		margin: .3rem;
+		justify-content: space-between;
 
 		&.damageRelations__doubleDamageFrom {
 			background-color: $color-error-normal;

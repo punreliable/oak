@@ -18,7 +18,7 @@ const DoubleDamageTo = ( props: PokemonType ) => {
 						(double_damage_to: any, index: number) => {						
 							return (
 								<li key={index}>
-									<button type="button" className="nes-btn nesBtn isError is-error btnPokemon">
+									<button type="button" className="nes-btn nesBtn isSuccess is-success btnPokemon">
 										{prettyName(double_damage_to.name)}
 									</button>
 								</li>

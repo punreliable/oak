@@ -1,9 +1,13 @@
 import { lazy, Suspense, useState, useEffect } from 'react'
-import { createBrowserRouter, RouterProvider, useNavigate } from 'react-router-dom'
-// import { gsap } from 'gsap/dist/gsap'
-// import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin'
 import axios from 'axios'
 import styled from 'styled-components'
+import { createBrowserRouter, RouterProvider, useNavigate } from 'react-router-dom'
+// import { Pokemon } from './types/pokemon'
+// import { Pokemon } from '../pokemon.d.ts'
+import { PokemonType } from './types/pokemon-type'
+// import { gsap } from 'gsap/dist/gsap'
+// import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin'
+
 // import * as bootstrap from 'bootstrap'
 import prettyName from './utilities/prettyName'
 import getCurrentMonth from './utilities/getCurrentMonth'
@@ -14,8 +18,8 @@ import './App.scss'
 import '../node_modules/bootstrap/scss/bootstrap.scss'
 import professorOak from './assets/oak.svg'
 import PokemonDescription from './components/PokemonDescription'
-import React from 'react'
-import { Pokemon } from './pokemon'
+
+// import { getRandomPokemon } from './utilities/getRandomPokemon'
 
 // gsap.registerPlugin( MotionPathPlugin )
 
@@ -23,6 +27,9 @@ const currentYear = new Date().getFullYear()
 const currentMonth = getCurrentMonth()
 const currentDay = getCurrentDay()
 const currentDate = `${currentYear}-${currentMonth}-${currentDay}`
+
+// const randomPokemon = getRandomPokemon();
+// console.log(randomPokemon)
 
 const getPokemonNumber = () => {
 
@@ -33,6 +40,8 @@ const getPokemonNumber = () => {
   }
 
 }
+
+console.log(getPokemonNumber)
 
 const App = () => {
 
@@ -82,10 +91,11 @@ const App = () => {
 // gsap.to("#avatar", { x: 100, duration: 2 });
 // gsap.to("#imgProfessorOak", {x: 100, duration: 1 });
 
+
   const number = Math.floor( Math.random() * 151 ) + 1
   const pokeNo = number.toString()
   const requestURL = 'https://pokeapi.co/api/v2/pokemon/'+ pokeNo
-  const [pokemon, setPokemon] = useState<Pokemon | null>(null);
+  const [pokemon, setPokemon] = useState<any | null>(null);
   const [pokemonName, setPokemonName] = useState( null )
   const [pokemonID, setPokemonID] = useState( null )
   const [pokemonAbilities, setPokemonAbilities] = useState( null )
@@ -98,69 +108,76 @@ const App = () => {
   let pokemonSpecies = {}
   let imageSrc = 'https://www.gravatar.com/avatar?s=15'
 
-  useEffect(() => {
-    axios.get( requestURL )
-    .then( res => {
-      setPokemon(res.data)
-      setPokemonHeight(res.data.height)
-      setPokemonWeight(res.data.weight)
-      setPokemonXP(res.data.base_experience)
-      setPokemonName(res.data.name)
-     })
-    .catch( err => { console.log( err ) })
-  }, [])
+  // useEffect(() => {
+  //   axios.get( requestURL )
+  //   .then( res => {
+  //     setPokemon(res.data)
+  //     setPokemonHeight(res.data.height)
+  //     setPokemonWeight(res.data.weight)
+  //     setPokemonXP(res.data.base_experience)
+  //     setPokemonName(res.data.name)
+  //    })
+  //   .catch( err => { console.log( err ) })
+  // }, [])
 
   // let navigate = useNavigate()
-  const gotoMoreDetails = (id:number) => {
+  // const gotoMoreDetails = (id:number) => {
   //  const routeChange = () => {}
   //  let path = `more/${id}` 
   //  navigate(path)
-  }
+  // }
 
-  const pokemonModel = {
-    id: 0,
-    name: '',
-    sprites: {
-      front_default: '',
-    },
-    height: 0,
-    weight: 0,
-  }
+  // const pokemonModel = {
+  //   id: 0,
+  //   name: '',
+  //   sprites: {
+  //     front_default: '',
+  //   },
+  //   height: 0,
+  //   weight: 0,
+  // }
 
 
   return (
     <div className="App">
-      { pokemon && (
+      { 
+      // pokemon && (
+      }
         <section className="nesContainer nes-container">
 
-          <MainNavigation />
+          {/* <MainNavigation /> */}
 
           <h1 className="oakHello">Hello,</h1>
-            {pokemon && pokemonName && <h1 className="pokemonName">{ prettyName( pokemonName ) }</h1>}
 
-          {pokemon && (
-            <img
-              className="nes-avatar avatar pokemonAvatar"
-              alt={"Image of a " + prettyName(pokemonName)}
-              id="avatar"
-              src={pokemon?.sprites.front_default}
-            />
-          )}
+            {/* {pokemon && pokemonName && <h1 className="pokemonName">{ prettyName( pokemonName ) }</h1>} */}
+
+          { // pokemon && (
+            // <img
+            //   className="nes-avatar avatar pokemonAvatar"
+            //   alt={"Image of a " + prettyName(pokemonName)}
+            //   id="avatar"
+            //   src={pokemon?.sprites.front_default}
+            // />
+          // ) 
+        }
 
           <div className="row rowStats">
+
             <div className="col-md-12 col-lg-3 stats">
 
-              {pokemon.height && (<p>Height: {pokemon.height}in</p>)}
+              {/* {pokemon.height && (<p>Height: {pokemon.height}in</p>)}
               <p>Weight: {pokemon.weight}lb</p>
-              <p>Base XP: {pokemon.base_experience}xp</p>
+              <p>Base XP: {pokemon.base_experience}xp</p> */}
 
             </div>
+
             <div className="col-md-12 col-lg-9">
-              <PokemonDescription pokemon={pokemon.id as number} /> 
+              {/* <PokemonDescription pokemon={pokemon.id as number} />  */}
             </div>
+
           </div>
-           
-          <PokemonTypeList types={pokemon.types} />
+{/*            
+          <PokemonTypeList types={pokemon.types} /> */}
 
           <div className="row">
 
@@ -171,9 +188,10 @@ const App = () => {
                 {/* <button type="button" className="nes-btn" onClick={gotoMoreDetails(pokemon.id)}>More Details</button> */}
 
               </div>
+
             </div>
 
-          <section className="message-list messageList" id="professorMessages" unresolved>
+          {/* <section className="message-list messageList" id="professorMessages" unresolved>
 
             <section className="message -right">
 
@@ -191,11 +209,14 @@ const App = () => {
 
             </section>
 
-          </section>
+          </section> */}
 
         </section>
 
-      )}
+      //)
+      {
+
+      }
 
     </div>
   );
