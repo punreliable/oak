@@ -10,53 +10,47 @@ import { getRandomPokemon } from '../utilities/getRandomPokemon'
 const fetchFirstPokemon = async () => {
   const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/1`)
   return response
-};
+}
 
 const fetchSecondPokemon = async () => {
   const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/4`)
   return response
-};
+}
 
 const fetchThirdPokemon = async () => {
   const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/7`)
   return response
-};
-
-
-
-
-
+}
 
 const fetchFourthPokemon = async () => {
-  const idFour = getRandomPokemon();
+  const idFour = getRandomPokemon()
   const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${idFour}`)
   return response
-};
+}
 
 const fetchFifthPokemon = async () => {
-  const idFive = getRandomPokemon();
+  const idFive = getRandomPokemon()
   const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${idFive}`)
   return response
-};
+}
 
 const fetchSixthPokemon = async () => {
-  const idSix = getRandomPokemon();
+  const idSix = getRandomPokemon()
   const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${idSix}`)
   return response
-};
+}
 
 const fetchSeventhPokemon = async () => {
-  const idSeven = getRandomPokemon();
+  const idSeven = getRandomPokemon()
   const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${idSeven}`)
   return response
-};
+}
 
 const fetchEighthPokemon = async () => {
-  const idEight = getRandomPokemon();
+  const idEight = getRandomPokemon()
   const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${idEight}`)
   return response
-};
-
+}
 
 const Carousel = () => {
 
@@ -107,54 +101,41 @@ const { data: eighthPokemonData, isLoading: eighthPokemonLoading, error: eighthP
 
 })
 
-
-
-
-// ...
-
 const [firstPokemon, setFirstPokemon] = useState<string>(defaultImage)
 const [secondPokemon, setSecondPokemon] = useState<string>(defaultImage)
 const [thirdPokemon, setThirdPokemon] = useState<string>(defaultImage)
 const [fourthPokemon, setFourthPokemon] = useState<string>(defaultImage)
 const [fifthPokemon, setFifthPokemon] = useState<string>(defaultImage)
 const [sixthPokemon, setSixthPokemon] = useState<string>(defaultImage)
-const [seventhPokemon, setSeventhåPokemon] = useState<string>(defaultImage)
+const [seventhPokemon, setSeventhPokemon] = useState<string>(defaultImage)
 const [eighthPokemon, setEighthPokemon] = useState<string>(defaultImage)
 
   useEffect(
     () => {
-
       if(firstPokemonData) {
         setFirstPokemon(firstPokemonData.data.sprites.front_default)
       }
-
       if(secondPokemonData) {
         setSecondPokemon(secondPokemonData.data.sprites.front_default)
       }
-
       if(thirdPokemonData) {
         setThirdPokemon(thirdPokemonData.data.sprites.front_default)
       }
-
       if(fourthPokemonData) {
-        setFirstPokemon(fourthPokemonData.data.sprites.front_default)
+        setFourthPokemon(fourthPokemonData.data.sprites.front_default)
       }
-
       if(fifthPokemonData) {
-        setSecondPokemon(fifthPokemonData.data.sprites.front_default)
+        setFifthPokemon(fifthPokemonData.data.sprites.front_default)
       }
-
       if(sixthPokemonData) {
-        setThirdPokemon(sixthPokemonData.data.sprites.front_default)
+        setSixthPokemon(sixthPokemonData.data.sprites.front_default)
       }
-
       if(seventhPokemonData) {
-        setSecondPokemon(seventhPokemonData.data.sprites.front_default)
+        setSeventhPokemon(seventhPokemonData.data.sprites.front_default)
       }
       if(eighthPokemonData) {
-        setThirdPokemon(eighthPokemonData.data.sprites.front_default)
+        setEighthPokemon(eighthPokemonData.data.sprites.front_default)
       }
-
     }, [
       firstPokemonData, 
       secondPokemonData, 
@@ -173,7 +154,6 @@ const [eighthPokemon, setEighthPokemon] = useState<string>(defaultImage)
   if(firstPokemonIsError) {
     return <div>Error: {firstPokemonError?.message}</div>
   }
-  
   if(firstPokemonData) {
     console.log(firstPokemonData)
   }
