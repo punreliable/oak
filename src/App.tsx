@@ -41,10 +41,10 @@ const getPokemonNumber = () => {
 
 }
 
-console.log(getPokemonNumber)
+
 
 const App = () => {
-
+  console.log(getPokemonNumber)
 // console.log(currentDay);
 // console.log(currentMonth);
 // console.log(currentYear);

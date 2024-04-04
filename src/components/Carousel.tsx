@@ -1,38 +1,53 @@
 import React from 'react'
 import { useQuery } from '@tanstack/react-query'
-import { Pokemon } from '../../pokemon.d.ts'
+import axios from 'axios'
+import { Pokemon } from '../../pokemon.js'
 import './Carousel.scss'
 import professorOak from '../assets/professorOak.svg'
+const unsurePokemon = require('../assets/0.png');
 
 const fetchFirstPokemon = async () => {
-  const response = await fetch('https://pokeapi.co/api/v2/pokemon/1')
-  return response.json()
+  const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/1`)
+  return response
 
 }
 
-const defaultImage = '';
+const Carousel = () => {
 
-const { data, isLoading, error } = useQuery({
-    queryKey: ['pokemon', ], 
-    queryFn: fetchFirstPokemon(),
+const defaultImage: string = ''
+
+const { data, isLoading, error, isError } = useQuery({
+    queryKey: ['pokemon'], 
+    queryFn: () => fetchFirstPokemon,
 });
 
 
 
-const Carousel = () => {
+
+
+  if(isLoading) {
+    return <div>Loading...</div>
+  }
+  if(isError) {
+    return <div>Error: {error?.message}</div>
+  }
+  
+  if(data) {
+    console.log(data)
+  }
 
   return(
     <>
 
       <div className="marquee marquee--8">
-        <img className="marquee__item" src="https://placehold.co/100x100/purple/gold?font=playfair-display/text=1" width="100" height="100" alt="" />
-        <img className="marquee__item" src="https://placehold.co/100x100/purple/gold?font=playfair-display/text=2" width="100" height="100" alt="" />
-        <img className="marquee__item" src="https://placehold.co/100x100/purple/gold?font=playfair-display/text=3" width="100" height="100" alt="" />
-        <img className="marquee__item" src="https://placehold.co/100x100/purple/gold?font=playfair-display/text=4" width="100" height="100" alt="" />
-        <img className="marquee__item" src="https://placehold.co/100x100/purple/gold?font=playfair-display/text=5" width="100" height="100" alt="" />
-        <img className="marquee__item" src="https://placehold.co/100x100/purple/gold?font=playfair-display/text=6" width="100" height="100" alt="" />
-        <img className="marquee__item" src="https://placehold.co/100x100/purple/gold?font=playfair-display/text=7" width="100" height="100" alt="" />
-        <img className="marquee__item" src="https://placehold.co/100x100/purple/gold?font=playfair-display/text=8" width="100" height="100" alt="" />
+        <img className="marquee__item" src={unsurePokemon} width="96" height="96" alt="" />
+        <img className="marquee__item" src={unsurePokemon} width="96" height="96" alt="" />
+        <img className="marquee__item" src={unsurePokemon} width="96" height="96" alt="" />
+        <img className="marquee__item" src={unsurePokemon} width="96" height="96" alt="" />
+        <img className="marquee__item" src={unsurePokemon} width="96" height="96" alt="" />
+        <img className="marquee__item" src={unsurePokemon} width="96" height="96" alt="" />
+        <img className="marquee__item" src={unsurePokemon} width="96" height="96" alt="" />
+        <img className="marquee__item" src={unsurePokemon} width="96" height="96" alt="" />
       </div>
       
       
