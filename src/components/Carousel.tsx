@@ -4,7 +4,7 @@ import axios from 'axios'
 import { Pokemon } from '../../pokemon.js'
 import './Carousel.scss'
 import professorOak from '../assets/professorOak.svg'
-const unsurePokemon = require('../assets/0.png');
+import unsurePokemon from '../assets/0.png'
 
 const fetchFirstPokemon = async () => {
   const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/1`)
