@@ -2,7 +2,7 @@ import { lazy, Suspense, useState, useEffect } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
 import { createBrowserRouter, RouterProvider, useNavigate } from 'react-router-dom'
-// import { Pokemon } from './types/pokemon'
+import { Pokemon } from './types/pokemon'
 // import { Pokemon } from '../pokemon.d.ts'
 import { PokemonType } from './types/pokemon-type'
 // import { gsap } from 'gsap/dist/gsap'
@@ -18,6 +18,7 @@ import './App.scss'
 import '../node_modules/bootstrap/scss/bootstrap.scss'
 import professorOak from './assets/oak.svg'
 import PokemonDescription from './components/PokemonDescription'
+import React from 'react'
 
 // import { getRandomPokemon } from './utilities/getRandomPokemon'
 
@@ -39,12 +40,14 @@ const getPokemonNumber = () => {
     return `0${number}`
   }
 
+  return `${number}`
+
 }
 
-
+console.log(getPokemonNumber())
 
 const App = () => {
-  console.log(getPokemonNumber)
+ 
 // console.log(currentDay);
 // console.log(currentMonth);
 // console.log(currentYear);
@@ -120,32 +123,14 @@ const App = () => {
   //   .catch( err => { console.log( err ) })
   // }, [])
 
-  // let navigate = useNavigate()
-  // const gotoMoreDetails = (id:number) => {
-  //  const routeChange = () => {}
-  //  let path = `more/${id}` 
-  //  navigate(path)
-  // }
-
-  // const pokemonModel = {
-  //   id: 0,
-  //   name: '',
-  //   sprites: {
-  //     front_default: '',
-  //   },
-  //   height: 0,
-  //   weight: 0,
-  // }
-
-
   return (
     <div className="App">
-      { 
-      // pokemon && (
-      }
+      
+      { pokemon && (
+      
         <section className="nesContainer nes-container">
 
-          {/* <MainNavigation /> */}
+          <MainNavigation />
 
           <h1 className="oakHello">Hello,</h1>
 
@@ -213,10 +198,9 @@ const App = () => {
 
         </section>
 
-      //)
-      {
-
-      }
+      
+      
+      )}
 
     </div>
   );

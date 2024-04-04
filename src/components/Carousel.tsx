@@ -1,5 +1,5 @@
-import React from 'react'
-import { useQuery } from '@tanstack/react-query'
+import React, { useEffect, useState } from 'react'
+import { useQuery, useQueryClient } from '@tanstack/react-query'
 import axios from 'axios'
 import { Pokemon } from '../../pokemon.js'
 import './Carousel.scss'
@@ -12,35 +12,69 @@ const fetchFirstPokemon = async () => {
 
 }
 
+const fetchSecondPokemon = async () => {
+  const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/2`)
+  return response
+
+}
 const Carousel = () => {
 
-const defaultImage: string = ''
+const defaultImage: string = unsurePokemon
 
-const { data, isLoading, error, isError } = useQuery({
-    queryKey: ['pokemon'], 
-    queryFn: () => fetchFirstPokemon,
+const queryClient = useQueryClient();
+
+const { data: firstPokemonData, isLoading: firstPokemonLoading, error: firstPokemonError, isError: firstPokemonIsError } = useQuery({
+  queryKey: ['firstPokemon'],
+  queryFn: () => fetchFirstPokemon(),
 });
 
+// useEffect(() => {
+//   if (firstPokemonData) {
+//     queryClient.prefetchQuery({
+//       queryKey: ['secondPokemon'],
+//       queryFn: fetchSecondPokemon,
+//     });
+//   }
+// }, [firstPokemonData, queryClient]);
+
+// const { data: secondPokemonData, isLoading: secondPokemonLoading, error: secondPokemonError, isError: secondPokemonIsError } = useQuery({
+//   queryKey: ['secondPokemon'],
+//   queryFn: () => fetchSecondPokemon(),
+// });
+
+// ...
+
+const [firstPokemon, setFirstPokemon] = useState<string>(defaultImage)
+const [secondPokemon, setSecondPokemon] = useState<string>(defaultImage)
+
+  useEffect(
+    () => {
+      if(firstPokemonData) {
+        //console.log(data)
 
 
+        setFirstPokemon(firstPokemonData.data.sprites.front_default)
+        setSecondPokemon(firstPokemonData.data.sprites.front_default)
+      }
+    }, [firstPokemonData]
+  )
 
-
-  if(isLoading) {
+  if(firstPokemonLoading) {
     return <div>Loading...</div>
   }
-  if(isError) {
-    return <div>Error: {error?.message}</div>
+  if(firstPokemonIsError) {
+    return <div>Error: {firstPokemonError?.message}</div>
   }
   
-  if(data) {
-    console.log(data)
+  if(firstPokemonData) {
+    console.log(firstPokemonData)
   }
 
   return(
     <>
 
       <div className="marquee marquee--8">
-        <img className="marquee__item" src={unsurePokemon} width="96" height="96" alt="" />
+        <img className="marquee__item" src={firstPokemon} width="96" height="96" alt="" />
         <img className="marquee__item" src={unsurePokemon} width="96" height="96" alt="" />
         <img className="marquee__item" src={unsurePokemon} width="96" height="96" alt="" />
         <img className="marquee__item" src={unsurePokemon} width="96" height="96" alt="" />
