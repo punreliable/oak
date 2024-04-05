@@ -11,6 +11,7 @@
     hsl(0 0% 0% / 1) 80%,
     hsl(0 0% 0% / 0)
   );
+  width: 100%;
 }
 
 .marquee--8 {
@@ -134,4 +135,10 @@
   to {  
     inset-inline-start: calc(var(--marquee-item-width) * -1);
   }
+}
+
+#carousel {
+
+  width: 100%;
+
 }

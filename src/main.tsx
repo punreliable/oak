@@ -29,7 +29,9 @@ import PagePokemonTypeSteel from './components/PagePokemonTypeSteel'
 import PagePokemonTypeWater from './components/PagePokemonTypeWater'
 import PageKantoPokemon from './components/dataFetching/PageKantoPokemon'
 import KantoPokedex from './pages/pokedex/KantoPokedex'
-import Carousel from './components/Carousel'
+// import Carousel from './components/Carousel'
+import PagePokemonCarousel from './components/PagePokemonCarousel'
+import './index.scss'
 
 const router = createBrowserRouter([
 	{
@@ -135,29 +137,29 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "/carousel",
-		element: <Carousel />,
+		element: <PagePokemonCarousel />,
 	},
 	 
 ])
 
-import './index.scss'
+
 
 const queryClient = new QueryClient()
 
 const store = createStore(
 	rootReducer,
 	(window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__()
-);
+)
 
-const rootElement = document.getElementById('root');
-const root = ReactDOM.createRoot(rootElement || document.createElement('div'));
+const rootElement = document.getElementById('root')
+const root = ReactDOM.createRoot(rootElement || document.createElement('div'))
 root.render(
 	<React.StrictMode>
 		<QueryClientProvider client={queryClient}>
-		<Provider store={store}>
-			<RouterProvider router={router} />
-		</Provider>
-	<ReactQueryDevtools />
+			<Provider store={store}>
+				<RouterProvider router={router} />
+			</Provider>
+			<ReactQueryDevtools />
 		</QueryClientProvider>
 	</React.StrictMode>
-);
+)

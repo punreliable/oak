@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import axios from 'axios'
 import { Pokemon } from '../../pokemon.js'
-import './Carousel.scss'
 import professorOak from '../assets/professorOak.svg'
 import unsurePokemon from '../assets/0.png'
 import { getRandomKantoPokemon } from '../utilities/getRandomKantoPokemon'
+import './Carousel.scss'
+
 const fetchFirstPokemon = async () => {
   const idOne = getRandomKantoPokemon()
   const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${idOne}`)
