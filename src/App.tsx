@@ -18,7 +18,7 @@ import { getRandomKantoPokemon } from './utilities/getRandomKantoPokemon'
 // import { Pokemon } from '../pokemon.d.ts'
 // import { gsap } from 'gsap/dist/gsap'
 // import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin'
-import * as bootstrap from 'bootstrap'
+// import * as bootstrap from 'bootstrap'
 // gsap.registerPlugin( MotionPathPlug )
 
 const currentYear = new Date().getFullYear()
@@ -26,17 +26,13 @@ const currentMonth = getCurrentMonth()
 const currentDay = getCurrentDay()
 const currentDate = `${currentYear}-${currentMonth}-${currentDay}`
 
-const getPokemonNumber = () => {
-
-  const number = Math.floor( Math.random() * 151 ) + 1
-
-  if(number < 10) {
-    return `0${number}`
-  }
-
-  return `${number}`
-
-}
+// const getPokemonNumber = () => {
+//   const number = Math.floor( Math.random() * 151 ) + 1
+//   if(number < 10) {
+//     return `0${number}`
+//   }
+//   return `${number}`
+// }
 
 
 const App = () => {
@@ -81,16 +77,16 @@ const App = () => {
 // gsap.to("#avatar", { x: 100, duration: 2 });
 // gsap.to("#imgProfessorOak", {x: 100, duration: 1 });
 
-  const gotoMoreDetails = ( id: number ) => {
-    console.log(id)
-  }
+  // const gotoMoreDetails = ( id: number ) => {
+  //   console.log(id)
+  // }
 
   const number = Math.floor( Math.random() * 151 ) + 1
   const pokeNo = number.toString()
   const requestURL = 'https://pokeapi.co/api/v2/pokemon/'+ pokeNo
   const [pokemon, setPokemon] = useState<any | null>(null);
-  const [pokemonName, setPokemonName] = useState( null )
-  const [pokemonID, setPokemonID] = useState( null )
+  const [pokemonName, setPokemonName] = useState<string>( '' )
+  const [pokemonID, setPokemonID]  = useState<number>( 0 )
   const [pokemonAbilities, setPokemonAbilities] = useState( null )
   const [pokemonHeight, setPokemonHeight] = useState( null )
   const [pokemonWeight, setPokemonWeight] = useState( null )
@@ -105,9 +101,18 @@ const App = () => {
       setPokemonWeight(res.data.weight)
       setPokemonXP(res.data.base_experience)
       setPokemonName(res.data.name)
+      setPokemonID(res.data.id)
      })
     .catch( err => { console.log( err ) })
   }, [])
+
+  const gotoMoreDetails = (id: number) => {
+    // Add code to route the user to '/details'
+    // You can use the `useNavigate` hook from react-router-dom to navigate programmatically
+    const navigate = useNavigate();
+    navigate('/details');
+  }
+
 
   return (
     <div className="App">
@@ -159,7 +164,6 @@ const App = () => {
       )}
     </div>
   );
-
 };
 
 export default App;
