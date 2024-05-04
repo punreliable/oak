@@ -83,7 +83,7 @@ const App = () => {
 
   const number = Math.floor( Math.random() * 151 ) + 1
   const pokeNo = number.toString()
-  const requestURL = 'https://pokeapi.co/api/v2/pokemon/'+ pokeNo
+  const requestURL = `https://pokeapi.co/api/v2/pokemon/`+ pokeNo
   const [pokemon, setPokemon] = useState<any | null>(null);
   const [pokemonName, setPokemonName] = useState<string>( '' )
   const [pokemonID, setPokemonID]  = useState<number>( 0 )
@@ -110,7 +110,7 @@ const App = () => {
     // Add code to route the user to '/details'
     // You can use the `useNavigate` hook from react-router-dom to navigate programmatically
     const navigate = useNavigate();
-    navigate('/details');
+    navigate(`/details/${id}`);
   }
 
 
@@ -137,7 +137,7 @@ const App = () => {
               <p>Base XP: {pokemon.base_experience}xp</p>
             </div>
             <div className="col-md-12 col-lg-9">
-             <PokemonDescription pokemon={pokemon.id as number} /> 
+            <PokemonDescription pokemon={pokemon.id} />
             </div>
           </div>
     
@@ -146,10 +146,10 @@ const App = () => {
           <div className="row">
               <div className="col-md-12">
                 <p>Would you like to learn more about { prettyName( pokemon.name ) }? Click the button below.</p> 
-                <button type="button" className="nes-btn" onClick={gotoMoreDetails(pokemon.id)}>More Details</button> 
+                <button type="button" className="nes-btn" onClick={() => gotoMoreDetails(pokemon.id)}>More Details</button>
               </div>
             </div>
-
+{ /*
           <section className="message-list messageList" id="professorMessages" unresolved>
             <section className="message -right">
               <div className="nes-balloon from-right">
@@ -160,6 +160,7 @@ const App = () => {
               </div>
             </section>
           </section>
+      */ }
         </section>
       )}
     </div>

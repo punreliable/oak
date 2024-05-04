@@ -78,19 +78,43 @@ justify-content: flex-end;
   
 }
 
-h1.oakHello {
+h1 {
+
+  font-size: 2.4rem;
+
+  &.oakHello {
   
-  font-size: 1.4rem;
-  line-height: 1.8rem;
-  margin-bottom: 1rem;
-  text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: left;
   
-  sup {
+    sup {
     
-    font-size: 1.6rem;
-    top: -0.8rem;
+      font-size: 1.6rem;
+      top: -0.8rem;
     
+    }
+
   }
+
+  &.pokemonName {
+
+    @media screen and (max-width: 420px) {
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+    }
+
+    @media screen and (min-width: 421px) {
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+    }
+
+
+
+  }
+
+
   
 }
 
