@@ -46,7 +46,7 @@ const MainNavigation = () => {
                     <button type="button" className="nes-btn is-primary" onClick={showModal}>
                         Types
                     </button>
-
+                    
                 </NavLink>
             </nav>
         </header>

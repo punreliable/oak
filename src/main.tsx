@@ -29,9 +29,10 @@ import PagePokemonTypeSteel from './components/PagePokemonTypeSteel'
 import PagePokemonTypeWater from './components/PagePokemonTypeWater'
 import PageKantoPokemon from './components/dataFetching/PageKantoPokemon'
 import KantoPokedex from './pages/pokedex/KantoPokedex'
-// import Carousel from './components/Carousel'
 import PagePokemonCarousel from './components/PagePokemonCarousel'
+import PagePokemonSearch from './components/PagePokemonSearch'
 import './index.scss'
+import React from 'react'
 
 const router = createBrowserRouter([
 	{
@@ -139,7 +140,10 @@ const router = createBrowserRouter([
 		path: "/carousel",
 		element: <PagePokemonCarousel />,
 	},
-	 
+	{
+		path: "/search",
+		element: <PagePokemonSearch />
+	}
 ])
 
 
