@@ -1,7 +1,7 @@
-import { it, expect } from 'vitest';
-import { getRandomPokemon } from './getRandomPokemon';
+import { it, expect } from "vitest";
+import { getRandomPokemon } from "./getRandomPokemon";
 
-it('should return a string with a length of 2', () => {
+it("should return a string with a length of 2", () => {
   const result = getRandomPokemon();
   expect(result.length).toBe(2);
 });

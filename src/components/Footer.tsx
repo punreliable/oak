@@ -1,7 +1,7 @@
-import getCurrentYear from "../utilities/getCurrentYear"
+import getCurrentYear from "../utilities/getCurrentYear";
 
 const Footer = () => {
-const year = getCurrentYear();
+  const year = getCurrentYear();
 
   return (
     <>

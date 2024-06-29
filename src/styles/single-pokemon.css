@@ -2,7 +2,8 @@
 .btn-apps {
   background: #607d8b;
 }
-.btn-apps:hover, .btn-apps:focus {
+.btn-apps:hover,
+.btn-apps:focus {
   background-color: #668594 !important;
 }
 .btn-apps.active {
@@ -10,9 +11,10 @@
 }
 
 .btn-boot {
-  background: #FFFFFF;
+  background: #ffffff;
 }
-.btn-boot:hover, .btn-boot:focus {
+.btn-boot:hover,
+.btn-boot:focus {
   background-color: white !important;
 }
 .btn-boot.active {
@@ -20,9 +22,10 @@
 }
 
 .btn-card {
-  background: #673AB7;
+  background: #673ab7;
 }
-.btn-card:hover, .btn-card:focus {
+.btn-card:hover,
+.btn-card:focus {
   background-color: #6e3ec2 !important;
 }
 .btn-card.active {
@@ -32,7 +35,8 @@
 .btn-cite {
   background: #009688;
 }
-.btn-cite:hover, .btn-cite:focus {
+.btn-cite:hover,
+.btn-cite:focus {
   background-color: #00a596 !important;
 }
 .btn-cite.active {
@@ -42,7 +46,8 @@
 .btn-code {
   background: #3f51b5;
 }
-.btn-code:hover, .btn-code:focus {
+.btn-code:hover,
+.btn-code:focus {
   background-color: #4558be !important;
 }
 .btn-code.active {
@@ -52,7 +57,8 @@
 .btn-doom {
   background: #000000;
 }
-.btn-doom:hover, .btn-doom:focus {
+.btn-doom:hover,
+.btn-doom:focus {
   background-color: #080808 !important;
 }
 .btn-doom.active {
@@ -60,9 +66,10 @@
 }
 
 .btn-film {
-  background: #FF5722;
+  background: #ff5722;
 }
-.btn-film:hover, .btn-film:focus {
+.btn-film:hover,
+.btn-film:focus {
   background-color: #ff6331 !important;
 }
 .btn-film.active {
@@ -70,9 +77,10 @@
 }
 
 .btn-find {
-  background: #8BC34A;
+  background: #8bc34a;
 }
-.btn-find:hover, .btn-find:focus {
+.btn-find:hover,
+.btn-find:focus {
   background-color: #92c755 !important;
 }
 .btn-find.active {
@@ -82,7 +90,8 @@
 .btn-font {
   background: #795548;
 }
-.btn-font:hover, .btn-font:focus {
+.btn-font:hover,
+.btn-font:focus {
   background-color: #835c4e !important;
 }
 .btn-font.active {
@@ -90,9 +99,10 @@
 }
 
 .btn-give {
-  background: #4CAf50;
+  background: #4caf50;
 }
-.btn-give:hover, .btn-give:focus {
+.btn-give:hover,
+.btn-give:focus {
   background-color: #55b559 !important;
 }
 .btn-give.active {
@@ -100,9 +110,10 @@
 }
 
 .btn-join {
-  background: #03A9F4;
+  background: #03a9f4;
 }
-.btn-join:hover, .btn-join:focus {
+.btn-join:hover,
+.btn-join:focus {
   background-color: #0ab1fc !important;
 }
 .btn-join.active {
@@ -110,9 +121,10 @@
 }
 
 .btn-logo {
-  background: #FF9800;
+  background: #ff9800;
 }
-.btn-logo:hover, .btn-logo:focus {
+.btn-logo:hover,
+.btn-logo:focus {
   background-color: #ff9e0f !important;
 }
 .btn-logo.active {
@@ -122,7 +134,8 @@
 .btn-meme {
   background: #000000;
 }
-.btn-meme:hover, .btn-meme:focus {
+.btn-meme:hover,
+.btn-meme:focus {
   background-color: #080808 !important;
 }
 .btn-meme.active {
@@ -130,9 +143,10 @@
 }
 
 .btn-more {
-  background: #607D8B;
+  background: #607d8b;
 }
-.btn-more:hover, .btn-more:focus {
+.btn-more:hover,
+.btn-more:focus {
   background-color: #668594 !important;
 }
 .btn-more.active {
@@ -140,9 +154,10 @@
 }
 
 .btn-news {
-  background: #2196F3;
+  background: #2196f3;
 }
-.btn-news:hover, .btn-news:focus {
+.btn-news:hover,
+.btn-news:focus {
   background-color: #309df4 !important;
 }
 .btn-news.active {
@@ -150,9 +165,10 @@
 }
 
 .btn-odds {
-  background: #CDDC39;
+  background: #cddc39;
 }
-.btn-odds:hover, .btn-odds:focus {
+.btn-odds:hover,
+.btn-odds:focus {
   background-color: #d0de46 !important;
 }
 .btn-odds.active {
@@ -160,9 +176,10 @@
 }
 
 .btn-pick {
-  background: #FFC107;
+  background: #ffc107;
 }
-.btn-pick:hover, .btn-pick:focus {
+.btn-pick:hover,
+.btn-pick:focus {
   background-color: #ffc516 !important;
 }
 .btn-pick.active {
@@ -170,9 +187,10 @@
 }
 
 .btn-poke {
-  background: #E91E63;
+  background: #e91e63;
 }
-.btn-poke:hover, .btn-poke:focus {
+.btn-poke:hover,
+.btn-poke:focus {
   background-color: #ea2c6d !important;
 }
 .btn-poke.active {
@@ -182,7 +200,8 @@
 .btn-poll {
   background: #9c27b0;
 }
-.btn-poll:hover, .btn-poll:focus {
+.btn-poll:hover,
+.btn-poll:focus {
   background-color: #a72abd !important;
 }
 .btn-poll.active {
@@ -192,7 +211,8 @@
 .btn-rest {
   background: #607d8b;
 }
-.btn-rest:hover, .btn-rest:focus {
+.btn-rest:hover,
+.btn-rest:focus {
   background-color: #668594 !important;
 }
 .btn-rest.active {
@@ -200,9 +220,10 @@
 }
 
 .btn-shop {
-  background: #F44336;
+  background: #f44336;
 }
-.btn-shop:hover, .btn-shop:focus {
+.btn-shop:hover,
+.btn-shop:focus {
   background-color: #f55145 !important;
 }
 .btn-shop.active {
@@ -212,7 +233,8 @@
 .btn-spin {
   background: #00bcd4;
 }
-.btn-spin:hover, .btn-spin:focus {
+.btn-spin:hover,
+.btn-spin:focus {
   background-color: #00cae3 !important;
 }
 .btn-spin.active {
@@ -220,9 +242,10 @@
 }
 
 .btn-user {
-  background: #9E9E9E;
+  background: #9e9e9e;
 }
-.btn-user:hover, .btn-user:focus {
+.btn-user:hover,
+.btn-user:focus {
   background-color: #a6a6a6 !important;
 }
 .btn-user.active {
@@ -230,9 +253,10 @@
 }
 
 .btn-vote {
-  background: #FFEB3B;
+  background: #ffeb3b;
 }
-.btn-vote:hover, .btn-vote:focus {
+.btn-vote:hover,
+.btn-vote:focus {
   background-color: #ffed4a !important;
 }
 .btn-vote.active {
@@ -642,7 +666,7 @@ button.gameboy {
   font-family: "Press Start 2P", cursive !important;
 }
 
-input[type=text].gameboy {
+input[type="text"].gameboy {
   background-color: #c5d1a3;
   font-family: "Press Start 2P", cursive;
   margin-left: 2em;
@@ -652,7 +676,8 @@ input[type=text].gameboy {
   background: #202119;
   font-family: "Press Start 2P", cursive;
 }
-.btn-gameboy:hover, .btn-gameboy:focus {
+.btn-gameboy:hover,
+.btn-gameboy:focus {
   background-color: #555a40 !important;
 }
 .btn-gameboy.active {
@@ -677,13 +702,13 @@ div.card-body.gameboy {
 }
 
 footer.gameboy {
-  color: #F7F9F6;
+  color: #f7f9f6;
   background-color: #4d513a;
   font-family: "Press Start 2P", cursive;
 }
 
 a {
-  color: #F7F9F6;
+  color: #f7f9f6;
   text-decoration: none;
 }
 a.btn-gameboy {
@@ -702,7 +727,7 @@ a.btn-gameboy:hover {
 .page-home main .feature-image {
   margin-top: 0;
   padding-top: 0;
-  background-color: #F7F9F6;
+  background-color: #f7f9f6;
   background-image: url "images/whos-that-pokemon.png";
   background-size: auto 100%;
   background-repeat: no-repeat;
@@ -724,11 +749,21 @@ a.btn-gameboy:hover {
   font-size: 6;
   font-weight: 500;
 }
-.page-home main .feature-image form.pokemon-by-number .md-form.form-group input#pokeno {
+.page-home
+  main
+  .feature-image
+  form.pokemon-by-number
+  .md-form.form-group
+  input#pokeno {
   margin-left: 1rem;
   padding-left: 1rem;
 }
-.page-home main .feature-image form.pokemon-by-number .md-form.form-group label {
+.page-home
+  main
+  .feature-image
+  form.pokemon-by-number
+  .md-form.form-group
+  label {
   margin-left: 1rem;
   padding-left: 1rem;
 }
@@ -790,8 +825,35 @@ footer.page-footer {
   padding-top: 0 !important;
 }
 
-.z-depth-1-half, .btn-apps.active, .btn-boot.active, .btn-card.active, .btn-cite.active, .btn-code.active, .btn-doom.active, .btn-film.active, .btn-find.active, .btn-font.active, .btn-give.active, .btn-join.active, .btn-logo.active, .btn-meme.active, .btn-more.active, .btn-news.active, .btn-odds.active, .btn-pick.active, .btn-poke.active, .btn-poll.active, .btn-rest.active, .btn-shop.active, .btn-spin.active, .btn-user.active, .btn-vote.active, .btn-gameboy.active {
-  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+.z-depth-1-half,
+.btn-apps.active,
+.btn-boot.active,
+.btn-card.active,
+.btn-cite.active,
+.btn-code.active,
+.btn-doom.active,
+.btn-film.active,
+.btn-find.active,
+.btn-font.active,
+.btn-give.active,
+.btn-join.active,
+.btn-logo.active,
+.btn-meme.active,
+.btn-more.active,
+.btn-news.active,
+.btn-odds.active,
+.btn-pick.active,
+.btn-poke.active,
+.btn-poll.active,
+.btn-rest.active,
+.btn-shop.active,
+.btn-spin.active,
+.btn-user.active,
+.btn-vote.active,
+.btn-gameboy.active {
+  box-shadow:
+    0 5px 11px 0 rgba(0, 0, 0, 0.18),
+    0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 div.card-type-list {
@@ -850,7 +912,10 @@ footer.page-footer {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  transition:
+    background-color 0.3s,
+    opacity 0.5s,
+    visibility 0.5s;
   opacity: 0;
   visibility: hidden;
   z-index: 1000;

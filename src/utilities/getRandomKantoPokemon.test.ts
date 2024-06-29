@@ -1,11 +1,10 @@
-import { it, expect } from 'vitest';
-import { getRandomKantoPokemon } from './getRandomKantoPokemon';
+import { it, expect } from "vitest";
+import { getRandomKantoPokemon } from "./getRandomKantoPokemon";
 
-it('should return a string with a length of 1', () => {
+it("should return a string with a length of 1", () => {
   const result = getRandomKantoPokemon();
   expect(result.length).toBe(1);
   console.log(result);
-
 });
 
 it('should return a string between "1" and "151"', () => {

@@ -8,9 +8,8 @@ export default defineConfig({
   },
 });
 
-
 // from cypress set up guide
 module.exports = {
   projectId: "iom9wj",
   // ...rest of the Cypress project config
-}
+};

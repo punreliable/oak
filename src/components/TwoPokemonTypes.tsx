@@ -1,4 +1,3 @@
-
-const TwoPokemonTypes = () => {}
+const TwoPokemonTypes = () => {};
 
 export default TwoPokemonTypes;

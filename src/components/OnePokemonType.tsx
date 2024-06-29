@@ -1,12 +1,7 @@
-
 const OnePokemonType = (props) => {
-	
-	console.log(props)
-	
-	return(
-		<h1>Hello World</h1>
-	);
-	
-}
+  console.log(props);
 
-export default OnePokemonType
+  return <h1>Hello World</h1>;
+};
+
+export default OnePokemonType;

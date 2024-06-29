@@ -1,13 +1,11 @@
-import react from 'react';
+import react from "react";
 
- const SinglePokemon = () => {
-    return (
-      <div>
-        <h1>Single Pokemon</h1>
-      </div>
-    );
+const SinglePokemon = () => {
+  return (
+    <div>
+      <h1>Single Pokemon</h1>
+    </div>
+  );
+};
 
-
- };
-
- export default SinglePokemon;
+export default SinglePokemon;
