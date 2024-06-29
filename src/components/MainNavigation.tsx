@@ -27,36 +27,27 @@ const MainNavigation = () => {
     <>
         <header className={classes.header}>
             <nav className={classes.navbar}>
-                <ul>
-                    <li>
-                        <NavLink
-                            to="/"
-                            className={({ isActive }) =>
-                            isActive ? classes.active : undefined
-                            }
-                            end
-                            >
-                            <button type="button" className="nes-btn is-primary" to="/">
-                                Home
-                            </button>
-                        </NavLink>
-                    </li>
-                    {/* <li>
-                        {onSubmitChange}
-                    </li> */}
-                    <li>
-                        {/* <NavLink
-                            to="/pokemon/types/"
-                            className={({ isActive }) =>
-                            isActive ? classes.active : undefined
-                            }
-                        >Types
-                        </NavLink> */}
-                        <button type="button" className="nes-btn is-primary" onClick={showModal}>
-                            Types
-                        </button>
-                    </li>
-                </ul>
+
+                <NavLink
+                    to="/"
+                    className={({ isActive }) =>
+                    isActive ? classes.active : undefined
+                    }
+                    end
+                    >
+                    <button type="button" className="nes-btn is-primary" to="/">
+                        Home
+                    </button>
+                    
+                    <button type="button" className="nes-btn is-warning" to="/search">
+                        Search
+                    </button>
+
+                    <button type="button" className="nes-btn is-primary" onClick={showModal}>
+                        Types
+                    </button>
+
+                </NavLink>
             </nav>
         </header>
 

@@ -1,6 +1,6 @@
 # Oak
 
-## v1.3.0
+## v1.3.1
 
 ---
 
@@ -8,11 +8,15 @@
 
 ---
 
-Oak and their creators are not affiliated with Nintendo or their partners in any way, and in no way mean to discredit their fine products.
+Oak and their creators are not affiliated with GameFreak or Nintendo or their partners or subsidiaries in any way. This product is in no way mean to discredit their fine products.
 
 Oak was created for educational purposes and the repository remains open to encourage forks and inspiration. Oak is a Next.js application written in TypeScript SWR, created with Vite, and hosted on Vercel.com
 
 ### Links (Coming soon)
+
+#### PokeApi
+The Pokemon API.
+[https://www.pokeapi.co](https://www.pokeapi.co)
 
 ---
 

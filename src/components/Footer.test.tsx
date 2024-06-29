@@ -1,10 +1,19 @@
-import { vi, describe, expect, it, beforeEach, afterEach } from 'vitest'
-import { QueryClient, QueryClientProvider, useQuery, useQueryClient } from '@tanstack/react-query'
+import { render } from '@testing-library/react';
+import { getByText, Matcher } from '@testing-library/dom';
+import Footer from '../components/Footer';
 
-describe("Footer", () => {
-  it("displays the current year", () => {
-    cy.visit("/"); // Replace with the URL of your application
+declare global {
+  namespace jest {
+    interface Matchers<R> {
+      toBeInTheDocument: Matcher<R>;
+    }
+  }
+}
 
-    cy.get(".readTheDocs").should("contain", new Date().getFullYear());
+describe('Footer', () => {
+  it('displays the current year', () => {
+    const { getByText } = render(<Footer />);
+    const currentYear = new Date().getFullYear();
+    expect(getByText(currentYear.toString())).toBeInTheDocument();
   });
 });
