@@ -1,5 +1,6 @@
-// import React from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
+
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
@@ -32,6 +33,8 @@ import KantoPokedex from "./pages/pokedex/KantoPokedex";
 import PagePokemonCarousel from "./components/PagePokemonCarousel";
 import PagePokemonSearch from "./components/PagePokemonSearch";
 import "./index.scss";
+import 'dotenv/config';
+
 
 const router = createBrowserRouter([
   {
