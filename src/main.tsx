@@ -1,3 +1,4 @@
+// import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -29,9 +30,8 @@ import PagePokemonTypeWater from "./components/PagePokemonTypeWater";
 import PageKantoPokemon from "./components/dataFetching/PageKantoPokemon";
 import KantoPokedex from "./pages/pokedex/KantoPokedex";
 import PagePokemonCarousel from "./components/PagePokemonCarousel";
-import PagePokemonSearch from "./components/PagePokemonSearch";
+//import PagePokemonSearch from "./components/PagePokemonSearch";
 import "./index.scss";
-import React from "react";
 
 const router = createBrowserRouter([
   {
@@ -139,10 +139,10 @@ const router = createBrowserRouter([
     path: "/carousel",
     element: <PagePokemonCarousel />,
   },
-  {
-    path: "/search",
-    element: <PagePokemonSearch />,
-  },
+  // {
+  //   path: "/search",
+  //   element: <PagePokemonSearch />,
+  // },
 ]);
 
 const queryClient = new QueryClient();
