@@ -1,10 +1,13 @@
-import React, { useState, FormEvent } from "react";
+import { useState, FormEvent } from "react";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
+// import 'dotenv/config'
+
+
 const PagePokemonSearch = () => {
 
-  const [pokemon, setPokemon] = useState(151);
+  const [pokemon, setPokemon] = useState(null);
 
   const { isLoading, isSuccess, error, data } = useQuery({
     queryKey: ["pokemon-search"],
@@ -16,19 +19,20 @@ const PagePokemonSearch = () => {
   
   function searchHandler(event: FormEvent<HTMLFormElement>) {
   
+    console.log('Search Handler Begins');
     event.preventDefault();
     const id = (event.target as HTMLFormElement).pokeno.value;
     setPokemon(id);
-    
+    console.log('Pokemon ID: ', id);
+    console.log('Search Handler Ends.');
   }
 
   return (
   
-    
     <div id="main">
       <div
         className="feature-image"
-        style={{ backgroundImage: "url(`/images/whos-that-pokemon.png`)" }}
+        style={{ backgroundImage: `url('http://localhost:5173/images/whos-that-pokemon.png')` }}
       >
         <div className="mask rgba-black-strong d-flex justify-content-center align-items-top">
           <main className="wow fadeIn content gameboy-screen">
