@@ -30,7 +30,7 @@ import PagePokemonTypeWater from "./components/PagePokemonTypeWater";
 import PageKantoPokemon from "./components/dataFetching/PageKantoPokemon";
 import KantoPokedex from "./pages/pokedex/KantoPokedex";
 import PagePokemonCarousel from "./components/PagePokemonCarousel";
-//import PagePokemonSearch from "./components/PagePokemonSearch";
+import PagePokemonSearch from "./components/PagePokemonSearch";
 import "./index.scss";
 
 const router = createBrowserRouter([
@@ -139,10 +139,10 @@ const router = createBrowserRouter([
     path: "/carousel",
     element: <PagePokemonCarousel />,
   },
-  // {
-  //   path: "/search",
-  //   element: <PagePokemonSearch />,
-  // },
+  {
+    path: "/search",
+    element: <PagePokemonSearch />,
+  },
 ]);
 
 const queryClient = new QueryClient();

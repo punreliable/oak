@@ -55,6 +55,15 @@ const MainNavigation = () => {
                             }
                         >Types
                         </NavLink> */}
+                        <NavLink to="/search">
+                            <button type="button" className="nes-btn is-primary">
+                                Search
+                            </button>
+                        </NavLink>
+
+
+                    </li>
+                    <li>
                         <button type="button" className="nes-btn is-primary" onClick={showModal}>
                             Types
                         </button>
