@@ -4,15 +4,6 @@ import { useRef } from "react";
 import classes from "./MainNavigation.module.scss";
 import onSubmitChange from "../utilities/onSelectChange";
 
-// const formSubmitHandler = (event) => {
-//     event.preventDefault()
-//     if ( event ) {
-//         return true
-//     } else {
-//         return false
-//     }
-// }
-
 const showModal = () => {
   const dialog = document.getElementById("dialog-default") as HTMLDialogElement;
   dialog?.showModal();
@@ -42,18 +33,7 @@ const MainNavigation = () => {
                 </button>
               </NavLink>
             </li>
-
-            {/* <li>
-                        {onSubmitChange}
-                    </li> */}
             <li>
-              {/* <NavLink
-                            to="/pokemon/types/"
-                            className={({ isActive }) =>
-                            isActive ? classes.active : undefined
-                            }
-                        >Types
-                        </NavLink> */}
               <NavLink to="/search">
                 <button type="button" className="nes-btn is-primary">
                   Search
