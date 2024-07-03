@@ -1,6 +1,7 @@
-import { useState, FormEvent } from "react";
+import React, { useState, FormEvent } from "react";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import ButtonSearch from "./ButtonSearch";
 
 // import 'dotenv/config'
 
@@ -82,6 +83,8 @@ const PagePokemonSearch = () => {
                 >
                   Search
                 </button>
+
+                <ButtonSearch />
 
               </div>
 
