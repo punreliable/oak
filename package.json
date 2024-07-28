@@ -18,9 +18,11 @@
   "dependencies": {
     "@popperjs/core": "^2.11.6",
     "@reduxjs/toolkit": "^2.0.1",
+    "@tanstack/react-form": "^0.26.4",
     "@tanstack/react-query": "^5.17.19",
     "@tanstack/react-query-devtools": "^5.21.3",
     "@tanstack/router-devtools": "^1.18.3",
+    "@tanstack/zod-form-adapter": "^0.26.4",
     "@vercel/analytics": "^1.1.1",
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
@@ -37,7 +39,9 @@
     "scss-loader": "^0.0.1",
     "style-loader": "^3.3.2",
     "styled-components": "^6.1.1",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "vitest": "^2.0.4",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@playwright/test": "^1.42.1",
@@ -55,14 +59,12 @@
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
-    "@vitest/ui": "^0.34.2",
     "msw": "^2.3.1",
     "prettier": "3.3.2",
     "prop-types": "^15.8.1",
     "sass": "^1.72.0",
     "storybook": "^7.5.3",
     "typescript": "^5.4.2",
-    "vite": "^4.2.0",
-    "vitest": "^1.6.0"
+    "vite": "^4.2.0"
   }
 }
