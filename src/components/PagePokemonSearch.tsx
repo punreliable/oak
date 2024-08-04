@@ -4,6 +4,9 @@ import axios from "axios";
 import { createRoot } from 'react-dom/client'
 import { FieldApi, useForm } from '@tanstack/react-form'
 import { PokemonModal } from "./PokemonModal"
+import MainNavigation from "./MainNavigation"
+import { closeModal, showModal } from "../utilities/modals"
+
 
 const PagePokemonSearch = () => {
 
@@ -45,8 +48,9 @@ const PagePokemonSearch = () => {
   
   return(
     <>
-    <div id="main">
 
+    <div id="main">
+      <MainNavigation /> 
       <h1 className="h1-responsive mb-4 pt-4 px-2 gameboy text-center font-weight-bold">
         Who's that Pokémon?
       </h1>
@@ -75,7 +79,7 @@ const PagePokemonSearch = () => {
               }}
             >
               <div className="md-form form-group mx-2">
-                {/* A type-safe field component*/}
+   
                 <form.Field
                   name="pokemon"
                   validators={{
@@ -95,7 +99,6 @@ const PagePokemonSearch = () => {
                     },
                   }}
                   children={(field) => {
-                    // Avoid hasty abstractions. Render props are great!
                     return (
                       <>
                         <label htmlFor={field.name}>Name:</label>

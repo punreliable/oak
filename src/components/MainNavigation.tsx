@@ -1,19 +1,9 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import { useRef } from "react";
-import classes from "./MainNavigation.module.scss";
-import onSubmitChange from "../utilities/onSelectChange";
+import React, { useRef } from "react"
+import { NavLink } from "react-router-dom"
 
-const showModal = () => {
-  const dialog = document.getElementById("dialog-default") as HTMLDialogElement;
-  dialog?.showModal();
-};
-
-const closeModal = () => {
-  const dialog = document.getElementById("dialog-default") as HTMLDialogElement;
-  dialog?.close();
-};
-
+import onSubmitChange from "../utilities/onSelectChange"
+import { closeNavModal, showNavModal, } from "../utilities/modals"
+import classes from "./MainNavigation.module.scss"
 const MainNavigation = () => {
   return (
     <>
@@ -44,7 +34,7 @@ const MainNavigation = () => {
               <button
                 type="button"
                 className="nes-btn is-primary"
-                onClick={showModal}
+                onClick={showNavModal}
               >
                 Types
               </button>
@@ -53,7 +43,7 @@ const MainNavigation = () => {
         </nav>
       </header>
 
-      <dialog className="nes-dialog" id="dialog-default">
+      <dialog className="nes-dialog" id="dialog-navigation">
         <form method="dialog">
           <p className="title">Types</p>
           <ul>
@@ -242,9 +232,10 @@ const MainNavigation = () => {
           </ul>
 
           <ul>
-            <li>
+            <li className="linkSmall">
               <NavLink
                 to="/carousel"
+
                 className={({ isActive }) =>
                   isActive ? classes.active : undefined
                 }
@@ -255,7 +246,7 @@ const MainNavigation = () => {
           </ul>
 
           <menu className="dialog-menu">
-            <button className="nes-btn is-error" onClick={closeModal}>
+            <button className="nes-btn is-error" onClick={closeNavModal}>
               Close
             </button>
           </menu>

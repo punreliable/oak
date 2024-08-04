@@ -22,7 +22,6 @@ import { getRandomKantoPokemon } from "./utilities/getRandomKantoPokemon";
 // import { Pokemon } from '../pokemon.d.ts'
 // import { gsap } from 'gsap/dist/gsap'
 // import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin'
-import * as bootstrap from "bootstrap";
 // gsap.registerPlugin( MotionPathPlug )
 
 const currentYear = new Date().getFullYear();
