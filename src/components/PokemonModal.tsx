@@ -5,7 +5,7 @@ export function PokemonModal(pokemonData:Pokemon) {
 
 return (
 	<section>
-	  <dialog className="nes-dialog" id="dialog-default">
+	  <dialog className="nes-dialog" id="dialogSinglePokemon">
 		<form method="dialog">
 		{
 		pokemonData.name && (<p className="title">pokemonData.name</p>

@@ -5,7 +5,7 @@ import { createRoot } from 'react-dom/client'
 import { FieldApi, useForm } from '@tanstack/react-form'
 import { PokemonModal } from "./PokemonModal"
 import MainNavigation from "./MainNavigation"
-import { closeModal, showModal } from "../utilities/modals"
+import { closeSinglePokemonModal, showSinglePokemonModal } from "../utilities/modals"
 
 
 const PagePokemonSearch = () => {
@@ -128,9 +128,9 @@ const PagePokemonSearch = () => {
                       disabled={!canSubmit}
                       className="nes-btn is-primary gameboy white-text"
                       onClick={(pokemonData) => {
-                        const dialog = document.getElementById('dialog-default');
+                        const dialog = document.getElementById('dialogSinglePokemon');
                         if (dialog) {
-                          (dialog as HTMLDialogElement).showModal();
+                          (dialog as HTMLDialogElement).showSinglePokemonModal();
                         }
                       }}>
                       {isSubmitting ? '...' : 'Search'}

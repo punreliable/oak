@@ -17,3 +17,14 @@ export function showModal() {
 	const dialog = document.getElementById("dialog-navigation") as HTMLDialogElement;
 	dialog?.close();
   };
+
+  export function showSinglePokemonModal() {
+	const dialog = document.getElementById("dialogSinglePokemon") as HTMLDialogElement;
+	dialog?.showModal();
+  };
+  
+  export function closeSinglePokemonModal() {
+	const dialog = document.getElementById("dialogSinglePokemon") as HTMLDialogElement;
+	dialog?.close();
+  };
+  
