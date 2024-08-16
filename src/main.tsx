@@ -32,6 +32,8 @@ import KantoPokedex from "./pages/pokedex/KantoPokedex";
 import PagePokemonCarousel from "./components/PagePokemonCarousel";
 import PagePokemonSearch from "./components/PagePokemonSearch";
 import "./index.scss";
+// import 'dotenv/config';
+
 
 const router = createBrowserRouter([
   {

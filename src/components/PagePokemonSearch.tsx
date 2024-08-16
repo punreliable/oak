@@ -1,6 +1,7 @@
-import React, { useState } from "react"
-import { useQuery } from "@tanstack/react-query"
+import React, { useState, FormEvent } from "react";
+import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import ButtonSearch from "./ButtonSearch";
 import { createRoot } from 'react-dom/client'
 import { FieldApi, useForm } from '@tanstack/react-form'
 import { PokemonModal } from "./PokemonModal"
@@ -24,6 +25,11 @@ const PagePokemonSearch = () => {
     setPokemonData(data)
   }
 
+  const { isLoading, isSuccess, error, data } = useQuery({
+    queryKey: ["pokemon-search"],
+    queryFn: async (id) => {
+      fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+      .then((res) => res?.json());
   
   function FieldInfo({ field }: { field: FieldApi<any, any, any, any> }) {
     return (
@@ -40,6 +46,17 @@ const PagePokemonSearch = () => {
     defaultValues: {
       pokemon: 'mewtwo',
     },
+  });
+  
+  function searchHandler(event: FormEvent<HTMLFormElement>) {
+  
+    console.log('Search Handler Begins');
+    event.preventDefault();
+    const id = (event.target as HTMLFormElement).pokeno.value;
+    setPokemon(id);
+    console.log('Pokemon ID: ', id);
+    console.log('Search Handler Ends.');
+  }
     onSubmit: async ({ value }) => {
       setPokemon(value.pokemon)
       console.log(value)
@@ -78,6 +95,7 @@ const PagePokemonSearch = () => {
                 form.handleSubmit()
               }}
             >
+
               <div className="md-form form-group mx-2">
    
                 <form.Field
