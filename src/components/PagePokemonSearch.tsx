@@ -8,28 +8,33 @@ import { PokemonModal } from "./PokemonModal"
 import MainNavigation from "./MainNavigation"
 import { closeSinglePokemonModal, showSinglePokemonModal } from "../utilities/modals"
 
+// import { pokemonImage } from "../assets/who-is-that-pokemon.png"
 
-const PagePokemonSearch = () => {
+export const PagePokemonSearch = () => {
 
   const [pokemon, setPokemon] = useState('');
   const [pokemonData, setPokemonData] = useState<any>(null);
 
-  const fetchPokemon = async (pokemon: string) => {
-    const { data, isLoading } = await useQuery({
-      queryKey: ['pokemon', pokemon],
-      queryFn: async () => {
-        const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
-        return data
-      },
-    });
-    setPokemonData(data)
-  }
+  // const fetchPokemon = async (pokemon: string) => {
+  //   const { data, isLoading } = await useQuery({
+  //     queryKey: ['pokemon', pokemon],
+  //     queryFn: async () => {
+  //       const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
+  //       return data
+  //     },
+  //   });
+  //   setPokemonData(data)
+  // }
 
   const { isLoading, isSuccess, error, data } = useQuery({
     queryKey: ["pokemon-search"],
-    queryFn: async (id) => {
-      fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
-      .then((res) => res?.json());
+    queryFn:  fetchPokemon(pokemon)
+  })
+
+  function async fetchPokemon(pokemon: string) {
+    fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
+    .then((res) => res?.json());
+  }
   
   function FieldInfo({ field }: { field: FieldApi<any, any, any, any> }) {
     return (
@@ -48,38 +53,37 @@ const PagePokemonSearch = () => {
     },
   });
   
-  function searchHandler(event: FormEvent<HTMLFormElement>) {
+  // function searchHandler(event: FormEvent<HTMLFormElement>) {
   
-    console.log('Search Handler Begins');
-    event.preventDefault();
-    const id = (event.target as HTMLFormElement).pokeno.value;
-    setPokemon(id);
-    console.log('Pokemon ID: ', id);
-    console.log('Search Handler Ends.');
-  }
-    onSubmit: async ({ value }) => {
-      setPokemon(value.pokemon)
-      console.log(value)
-    },
-  })
+  //   // console.log('Search Handler Begins');
+  //   event.preventDefault();
+  //   const id = (event.target as HTMLFormElement).pokeno.value;
+  //   setPokemon(id);
+  //   // console.log('Pokemon ID: ', id);
+  //   // console.log('Search Handler Ends.');
+  // }
+  //   onSubmit: async ({ value }) => {
+  //     setPokemon(value.pokemon)
+  //     // console.log(value)
+  //   },
+  // })
   
   return(
-    <>
+
 
     <div id="main">
+
       <MainNavigation /> 
       <h1 className="h1-responsive mb-4 pt-4 px-2 gameboy text-center font-weight-bold">
         Who's that Pokémon?
       </h1>
       <h2 className="h4-responsive gameboy text-center py-4 px-2">
-        Learn more about Pokémon
+      Enter a Pokémon name
       </h2>
+      
       <hr className="py-2" />
-      <p className="d-none d-md-block text-center pb-4 px-2 gameboy">
-        Enter a Pokémon name
-      </p>
-
-      <div className="feature-image" style={{ backgroundImage: "url('http://poke.comicui.com/images/whos-that-pokemon.png')" }}>
+      
+      <div className="feature-image">
         
         <div className="mask rgba-black-strong d-flex justify-content-center align-items-top">
           
@@ -88,13 +92,7 @@ const PagePokemonSearch = () => {
             <form
               name="searchPokemon"
               id="searchPokemon"
-              className="searchPokemon my-4 mx-4"
-              onSubmit={(e) => {
-                e.preventDefault()
-                e.stopPropagation()
-                form.handleSubmit()
-              }}
-            >
+              className="searchPokemon my-4 mx-4">
 
               <div className="md-form form-group mx-2">
    
@@ -140,17 +138,15 @@ const PagePokemonSearch = () => {
                 <form.Subscribe
                   selector={(state) => [state.canSubmit, state.isSubmitting]}
                   children={([canSubmit, isSubmitting]) => (
-
                     <button 
                       type="submit" 
                       disabled={!canSubmit}
                       className="nes-btn is-primary gameboy white-text"
-                      onClick={(pokemonData) => {
+                      onClick=
+                      {(pokemonData) => {
                         const dialog = document.getElementById('dialogSinglePokemon');
-                        if (dialog) {
-                          (dialog as HTMLDialogElement).showSinglePokemonModal();
-                        }
-                      }}>
+                      }}
+                      >
                       {isSubmitting ? '...' : 'Search'}
                     </button>
  
@@ -168,13 +164,5 @@ const PagePokemonSearch = () => {
       </div>
 
     </div>
-
-    { pokemonData && ( <PokemonModal props={pokemonData} /> )}
-
-    </>
-
   )
-
 }
-
-export default PagePokemonSearch;
