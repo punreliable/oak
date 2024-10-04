@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom"
 
 import onSubmitChange from "../utilities/onSelectChange"
 import { closeNavModal, showNavModal, } from "../utilities/modals"
-import classes from "./MainNavigation.module.scss"
+import classes from "./MainNavigation.module.css"
 const MainNavigation = () => {
   return (
     <>
