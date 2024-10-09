@@ -7,11 +7,24 @@ const geistSans = localFont({
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+
+// const pressStartSans = localFont({
+//   src: "https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap",
+//   variable: "--font-press-start-sans",
+//   weight: "400 900",
+// });
+// const pressStartMono = localFont({
+//   src: "https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap",
+//   variable: "--font-press-start-mono",
+//   weight: "400 900",
+// });
+
 
 export const metadata: Metadata = {
   title: "Oak",

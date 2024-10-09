@@ -1,0 +1,33 @@
+.random-container {
+	
+	align-content: center;
+	
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	justify-content: center;
+		
+	margin-top: 1.6em;
+	
+	.flex-row {
+		
+		width: 100%;
+		
+		h1 {
+		
+			marigin-bottom: 1.6em;
+		}
+		
+		#pokemon {
+		
+			background-image: url('svg/1.svg');
+			background-size: contain;
+			background-repeat: no-repeat;
+			
+			height: 300px;
+			width: 300px;
+
+		}
+	}
+}

@@ -1,0 +1,2375 @@
+@import 'comicui/variables';
+@import 'comicui/palette-town';
+
+$border-size: 4px;
+
+.type-container {
+
+	height: 180px;
+	width: 320px;
+
+	background-color: $color-normal;
+	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/01-normal.svg');
+	background-position: top 2em center;
+	background-repeat: no-repeat;
+	background-size: 3em;
+
+	position: relative;
+	padding: 1.5rem 2rem;
+	//border-color: black;
+	border-style: solid;
+	border-width: 4px;
+
+  > :last-child {
+	margin-bottom: 0;
+  }
+
+  &.is-centered {
+	text-align: center;
+  }
+
+  &.is-right {
+	text-align: right;
+  }
+
+  &.with-title {
+	> .title {
+	  display: table;
+	  padding: 0 0.5rem;
+	  margin: -1.8rem 0 1rem;
+	  font-size: 1rem;
+	  //background-color: $background-color;
+	}
+
+	&.is-centered {
+	  > .title {
+		margin: -2rem auto 1rem;
+	  }
+	}
+
+	&.is-right {
+	  > .title {
+		margin: -2rem 0 1rem auto;
+	  }
+	}
+  }
+
+  &.is-dark {
+	position: relative;
+	margin: $border-size;
+	//color: $background-color;
+	//background-color: $base-color;
+	//border-color: white;
+
+	&::after {
+	  position: absolute;
+	  top: -$border-size * 1.8;
+	  right: -$border-size * 1.8;
+	  bottom: -$border-size * 1.8;
+	  left: -$border-size * 1.8;
+	  z-index: -1;
+	  content: "";
+	  background-color: $base-color;
+	}
+
+	&.with-title {
+	  > .title {
+		//color: $background-color;
+		//background-color: $base-color;
+	  }
+	}
+  }
+
+  &.is-rounded {
+	@include rounded-corners();
+
+	padding: 1rem 1.5rem;
+	margin: $border-size;
+
+	&.with-title {
+	  > .title {
+		margin-top: -1.5rem;
+	  }
+
+	  &.is-centered {
+		> .title {
+		  margin: -1.5rem auto 1rem;
+		}
+	  }
+
+	  &.is-right {
+		> .title {
+		  margin: -1.5rem 0 1rem auto;
+		}
+	  }
+	}
+
+	&.is-dark {
+	  @include rounded-corners(true);
+	  &::after {
+		content: none;
+	  }
+
+	  &.with-title {
+		> .title {
+		  margin-top: -1.3rem;
+		}
+
+		&.is-centered {
+		  > .title {
+			margin: -1.3rem auto 1rem;
+		  }
+		}
+
+		&.is-right {
+		  > .title {
+			margin: -1.3rem 0 1rem auto;
+		  }
+		}
+	  }
+	}
+  }
+}
+
+$background-color: $color-normal;
+$base-color: $color-normal;
+
+.type-normal-container {
+
+	@extend .type-container;
+
+	background-color: $color-normal;
+	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/01-normal.svg');
+	background-position: top 2em center;
+	background-repeat: no-repeat;
+	background-size: 3em;
+
+	border-color: $border-color-normal;
+
+
+
+  &.is-dark {
+	position: relative;
+	margin: $border-size;
+	color: $background-color;
+	background-color: $base-color;
+	border-color: $color-normal;
+
+	&::after {
+	  position: absolute;
+	  top: -$border-size * 1.8;
+	  right: -$border-size * 1.8;
+	  bottom: -$border-size * 1.8;
+	  left: -$border-size * 1.8;
+	  z-index: -1;
+	  content: "";
+	  background-color: $base-color;
+	}
+
+	&.with-title {
+	  > .title {
+		color: $background-color;
+		background-color: $base-color;
+	  }
+	}
+  }
+
+  &.is-rounded {
+	@include rounded-corners();
+
+	padding: 1rem 1.5rem;
+	margin: $border-size;
+
+	&.with-title {
+	  > .title {
+		margin-top: -1.5rem;
+	  }
+
+	  &.is-centered {
+		> .title {
+		  margin: -1.5rem auto 1rem;
+		}
+	  }
+
+	  &.is-right {
+		> .title {
+		  margin: -1.5rem 0 1rem auto;
+		}
+	  }
+	}
+
+	&.is-dark {
+	  @include rounded-corners(true);
+	  &::after {
+		content: none;
+	  }
+
+	  &.with-title {
+		> .title {
+		  margin-top: -1.3rem;
+		}
+
+		&.is-centered {
+		  > .title {
+			margin: -1.3rem auto 1rem;
+		  }
+		}
+
+		&.is-right {
+		  > .title {
+			margin: -1.3rem 0 1rem auto;
+		  }
+		}
+	  }
+	}
+  }
+}
+
+$background-color: $color-dark;
+$base-color: $color-dark;
+
+.type-fighting-container {
+
+	// @extend .type-container;
+
+	height: 180px;
+	width: 320px;
+
+	background-color: $color-fighting;
+	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/02-fighting.svg');
+	background-position: top 2em center;
+	background-repeat: no-repeat;
+	background-size: 3em;
+
+	border-color: $border-color-fighting;
+	border-style: solid;
+	border-width: 4px;
+
+	color: $border-color-fighting;
+
+	margin: auto;
+
+	position: relative;
+	padding: 1.5rem 2rem;
+
+	&.with-title {
+		> .title {
+			background-color: $color-fighting;
+		}
+	}
+
+	&.is-dark {
+		position: relative;
+		margin: $border-size;
+		color: $border-color-fighting;
+		background-color: $color-fighting;
+		border-color: $border-color-fighting;
+		&::after {
+
+			background-color: $color-fighting;
+			position: absolute;
+			top: -$border-size * 1.8;
+			right: -$border-size * 1.8;
+			bottom: -$border-size * 1.8;
+			left: -$border-size * 1.8;
+
+			content: "";
+
+			z-index: -1;
+
+		}
+
+		&.with-title {
+
+			> .title {
+
+				color: $border-color-fighting;
+				background-color: $color-fighting;
+
+			}
+
+		}
+
+	}
+
+}
+
+$background-color: $color-flying;
+$base-color: $color-flying;
+
+.type-flying-container {
+
+	height: 180px;
+	width: 320px;
+
+	background-color: $color-flying;
+	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/03-flying.svg');
+	background-position: top 2em center;
+	background-repeat: no-repeat;
+	background-size: 3em;
+
+
+  position: relative;
+  padding: 1.5rem 2rem;
+  border-color: black;
+  border-style: solid;
+  border-width: 4px;
+
+  > :last-child {
+	margin-bottom: 0;
+  }
+
+  &.is-centered {
+	text-align: center;
+  }
+
+  &.is-right {
+	text-align: right;
+  }
+
+  &.with-title {
+	> .title {
+	  display: table;
+	  padding: 0 0.5rem;
+	  margin: -1.8rem 0 1rem;
+	  font-size: 1rem;
+	  background-color: $background-color;
+	}
+
+	&.is-centered {
+	  > .title {
+		margin: -2rem auto 1rem;
+	  }
+	}
+
+	&.is-right {
+	  > .title {
+		margin: -2rem 0 1rem auto;
+	  }
+	}
+  }
+
+  &.is-dark {
+	position: relative;
+	margin: $border-size;
+	color: $background-color;
+	background-color: $base-color;
+	border-color: white;
+
+	&::after {
+	  position: absolute;
+	  top: -$border-size * 1.8;
+	  right: -$border-size * 1.8;
+	  bottom: -$border-size * 1.8;
+	  left: -$border-size * 1.8;
+	  z-index: -1;
+	  content: "";
+	  background-color: $base-color;
+	}
+
+	&.with-title {
+	  > .title {
+		color: $background-color;
+		background-color: $base-color;
+	  }
+	}
+  }
+
+  &.is-rounded {
+	@include rounded-corners();
+
+	padding: 1rem 1.5rem;
+	margin: $border-size;
+
+	&.with-title {
+	  > .title {
+		margin-top: -1.5rem;
+	  }
+
+	  &.is-centered {
+		> .title {
+		  margin: -1.5rem auto 1rem;
+		}
+	  }
+
+	  &.is-right {
+		> .title {
+		  margin: -1.5rem 0 1rem auto;
+		}
+	  }
+	}
+
+	&.is-dark {
+	  @include rounded-corners(true);
+	  &::after {
+		content: none;
+	  }
+
+	  &.with-title {
+		> .title {
+		  margin-top: -1.3rem;
+		}
+
+		&.is-centered {
+		  > .title {
+			margin: -1.3rem auto 1rem;
+		  }
+		}
+
+		&.is-right {
+		  > .title {
+			margin: -1.3rem 0 1rem auto;
+		  }
+		}
+	  }
+	}
+  }
+}
+
+$background-color: $color-poison;
+$base-color: $color-poison;
+
+.type-poison-container {
+
+	height: 180px;
+	width: 320px;
+
+	background-color: $color-poison;
+	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/04-poison.svg');
+	background-position: top 2em center;
+	background-repeat: no-repeat;
+	background-size: 3em;
+
+
+
+
+
+  position: relative;
+  padding: 1.5rem 2rem;
+  border-color: black;
+  border-style: solid;
+  border-width: 4px;
+
+  > :last-child {
+	margin-bottom: 0;
+  }
+
+  &.is-centered {
+	text-align: center;
+  }
+
+  &.is-right {
+	text-align: right;
+  }
+
+  &.with-title {
+	> .title {
+	  display: table;
+	  padding: 0 0.5rem;
+	  margin: -1.8rem 0 1rem;
+	  font-size: 1rem;
+	  background-color: $background-color;
+	}
+
+	&.is-centered {
+	  > .title {
+		margin: -2rem auto 1rem;
+	  }
+	}
+
+	&.is-right {
+	  > .title {
+		margin: -2rem 0 1rem auto;
+	  }
+	}
+  }
+
+  &.is-dark {
+	position: relative;
+	margin: $border-size;
+	color: $background-color;
+	background-color: $base-color;
+	border-color: white;
+
+	&::after {
+	  position: absolute;
+	  top: -$border-size * 1.8;
+	  right: -$border-size * 1.8;
+	  bottom: -$border-size * 1.8;
+	  left: -$border-size * 1.8;
+	  z-index: -1;
+	  content: "";
+	  background-color: $base-color;
+	}
+
+	&.with-title {
+	  > .title {
+		color: $background-color;
+		background-color: $base-color;
+	  }
+	}
+  }
+
+  &.is-rounded {
+	@include rounded-corners();
+
+	padding: 1rem 1.5rem;
+	margin: $border-size;
+
+	&.with-title {
+	  > .title {
+		margin-top: -1.5rem;
+	  }
+
+	  &.is-centered {
+		> .title {
+		  margin: -1.5rem auto 1rem;
+		}
+	  }
+
+	  &.is-right {
+		> .title {
+		  margin: -1.5rem 0 1rem auto;
+		}
+	  }
+	}
+
+	&.is-dark {
+	  @include rounded-corners(true);
+	  &::after {
+		content: none;
+	  }
+
+	  &.with-title {
+		> .title {
+		  margin-top: -1.3rem;
+		}
+
+		&.is-centered {
+		  > .title {
+			margin: -1.3rem auto 1rem;
+		  }
+		}
+
+		&.is-right {
+		  > .title {
+			margin: -1.3rem 0 1rem auto;
+		  }
+		}
+	  }
+	}
+  }
+}
+
+$background-color: $color-ground;
+$base-color: $color-ground;
+
+.type-ground-container {
+
+
+	height: 180px;
+	width: 320px;
+
+	background-color: $color-ground;
+	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/05-ground.svg');
+	background-position: top 2em center;
+	background-repeat: no-repeat;
+	background-size: 3em;
+
+
+
+
+
+  position: relative;
+  padding: 1.5rem 2rem;
+  border-color: black;
+  border-style: solid;
+  border-width: 4px;
+
+  > :last-child {
+	margin-bottom: 0;
+  }
+
+  &.is-centered {
+	text-align: center;
+  }
+
+  &.is-right {
+	text-align: right;
+  }
+
+  &.with-title {
+	> .title {
+	  display: table;
+	  padding: 0 0.5rem;
+	  margin: -1.8rem 0 1rem;
+	  font-size: 1rem;
+	  background-color: $background-color;
+	}
+
+	&.is-centered {
+	  > .title {
+		margin: -2rem auto 1rem;
+	  }
+	}
+
+	&.is-right {
+	  > .title {
+		margin: -2rem 0 1rem auto;
+	  }
+	}
+  }
+
+  &.is-dark {
+	position: relative;
+	margin: $border-size;
+	color: $background-color;
+	background-color: $base-color;
+	border-color: white;
+
+	&::after {
+	  position: absolute;
+	  top: -$border-size * 1.8;
+	  right: -$border-size * 1.8;
+	  bottom: -$border-size * 1.8;
+	  left: -$border-size * 1.8;
+	  z-index: -1;
+	  content: "";
+	  background-color: $base-color;
+	}
+
+	&.with-title {
+	  > .title {
+		color: $background-color;
+		background-color: $base-color;
+	  }
+	}
+  }
+
+  &.is-rounded {
+	@include rounded-corners();
+
+	padding: 1rem 1.5rem;
+	margin: $border-size;
+
+	&.with-title {
+	  > .title {
+		margin-top: -1.5rem;
+	  }
+
+	  &.is-centered {
+		> .title {
+		  margin: -1.5rem auto 1rem;
+		}
+	  }
+
+	  &.is-right {
+		> .title {
+		  margin: -1.5rem 0 1rem auto;
+		}
+	  }
+	}
+
+	&.is-dark {
+	  @include rounded-corners(true);
+	  &::after {
+		content: none;
+	  }
+
+	  &.with-title {
+		> .title {
+		  margin-top: -1.3rem;
+		}
+
+		&.is-centered {
+		  > .title {
+			margin: -1.3rem auto 1rem;
+		  }
+		}
+
+		&.is-right {
+		  > .title {
+			margin: -1.3rem 0 1rem auto;
+		  }
+		}
+	  }
+	}
+  }
+}
+
+$background-color: $color-rock;
+$base-color: $color-rock;
+
+.type-rock-container {
+
+
+	height: 180px;
+	width: 320px;
+
+	background-color: $color-rock;
+	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/06-rock.svg');
+	background-position: top 2em center;
+	background-repeat: no-repeat;
+	background-size: 3em;
+
+
+
+
+
+
+  position: relative;
+  padding: 1.5rem 2rem;
+  border-color: black;
+  border-style: solid;
+  border-width: 4px;
+
+  > :last-child {
+	margin-bottom: 0;
+  }
+
+  &.is-centered {
+	text-align: center;
+  }
+
+  &.is-right {
+	text-align: right;
+  }
+
+  &.with-title {
+	> .title {
+	  display: table;
+	  padding: 0 0.5rem;
+	  margin: -1.8rem 0 1rem;
+	  font-size: 1rem;
+	  background-color: $background-color;
+	}
+
+	&.is-centered {
+	  > .title {
+		margin: -2rem auto 1rem;
+	  }
+	}
+
+	&.is-right {
+	  > .title {
+		margin: -2rem 0 1rem auto;
+	  }
+	}
+  }
+
+  &.is-dark {
+	position: relative;
+	margin: $border-size;
+	color: $background-color;
+	background-color: $base-color;
+	border-color: white;
+
+	&::after {
+	  position: absolute;
+	  top: -$border-size * 1.8;
+	  right: -$border-size * 1.8;
+	  bottom: -$border-size * 1.8;
+	  left: -$border-size * 1.8;
+	  z-index: -1;
+	  content: "";
+	  background-color: $base-color;
+	}
+
+	&.with-title {
+	  > .title {
+		color: $background-color;
+		background-color: $base-color;
+	  }
+	}
+  }
+
+  &.is-rounded {
+	@include rounded-corners();
+
+	padding: 1rem 1.5rem;
+	margin: $border-size;
+
+	&.with-title {
+	  > .title {
+		margin-top: -1.5rem;
+	  }
+
+	  &.is-centered {
+		> .title {
+		  margin: -1.5rem auto 1rem;
+		}
+	  }
+
+	  &.is-right {
+		> .title {
+		  margin: -1.5rem 0 1rem auto;
+		}
+	  }
+	}
+
+	&.is-dark {
+	  @include rounded-corners(true);
+	  &::after {
+		content: none;
+	  }
+
+	  &.with-title {
+		> .title {
+		  margin-top: -1.3rem;
+		}
+
+		&.is-centered {
+		  > .title {
+			margin: -1.3rem auto 1rem;
+		  }
+		}
+
+		&.is-right {
+		  > .title {
+			margin: -1.3rem 0 1rem auto;
+		  }
+		}
+	  }
+	}
+  }
+}
+
+$background-color: $color-bug;
+$base-color: $color-bug;
+
+.type-bug-container {
+
+
+
+	height: 180px;
+	width: 320px;
+
+	background-color: $color-bug;
+	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/07-bug.svg');
+	background-position: top 2em center;
+	background-repeat: no-repeat;
+	background-size: 3em;
+
+
+
+
+  position: relative;
+  padding: 1.5rem 2rem;
+  border-color: black;
+  border-style: solid;
+  border-width: 4px;
+
+  > :last-child {
+	margin-bottom: 0;
+  }
+
+  &.is-centered {
+	text-align: center;
+  }
+
+  &.is-right {
+	text-align: right;
+  }
+
+  &.with-title {
+	> .title {
+	  display: table;
+	  padding: 0 0.5rem;
+	  margin: -1.8rem 0 1rem;
+	  font-size: 1rem;
+	  background-color: $background-color;
+	}
+
+	&.is-centered {
+	  > .title {
+		margin: -2rem auto 1rem;
+	  }
+	}
+
+	&.is-right {
+	  > .title {
+		margin: -2rem 0 1rem auto;
+	  }
+	}
+  }
+
+  &.is-dark {
+	position: relative;
+	margin: $border-size;
+	color: $background-color;
+	background-color: $base-color;
+	border-color: white;
+
+	&::after {
+	  position: absolute;
+	  top: -$border-size * 1.8;
+	  right: -$border-size * 1.8;
+	  bottom: -$border-size * 1.8;
+	  left: -$border-size * 1.8;
+	  z-index: -1;
+	  content: "";
+	  background-color: $base-color;
+	}
+
+	&.with-title {
+	  > .title {
+		color: $background-color;
+		background-color: $base-color;
+	  }
+	}
+  }
+
+  &.is-rounded {
+	@include rounded-corners();
+
+	padding: 1rem 1.5rem;
+	margin: $border-size;
+
+	&.with-title {
+	  > .title {
+		margin-top: -1.5rem;
+	  }
+
+	  &.is-centered {
+		> .title {
+		  margin: -1.5rem auto 1rem;
+		}
+	  }
+
+	  &.is-right {
+		> .title {
+		  margin: -1.5rem 0 1rem auto;
+		}
+	  }
+	}
+
+	&.is-dark {
+	  @include rounded-corners(true);
+	  &::after {
+		content: none;
+	  }
+
+	  &.with-title {
+		> .title {
+		  margin-top: -1.3rem;
+		}
+
+		&.is-centered {
+		  > .title {
+			margin: -1.3rem auto 1rem;
+		  }
+		}
+
+		&.is-right {
+		  > .title {
+			margin: -1.3rem 0 1rem auto;
+		  }
+		}
+	  }
+	}
+  }
+}
+
+$background-color: $color-ghost;
+$base-color: $color-ghost;
+
+.type-ghost-container {
+
+
+
+	height: 180px;
+	width: 320px;
+
+	background-color: $color-ghost;
+	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/08-ghost.svg');
+	background-position: top 2em center;
+	background-repeat: no-repeat;
+	background-size: 3em;
+
+
+
+
+  position: relative;
+  padding: 1.5rem 2rem;
+  border-color: black;
+  border-style: solid;
+  border-width: 4px;
+
+  > :last-child {
+	margin-bottom: 0;
+  }
+
+  &.is-centered {
+	text-align: center;
+  }
+
+  &.is-right {
+	text-align: right;
+  }
+
+  &.with-title {
+	> .title {
+	  display: table;
+	  padding: 0 0.5rem;
+	  margin: -1.8rem 0 1rem;
+	  font-size: 1rem;
+	  background-color: $background-color;
+	}
+
+	&.is-centered {
+	  > .title {
+		margin: -2rem auto 1rem;
+	  }
+	}
+
+	&.is-right {
+	  > .title {
+		margin: -2rem 0 1rem auto;
+	  }
+	}
+  }
+
+  &.is-dark {
+	position: relative;
+	margin: $border-size;
+	color: $background-color;
+	background-color: $base-color;
+	border-color: white;
+
+	&::after {
+	  position: absolute;
+	  top: -$border-size * 1.8;
+	  right: -$border-size * 1.8;
+	  bottom: -$border-size * 1.8;
+	  left: -$border-size * 1.8;
+	  z-index: -1;
+	  content: "";
+	  background-color: $base-color;
+	}
+
+	&.with-title {
+	  > .title {
+		color: $background-color;
+		background-color: $base-color;
+	  }
+	}
+  }
+
+  &.is-rounded {
+	@include rounded-corners();
+
+	padding: 1rem 1.5rem;
+	margin: $border-size;
+
+	&.with-title {
+	  > .title {
+		margin-top: -1.5rem;
+	  }
+
+	  &.is-centered {
+		> .title {
+		  margin: -1.5rem auto 1rem;
+		}
+	  }
+
+	  &.is-right {
+		> .title {
+		  margin: -1.5rem 0 1rem auto;
+		}
+	  }
+	}
+
+	&.is-dark {
+	  @include rounded-corners(true);
+	  &::after {
+		content: none;
+	  }
+
+	  &.with-title {
+		> .title {
+		  margin-top: -1.3rem;
+		}
+
+		&.is-centered {
+		  > .title {
+			margin: -1.3rem auto 1rem;
+		  }
+		}
+
+		&.is-right {
+		  > .title {
+			margin: -1.3rem 0 1rem auto;
+		  }
+		}
+	  }
+	}
+  }
+}
+
+$background-color: $color-steel;
+$base-color: $color-steel;
+
+.type-steel-container {
+
+
+	height: 180px;
+	width: 320px;
+
+	background-color: $color-steel;
+	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/09-steel.svg');
+	background-position: top 2em center;
+	background-repeat: no-repeat;
+	background-size: 3em;
+
+
+  position: relative;
+  padding: 1.5rem 2rem;
+  border-color: black;
+  border-style: solid;
+  border-width: 4px;
+
+  > :last-child {
+	margin-bottom: 0;
+  }
+
+  &.is-centered {
+	text-align: center;
+  }
+
+  &.is-right {
+	text-align: right;
+  }
+
+  &.with-title {
+	> .title {
+	  display: table;
+	  padding: 0 0.5rem;
+	  margin: -1.8rem 0 1rem;
+	  font-size: 1rem;
+	  background-color: $background-color;
+	}
+
+	&.is-centered {
+	  > .title {
+		margin: -2rem auto 1rem;
+	  }
+	}
+
+	&.is-right {
+	  > .title {
+		margin: -2rem 0 1rem auto;
+	  }
+	}
+  }
+
+  &.is-dark {
+	position: relative;
+	margin: $border-size;
+	color: $background-color;
+	background-color: $base-color;
+	border-color: white;
+
+	&::after {
+	  position: absolute;
+	  top: -$border-size * 1.8;
+	  right: -$border-size * 1.8;
+	  bottom: -$border-size * 1.8;
+	  left: -$border-size * 1.8;
+	  z-index: -1;
+	  content: "";
+	  background-color: $base-color;
+	}
+
+	&.with-title {
+	  > .title {
+		color: $background-color;
+		background-color: $base-color;
+	  }
+	}
+  }
+
+  &.is-rounded {
+	@include rounded-corners();
+
+	padding: 1rem 1.5rem;
+	margin: $border-size;
+
+	&.with-title {
+	  > .title {
+		margin-top: -1.5rem;
+	  }
+
+	  &.is-centered {
+		> .title {
+		  margin: -1.5rem auto 1rem;
+		}
+	  }
+
+	  &.is-right {
+		> .title {
+		  margin: -1.5rem 0 1rem auto;
+		}
+	  }
+	}
+
+	&.is-dark {
+	  @include rounded-corners(true);
+	  &::after {
+		content: none;
+	  }
+
+	  &.with-title {
+		> .title {
+		  margin-top: -1.3rem;
+		}
+
+		&.is-centered {
+		  > .title {
+			margin: -1.3rem auto 1rem;
+		  }
+		}
+
+		&.is-right {
+		  > .title {
+			margin: -1.3rem 0 1rem auto;
+		  }
+		}
+	  }
+	}
+  }
+}
+
+$background-color: $color-fire;
+$base-color: $color-fire;
+
+.type-fire-container {
+
+	height: 180px;
+	width: 320px;
+
+	background-color: $color-fire;
+	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/10-fire.svg');
+	background-position: top 2em center;
+	background-repeat: no-repeat;
+	background-size: 3em;
+
+
+
+
+  position: relative;
+  padding: 1.5rem 2rem;
+  border-color: black;
+  border-style: solid;
+  border-width: 4px;
+
+  > :last-child {
+	margin-bottom: 0;
+  }
+
+  &.is-centered {
+	text-align: center;
+  }
+
+  &.is-right {
+	text-align: right;
+  }
+
+  &.with-title {
+	> .title {
+	  display: table;
+	  padding: 0 0.5rem;
+	  margin: -1.8rem 0 1rem;
+	  font-size: 1rem;
+	  background-color: $background-color;
+	}
+
+	&.is-centered {
+	  > .title {
+		margin: -2rem auto 1rem;
+	  }
+	}
+
+	&.is-right {
+	  > .title {
+		margin: -2rem 0 1rem auto;
+	  }
+	}
+  }
+
+  &.is-dark {
+	position: relative;
+	margin: $border-size;
+	color: $background-color;
+	background-color: $base-color;
+	border-color: white;
+
+	&::after {
+	  position: absolute;
+	  top: -$border-size * 1.8;
+	  right: -$border-size * 1.8;
+	  bottom: -$border-size * 1.8;
+	  left: -$border-size * 1.8;
+	  z-index: -1;
+	  content: "";
+	  background-color: $base-color;
+	}
+
+	&.with-title {
+	  > .title {
+		color: $background-color;
+		background-color: $base-color;
+	  }
+	}
+  }
+
+  &.is-rounded {
+	@include rounded-corners();
+
+	padding: 1rem 1.5rem;
+	margin: $border-size;
+
+	&.with-title {
+	  > .title {
+		margin-top: -1.5rem;
+	  }
+
+	  &.is-centered {
+		> .title {
+		  margin: -1.5rem auto 1rem;
+		}
+	  }
+
+	  &.is-right {
+		> .title {
+		  margin: -1.5rem 0 1rem auto;
+		}
+	  }
+	}
+
+	&.is-dark {
+	  @include rounded-corners(true);
+	  &::after {
+		content: none;
+	  }
+
+	  &.with-title {
+		> .title {
+		  margin-top: -1.3rem;
+		}
+
+		&.is-centered {
+		  > .title {
+			margin: -1.3rem auto 1rem;
+		  }
+		}
+
+		&.is-right {
+		  > .title {
+			margin: -1.3rem 0 1rem auto;
+		  }
+		}
+	  }
+	}
+  }
+}
+
+$background-color: $color-water;
+$base-color: $color-water;
+
+.type-water-container {
+
+	height: 180px;
+	width: 320px;
+
+	background-color: $color-water;
+	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/11-water.svg');
+	background-position: top 2em center;
+	background-repeat: no-repeat;
+	background-size: 3em;
+
+
+
+
+
+
+
+  position: relative;
+  padding: 1.5rem 2rem;
+  border-color: black;
+  border-style: solid;
+  border-width: 4px;
+
+  > :last-child {
+	margin-bottom: 0;
+  }
+
+  &.is-centered {
+	text-align: center;
+  }
+
+  &.is-right {
+	text-align: right;
+  }
+
+  &.with-title {
+	> .title {
+	  display: table;
+	  padding: 0 0.5rem;
+	  margin: -1.8rem 0 1rem;
+	  font-size: 1rem;
+	  background-color: $background-color;
+	}
+
+	&.is-centered {
+	  > .title {
+		margin: -2rem auto 1rem;
+	  }
+	}
+
+	&.is-right {
+	  > .title {
+		margin: -2rem 0 1rem auto;
+	  }
+	}
+  }
+
+  &.is-dark {
+	position: relative;
+	margin: $border-size;
+	color: $background-color;
+	background-color: $base-color;
+	border-color: white;
+
+	&::after {
+	  position: absolute;
+	  top: -$border-size * 1.8;
+	  right: -$border-size * 1.8;
+	  bottom: -$border-size * 1.8;
+	  left: -$border-size * 1.8;
+	  z-index: -1;
+	  content: "";
+	  background-color: $base-color;
+	}
+
+	&.with-title {
+	  > .title {
+		color: $background-color;
+		background-color: $base-color;
+	  }
+	}
+  }
+
+  &.is-rounded {
+	@include rounded-corners();
+
+	padding: 1rem 1.5rem;
+	margin: $border-size;
+
+	&.with-title {
+	  > .title {
+		margin-top: -1.5rem;
+	  }
+
+	  &.is-centered {
+		> .title {
+		  margin: -1.5rem auto 1rem;
+		}
+	  }
+
+	  &.is-right {
+		> .title {
+		  margin: -1.5rem 0 1rem auto;
+		}
+	  }
+	}
+
+	&.is-dark {
+	  @include rounded-corners(true);
+	  &::after {
+		content: none;
+	  }
+
+	  &.with-title {
+		> .title {
+		  margin-top: -1.3rem;
+		}
+
+		&.is-centered {
+		  > .title {
+			margin: -1.3rem auto 1rem;
+		  }
+		}
+
+		&.is-right {
+		  > .title {
+			margin: -1.3rem 0 1rem auto;
+		  }
+		}
+	  }
+	}
+  }
+}
+
+$background-color: $color-grass;
+$base-color: $color-grass;
+
+.type-grass-container {
+
+	height: 180px;
+	width: 320px;
+
+	background-color: $color-grass;
+	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/12-grass.svg');
+	background-position: top 2em center;
+	background-repeat: no-repeat;
+	background-size: 3em;
+
+
+
+
+
+  position: relative;
+  padding: 1.5rem 2rem;
+  border-color: black;
+  border-style: solid;
+  border-width: 4px;
+
+  > :last-child {
+	margin-bottom: 0;
+  }
+
+  &.is-centered {
+	text-align: center;
+  }
+
+  &.is-right {
+	text-align: right;
+  }
+
+  &.with-title {
+	> .title {
+	  display: table;
+	  padding: 0 0.5rem;
+	  margin: -1.8rem 0 1rem;
+	  font-size: 1rem;
+	  background-color: $background-color;
+	}
+
+	&.is-centered {
+	  > .title {
+		margin: -2rem auto 1rem;
+	  }
+	}
+
+	&.is-right {
+	  > .title {
+		margin: -2rem 0 1rem auto;
+	  }
+	}
+  }
+
+  &.is-dark {
+	position: relative;
+	margin: $border-size;
+	color: $background-color;
+	background-color: $base-color;
+	border-color: white;
+
+	&::after {
+	  position: absolute;
+	  top: -$border-size * 1.8;
+	  right: -$border-size * 1.8;
+	  bottom: -$border-size * 1.8;
+	  left: -$border-size * 1.8;
+	  z-index: -1;
+	  content: "";
+	  background-color: $base-color;
+	}
+
+	&.with-title {
+	  > .title {
+		color: $background-color;
+		background-color: $base-color;
+	  }
+	}
+  }
+
+  &.is-rounded {
+	@include rounded-corners();
+
+	padding: 1rem 1.5rem;
+	margin: $border-size;
+
+	&.with-title {
+	  > .title {
+		margin-top: -1.5rem;
+	  }
+
+	  &.is-centered {
+		> .title {
+		  margin: -1.5rem auto 1rem;
+		}
+	  }
+
+	  &.is-right {
+		> .title {
+		  margin: -1.5rem 0 1rem auto;
+		}
+	  }
+	}
+
+	&.is-dark {
+	  @include rounded-corners(true);
+	  &::after {
+		content: none;
+	  }
+
+	  &.with-title {
+		> .title {
+		  margin-top: -1.3rem;
+		}
+
+		&.is-centered {
+		  > .title {
+			margin: -1.3rem auto 1rem;
+		  }
+		}
+
+		&.is-right {
+		  > .title {
+			margin: -1.3rem 0 1rem auto;
+		  }
+		}
+	  }
+	}
+  }
+}
+
+$background-color: $color-electric;
+$base-color: $color-electric;
+
+.type-electric-container {
+
+	height: 180px;
+	width: 320px;
+
+	background-color: $color-electric;
+	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/13-electric.svg');
+	background-position: top 2em center;
+	background-repeat: no-repeat;
+	background-size: 3em;
+
+
+
+
+  position: relative;
+  padding: 1.5rem 2rem;
+  border-color: black;
+  border-style: solid;
+  border-width: 4px;
+
+  > :last-child {
+	margin-bottom: 0;
+  }
+
+  &.is-centered {
+	text-align: center;
+  }
+
+  &.is-right {
+	text-align: right;
+  }
+
+  &.with-title {
+	> .title {
+	  display: table;
+	  padding: 0 0.5rem;
+	  margin: -1.8rem 0 1rem;
+	  font-size: 1rem;
+	  background-color: $background-color;
+	}
+
+	&.is-centered {
+	  > .title {
+		margin: -2rem auto 1rem;
+	  }
+	}
+
+	&.is-right {
+	  > .title {
+		margin: -2rem 0 1rem auto;
+	  }
+	}
+  }
+
+  &.is-dark {
+	position: relative;
+	margin: $border-size;
+	color: $background-color;
+	background-color: $base-color;
+	border-color: white;
+
+	&::after {
+	  position: absolute;
+	  top: -$border-size * 1.8;
+	  right: -$border-size * 1.8;
+	  bottom: -$border-size * 1.8;
+	  left: -$border-size * 1.8;
+	  z-index: -1;
+	  content: "";
+	  background-color: $base-color;
+	}
+
+	&.with-title {
+	  > .title {
+		color: $background-color;
+		background-color: $base-color;
+	  }
+	}
+  }
+
+  &.is-rounded {
+	@include rounded-corners();
+
+	padding: 1rem 1.5rem;
+	margin: $border-size;
+
+	&.with-title {
+	  > .title {
+		margin-top: -1.5rem;
+	  }
+
+	  &.is-centered {
+		> .title {
+		  margin: -1.5rem auto 1rem;
+		}
+	  }
+
+	  &.is-right {
+		> .title {
+		  margin: -1.5rem 0 1rem auto;
+		}
+	  }
+	}
+
+	&.is-dark {
+	  @include rounded-corners(true);
+	  &::after {
+		content: none;
+	  }
+
+	  &.with-title {
+		> .title {
+		  margin-top: -1.3rem;
+		}
+
+		&.is-centered {
+		  > .title {
+			margin: -1.3rem auto 1rem;
+		  }
+		}
+
+		&.is-right {
+		  > .title {
+			margin: -1.3rem 0 1rem auto;
+		  }
+		}
+	  }
+	}
+  }
+}
+
+$background-color: $color-psychic;
+$base-color: $color-psychic;
+
+.type-psychic-container {
+
+	height: 180px;
+	width: 320px;
+
+	background-color: $color-fighting;
+	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/14-psychic.svg');
+	background-position: top 2em center;
+	background-repeat: no-repeat;
+	background-size: 3em;
+
+
+
+
+  position: relative;
+  padding: 1.5rem 2rem;
+  border-color: black;
+  border-style: solid;
+  border-width: 4px;
+
+  > :last-child {
+	margin-bottom: 0;
+  }
+
+  &.is-centered {
+	text-align: center;
+  }
+
+  &.is-right {
+	text-align: right;
+  }
+
+  &.with-title {
+	> .title {
+	  display: table;
+	  padding: 0 0.5rem;
+	  margin: -1.8rem 0 1rem;
+	  font-size: 1rem;
+	  background-color: $background-color;
+	}
+
+	&.is-centered {
+	  > .title {
+		margin: -2rem auto 1rem;
+	  }
+	}
+
+	&.is-right {
+	  > .title {
+		margin: -2rem 0 1rem auto;
+	  }
+	}
+  }
+
+  &.is-dark {
+	position: relative;
+	margin: $border-size;
+	color: $background-color;
+	background-color: $base-color;
+	border-color: white;
+
+	&::after {
+	  position: absolute;
+	  top: -$border-size * 1.8;
+	  right: -$border-size * 1.8;
+	  bottom: -$border-size * 1.8;
+	  left: -$border-size * 1.8;
+	  z-index: -1;
+	  content: "";
+	  background-color: $base-color;
+	}
+
+	&.with-title {
+	  > .title {
+		color: $background-color;
+		background-color: $base-color;
+	  }
+	}
+  }
+
+  &.is-rounded {
+	@include rounded-corners();
+
+	padding: 1rem 1.5rem;
+	margin: $border-size;
+
+	&.with-title {
+	  > .title {
+		margin-top: -1.5rem;
+	  }
+
+	  &.is-centered {
+		> .title {
+		  margin: -1.5rem auto 1rem;
+		}
+	  }
+
+	  &.is-right {
+		> .title {
+		  margin: -1.5rem 0 1rem auto;
+		}
+	  }
+	}
+
+	&.is-dark {
+	  @include rounded-corners(true);
+	  &::after {
+		content: none;
+	  }
+
+	  &.with-title {
+		> .title {
+		  margin-top: -1.3rem;
+		}
+
+		&.is-centered {
+		  > .title {
+			margin: -1.3rem auto 1rem;
+		  }
+		}
+
+		&.is-right {
+		  > .title {
+			margin: -1.3rem 0 1rem auto;
+		  }
+		}
+	  }
+	}
+  }
+}
+
+$background-color: $color-ice;
+$base-color: $color-ice;
+
+.type-ice-container {
+
+	height: 180px;
+	width: 320px;
+
+	background-color: $color-ice;
+	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/15-ice.svg');
+	background-position: top 2em center;
+	background-repeat: no-repeat;
+	background-size: 3em;
+
+
+
+  position: relative;
+  padding: 1.5rem 2rem;
+  border-color: black;
+  border-style: solid;
+  border-width: 4px;
+
+  > :last-child {
+	margin-bottom: 0;
+  }
+
+  &.is-centered {
+	text-align: center;
+  }
+
+  &.is-right {
+	text-align: right;
+  }
+
+  &.with-title {
+	> .title {
+	  display: table;
+	  padding: 0 0.5rem;
+	  margin: -1.8rem 0 1rem;
+	  font-size: 1rem;
+	  background-color: $background-color;
+	}
+
+	&.is-centered {
+	  > .title {
+		margin: -2rem auto 1rem;
+	  }
+	}
+
+	&.is-right {
+	  > .title {
+		margin: -2rem 0 1rem auto;
+	  }
+	}
+  }
+
+  &.is-dark {
+	position: relative;
+	margin: $border-size;
+	color: $background-color;
+	background-color: $base-color;
+	border-color: white;
+
+	&::after {
+	  position: absolute;
+	  top: -$border-size * 1.8;
+	  right: -$border-size * 1.8;
+	  bottom: -$border-size * 1.8;
+	  left: -$border-size * 1.8;
+	  z-index: -1;
+	  content: "";
+	  background-color: $base-color;
+	}
+
+	&.with-title {
+	  > .title {
+		color: $background-color;
+		background-color: $base-color;
+	  }
+	}
+  }
+
+  &.is-rounded {
+	@include rounded-corners();
+
+	padding: 1rem 1.5rem;
+	margin: $border-size;
+
+	&.with-title {
+	  > .title {
+		margin-top: -1.5rem;
+	  }
+
+	  &.is-centered {
+		> .title {
+		  margin: -1.5rem auto 1rem;
+		}
+	  }
+
+	  &.is-right {
+		> .title {
+		  margin: -1.5rem 0 1rem auto;
+		}
+	  }
+	}
+
+	&.is-dark {
+	  @include rounded-corners(true);
+	  &::after {
+		content: none;
+	  }
+
+	  &.with-title {
+		> .title {
+		  margin-top: -1.3rem;
+		}
+
+		&.is-centered {
+		  > .title {
+			margin: -1.3rem auto 1rem;
+		  }
+		}
+
+		&.is-right {
+		  > .title {
+			margin: -1.3rem 0 1rem auto;
+		  }
+		}
+	  }
+	}
+  }
+}
+
+$background-color: $color-dragon;
+$base-color: $color-dragon;
+
+.type-dragon-container {
+
+	height: 180px;
+	width: 320px;
+
+	background-color: $color-fighting;
+	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/16-dragon.svg');
+	background-position: top 2em center;
+	background-repeat: no-repeat;
+	background-size: 3em;
+
+
+
+  position: relative;
+  padding: 1.5rem 2rem;
+  border-color: black;
+  border-style: solid;
+  border-width: 4px;
+
+  > :last-child {
+	margin-bottom: 0;
+  }
+
+  &.is-centered {
+	text-align: center;
+  }
+
+  &.is-right {
+	text-align: right;
+  }
+
+  &.with-title {
+	> .title {
+	  display: table;
+	  padding: 0 0.5rem;
+	  margin: -1.8rem 0 1rem;
+	  font-size: 1rem;
+	  background-color: $background-color;
+	}
+
+	&.is-centered {
+	  > .title {
+		margin: -2rem auto 1rem;
+	  }
+	}
+
+	&.is-right {
+	  > .title {
+		margin: -2rem 0 1rem auto;
+	  }
+	}
+  }
+
+  &.is-dark {
+	position: relative;
+	margin: $border-size;
+	color: $background-color;
+	background-color: $base-color;
+	border-color: white;
+
+	&::after {
+	  position: absolute;
+	  top: -$border-size * 1.8;
+	  right: -$border-size * 1.8;
+	  bottom: -$border-size * 1.8;
+	  left: -$border-size * 1.8;
+	  z-index: -1;
+	  content: "";
+	  background-color: $base-color;
+	}
+
+	&.with-title {
+	  > .title {
+		color: $background-color;
+		background-color: $base-color;
+	  }
+	}
+  }
+
+  &.is-rounded {
+	@include rounded-corners();
+
+	padding: 1rem 1.5rem;
+	margin: $border-size;
+
+	&.with-title {
+	  > .title {
+		margin-top: -1.5rem;
+	  }
+
+	  &.is-centered {
+		> .title {
+		  margin: -1.5rem auto 1rem;
+		}
+	  }
+
+	  &.is-right {
+		> .title {
+		  margin: -1.5rem 0 1rem auto;
+		}
+	  }
+	}
+
+	&.is-dark {
+	  @include rounded-corners(true);
+	  &::after {
+		content: none;
+	  }
+
+	  &.with-title {
+		> .title {
+		  margin-top: -1.3rem;
+		}
+
+		&.is-centered {
+		  > .title {
+			margin: -1.3rem auto 1rem;
+		  }
+		}
+
+		&.is-right {
+		  > .title {
+			margin: -1.3rem 0 1rem auto;
+		  }
+		}
+	  }
+	}
+  }
+}
+
+$background-color: $color-dark;
+$base-color: $color-dark;
+
+.type-dark-container {
+
+	height: 180px;
+	width: 320px;
+
+	background-color: $color-dark;
+	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/17-dark.svg');
+	background-position: top 2em center;
+	background-repeat: no-repeat;
+	background-size: 3em;
+
+
+
+  position: relative;
+  padding: 1.5rem 2rem;
+  border-color: black;
+  border-style: solid;
+  border-width: 4px;
+
+  > :last-child {
+	margin-bottom: 0;
+  }
+
+  &.is-centered {
+	text-align: center;
+  }
+
+  &.is-right {
+	text-align: right;
+  }
+
+  &.with-title {
+	> .title {
+	  display: table;
+	  padding: 0 0.5rem;
+	  margin: -1.8rem 0 1rem;
+	  font-size: 1rem;
+	  background-color: $background-color;
+	}
+
+	&.is-centered {
+	  > .title {
+		margin: -2rem auto 1rem;
+	  }
+	}
+
+	&.is-right {
+	  > .title {
+		margin: -2rem 0 1rem auto;
+	  }
+	}
+  }
+
+  &.is-dark {
+	position: relative;
+	margin: $border-size;
+	color: $background-color;
+	background-color: $base-color;
+	border-color: white;
+
+	&::after {
+	  position: absolute;
+	  top: -$border-size * 1.8;
+	  right: -$border-size * 1.8;
+	  bottom: -$border-size * 1.8;
+	  left: -$border-size * 1.8;
+	  z-index: -1;
+	  content: "";
+	  background-color: $base-color;
+	}
+
+	&.with-title {
+	  > .title {
+		color: $background-color;
+		background-color: $base-color;
+	  }
+	}
+  }
+
+  &.is-rounded {
+	@include rounded-corners();
+
+	padding: 1rem 1.5rem;
+	margin: $border-size;
+
+	&.with-title {
+	  > .title {
+		margin-top: -1.5rem;
+	  }
+
+	  &.is-centered {
+		> .title {
+		  margin: -1.5rem auto 1rem;
+		}
+	  }
+
+	  &.is-right {
+		> .title {
+		  margin: -1.5rem 0 1rem auto;
+		}
+	  }
+	}
+
+	&.is-dark {
+	  @include rounded-corners(true);
+	  &::after {
+		content: none;
+	  }
+
+	  &.with-title {
+		> .title {
+		  margin-top: -1.3rem;
+		}
+
+		&.is-centered {
+		  > .title {
+			margin: -1.3rem auto 1rem;
+		  }
+		}
+
+		&.is-right {
+		  > .title {
+			margin: -1.3rem 0 1rem auto;
+		  }
+		}
+	  }
+	}
+  }
+}
+
+$background-color: $color-fairy;
+$base-color: $color-fairy;
+
+.type-fairy-container {
+
+	height: 180px;
+	width: 320px;
+
+	background-color: $color-fairy;
+	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/18-fairy.svg');
+	background-position: top 2em center;
+	background-repeat: no-repeat;
+	background-size: 3em;
+
+
+  position: relative;
+  padding: 1.5rem 2rem;
+  border-color: black;
+  border-style: solid;
+  border-width: 4px;
+
+
+  &.with-title {
+
+	> .title {
+
+	  background-color: $background-color;
+
+	}
+
+  }
+
+  &.is-dark {
+
+	position: relative;
+	margin: $border-size;
+	color: $background-color;
+	background-color: $base-color;
+	border-color: $color-white;
+
+	&::after {
+
+	  position: absolute;
+	  background-color: $base-color;
+
+	}
+
+	&.with-title {
+
+	  > .title {
+
+		color: $background-color;
+		background-color: $base-color;
+
+	  }
+
+	}
+
+  }
+
+}
