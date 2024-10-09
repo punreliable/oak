@@ -1,11 +1,8 @@
 @import "comicui";
 
-
 footer.page-footer {
-
   margin-top: 0 !important;
   z-index: 2;
-
 }
 
 .scroll-btn {
@@ -36,7 +33,10 @@ footer.page-footer {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  transition:
+    background-color 0.3s,
+    opacity 0.5s,
+    visibility 0.5s;
   opacity: 0;
   visibility: hidden;
   z-index: 1000;
@@ -69,7 +69,8 @@ footer.page-footer {
 /* Styles for the content section */
 
 .content {
-  font-family: "Press Start 2P", "Merriweather", sans-serif !important;
+  font-family: "Press Start 2P", "Merriweather", sans-serif;
+  // font-family: "Press Start 2P", "Merriweather", sans-serif !important;
   font-size: 17px;
   color: #6c767a;
   line-height: 1.9;
