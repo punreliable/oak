@@ -1,0 +1,14 @@
+// Pokemon Type List
+
+.row {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1rem;
+  margin: auto;
+}
+
+.nes-btn {
+  &:first-child {
+    margin: 1rem 0;
+  }
+}

@@ -1,6 +1,5 @@
 import React, { useRef } from "react"
 import { NavLink } from "react-router-dom"
-
 import onSubmitChange from "../utilities/onSelectChange"
 import { closeNavModal, showNavModal, } from "../utilities/modals"
 import classes from "./MainNavigation.module.scss"
