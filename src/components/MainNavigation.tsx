@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom"
 
 import onSubmitChange from "../utilities/onSelectChange"
 import { closeNavModal, showNavModal, } from "../utilities/modals"
-import classes from "./MainNavigation.module.css"
+import classes from "./MainNavigation.module.scss"
 const MainNavigation = () => {
   return (
     <>
@@ -26,7 +26,7 @@ const MainNavigation = () => {
       <dialog className="nes-dialog" id="dialog-navigation">
         <form method="dialog">
           <p className="title">Menu</p>
-          <ul>
+          <ul className="menuList">
           <li>
               <NavLink
                 to="/"
@@ -242,7 +242,7 @@ const MainNavigation = () => {
             </li> */}
           </ul>
 
-          <ul>
+          <ul className="menuList">
             <li>
               <NavLink
                 to="/carousel"
