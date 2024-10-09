@@ -1,5 +1,6 @@
-$cursor-url: url(get-file-as-data-uri("../assets/cursor.png")) !default;
-$cursor-click-url: url(get-file-as-data-uri("../assets/cursor-click.png")) 14 0 !default;
+// $cursor-url: url(get-file-as-data-uri("../assets/cursor.png")) !default;
+// $cursor-click-url: url(get-file-as-data-uri("../assets/cursor-click.png")) 14 0 !default;
 .nes-pointer {
-  cursor: $cursor-click-url, pointer;
+  // cursor: $cursor-click-url, pointer;
+  cursor: inherit;
 }

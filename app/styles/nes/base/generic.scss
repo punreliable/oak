@@ -9,9 +9,9 @@ samp {
   font-family: $font-family;
 }
 
-html {
-  cursor: $cursor-url, auto;
-}
+// html {
+//   cursor: $cursor-url, auto;
+// }
 
 body {
   font-size: $font-size;
@@ -26,7 +26,7 @@ label {
 
 a,
 button {
-  cursor: $cursor-click-url, pointer;
+  // cursor: $cursor-click-url, pointer;
 }
 
 button,

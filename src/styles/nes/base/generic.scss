@@ -9,9 +9,9 @@ samp {
   font-family: $font-family;
 }
 
-html {
-  cursor: $cursor-url, auto;
-}
+// html {
+//   cursor: $cursor-url, auto;
+// }
 
 body {
   font-size: $font-size;
@@ -24,10 +24,10 @@ label {
   cursor: inherit;
 }
 
-a,
-button {
-  cursor: $cursor-click-url, pointer;
-}
+// a,
+// button {
+//   // cursor: $cursor-click-url, pointer;
+// }
 
 button,
 [type="button"],

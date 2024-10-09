@@ -33,7 +33,8 @@
     position: relative;
     display: inline-flex;
     align-items: center;
-    cursor: $cursor-click-url, pointer;
+
+    // cursor: $cursor-click-url, pointer;
   }
 
   &:checked + span::before {
@@ -60,7 +61,8 @@
       color: $color-white;
     }
     // prettier-ignore
-    + span::before { /* stylelint-disable-line no-descending-specificity */
+    + span::before { 
+      /* stylelint-disable-line no-descending-specificity */
       color: $color-white;
     }
 

@@ -363,9 +363,9 @@ samp {
   font-family: "Press Start 2P";
 }
 
-html {
+/* html {
   cursor: url(get-file-as-data-uri("../assets/cursor.png")), auto;
-}
+} */
 
 body {
   font-size: 16px;

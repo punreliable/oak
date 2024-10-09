@@ -1,5 +1,5 @@
 // Font
-@import '../../../styles/variables';
+@import "../../../styles/variables";
 
 //$color-black: #000;
 $border-size: 4px !default;
@@ -33,37 +33,37 @@ $font-size: 16px !default;
 $base-color: $color-black !default;
 $background-color: $color-white !default;
 
-$cursor-url: url( get-file-as-data-uri( "../assets/cursor.png" ) ) !default;
-$cursor-click-url: url( get-file-as-data-uri( "../assets/cursor-click.png" ) ) 14 0 !default;
+// $cursor-url: url( get-file-as-data-uri( "../assets/cursor.png" ) ) !default;
+// $cursor-click-url: url( get-file-as-data-uri( "../assets/cursor-click.png" ) ) 14 0 !default;
 
 $border-size: 4px !default;
 
 $default-colors: (
   normal: $background-color,
   hover: #e7e7e7,
-  shadow: #adafbc
+  shadow: #adafbc,
 ) !default;
 $disabled-colors: (
   normal: #d3d3d3,
-  shadow: #adafbc
+  shadow: #adafbc,
 ) !default;
 $primary-colors: (
   normal: #209cee,
   hover: #108de0,
-  shadow: #006bb3
+  shadow: #006bb3,
 ) !default;
 $success-colors: (
   normal: #92cc41,
   hover: #76c442,
-  shadow: #4aa52e
+  shadow: #4aa52e,
 ) !default;
 $warning-colors: (
   normal: #f7d51d,
   hover: #f2c409,
-  shadow: #e59400
+  shadow: #e59400,
 ) !default;
 $error-colors: (
   normal: $color-error-normal,
   hover: $color-error-hover,
-  shadow: $color-error-shadow
+  shadow: $color-error-shadow,
 ) !default;

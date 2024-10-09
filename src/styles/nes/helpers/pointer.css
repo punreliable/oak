@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 2 \2502    cursor: $cursor-click-url, pointer;\a   \2502            ^^^^^^^^^^^^^^^^^\a   \2575 \a   /Volumes/Macintosh HD/Users/brian/Sites/comicui/poke/styles/nes/helpers/pointer.scss 2:11  root stylesheet";
+  /* content: "Error: Undefined variable.\a   \2577 \a 2 \2502    cursor: $cursor-click-url, pointer;\a   \2502            ^^^^^^^^^^^^^^^^^\a   \2575 \a   /Volumes/Macintosh HD/Users/brian/Sites/comicui/poke/styles/nes/helpers/pointer.scss 2:11  root stylesheet"; */
 }
