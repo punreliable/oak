@@ -1,18 +1,25 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { createStore } from "redux";
+// import rootReducer from "./reducers";
+import { Provider } from "react-redux";
 import "./globals.scss";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
+// const geistSans = localFont({
+//   src: "./fonts/GeistVF.woff",
+//   variable: "--font-geist-sans",
+//   weight: "100 900",
+// });
 
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+// const geistMono = localFont({
+//   src: "./fonts/GeistMonoVF.woff",
+//   variable: "--font-geist-mono",
+//   weight: "100 900",
+// });
 
 // const pressStartSans = localFont({
 //   src: "https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap",
@@ -36,13 +43,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const queryClient = new QueryClient();
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} nes-container antialiased`}
+        className={`nes-container antialiased`}
         /* className={`${geistSans.variable} ${geistMono.variable} antialiased`} */ 
       >
-        {children}
+        <QueryClientProvider client={queryClient}>
+          {children}
+          <ReactQueryDevtools />
+        </QueryClientProvider>
       </body>
     </html>
   );

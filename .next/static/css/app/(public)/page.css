@@ -5671,49 +5671,6 @@ dialog ul li {
   list-style: none;
   margin-bottom: 0.5rem;
 }
-/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[9].use[5]!./app/components/layout/MainNavigation.module.scss ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.MainNavigation_header__kGR7N {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: nowrap;
-  width: 100%;
-}
-.MainNavigation_header__kGR7N ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  list-style-type: none;
-  padding: 0;
-  padding-left: 0;
-}
-.MainNavigation_header__kGR7N a {
-  font-size: 1.25rem;
-  text-decoration: none;
-  color: #8032e0;
-}
-.MainNavigation_header__kGR7N a:hover, .MainNavigation_header__kGR7N a.MainNavigation_active__CvUXy {
-  color: #530080;
-}
-
-.MainNavigation_formLabel__sCqJG {
-  background-color: none;
-}
-
-.MainNavigation_NESdialog__ogMyW {
-  background-color: #F7F9F6;
-}
-
-.MainNavigation_navbar__bVm_F {
-  display: inline-flex;
-}
-
-ul.MainNavigation_menu-list__7TD25 {
-  padding-left: 0 !important;
-}
 /*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[13].use[5]!./app/components/PokemonTypeList.scss ***!
   \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
