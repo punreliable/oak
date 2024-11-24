@@ -1,8 +1,6 @@
 // Handler to take requests and return mock responses
 import { http, delay, HttpResponse } from "msw";
 
-// const carouselURL = '/carousel';
-
 export const handlers = [
 
   http.get('http://www.pokeapi.co/api/v2/pokemon/132', async () => {

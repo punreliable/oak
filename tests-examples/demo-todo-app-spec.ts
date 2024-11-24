@@ -1,8 +1,32 @@
-// import { test, expect, type Page } from '@playwright/test';
+import { describe, test, expect, beforeAll, beforeEach, afterEach, afterAll
+ } from 'vitest';
+import { http, delay, HttpResponse } from "msw";
+import { server } from '../tests/__mocks__/msw/server';
+import { setupServer } from 'msw/node';
+import { handlers } from '../tests/__mocks__/msw/handlers';
+import { Page, chromium } from 'playwright';
 
-// test.beforeEach(async ({ page }) => {
-//   await page.goto('https://demo.playwright.dev/todomvc');
-// });
+describe('On the home page', () => {
+	let page: Page;
+
+	beforeEach(async () => {
+		const server = setupServer(...handlers);
+		server.listen();
+		const browser = await chromium.launch();
+		page = await browser.newPage();
+		await page.goto('https://demo.playwright.dev/todomvc');
+	});
+ 
+test('should render a title with "Hello," included in its content', async () => {
+		const title = await page.title();
+		expect(title).toContain('Hello');
+	});
+});
+
+
+
+
+
 
 // const TODO_ITEMS = [
 //   'buy some cheese',
