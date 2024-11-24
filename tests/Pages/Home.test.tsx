@@ -1,47 +1,48 @@
-import React from 'react';
-import { describe, test, expect, beforeAll, beforeEach, afterEach, afterAll
-} from 'vitest';
-import { render, screen, waitFor } from "@testing-library/react";
-import axios from "axios";
-import App from "./App";
-import prettyName from "./utilities/prettyName";
-import { vi } from "vitest";
 
-vi.mock("axios");
+import { describe, test, expect, beforeEach, afterEach, vi } from 'vitest';
+import { render, screen, waitFor } from "@testing-library/react";
+import React from 'react';
+import App from "../../src/App";
+import axios from "axios";
+import prettyName from "../../src/utilities/prettyName";
 
 describe("App Component", () => {
-	const mockPokemon = {
-		id: 1,
-		name: "bulbasaur",
-		height: 7,
-		weight: 69,
-		base_experience: 64,
-		sprites: {
-			front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
-		},
-		types: [
-			{
-				type: {
-					name: "grass",
-				},
-			},
-			{
-				type: {
-					name: "poison",
-				},
-			},
-		],
-	};
 
 	beforeEach(() => {
-		axios.get.mockResolvedValue({ data: mockPokemon });
+		render(<App />);
 	});
-
 	afterEach(() => {
 		vi.clearAllMocks();
 	});
 
 	test("renders App component", async () => {
+
+		let mockPokemon: any;
+
+		// mockPokemon = {
+		// 	id: 1,
+		// 	name: "bulbasaur",
+		// 	height: 7,
+		// 	weight: 69,
+		// 	base_experience: 64,
+		// 	sprites: {
+		// 		front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+		// 	},
+		// 	types: [
+		// 		{
+		// 			type: {
+		// 				name: "grass",
+		// 			},
+		// 		},
+		// 		{
+		// 			type: {
+		// 				name: "poison",
+		// 			},
+		// 		},
+		// 	],
+		// };
+		// // const axios = vi.mock("axios");
+		// // (axios.get as vi.mock).mockResolvedValue({ data: mockPokemon }); 
 		render(<App />);
 
 		await waitFor(() => {

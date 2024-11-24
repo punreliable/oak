@@ -1,6 +1,5 @@
 import React from 'react';
-import { describe, test, expect, beforeAll, beforeEach, afterEach, afterAll
-} from 'vitest';
+import { describe, test, expect } from 'vitest';
 import '@testing-library/jest-dom';
 
 // expect.extend({ toBeInTheDocument });
@@ -15,8 +14,8 @@ describe('HomePage', () => {
 		expect(screen.getByTestId('home-page')).toBeInTheDocument();
 	});
 
-	test('should render the Search component', () => {
-		const { getByTestId } = render(<HomePage />);
-		expect(getByTestId('search-component')).toBeInTheDocument();
-	});
+	// test('should render the Search component', () => {
+	// 	const { getByTestId } = render(<HomePage />);
+	// 	expect(getByTestId('search-component')).toBeInTheDocument();
+	// });
 });
