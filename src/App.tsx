@@ -81,7 +81,11 @@ const App = () => {
   // gsap.to("#imgProfessorOak", {x: 100, duration: 1 });
 
   const gotoMoreDetails = (id: number) => {
-    console.log(id);
+    if(!id) {
+      console.log('ID: ID Not Found');
+    } else {
+      console.log(id);
+    }
   };
 
   const number = Math.floor(Math.random() * 151) + 1;
