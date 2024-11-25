@@ -1,13 +1,17 @@
-import { defineConfig } from 'vitest/config'
-import viteConfig from './vite.config.ts'
-import react from '@vitejs/plugin-react';
+/// <reference types="vitest" />
+import { defineConfig, coverageConfigDefaults } from "vitest/config";
 
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  esbuild: {
-    jsxInject: `import React from 'react'`, // Optional, if you want to automatically import React
-  },
   test: {
-	include: ['**/*.test.ts', '**/*.test.tsx'],
-}
+    globals: true,
+    include: ["**/*.test.ts", "**/*.test.tsx"],
+    setupFiles: "src/setupTests.ts",
+    coverage: {
+      reporter: ["locv"],
+      enabled: true,
+      reportsDirectory: ".coverage",
+      exclude: ["src/main.tsx", ...coverageConfigDefaults.exclude],
+    },
+  },
 });
