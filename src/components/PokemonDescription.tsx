@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import prettyName from "../utilities/prettyName";
-import { R } from "@tanstack/react-query-devtools/build/legacy/devtools-dKCOqp9Q";
+//import { R } from "@tanstack/react-query-devtools/build/legacy/devtools-dKCOqp9Q";
 // import { R } from '@tanstack/react-query-devtools/build/legacy/devtools-dKCOqp9Q'
 
 const fetchPokemonBaseHappiness = async (requestURL: string) => {
@@ -49,8 +49,12 @@ const PokemonDescription = (pokemonId: object) => {
 
   return (
     <div style={style}>
-      <p>Description: {data.data.flavor_text_entries[0].flavor_text}</p>
-      <p>Base Happiness: {data.data.base_happiness}</p>
+      {data && (
+        <>
+          <p>Description: {data.data.flavor_text_entries[0].flavor_text}</p>
+          <p>Base Happiness: {data.data.base_happiness}</p>
+        </>
+      )}
     </div>
   );
 };

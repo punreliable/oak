@@ -88,7 +88,7 @@ const App = () => {
   const pokeNo = number.toString();
   const requestURL = "https://pokeapi.co/api/v2/pokemon/" + pokeNo;
   const [pokemon, setPokemon] = useState<any | null>(null);
-  const [pokemonName, setPokemonName] = useState(null);
+  const [pokemonName, setPokemonName] = useState('Loading...');
   const [pokemonID, setPokemonID] = useState(null);
   const [pokemonAbilities, setPokemonAbilities] = useState(null);
   const [pokemonHeight, setPokemonHeight] = useState(null);
@@ -150,7 +150,7 @@ const App = () => {
               <button
                 type="button"
                 className="nes-btn"
-                onClick={gotoMoreDetails(pokemon.id)}
+               // onClick={gotoMoreDetails(pokemon.id)}
               >
                 More Details
               </button>
