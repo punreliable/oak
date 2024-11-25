@@ -2,15 +2,14 @@
 import { describe, test, expect, beforeEach, afterEach, vi } from 'vitest';
 import { render, screen, waitFor } from "@testing-library/react";
 import React from 'react';
-// import App from "../../src/App";
+import App from "./App";
 import axios from "axios";
-// import prettyName from "../../src/utilities/prettyName";
+import prettyName from "./utilities/prettyName";
 
 describe("App Component", () => {
 
 	beforeEach(() => {
 		let mockPokemon: any;
-		// const screen = render(<App />);
 	
 		mockPokemon = {
 			id: 1,
