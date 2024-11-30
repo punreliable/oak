@@ -7,11 +7,11 @@ export default defineConfig({
     globals: true,
     include: ["**/*.test.ts", "**/*.test.tsx"],
     setupFiles: "src/setupTests.ts",
-    coverage: {
-      reporter: ["locv"],
-      enabled: true,
-      reportsDirectory: ".coverage",
-      exclude: ["src/main.tsx", ...coverageConfigDefaults.exclude],
-    },
+    // coverage: {
+    //   reporter: ["locv"],
+    //   enabled: true,
+    //   reportsDirectory: ".coverage",
+    //   exclude: ["src/main.tsx", ...coverageConfigDefaults.exclude],
+    // },
   },
 });
