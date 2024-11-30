@@ -1,13 +1,12 @@
 import React, { lazy, Suspense, useState, useEffect } from "react";
 import axios from "axios";
-import styled from "styled-components";
+// import styled from "styled-components";
 import {
   createBrowserRouter,
   RouterProvider,
   useNavigate,
 } from "react-router-dom";
-import { Pokemon } from "./types/pokemon";
-import { PokemonType } from "./types/pokemon-type";
+import { Pokemon, PokemonType } from "./types/index";
 import prettyName from "./utilities/prettyName";
 import getCurrentMonth from "./utilities/getCurrentMonth";
 import getCurrentDay from "./utilities/getCurrentDay";
@@ -17,12 +16,7 @@ import "./App.scss";
 import "../node_modules/bootstrap/scss/bootstrap.scss";
 import professorOak from "./assets/oak.svg";
 import PokemonDescription from "./components/PokemonDescription";
-import { getRandomKantoPokemon } from "./utilities/getRandomKantoPokemon";
-
-// import { Pokemon } from '../pokemon.d.ts'
-// import { gsap } from 'gsap/dist/gsap'
-// import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin'
-// gsap.registerPlugin( MotionPathPlug )
+// import { getRandomKantoPokemon } from "./utilities/getRandomKantoPokemon";
 
 const currentYear = new Date().getFullYear();
 const currentMonth = getCurrentMonth();
@@ -40,45 +34,6 @@ const getPokemonNumber = () => {
 };
 
 const App = () => {
-  // OMG GSAP is working!
-
-  // gsap.to(
-  //   "#imgProfessorOak", {
-  //     delay: 0,
-  //     opacity: 0,
-  //   }
-  // );
-
-  // gsap.to(
-  //   "#imgProfessorOak", {
-  //     duration: 1,
-  //     delay: 0,
-  //     opacity: 1
-  //   }
-  // );
-
-  // gsap.fromTo(
-  //   "#professorMessages",
-  //   1,
-  //   {
-  //     opacity: 0,
-  //     y: 50
-  //   },
-  //   {
-  //     opacity: 1,
-  //     y: 0
-  //   }
-  // );
-
-  // gsap.to(
-  //   "#imgProfessorOak", {
-  //     duration: .5,
-  //     delay: 1,
-  //     opacity: 1
-  //   }
-  // );
-  // gsap.to("#avatar", { x: 100, duration: 2 });
-  // gsap.to("#imgProfessorOak", {x: 100, duration: 1 });
 
   const gotoMoreDetails = (id: number) => {
     console.log(id);
@@ -89,12 +44,12 @@ const App = () => {
   const requestURL = "https://pokeapi.co/api/v2/pokemon/" + pokeNo;
   const [pokemon, setPokemon] = useState<any | null>(null);
   const [pokemonName, setPokemonName] = useState('Loading...');
-  const [pokemonID, setPokemonID] = useState(null);
-  const [pokemonAbilities, setPokemonAbilities] = useState(null);
+  // const [pokemonID, setPokemonID] = useState(null);
+  // const [pokemonAbilities, setPokemonAbilities] = useState(null);
   const [pokemonHeight, setPokemonHeight] = useState(null);
   const [pokemonWeight, setPokemonWeight] = useState(null);
   const [pokemonXP, setPokemonXP] = useState(null);
-  const [pokemonTypes, setPokemonTypes] = useState(null);
+  // const [pokemonTypes, setPokemonTypes] = useState(null);
 
   useEffect(() => {
     axios
