@@ -1,5 +1,5 @@
 // pokemon.d.ts
-export type Pokemon = {
+export type PokemonFromAPI = {
   id: number;
   name: string;
   abilities: {
