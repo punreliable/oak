@@ -21,9 +21,7 @@ const Result = ( props: PokemonFromAPI ) => {
 
     <div className="App">
 
-        <section className="nesContainer nes-container">
 
-          <MainNavigation />
 
           <h1 className="oakHello">Hello,</h1>
         
@@ -55,9 +53,9 @@ const Result = ( props: PokemonFromAPI ) => {
                 <p>Weight: {props.weight}lb</p>
                 <p>Base XP: {props.base_experience}xp</p>
               </div>
-              <div className="col-md-12 col-lg-9">
-                <PokemonDescription pokemon={props.id as number} />
-              </div>
+              {/* <div className="col-md-12 col-lg-9">
+                <PokemonDescription pokemon={props.id} />
+              </div> */}
             </div>
 
             {/* <PokemonTypeList types={props.types} /> */}
@@ -104,7 +102,7 @@ const Result = ( props: PokemonFromAPI ) => {
                   </div>
               </section>
           </section>
-        </section>
+
       </div>
   );
 };
