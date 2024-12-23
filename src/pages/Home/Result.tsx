@@ -33,9 +33,9 @@ const Result = ( props: PokemonFromAPI ) => {
 
       <div className="row rowStats">
         <div className="col-md-12 col-lg-3 stats">
-          {props.height && <p>Height: {props.height}in</p>}
-          <p>Weight: {props.weight}lb</p>
-          <p>Base XP: {props.base_experience}xp</p>
+          {props.height && <p>Height: {props.pokemon.height}in</p>}
+          <p>Weight: {props.pokemon.weight}lb</p>
+          <p>Base XP: {props.pokemon.base_experience}xp</p>
         </div>
         <div className="col-md-12 col-lg-9">
           <PokemonDescription pokemon={props.pokemon.id} />
