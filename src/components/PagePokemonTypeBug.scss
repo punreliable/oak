@@ -14,14 +14,16 @@
 	h1 {
 
 		font-size: 3rem;
-		margin: 2.4rem 0;
+		// margin: 2.4rem 0;
+		margin: 0;
 
 	}
 
 	p {
 
 		font-size: 1.4rem;
-		margin: 2.4rem 0;
+		//margin: 2.4rem 0;
+		margin: 0;
 
 	}
 
@@ -51,7 +53,7 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		max-width: 300px;
-		margin: .3rem;
+		margin: .2rem;
 		justify-content: space-between;
 
 		&.damageRelations__doubleDamageFrom {

@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  padding: 1.5rem 2rem;
+//  padding: 1.5rem 2rem;
   border-color: black;
   border-style: solid;
   border-width: 4px;
@@ -70,7 +70,7 @@
   &.is-rounded {
     @include rounded-corners();
 
-    padding: 1rem 1.5rem;
+    // padding: 1rem 1.5rem;
     margin: $border-size;
 
     &.with-title {
