@@ -43,21 +43,21 @@ const Result = ( props: PokemonFromAPI ) => {
       </div>
 
       <PokemonTypeList types={props.pokemon.types} />
-
+{/* 
       <div className="row">
-        <div className="col-md-12">
-          <p>
+        <div className="col-md-12"> */}
+          {/* <p>
             Would you like to learn more about {prettyName(props?.pokemon.name)}?
             Click the button below.
-          </p>
-          <button
+          </p> */}
+          {/* <button
             type="button"
             className="nes-btn"
           >
             More Details
-          </button>
-        </div>
-      </div>
+          </button> */}
+        {/* </div>
+      </div> */}
             
       <section
         className="message-list messageList"
