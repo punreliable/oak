@@ -8,7 +8,7 @@ const PokemonMoveList = (props: any) => {
   let moves = props.moves;
 
   let minified = moves.map((x) => (
-    <div className="col-xs-3" key={uuidv4()}>
+    <div className="col-sm-12 col-md-6 col-lg-3" key={uuidv4()}>
       <a
         href={`/pokemon/move/${x.move.name}`}
         className={`nes-btn move-${x.move.name} is-${x.move.name}`}
