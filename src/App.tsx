@@ -27,9 +27,9 @@ const App = () => {
   });
 
   if (isLoading) return (<Pending />)
-    if (error) return (<Error />)
   
-
+  if (error) return (<Error />)
+  
   return (
     <div className="App">
         <section className="nesContainer nes-container">
