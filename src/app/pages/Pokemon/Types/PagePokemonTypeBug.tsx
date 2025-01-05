@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import type { Pokemon } from "../../pokemon.d.ts";
-import type { PokemonType } from "../../pokemon-type.d.ts";
-import DoubleDamageFrom from "./DoubleDamageFrom";
-import DoubleDamageTo from "./DoubleDamageTo";
-import HalfDamageFrom from "./HalfDamageFrom";
-import HalfDamageTo from "./HalfDamageTo";
-import NoDamageFrom from "./NoDamageFrom";
-import NoDamageTo from "./NoDamageTo";
-import MainNavigation from "./MainNavigation";
-import prettyName from "../utilities/prettyName";
+import type { Pokemon } from "../../pokemon.js";
+import type { PokemonType } from "../../pokemon-type.js";
+import DoubleDamageFrom from "./DoubleDamageFrom.js";
+import DoubleDamageTo from "./DoubleDamageTo.js";
+import HalfDamageFrom from "./HalfDamageFrom.js";
+import HalfDamageTo from "./HalfDamageTo.js";
+import NoDamageFrom from "./NoDamageFrom.js";
+import NoDamageTo from "./NoDamageTo.js";
+import MainNavigation from "./MainNavigation.js";
+import prettyName from "../utilities/prettyName.js";
 import "./PagePokemonTypeBug.scss";
 
 const requestURL: string = `https://pokeapi.co/api/v2/type/bug`;
