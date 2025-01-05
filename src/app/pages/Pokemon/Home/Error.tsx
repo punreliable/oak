@@ -4,11 +4,11 @@ import {
   RouterProvider,
   useNavigate,
 } from "react-router-dom";
-import "../../App.scss";
-import "/node_modules/bootstrap/scss/bootstrap.scss";
-import unknown from "../../assets/0.png";
-import professorOak from "../../assets/oak.svg";
-import MainNavigation from "../../components/MainNavigation";
+// import "../../App.scss";
+// import "/node_modules/bootstrap/scss/bootstrap.scss";
+import unknown from "../../../../../assets/0.png";
+import professorOak from "../../../../../assets/oak.svg";
+import MainNavigation from "../../../components/MainNavigation";
 
 const Error = () => {
 

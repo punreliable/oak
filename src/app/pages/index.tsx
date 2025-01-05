@@ -1,9 +1,50 @@
+"use client";
 import Image from "next/image";
+// import MainNavigation from "../components/MainNavigation";
+// import { Main } from "next/document";
+import React, { useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
+// import MainNavigation from "./components/MainNavigation";
+import Error from "../pages/Pokemon/Home/Error";
+import Pending from "../pages/Pokemon/Home/Pending";
+import Result from "../pages/Pokemon/Home/Result";
+import {PokemonFromAPI} from "../../types";
+// import "./App.scss";
 
-export default function OtherHome() {
-	return(
+const getPokemonNumber = () => {
+  const number = Math.floor(Math.random() * 151) + 1;
+  if (number < 10) {
+    return `0${number}`;
+  }
+  return `${number}`;
+};
+
+const OtherHome = () => {
+  const {data, error, isLoading} = useQuery({
+    queryKey: ['pokemon'],
+    queryFn: async () => {
+      const id = getPokemonNumber();
+      const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
+      return response.data;
+    }
+  });
+
+  if (isLoading) return (<Pending />)
+  
+  if (error) return (<Error />)
+  
+  return (
+    <div className="App">
+        <section className="nesContainer nes-container">
+            {/* <MainNavigation /> */}
+            {data && <Result pokemon={data} /> }
+        </section>
+
+
 	
 	<div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      {/* <MainNavigation />  */}
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <Image
           className="dark:invert"
@@ -98,5 +139,8 @@ export default function OtherHome() {
         </a>
       </footer>
     </div>
+    </div>
 	);
   }
+
+  export default OtherHome;

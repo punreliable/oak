@@ -1,8 +1,9 @@
+"use client";
 import React from "react";
 import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import prettyName from "../utilities/prettyName";
+import prettyName from "../../utilities/prettyName";
 
 interface PokemonDescriptionProps {
 

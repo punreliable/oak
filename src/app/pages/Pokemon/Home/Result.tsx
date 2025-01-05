@@ -1,11 +1,11 @@
 import React from "react";
-import { PokemonFromAPI, PokemonTypeFromAPI } from "../../types/index";
-import PokemonDescription from "../../components/PokemonDescription";
-import PokemonTypeList from "../../components/PokemonTypeList";
-import PokemonMoveList from "../../components/PokemonMoveList";
-import "../../App.scss";
-import prettyName from "../../utilities/prettyName";
-import professorOak from "../../assets/oak.svg";
+import { PokemonFromAPI, PokemonTypeFromAPI } from "../../../../types/index";
+import PokemonDescription from "../../../components/PokemonDescription";
+import PokemonTypeList from "../../../components/PokemonTypeList";
+import PokemonMoveList from "../../../components/PokemonMoveList";
+// import "../../App.scss";
+import prettyName from "../../../../utilities/prettyName";
+import professorOak from "../../../../../assets/oak.svg";
 
 const Result = ( props: PokemonFromAPI ) => {
 

@@ -1,6 +1,7 @@
+"use client";
 import { useState } from "react";
 import styled from "styled-components";
-import prettyName from "../utilities/prettyName";
+import prettyName from "../../utilities/prettyName";
 import { v4 as uuidv4 } from "uuid";
 import "./PokemonTypeList.scss";
 
