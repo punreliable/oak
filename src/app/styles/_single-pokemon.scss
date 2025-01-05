@@ -1,0 +1,109 @@
+@import "comicui";
+
+
+footer.page-footer {
+
+  margin-top: 0 !important;
+  z-index: 2;
+
+}
+
+.scroll-btn {
+  z-index: 99;
+}
+
+.move-list,
+.ability-list,
+.stat-list {
+  text-transform: uppercase;
+}
+
+.the-pokemon,
+.the-pokemon-alt {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 350px;
+  margin: auto;
+}
+
+#button {
+  display: inline-block;
+
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+#button::after {
+  color: #fff;
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+}
+
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+
+#button:active {
+  background-color: #555;
+}
+
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Styles for the content section */
+
+.content {
+  font-family: "Press Start 2P", "Merriweather", sans-serif !important;
+  font-size: 17px;
+  color: #6c767a;
+  line-height: 1.9;
+  margin: 50px auto;
+  width: 77%;
+}
+
+h1 {
+  margin-bottom: -10px;
+
+  // color: #03a9f4;
+  color: $darkest-green;
+
+  line-height: 1.5;
+}
+
+h3 {
+  font-style: italic;
+  // color: #96a2a7;
+  color: $darkest-green;
+}
+
+.scroll-btn {
+  align-content: right;
+  text-align: right;
+  transform: rotate(90deg);
+}
+
+@media (min-width: 500px) {
+  .content {
+    width: 43%;
+  }
+
+  #button {
+    margin: 30px;
+  }
+}

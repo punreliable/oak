@@ -1,0 +1,319 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'styles/variables';
+@import 'styles/mixins';
+// @import 'styles/mdb';
+@import 'styles/palette-town';
+@import 'styles/types';
+@import 'styles/gameboy';
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+#root {
+  // max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Press Start 2P', serif;
+  width: 100%;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.nes-container {
+  
+  padding: 1rem !important;
+
+  .row {
+    
+    display: flex block;
+      
+    .imgProfessorOak {
+  
+      margin-top: 3rem;
+      height: 256px;
+      width: 256px;
+      
+    }
+  
+  }
+
+}
+
+
+.nes-balloon {
+
+  p {
+
+    margin-top: 0 !important;
+  }
+  
+justify-content: flex-end;
+}
+
+.avatar {
+  
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  
+}
+
+.pokemonAvatar {
+  
+  height: auto;
+  width: 96px;
+  
+}
+
+.wrapperOak {
+  
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  align-content: flex-end;
+  justify-content: flex-end;
+  
+  width: 100%;
+
+  .imgProfessorOak {
+    align-self: flex-end;
+    // justify-content: flex-end;
+    
+  }
+
+}
+
+#professorMessages {
+  padding-top: 1.5rem;
+}
+
+.pokemonName {
+  font-size: 1.2rem;
+  text-align: center;
+  
+}
+
+h1 { 
+  &.oakHello {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    text-align: left;
+    
+    sup {
+      font-size: 1.6rem;
+      top: -0.8rem;
+    }
+  }
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+
+  &:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+  }
+
+  &.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(1) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.rowStats {
+
+  display: flex;
+  flex-direction: row;
+  
+  .stats {
+    align-self: center;
+  }
+
+}
+
+.linkSmall > * {
+
+  font-size: 60%;
+  word-wrap: break-word;
+}
+
+dialog ul li {
+
+  list-style: none;
+  margin-bottom: .5rem;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.z-depth-1-half {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+.card-type-list {
+  display: flex;
+  flex-flow: row wrap;
+  .chip {
+    justify-content: space-between;
+  }
+}
+
+header {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: #ffffff;
+    opacity: 1;
+    text-shadow: 2px 2px #880e4f;
+  }
+  h2 {
+    text-shadow: 1px 1px #880e4f;
+  }
+  width: 100%;
+}
+
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+  &:hover {
+    color: #535bf2;
+  }
+}
+
+h1 {
+  
+  font-size: 3.2em;
+  line-height: 1.1;
+  
+}
+
+button {
+  
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+
+  &:hover {
+    border-color: #646cff;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+  
+}
+
+@media (prefers-color-scheme: light) {
+  
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  
+  a:hover {
+    
+    color: #747bff;
+    
+  }
+  
+  button {
+    
+    background-color: #f9f9f9;
+    
+  }
+
+}
+
+[unresolved] {
+  display: none;
+}

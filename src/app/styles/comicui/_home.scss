@@ -1,0 +1,173 @@
+
+
+// Stylesheet to control Home Page Styles
+
+
+
+.page-home {
+	
+	//height: 100%;
+	
+	main {
+		
+		min-height: 500px;
+		margin-top: 0;
+		padding-top: 0;
+		
+		.feature-image {
+			
+			margin-top: 0;
+			padding-top: 0;
+			background-color: $color-white;
+			background-image: url ('images/whos-that-pokemon.png');
+			//background-size:cover;
+			background-size: auto 100%;
+			background-repeat: no-repeat;
+			background-position: center center;
+		
+			width: 100%;
+		
+								
+			h1 {
+				color: $primary-green;
+				font-size: $font-size-h1;
+				font-weight: $font-weight-bold;
+				
+
+			}
+				
+			h2 {
+				
+				color: $primary-green;
+				font-size: $font-size-h2;
+				font-weight: $font-weight-bold;
+
+			}
+				
+			p {
+				
+				color: $primary-green;
+				font-size: 6;
+				font-weight: $font-weight-normal;
+				
+				}
+			
+			form.pokemon-by-number {
+					  
+				.md-form.form-group {
+					
+					input#pokeno {
+					
+						margin-left: 1rem; 
+						padding-left: 1rem;	
+					
+					}
+					
+					label {
+						
+						margin-left: 1rem; 
+						padding-left: 1rem;
+						
+					}
+				}
+			}	
+		}
+	}
+}
+	
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+	
+	
+		
+h1 {
+
+	font-size: 1.2rem;
+	font-weight: $font-weight-normal;
+
+}
+
+h2 {
+
+	font-size: 1.2rem;
+	font-weight: $font-weight-thin;
+
+}
+
+p {
+	
+	font-size: 0.8rem;
+	font-weight: $font-weight-thin;
+	
+}
+	
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+	
+		
+h1 {
+
+	font-size: 1.6rem;
+	font-weight: $font-weight-bold;
+
+}
+
+h2 {
+
+	font-size: 1.4rem;
+	font-weight: $font-weight-normal;
+
+}
+
+p {
+	
+	font-size: 1.0rem;
+	font-weight: $font-weight-normal;
+	
+}
+	
+	
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+	
+h1 {
+
+	font-size: 2.4rem;
+	font-weight: $font-weight-bold;
+
+}
+
+h2 {
+
+	font-size: 2.0rem;
+	font-weight: $font-weight-normal;
+
+}
+
+p {
+	
+	font-size: 1.2rem;
+	font-weight: $font-weight-normal;
+	
+}
+
+	
+	
+}
+
+
+footer {
+	
+	&.page-footer {
+		margin-top: 0 !important;		
+		padding-top: 0 !important;
+	}
+	
+	margin-top: 0 !important;	
+	padding-top: 0 !important;
+	
+}
