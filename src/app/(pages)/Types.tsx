@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import MainNavigation from "../components/MainNavigation";
+// import MainNavigation from "../components/MainNavigation";
 import Footer from "../components/Footer";
 
 const TypePage = () => {
@@ -7,7 +7,7 @@ const TypePage = () => {
     <section className="nesContainer nes-container container">
       <div className="row">
         <div className="col-md-12">
-          <MainNavigation />
+          {/* <MainNavigation /> */}
 
           <h1 className="oakHello">Type List</h1>
 

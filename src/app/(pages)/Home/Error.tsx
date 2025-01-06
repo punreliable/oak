@@ -7,7 +7,7 @@ import {
 // import "../../App.scss";
 import unknown from "../../../assets/0.png";
 import professorOak from "../../../assets/oak.svg";
-import MainNavigation from "../../components/MainNavigation";
+// import MainNavigation from "../../components/MainNavigation";
 
 const Error = () => {
 
@@ -17,7 +17,7 @@ const Error = () => {
     <div className="App">
 
         <section className="nesContainer nes-container">
-          <MainNavigation />
+          {/* <MainNavigation /> */}
           <h1 className="oakHello">Error</h1>
 
           <img
