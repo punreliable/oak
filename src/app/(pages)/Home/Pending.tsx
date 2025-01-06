@@ -6,10 +6,10 @@ import {
   useNavigate,
 } from "react-router-dom";
 
-import prettyName from "../../utilities/prettyName";
+import prettyName from "../../../utilities/prettyName";
 import MainNavigation from "../../components/MainNavigation";
-import unknownPokemon from "../../assets/0.png";
-import professorOak from "../../assets/oak.svg";
+import unknownPokemon from "../../../assets/0.png";
+import professorOak from "../../../assets/oak.svg";
 const Pending = () => {
 
   return (

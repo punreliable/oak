@@ -33,8 +33,11 @@ $font-size: 16px !default;
 $base-color: $color-black !default;
 $background-color: $color-white !default;
 
-$cursor-url: url( get-file-as-data-uri( "../assets/cursor.png" ) ) !default;
-$cursor-click-url: url( get-file-as-data-uri( "../assets/cursor-click.png" ) ) 14 0 !default;
+// $cursor-url: url( get-file-as-data-uri( "../../../../public/cursor.png" ) ) !default;
+// $cursor-click-url: url( get-file-as-data-uri( "../../../../public/cursor-click.png" ) ) 14 0 !default;
+
+$cursor-url: '' !default;
+$cursor-click-url: '' !default;
 
 $border-size: 4px !default;
 
