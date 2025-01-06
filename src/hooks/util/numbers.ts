@@ -1,3 +1,3 @@
-export function transformToNumber(value) {
+export function transformToNumber(value: string): number {
   return +value;
 }
