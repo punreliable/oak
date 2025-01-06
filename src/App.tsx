@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import MainNavigation from "./components/MainNavigation";
+// import MainNavigation from "./components/MainNavigation";
 import Error from "./(pages)/Home/Error";
 import Pending from "./(pages)/Home/Pending";
 import Result from "./(pages)/Home/Result";
@@ -33,7 +33,7 @@ const App = () => {
   return (
     <div className="App">
         <section className="nesContainer nes-container">
-            <MainNavigation />
+            {/* <MainNavigation /> */}
             {data && <Result pokemon={data} /> }
         </section>
     </div>
