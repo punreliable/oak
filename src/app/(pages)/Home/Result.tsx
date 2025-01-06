@@ -68,7 +68,7 @@ const Result = ( props: PokemonFromAPI ) => {
       <section
         className="message-list messageList"
         id="professorMessages"
-        unresolved
+        // unresolved
       >
         <section className="message -right">
           <div className="nes-balloon from-right">
