@@ -1,1 +1,67 @@
-{"result":[{"scriptId":"269","url":"file:///Users/brian/Sites/oak/src/setupTests.ts","functions":[{"functionName":"","ranges":[{"startOffset":0,"endOffset":670,"count":1}],"isBlockCoverage":true},{"functionName":"","ranges":[{"startOffset":13,"endOffset":670,"count":1}],"isBlockCoverage":true}]},{"scriptId":"531","url":"file:///Users/brian/Sites/oak/src/hooks/sum.test.ts","functions":[{"functionName":"","ranges":[{"startOffset":0,"endOffset":1208,"count":1}],"isBlockCoverage":true},{"functionName":"","ranges":[{"startOffset":13,"endOffset":1208,"count":1}],"isBlockCoverage":true},{"functionName":"","ranges":[{"startOffset":448,"endOffset":530,"count":1}],"isBlockCoverage":true}]},{"scriptId":"533","url":"file:///Users/brian/Sites/oak/src/hooks/sum.js","functions":[{"functionName":"","ranges":[{"startOffset":0,"endOffset":785,"count":1}],"isBlockCoverage":true},{"functionName":"","ranges":[{"startOffset":13,"endOffset":785,"count":1}],"isBlockCoverage":true},{"functionName":"sum","ranges":[{"startOffset":185,"endOffset":223,"count":1}],"isBlockCoverage":true},{"functionName":"get","ranges":[{"startOffset":315,"endOffset":334,"count":1}],"isBlockCoverage":true}]}]}
+{
+  "result": [
+    {
+      "scriptId": "269",
+      "url": "file:///Users/brian/Sites/oak/src/setupTests.ts",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 0, "endOffset": 670, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 13, "endOffset": 670, "count": 1 }],
+          "isBlockCoverage": true
+        }
+      ]
+    },
+    {
+      "scriptId": "531",
+      "url": "file:///Users/brian/Sites/oak/src/hooks/sum.test.ts",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 0, "endOffset": 1208, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 13, "endOffset": 1208, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 448, "endOffset": 530, "count": 1 }],
+          "isBlockCoverage": true
+        }
+      ]
+    },
+    {
+      "scriptId": "533",
+      "url": "file:///Users/brian/Sites/oak/src/hooks/sum.js",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 0, "endOffset": 785, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 13, "endOffset": 785, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "sum",
+          "ranges": [{ "startOffset": 185, "endOffset": 223, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "get",
+          "ranges": [{ "startOffset": 315, "endOffset": 334, "count": 1 }],
+          "isBlockCoverage": true
+        }
+      ]
+    }
+  ]
+}

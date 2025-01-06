@@ -4,11 +4,8 @@ export type PokemonType = {
   name: string;
   data: {
     map(
-      arg0: (
-        double_damage_from: any,
-        index: number,
-      ) => import("react").JSX.Element,
-    ): import("react").ReactNode;
+      arg0: (double_damage_from: any, index: number) => import('react').JSX.Element,
+    ): import('react').ReactNode;
     id: number;
     name: string;
     damage_relations: {

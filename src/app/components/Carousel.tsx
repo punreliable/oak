@@ -1,66 +1,50 @@
-import React, { useEffect, useState } from "react";
-import { useQuery, useQueryClient } from "@tanstack/react-query";
-import axios from "axios";
-import { Pokemon } from "../../pokemon.js";
-import professorOak from "../assets/professorOak.svg";
-import unsurePokemon from "../assets/0.png";
-import { getRandomKantoPokemon } from "../utilities/getRandomKantoPokemon";
-import "./Carousel.scss";
+import React, { useEffect, useState } from 'react';
+import { useQuery, useQueryClient } from '@tanstack/react-query';
+import axios from 'axios';
+import { Pokemon } from '../../pokemon.js';
+import professorOak from '../assets/professorOak.svg';
+import unsurePokemon from '../assets/0.png';
+import { getRandomKantoPokemon } from '../utilities/getRandomKantoPokemon';
+import './Carousel.scss';
 
 const fetchFirstPokemon = async () => {
   const idOne = getRandomKantoPokemon();
-  const response = await axios.get(
-    `https://pokeapi.co/api/v2/pokemon/${idOne}`,
-  );
+  const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${idOne}`);
   return response;
 };
 const fetchSecondPokemon = async () => {
   const idTwo = getRandomKantoPokemon();
-  const response = await axios.get(
-    `https://pokeapi.co/api/v2/pokemon/${idTwo}`,
-  );
+  const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${idTwo}`);
   return response;
 };
 const fetchThirdPokemon = async () => {
   const idThree = getRandomKantoPokemon();
-  const response = await axios.get(
-    `https://pokeapi.co/api/v2/pokemon/${idThree}`,
-  );
+  const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${idThree}`);
   return response;
 };
 const fetchFourthPokemon = async () => {
   const idFour = getRandomKantoPokemon();
-  const response = await axios.get(
-    `https://pokeapi.co/api/v2/pokemon/${idFour}`,
-  );
+  const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${idFour}`);
   return response;
 };
 const fetchFifthPokemon = async () => {
   const idFive = getRandomKantoPokemon();
-  const response = await axios.get(
-    `https://pokeapi.co/api/v2/pokemon/${idFive}`,
-  );
+  const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${idFive}`);
   return response;
 };
 const fetchSixthPokemon = async () => {
   const idSix = getRandomKantoPokemon();
-  const response = await axios.get(
-    `https://pokeapi.co/api/v2/pokemon/${idSix}`,
-  );
+  const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${idSix}`);
   return response;
 };
 const fetchSeventhPokemon = async () => {
   const idSeven = getRandomKantoPokemon();
-  const response = await axios.get(
-    `https://pokeapi.co/api/v2/pokemon/${idSeven}`,
-  );
+  const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${idSeven}`);
   return response;
 };
 const fetchEighthPokemon = async () => {
   const idEight = getRandomKantoPokemon();
-  const response = await axios.get(
-    `https://pokeapi.co/api/v2/pokemon/${idEight}`,
-  );
+  const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${idEight}`);
   return response;
 };
 
@@ -73,7 +57,7 @@ const Carousel = () => {
     error: firstPokemonError,
     isError: firstPokemonIsError,
   } = useQuery({
-    queryKey: ["firstPokemon"],
+    queryKey: ['firstPokemon'],
     queryFn: () => fetchFirstPokemon(),
   });
   const {
@@ -82,7 +66,7 @@ const Carousel = () => {
     error: secondPokemonError,
     isError: secondPokemonIsError,
   } = useQuery({
-    queryKey: ["secondPokemon"],
+    queryKey: ['secondPokemon'],
     queryFn: () => fetchSecondPokemon(),
   });
   const {
@@ -91,7 +75,7 @@ const Carousel = () => {
     error: thirdPokemonError,
     isError: thirdPokemonIsError,
   } = useQuery({
-    queryKey: ["thirdPokemon"],
+    queryKey: ['thirdPokemon'],
     queryFn: () => fetchThirdPokemon(),
   });
   const {
@@ -100,7 +84,7 @@ const Carousel = () => {
     error: fourthPokemonError,
     isError: fourthPokemonIsError,
   } = useQuery({
-    queryKey: ["fourthPokemon"],
+    queryKey: ['fourthPokemon'],
     queryFn: () => fetchSixthPokemon(),
   });
   const {
@@ -109,7 +93,7 @@ const Carousel = () => {
     error: fifthPokemonError,
     isError: fifthPokemonIsError,
   } = useQuery({
-    queryKey: ["fifthPokemon"],
+    queryKey: ['fifthPokemon'],
     queryFn: () => fetchFifthPokemon(),
   });
   const {
@@ -118,7 +102,7 @@ const Carousel = () => {
     error: sixthPokemonError,
     isError: sixthPokemonIsError,
   } = useQuery({
-    queryKey: ["sixthPokemon"],
+    queryKey: ['sixthPokemon'],
     queryFn: () => fetchSixthPokemon(),
   });
   const {
@@ -127,7 +111,7 @@ const Carousel = () => {
     error: seventhPokemonError,
     isError: seventhPokemonIsError,
   } = useQuery({
-    queryKey: ["seventhPokemon"],
+    queryKey: ['seventhPokemon'],
     queryFn: () => fetchSeventhPokemon(),
   });
   const {
@@ -136,7 +120,7 @@ const Carousel = () => {
     error: eighthPokemonError,
     isError: eighthPokemonIsError,
   } = useQuery({
-    queryKey: ["eighthPokemon"],
+    queryKey: ['eighthPokemon'],
     queryFn: () => fetchEighthPokemon(),
   });
   const [firstPokemon, setFirstPokemon] = useState<string>(defaultImage);
@@ -193,71 +177,17 @@ const Carousel = () => {
   }
   return (
     <>
-      <div className="marquee marquee--8">
-        <img
-          className="marquee__item"
-          src={firstPokemon}
-          width="96"
-          height="96"
-          alt=""
-        />
-        <img
-          className="marquee__item"
-          src={secondPokemon}
-          width="96"
-          height="96"
-          alt=""
-        />
-        <img
-          className="marquee__item"
-          src={thirdPokemon}
-          width="96"
-          height="96"
-          alt=""
-        />
-        <img
-          className="marquee__item"
-          src={fourthPokemon}
-          width="96"
-          height="96"
-          alt=""
-        />
-        <img
-          className="marquee__item"
-          src={fifthPokemon}
-          width="96"
-          height="96"
-          alt=""
-        />
-        <img
-          className="marquee__item"
-          src={sixthPokemon}
-          width="96"
-          height="96"
-          alt=""
-        />
-        <img
-          className="marquee__item"
-          src={seventhPokemon}
-          width="96"
-          height="96"
-          alt=""
-        />
-        <img
-          className="marquee__item"
-          src={eighthPokemon}
-          width="96"
-          height="96"
-          alt=""
-        />
+      <div className='marquee marquee--8'>
+        <img className='marquee__item' src={firstPokemon} width='96' height='96' alt='' />
+        <img className='marquee__item' src={secondPokemon} width='96' height='96' alt='' />
+        <img className='marquee__item' src={thirdPokemon} width='96' height='96' alt='' />
+        <img className='marquee__item' src={fourthPokemon} width='96' height='96' alt='' />
+        <img className='marquee__item' src={fifthPokemon} width='96' height='96' alt='' />
+        <img className='marquee__item' src={sixthPokemon} width='96' height='96' alt='' />
+        <img className='marquee__item' src={seventhPokemon} width='96' height='96' alt='' />
+        <img className='marquee__item' src={eighthPokemon} width='96' height='96' alt='' />
       </div>
-      <img
-        src={professorOak}
-        id="imgProfessorOak"
-        alt="Professor Oak"
-        height="64"
-        width="64"
-      />
+      <img src={professorOak} id='imgProfessorOak' alt='Professor Oak' height='64' width='64' />
     </>
   );
 };

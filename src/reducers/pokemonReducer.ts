@@ -7,7 +7,7 @@ const initState = {
 
 const pokemonReducer = (state = initState, action: any) => {
   switch (action.type) {
-    case "FETCH_POKEMON":
+    case 'FETCH_POKEMON':
       return { ...state };
     default: {
       return { ...state };

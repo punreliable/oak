@@ -1,22 +1,22 @@
-import React from "react";
-import imgUrl from "./assets/oak.png";
+import React from 'react';
+import imgUrl from './assets/oak.png';
 
 // import * as oak from '../assets/oak.svg'
-import imgUrl from "../assets/oak.png";
-document.getElementById("img").src = imgUrl;
-import "./ProfessorOak.scss";
+import imgUrl from '../assets/oak.png';
+document.getElementById('img').src = imgUrl;
+import './ProfessorOak.scss';
 
 const ProfessorOak = () => {
   return (
     <>
-      <div className="row">
+      <div className='row'>
         <img
           src={imgUrl}
-          id="img"
-          alt="Image of Professor Oak"
-          className="imgProfessor"
-          height="512"
-          width="512"
+          id='img'
+          alt='Image of Professor Oak'
+          className='imgProfessor'
+          height='512'
+          width='512'
         />
       </div>
     </>

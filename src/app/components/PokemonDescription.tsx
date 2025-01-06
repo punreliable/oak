@@ -1,29 +1,26 @@
-import React from "react";
-import { useEffect, useState } from "react";
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
-import prettyName from "../utilities/prettyName";
+import React from 'react';
+import { useEffect, useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
+import prettyName from '../utilities/prettyName';
 
 interface PokemonDescriptionProps {
-
   pokemon: number;
-
 }
 
 const fetchPokemonBaseHappiness = async (requestURL: string) => {
   const response = await axios.get(requestURL);
   if (response.status !== 200) {
-    throw new Error("Happiness could not be found.");
+    throw new Error('Happiness could not be found.');
   }
   return response;
 };
 
 const style: React.CSSProperties = {
-  textAlign: "left",
+  textAlign: 'left',
 };
 
 const PokemonDescription: React.FC<PokemonDescriptionProps> = ({ pokemon }) => {
-
   // useEffect(() => {
   // 	axios.get( requestURL )
   // 	.then( response => {
@@ -34,13 +31,13 @@ const PokemonDescription: React.FC<PokemonDescriptionProps> = ({ pokemon }) => {
   // 	}, [])
 
   const [baseHappiness, setBaseHappiness] = useState(0);
-  const [description, setDescription] = useState("Loading...");
+  const [description, setDescription] = useState('Loading...');
 
   const requestURL = `https://pokeapi.co/api/v2/pokemon-species/${parseInt(pokemon.toString())}/`;
 
   console.log(requestURL);
   const { data, error, isLoading, isError } = useQuery({
-    queryKey: ["pokemon-species", requestURL],
+    queryKey: ['pokemon-species', requestURL],
     queryFn: () => fetchPokemonBaseHappiness(requestURL),
   });
 
@@ -65,13 +62,3 @@ const PokemonDescription: React.FC<PokemonDescriptionProps> = ({ pokemon }) => {
 };
 
 export default PokemonDescription;
-
-
-
-
-
-
-
-
-
-

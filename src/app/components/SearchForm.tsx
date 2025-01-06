@@ -1,18 +1,18 @@
-import React from "react";
-import { useState } from "react";
-import ButtonSearch from "./ButtonSearch";
+import React from 'react';
+import { useState } from 'react';
+import ButtonSearch from './ButtonSearch';
 
 const SearchForm = (props) => {
-  const [enteredNumber, setEnteredNumber] = useState("");
+  const [enteredNumber, setEnteredNumber] = useState('');
 
   const numberChangeHandler = (event) => {
     setEnteredNumber(event.target.value);
-    console.log("Number changed to: " + event.target.value);
+    console.log('Number changed to: ' + event.target.value);
   };
 
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log("Submitted!");
+    console.log('Submitted!');
 
     const entryData = {
       id: enteredNumber,
@@ -26,23 +26,23 @@ const SearchForm = (props) => {
 
   return (
     <form onSubmit={submitHandler}>
-      <div className="form-group">
+      <div className='form-group'>
         <fieldset>
-          <label htmlFor="entryNumber">Number</label>
+          <label htmlFor='entryNumber'>Number</label>
           <input
-            className="form-control"
-            type="number"
-            min="1"
-            max="151"
-            step="1"
-            inputMode="numeric"
-            pattern="\d*"
-            placeholder="25"
+            className='form-control'
+            type='number'
+            min='1'
+            max='151'
+            step='1'
+            inputMode='numeric'
+            pattern='\d*'
+            placeholder='25'
             value={enteredNumber}
             onChange={numberChangeHandler}
             required
           />
-          <button type="submit" className="btn btn-primary mt-2">
+          <button type='submit' className='btn btn-primary mt-2'>
             Ask the Professor
           </button>
         </fieldset>

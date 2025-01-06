@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export function getRandomPokemon(): string {
   const number = Math.floor(Math.random() * 151) + 1;

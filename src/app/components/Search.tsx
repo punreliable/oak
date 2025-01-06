@@ -1,6 +1,6 @@
-import React from "react";
-import pokeball from "../assets/pokeball.svg";
-import SearchForm from "./SearchForm";
+import React from 'react';
+import pokeball from '../assets/pokeball.svg';
+import SearchForm from './SearchForm';
 
 const Search = (props: any) => {
   const entryDataHandler = (enteredData: any) => {
@@ -22,18 +22,14 @@ const Search = (props: any) => {
   };
 
   return (
-    <div className="App">
+    <div className='App'>
       <div>
-        <a
-          href="http://pokeapi.co"
-          target="_blank"
-          title="Official Pokémon API"
-        >
-          <img src={pokeball} className="logo react" alt="React logo" />
+        <a href='http://pokeapi.co' target='_blank' title='Official Pokémon API'>
+          <img src={pokeball} className='logo react' alt='React logo' />
         </a>
       </div>
-      <h1 className="title">Search the Pokedex</h1>
-      <div className="card">
+      <h1 className='title'>Search the Pokedex</h1>
+      <div className='card'>
         <SearchForm onSubmitEntryData={entryDataHandler} />
       </div>
     </div>
