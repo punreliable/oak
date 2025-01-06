@@ -1,7 +1,7 @@
 import React from 'react';
-import { PokemonFromAPI } from '../../types';
+// import { PokemonFromAPI } from '../../types';
 
-export function PokemonModal(pokemonData: PokemonFromAPI) {
+export function PokemonModal(pokemonData: any) {
   return (
     <section>
       <dialog className='nes-dialog' id='dialogSinglePokemon'>
