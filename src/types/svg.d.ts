@@ -3,3 +3,5 @@ declare module '*.svg' {
 
   export default content;
 }
+
+export type SVG = any;

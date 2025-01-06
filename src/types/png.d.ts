@@ -3,3 +3,5 @@ declare module '*.png' {
 
   export default content;
 }
+
+export type PNG = any;
