@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import prettyName from '../utilities/prettyName';
+import prettyName from '../../utilities/prettyName';
 
 interface PokemonDescriptionProps {
   pokemon: number;
@@ -21,15 +21,7 @@ const style: React.CSSProperties = {
 };
 
 const PokemonDescription: React.FC<PokemonDescriptionProps> = ({ pokemon }) => {
-  // useEffect(() => {
-  // 	axios.get( requestURL )
-  // 	.then( response => {
-  // 		setDescription(response.data.flavor_text_entries[0].flavor_text)
-  // 		setBaseHappiness(response.data.base_happiness)// Access the 'data' property of the 'response' object
-  // 		})
-  // 	.catch( err => { console.log( err )
-  // 	}, [])
-
+  
   const [baseHappiness, setBaseHappiness] = useState(0);
   const [description, setDescription] = useState('Loading...');
 
