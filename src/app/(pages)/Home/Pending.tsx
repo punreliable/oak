@@ -20,7 +20,7 @@ const Pending = () => {
         className="nes-avatar avatar pokemonAvatar"
         alt="Pokemon is loading"
         id="avatar"
-        src={unknownPokemon}
+        src={unknown}
       />
 
       <div className="row">
