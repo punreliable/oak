@@ -65,7 +65,7 @@ const fetchEighthPokemon = async () => {
 };
 
 const Carousel = () => {
-  const defaultImage: string = unsurePokemon;
+  const defaultImage: string | any = unsurePokemon;
   const queryClient = useQueryClient();
   const {
     data: firstPokemonData,
