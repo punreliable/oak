@@ -1,5 +1,5 @@
 import React from 'react';
-import { PokemonFromAPI, PokemonTypeFromAPI } from '../../../types/index';
+// import { PokemonFromAPI, PokemonTypeFromAPI } from '../../../types/index';
 import PokemonDescription from '../../components/PokemonDescription';
 import PokemonTypeList from '../../components/PokemonTypeList';
 import PokemonMoveList from '../../components/PokemonMoveList';
@@ -7,7 +7,7 @@ import PokemonMoveList from '../../components/PokemonMoveList';
 import prettyName from '../../../utilities/prettyName';
 import professorOak from '../../../assets/oak.svg';
 
-const Result = (props: PokemonFromAPI) => {
+const Result = (props: any) => {
   console.log(props);
 
   return (
@@ -37,22 +37,6 @@ const Result = (props: PokemonFromAPI) => {
       <PokemonTypeList types={props.pokemon.types} />
 
       <PokemonMoveList moves={props.pokemon.moves} />
-
-      {/* 
-      <div className="row">
-        <div className="col-md-12"> */}
-      {/* <p>
-            Would you like to learn more about {prettyName(props?.pokemon.name)}?
-            Click the button below.
-          </p> */}
-      {/* <button
-            type="button"
-            className="nes-btn"
-          >
-            More Details
-          </button> */}
-      {/* </div>
-      </div> */}
 
       <section
         className='message-list messageList'
