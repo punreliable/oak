@@ -8,8 +8,8 @@ import {
 
 import prettyName from "../../../utilities/prettyName";
 // import MainNavigation from "../../components/MainNavigation";
-import unknownPokemon from "../../../assets/0.png";
-import professorOak from "../../../assets/oak.svg";
+const unknown = require("../../../assets/0.png").default;
+const professorOak = require("../../../assets/oak.svg").default;
 const Pending = () => {
 
   return (

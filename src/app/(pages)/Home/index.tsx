@@ -9,7 +9,6 @@ import axios from "axios";
 import Error from "./Error";
 import Pending from "./Pending";
 import Result from "./Result";
-import {PokemonFromAPI} from "../../../../pokemon";
 // import "./App.scss";
 
 const getPokemonNumber = () => {
