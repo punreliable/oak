@@ -28,7 +28,7 @@ import PagePokemonTypesList from "./components/pages/PagePokemonTypesList";
 // import PagePokemonTypeSteel from "pages/Pokemon/Types/PagePokemonTypeSteel";
 // import PagePokemonTypeWater from "pages/Pokemon/Types/PagePokemonTypeWater";
 import PageKantoPokemon from "./components/dataFetching/PageKantoPokemon";
-import KantoPokedex from "./pages/pokedex/KantoPokedex";
+import KantoPokedex from "./(pages)/pokedex/KantoPokedex";
 import PagePokemonCarousel from "./components/PagePokemonCarousel";
 import PagePokemonSearch from "./components/PagePokemonSearch";
 import "./index.scss";

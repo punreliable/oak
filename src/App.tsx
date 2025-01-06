@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import MainNavigation from "./components/MainNavigation";
-import Error from "./pages/Home/Error";
-import Pending from "./pages/Home/Pending";
-import Result from "./pages/Home/Result";
+import Error from "./(pages)/Home/Error";
+import Pending from "./(pages)/Home/Pending";
+import Result from "./(pages)/Home/Result";
 import {PokemonFromAPI} from "./types";
 import "./App.scss";
 
