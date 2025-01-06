@@ -5,8 +5,8 @@ import {
   useNavigate,
 } from "react-router-dom";
 // import "../../App.scss";
-import unknown from "../../../assets/0.png";
-import professorOak from "../../../assets/oak.svg";
+const unknown = require("../../../assets/0.png").default;
+const professorOak = require("../../../assets/oak.svg").default;
 // import MainNavigation from "../../components/MainNavigation";
 
 const Error = () => {
