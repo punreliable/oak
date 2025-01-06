@@ -1361,6 +1361,5 @@ export type SinglePokemonType = {
 				},
 				"slot": 2
 			}
-		]
-	}
+		],
 }
