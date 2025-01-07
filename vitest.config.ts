@@ -6,12 +6,12 @@ export default defineConfig({
   test: {
     globals: true,
     include: ['**/*.test.ts', '**/*.test.tsx'],
-    setupFiles: 'src/setupTests.ts',
+    setupFiles: 'setupTests.ts',
     // coverage: {
     //   reporter: ["locv"],
     //   enabled: true,
     //   reportsDirectory: ".coverage",
-    //   exclude: ["src/main.tsx", ...coverageConfigDefaults.exclude],
+    //   exclude: ["main.tsx", ...coverageConfigDefaults.exclude],
     // },
   },
 });
