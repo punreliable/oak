@@ -1,7 +1,7 @@
-import type {PokemonFromAPI} from './pokemon.d.ts';
-import type {PokemonTypeFromAPI} from './pokemon-type.d.ts';
-import type { SVG } from './svg.d.ts';
-import type { PNG } from './png.d.ts';
+import type {PokemonFromAPI} from './pokemon.js';
+import type {PokemonTypeFromAPI} from './pokemon-type.js';
+import type { SVG } from './svg.js';
+import type { PNG } from './png.js';
 
 // export type PokemonFromAPI = any;
 // export type PokemonTypeFromAPI = any;
