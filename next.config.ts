@@ -2,6 +2,8 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   distDir: 'dist',
+  output: 'export',
 };
 
-export default nextConfig;
+// export default nextConfig;
+module.exports = nextConfig
