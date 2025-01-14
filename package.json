@@ -7,12 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "export": "next export",
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
     "test:ui": "npx vite preview --outDir html",
     "show-tests": "vitest --ui",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
     "format": "prettier --write \"**/*.{cjs,mjs,js,jsx,ts,tsx,css,md,json,html}\"",
     "format:check": "prettier --check \"**/*.{cjs,mjs,js,jsx,ts,tsx,css,md,json,html}\""
   },
