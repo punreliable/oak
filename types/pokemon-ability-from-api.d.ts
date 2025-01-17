@@ -1,5 +1,5 @@
 // pokemon-ability-from-api.d.ts
-export type PokemonAbilitiesFromAPI = {
+export type PokemonAbilityFromAPI = {
 	"abilities":[
 		{
 			"ability": {
