@@ -1,5 +1,5 @@
 // pokemon-type.d.ts
-export type PokemonType = {
+export type SinglePokemonType = {
   id: number;
   name: string;
   data: {

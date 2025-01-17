@@ -1,15 +1,11 @@
 'use client';
 import Image from 'next/image';
-// import MainNavigation from "../components/MainNavigation";
-// import { Main } from "next/document";
 import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-// import MainNavigation from "./components/MainNavigation";
 import Error from './Error';
 import Pending from './Pending';
 import Result from './Result';
-// import "./App.scss";
 
 const getPokemonNumber = () => {
   const number = Math.floor(Math.random() * 151) + 1;
