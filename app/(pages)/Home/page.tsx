@@ -32,7 +32,6 @@ const OtherHome = () => {
   return (
     <div className='App'>
       <section className='nesContainer nes-container'>
-        {/* <MainNavigation /> */}
         {data && <Result pokemon={data} />}
       </section>
     </div>

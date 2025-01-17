@@ -1,5 +1,6 @@
 import React from 'react';
 import PokemonDescription from '../../components/PokemonDescription';
+import PokemonAbilitiesList from '../../components/PokemonAbilitiesList';
 import PokemonTypeList from '../../components/PokemonTypeList';
 import PokemonMoveList from '../../components/PokemonMoveList';
 import prettyName from '../../../utilities/prettyName';
@@ -33,6 +34,10 @@ const Result = (props: any) => {
       </div>
 
       <PokemonTypeList types={props.pokemon.types} />
+
+
+      <PokemonAbilitiesList abilities={props.pokemon.abilities} />
+
 
       <PokemonMoveList moves={props.pokemon.moves} />
 

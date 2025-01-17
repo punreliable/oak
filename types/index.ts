@@ -1,16 +1,26 @@
-import type {PokemonFromAPI} from './pokemon.js';
-import type {PokemonTypeFromAPI} from './pokemon-type.js';
-import type { SVG } from './svg.js';
+import type { EffectChange } from './effect-change';
+import type { EffectEntry } from './effect-entry';
+import type { FlavorTextEntry } from './flavor-text-entry';
+import type { Language } from './language';
+import type { NameEntry } from './name-entry';
 import type { PNG } from './png.js';
+import type {PokemonFromAPI} from './pokemon';
+import type {PokemonTypeFromAPI} from './pokemon-type';
+import type {PokemonAbilitiesListFromAPI} from './pokemon-abilities-list-from-api';
+import type {SingleAbilityFromAPI} from './single-ability-from-api';
+import type { SVG } from './svg.js';
 
-// export type PokemonFromAPI = any;
-// export type PokemonTypeFromAPI = any;
-// export type SVG = any;
-// export type PNG = any;
 export type Types = [
+  EffectChange,
+  EffectEntry,
+  FlavorTextEntry,
+  Language,
+  NameEntry,
   PNG,
   PokemonFromAPI,
   PokemonTypeFromAPI,
+  PokemonAbilitiesListFromAPI,
+  SingleAbilityFromAPI,
   SVG,
   ...any[]
 ];
