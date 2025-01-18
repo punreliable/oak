@@ -10,24 +10,24 @@ const Footer = () => {
         <div className='col-md-12 footer-text'>
           <ul className='list-unstyled d-flex justify-content-center mb-0 py-4'>
             <li>
-              <a href='http://like.comicui.com' target='_blank' className='icons-sm fb-ic'>
+              <Link href='http://like.comicui.com' target='_blank' className='icons-sm fb-ic'>
                 <i className='fab fa-facebook-f white-text fa-lg'> </i>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href='http://code.comicui.com/' target='_blank' className='icons-sm github-ic'>
+              <Link href='http://code.comicui.com/' target='_blank' className='icons-sm github-ic'>
                 <i className='fab fa-github white-text fa-lg'> </i>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href='http://bird.comicui.com' target='_blank' className='icons-sm tw-ic'>
+              <Link href='http://bird.comicui.com' target='_blank' className='icons-sm tw-ic'>
                 <i className='fab fa-twitter white-text fa-lg'> </i>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href='http://view.comicui.com' target='_blank' className='icons-sm yt-ic'>
+              <Link href='http://view.comicui.com' target='_blank' className='icons-sm yt-ic'>
                 <i className='fab fa-youtube white-text fa-lg'> </i>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

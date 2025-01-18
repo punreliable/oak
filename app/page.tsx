@@ -2,9 +2,10 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import Error from './(pages)/Home/Error';
-import Pending from './(pages)/Home/Pending';
-import Result from './(pages)/Home/Result';
+import Error from './(pages)/home/Error';
+import Pending from './(pages)/home/Pending';
+import Result from './(pages)/home/Result';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 const getPokemonNumber = () => {
   const number = Math.floor(Math.random() * 151) + 1;
@@ -29,8 +30,9 @@ const Home = () => {
   if (error) return <Error />;
 
   return (
-    <div className='App'>
+    <div className='App' style={{"margin":"auto"}}>
       <section className='nesContainer nes-container'>{data && <Result pokemon={data} />}</section>
+      <ReactQueryDevtools initialIsOpen />
     </div>
   );
 };
