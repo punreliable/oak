@@ -19,7 +19,6 @@ const style: React.CSSProperties = {
 };
 
 const PokemonDescription: React.FC<PokemonDescriptionProps> = ({ pokemon }) => {
-
   const requestURL = `https://pokeapi.co/api/v2/pokemon-species/${parseInt(pokemon.toString())}/`;
 
   console.log(requestURL);

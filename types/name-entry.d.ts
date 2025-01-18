@@ -1,4 +1,4 @@
 export type NameEntry = {
-	language: Language;
-	name: string;
+  language: Language;
+  name: string;
 };

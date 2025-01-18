@@ -38,9 +38,7 @@ const Result = (props: any) => {
 
       <PokemonTypeList types={props.pokemon.types} />
 
-
       <PokemonAbilitiesList abilities={props.pokemon.abilities} />
-
 
       <PokemonMoveList moves={props.pokemon.moves} />
 

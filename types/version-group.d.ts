@@ -1,4 +1,4 @@
 export type VersionGroup = {
-	name: string;
-	url: string;
+  name: string;
+  url: string;
 };

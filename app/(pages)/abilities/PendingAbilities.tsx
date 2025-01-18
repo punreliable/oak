@@ -24,7 +24,7 @@ const PendingAbilities = () => {
       <section className='message-list messageList' id='professorMessages'>
         <section className='message -right'>
           <div className='wrapperOak'>
-          <Image
+            <Image
               src={professorOak}
               id='imgProfessorOak'
               alt='Professor Oak'

@@ -2,13 +2,13 @@ import React from 'react';
 import prettyName from '../../../utilities/prettyName';
 import professorOak from '../../../assets/oak.svg';
 import Image from 'next/image';
-import { v4 as uuidv4 } from "uuid";
-import type {PokemonAbilitiesListFromAPI} from '../../../types/pokemon-abilities-list-from-api';
+import { v4 as uuidv4 } from 'uuid';
+import type { PokemonAbilitiesListFromAPI } from '../../../types/pokemon-abilities-list-from-api';
 
 const ResultAbilities = (props: any) => {
   const abilities: PokemonAbilitiesListFromAPI[] = props.abilities.results;
   const abilityItems = abilities.map((ability) => (
-   <li key={uuidv4()}>{prettyName(ability?.name)}</li>
+    <li key={uuidv4()}>{prettyName(ability?.name)}</li>
   ));
 
   return (
@@ -17,19 +17,11 @@ const ResultAbilities = (props: any) => {
         <h1 className='oakHello text-center'>Abilities</h1>
       </div>
       <div className='row py-4 mx-auto'>
-        <Image
-          src={professorOak}
-          height={64}
-          width={64}
-          alt='Professor Oak'
-          id='imgProfessorOak'
-        />
+        <Image src={professorOak} height={64} width={64} alt='Professor Oak' id='imgProfessorOak' />
       </div>
       <div className='row'>
         <div className='col-md-12 lists'>
-          <ul className="nes-list is-disc">
-            {abilityItems}
-          </ul>
+          <ul className='nes-list is-disc'>{abilityItems}</ul>
         </div>
       </div>
     </div>

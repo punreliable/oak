@@ -3,7 +3,7 @@ import Image from 'next/image';
 import unknown from '../../../assets/0.png';
 import professorOak from '../../../assets/oak.svg';
 
-const ErrorAbilities  = () => {
+const ErrorAbilities = () => {
   return (
     <div className='App'>
       <section className='nesContainer nes-container'>
@@ -20,9 +20,7 @@ const ErrorAbilities  = () => {
 
         <div className='row'>
           <div className='col-md-12'>
-            <p>
-              There was an error trying to fetch your Pokemon. Please try again.
-            </p>
+            <p>There was an error trying to fetch your Pokemon. Please try again.</p>
           </div>
         </div>
 
