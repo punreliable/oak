@@ -5,6 +5,7 @@ import axios from 'axios';
 import Error from './(pages)/home/Error';
 import Pending from './(pages)/home/Pending';
 import Result from './(pages)/home/Result';
+
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 const getPokemonNumber = () => {
