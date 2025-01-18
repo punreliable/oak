@@ -1,8 +1,6 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import prettyName from '../../utilities/prettyName';
 
 interface PokemonDescriptionProps {
   pokemon: number;
@@ -21,9 +19,6 @@ const style: React.CSSProperties = {
 };
 
 const PokemonDescription: React.FC<PokemonDescriptionProps> = ({ pokemon }) => {
-  
-  const [baseHappiness, setBaseHappiness] = useState(0);
-  const [description, setDescription] = useState('Loading...');
 
   const requestURL = `https://pokeapi.co/api/v2/pokemon-species/${parseInt(pokemon.toString())}/`;
 

@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import "./PokemonTypeList.scss";
 
 const PokemonMoveList = (props: any) => {
-  let moves = props.moves;
+  const moves = props.moves;
 
   const minified = moves.map((x: any) => (
     <div className="col-sm-12 col-md-6 col-lg-3" key={uuidv4()}>
