@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 const unknown = require('../../../assets/0.png').default;
 const professorOak = require('../../../assets/oak.svg').default;
 
 import Image from 'next/image';
 
 const ErrorAbilities  = () => {
-
   return (
     <div className='App'>
       <section className='nesContainer nes-container'>

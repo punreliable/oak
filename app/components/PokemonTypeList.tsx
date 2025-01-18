@@ -1,9 +1,8 @@
 import prettyName from '../../utilities/prettyName';
 import { v4 as uuidv4 } from 'uuid';
 import './PokemonTypeList.scss';
-import type { PokemonTypeFromAPI } from '@/types/pokemon-type'; 
 
-const PokemonTypeList = (props: PokemonTypeFromAPI) => {
+const PokemonTypeList = (props: any) => {
   const types = props.types;
   const count: number = props.types.length;
 

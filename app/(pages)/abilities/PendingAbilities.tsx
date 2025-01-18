@@ -1,8 +1,5 @@
-import React, { lazy, Suspense, useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
-import axios from 'axios';
-import { createBrowserRouter, RouterProvider, useNavigate } from 'react-router-dom';
-import prettyName from '../../../utilities/prettyName';
 const unknown = require('../../../assets/0.png').default;
 const professorOak = require('../../../assets/oak.svg').default;
 
@@ -11,7 +8,7 @@ const PendingAbilities = () => {
     <>
       <h1 className='oakHello'>Loading...</h1>
 
-      <img
+      <Image
         className='nes-avatar avatar pokemonAvatar'
         alt='Pokemon is loading'
         id='avatar'

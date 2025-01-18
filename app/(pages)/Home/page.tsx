@@ -1,6 +1,5 @@
 'use client';
-import Image from 'next/image';
-import React, { useState } from 'react';
+import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import Error from './Error';

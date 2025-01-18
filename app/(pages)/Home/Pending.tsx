@@ -1,9 +1,5 @@
-import React, { lazy, Suspense, useState } from 'react';
-import axios from 'axios';
-import { createBrowserRouter, RouterProvider, useNavigate } from 'react-router-dom';
-
-import prettyName from '../../../utilities/prettyName';
-// import MainNavigation from "../../components/MainNavigation";
+import React from 'react';
+import Image from 'next/image';
 const unknown = require('../../../assets/0.png').default;
 const professorOak = require('../../../assets/oak.svg').default;
 const Pending = () => {
@@ -11,7 +7,7 @@ const Pending = () => {
     <>
       <h1 className='oakHello'>Loading...</h1>
 
-      <img
+      <Image
         className='nes-avatar avatar pokemonAvatar'
         alt='Pokemon is loading'
         id='avatar'
@@ -27,12 +23,12 @@ const Pending = () => {
       <section className='message-list messageList' id='professorMessages'>
         <section className='message -right'>
           <div className='wrapperOak'>
-            <img
+            <Image
               src={professorOak}
               id='imgProfessorOak'
               alt='Professor Oak'
-              height='64'
-              width='64'
+              height={64}
+              width={64}
             />
           </div>
         </section>

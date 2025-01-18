@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import PokemonDescription from '../../components/PokemonDescription';
 import PokemonAbilitiesList from '../../components/PokemonAbilitiesList';
 import PokemonTypeList from '../../components/PokemonTypeList';
