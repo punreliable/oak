@@ -16,7 +16,7 @@ const Result = (props: any) => {
 
       <h1 className='pokemonName'>{prettyName(props?.pokemon.name)}</h1>
 
-      <img
+      <Image
         className='nes-avatar avatar pokemonAvatar'
         alt={'Image of a ' + prettyName(props?.pokemon.name)}
         id='avatar'
@@ -55,12 +55,12 @@ const Result = (props: any) => {
             </p>
           </div>
           <div className='wrapperOak'>
-            <img
+            <Image
               src={professorOak}
               id='imgProfessorOak'
               alt='Professor Oak'
-              height='64'
-              width='64'
+              height={64}
+              width={64}
             />
           </div>
         </section>
