@@ -30,7 +30,7 @@ const Home = () => {
   if (error) return <Error />;
 
   return (
-    <div className='App' style={{"margin":"auto"}}>
+    <div className='App' style={{ margin: 'auto' }}>
       <section className='nesContainer nes-container'>{data && <Result pokemon={data} />}</section>
       <ReactQueryDevtools initialIsOpen />
     </div>

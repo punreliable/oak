@@ -78,9 +78,8 @@ export default function RootLayout({
 
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <TanstackProvider>{children}</TanstackProvider>
-        
-        <SpeedInsights />
 
+        <SpeedInsights />
       </body>
     </html>
   );
