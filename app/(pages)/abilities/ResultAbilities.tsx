@@ -3,12 +3,11 @@ import prettyName from '../../../utilities/prettyName';
 import professorOak from '../../../assets/oak.svg';
 import Image from 'next/image';
 import { v4 as uuidv4 } from 'uuid';
-import type { PokemonAbilitiesListFromAPI } from '../../../types/pokemon-abilities-list-from-api';
 
 const ResultAbilities = (props: any) => {
-  const abilities: PokemonAbilitiesListFromAPI[] = props.abilities.results;
-  const abilityItems = abilities.map((ability) => (
-    <li key={uuidv4()}>{prettyName(ability?.name)}</li>
+  const abilities = props.abilities.results;
+  const abilityItems = abilities.map((ability: any) => (
+    <li key={uuidv4()}>{prettyName(ability.name)}</li>
   ));
 
   return (
