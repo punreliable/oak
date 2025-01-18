@@ -1,18 +1,14 @@
-import { useState } from 'react';
-import styled from 'styled-components';
 import prettyName from '../../utilities/prettyName';
 import { v4 as uuidv4 } from 'uuid';
 import './PokemonTypeList.scss';
+import type { PokemonTypeFromAPI } from '@/types/pokemon-type'; 
 
-const PokemonTypeList = (props: any) => {
-  let types = props.types;
-  let count: number = props.types.length;
+const PokemonTypeList = (props: PokemonTypeFromAPI) => {
+  const types = props.types;
+  const count: number = props.types.length;
 
-  let fullColumn = 'col-sm-12';
-  let halfColumn = 'col-md-6 col-sm-12';
-
-  let columns = count > 1 ? halfColumn : fullColumn;
-  let minified = types.map((x: any) => (
+  const columns = count > 1 ? 'col-md-6 col-sm-12': 'col-sm-12';
+  const minified = types.map((x: any) => (
     <div className={columns} key={uuidv4()}>
       <a
         href={`/pokemon/type/${x.type.name}`}

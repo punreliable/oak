@@ -1,5 +1,3 @@
-import { useState } from "react";
-import styled from "styled-components";
 import prettyName from "../../utilities/prettyName";
 import { v4 as uuidv4 } from "uuid";
 import "./PokemonTypeList.scss";
@@ -7,7 +5,7 @@ import "./PokemonTypeList.scss";
 const PokemonMoveList = (props: any) => {
   let moves = props.moves;
 
-  let minified = moves.map((x: any) => (
+  const minified = moves.map((x: any) => (
     <div className="col-sm-12 col-md-6 col-lg-3" key={uuidv4()}>
       <a
         href={`/pokemon/move/${x.move.name}`}
@@ -17,8 +15,6 @@ const PokemonMoveList = (props: any) => {
       </a>
     </div>
   ));
-
-  // let prettyMinified = moves.map((x) => prettyName(x.move.name));
 
   return(
     <div className="row">
