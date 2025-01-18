@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import getCurrentYear from '../../utilities/getCurrentYear';
 
 const Footer = () => {
@@ -33,10 +34,10 @@ const Footer = () => {
       </div>
       <div className='row mb-3'>
         <div className='col-md-12 footer-text'>
-          &copy;&nbsp;2024&nbsp;
-          <a href='http://ComicUI.com' target='_blank'>
+          &copy;&nbsp;{year}&nbsp;
+          <Link href='http://ComicUI.com' target='_blank'>
             ComicUI.com
-          </a>
+          </Link>
         </div>
       </div>
     </footer>

@@ -1,10 +1,12 @@
+import Link from 'next/link';
+
 const Navbar = () => {
   return (
     <nav className='navbar navbar-expand-lg bg-body-tertiary'>
       <div className='container-fluid'>
-        <a className='navbar-brand' href='/'>
+        <Link className='navbar-brand' href='/'>
           Oak
-        </a>
+        </Link>
         <button
           className='navbar-toggler'
           type='button'
@@ -19,9 +21,9 @@ const Navbar = () => {
         <div className='collapse navbar-collapse' id='navbarText'>
           <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
             <li className='nav-item'>
-              <a className='nav-link active' aria-current='page' href='/results'>
+              <Link className='nav-link active' aria-current='page' href='/'>
                 New Search
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
