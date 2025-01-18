@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-const unknown = require('../../../assets/0.png').default;
-const professorOak = require('../../../assets/oak.svg').default;
+import unknown from '../../../assets/0.png';
+import professorOak from '../../../assets/oak.svg';
 const Pending = () => {
   return (
     <>

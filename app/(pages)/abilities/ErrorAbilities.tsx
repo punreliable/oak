@@ -1,8 +1,7 @@
 import React from 'react';
-const unknown = require('../../../assets/0.png').default;
-const professorOak = require('../../../assets/oak.svg').default;
-
 import Image from 'next/image';
+import unknown from '../../../assets/0.png';
+import professorOak from '../../../assets/oak.svg';
 
 const ErrorAbilities  = () => {
   return (
@@ -17,7 +16,6 @@ const ErrorAbilities  = () => {
           className='nes-avatar avatar pokemonAvatar'
           alt='There was an error fetching your pokemon, please try again'
           id='avatar'
-
         />
 
         <div className='row'>

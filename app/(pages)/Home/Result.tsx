@@ -21,6 +21,8 @@ const Result = (props: any) => {
         alt={'Image of a ' + prettyName(props?.pokemon.name)}
         id='avatar'
         src={props?.pokemon.sprites?.front_default}
+        width={256}
+        height={256}
       />
 
       <div className='row rowStats'>
