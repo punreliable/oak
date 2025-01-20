@@ -33,7 +33,7 @@ const Home = () => {
   return (
     <div className='App' style={{ margin: 'auto' }}>
       <section className='nesContainer nes-container'>{data && <Result pokemon={data} />}</section>
-      <ReactQueryDevtools initialIsOpen />
+      <ReactQueryDevtools />
     </div>
   );
 };
