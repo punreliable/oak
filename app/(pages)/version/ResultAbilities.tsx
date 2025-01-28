@@ -4,9 +4,9 @@ import prettyName from '../../../utilities/prettyName';
 import professorOak from '../../../assets/oak.svg';
 import Image from 'next/image';
 import { v4 as uuidv4 } from 'uuid';
-import SelectedAbility from './SelectedAbility';
+// import SelectedAbility from './SelectedAbility';
 
-const ResultAbilities = (props: any) => {
+const ResultVersrion = (props: any) => {
 
   const abilities = props.abilities.results;
   const selectedAbility = 1;
@@ -17,6 +17,8 @@ const ResultAbilities = (props: any) => {
       </Link>
     </li>
   ));
+
+
 
   return (
     <div className='App container'>
@@ -35,4 +37,4 @@ const ResultAbilities = (props: any) => {
   );
 };
 
-export default ResultAbilities;
+export default ResultVersrion;
