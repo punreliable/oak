@@ -2,13 +2,13 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import ErrorAbility from './ErrorAbility';
-import PendingAbility from './PendingAbility';
-import ResultAbility from './ResultAbility';
+import ErrorAbility from '../ErrorAbility';
+import PendingAbility from '../PendingAbility';
+import ResultAbility from '../ResultAbility';
 
-const Ability = () => {
+const AbilityName = () => {
   const { data, error, isLoading } = useQuery({
-    queryKey: ['abilties'],
+    queryKey: ['abilty'],
     queryFn: async () => {
       const response = await axios.get(`https://pokeapi.co/api/v2/ability`);
       return response.data;
@@ -28,4 +28,4 @@ const Ability = () => {
   );
 };
 
-export default Ability;
+export default AbilityName;

@@ -1,21 +1,17 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import PokemonDescription from '../../components/PokemonDescription';
-import PokemonAbilitiesList from '../../components/PokemonAbilitiesList';
-import PokemonTypeList from '../../components/PokemonTypeList';
-import PokemonMoveList from '../../components/PokemonMoveList';
 import prettyName from '../../../utilities/prettyName';
 import professorOak from '../../../assets/oak.svg';
 
-const Result = (props: any) => {
+const ResultMove = (props: any) => {
 
   return (
     <div className='App'>
       <h1 className='oakHello'>Hello,</h1>
 
       <h1 className='pokemonName'>{prettyName(props?.pokemon.name)}</h1>
-      
+
       <Image
         className='nes-avatar avatar pokemonAvatar'
         alt={'Image of a ' + prettyName(props?.pokemon.name)}
@@ -35,12 +31,6 @@ const Result = (props: any) => {
           <PokemonDescription pokemon={props.pokemon.id} />
         </div>
       </div>
-
-      <PokemonTypeList types={props.pokemon.types} />
-
-      <PokemonAbilitiesList abilities={props.pokemon.abilities} />
-
-      <PokemonMoveList moves={props.pokemon.moves} />
 
       <section
         className='message-list messageList'
@@ -69,4 +59,4 @@ const Result = (props: any) => {
   );
 };
 
-export default Result;
+export default ResultMove;

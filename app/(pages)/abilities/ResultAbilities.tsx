@@ -12,7 +12,7 @@ const ResultAbilities = (props: any) => {
   const selectedAbility = 1;
   const abilityItems = abilities.map((ability: any) => (
     <li key={uuidv4()}>
-      <Link href={`#${selectedAbility}`}>
+      <Link href={`/ability#${selectedAbility}`}>
         {prettyName(ability.name)}
       </Link>
     </li>

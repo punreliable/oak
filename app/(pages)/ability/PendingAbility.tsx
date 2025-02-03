@@ -3,7 +3,7 @@ import Image from 'next/image';
 import unknown from '../../../assets/0.png';
 import professorOak from '../../../assets/oak.svg';
 
-const PendingAbilities = () => {
+const PendingAbility = () => {
   return (
     <>
       <h1 className='oakHello'>Loading...</h1>
@@ -38,4 +38,4 @@ const PendingAbilities = () => {
   );
 };
 
-export default PendingAbilities;
+export default PendingAbility;

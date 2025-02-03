@@ -3,19 +3,16 @@ import Image from 'next/image';
 import unknown from '../../../assets/0.png';
 import professorOak from '../../../assets/oak.svg';
 
-const ErrorAbilities = () => {
+const ErrorMove = () => {
   return (
     <div className='App'>
       <section className='nesContainer nes-container'>
         <h1 className='oakHello'>Error</h1>
-
         <Image
-          src={unknown}
-          height={64}
-          width={64}
           className='nes-avatar avatar pokemonAvatar'
           alt='There was an error fetching your pokemon, please try again'
           id='avatar'
+          src={unknown}
         />
 
         <div className='row'>
@@ -45,4 +42,4 @@ const ErrorAbilities = () => {
   );
 };
 
-export default ErrorAbilities;
+export default ErrorMove;
