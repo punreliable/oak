@@ -22,6 +22,7 @@ const AbilityName = () => {
   return (
     <div className='App'>
       <section className='nesContainer nes-container'>
+        <h1>Ability</h1>
         {data && <ResultAbility ability={data} />}
       </section>
     </div>
@@ -29,3 +30,4 @@ const AbilityName = () => {
 };
 
 export default AbilityName;
+ 
