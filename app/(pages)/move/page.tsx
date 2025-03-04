@@ -13,7 +13,7 @@ const MovePage = (ability: string ) => {
     queryKey: ['ability'],
     queryFn: async () => {
       const id = ability;
-      const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
+      const response = await axios.get(`https://pokeapi.co/api/v2/move/${id}`);
       return response.data;
     },
   });
