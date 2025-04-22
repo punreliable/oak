@@ -6,13 +6,27 @@ import professorOak from '../../../assets/oak.svg';
 
 const Result = (props: any) => {
 
+  const bucketUrl: string = `https://punreliable-oak.s3.us-east-1.amazonaws.com/sprites/items/berries/`;
+
   return (
     <div className='App'>
       <h1>Berry #{props.berry.id}</h1>
 
       <h2 className='berryName'>{prettyName(props?.berry.name)}</h2>
+      { props.berry && (
+
+      <Image
+        className='nes-avatar avatar pokemonAvatar'
+        alt='Pokemon is loading'
+        id='avatar'
+        height={64}
+        width={64}
+        src={ bucketUrl + `${props.berry.name}-berry.png`}
+      />
+    )}
+
       <div className='row rowStats'>
-        <div className='col-md-12 col-lg-3 stats'>
+        <div className='col-md-12 col-lg-6 stats'>
           {props.height && <p>Height: {props.berry.height}in</p>}
           {props.weight && <p>Weight: {props.berry.weight}in</p>}
           {props.berry.growth_time && <p>Growth Time: {props.berry.growth_time} days</p>}

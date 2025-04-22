@@ -2,9 +2,9 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import Error from './(pages)/home/Error';
-import Pending from './(pages)/home/Pending';
-import Result from './(pages)/home/Result';
+import Error from './Error';
+import Pending from './Pending';
+import Result from './Result';
 
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
