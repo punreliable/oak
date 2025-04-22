@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import unknown from './assets/0.png';
-import professorOak from './assets/oak.svg';
+import unknown from '../../../assets/0.png';
+import professorOak from '../../../assets/oak.svg';
 const PendingBerries = () => {
   return (
     <>
@@ -11,6 +11,8 @@ const PendingBerries = () => {
         className='nes-avatar avatar pokemonAvatar'
         alt='Pokemon is loading'
         id='avatar'
+        height={64}
+        width={64}
         src={unknown}
       />
 

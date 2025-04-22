@@ -16,7 +16,7 @@ const Result = (props: any) => {
       { props.berry && (
 
       <Image
-        className='nes-avatar avatar pokemonAvatar'
+        className='nes-avatar avatar itemAvatar'
         alt='Pokemon is loading'
         id='avatar'
         height={64}
@@ -26,7 +26,7 @@ const Result = (props: any) => {
     )}
 
       <div className='row rowStats'>
-        <div className='col-md-12 col-lg-6 stats'>
+        <div className='col-md-12 col-lg- stats'>
           {props.height && <p>Height: {props.berry.height}in</p>}
           {props.weight && <p>Weight: {props.berry.weight}in</p>}
           {props.berry.growth_time && <p>Growth Time: {props.berry.growth_time} days</p>}
