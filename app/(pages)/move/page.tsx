@@ -6,7 +6,7 @@ import Error from './ErrorMove';
 import Pending from './PendingMove';
 import Result from './ResultMove';
 
-const MovePage = (ability: string ) => {
+export const MovePage = (ability: string ) => {
   const { data, error, isLoading } = useQuery({
     queryKey: ['ability'],
     queryFn: async () => {
@@ -26,5 +26,3 @@ const MovePage = (ability: string ) => {
     </div>
   );
 };
-
-export default MovePage;
