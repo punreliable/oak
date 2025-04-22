@@ -1,12 +1,10 @@
 'use client';
 import React from 'react';
-import Link from 'next/link';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import Error from './ErrorMove';
 import Pending from './PendingMove';
 import Result from './ResultMove';
-
 
 const MovePage = (ability: string ) => {
   const { data, error, isLoading } = useQuery({
