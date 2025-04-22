@@ -6,11 +6,11 @@ import Error from './ErrorMove';
 import Pending from './PendingMove';
 import Result from './ResultMove';
 
-export const MovePage = (ability: string ) => {
+export default function MovePage(move: string )  {
   const { data, error, isLoading } = useQuery({
     queryKey: ['ability'],
     queryFn: async () => {
-      const id = ability;
+      const id = move;
       const response = await axios.get(`https://pokeapi.co/api/v2/move/${id}`);
       return response.data;
     },
@@ -22,7 +22,7 @@ export const MovePage = (ability: string ) => {
 
   return (
     <div className='App'>
-      <section className='nesContainer nes-container'>{data && <Result pokemon={data} />}</section>
+      <section className='nesContainer nes-container'>{data && <Result move={data} />}</section>
     </div>
   );
 };
