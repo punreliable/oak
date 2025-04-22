@@ -1,8 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import prettyName from '../../../utilities/prettyName';
-import professorOak from '../../../assets/oak.svg';
 
 const Result = (props: any) => {
 
