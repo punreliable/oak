@@ -1,10 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Link from 'next/link';
 import prettyName from '../../../utilities/prettyName';
 import professorOak from '../../../assets/oak.svg';
 import Image from 'next/image';
 import { v4 as uuidv4 } from 'uuid';
-import SelectedAbility from './SelectedAbility';
 
 const ResultAbilities = (props: any) => {
 
