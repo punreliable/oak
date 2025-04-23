@@ -28,8 +28,8 @@ const Result = (props: any) => {
           {props.height && <p>Height: {props.berry.height}in</p>}
           {props.weight && <p>Weight: {props.berry.weight}in</p>}
           {props.berry.growth_time && <p>Growth Time: {props.berry.growth_time} days</p>}
-          {props.berry.max_harvest && <p>Max Harvest: {props.berry.max_harvest}in</p>}
-          {props.natural_gift_power && <p>Natural Gift Power: {props.berry.natural_gift_power}in</p>}
+          {props.berry.max_harvest && <p>Max Harvest: {props.berry.max_harvest}</p>}
+          {props.natural_gift_power && <p>Natural Gift Power: {props.berry.natural_gift_power}</p>}
           {props.berry.size && <p>Size: {props.berry.size}in</p>}
           {props.berry.smoothness && <p>Smoothness: {props.berry.smoothness}</p>}
           {props.berry.soil_dryness && <p>Soil Dryness: {props.berry.soil_dryness}</p>}
