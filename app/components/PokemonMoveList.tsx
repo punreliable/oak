@@ -5,17 +5,18 @@ const PokemonMoveList = (props: any) => {
   const moves = props.moves;
 
   const minified = moves.map((x: any) => (
-    <div className='col-sm-12 col-md-12 col-lg-12' key={uuidv4()}>
+    <div className='col-sm-6 col-md-4 col-lg-3' key={uuidv4()}>
       <a
         href={`/move/${x.move.name}`}
-        className={`nes-btn move-${x.move.name} is-${x.move.name}`}
-      >
-        <span className={`is-${x.move.name}`}>{prettyName(x.move.name)}</span>
+        className={`nes-btn move-${x.move.name} is-${x.move.name} my-1`}
+      > 
+        <span className={`is-${x.move.name}`} >{prettyName(x.move.name)}</span>
       </a>
     </div>
   ));
 
   return <div className='row'>{minified}</div>;
+
 };
 
 export default PokemonMoveList;

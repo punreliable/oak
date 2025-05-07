@@ -10,23 +10,13 @@
 @import '../styles/types';
 @import '../styles/gameboy';
 
-
-
 :root {
 
-  --background: #ffffff;
-  --foreground: #171717;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-
   font-family: 'Press Start 2P', Inter, Helvetica, Arial, system-ui, sans-serif;
   font-synthesis: none;
   font-weight: 400;
-  
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-
   line-height: 1.5;
   max-width: 1280px;
   margin: 0 auto;
@@ -34,6 +24,11 @@
   text-align: center;
   text-rendering: optimizeLegibility;
   width: 100%;
+  --background: #ffffff;
+  --foreground: #171717;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
 
 }
 
@@ -55,7 +50,7 @@ body {
   justify-content: center;
   align-items: center;
   place-items: center;
-  padding: 1rem !important;
+  // padding: 1rem !important;
 
   .row {
       
