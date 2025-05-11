@@ -1,6 +1,5 @@
 import React from 'react';
 import prettyName from '../../../utilities/prettyName';
-import PokemonByRegion from "../../components/pokemonByRegion/PokemonByRegion";
 
 const Result = (props: any) => {
 
@@ -30,13 +29,13 @@ console.log('First Region: ', props.regions.results[0].name);
 
   return (
     <div className='App'>
-      <h1>Regions</h1>
+      <h1>Starters</h1>
       <div className='row rowStats'>
         <div className='col-md-12 col-lg- stats'>
           {regionNames && regionNames.map((region: any, index: number) => (
           <div key={index}>
             <h3 className="py-4">{prettyName(props.regions.results[index].name)}</h3>
-            {/* <PokemonByRegion regionId={region.id} /> */}
+      
           </div>
         ))}
         </div>
