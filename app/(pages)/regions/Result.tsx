@@ -36,7 +36,7 @@ console.log('First Region: ', props.regions.results[0].name);
           {regionNames && regionNames.map((region: any, index: number) => (
           <div key={index}>
             <h3 className="py-4">{prettyName(props.regions.results[index].name)}</h3>
-            {/* <PokemonByRegion regionId={region.id} /> */}
+            <PokemonByRegion regionId={region.id} />
           </div>
         ))}
         </div>

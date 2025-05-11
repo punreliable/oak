@@ -1,47 +1,78 @@
 import React from 'react';
 import prettyName from '../../../utilities/prettyName';
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
+import Link from 'next/link';
+import Error from './Error';
+import Pending from './Pending';
+
 
 const Result = (props: any) => {
 
-const count: number = props.regions.count;
-
-// for each region, I will need to create an array 9 ids. Then I will want to query an API for each of those ids
-const ids: number[] = [];
-for (let i = 0; i < props.regions.count; i++) {
-  ids.push(props.regions.results[i].id);
-}
-// I will need to create a new array of objects with the id and name of each region
-const regions: { id: number, name: string }[] = [];
-for (let i = 0; i < props.regions.count; i++) {
-  regions.push({ id: props.regions.results[i].id, name: props.regions.results[i].name });
-}
-
-// I will need to create a new array of objects with the id and name of each region
-
-const regionNames: { id: number, name: string }[] = [];
-for (let i = 0; i < props.regions.count; i++) {
-  regionNames.push({ id: props.regions.results[i].id, name: prettyName(props.regions.results[i].name)});
-}
-
-console.log('Regions: ', regionNames);
-console.log('Count: ', count);
 console.log('First Region: ', props.regions.results[0].name);
+
+const { data, isLoading, isError } = useQuery({
+    queryKey: ['pokedex-row-two'],
+    queryFn: async () => {
+      const rowStart = 24;
+      const res = await axios.get(`https://pokeapi.co/api/v2/region/${props.regions.results[0].name}/`);
+      return res.data;
+    },
+  });
+
+
+
+
+console.log('Pokedexes: ', data.pokedexes.url );
+  
+  if (isLoading) return <Pending />;
+  if (isError) return <p>Something went wrong!</p>;
 
   return (
     <div className='App'>
       <h1>Starters</h1>
       <div className='row rowStats'>
         <div className='col-md-12 col-lg- stats'>
-          {regionNames && regionNames.map((region: any, index: number) => (
-          <div key={index}>
-            <h3 className="py-4">{prettyName(props.regions.results[index].name)}</h3>
-      
-          </div>
-        ))}
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: 'auto',
+          height: 'auto',
+          float: 'left',
+        }}
+        key={data.pokedexes.name}
+      >
+        <div className='nes-container is-rounded with-title'>
+          <Link
+            href={`/pokedex/${data.pokedexes.name}`}
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            {/* <Image
+              src={imageUrl}
+              alt={pokemon.name}
+              width={96}
+              height={96}
+              className='rounded-sm'
+            /> */}
+            {/* <Link className='nes-badge' href={`/${pokemon.name}`}>
+              <span className='is-dark'>{prettyName(pokemon.name)}</span>
+            </Link> */}
+          </Link>
         </div>
       </div>
+              </div>
+      </div>
     </div>
-  );
+    );
 };
 
 export default Result;
