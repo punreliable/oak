@@ -1,6 +1,5 @@
 import prettyName from '../../utilities/prettyName';
 import { v4 as uuidv4 } from 'uuid';
-import './PokemonTypeList.scss';
 
 const PokemonTypeList = (props: any) => {
   const types = props.types;
@@ -18,7 +17,7 @@ const PokemonTypeList = (props: any) => {
     </div>
   ));
 
-  return <div className='row'>{minified}</div>;
+  return <div className='row row-types'>{minified}</div>;
 };
 
 export default PokemonTypeList;

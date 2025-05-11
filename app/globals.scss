@@ -61,6 +61,15 @@ body {
       width: 256px;
       
     }
+
+    &.row-types {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      place-items: center;
+      padding: 1rem 0;
+    }
   
   }
 
