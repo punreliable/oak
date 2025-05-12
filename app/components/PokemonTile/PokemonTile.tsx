@@ -6,25 +6,22 @@ import Pending from './Pending';
 import Result from './Result';
 
 const PokemonTile = (props: any) => {
-
-	const id = props;
-	console.log('URL for Tile data: ', props);
+  const url: string = props.data;
+  console.log('PokemonTile: ', url);
 	const { data, error, isLoading } = useQuery({
     queryKey: ['pokemon-details'],
     queryFn: async () => {
-      const response = await axios.get(`${props}`);
+      const response = await axios.get(url);
       return response.data;
     },
   });
 
   if (isLoading) return <Pending />;
-
   if (error) return <Error />;
-
   if(data) return (
-    <div className='App'>
-      <section className='nesContainer nes-container'>{data && <Result pokemon={data} />}</section>
-    </div>
+  <>
+    <Result pokemon={data} />
+  </>
   );
 }
 

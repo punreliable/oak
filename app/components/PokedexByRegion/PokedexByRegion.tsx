@@ -17,8 +17,14 @@ const PokedexByRegion = (props: any) => {
   });
 
   if (isLoading) return <Pending />;
+  
   if (error) return <Error />;
-  if(data) return <section className='nesContainer nes-container'>{data && <Result pokedex={data} />}</section>;
+  
+  if(data) return (
+    <section className='nesContainer nes-container'>
+      <Result pokedex={data} />
+    </section>
+  );
   
 }
 
