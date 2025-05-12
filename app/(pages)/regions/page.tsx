@@ -10,17 +10,14 @@ const RegionsPage = () => {
   const { data, error, isLoading } = useQuery({
     queryKey: ['regions'],
     queryFn: async () => {
-      // const id = getBerryNumber();
       const response = await axios.get(`https://pokeapi.co/api/v2/region`);
       return response.data;
     },
   });
 
   if (isLoading) return <Pending />;
-
   if (error) return <Error />;
-
-  return (
+  if (data) return (
     <div className='App'>
       <section className='nesContainer nes-container'>{data && <Result regions={data} />}</section>
     </div>

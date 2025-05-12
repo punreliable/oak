@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import unknown from '../../../assets/0.png';
 import professorOak from '../../../assets/oak.svg';
-const PendingBerries = () => {
+const Pending = () => {
   return (
     <>
       <h1 className='oakHello'>Loading...</h1>
@@ -39,4 +39,4 @@ const PendingBerries = () => {
   );
 };
 
-export default PendingBerries;
+export default Pending;

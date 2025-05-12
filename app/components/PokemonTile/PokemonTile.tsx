@@ -5,21 +5,27 @@ import Error from './Error';
 import Pending from './Pending';
 import Result from './Result';
 
-const PokedexByRegion = (props: any) => {
+const PokemonTile = (props: any) => {
 
-	const id = props.regionId;
+	const id = props;
+	console.log('URL for Tile data: ', props);
 	const { data, error, isLoading } = useQuery({
-    queryKey: ['regional-pokedex'],
+    queryKey: ['pokemon-details'],
     queryFn: async () => {
-      const response = await axios.get(`https://pokeapi.co/api/v2/region/${id}`);
+      const response = await axios.get(`${props}`);
       return response.data;
     },
   });
 
   if (isLoading) return <Pending />;
+
   if (error) return <Error />;
-  if(data) return <section className='nesContainer nes-container'>{data && <Result pokedex={data} />}</section>;
-  
+
+  if(data) return (
+    <div className='App'>
+      <section className='nesContainer nes-container'>{data && <Result pokemon={data} />}</section>
+    </div>
+  );
 }
 
-export default PokedexByRegion;
+export default PokemonTile;
