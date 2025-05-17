@@ -15,11 +15,13 @@ for (let i = 0; i < props.regions.count; i++) {
   regions.push({ id: props.regions.results[i].id, name: props.regions.results[i].name });
 }
 
+console.log('Regions Results');
+
   return (
     <div className='App'>
       <h1>Regions</h1>
       <div className='row'>
-        <div className='col-md-12 col-lg-12 stats'>
+        <div className='col-md-12 col-lg-12'>
           {regions && regions.map((region: any, index: number) => (
           <div key={index}>
             <h3 className="py-4">{prettyName(props.region.results[index].name)}</h3>

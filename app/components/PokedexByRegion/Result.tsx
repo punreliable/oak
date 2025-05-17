@@ -8,7 +8,7 @@ import PokemonTile from '../PokemonTile/PokemonTile';
 const Result = (props: any) => {
 
   const { data, isLoading, isError } = useQuery({
-    queryKey: ['pokedexes', props.pokedex.pokedexes[0].url],
+    queryKey: ['pokedexes', props.pokedex.pokedexes.url],
     queryFn: async () => {
       const res = await axios.get(`${props.pokedex.pokedexes[0].url}`);
       return res.data;
@@ -19,7 +19,8 @@ const Result = (props: any) => {
   if (isError) return <Error />;
   if (data) return (
     <>
-      <PokemonTile data={data.pokemon_entries[0].pokemon_species.url} />
+      <h1>getting here?</h1>
+      {/* <PokemonTile data={data.pokemon_entries[0].pokemon_species.url} /> */}
 
     </>
   );

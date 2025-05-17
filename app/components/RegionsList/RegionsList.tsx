@@ -8,8 +8,10 @@ import prettyName from '@/utilities/prettyName';
 import RegionPokedex from '../RegionPokedex/RegionPokedex';
 
 const RegionsList = (regions: any) => {
+	
+	console.log('Regions List');
 
-	const id = regions.regionId;
+	const id = regions.url;
 	const { data, error, isLoading } = useQuery({
     queryKey: ['regional-pokedex', id],
     queryFn: async () => {
