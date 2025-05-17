@@ -8,7 +8,7 @@ import prettyName from '@/utilities/prettyName';
 
 // Example pseudo-code for components/PokemonSpeciesList.tsx
 // Example pseudo-code for components/PokemonSpeciesDetail.tsx
-const PokemonSpeciesDetail = ({ speciesData }) => {
+const PokemonSpeciesDetail = ({ speciesData }: any) => {
 	// Note: Sprites are typically on the /pokemon endpoint, not /pokemon-species
 	// You might need to adjust the URL or perform another fetch here if speciesData.url doesn't have sprite info.
 	// Let's assume for this example you need to fetch from the /pokemon endpoint using the name
