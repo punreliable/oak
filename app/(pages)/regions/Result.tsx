@@ -15,20 +15,15 @@ for (let i = 0; i < props.regions.count; i++) {
   regions.push({ id: props.regions.results[i].id, name: props.regions.results[i].name });
 }
 
-const regionNames: { id: number, name: string }[] = [];
-for (let i = 0; i < props.regions.count; i++) {
-  regionNames.push({ id: props.regions.results[i].id, name: prettyName(props.regions.results[i].name)});
-}
-
   return (
     <div className='App'>
       <h1>Regions</h1>
-      <div className='row rowStats'>
+      <div className='row'>
         <div className='col-md-12 col-lg-12 stats'>
-          {regionNames && regionNames.map((region: any, index: number) => (
+          {regions && regions.map((region: any, index: number) => (
           <div key={index}>
-            <h3 className="py-4">{prettyName(props.regions.results[index].name)}</h3>
-            <PokedexByRegion regionId={props.regions.results[index].name} />
+            <h3 className="py-4">{prettyName(props.region.results[index].name)}</h3>
+            <PokedexByRegion regionData={props.region.results[index].name} />
           </div>
         ))}
         </div>

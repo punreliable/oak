@@ -20,7 +20,6 @@ const Result = (props: any) => {
   if (data) return (
     <>
       <PokemonTile data={data.pokemon_entries[0].pokemon_species.url} />
-
     </>
   );
 

@@ -11,7 +11,7 @@ const RegionsPage = () => {
     queryKey: ['regions'],
     queryFn: async () => {
       const response = await axios.get(`https://pokeapi.co/api/v2/region`);
-      return response.data;
+      return response.data.results;
     },
   });
 
