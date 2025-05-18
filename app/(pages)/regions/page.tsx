@@ -5,6 +5,7 @@ import axios from 'axios';
 import Error from './Error';
 import Pending from './Pending';
 import Result from './Result';
+import RegionsList from '../../components/RegionsList/RegionsList';
 
 const RegionsPage = () => {
   const { data, error, isLoading } = useQuery({
@@ -19,7 +20,7 @@ const RegionsPage = () => {
   if (error) return <Error />;
   if (data) return (
     <div className='App'>
-      <section className='nesContainer nes-container'>{data && <Result regions={data} />}</section>
+      <section className='nesContainer nes-container'>{data && <RegionsList regions={data} />}</section>
     </div>
   );
 };
