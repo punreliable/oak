@@ -1,19 +1,12 @@
-import React from 'react';
+// /Users/brian/Sites/oak/app/(pages)/pokemon/[id]/page.tsx
 
-const SinglePokemon = () => {
-  return (
-    <div className='container'>
-      <section className='nesContainer nes-container'>
-        <div className='row'>
-          <h1 className='text-center'>Single Pokemon</h1>
-        </div>
+  
+  export default function PokemonPage2() {
 
-        <div className='nes-table-responsive'>
-          
-        </div>
-      </section>
+
+	return (
+    <div className='App'>
+      <section className='nesContainer nes-container'><h1 className="text-center py-4">You need to add a parameter to your URL to select a pokemon.</h1></section>
     </div>
-  );
-};
-
-export default SinglePokemon;
+	);
+  }
