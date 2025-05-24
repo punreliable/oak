@@ -5,7 +5,9 @@ import React from 'react';
 // import Pending from './Pending';
 // import PokemonTile from '../PokemonTile/PokemonTile';
 
-const Result = (props: any) => {
+const Result = (props: {key: string; data: {} | any } ) => {
+
+  console.log('Result: ', props);
 
   // const { data, isLoading, isError } = useQuery({
   //   queryKey: ['pokedexes'],
@@ -17,17 +19,13 @@ const Result = (props: any) => {
   
   // if (isLoading) return <Pending />;
   // if (isError) return <Error />;
-  // if (data) return (
-  //   <>
-  //     <h1>getting here?</h1>
-  //     {/* <PokemonTile data={data.pokemon_entries[0].pokemon_species.url} /> */}
-
-  //   </>
-  // );
-
-  return(
-    <><h1>Hello World!</h1></>
+  // if (data) 
+    return (
+    <>
+      <h1>Test</h1>
+    </>
   );
+
 };
 
 export default Result;

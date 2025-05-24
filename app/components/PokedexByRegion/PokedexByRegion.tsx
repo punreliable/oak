@@ -4,37 +4,39 @@ import axios from 'axios';
 import Error from './Error';
 import Pending from './Pending';
 import Result from './Result';
+import StarterPokemon from '@/app/components/StarterPokemon/StarterPokemon';
 
-const PokedexByRegion = (props: any) => {
-  
-  console.log('Am I getting here?');
+const PokedexByRegion = (props: {key: string; url: string;}) => {
 
-	const id = props.data.url;
+	const url = props.url;
+  console.log("Region URL: ", props.url);
 	const { data, error, isLoading } = useQuery({
-    queryKey: ['regional-pokedex'],
+    queryKey: ['pokedex', url],
     queryFn: async () => {
-      const response = await axios.get(`https://pokeapi.co/api/v2/region/${id}`);
+      const response = await axios.get(`${url}`);
       return response.data;
     },
   });
 
+
+
+  // const allPokemonEntries = data.pokemon_entries;
+  // const firstNinePokemonEntries = allPokemonEntries && allPokemonEntries.length > 0
+  // ? allPokemonEntries.slice(0, 9)
+  // : [];
+  // console.log("First 9: ", firstNinePokemonEntries)
+
   if (isLoading) return <Pending />;
   
   if (error) return <Error />;
-  
+
   if(data) {
-    const allPokemonEntries = data.pokemon_entries;
-    const firstNinePokemonEntries = allPokemonEntries && allPokemonEntries.length > 0
-    ? allPokemonEntries.slice(0, 9)
-    : [];
-   console.log("First 9: ", firstNinePokemonEntries)
     return (
       <section className='nesContainer nes-container'>
         {/* <Result pokemonEntries={firstNinePokemonEntries} />*/}
-        <Result />
+        <StarterPokemon pokedex={data} />
       </section>
     );
-
   }
   
 }
