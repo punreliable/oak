@@ -7,12 +7,14 @@ import Result from './Result';
 import prettyName from '@/utilities/prettyName';
 
 // Example pseudo-code for components/RegionPokedex.tsx
-const RegionPokedex = ({ regionData }) => {
+const RegionPokedex = ( pokedexUrl: string ) => {
+
+	console.log('made it to RegionPokedex');
 	const { data, isLoading, error } = useQuery({
-	  queryKey: ['regional-pokedex', regionData.name], // Unique key per region
+	  queryKey: ['regional-pokedex'], // Unique key per region
 	  queryFn: async () => {
 		// Use the URL provided by the regions endpoint
-		const response = await axios.get(regionData.url);
+		const response = await axios.get(pokedexUrl);
 		return response.data; // This data contains the list of pokemon_entries
 	  },
 	});
@@ -26,7 +28,7 @@ const RegionPokedex = ({ regionData }) => {
 	  return (
 		<div>
 		  {/* Pass the extracted list to the next component */}
-		  <PokemonSpeciesList pokemonEntries={firstNinePokemon} />
+		  <Result pokemonEntries={firstNinePokemon} />
 		</div>
 	  );
 	}

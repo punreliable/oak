@@ -4,12 +4,11 @@ import axios from 'axios';
 import Error from './Error';
 import Pending from './Pending';
 import PokemonTile from '../PokemonTile/PokemonTile';
-import RegionPokedex from '../RegionPokedex/RegionPokedex';
 
 const Result = (props: any) => {
 
   const { data, isLoading, isError } = useQuery({
-    queryKey: ['pokedexes'],
+    queryKey: ['pokedexes', props.pokedex.pokedexes[0].url],
     queryFn: async () => {
       const res = await axios.get(`${props.pokedex.pokedexes[0].url}`);
       return res.data;
@@ -20,7 +19,7 @@ const Result = (props: any) => {
   if (isError) return <Error />;
   if (data) return (
     <>
-      <RegionPokedex pokedexUrl={data.pokemon_entries[0].pokemon_species.url} />
+      <PokemonTile data={data.pokemon_entries[0].pokemon_species.url} />
     </>
   );
 

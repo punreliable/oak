@@ -16,8 +16,6 @@ for (let i = 0; i < props.regions.count; i++) {
   regions.push({ id: props.regions.results[i].id, name: props.regions.results[i].name });
 }
 
-console.log('Regions Results');
-
   return (
     <div className='App'>
       <h1>Regions</h1>
