@@ -5,7 +5,7 @@ import React from 'react';
 // import Pending from './Pending';
 // import PokemonTile from '../PokemonTile/PokemonTile';
 
-const Result = (props: {key: string; data: {} | any } ) => {
+const Result = (props: any ) => {
 
   console.log('Result: ', props);
 
