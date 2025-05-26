@@ -1,11 +1,9 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
 import Error from './Error';
 import Pending from './Pending';
 import Result from './Result';
-import prettyName from '@/utilities/prettyName';
 
 const Result = (props: { pokedex: { pokedexes: any;}} | any) => {
 
@@ -16,27 +14,27 @@ const Result = (props: { pokedex: { pokedexes: any;}} | any) => {
 	const regionName: string = props.pokedex?.name;
 	console.log('Your Region name is: ', regionName);
 
-	let pokedexToQuery: string[] = [];
+	const pokedexToQuery: string[] = [];
 
 	if(listOfPokedexes) { // Check if listOfPokedexes is defined
-	const correctPokedex = listOfPokedexes.map(
-		(
-			pokedexes: { 
-				name: string; 
-				url: string; 
-				pokedex: { 
-					pokedexes: { 
-						name: string; 
-						url: string; 
-					} 
-				} 
-			} 
-		) => {
+	// const correctPokedex = listOfPokedexes.map(
+	// 	(
+	// 		pokedexes: { 
+	// 			name: string; 
+	// 			url: string; 
+	// 			pokedex: { 
+	// 				pokedexes: { 
+	// 					name: string; 
+	// 					url: string; 
+	// 				} 
+	// 			} 
+	// 		} 
+	// 	) => {
 
-				pokedexToQuery.push(pokedexes.url);
+	// 			pokedexToQuery.push(pokedexes.url);
 			
-		}
-	);
+	// 	}
+	// );
 }
 
 	const url = pokedexToQuery[0];

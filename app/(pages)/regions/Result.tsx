@@ -1,11 +1,8 @@
 import React from 'react';
 import prettyName from '../../../utilities/prettyName';
 import RegionsList from '@/app/components/RegionsList/RegionsList';
-import { RegionsListProps } from '@/interfaces/regions';
 
 const Result = (props: any) => {
-
-const count: number = props.regions.count;
 
 const ids: number[] = [];
 for (let i = 0; i < props.regions.count; i++) {

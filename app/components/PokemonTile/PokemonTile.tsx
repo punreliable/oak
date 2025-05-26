@@ -1,5 +1,6 @@
 // app/components/PokemonTile/PokemonTile.tsx (Example Structure)
 'use client'; // Add this if it's a client component
+import Image from 'next/image';
 
 import React, { useEffect, useState } from 'react';
 // Import any necessary types for Pokemon detail data
@@ -49,7 +50,7 @@ const PokemonTile: React.FC<TilePokemonProps> = ( pokemon: SinglePokemonData ) =
             <h3>{pokemonDetail.name}</h3>
             {/* Example: Displaying the sprite */}
             {pokemonDetail.sprites?.front_default && (
-                 <img src={pokemonDetail.sprites.front_default} alt={pokemonDetail.name} />
+                 <Image src={pokemonDetail.sprites.front_default} alt={pokemonDetail.name} />
             )}
             {/* Render other Pokemon details */}
         </>

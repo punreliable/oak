@@ -3,7 +3,6 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import Error from './Error';
 import Pending from './Pending';
-import PokemonTile from '../PokemonTile/PokemonTile';
 import RegionPokedex from '../RegionPokedex/RegionPokedex';
 
 const Result = (props: any) => {

@@ -4,7 +4,6 @@ import axios from 'axios';
 import Error from './Error';
 import Pending from './Pending';
 import Result from './Result';
-import prettyName from '@/utilities/prettyName';
 
 // Example pseudo-code for components/RegionPokedex.tsx
 const RegionPokedex = ( pokedexUrl: string ) => {
