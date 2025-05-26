@@ -1,0 +1,240 @@
+// ComicUI Specific Variables
+
+$apps-color: #607d8b;
+$boot-color: #FFFFFF;
+$card-color: #673AB7;
+$cite-color: #009688;
+$code-color: #3f51b5;
+$doom-color: #000000;
+$film-color: #FF5722;
+$find-color: #8BC34A;
+$font-color: #795548;
+$give-color: #4CAf50;
+$join-color: #03A9F4;
+$logo-color: #FF9800;
+$more-color: #607D8B;
+$meme-color: #000000;
+$news-color: #2196F3;
+$odds-color: #CDDC39;
+$pick-color: #FFC107;
+$poke-color: #E91E63;
+$poll-color: #9c27b0;
+$rest-color: #607d8b;
+$shop-color: #F44336;
+$spin-color: #00bcd4;
+$user-color: #9E9E9E;
+$vote-color: #FFEB3B;
+
+$color-text: #F7F9F6;
+$color-text-shadow: #7E746B;
+
+$color-black: $color-text-shadow;
+$color-white: $color-text;
+
+$color-type-bug: #A8B821;
+$color-type-bug-highlight: #d6df36;
+$color-type-bug-shadow: #7A8E11;
+
+$color-type-dark: #715748;
+$color-type-dark-highlight: #A8A676;
+$color-type-dark-shadow: #474135;
+
+$color-type-dragon: #7039f7;
+$color-type-dragon-highlight: #b99ffa;
+$color-type-dragon-shadow: #463a8e;
+
+$color-type-electric: #f7cf2f;
+$color-type-electric-highlight: #f4fa76;
+$color-type-electric-shadow: #b9a039;
+
+$color-type-fairy: #fb8ead;
+$color-type-fairy-highlight: #f9bfb4;
+$color-type-fairy-shadow: #945b61;
+
+$color-type-fighting: #c03028;
+$color-type-fighting-highlight: #f17e2e;
+$color-type-fighting-shadow: #454233;
+
+$color-type-fire: #f07f2f;
+$color-type-fire-highlight: #f6d02d;
+$color-type-fire-shadow: #bf3127;
+
+$color-type-flying: #a890f0;
+$color-type-flying-highlight: #c8c1f7;
+$color-type-flying-shadow: #725899;
+
+$color-type-ghost: #705798;
+$color-type-ghost-highlight: #a890f0;
+$color-type-ghost-shadow: #483855;
+
+$color-type-grass: #78ca4c;
+$color-type-grass-highlight: #c2f25e;
+$color-type-grass-shadow: #587f3c;
+
+$color-type-ground: #e2bd6c;
+$color-type-ground-highlight: #faf776;
+$color-type-ground-shadow: #896832;
+
+$color-type-ice: #98d8d8;
+$color-type-ice-highlight: #d5f5ea;
+$color-type-ice-shadow: #8f91a0;
+
+$color-type-normal: #aba982;
+$color-type-normal-highlight: #d7d6c1;
+$color-type-normal-shadow: #715a4a;
+
+$color-type-poison-highlight: #d87fb7;
+$color-type-poison-shadow: #49374f;
+$color-type-poison: #9d429f;
+
+$color-type-psychic: #f85888;
+$color-type-psychic-highlight: #f7c3ab;
+$color-type-psychic-shadow: #916363;
+
+$color-type-rock: #b7a038;
+$color-type-rock-highlight: #e0c069;
+$color-type-rock-shadow: #87682f;
+
+$color-type-steel: #b8b9ce;
+$color-type-steel-highlight: #d8d7c2;
+$color-type-steel-shadow: #817670;
+
+$color-type-water: #6890f0;
+$color-type-water-highlight: #99d8dd;
+$color-type-water-shadow: #807573;
+
+$bug-type-colors: (
+  normal: $color-type-bug,
+  hover: $color-type-bug-highlight,
+  shadow: $color-type-bug-shadow
+) !default;
+
+$dark-type-colors: (
+  normal: $color-type-dark,
+  hover: $color-type-dark-highlight,
+  shadow: $color-type-dark-shadow
+) !default;
+
+$dragon-type-colors: (
+  normal: $color-type-dragon,
+  hover: $color-type-dragon-highlight,
+  shadow: $color-type-dragon-shadow
+) !default;
+
+$fairy-type-colors: (
+  normal: $color-type-fairy,
+  hover: $color-type-fairy-highlight,
+  shadow: $color-type-fairy-shadow
+) !default;
+
+$electric-type-colors: (
+  normal: $color-type-electric,
+  hover: $color-type-electric-highlight,
+  shadow: $color-type-electric-shadow
+) !default;
+
+$fairy-type-colors: (
+  normal: $color-type-fairy,
+  hover: $color-type-fairy-highlight,
+  shadow: $color-type-fairy-shadow
+) !default;
+
+$fighting-type-colors: (
+  normal: $color-type-fighting,
+  hover: $color-type-fighting-highlight,
+  shadow: $color-type-fighting-shadow
+) !default;
+
+$fire-type-colors: (
+  normal: $color-type-fire,
+  hover: $color-type-fire-highlight,
+  shadow: $color-type-fire-shadow
+) !default;
+
+$ice-type-colors: (
+  normal: $color-type-ice,
+  hover: $color-type-ice-highlight,
+  shadow: $color-type-ice-shadow
+) !default;
+
+$flying-type-colors: (
+  normal: $color-type-flying,
+  hover: $color-type-flying-highlight,
+  shadow: $color-type-flying-shadow
+) !default;
+
+$ghost-type-colors: (
+  normal: $color-type-ghost,
+  hover: $color-type-ghost-highlight,
+  shadow: $color-type-ghost-shadow
+) !default;
+
+$grass-type-colors: (
+  normal: $color-type-grass,
+  hover: $color-type-grass-highlight,
+  shadow: $color-type-grass-shadow
+) !default;
+
+$ground-type-colors: (
+  normal: $color-type-ground,
+  hover: $color-type-ground-highlight,
+  shadow: $color-type-ground-shadow
+) !default;
+
+$ice-type-colors: (
+  normal: $color-type-ice,
+  hover: $color-type-ice-highlight,
+  shadow: $color-type-ice-shadow
+) !default;
+
+$normal-type-colors: (
+  normal: $color-type-normal,
+  hover: $color-type-normal-highlight,
+  shadow: $color-type-normal-shadow
+) !default;
+
+$poison-type-colors: (
+  normal: $color-type-poison,
+  hover: $color-type-poison-highlight,
+  shadow: $color-type-poison-shadow
+) !default;
+
+$psychic-type-colors: (
+  normal: $color-type-psychic,
+  hover: $color-type-psychic-highlight,
+  shadow: $color-type-psychic-shadow
+) !default;
+
+$rock-type-colors: (
+  normal: $color-type-rock,
+  hover: $color-type-rock-highlight,
+  shadow: $color-type-rock-shadow
+) !default;
+
+$steel-type-colors: (
+  normal: $color-type-steel,
+  hover: $color-type-steel-highlight,
+  shadow: $color-type-steel-shadow
+) !default;
+
+$water-type-colors: (
+  normal: $color-type-water,
+  hover: $color-type-water-highlight,
+  shadow: $color-type-water-shadow
+) !default;
+
+$font-weight-bold: 700;
+$font-weight-normal: 500;
+$font-weight-thin: 300;
+
+$font-size-h1: 3rem;
+$font-size-h2: 2.5rem;
+$font-size-h3: 2.2rem;
+$font-size-h4: 2.0rem;
+$font-size-h5: 1.8rem;
+$font-size-h6: 1.6rem;
+
+$font-size-p: 1.4rem;
+
+// NES.css Dependency for custom Gameboy tables
+$border-size: 4px !default;
