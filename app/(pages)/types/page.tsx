@@ -1,7 +1,5 @@
 import './PokemonTypesPage.scss';
-import Link from 'next/link';
 import CardPokemonType from './CardPokemonType';
-import type PokemonType from '@/app/types/PokemonType.d.ts';
 
 const PagePokemonTypeList = () => {
 
