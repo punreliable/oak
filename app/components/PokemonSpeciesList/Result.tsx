@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import Error from './Error';
 import Pending from './Pending';
-import PokemonTile from '../PokemonTile/PokemonTile';
+// import PokemonTile from '../PokemonTile/PokemonTile';
 
 const Result = (props: any) => {
 
@@ -19,7 +19,8 @@ const Result = (props: any) => {
   if (isError) return <Error />;
   if (data) return (
     <>
-      <PokemonTile data={data.pokemon_entries[0].pokemon_species.url} />
+    <h1>Coming Soon</h1>
+      {/* <PokemonTile data={data.pokemon_entries[0].pokemon_species.url} /> */}
 
     </>
   );
