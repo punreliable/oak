@@ -1,11 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 import prettyName from '../../../utilities/prettyName';
-import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
+// import { useQuery } from '@tanstack/react-query';
+// import axios from 'axios';
 import Link from 'next/link';
-import Error from './Error';
-import Pending from './Pending';
+// import Error from './Error';
+// import Pending from './Pending';
 
 const Result = (props: any) => {
 
