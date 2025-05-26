@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Result = ( props: { pokedex: {}; pokedexes: [ url: string ] } ) => {
+const Result = () => {
 
   return (<h1>Coming Soon</h1>);
 
