@@ -23,7 +23,7 @@ const RegionPokedex = ( pokedexUrl: string ) => {
   
 	if (data) {
 	  // Extract the first 9 pokemon_species entries
-	  const firstNinePokemon = data.pokemon_entries.slice(0, 9);
+	//   const firstNinePokemon = data.pokemon_entries.slice(0, 9);
 	  return (
 		<div>
 			<h1>Coming Soon.</h1>
