@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import Error from './Error';
 import Pending from './Pending';
-import Result from './Result';
+// import Result from './Result';
 
 // Example pseudo-code for components/RegionPokedex.tsx
 const RegionPokedex = ( pokedexUrl: string ) => {
@@ -26,8 +26,9 @@ const RegionPokedex = ( pokedexUrl: string ) => {
 	  const firstNinePokemon = data.pokemon_entries.slice(0, 9);
 	  return (
 		<div>
+			<h1>Coming Soon.</h1>
 		  {/* Pass the extracted list to the next component */}
-		  <Result pokemonEntries={firstNinePokemon} />
+		  {/* <Result pokemonEntries={firstNinePokemon} /> */}
 		</div>
 	  );
 	}
