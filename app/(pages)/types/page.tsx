@@ -17,9 +17,9 @@ const PagePokemonTypeList = () => {
             Learn all of their&nbsp;advantages, and&nbsp;disadvantages.
           </h2>
 
-      </div>
+        </div>
 
-    </div>
+      </div>
 
     <div className="row pb-4">
 
@@ -29,7 +29,7 @@ const PagePokemonTypeList = () => {
           {
           'name': 'Normal',
           'link': '/type/normal',
-          'container': 'type-normal-container'
+          'container': 'normal'
           }
         } />
 
@@ -41,7 +41,7 @@ const PagePokemonTypeList = () => {
           {
           'name': 'Fighting',
           'link': '/type/fighting',
-          'container': 'type-fighting-container'
+          'container': 'fighting'
           }
         } />
 
@@ -53,7 +53,7 @@ const PagePokemonTypeList = () => {
           {
           'name': 'Flying',
           'link': '/type/flying',
-          'container': 'type-flying-container'
+          'container': 'flying'
           }
         } />
 
@@ -65,191 +65,186 @@ const PagePokemonTypeList = () => {
           {
           'name': 'Poison',
           'link': '/type/poison',
-          'container': 'type-poison-container'
+          'container': 'poison'
           }
         } />
         
       </div>
 
-		<div className="col-lg-4 col-sm-6">
+      <div className="col-lg-4 col-sm-6">
 
-      <CardPokemonType type={
+        <CardPokemonType type={
+              {
+              'name': 'Ground',
+              'link': '/type/ground',
+              'container': 'ground'
+              }
+            } />
+      </div>
+
+      <div className="col-lg-4 col-sm-6">
+
+        <CardPokemonType type={
+              {
+              'name': 'Rock',
+              'link': '/type/rock',
+              'container': 'rock'
+              }
+            } />
+
+      </div>
+
+      <div className="col-lg-4 col-sm-6">
+
+        <CardPokemonType type={
+              {
+              'name': 'Bug',
+              'link': '/type/bug',
+              'container': 'bug'
+              }
+            } />
+
+      </div>
+
+      <div className="col-lg-4 col-sm-6">
+
+        <CardPokemonType type={
+              {
+              'name': 'Ghost',
+              'link': '/type/ghost',
+              'container': 'ghost'
+              }
+            } />
+
+      </div>
+
+      <div className="col-lg-4 col-sm-6">
+
+        <CardPokemonType type={
+              {
+              'name': 'Steel',
+              'link': '/type/steel',
+              'container': 'steel'
+              }
+            } />
+
+      </div>
+
+      <div className="col-lg-4 col-sm-6">
+
+        <CardPokemonType type={
+              {
+              'name': 'Fire',
+              'link': '/type/fire',
+              'container': 'fire'
+              }
+            } />
+
+      </div>
+
+      <div className="col-lg-4 col-sm-6">
+
+        <CardPokemonType type={
+              {
+              'name': 'Water',
+              'link': '/type/water',
+              'container': 'water'
+              }
+            } />
+
+
+      </div>
+
+      <div className="col-lg-4 col-sm-6">
+
+        <CardPokemonType type={
+              {
+              'name': 'Grass',
+              'link': '/type/grass',
+              'container': 'grass'
+              }
+            } />
+
+
+      </div>
+
+      <div className="col-lg-4 col-sm-6">
+
+        <CardPokemonType type={
+              {
+              'name': 'Electric',
+              'link': '/type/electric',
+              'container': 'electric'
+              }
+            } />
+
+
+      </div>
+
+      <div className="col-lg-4 col-sm-6">
+
+        <CardPokemonType type={
+              {
+              'name': 'Psychic',
+              'link': '/type/psychic',
+              'container': 'psychic'
+              }
+            } />
+
+      </div>
+
+      <div className="col-lg-4 col-sm-6">
+
+        <CardPokemonType type={
+              {
+              'name': 'Ice',
+              'link': '/type/ice',
+              'container': 'ice'
+              }
+            } />
+            
+      </div>
+
+      <div className="col-lg-4 col-sm-6">
+        
+        <CardPokemonType type={
             {
-            'name': 'Ground',
-            'link': '/type/ground',
-            'container': 'type-ground-container'
+            'name': 'Dragon',
+            'link': '/type/dragon',
+            'container': 'dragon'
             }
           } />
-    </div>
 
-		<div className="col-lg-4 col-sm-6">
+      </div>
 
-      <CardPokemonType type={
-            {
-            'name': 'Rock',
-            'link': '/type/rock',
-            'container': 'type-rock-container'
-            }
-          } />
+      <div className="col-lg-4 col-sm-6">
 
-    </div>
-
-
-		<div className="col-lg-4 col-sm-6">
-
-      <CardPokemonType type={
-            {
-            'name': 'Bug',
-            'link': '/type/bug',
-            'container': 'type-bug-container'
-            }
-          } />
-
-    </div>
-
-    <div className="col-lg-4 col-sm-6">
-
-<CardPokemonType type={
-      {
-      'name': 'Ghost',
-      'link': '/type/ghost',
-      'container': 'type-ghost-container'
-      }
-    } />
-
-</div>
-
-
-<div className="col-lg-4 col-sm-6">
-
-<CardPokemonType type={
-      {
-      'name': 'Steel',
-      'link': '/type/steel',
-      'container': 'type-steel-container'
-      }
-    } />
-
-</div>
-
-
-<div className="col-lg-4 col-sm-6">
-
-<CardPokemonType type={
-      {
-      'name': 'Fire',
-      'link': '/type/fire',
-      'container': 'type-fire-container'
-      }
-    } />
-
-</div>
-
-<div className="col-lg-4 col-sm-6">
-
-<CardPokemonType type={
-      {
-      'name': 'Water',
-      'link': '/type/water',
-      'container': 'type-water-container'
-      }
-    } />
-
-
-</div>
-
-<div className="col-lg-4 col-sm-6">
-
-<CardPokemonType type={
-      {
-      'name': 'Grass',
-      'link': '/type/grass',
-      'container': 'type-grass-container'
-      }
-    } />
-
-
-</div>
-
-<div className="col-lg-4 col-sm-6">
-
-<CardPokemonType type={
-      {
-      'name': 'Electric',
-      'link': '/type/electric',
-      'container': 'type-electric-container'
-      }
-    } />
-
-
-</div>
-
-<div className="col-lg-4 col-sm-6">
-
-<CardPokemonType type={
-      {
-      'name': 'Psychic',
-      'link': '/type/psychic',
-      'container': 'type-psychic-container'
-      }
-    } />
-
-
-  </div>
-
-
-    <div className="col-lg-4 col-sm-6">
-
-      <CardPokemonType type={
-            {
-            'name': 'Ice',
-            'link': '/type/ice',
-            'container': 'type-ice-container'
-            }
-          } />
-          
-    </div>
-
-		<div className="col-lg-4 col-sm-6">
-			
-      <CardPokemonType type={
+        <CardPokemonType type={
           {
-          'name': 'Dragon',
-          'link': '/type/dragon',
-          'container': 'type-dragon-container'
+          'name': 'Dark',
+          'link': '/type/dark',
+          'container': 'dark'
           }
         } />
 
-    </div>
+      </div>
 
-		<div className="col-lg-4 col-sm-6">
+      <div className="col-lg-4 col-sm-6">
 
-      <CardPokemonType type={
-        {
-        'name': 'Dark',
-        'link': '/type/dark',
-        'container': 'type-dark-container'
-        }
-      } />
+        <CardPokemonType type={
+          {
+          'name': 'Fairy',
+          'link': '/type/fairy',
+          'container': 'fairy'
+          }
+        } />
 
-  </div>
-
-		<div className="col-lg-4 col-sm-6">
-
-      <CardPokemonType type={
-        {
-        'name': 'Fairy',
-        'link': '/type/fairy',
-        'container': 'type-fairy-container'
-        }
-      } />
+      </div>
 
     </div>
 
+  </main>
 
-	</div>
-
-      </main>
 
   
   );

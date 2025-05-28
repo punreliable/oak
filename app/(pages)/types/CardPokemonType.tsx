@@ -4,7 +4,7 @@ const CardPokemonType = (props: { type: { name: string; link: string; container:
 
 	return(
 
-		<div className={`card is-dark member-card ${props.type.container} clickable`}>
+		<div className={`card is-dark member-card type-${props.type.container}-container clickable`}>
 			<div className="card-body" style={{'position':'relative'}}>
 				<div className="avatar gameboy"></div>
 			</div>

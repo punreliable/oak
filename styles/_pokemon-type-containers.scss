@@ -9,7 +9,7 @@ $border-size: 4px;
 	width: 320px;
 
 	background-color: $color-normal;
-	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/01-normal.svg');
+	background-image: url('../assets/type-icons-color-dark/01-normal.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
@@ -139,7 +139,7 @@ $base-color: $color-normal;
 	@extend .type-container;
 
 	background-color: $color-normal;
-	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/01-normal.svg');
+	background-image: url('../assets/type-icons-color-dark/01-normal.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
@@ -236,7 +236,7 @@ $base-color: $color-dark;
 	width: 320px;
 
 	background-color: $color-fighting;
-	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/02-fighting.svg');
+	background-image: url('../assets/type-icons-color-dark/02-fighting.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
@@ -303,7 +303,7 @@ $base-color: $color-flying;
 	width: 320px;
 
 	background-color: $color-flying;
-	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/03-flying.svg');
+	background-image: url('../assets/type-icons-color-dark/03-flying.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
@@ -435,7 +435,7 @@ $base-color: $color-poison;
 	width: 320px;
 
 	background-color: $color-poison;
-	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/04-poison.svg');
+	background-image: url('../assets/type-icons-color-dark/04-poison.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
@@ -571,7 +571,7 @@ $base-color: $color-ground;
 	width: 320px;
 
 	background-color: $color-ground;
-	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/05-ground.svg');
+	background-image: url('../assets/type-icons-color-dark/05-ground.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
@@ -707,7 +707,7 @@ $base-color: $color-rock;
 	width: 320px;
 
 	background-color: $color-rock;
-	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/06-rock.svg');
+	background-image: url('../assets/type-icons-color-dark/06-rock.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
@@ -845,7 +845,7 @@ $base-color: $color-bug;
 	width: 320px;
 
 	background-color: $color-bug;
-	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/07-bug.svg');
+	background-image: url('../assets/type-icons-color-dark/07-bug.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
@@ -981,7 +981,7 @@ $base-color: $color-ghost;
 	width: 320px;
 
 	background-color: $color-ghost;
-	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/08-ghost.svg');
+	background-image: url('../assets/type-icons-color-dark/08-ghost.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
@@ -1116,7 +1116,7 @@ $base-color: $color-steel;
 	width: 320px;
 
 	background-color: $color-steel;
-	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/09-steel.svg');
+	background-image: url('../assets/type-icons-color-dark/09-steel.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
@@ -1248,7 +1248,7 @@ $base-color: $color-fire;
 	width: 320px;
 
 	background-color: $color-fire;
-	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/10-fire.svg');
+	background-image: url('../assets/type-icons-color-dark/10-fire.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
@@ -1382,7 +1382,7 @@ $base-color: $color-water;
 	width: 320px;
 
 	background-color: $color-water;
-	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/11-water.svg');
+	background-image: url('../assets/type-icons-color-dark/11-water.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
@@ -1519,7 +1519,7 @@ $base-color: $color-grass;
 	width: 320px;
 
 	background-color: $color-grass;
-	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/12-grass.svg');
+	background-image: url('../assets/type-icons-color-dark/12-grass.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
@@ -1654,7 +1654,7 @@ $base-color: $color-electric;
 	width: 320px;
 
 	background-color: $color-electric;
-	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/13-electric.svg');
+	background-image: url('../assets/type-icons-color-dark/13-electric.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
@@ -1788,7 +1788,7 @@ $base-color: $color-psychic;
 	width: 320px;
 
 	background-color: $color-fighting;
-	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/14-psychic.svg');
+	background-image: url('../assets/type-icons-color-dark/14-psychic.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
@@ -1922,7 +1922,7 @@ $base-color: $color-ice;
 	width: 320px;
 
 	background-color: $color-ice;
-	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/15-ice.svg');
+	background-image: url('../assets/type-icons-color-dark/15-ice.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
@@ -2055,7 +2055,7 @@ $base-color: $color-dragon;
 	width: 320px;
 
 	background-color: $color-fighting;
-	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/16-dragon.svg');
+	background-image: url('../assets/type-icons-color-dark/16-dragon.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
@@ -2188,7 +2188,7 @@ $base-color: $color-dark;
 	width: 320px;
 
 	background-color: $color-dark;
-	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/17-dark.svg');
+	background-image: url('../assets/type-icons-color-dark/17-dark.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
@@ -2321,7 +2321,7 @@ $base-color: $color-fairy;
 	width: 320px;
 
 	background-color: $color-fairy;
-	background-image: url('http://poke.comicui.com/images/type-icons-color-dark/18-fairy.svg');
+	background-image: url('../assets/type-icons-color-dark/18-fairy.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
