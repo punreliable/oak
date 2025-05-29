@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-// import Link from "next/link";
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import PendingType from '../Pending';
@@ -9,7 +8,6 @@ import typeIcon from '@/assets/type-icons-color-dark/15-ice.svg';
 import '../TypeStyles.scss';
 import './IceTypeStyles.scss';
 import prettyName from '@/utilities/prettyName';
-
 
 const PokemonTypeIcePage = () => {
  
@@ -30,8 +28,6 @@ const PokemonTypeIcePage = () => {
 			<p>Please try again!</p>
 		</>
 	);
-	if (data) console.log('Ice Type Pokemon Data: ', data);
-	if (data) console.log('Ice Type Pokemon Abilities: ', data.abilities);
 
 	if(data) return (
 		<div className='App nes-container'>
@@ -62,6 +58,5 @@ const PokemonTypeIcePage = () => {
 		</div>
 	);
 }
-
 
 export default PokemonTypeIcePage;
