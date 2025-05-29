@@ -4,9 +4,7 @@ import Image from "next/image";
 // import Link from "next/link";
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-// import Error from './Error';
 import PendingType from '../Pending';
-// import Result from './Result';
 import typeIcon from '@/assets/type-icons-color-dark/01-normal.svg';
 import './NormalTypeStyles.scss';
 
@@ -35,22 +33,32 @@ const PokemonTypeNormalPage = () => {
 		if (data) console.log('Normal Type Pokemon Abilities: ', data.abilities);
 
 		if(data) return (
-		  <div className='App'>
-			<section className='nesContainer nes-container'>
-				<h1>Normal Type</h1>
-				<Image 
-					src={typeIcon} 
-					alt={"Normal Type Logo"} 
-					height={64}
-					width={64}
-					className="typeIcon"
-				/>
-				<section>
-					<h3>Abilities</h3>
+			<div className='App nes-container'>
+				<section className='nesContainer'>
+					<section>
+						<h1>Normal Type</h1>
+						<Image 
+							src={typeIcon} 
+							alt={"Normal Type Logo"} 
+							height={64}
+							width={64}
+							className="typeIcon"
+						/>
+					</section>
+					<section>
+						<h2>Abilities</h2>
+						<p>Coming Soon.</p>
+					</section>
+					<section>
+						<h2>Moves</h2>
+						<p>Coming Soon.</p>
+					</section>
+					<section>
+						<h2>Pokemon</h2>
+						<p>Coming Soon.</p>
+					</section>
 				</section>
-				{/* {data && <Result pokemon={data} />} */}
-			</section>
-		</div>
+			</div>
 		);
 }
 
