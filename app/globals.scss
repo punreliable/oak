@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
 
 @import '../styles/variables';
 @import '../styles/mixins';
@@ -352,4 +352,46 @@ section {
       }
     }
   }
+}
+
+
+body {
+
+  background-color: #4D513A !important;
+
+}
+
+footer {
+  &.page-footer {
+
+    margin-top: 0 !important;
+  }
+}
+
+label {
+
+  padding-left: 1em;
+  padding-bottom: inherit;
+  text-align: center;
+
+}
+
+label:hover,
+label:active,
+label:focus {
+
+  margin-bottom:.5em;
+  padding-bottom: 1.325em;
+
+}
+
+input[type=text].gameboy {
+
+  margin-left:-.5em;
+
+}
+
+
+.feature-image {
+  background-image: url('https://punreliable-oak.s3.us-east-1.amazonaws.com/assets/whos-that-pokemon.png');
 }
