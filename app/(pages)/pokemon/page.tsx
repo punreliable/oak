@@ -10,7 +10,7 @@ const [formSubmitted, setFormSubmitted] = useState<boolean>(false);
 
 const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
-  setPokemon(inputIdentifier);
+  setPokemon(inputIdentifier.toString());
   setFormSubmitted(true);
 };
 
@@ -20,13 +20,11 @@ const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 
 return(
 
-
-
   <div id="main">
     
     {!formSubmitted && (
 
-      <div className="feature-image" style={{"backgroundImage": "url('/images/whos-that-pokemon.png');"}}>
+      <div className="feature-image" style={{"backgroundImage": "url('https://punreliable-oak.s3.us-east-1.amazonaws.com/assets/whos-that-pokemon.png');"}}>
 
         <div className="mask rgba-black-strong d-flex justify-content-center align-items-top">
 
@@ -88,7 +86,7 @@ return(
       </div>
 
     )}
-    
+
     {pokemon && <WhoseThatPokemon pokemon={pokemon} />}
 
     </div>
