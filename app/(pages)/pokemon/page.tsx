@@ -24,13 +24,13 @@ return(
     
     {!formSubmitted && (
 
-      <div className="feature-image" style={{"backgroundImage": "url('https://punreliable-oak.s3.us-east-1.amazonaws.com/assets/whos-that-pokemon.png');"}}>
+      <div className="feature-image" style={{"backgroundImage": `url('https://punreliable-oak.s3.us-east-1.amazonaws.com/assets/whos-that-pokemon.png');`}}>
 
         <div className="mask rgba-black-strong d-flex justify-content-center align-items-top">
 
           <main className="wow fadeIn content gameboy-screen">
 
-            <h1 className="h1-responsive mb-4 pt-4 px-2 gameboy text-center font-weight-bold">Who's that Pokémon?</h1>
+            <h1 className="h1-responsive mb-4 pt-4 px-2 gameboy text-center font-weight-bold">Who&#39;s that Pokémon?</h1>
 
             <h2 className="h4-responsive gameboy text-center py-4 px-2">Learn more about Pokémon</h2>
 

@@ -9,8 +9,6 @@ import Result from './Result';
 const PokemonPage = (pokemon: {pokemon:string}) => {
 
   const search: string = pokemon.pokemon;
-  console.log('Pokemon: ', pokemon.pokemon);
-
   const { data, error, isLoading } = useQuery({
     queryKey: ['pokemon'],
     queryFn: async () => {
