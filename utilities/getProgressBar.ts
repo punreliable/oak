@@ -1,17 +1,23 @@
-export default function getProgressBar(percentage: number) {
+export default function getProgressBar(percentage: number): string {
 
-	let progressClass = `nes-progress`;
-	let max: number = 100;
+	// export default function getProgressBar(percentage: number): JSX.Element {
+	// let progressPrefix = `nes-progress`;
+	// let max: number = 100;
 
-return(
-	<>
-		<progress className="nes-progress" value="90" max={max}></progress>
-		<progress className="nes-progress is-primary" value="80" max={max}></progress>
-		<progress className="nes-progress is-success" value="50" max={max}></progress>
-		<progress className="nes-progress is-warning" value="30" max={max}></progress>
-		<progress className="nes-progress is-error" value="10" max={max}></progress>
-		<progress className="nes-progress is-pattern" value="50" max={max}></progress>
-	</>
-);
+	// let secondaryParam = [
+	// 	'is-primary',
+	// 	'is-success',		
+	// 	'is-warning',
+	// 	'is-error',
+	// 	'is-pattern'
+	// ];
+
+	// let value = percentage;
+
+	// let progressBarClass = progressPrefix + secondaryParam[1];
+
+// return <progress className={progressBarClass} value={value} max={max} />
+
+	return('coming soon. Percentage is: ' + percentage.toString() );
 
 }
