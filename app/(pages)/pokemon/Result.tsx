@@ -5,7 +5,8 @@ import PokemonAbilitiesList from '../../components/PokemonAbilitiesList';
 import PokemonTypeList from '../../components/PokemonTypeList';
 import PokemonMoveList from '../../components/PokemonMoveList';
 import prettyName from '../../../utilities/prettyName';
-import professorOak from '../../../assets/oak.svg';
+import Message from '@/app/components/ProfessorOak/Message';
+// import professorOak from '../../../assets/oak.svg';
 
 const Result = (props: any) => {
   return (
@@ -41,29 +42,8 @@ const Result = (props: any) => {
 
         <PokemonMoveList moves={props.pokemon.moves} />
 
-        <section
-          className='message-list messageList'
-          id='professorMessages'
-          // unresolved
-        >
-          <section className='message -right'>
-            <div className='nes-balloon from-right'>
-              <p>
-                Entry #{props?.pokemon.id} in <br />
-                Kanto Pokedex!
-              </p>
-            </div>
-            <div className='wrapperOak'>
-              <Image
-                src={professorOak}
-                id='imgProfessorOak'
-                alt='Professor Oak'
-                height={64}
-                width={64}
-              />
-            </div>
-          </section>
-        </section>
+        <Message pokemon={props.pokemon.id} />
+
       </section>
     </div>
   );

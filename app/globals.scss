@@ -1,16 +1,16 @@
 // @tailwind base;
 // @tailwind components;
 // @tailwind utilities;
-
 @import '../styles/variables';
+@import '../styles/comicui/variables';
+@import '../styles/comicui/palette-town';
 @import '../styles/mixins';
 // @import 'styles/mdb';
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 @import '../styles/palette-town';
 @import '../styles/types';
 @import '../styles/gameboy';
-@import '../styles/comicui/variables';
-@import '../styles/comicui/palette-town';
+
 @import '../styles/pokemon-type-containers';
 
 
