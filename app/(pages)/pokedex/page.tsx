@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React from 'react';
 import { PokedexRowOne } from './PokedexRowOne';
 import { PokedexRowTwo } from './PokedexRowTwo';

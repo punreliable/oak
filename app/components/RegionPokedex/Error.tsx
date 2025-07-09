@@ -4,9 +4,8 @@ import unknown from '../../../assets/0.png';
 import professorOak from '../../../assets/oak.svg';
 
 const Error = () => {
-
   console.log('I am the error you are seeing.');
-  
+
   return (
     <div className='App'>
       <section className='nesContainer nes-container'>

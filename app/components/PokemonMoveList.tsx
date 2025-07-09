@@ -9,14 +9,13 @@ const PokemonMoveList = (props: any) => {
       <a
         href={`/move/${x.move.name}`}
         className={`nes-btn move-${x.move.name} is-${x.move.name} my-1`}
-      > 
-        <span className={`is-${x.move.name}`} >{prettyName(x.move.name)}</span>
+      >
+        <span className={`is-${x.move.name}`}>{prettyName(x.move.name)}</span>
       </a>
     </div>
   ));
 
   return <div className='row'>{minified}</div>;
-
 };
 
 export default PokemonMoveList;

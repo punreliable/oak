@@ -6,8 +6,9 @@
  *   /Volumes/Macintosh HD/Users/brian/Sites/comicui/poke/styles/nes/pixel-arts/mario.scss 36:5  root stylesheet */
 
 body::before {
-  font-family: 'Source Code Pro', 'SF Mono', Monaco, Inconsolata, 'Fira Mono', 'Droid Sans Mono',
-    monospace, monospace;
+  font-family:
+    'Source Code Pro', 'SF Mono', Monaco, Inconsolata, 'Fira Mono', 'Droid Sans Mono', monospace,
+    monospace;
   white-space: pre;
   display: block;
   padding: 1em;

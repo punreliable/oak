@@ -95,10 +95,10 @@
       var g = i();
       if (((l += n(a.substring(s, g[0].offset))), (s = g[0].offset), g === e)) {
         f.reverse().forEach(c);
-        do u(g.splice(0, 1)[0]), (g = i());
+        do (u(g.splice(0, 1)[0]), (g = i()));
         while (g === e && g.length && g[0].offset === s);
         f.reverse().forEach(o);
-      } else 'start' === g[0].event ? f.push(g[0].node) : f.pop(), u(g.splice(0, 1)[0]);
+      } else ('start' === g[0].event ? f.push(g[0].node) : f.pop(), u(g.splice(0, 1)[0]));
     }
     return l + n(a.substr(s));
   }
@@ -124,20 +124,20 @@
         if (((a.compiled = !0), (a.k = a.k || a.bK), a.k)) {
           var o = {},
             c = function (n, t) {
-              e.cI && (t = t.toLowerCase()),
+              (e.cI && (t = t.toLowerCase()),
                 t.split(' ').forEach(function (e) {
                   var t = e.split('|');
                   o[t[0]] = [n, t[1] ? Number(t[1]) : 1];
-                });
+                }));
             };
-          'string' == typeof a.k
+          ('string' == typeof a.k
             ? c('keyword', a.k)
             : B(a.k).forEach(function (e) {
                 c(e, a.k[e]);
               }),
-            (a.k = o);
+            (a.k = o));
         }
-        (a.lR = t(a.l || /\w+/, !0)),
+        ((a.lR = t(a.l || /\w+/, !0)),
           i &&
             (a.bK && (a.b = '\\b(' + a.bK.split(' ').join('|') + ')\\b'),
             a.b || (a.b = /\B|\b/),
@@ -159,7 +159,7 @@
           a.c.forEach(function (e) {
             r(e, a);
           }),
-          a.starts && r(a.starts, i);
+          a.starts && r(a.starts, i));
         var u = a.c
           .map(function (e) {
             return e.bK ? '\\.?(' + e.b + ')\\.?' : e.b;
@@ -186,7 +186,7 @@
       var t, a;
       for (t = 0, a = n.c.length; a > t; t++)
         if (r(n.c[t].bR, e))
-          return n.c[t].endSameAsBegin && (n.c[t].eR = o(n.c[t].bR.exec(e)[0])), n.c[t];
+          return (n.c[t].endSameAsBegin && (n.c[t].eR = o(n.c[t].bR.exec(e)[0])), n.c[t]);
     }
     function u(e, n) {
       if (r(e.eR, n)) {
@@ -206,33 +206,33 @@
       var a = r ? '' : j.classPrefix,
         i = '<span class="' + a,
         o = t ? '' : I;
-      return (i += e + '">'), i + n + o;
+      return ((i += e + '">'), i + n + o);
     }
     function h() {
       var e, t, r, a;
       if (!E.k) return n(k);
       for (a = '', t = 0, E.lR.lastIndex = 0, r = E.lR.exec(k); r; )
-        (a += n(k.substring(t, r.index))),
+        ((a += n(k.substring(t, r.index))),
           (e = p(E, r)),
           e ? ((M += e[1]), (a += d(e[0], n(r[0])))) : (a += n(r[0])),
           (t = E.lR.lastIndex),
-          (r = E.lR.exec(k));
+          (r = E.lR.exec(k)));
       return a + n(k.substr(t));
     }
     function b() {
       var e = 'string' == typeof E.sL;
       if (e && !L[E.sL]) return n(k);
       var t = e ? f(E.sL, k, !0, B[E.sL]) : g(k, E.sL.length ? E.sL : void 0);
-      return E.r > 0 && (M += t.r), e && (B[E.sL] = t.top), d(t.language, t.value, !1, !0);
+      return (E.r > 0 && (M += t.r), e && (B[E.sL] = t.top), d(t.language, t.value, !1, !0));
     }
     function v() {
-      (y += null != E.sL ? b() : h()), (k = '');
+      ((y += null != E.sL ? b() : h()), (k = ''));
     }
     function m(e) {
-      (y += e.cN ? d(e.cN, '', !0) : ''), (E = Object.create(e, { parent: { value: E } }));
+      ((y += e.cN ? d(e.cN, '', !0) : ''), (E = Object.create(e, { parent: { value: E } })));
     }
     function N(e, n) {
-      if (((k += e), null == n)) return v(), 0;
+      if (((k += e), null == n)) return (v(), 0);
       var t = c(n, E);
       if (t)
         return (
@@ -244,7 +244,7 @@
       if (r) {
         var a = E;
         a.skip ? (k += n) : (a.rE || a.eE || (k += n), v(), a.eE && (k = n));
-        do E.cN && (y += I), E.skip || E.sL || (M += E.r), (E = E.parent);
+        do (E.cN && (y += I), E.skip || E.sL || (M += E.r), (E = E.parent));
         while (E !== r.parent);
         return (
           r.starts && (r.endSameAsBegin && (r.starts.eR = r.eR), m(r.starts, '')),
@@ -253,7 +253,7 @@
       }
       if (s(n, E))
         throw new Error('Illegal lexeme "' + n + '" for mode "' + (E.cN || '<unnamed>') + '"');
-      return (k += n), n.length || 1;
+      return ((k += n), n.length || 1);
     }
     var R = w(e);
     if (!R) throw new Error('Unknown language: "' + e + '"');
@@ -268,7 +268,7 @@
     try {
       for (var C, A, S = 0; ; ) {
         if (((E.t.lastIndex = S), (C = E.t.exec(t)), !C)) break;
-        (A = N(t.substring(S, C.index), C[0])), (S = C.index + A);
+        ((A = N(t.substring(S, C.index), C[0])), (S = C.index + A));
       }
       for (N(t.substr(S)), x = E; x.parent; x = x.parent) x.cN && (y += I);
       return { r: M, value: y, language: e, top: E };
@@ -287,7 +287,7 @@
         .filter(x)
         .forEach(function (n) {
           var t = f(n, e, !1);
-          (t.language = n), t.r > a.r && (a = t), t.r > r.r && ((a = r), (r = t));
+          ((t.language = n), t.r > a.r && (a = t), t.r > r.r && ((a = r), (r = t)));
         }),
       a.language && (r.second_best = a),
       r
@@ -308,7 +308,9 @@
     var r = n ? y[n] : t,
       a = [e.trim()];
     return (
-      e.match(/\bhljs\b/) || a.push('hljs'), -1 === e.indexOf(r) && a.push(r), a.join(' ').trim()
+      e.match(/\bhljs\b/) || a.push('hljs'),
+      -1 === e.indexOf(r) && a.push(r),
+      a.join(' ').trim()
     );
   }
   function h(e) {
@@ -347,7 +349,7 @@
     }
   }
   function m() {
-    addEventListener('DOMContentLoaded', v, !1), addEventListener('load', v, !1);
+    (addEventListener('DOMContentLoaded', v, !1), addEventListener('load', v, !1));
   }
   function N(n, t) {
     var r = (L[n] = t(e));
@@ -360,7 +362,7 @@
     return B(L);
   }
   function w(e) {
-    return (e = (e || '').toLowerCase()), L[e] || L[y[e]];
+    return ((e = (e || '').toLowerCase()), L[e] || L[y[e]]);
   }
   function x(e) {
     var n = w(e);
@@ -404,7 +406,9 @@
     (e.C = function (n, t, r) {
       var a = e.inherit({ cN: 'comment', b: n, e: t, c: [] }, r || {});
       return (
-        a.c.push(e.PWM), a.c.push({ cN: 'doctag', b: '(?:TODO|FIXME|NOTE|BUG|XXX):', r: 0 }), a
+        a.c.push(e.PWM),
+        a.c.push({ cN: 'doctag', b: '(?:TODO|FIXME|NOTE|BUG|XXX):', r: 0 }),
+        a
       );
     }),
     (e.CLCM = e.C('//', '$')),

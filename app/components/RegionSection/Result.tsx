@@ -5,7 +5,6 @@ import Error from './Error';
 import Pending from './Pending';
 
 const Result = (props: any) => {
-
   const { data, isLoading, isError } = useQuery({
     queryKey: ['pokedexes', props.pokedex.pokedexes[0].url],
     queryFn: async () => {
@@ -13,11 +12,10 @@ const Result = (props: any) => {
       return res.data;
     },
   });
-  
+
   if (isLoading) return <Pending />;
   if (isError) return <Error />;
   if (data) return <h1>Coming Soon.</h1>;
-
 };
 
 export default Result;

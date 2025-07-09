@@ -4,7 +4,6 @@ import Link from 'next/link';
 import prettyName from '../../../utilities/prettyName';
 
 const Result = (props: any) => {
-
   return (
     <div
       style={{
@@ -26,7 +25,8 @@ const Result = (props: any) => {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-          }}>
+          }}
+        >
           <Image
             src={props.pokemon.sprites?.front_default || '/placeholder.png'}
             alt={prettyName(props.pokemon.name) || 'Pokemon'}
@@ -40,7 +40,7 @@ const Result = (props: any) => {
         </Link>
       </div>
     </div>
-    );
+  );
 };
 
 export default Result;

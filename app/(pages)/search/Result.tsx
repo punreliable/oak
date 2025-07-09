@@ -8,13 +8,12 @@ import prettyName from '../../../utilities/prettyName';
 import professorOak from '../../../assets/oak.svg';
 
 const Result = (props: any) => {
-
   return (
     <div className='App'>
       <h1 className='oakHello'>Hello,</h1>
 
       <h1 className='pokemonName'>{prettyName(props?.pokemon.name)}</h1>
-      
+
       <Image
         className='nes-avatar avatar pokemonAvatar'
         alt={'Image of a ' + prettyName(props?.pokemon.name)}

@@ -44,33 +44,33 @@
       var t,
         o = !1,
         i = function () {
-          o ? this.downgradeModal() : this.maybeHideModal(), (o = !1);
+          (o ? this.downgradeModal() : this.maybeHideModal(), (o = !1));
         }.bind(this),
         n = function (n) {
           if (n.target === e) {
             var a = 'DOMNodeRemoved';
-            (o |= n.type.substr(0, a.length) === a),
+            ((o |= n.type.substr(0, a.length) === a),
               window.clearTimeout(t),
-              (t = window.setTimeout(i, 0));
+              (t = window.setTimeout(i, 0)));
           }
         };
       ['DOMAttrModified', 'DOMNodeRemoved', 'DOMNodeRemovedFromDocument'].forEach(function (t) {
         e.addEventListener(t, n);
       });
     }
-    Object.defineProperty(e, 'open', {
+    (Object.defineProperty(e, 'open', {
       set: this.setOpen.bind(this),
       get: e.hasAttribute.bind(e, 'open'),
     }),
       (this.backdrop_ = document.createElement('div')),
       (this.backdrop_.className = 'backdrop'),
-      this.backdrop_.addEventListener('click', this.backdropClick_.bind(this));
+      this.backdrop_.addEventListener('click', this.backdropClick_.bind(this)));
   }
-  (e && 'object' != typeof e) ||
+  ((e && 'object' != typeof e) ||
     ((e = function (e, t) {
       t = t || {};
       var o = document.createEvent('CustomEvent');
-      return o.initCustomEvent(e, !!t.bubbles, !!t.cancelable, t.detail || null), o;
+      return (o.initCustomEvent(e, !!t.bubbles, !!t.cancelable, t.detail || null), o);
     }).prototype = window.Event.prototype),
     (a.prototype = {
       get dialog() {
@@ -97,13 +97,13 @@
         if (this.dialog_.hasAttribute('tabindex')) this.dialog_.focus();
         else {
           var t = document.createElement('div');
-          this.dialog_.insertBefore(t, this.dialog_.firstChild),
+          (this.dialog_.insertBefore(t, this.dialog_.firstChild),
             (t.tabIndex = -1),
             t.focus(),
-            this.dialog_.removeChild(t);
+            this.dialog_.removeChild(t));
         }
         var o = document.createEvent('MouseEvents');
-        o.initMouseEvent(
+        (o.initMouseEvent(
           e.type,
           e.bubbles,
           e.cancelable,
@@ -121,7 +121,7 @@
           e.relatedTarget,
         ),
           this.dialog_.dispatchEvent(o),
-          e.stopPropagation();
+          e.stopPropagation());
       },
       focus_: function () {
         var e = this.dialog_.querySelector('[autofocus]:not([disabled])');
@@ -129,14 +129,14 @@
           var t = ['button', 'input', 'keygen', 'select', 'textarea'].map(function (e) {
             return e + ':not([disabled])';
           });
-          t.push('[tabindex]:not([disabled]):not([tabindex=""])'),
-            (e = this.dialog_.querySelector(t.join(', ')));
+          (t.push('[tabindex]:not([disabled]):not([tabindex=""])'),
+            (e = this.dialog_.querySelector(t.join(', '))));
         }
-        o(document.activeElement), e && e.focus();
+        (o(document.activeElement), e && e.focus());
       },
       updateZIndex: function (e, t) {
         if (e < t) throw new Error('dialogZ should never be < backdropZ');
-        (this.dialog_.style.zIndex = e), (this.backdrop_.style.zIndex = t);
+        ((this.dialog_.style.zIndex = e), (this.backdrop_.style.zIndex = t));
       },
       show: function () {
         this.dialog_.open || (this.setOpen(!0), this.focus_());
@@ -154,7 +154,7 @@
           throw new Error(
             "Failed to execute 'showModal' on dialog: There are too many open modal dialogs.",
           );
-        (function (e) {
+        ((function (e) {
           for (; e && e !== document.body; ) {
             var t = window.getComputedStyle(e),
               o = function (e, o) {
@@ -185,18 +185,18 @@
             ? (r.reposition(this.dialog_), (this.replacedStyleTop_ = !0))
             : (this.replacedStyleTop_ = !1),
           this.dialog_.parentNode.insertBefore(this.backdrop_, this.dialog_.nextSibling),
-          this.focus_();
+          this.focus_());
       },
       close: function (t) {
         if (!this.dialog_.hasAttribute('open'))
           throw new Error(
             "Failed to execute 'close' on dialog: The element does not have an 'open' attribute, and therefore cannot be closed.",
           );
-        this.setOpen(!1), void 0 !== t && (this.dialog_.returnValue = t);
+        (this.setOpen(!1), void 0 !== t && (this.dialog_.returnValue = t));
         var o = new e('close', { bubbles: !1, cancelable: !1 });
         this.dialog_.dispatchEvent(o);
       },
-    });
+    }));
   var r = {};
   if (
     ((r.reposition = function (e) {
@@ -255,12 +255,12 @@
     (r.DialogManager = function () {
       this.pendingDialogStack = [];
       var e = this.checkDOM_.bind(this);
-      (this.overlay = document.createElement('div')),
+      ((this.overlay = document.createElement('div')),
         (this.overlay.className = '_dialog_overlay'),
         this.overlay.addEventListener(
           'click',
           function (t) {
-            (this.forwardTab_ = void 0), t.stopPropagation(), e([]);
+            ((this.forwardTab_ = void 0), t.stopPropagation(), e([]));
           }.bind(this),
         ),
         (this.handleKey_ = this.handleKey_.bind(this)),
@@ -271,28 +271,28 @@
         'MutationObserver' in window &&
           (this.mo_ = new MutationObserver(function (t) {
             var o = [];
-            t.forEach(function (e) {
+            (t.forEach(function (e) {
               for (var t, i = 0; (t = e.removedNodes[i]); ++i)
                 t instanceof Element &&
                   ('dialog' === t.localName && o.push(t),
                   (o = o.concat(t.querySelectorAll('dialog'))));
             }),
-              o.length && e(o);
-          }));
+              o.length && e(o));
+          })));
     }),
     (r.DialogManager.prototype.blockDocument = function () {
-      document.documentElement.addEventListener('focus', this.handleFocus_, !0),
+      (document.documentElement.addEventListener('focus', this.handleFocus_, !0),
         document.addEventListener('keydown', this.handleKey_),
-        this.mo_ && this.mo_.observe(document, { childList: !0, subtree: !0 });
+        this.mo_ && this.mo_.observe(document, { childList: !0, subtree: !0 }));
     }),
     (r.DialogManager.prototype.unblockDocument = function () {
-      document.documentElement.removeEventListener('focus', this.handleFocus_, !0),
+      (document.documentElement.removeEventListener('focus', this.handleFocus_, !0),
         document.removeEventListener('keydown', this.handleKey_),
-        this.mo_ && this.mo_.disconnect();
+        this.mo_ && this.mo_.disconnect());
     }),
     (r.DialogManager.prototype.updateStacking = function () {
       for (var e, t = this.zIndexHigh_, o = 0; (e = this.pendingDialogStack[o]); ++o)
-        e.updateZIndex(--t, --t), 0 === o && (this.overlay.style.zIndex = --t);
+        (e.updateZIndex(--t, --t), 0 === o && (this.overlay.style.zIndex = --t));
       var i = this.pendingDialogStack[0];
       i
         ? (i.dialog.parentNode || document.body).appendChild(this.overlay)
@@ -324,7 +324,7 @@
     }),
     (r.DialogManager.prototype.handleKey_ = function (t) {
       if (((this.forwardTab_ = void 0), 27 === t.keyCode)) {
-        t.preventDefault(), t.stopPropagation();
+        (t.preventDefault(), t.stopPropagation());
         var o = new e('cancel', { bubbles: !1, cancelable: !0 }),
           i = this.pendingDialogStack[0];
         i && i.dialog.dispatchEvent(o) && i.dialog.close();
@@ -365,12 +365,12 @@
           return n(this) ? 'dialog' : d.call(this);
         };
         var c = s.set;
-        (s.set = function (e) {
+        ((s.set = function (e) {
           return 'string' == typeof e && 'dialog' === e.toLowerCase()
             ? this.setAttribute('method', e)
             : c.call(this, e);
         }),
-          Object.defineProperty(HTMLFormElement.prototype, 'method', s);
+          Object.defineProperty(HTMLFormElement.prototype, 'method', s));
       }
     }
     document.addEventListener(
@@ -390,7 +390,7 @@
       !1,
     );
     var u = HTMLFormElement.prototype.submit;
-    (HTMLFormElement.prototype.submit = function () {
+    ((HTMLFormElement.prototype.submit = function () {
       if (!n(this)) return u.call(this);
       var e = t(this);
       e && e.close();
@@ -404,15 +404,15 @@
             var i = t(o);
             if (i) {
               var a = r.formSubmitter;
-              a && a.form === o ? i.close(r.useValue || a.value) : i.close(),
-                (r.formSubmitter = null);
+              (a && a.form === o ? i.close(r.useValue || a.value) : i.close(),
+                (r.formSubmitter = null));
             }
           }
         },
         !0,
-      );
+      ));
   }
-  (r.forceRegisterDialog = r.forceRegisterDialog),
+  ((r.forceRegisterDialog = r.forceRegisterDialog),
     (r.registerDialog = r.registerDialog),
     'function' == typeof define && 'amd' in define
       ? define(function () {
@@ -420,5 +420,5 @@
         })
       : 'object' == typeof module && 'object' == typeof module.exports
         ? (module.exports = r)
-        : (window.dialogPolyfill = r);
+        : (window.dialogPolyfill = r));
 })();

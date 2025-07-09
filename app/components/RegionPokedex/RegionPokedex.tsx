@@ -6,33 +6,32 @@ import Pending from './Pending';
 // import Result from './Result';
 
 // Example pseudo-code for components/RegionPokedex.tsx
-const RegionPokedex = ( pokedexUrl: string ) => {
+const RegionPokedex = (pokedexUrl: string) => {
+  console.log('made it to RegionPokedex');
+  const { data, isLoading, error } = useQuery({
+    queryKey: ['regional-pokedex'], // Unique key per region
+    queryFn: async () => {
+      // Use the URL provided by the regions endpoint
+      const response = await axios.get(pokedexUrl);
+      return response.data; // This data contains the list of pokemon_entries
+    },
+  });
 
-	console.log('made it to RegionPokedex');
-	const { data, isLoading, error } = useQuery({
-	  queryKey: ['regional-pokedex'], // Unique key per region
-	  queryFn: async () => {
-		// Use the URL provided by the regions endpoint
-		const response = await axios.get(pokedexUrl);
-		return response.data; // This data contains the list of pokemon_entries
-	  },
-	});
-  
-	if (isLoading) return <Pending />;
-	if (error) return <Error />;
-  
-	if (data) {
-	  // Extract the first 9 pokemon_species entries
-	//   const firstNinePokemon = data.pokemon_entries.slice(0, 9);
-	  return (
-		<div>
-			<h1>Coming Soon.</h1>
-		  {/* Pass the extracted list to the next component */}
-		  {/* <Result pokemonEntries={firstNinePokemon} /> */}
-		</div>
-	  );
-	}
-	return null;
-  };
+  if (isLoading) return <Pending />;
+  if (error) return <Error />;
 
-  export default RegionPokedex;
+  if (data) {
+    // Extract the first 9 pokemon_species entries
+    //   const firstNinePokemon = data.pokemon_entries.slice(0, 9);
+    return (
+      <div>
+        <h1>Coming Soon.</h1>
+        {/* Pass the extracted list to the next component */}
+        {/* <Result pokemonEntries={firstNinePokemon} /> */}
+      </div>
+    );
+  }
+  return null;
+};
+
+export default RegionPokedex;

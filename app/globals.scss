@@ -27,7 +27,6 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
   text-rendering: optimizeLegibility;
   width: 100%;
   --background: #ffffff;
@@ -35,7 +34,6 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
-
 }
 
 body {
@@ -46,6 +44,7 @@ body {
   min-height: 100vh;
   min-width: 320px;
   width: 100%;
+  text-align: center;
 
 }
 
@@ -394,4 +393,8 @@ input[type=text].gameboy {
 
 .feature-image {
   background-image: url('https://punreliable-oak.s3.us-east-1.amazonaws.com/assets/whos-that-pokemon.png');
+}
+
+.text-dark {
+  color: $color-text-shadow;
 }

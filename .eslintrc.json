@@ -1,7 +1,13 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"],
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript",
+    "plugin:prettier/recommended" // Add this line
+  ],
   "rules": {
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-explicit-any": "off"
+    // You typically don't need to add formatting rules like "quotes" here
+    // because Prettier will handle them.
   }
 }

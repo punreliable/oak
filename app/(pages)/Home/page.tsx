@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
@@ -29,7 +29,7 @@ const OtherHome = () => {
   if (error) return <Error />;
 
   return (
-    <div className='App'>
+    <div className='App' style={{ margin: 'auto' }}>
       <section className='nesContainer nes-container'>{data && <Result pokemon={data} />}</section>
     </div>
   );

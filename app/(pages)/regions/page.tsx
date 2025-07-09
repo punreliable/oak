@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
@@ -17,11 +17,14 @@ const RegionsPage = () => {
 
   if (isLoading) return <Pending />;
   if (error) return <Error />;
-  if (data) return (
-    <div className='App'>
-      <section className='nesContainer nes-container'>{data && <RegionsList regions={data} />}</section>
-    </div>
-  );
+  if (data)
+    return (
+      <div className='App'>
+        <section className='nesContainer nes-container'>
+          {data && <RegionsList regions={data} />}
+        </section>
+      </div>
+    );
 };
 
 export default RegionsPage;
