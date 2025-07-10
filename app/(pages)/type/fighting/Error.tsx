@@ -5,16 +5,18 @@ import professorOak from '@/assets/oak.svg';
 
 const Error = () => {
   return (
-    <div className='App' style={{'display':'block'}}>
+    <div className='App' style={{ display: 'block' }}>
       <section className='nesContainer nes-container'>
-        <h1 className='oakHello text-center' style={{'display':'block'}}>Error</h1>
-        
+        <h1 className='oakHello text-center' style={{ display: 'block' }}>
+          Error
+        </h1>
+
         <Image
           className='nes-avatar avatar pokemonAvatar'
           alt='There was an error fetching your pokemon, please try again'
           id='avatar'
           src={unknown}
-          style={{'display':'block'}}
+          style={{ display: 'block' }}
         />
 
         <div className='row'>
