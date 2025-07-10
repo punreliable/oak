@@ -43,7 +43,6 @@ const Result = (props: any) => {
         <PokemonMoveList moves={props.pokemon.moves} />
 
         <Message pokemon={props.pokemon.id} />
-
       </section>
     </div>
   );
