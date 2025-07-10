@@ -6,12 +6,9 @@ const PokemonMoveList = (props: any) => {
   const count: number = props.moves.length;
   const columns = count > 1 ? 'col-md-6 col-sm-12' : 'col-sm-12';
   const minified = moves.map((x: any) => (
-    <div className={columns + 'mx-auto py-4'} key={uuidv4()}>
-      <a
-        href={`/move/${x.move.name}`}
-        className={`nes-btn move-${x.move.name} is-error my-1`}
-      >
-        <span className={`is-${x.move.name}`}>{prettyName(x.move.name)}</span>
+    <div className={columns + ' mx-auto py-4'} key={uuidv4()}>
+      <a href={`/move/${x.move.name}`} className={`nes-btn is-error my-1`}>
+        <span>{prettyName(x.move.name)}</span>
       </a>
     </div>
   ));
