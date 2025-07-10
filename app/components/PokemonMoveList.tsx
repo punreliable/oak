@@ -9,7 +9,7 @@ const PokemonMoveList = (props: any) => {
     <div className={columns + 'mx-auto py-4'} key={uuidv4()}>
       <a
         href={`/move/${x.move.name}`}
-        className={`nes-btn move-${x.move.name} is-${x.move.name} my-1`}
+        className={`nes-btn move-${x.move.name} is-error my-1`}
       >
         <span className={`is-${x.move.name}`}>{prettyName(x.move.name)}</span>
       </a>

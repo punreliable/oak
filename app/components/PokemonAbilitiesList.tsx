@@ -5,17 +5,17 @@ const PokemonAbilitiesList = (props: any) => {
   const abilities = props.abilities;
 
   const minified = abilities.map((x: any) => (
-    <div className='col-sm-12 col-md-6 col-lg-3' key={uuidv4()}>
+    <div className='col-sm-12 col-md-6 my-2 py-2' key={uuidv4()}>
       <a
         href={`/ability/${x.ability?.name}`}
-        className={`nes-btn ability-${x.ability?.name} is-${x.ability?.name}`}
+        className={`nes-btn ability-${x.ability?.name} is-warning`}
       >
         <span className={`is-${x.ability?.name}`}>{prettyName(x.ability.name)}</span>
       </a>
     </div>
   ));
 
-  return <div className='row'>{minified}</div>;
+  return <div className='row my-4'>{minified}</div>;
 };
 
 export default PokemonAbilitiesList;
