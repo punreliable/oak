@@ -3,9 +3,10 @@ import { v4 as uuidv4 } from 'uuid';
 
 const PokemonMoveList = (props: any) => {
   const moves = props.moves;
-
+  const count: number = props.moves.length;
+  const columns = count > 1 ? 'col-md-6 col-sm-12' : 'col-sm-12';
   const minified = moves.map((x: any) => (
-    <div className='col-sm-6 col-md-4 col-lg-3' key={uuidv4()}>
+    <div className={columns + 'mx-auto py-4'} key={uuidv4()}>
       <a
         href={`/move/${x.move.name}`}
         className={`nes-btn move-${x.move.name} is-${x.move.name} my-1`}

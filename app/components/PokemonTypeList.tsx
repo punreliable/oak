@@ -7,7 +7,7 @@ const PokemonTypeList = (props: any) => {
 
   const columns = count > 1 ? 'col-md-6 col-sm-12' : 'col-sm-12';
   const minified = types.map((x: any) => (
-    <div className={columns} key={uuidv4()}>
+    <div className={columns + ' py-4'} key={uuidv4()}>
       <a href={`/type/${x.type.name}`} className={`nes-btn type-${x.type.name} is-${x.type.name}`}>
         <span className={`is-${x.type.name}`}>{prettyName(x.type.name)}</span>
       </a>
