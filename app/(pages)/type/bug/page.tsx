@@ -1,10 +1,12 @@
-const PokemonTypeNormalPage = () => {
+const PokemonTypeBugPage = () => {
   return (
-    <>
-      <h1>Normal Type</h1>
-      <h3>More Details Coming Soon.</h3>
-    </>
+    <section className="container container-type-bug">
+      <div className="with-title">
+        <h1 className="responsive-h1 text-center gameboy">Bug Type</h1>
+      </div>
+    </section>
+
   );
 };
 
-export default PokemonTypeNormalPage;
+export default PokemonTypeBugPage;

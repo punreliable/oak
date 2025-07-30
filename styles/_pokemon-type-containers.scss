@@ -837,7 +837,7 @@ $base-color: $color-rock;
 $background-color: $color-bug;
 $base-color: $color-bug;
 
-.type-bug-container {
+.type-bug-container, .container-type-bug {
 
 
 
@@ -850,14 +850,11 @@ $base-color: $color-bug;
 	background-repeat: no-repeat;
 	background-size: 3em;
 
-
-
-
-  position: relative;
-  padding: 1.5rem 2rem;
-  border-color: black;
-  border-style: solid;
-  border-width: 4px;
+	position: relative;
+	padding: 1.5rem 2rem;
+	border-color: black;
+	border-style: solid;
+	border-width: 4px;
 
   > :last-child {
 	margin-bottom: 0;

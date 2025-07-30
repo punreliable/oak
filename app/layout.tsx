@@ -60,13 +60,14 @@ export default function RootLayout({
           sizes='152x152'
           href='apple-touch-icon-152x152.png'
         />
-        <link rel='icon' type='image/png' href='favicon-196x196.png' sizes='196x196' />
-        <link rel='icon' type='image/png' href='favicon-96x96.png' sizes='96x96' />
-        <link rel='icon' type='image/png' href='favicon-32x32.png' sizes='32x32' />
-        <link rel='icon' type='image/png' href='favicon-16x16.png' sizes='16x16' />
-        <link rel='icon' type='image/png' href='favicon-128.png' sizes='128x128' />
-        <meta name='application-name' content='&nbsp;' />
-        <meta name='msapplication-TileColor' content='#FFFFFF' />
+        <link rel='icon' type='image/png' href='@/assets/favicon-196x196.png' sizes='196x196' />
+        <link rel='icon' type='image/png' href='@/assets/favicon-96x96.png' sizes='96x96' />
+        <link rel='icon' type='image/png' href='@/assets/favicon-32x32.png' sizes='32x32' />
+        <link rel='icon' type='image/png' href='@/assets/favicon-16x16.png' sizes='16x16' />
+        <link rel='icon' type='image/png' href='@/assets/favicon-128.png' sizes='128x128' />
+        <link rel='icon' type='image/ico' href='@/assets/favicon.ico' />
+        <meta name='application-name' content='Oak' />
+        <meta name='msapplication-TileColor' content='#4D513A' />
         <meta name='msapplication-TileImage' content='mstile-144x144.png' />
         <meta name='msapplication-square70x70logo' content='mstile-70x70.png' />
         <meta name='msapplication-square150x150logo' content='mstile-150x150.png' />
@@ -75,10 +76,8 @@ export default function RootLayout({
         <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@docsearch/css@3' />
         <title>Oak</title>
       </head>
-
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <TanstackProvider>{children}</TanstackProvider>
-
         <SpeedInsights />
       </body>
     </html>
