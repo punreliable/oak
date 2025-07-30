@@ -839,8 +839,6 @@ $base-color: $color-bug;
 
 .type-bug-container, .container-type-bug {
 
-
-
 	height: 180px;
 	width: 320px;
 
@@ -855,6 +853,7 @@ $base-color: $color-bug;
 	border-color: black;
 	border-style: solid;
 	border-width: 4px;
+	min-height: 250px;
 
   > :last-child {
 	margin-bottom: 0;
@@ -965,6 +964,11 @@ $base-color: $color-bug;
 	  }
 	}
   }
+
+  h1 {
+	margin-top: 4.5rem;
+  }
+
 }
 
 $background-color: $color-ghost;

@@ -1,9 +1,11 @@
+import Error from "./Error";
+import Pending from "./Pending";
+import Result from "./Result";
+
 const PokemonTypeBugPage = () => {
   return (
     <section className="container container-type-bug">
-      <div className="with-title">
-        <h1 className="responsive-h1 text-center gameboy">Bug Type</h1>
-      </div>
+      <h1 className="responsive-h1 text-center gameboy title">Bug Type</h1>
     </section>
 
   );
