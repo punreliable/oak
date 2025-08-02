@@ -1,12 +1,12 @@
 export interface DamageRelation {
-	name: string;
-	url: string;
+  name: string;
+  url: string;
 }
 
 export interface DoubleDamageFromProps {
-	double_damage_from: DamageRelation[];
+  double_damage_from: DamageRelation[];
 }
 
 export interface DoubleDamageToProps {
-	double_damage_to: DamageRelation[];
+  double_damage_to: DamageRelation[];
 }

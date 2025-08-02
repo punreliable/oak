@@ -5,28 +5,22 @@ import axios from 'axios';
 import Error from './Error';
 import Pending from './Pending';
 import Result from './Result';
-
 const PokemonTypeBugPage = () => {
-
-const { data, error, isLoading } = useQuery({
-  queryKey: ['type'],
-  queryFn: async () => {
-    const id = 'bug';
-    const response = await axios.get(`https://pokeapi.co/api/v2/type/${id}`);
-    return response.data;
-  },
-});
-
-if (isLoading) return <Pending />;
-
-if (error) return <Error />;
-
-return (
-  <section className="App container container-type-bug" style={{ margin: 'auto' }}>
-    <h1 className="responsive-h1 text-center gameboy title">Bug Type</h1>
-    {data && <Result type={data} />}
-  </section>
+  const { data, error, isLoading } = useQuery({
+    queryKey: ['type'],
+    queryFn: async () => {
+      const id: string = 'bug';
+      const response = await axios.get(`https://pokeapi.co/api/v2/type/${id}`);
+      return response.data;
+    },
+  });
+  if (isLoading) return <Pending />;
+  if (error) return <Error />;
+  return (
+    <section className='App container container-type-bug' style={{ margin: 'auto' }}>
+      <h1 className='responsive-h1 text-center gameboy title'>Bug Type</h1>
+      {data && <Result type={data} />}
+    </section>
   );
 };
-
 export default PokemonTypeBugPage;
