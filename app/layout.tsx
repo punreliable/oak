@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Geist, Geist_Mono, Press_Start_2P } from 'next/font/google';
+
 import './globals.scss';
 import { TanstackProvider } from './components/providers/tanstack-provider';
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -13,6 +14,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
+});
+
+const pressStart2P = Press_Start_2P({
+  variable: '--font-press-start-2p',
+  subsets: ['latin'],
+  weight: '400',
 });
 
 export const metadata: Metadata = {
@@ -72,7 +79,9 @@ export default function RootLayout({
         <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@docsearch/css@3' />
         <title>Oak</title>
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${pressStart2P.variable} antialiased`}
+      >
         <TanstackProvider>{children}</TanstackProvider>
         <SpeedInsights />
       </body>
