@@ -65,7 +65,7 @@ export default function RootLayout({
         <link rel='icon' type='image/png' href='@/assets/favicon-32x32.png' sizes='32x32' />
         <link rel='icon' type='image/png' href='@/assets/favicon-16x16.png' sizes='16x16' />
         <link rel='icon' type='image/png' href='@/assets/favicon-128.png' sizes='128x128' />
-        <link rel='icon' type='image/ico' href='@/assets/favicon.ico' />
+        <link rel='icon' type='image/ico' href='/favicon.ico' />
         <meta name='application-name' content='Oak' />
         <meta name='msapplication-TileColor' content='#4D513A' />
         <meta name='msapplication-TileImage' content='mstile-144x144.png' />
