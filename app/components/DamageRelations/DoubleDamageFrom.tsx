@@ -1,4 +1,4 @@
-import { DamageRelations, DoubleDamageFromProps } from '@/types/DamageRelations';
+import { DoubleDamageFromProps } from '@/types/DamageRelations';
 import prettyName from '@/utilities/prettyName';
 
 const DoubleDamageFrom = (props: DoubleDamageFromProps) => {
@@ -13,7 +13,7 @@ const DoubleDamageFrom = (props: DoubleDamageFromProps) => {
       </a>
     </div>;
   });
-  
+
   return (
     <>
       <h3>Double Damage From</h3>

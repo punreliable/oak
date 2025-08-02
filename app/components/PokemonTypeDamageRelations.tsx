@@ -1,4 +1,4 @@
-import {DamageRelation, DamageRelations, DoubleDamageFromProps} from '@/types/DamageRelations';
+import { DoubleDamageFromProps } from '@/types/DamageRelations';
 import DoubleDamageFrom from '@/app/components/DamageRelations/DoubleDamageFrom';
 const PokemonTypeDamageRelations = (props: DoubleDamageFromProps) => {
   const doubleDamageFrom: DoubleDamageFromProps = props;
