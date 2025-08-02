@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "clean": "rm -rf dist",
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
