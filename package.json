@@ -1,6 +1,6 @@
 {
   "name": "oak",
-  "version": "1.8.9",
+  "version": "1.9.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
