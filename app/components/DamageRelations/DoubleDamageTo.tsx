@@ -1,12 +1,7 @@
-import { DoubleDamageToProps } from '@/types/DamageRelations';
-
-const DoubleDamageTo = (props: DoubleDamageToProps) => {
-  console.log('DoubleDamageTo: ', props);
+export function DoubleDamageTo() {
   return (
     <>
       <h3>Double Damage To</h3>
     </>
   );
-};
-
-export default DoubleDamageTo;
+}

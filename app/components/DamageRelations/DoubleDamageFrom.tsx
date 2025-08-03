@@ -1,25 +1,9 @@
-import { DoubleDamageFromProps } from '@/types/DamageRelations';
-import prettyName from '@/utilities/prettyName';
-
-const DoubleDamageFrom = (props: DoubleDamageFromProps) => {
-  const doubleDamageFrom = props.double_damage_from;
-
-  console.log('Double Damage From', props.double_damage_from);
-
-  const listOfDoubleDamageFromTypes = doubleDamageFrom.map((x: any) => {
-    <div key={x.double_damage_from.name} className='col-md-2'>
-      <a className='btn btn-primary' href={`/type/${x.double_damage_from.name}`}>
-        {prettyName(x.double_damage_from.name)}
-      </a>
-    </div>;
-  });
-
+export function DoubleDamageFrom() {
   return (
-    <>
-      <h3>Double Damage From</h3>
-      {listOfDoubleDamageFromTypes}
-    </>
+    <div className='row'>
+      <div className='col'>
+        <h3>Double Damage From</h3>
+      </div>
+    </div>
   );
-};
-
-export default DoubleDamageFrom;
+}

@@ -839,9 +839,6 @@ $base-color: $color-bug;
 
 .type-bug-container, .container-type-bug {
 
-	height: 180px;
-	width: 320px;
-
 	background-color: $color-bug;
 	background-image: url('../assets/type-icons-color-dark/07-bug.svg');
 	background-position: top 2em center;
@@ -854,6 +851,7 @@ $base-color: $color-bug;
 	border-style: solid;
 	border-width: 4px;
 	min-height: 250px;
+	min-width: 320px;
 
   > :last-child {
 	margin-bottom: 0;

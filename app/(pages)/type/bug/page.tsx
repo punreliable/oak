@@ -17,10 +17,13 @@ const PokemonTypeBugPage = () => {
   if (isLoading) return <Pending />;
   if (error) return <Error />;
   return (
-    <section className='App container container-type-bug' style={{ margin: 'auto' }}>
-      <h1 className='responsive-h1 text-center gameboy title'>Bug Type</h1>
+    <section className='App container container-type-bug'>
+      <div className='row'>
+        <h1 className='responsive-h1 text-center gameboy title'>Bug Type</h1>
+      </div>
       {data && <Result type={data} />}
     </section>
   );
 };
+
 export default PokemonTypeBugPage;
