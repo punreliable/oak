@@ -1,9 +1,29 @@
+'use client';
+import React from 'react';
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
+import Error from './Error';
+import Pending from './Pending';
+import Result from './Result';
 const PokemonTypeDragonPage = () => {
+  const { data, error, isLoading } = useQuery({
+    queryKey: ['type'],
+    queryFn: async () => {
+      const id: string = 'dragon';
+      const response = await axios.get(`https://pokeapi.co/api/v2/type/${id}`);
+      return response.data;
+    },
+  });
+  if (isLoading) return <Pending />;
+  if (error) return <Error />;
+
   return (
-    <>
-      <h1>Dragon Type</h1>
-      <h3>More Details Coming Soon.</h3>
-    </>
+    <section className='App container container-type-dragon'>
+      <div className='row'>
+        <h1 className='responsive-h1 text-center gameboy title'>Dragon Type</h1>
+      </div>
+      {data && <Result damage_relations={data} />}
+    </section>
   );
 };
 
