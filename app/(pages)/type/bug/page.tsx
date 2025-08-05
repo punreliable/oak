@@ -22,7 +22,7 @@ const PokemonTypeBugPage = () => {
       <div className='row'>
         <h1 className='responsive-h1 text-center gameboy title'>Bug Type</h1>
       </div>
-      {data && <Result type={data} />}
+      {data && <Result damage_relations={data} />}
     </section>
   );
 };

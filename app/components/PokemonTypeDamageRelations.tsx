@@ -9,20 +9,22 @@ import { DoubleDamageTo } from '@/app/components/DamageRelations/DoubleDamageTo'
 const PokemonTypeDamageRelations = (props: any) => {
 
   const doubleDamageFrom: any = props.damage_relations.double_damage_from;
+
   console.log(doubleDamageFrom);
+
   const halfDamageFrom: DamageRelationsType = props;
   const noDamageFrom: DamageRelationsType = props;
   const noDamageTo: DamageRelationsType = props;
   const halfDamageTo: DamageRelationsType = props;
   const doubleDamageTo: DamageRelationsType = props;
 
-  function getDamageRelation(data: any, relation:string) {
-    if(relation == 'double_damage_from') {
-      return data.damage_relations.double_damage_from;
-    }
-  }
+  // function getDamageRelation(data: any, relation:string) {
+  //   if(relation == 'double_damage_from') {
+  //     return data.damage_relations.double_damage_from;
+  //   }
+  // }
   const myData = props.damage_relations.double_damage_from[0].name; 
-  console.log(getDamageRelation(props, 'double_damage_from'));
+  // console.log(getDamageRelation(props, 'double_damage_from'));
 
 
   return (

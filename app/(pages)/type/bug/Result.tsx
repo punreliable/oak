@@ -1,11 +1,21 @@
 'use client';
 import React from 'react';
-import type { DamageRelationsType } from '@/types/PokemonTypeDamageRelations';
-import PokemonTypeDamageRelations from '@/app/components/PokemonTypeDamageRelations';
-import {DoubleDamageFrom} from '@/app/components/DamageRelations/DoubleDamageFrom';
+import prettyName from '@/utilities/prettyName';
 
-const Result = (props: DamageRelationsType) => {
-  const doubleDamageFrom = props.damage_relations.double_damage_from;
+const Result = (props: any) => {
+
+  const doubleDamageFrom = props.damage_relations.damage_relations.double_damage_from;
+  const halfDamageFrom = props.damage_relations.damage_relations.half_damage_from;
+  const noDamageFrom = props.damage_relations.damage_relations.no_damage_from;
+  const doubleDamageTo = props.damage_relations.damage_relations.double_damage_to;
+  const halfDamageTo = props.damage_relations.damage_relations.half_damage_to;
+  const noDamageTo = props.damage_relations.damage_relations.no_damage_to;
+  const doubleDamageFromOutput = doubleDamageFrom.map( (obj: { name: any; }) => <a key={obj.name} className={`nes-btn type-${obj.name} is-${obj.name}`} href={'/type/'+obj.name}>{prettyName(obj.name)}</a> );
+  const doubleDamageToOutput = doubleDamageTo.map( (obj: { name: any; }) => <a key={obj.name} className={`nes-btn type-${obj.name} is-${obj.name}`} href={'/type/'+obj.name}>{prettyName(obj.name)}</a> );
+  const halfDamageFromOutput = halfDamageFrom.map( (obj: { name: any; }) => <a key={obj.name} className={`nes-btn type-${obj.name} is-${obj.name}`} href={'/type/'+obj.name}>{prettyName(obj.name)}</a> );
+  const halfDamageToOutput = halfDamageTo.map( (obj: { name: any; }) => <a key={obj.name} className={`nes-btn type-${obj.name} is-${obj.name}`} href={'/type/'+obj.name}>{prettyName(obj.name)}</a> );
+  const noDamageFromOutput = noDamageFrom.map( (obj: { name: any; }) => <a key={obj.name} className={`nes-btn type-${obj.name} is-${obj.name}`} href={'/type/'+obj.name}>{prettyName(obj.name)}</a> );
+  const noDamageToOutput = noDamageTo.map( (obj: { name: any; }) => <a key={obj.name} className={`nes-btn type-${obj.name} is-${obj.name}`} href={'/type/'+obj.name}>{prettyName(obj.name)}</a> );
   return(
     <>
       <div className='row'>
@@ -15,11 +25,41 @@ const Result = (props: DamageRelationsType) => {
       <div className='row py-4'>
         {doubleDamageFrom && (
           <div className='col'>
-            <DoubleDamageFrom types={doubleDamageFrom} />
+              <h3>2x Weakness</h3>
+              {doubleDamageFromOutput}
+          </div>
+        )}
+        {doubleDamageTo && (
+          <div className='col'>
+              <h3>Double Damage To</h3>
+              {doubleDamageToOutput}
+          </div>
+        )}
+        {halfDamageFrom && (
+          <div className='col'>
+              <h3>Half Damage From</h3>
+              {halfDamageFromOutput}
+          </div>
+        )}
+        {halfDamageTo && (
+          <div className='col'>
+              <h3>Half Damage To</h3>
+              {halfDamageToOutput}
+          </div>
+        )}
+        {noDamageFrom && noDamageFrom.length > 0 && (
+          <div className='col'>
+              <h3>No Damage From</h3>
+              {noDamageFromOutput}
+          </div>
+        )}
+        {noDamageTo && noDamageTo.length > 0 && (
+          <div className='col'>
+              <h3>No Damage To</h3>
+              {noDamageToOutput}
           </div>
         )}
       </div>
-      {/* <PokemonTypeDamageRelations damage_relations={props.damage_relations} /> */}
     </>
   );
 };
