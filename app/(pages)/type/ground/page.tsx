@@ -5,11 +5,11 @@ import axios from 'axios';
 import Error from './Error';
 import Pending from './Pending';
 import Result from './Result';
-const PokemonTypeBugPage = () => {
+const PokemonTypeGroundPage = () => {
   const { data, error, isLoading } = useQuery({
     queryKey: ['type'],
     queryFn: async () => {
-      const id: string = 'bug';
+      const id: string = 'ground';
       const response = await axios.get(`https://pokeapi.co/api/v2/type/${id}`);
       return response.data;
     },
@@ -18,13 +18,13 @@ const PokemonTypeBugPage = () => {
   if (error) return <Error />;
 
   return (
-    <section className='App container container-type-bug'>
+    <section className='App container container-type-ground'>
       <div className='row'>
-        <h1 className='responsive-h1 text-center gameboy title'>Bug Type</h1>
+        <h1 className='responsive-h1 text-center gameboy title'>Ground Type</h1>
       </div>
       {data && <Result damage_relations={data} />}
     </section>
   );
 };
 
-export default PokemonTypeBugPage;
+export default PokemonTypeGroundPage;
