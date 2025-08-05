@@ -37,19 +37,19 @@ const Result = (props: any) => {
         )}
         {halfDamageFrom && (
           <div className='col'>
-              <h3>Half Damage From</h3>
+              <h3>Resists Damage From</h3>
               {halfDamageFromOutput}
           </div>
         )}
         {halfDamageTo && (
           <div className='col'>
-              <h3>Half Damage To</h3>
+              <h3>Resistant To</h3>
               {halfDamageToOutput}
           </div>
         )}
         {noDamageFrom && noDamageFrom.length > 0 && (
           <div className='col'>
-              <h3>No Damage From</h3>
+              <h3>Immune To</h3>
               {noDamageFromOutput}
           </div>
         )}
