@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import Error from './Error';
@@ -17,6 +17,10 @@ const getPokemonNumber = () => {
 };
 
 const Home = () => {
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
   const { data, error, isLoading } = useQuery({
     queryKey: ['pokemon'],
     queryFn: async () => {
@@ -25,9 +29,10 @@ const Home = () => {
       return response.data;
     },
   });
-
+  if (!isClient) {
+    return null;
+  }
   if (isLoading) return <Pending />;
-
   if (error) return <Error />;
 
   return (

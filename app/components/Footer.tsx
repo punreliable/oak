@@ -1,9 +1,6 @@
 import Link from 'next/link';
-import getCurrentYear from '../../utilities/getCurrentYear';
 
 const Footer = () => {
-  const year = getCurrentYear();
-
   return (
     <footer className='page-footer fixed-bottom gameboy text-center'>
       <div className='row mb-3'>
@@ -34,7 +31,7 @@ const Footer = () => {
       </div>
       <div className='row mb-3'>
         <div className='col-md-12 footer-text'>
-          &copy;&nbsp;{year}&nbsp;
+          &copy;&nbsp;2025&nbsp;
           <Link href='http://ComicUI.com' target='_blank'>
             ComicUI.com
           </Link>

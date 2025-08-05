@@ -1,13 +1,26 @@
+'use client';
 import React from 'react';
-import prettyName from '../../../../utilities/prettyName';
+import type { DamageRelationsType } from '@/types/PokemonTypeDamageRelations';
 import PokemonTypeDamageRelations from '@/app/components/PokemonTypeDamageRelations';
+import {DoubleDamageFrom} from '@/app/components/DamageRelations/DoubleDamageFrom';
 
-const Result = (props: any) => {
-  return (
-    <div className='App'>
-      <h1 className='responsive-h1 text-center gameboy'>{prettyName(props.type.name)}</h1>
-      <PokemonTypeDamageRelations damageRelations={props.type.damage_relations} />
-    </div>
+const Result = (props: DamageRelationsType) => {
+  const doubleDamageFrom = props.damage_relations.double_damage_from;
+  return(
+    <>
+      <div className='row'>
+        <h1 className='responsive-h1 text-center gameboy'>Damage Relations</h1>
+      </div>
+
+      <div className='row py-4'>
+        {doubleDamageFrom && (
+          <div className='col'>
+            <DoubleDamageFrom types={doubleDamageFrom} />
+          </div>
+        )}
+      </div>
+      {/* <PokemonTypeDamageRelations damage_relations={props.damage_relations} /> */}
+    </>
   );
 };
 

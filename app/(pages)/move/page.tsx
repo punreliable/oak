@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import Error from './ErrorMove';
@@ -15,6 +15,11 @@ const getMoveId = () => {
 };
 
 const MovePage = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
   const { data, error, isLoading } = useQuery({
     queryKey: ['ability'],
     queryFn: async () => {
@@ -23,7 +28,9 @@ const MovePage = () => {
       return response.data;
     },
   });
-
+  if (!isClient) {
+    return null;
+  }
   if (isLoading) return <Pending />;
 
   if (error) return <Error />;

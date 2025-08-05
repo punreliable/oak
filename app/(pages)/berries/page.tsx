@@ -1,6 +1,5 @@
 'use client';
-
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import Error from './Error';
@@ -16,6 +15,10 @@ const getBerryNumber = () => {
 };
 
 const BerryPage = () => {
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
   const { data, error, isLoading } = useQuery({
     queryKey: ['berry'],
     queryFn: async () => {
@@ -24,6 +27,10 @@ const BerryPage = () => {
       return response.data;
     },
   });
+
+  if (!isClient) {
+    return null;
+  }
 
   if (isLoading) return <Pending />;
 
