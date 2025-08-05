@@ -20,7 +20,7 @@ const PokemonTypeElectricPage = () => {
   return (
     <section className='App container container-type-electric'>
       <div className='row'>
-        <h1 className='responsive-h1 text-center gameboy title'>Electric Type</h1>
+        <h1 className='text-center gameboy title'>Electric Type</h1>
       </div>
       {data && <Result damage_relations={data} />}
     </section>

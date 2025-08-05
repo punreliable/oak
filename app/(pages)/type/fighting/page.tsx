@@ -1,21 +1,29 @@
+'use client';
 import React from 'react';
-import Image from 'next/image';
-import FightingTypeIcon from '@/assets/type-icons-color/02-fighting.svg';
-
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
+import Error from './Error';
+import Pending from './Pending';
+import Result from './Result';
 const PokemonTypeFightingPage = () => {
+  const { data, error, isLoading } = useQuery({
+    queryKey: ['type'],
+    queryFn: async () => {
+      const id: string = 'fighting';
+      const response = await axios.get(`https://pokeapi.co/api/v2/type/${id}`);
+      return response.data;
+    },
+  });
+  if (isLoading) return <Pending />;
+  if (error) return <Error />;
+
   return (
-    <div className='App' style={{ margin: 'auto' }}>
-      <h1>Fighting Type</h1>
-      <h3>More Details Coming Soon.</h3>
-      <Image
-        className='nes-avatar avatar pokemonAvatar'
-        alt={'Image of the Fighting Pokemon Type'}
-        id='avatar'
-        src={FightingTypeIcon}
-        width={256}
-        height={256}
-      />
-    </div>
+    <section className='App container container-type-fighting'>
+      <div className='row'>
+        <h1 className='responsive-h1 text-center gameboy title'>Fairy Type</h1>
+      </div>
+      {data && <Result damage_relations={data} />}
+    </section>
   );
 };
 

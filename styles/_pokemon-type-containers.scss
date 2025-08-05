@@ -1793,17 +1793,18 @@ $base-color: $color-electric;
 	margin-top: 4.5rem;
   }
 
-  @media (max-width: 499px) {
-	h1 {
-		font-size: 2.4rem;
-	  }
-  }
+	@media (max-width: 719px) {
+		h1 {
+			font-size: 2.4em;
+		}
+		
+	}
 
-  @media (min-width: 500px) {
-	h1 {
-		font-size: 3.2rem;
-	  }
-  }
+	@media (min-width: 720px) {
+		h1 {
+			font-size: 3.2em;
+		}
+	}
 
 }
 

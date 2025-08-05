@@ -1,25 +1,113 @@
 'use client';
 import React from 'react';
-import Image from 'next/image';
 import prettyName from '@/utilities/prettyName';
-import FightingTypeIcon from '@/assets/type-icons-color/02-fighting.svg';
 
 const Result = (props: any) => {
+  const doubleDamageFrom = props.damage_relations.damage_relations.double_damage_from;
+  const halfDamageFrom = props.damage_relations.damage_relations.half_damage_from;
+  const noDamageFrom = props.damage_relations.damage_relations.no_damage_from;
+  const doubleDamageTo = props.damage_relations.damage_relations.double_damage_to;
+  const halfDamageTo = props.damage_relations.damage_relations.half_damage_to;
+  const noDamageTo = props.damage_relations.damage_relations.no_damage_to;
+  const doubleDamageFromOutput = doubleDamageFrom.map((obj: { name: any }) => (
+    <a
+      key={obj.name}
+      className={`nes-btn type-${obj.name} is-${obj.name}`}
+      href={'/type/' + obj.name}
+    >
+      {prettyName(obj.name)}
+    </a>
+  ));
+  const doubleDamageToOutput = doubleDamageTo.map((obj: { name: any }) => (
+    <a
+      key={obj.name}
+      className={`nes-btn type-${obj.name} is-${obj.name}`}
+      href={'/type/' + obj.name}
+    >
+      {prettyName(obj.name)}
+    </a>
+  ));
+  const halfDamageFromOutput = halfDamageFrom.map((obj: { name: any }) => (
+    <a
+      key={obj.name}
+      className={`nes-btn type-${obj.name} is-${obj.name}`}
+      href={'/type/' + obj.name}
+    >
+      {prettyName(obj.name)}
+    </a>
+  ));
+  const halfDamageToOutput = halfDamageTo.map((obj: { name: any }) => (
+    <a
+      key={obj.name}
+      className={`nes-btn type-${obj.name} is-${obj.name}`}
+      href={'/type/' + obj.name}
+    >
+      {prettyName(obj.name)}
+    </a>
+  ));
+  const noDamageFromOutput = noDamageFrom.map((obj: { name: any }) => (
+    <a
+      key={obj.name}
+      className={`nes-btn type-${obj.name} is-${obj.name}`}
+      href={'/type/' + obj.name}
+    >
+      {prettyName(obj.name)}
+    </a>
+  ));
+  const noDamageToOutput = noDamageTo.map((obj: { name: any }) => (
+    <a
+      key={obj.name}
+      className={`nes-btn type-${obj.name} is-${obj.name}`}
+      href={'/type/' + obj.name}
+    >
+      {prettyName(obj.name)}
+    </a>
+  ));
   return (
-    <div className='App' style={{ margin: 'auto' }}>
-      <section className='nesContainer nes-container'>
-        <h1 className='oakHello'>Hello,</h1>
-        <h1 className='pokemonName'>{prettyName(props?.type.name)}</h1>
-        <Image
-          className='nes-avatar avatar pokemonAvatar'
-          alt={'Image of the Fighting Pokemon Type'}
-          id='avatar'
-          src={FightingTypeIcon}
-          width={256}
-          height={256}
-        />
-      </section>
-    </div>
+    <>
+      <div className='row'>
+        <h1 className='responsive-h1 text-center gameboy'>Damage Guide</h1>
+      </div>
+
+      <div className='row py-4'>
+        {doubleDamageFrom && (
+          <div className='col mb-4'>
+            <h3>2x Weakness To</h3>
+            {doubleDamageFromOutput}
+          </div>
+        )}
+        {doubleDamageTo && (
+          <div className='col mb-4'>
+            <h3>Super Effective Against</h3>
+            {doubleDamageToOutput}
+          </div>
+        )}
+        {halfDamageFrom && (
+          <div className='col mb-4'>
+            <h3>Resistant To</h3>
+            {halfDamageFromOutput}
+          </div>
+        )}
+        {halfDamageTo && (
+          <div className='col mb-4'>
+            <h3>Weak Against</h3>
+            {halfDamageToOutput}
+          </div>
+        )}
+        {noDamageFrom && noDamageFrom.length > 0 && (
+          <div className='col mb-4'>
+            <h3>Immune To</h3>
+            {noDamageFromOutput}
+          </div>
+        )}
+        {noDamageTo && noDamageTo.length > 0 && (
+          <div className='col mb-4'>
+            <h3>No Effect</h3>
+            {noDamageToOutput}
+          </div>
+        )}
+      </div>
+    </>
   );
 };
 
