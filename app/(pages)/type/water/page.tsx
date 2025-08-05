@@ -16,7 +16,7 @@ const PokemonTypeWaterPage = () => {
   });
   if (isLoading) return <Pending />;
   if (error) return <Error />;
-  
+
   return (
     <section className='App container container-type-water'>
       <div className='row'>

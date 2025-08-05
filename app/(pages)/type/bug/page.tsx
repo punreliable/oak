@@ -16,7 +16,7 @@ const PokemonTypeBugPage = () => {
   });
   if (isLoading) return <Pending />;
   if (error) return <Error />;
-  
+
   return (
     <section className='App container container-type-bug'>
       <div className='row'>

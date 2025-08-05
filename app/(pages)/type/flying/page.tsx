@@ -16,7 +16,7 @@ const PokemonTypeFlyingPage = () => {
   });
   if (isLoading) return <Pending />;
   if (error) return <Error />;
-  
+
   return (
     <section className='App container container-type-flying'>
       <div className='row'>

@@ -3,10 +3,10 @@
 
 $border-size: 4px;
 
-.type-container {
+.type-container, .container-type {
 
-	height: 180px;
-	width: 320px;
+	min-height: 250px;
+	min-width: 320px;
 
 	background-color: $color-normal;
 	background-image: url('../assets/type-icons-color-dark/01-normal.svg');
@@ -134,7 +134,7 @@ $border-size: 4px;
 $background-color: $color-normal;
 $base-color: $color-normal;
 
-.type-normal-container {
+.type-normal-container, .container-type-normal {
 
 	@extend .type-container;
 
@@ -145,8 +145,9 @@ $base-color: $color-normal;
 	background-size: 3em;
 
 	border-color: $border-color-normal;
-
-
+	
+	min-height: 250px;
+	min-width: 320px;
 
   &.is-dark {
 	position: relative;
@@ -223,17 +224,20 @@ $base-color: $color-normal;
 	  }
 	}
   }
+
+  h1 {
+	margin-top: 4.5rem;
+  }
+
 }
 
 $background-color: $color-dark;
 $base-color: $color-dark;
 
-.type-fighting-container {
+.type-fighting-container, .container-type-fighting {
 
-	// @extend .type-container;
-
-	height: 180px;
-	width: 320px;
+	min-height: 250px;
+	min-width: 320px;
 
 	background-color: $color-fighting;
 	background-image: url('../assets/type-icons-color-dark/02-fighting.svg');
@@ -292,15 +296,19 @@ $base-color: $color-dark;
 
 	}
 
+	h1 {
+		margin-top: 4.5rem;
+	  }
+
 }
 
 $background-color: $color-flying;
 $base-color: $color-flying;
 
-.type-flying-container {
+.type-flying-container, .container-type-flying {
 
-	height: 180px;
-	width: 320px;
+	min-height: 250px;
+	min-width: 320px;
 
 	background-color: $color-flying;
 	background-image: url('../assets/type-icons-color-dark/03-flying.svg');
@@ -424,31 +432,30 @@ $base-color: $color-flying;
 	  }
 	}
   }
+
+  h1 {
+	margin-top: 4.5rem;
+  }
+
 }
 
 $background-color: $color-poison;
 $base-color: $color-poison;
 
-.type-poison-container {
+.type-poison-container, .container-type-poison {
 
-	height: 180px;
-	width: 320px;
-
+	min-height: 250px;
+	min-width: 320px;
 	background-color: $color-poison;
 	background-image: url('../assets/type-icons-color-dark/04-poison.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
-
-
-
-
-
-  position: relative;
-  padding: 1.5rem 2rem;
-  border-color: black;
-  border-style: solid;
-  border-width: 4px;
+	border-color: black;
+	border-style: solid;
+	border-width: 4px;	
+	position: relative;
+	padding: 1.5rem 2rem;
 
   > :last-child {
 	margin-bottom: 0;
@@ -559,152 +566,155 @@ $base-color: $color-poison;
 	  }
 	}
   }
+
+  h1 {
+	margin-top: 4.5rem;
+  }
+  
 }
 
 $background-color: $color-ground;
 $base-color: $color-ground;
 
-.type-ground-container {
+.type-ground-container, .container-type-ground {
 
-
-	height: 180px;
-	width: 320px;
+	min-height: 250px;
+	min-width: 320px;
 
 	background-color: $color-ground;
 	background-image: url('../assets/type-icons-color-dark/05-ground.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
+	position: relative;
+	padding: 1.5rem 2rem;
+	border-color: black;
+	border-style: solid;
+	border-width: 4px;
 
-
-
-
-
-  position: relative;
-  padding: 1.5rem 2rem;
-  border-color: black;
-  border-style: solid;
-  border-width: 4px;
-
-  > :last-child {
-	margin-bottom: 0;
-  }
-
-  &.is-centered {
-	text-align: center;
-  }
-
-  &.is-right {
-	text-align: right;
-  }
-
-  &.with-title {
-	> .title {
-	  display: table;
-	  padding: 0 0.5rem;
-	  margin: -1.8rem 0 1rem;
-	  font-size: 1rem;
-	  background-color: $background-color;
+	> :last-child {
+		margin-bottom: 0;
 	}
 
 	&.is-centered {
-	  > .title {
-		margin: -2rem auto 1rem;
-	  }
+		text-align: center;
 	}
 
 	&.is-right {
-	  > .title {
-		margin: -2rem 0 1rem auto;
-	  }
-	}
-  }
-
-  &.is-dark {
-	position: relative;
-	margin: $border-size;
-	color: $background-color;
-	background-color: $base-color;
-	border-color: white;
-
-	&::after {
-	  position: absolute;
-	  top: -$border-size * 1.8;
-	  right: -$border-size * 1.8;
-	  bottom: -$border-size * 1.8;
-	  left: -$border-size * 1.8;
-	  z-index: -1;
-	  content: "";
-	  background-color: $base-color;
+		text-align: right;
 	}
 
 	&.with-title {
-	  > .title {
-		color: $background-color;
-		background-color: $base-color;
-	  }
-	}
-  }
-
-  &.is-rounded {
-	@include rounded-corners();
-
-	padding: 1rem 1.5rem;
-	margin: $border-size;
-
-	&.with-title {
-	  > .title {
-		margin-top: -1.5rem;
-	  }
-
-	  &.is-centered {
 		> .title {
-		  margin: -1.5rem auto 1rem;
-		}
-	  }
-
-	  &.is-right {
-		> .title {
-		  margin: -1.5rem 0 1rem auto;
-		}
-	  }
-	}
-
-	&.is-dark {
-	  @include rounded-corners(true);
-	  &::after {
-		content: none;
-	  }
-
-	  &.with-title {
-		> .title {
-		  margin-top: -1.3rem;
+		display: table;
+		padding: 0 0.5rem;
+		margin: -1.8rem 0 1rem;
+		font-size: 1rem;
+		background-color: $background-color;
 		}
 
 		&.is-centered {
-		  > .title {
-			margin: -1.3rem auto 1rem;
-		  }
+		> .title {
+			margin: -2rem auto 1rem;
+		}
 		}
 
 		&.is-right {
-		  > .title {
-			margin: -1.3rem 0 1rem auto;
-		  }
+		> .title {
+			margin: -2rem 0 1rem auto;
 		}
-	  }
+		}
 	}
-  }
+
+	&.is-dark {
+		position: relative;
+		margin: $border-size;
+		color: $background-color;
+		background-color: $base-color;
+		border-color: white;
+
+		&::after {
+		position: absolute;
+		top: -$border-size * 1.8;
+		right: -$border-size * 1.8;
+		bottom: -$border-size * 1.8;
+		left: -$border-size * 1.8;
+		z-index: -1;
+		content: "";
+		background-color: $base-color;
+		}
+
+		&.with-title {
+		> .title {
+			color: $background-color;
+			background-color: $base-color;
+		}
+		}
+	}
+
+	&.is-rounded {
+		@include rounded-corners();
+
+		padding: 1rem 1.5rem;
+		margin: $border-size;
+
+		&.with-title {
+		> .title {
+			margin-top: -1.5rem;
+		}
+
+		&.is-centered {
+			> .title {
+			margin: -1.5rem auto 1rem;
+			}
+		}
+
+		&.is-right {
+			> .title {
+			margin: -1.5rem 0 1rem auto;
+			}
+		}
+		}
+
+		&.is-dark {
+			@include rounded-corners(true);
+			&::after {
+				content: none;
+			}
+
+			&.with-title {
+				> .title {
+					margin-top: -1.3rem;
+				}
+
+				&.is-centered {
+					> .title {
+						margin: -1.3rem auto 1rem;
+					}
+				}
+
+				&.is-right {
+					> .title {
+						margin: -1.3rem 0 1rem auto;
+					}
+				}
+			}
+		}
+	}
+
+	h1 {
+		margin-top: 4.5rem;
+	}
+
 }
 
 $background-color: $color-rock;
 $base-color: $color-rock;
 
-.type-rock-container {
+.type-rock-container, .container-type-rock {
 
-
-	height: 180px;
-	width: 320px;
+	min-height: 250px;
+	min-width: 320px;
 
 	background-color: $color-rock;
 	background-image: url('../assets/type-icons-color-dark/06-rock.svg');
@@ -712,16 +722,11 @@ $base-color: $color-rock;
 	background-repeat: no-repeat;
 	background-size: 3em;
 
-
-
-
-
-
-  position: relative;
-  padding: 1.5rem 2rem;
-  border-color: black;
-  border-style: solid;
-  border-width: 4px;
+	position: relative;
+	padding: 1.5rem 2rem;
+	border-color: black;
+	border-style: solid;
+	border-width: 4px;
 
   > :last-child {
 	margin-bottom: 0;
@@ -832,6 +837,11 @@ $base-color: $color-rock;
 	  }
 	}
   }
+
+  h1 {
+	margin-top: 4.5rem;
+  }
+
 }
 
 $background-color: $color-bug;
@@ -844,10 +854,9 @@ $base-color: $color-bug;
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
-
 	position: relative;
 	padding: 1.5rem 2rem;
-	border-color: black;
+	border-color: darken( $color-bug, 20% );
 	border-style: solid;
 	border-width: 4px;
 	min-height: 250px;
@@ -972,9 +981,7 @@ $base-color: $color-bug;
 $background-color: $color-ghost;
 $base-color: $color-ghost;
 
-.type-ghost-container {
-
-
+.type-ghost-container, .container-type-ghost {
 
 	height: 180px;
 	width: 320px;
@@ -1103,12 +1110,17 @@ $base-color: $color-ghost;
 	  }
 	}
   }
+
+  h1 {
+	margin-top: 4.5rem;
+  }
+
 }
 
 $background-color: $color-steel;
 $base-color: $color-steel;
 
-.type-steel-container {
+.type-steel-container, .container-type-steel {
 
 
 	height: 180px;
@@ -1236,12 +1248,15 @@ $base-color: $color-steel;
 	  }
 	}
   }
+  h1 {
+	margin-top: 4.5rem;
+  }
 }
 
 $background-color: $color-fire;
 $base-color: $color-fire;
 
-.type-fire-container {
+.type-fire-container, .container-type-fire {
 
 	height: 180px;
 	width: 320px;
@@ -1370,12 +1385,15 @@ $base-color: $color-fire;
 	  }
 	}
   }
+  h1 {
+	margin-top: 4.5rem;
+  }
 }
 
 $background-color: $color-water;
 $base-color: $color-water;
 
-.type-water-container {
+.type-water-container, .container-type-water {
 
 	height: 180px;
 	width: 320px;
@@ -1507,31 +1525,29 @@ $base-color: $color-water;
 	  }
 	}
   }
+  h1 {
+	margin-top: 4.5rem;
+  }
 }
 
 $background-color: $color-grass;
 $base-color: $color-grass;
 
-.type-grass-container {
-
-	height: 180px;
-	width: 320px;
+.type-grass-container, .container-type-grass {
 
 	background-color: $color-grass;
 	background-image: url('../assets/type-icons-color-dark/12-grass.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
+	border-color: black;
+	border-style: solid;
+	border-width: 4px;
+	min-height: 250px;
+	min-width: 320px;
+	position: relative;
+	padding: 1.5rem 2rem;
 
-
-
-
-
-  position: relative;
-  padding: 1.5rem 2rem;
-  border-color: black;
-  border-style: solid;
-  border-width: 4px;
 
   > :last-child {
 	margin-bottom: 0;
@@ -1641,31 +1657,30 @@ $base-color: $color-grass;
 		}
 	  }
 	}
+  }
+
+  h1 {
+	margin-top: 4.5rem;
   }
 }
 
 $background-color: $color-electric;
 $base-color: $color-electric;
 
-.type-electric-container {
+.type-electric-container, .container-type-electric {
 
 	height: 180px;
 	width: 320px;
-
 	background-color: $color-electric;
 	background-image: url('../assets/type-icons-color-dark/13-electric.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
-
-
-
-
-  position: relative;
-  padding: 1.5rem 2rem;
-  border-color: black;
-  border-style: solid;
-  border-width: 4px;
+	position: relative;
+	padding: 1.5rem 2rem;
+	border-color: black;
+	border-style: solid;
+	border-width: 4px;
 
   > :last-child {
 	margin-bottom: 0;
@@ -1776,12 +1791,15 @@ $base-color: $color-electric;
 	  }
 	}
   }
+  h1 {
+	margin-top: 4.5rem;
+  }
 }
 
 $background-color: $color-psychic;
 $base-color: $color-psychic;
 
-.type-psychic-container {
+.type-psychic-container, .container-type-psychic {
 
 	height: 180px;
 	width: 320px;
@@ -1910,12 +1928,15 @@ $base-color: $color-psychic;
 	  }
 	}
   }
+  h1 {
+	margin-top: 4.5rem;
+  }
 }
 
 $background-color: $color-ice;
 $base-color: $color-ice;
 
-.type-ice-container {
+.type-ice-container, .container-type-ice {
 
 	height: 180px;
 	width: 320px;
@@ -2043,12 +2064,15 @@ $base-color: $color-ice;
 	  }
 	}
   }
+  h1 {
+	margin-top: 4.5rem;
+  }
 }
 
 $background-color: $color-dragon;
 $base-color: $color-dragon;
 
-.type-dragon-container {
+.type-dragon-container, .container-type-dragon {
 
 	height: 180px;
 	width: 320px;
@@ -2176,55 +2200,55 @@ $base-color: $color-dragon;
 	  }
 	}
   }
+  h1 {
+	margin-top: 4.5rem;
+  }
 }
 
 $background-color: $color-dark;
 $base-color: $color-dark;
 
-.type-dark-container {
+.type-dark-container, .container-type-dark {
 
-	height: 180px;
-	width: 320px;
+	min-height: 250px;
+	min-width: 320px;
 
 	background-color: $color-dark;
 	background-image: url('../assets/type-icons-color-dark/17-dark.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
+	position: relative;
+	padding: 1.5rem 2rem;
+	border-color: black;
+	border-style: solid;
+	border-width: 4px;
 
-
-
-  position: relative;
-  padding: 1.5rem 2rem;
-  border-color: black;
-  border-style: solid;
-  border-width: 4px;
-
-  > :last-child {
-	margin-bottom: 0;
-  }
-
-  &.is-centered {
-	text-align: center;
-  }
-
-  &.is-right {
-	text-align: right;
-  }
-
-  &.with-title {
-	> .title {
-	  display: table;
-	  padding: 0 0.5rem;
-	  margin: -1.8rem 0 1rem;
-	  font-size: 1rem;
-	  background-color: $background-color;
+	> :last-child {
+		margin-bottom: 0;
 	}
 
 	&.is-centered {
-	  > .title {
-		margin: -2rem auto 1rem;
-	  }
+		text-align: center;
+	}
+
+	&.is-right {
+		text-align: right;
+	}
+
+	&.with-title {
+		> .title {
+			display: table;
+			padding: 0 0.5rem;
+			margin: -1.8rem 0 1rem;
+			font-size: 1rem;
+			background-color: $background-color;
+		}
+
+		&.is-centered {
+		> .title {
+			margin: -2rem auto 1rem;
+		}
 	}
 
 	&.is-right {
@@ -2309,15 +2333,15 @@ $base-color: $color-dark;
 	  }
 	}
   }
+  h1 {
+	margin-top: 4.5rem;
+  }
 }
 
 $background-color: $color-fairy;
 $base-color: $color-fairy;
 
-.type-fairy-container {
-
-	height: 180px;
-	width: 320px;
+.type-fairy-container, .container-type-fairy {
 
 	background-color: $color-fairy;
 	background-image: url('../assets/type-icons-color-dark/18-fairy.svg');
@@ -2325,12 +2349,14 @@ $base-color: $color-fairy;
 	background-repeat: no-repeat;
 	background-size: 3em;
 
+	position: relative;
+	padding: 1.5rem 2rem;
+	border-color: black;
+	border-style: solid;
+	border-width: 4px;
 
-  position: relative;
-  padding: 1.5rem 2rem;
-  border-color: black;
-  border-style: solid;
-  border-width: 4px;
+	min-height: 250px;
+	min-width: 320px;
 
 
   &.with-title {
@@ -2369,6 +2395,10 @@ $base-color: $color-fairy;
 
 	}
 
+  }
+  
+  h1 {
+	margin-top: 4.5rem;
   }
 
 }
