@@ -5,7 +5,7 @@ import axios from 'axios';
 import Error from './Error';
 import Pending from './Pending';
 import Result from './Result';
-const PokemonTypeBugPage = () => {
+const PokemonTypePsychicPage = () => {
   const { data, error, isLoading } = useQuery({
     queryKey: ['type'],
     queryFn: async () => {
@@ -27,4 +27,4 @@ const PokemonTypeBugPage = () => {
   );
 };
 
-export default PokemonTypeBugPage;
+export default PokemonTypePsychicPage;
