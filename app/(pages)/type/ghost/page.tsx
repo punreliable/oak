@@ -30,4 +30,3 @@ const PokemonTypeGhostPage = () => {
 };
 
 export default PokemonTypeGhostPage;
-

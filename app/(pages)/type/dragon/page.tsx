@@ -30,4 +30,3 @@ const PokemonTypeDragonPage = () => {
 };
 
 export default PokemonTypeDragonPage;
-

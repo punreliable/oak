@@ -30,4 +30,3 @@ const PokemonTypeFlyingPage = () => {
 };
 
 export default PokemonTypeFlyingPage;
-

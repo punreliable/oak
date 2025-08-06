@@ -30,4 +30,3 @@ const PokemonTypeFirePage = () => {
 };
 
 export default PokemonTypeFirePage;
-
