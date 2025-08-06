@@ -2,14 +2,16 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import Error from './Error';
-import Pending from './Pending';
-import Result from './Result';
+import Error from '@/app/(pages)/type/Error';
+import Pending from '@/app/(pages)/type/Pending';
+import Result from '@/app/(pages)/type/Result';
+import prettyName from '@/utilities/prettyName';
 const PokemonTypeIcePage = () => {
+  const typeID: string = 'ice';
   const { data, error, isLoading } = useQuery({
     queryKey: ['type'],
     queryFn: async () => {
-      const id: string = 'ice';
+      const id: string = typeID;
       const response = await axios.get(`https://pokeapi.co/api/v2/type/${id}`);
       return response.data;
     },
@@ -18,9 +20,9 @@ const PokemonTypeIcePage = () => {
   if (error) return <Error />;
 
   return (
-    <section className='App container container-type-ice'>
+    <section className={`App container container-type-${typeID}`}>
       <div className='row'>
-        <h1 className='responsive-h1 text-center gameboy title'>Ice Type</h1>
+        <h1 className='responsive-h1 text-center gameboy mb-4'>{prettyName(typeID)} Type</h1>
       </div>
       {data && <Result damage_relations={data} />}
     </section>
