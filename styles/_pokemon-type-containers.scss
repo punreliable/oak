@@ -57,9 +57,9 @@ $border-size: 4px;
   &.is-dark {
 	position: relative;
 	margin: $border-size;
-	//color: $background-color;
-	//background-color: $base-color;
-	//border-color: white;
+	color: $background-color;
+	background-color: $base-color;
+	border-color: white;
 
 	&::after {
 	  position: absolute;
@@ -74,8 +74,8 @@ $border-size: 4px;
 
 	&.with-title {
 	  > .title {
-		//color: $background-color;
-		//background-color: $base-color;
+		color: $background-color;
+		background-color: $base-color;
 	  }
 	}
   }
@@ -127,6 +127,12 @@ $border-size: 4px;
 		  }
 		}
 	  }
+	}
+  }
+
+  h1 {
+	&.title-page {
+		margin-bottom: 2rem;
 	}
   }
 }
@@ -1392,26 +1398,18 @@ $base-color: $color-water;
 
 .type-water-container, .container-type-water {
 
-	min-height: 250px;
-	min-width: 320px;
-
 	background-color: $color-water;
 	background-image: url('../assets/type-icons-color-dark/11-water.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
-
-
-
-
-
-
-
-  position: relative;
-  padding: 1.5rem 2rem;
-  border-color: black;
-  border-style: solid;
-  border-width: 4px;
+	min-height: 250px;
+	min-width: 320px;
+	position: relative;
+	padding: 1.5rem 2rem;
+	border-color: black;
+	border-style: solid;
+	border-width: 4px;
 
   > :last-child {
 	margin-bottom: 0;

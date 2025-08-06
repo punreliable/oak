@@ -66,29 +66,29 @@ const Result = (props: any) => {
   return (
     <>
       <div className='row'>
-        <h1 className='responsive-h1 text-center gameboy'>Damage Guide</h1>
+        <h2 className='responsive-h2 text-center gameboy'>Damage Guide</h2>
       </div>
 
       <div className='row py-4'>
-        {doubleDamageFrom && (
+        {doubleDamageFrom && doubleDamageFrom.length > 0 && (
           <div className='col mb-4'>
             <h3>2x Weakness To</h3>
             {doubleDamageFromOutput}
           </div>
         )}
-        {doubleDamageTo && (
+        {doubleDamageTo && doubleDamageTo.length > 0 && (
           <div className='col mb-4'>
             <h3>Super Effective Against</h3>
             {doubleDamageToOutput}
           </div>
         )}
-        {halfDamageFrom && (
+        {halfDamageFrom && halfDamageFrom.length > 0 && (
           <div className='col mb-4'>
             <h3>Resistant To</h3>
             {halfDamageFromOutput}
           </div>
         )}
-        {halfDamageTo && (
+        {halfDamageTo && halfDamageTo.length > 0 && (
           <div className='col mb-4'>
             <h3>Weak Against</h3>
             {halfDamageToOutput}
