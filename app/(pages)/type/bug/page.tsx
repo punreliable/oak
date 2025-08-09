@@ -2,9 +2,10 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import Error from '@/app/(pages)/type/Error';
-import Pending from '@/app/(pages)/type/Pending';
-import Result from '@/app/(pages)/type/Result';
+import DamageRelationsError from '@/app/components/DamageRelations/DamageRelationsError';
+import DamageRelationsPending from '@/app/components/DamageRelations/DamageRelationsPending';
+import DamageRelationsResult from '@/app/components/DamageRelations/DamageRelationsResult';
+import PokemonByTypeResult from '@/app/components/PokemonByType/PokemonByTypeResult';
 import prettyName from '@/utilities/prettyName';
 const PokemonTypeBugPage = () => {
   const typeID: string = 'bug';
@@ -16,15 +17,18 @@ const PokemonTypeBugPage = () => {
       return response.data;
     },
   });
-  if (isLoading) return <Pending />;
-  if (error) return <Error />;
+
+  if (isLoading) return <DamageRelationsPending />;
+
+  if (error) return <DamageRelationsError />;
 
   return (
     <section className={`App container container-type-${typeID}`}>
       <div className='row'>
         <h1 className='responsive-h1 text-center gameboy mb-4'>{prettyName(typeID)} Type</h1>
       </div>
-      {data && <Result damage_relations={data} />}
+      {data && <DamageRelationsResult damage_relations={data} />}
+      {data && <PokemonByTypeResult pokemon={data} />}
     </section>
   );
 };
