@@ -9,49 +9,45 @@ import Message from '@/app/components/ProfessorOak/Message';
 
 const Result = (props: any) => {
   return (
-    <div className='container'>
-      <section className='nesContainer nes-container'>
-        <div className='row'>
-          <h1 className='oakHello'>Hello,</h1>
+    <section className='App container'>
+      <div className='row'>
+        <h1 className='oakHello'>Hello,</h1>
+        <h1 className='pokemonName'>{prettyName(props?.pokemon.name)}</h1>
+      </div>
+      <div className='row'>
+        <Image
+          className='nes-avatar avatar pokemonAvatar mx-auto'
+          alt={'Image of a ' + prettyName(props?.pokemon.name)}
+          id='avatar'
+          src={props?.pokemon.sprites?.front_default}
+          width={256}
+          height={256}
+        />
+      </div>
 
-          <h1 className='pokemonName'>{prettyName(props?.pokemon.name)}</h1>
+      <div className='row rowStats'>
+        <div className='col-md-12 col-lg-3 stats'>
+          {props.height && <p>Height: {props.pokemon.height}in</p>}
+          {props.weight && <p>Weight: {props.pokemon.weight}lb</p>}
+          {props.pokemon.base_experience && <p>Base XP: {props.pokemon.base_experience}xp</p>}
         </div>
-
-        <div className='row'>
-          <Image
-            className='nes-avatar avatar pokemonAvatar'
-            alt={'Image of a ' + prettyName(props?.pokemon.name)}
-            id='avatar'
-            src={props?.pokemon.sprites?.front_default}
-            width={256}
-            height={256}
-          />
+      </div>
+      <div className='row'>
+        <div className='col-md-12 col-lg-9'>
+          <PokemonDescription pokemon={props.pokemon.id} />
         </div>
-
-        <div className='row rowStats'>
-          <div className='col-md-12 col-lg-3 stats'>
-            {props.height && <p>Height: {props.pokemon.height}in</p>}
-            {props.weight && <p>Weight: {props.pokemon.weight}lb</p>}
-            {props.pokemon.base_experience && <p>Base XP: {props.pokemon.base_experience}xp</p>}
-          </div>
-        </div>
-        <div className='row'>
-          <div className='col-md-12 col-lg-9'>
-            <PokemonDescription pokemon={props.pokemon.id} />
-          </div>
-        </div>
-        <div className='row'>
-          <PokemonTypeList types={props.pokemon.types} />
-        </div>
-        <div className='row'>
-          <PokemonAbilitiesList abilities={props.pokemon.abilities} />
-        </div>
-        <div className='row'>
-          <PokemonMoveList moves={props.pokemon.moves} />
-        </div>
-        <Message pokemon={props.pokemon.id} />
-      </section>
-    </div>
+      </div>
+      <div className='row'>
+        <PokemonTypeList types={props.pokemon.types} />
+      </div>
+      <div className='row'>
+        <PokemonAbilitiesList abilities={props.pokemon.abilities} />
+      </div>
+      <div className='row'>
+        <PokemonMoveList moves={props.pokemon.moves} />
+      </div>
+      <Message pokemon={props.pokemon.id} />
+    </section>
   );
 };
 

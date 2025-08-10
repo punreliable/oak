@@ -18,7 +18,7 @@ const PokemonPage = () => {
   };
 
   return (
-    <div id='main'>
+    <div className='App nes-container'>
       {!formSubmitted && (
         <div
           className='feature-image'
