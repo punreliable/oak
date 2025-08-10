@@ -5,7 +5,7 @@ const PokemonTypeList = (props: any) => {
   const types = props.types;
   const count: number = props.types.length;
 
-  const columns = count > 1 ? 'col-md-6 col-sm-12' : 'col-sm-12';
+  const columns = count > 1 ? 'col-md-6 col-sm-12' : 'col-md-12 col-sm-12';
   const minified = types.map((x: any) => (
     <div className={columns + ' py-4'} key={uuidv4()}>
       <a href={`/type/${x.type.name}`} className={`nes-btn type-${x.type.name} is-${x.type.name}`}>
@@ -14,7 +14,7 @@ const PokemonTypeList = (props: any) => {
     </div>
   ));
 
-  return <div className='row row-types'>{minified}</div>;
+  return <>{minified}</>;
 };
 
 export default PokemonTypeList;

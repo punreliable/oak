@@ -1,29 +1,36 @@
 import React from 'react';
 import Image from 'next/image';
-import PokemonDescription from '../../components/PokemonDescription';
-import PokemonAbilitiesList from '../../components/PokemonAbilitiesList';
-import PokemonTypeList from '../../components/PokemonTypeList';
-import PokemonMoveList from '../../components/PokemonMoveList';
-import prettyName from '../../../utilities/prettyName';
+import PokemonDescription from '@/app/components/PokemonDescription';
+import PokemonAbilitiesList from '@/app/components/PokemonAbilitiesList';
+import PokemonTypeList from '@/app/components/PokemonTypeList';
+import PokemonMoveList from '@/app/components/PokemonMoveList';
+import prettyName from '@/utilities/prettyName';
 import Message from '@/app/components/ProfessorOak/Message';
-// import professorOak from '../../../assets/oak.svg';
 
 const Result = (props: any) => {
   return (
-    <div className='App' style={{ margin: 'auto' }}>
+    <div className='container'>
       <section className='nesContainer nes-container'>
-        <h1 className='oakHello'>Hello,</h1>
+        <div className='row'>
 
-        <h1 className='pokemonName'>{prettyName(props?.pokemon.name)}</h1>
+          <h1 className='oakHello'>Hello,</h1>
 
-        <Image
-          className='nes-avatar avatar pokemonAvatar'
-          alt={'Image of a ' + prettyName(props?.pokemon.name)}
-          id='avatar'
-          src={props?.pokemon.sprites?.front_default}
-          width={256}
-          height={256}
-        />
+          <h1 className='pokemonName'>{prettyName(props?.pokemon.name)}</h1>
+
+        </div>
+
+        <div className='row'>
+
+          <Image
+            className='nes-avatar avatar pokemonAvatar'
+            alt={'Image of a ' + prettyName(props?.pokemon.name)}
+            id='avatar'
+            src={props?.pokemon.sprites?.front_default}
+            width={256}
+            height={256}
+          />
+
+        </div>
 
         <div className='row rowStats'>
           <div className='col-md-12 col-lg-3 stats'>
@@ -31,17 +38,21 @@ const Result = (props: any) => {
             {props.weight && <p>Weight: {props.pokemon.weight}lb</p>}
             {props.pokemon.base_experience && <p>Base XP: {props.pokemon.base_experience}xp</p>}
           </div>
+        </div>
+        <div className="row">
           <div className='col-md-12 col-lg-9'>
             <PokemonDescription pokemon={props.pokemon.id} />
           </div>
         </div>
-
-        <PokemonTypeList types={props.pokemon.types} />
-
-        <PokemonAbilitiesList abilities={props.pokemon.abilities} />
-
-        <PokemonMoveList moves={props.pokemon.moves} />
-
+        <div className="row">
+          <PokemonTypeList types={props.pokemon.types} />
+        </div>
+        <div className="row">
+          <PokemonAbilitiesList abilities={props.pokemon.abilities} />
+        </div>
+        <div className="row">
+          <PokemonMoveList moves={props.pokemon.moves} />
+        </div>
         <Message pokemon={props.pokemon.id} />
       </section>
     </div>

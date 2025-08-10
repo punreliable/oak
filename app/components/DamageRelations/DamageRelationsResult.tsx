@@ -12,7 +12,7 @@ const DamageRelationsResult = (props: any) => {
   const doubleDamageFromOutput = doubleDamageFrom.map((obj: { name: any }) => (
     <a
       key={obj.name}
-      className={`nes-btn type-${obj.name} is-${obj.name}`}
+      className={`nes-btn type-${obj.name} is-${obj.name} pr-4`}
       href={'/type/' + obj.name}
     >
       {prettyName(obj.name)}
@@ -21,7 +21,7 @@ const DamageRelationsResult = (props: any) => {
   const doubleDamageToOutput = doubleDamageTo.map((obj: { name: any }) => (
     <a
       key={obj.name}
-      className={`nes-btn type-${obj.name} is-${obj.name}`}
+      className={`nes-btn type-${obj.name} is-${obj.name} pr-4`}
       href={'/type/' + obj.name}
     >
       {prettyName(obj.name)}
@@ -30,7 +30,7 @@ const DamageRelationsResult = (props: any) => {
   const halfDamageFromOutput = halfDamageFrom.map((obj: { name: any }) => (
     <a
       key={obj.name}
-      className={`nes-btn type-${obj.name} is-${obj.name}`}
+      className={`nes-btn type-${obj.name} is-${obj.name} pr-4`}
       href={'/type/' + obj.name}
     >
       {prettyName(obj.name)}
@@ -39,7 +39,7 @@ const DamageRelationsResult = (props: any) => {
   const halfDamageToOutput = halfDamageTo.map((obj: { name: any }) => (
     <a
       key={obj.name}
-      className={`nes-btn type-${obj.name} is-${obj.name}`}
+      className={`nes-btn type-${obj.name} is-${obj.name} pr-4`}
       href={'/type/' + obj.name}
     >
       {prettyName(obj.name)}
@@ -48,7 +48,7 @@ const DamageRelationsResult = (props: any) => {
   const noDamageFromOutput = noDamageFrom.map((obj: { name: any }) => (
     <a
       key={obj.name}
-      className={`nes-btn type-${obj.name} is-${obj.name}`}
+      className={`nes-btn type-${obj.name} is-${obj.name} pr-4`}
       href={'/type/' + obj.name}
     >
       {prettyName(obj.name)}
@@ -57,7 +57,7 @@ const DamageRelationsResult = (props: any) => {
   const noDamageToOutput = noDamageTo.map((obj: { name: any }) => (
     <a
       key={obj.name}
-      className={`nes-btn type-${obj.name} is-${obj.name}`}
+      className={`nes-btn type-${obj.name} is-${obj.name} pr-4`}
       href={'/type/' + obj.name}
     >
       {prettyName(obj.name)}
