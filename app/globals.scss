@@ -391,3 +391,11 @@ input[type=text].gameboy {
 .text-dark {
   color: $color-text-shadow;
 }
+
+.nes-button {
+
+  &.hidden {
+    display: none;
+  }
+
+}

@@ -1,19 +1,36 @@
 'use client';
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import prettyName from '@/utilities/prettyName';
 
-const PokemonByTypeResult = (props: any) => {
+export function getPokemonIDFromURL(url: string) {
+  let output = url;
+  output = output.slice(0, -1);
+  output = output.slice(38);
+  return Number(output);
+}
+
+const PokemonByTypeResult = ( props: {pokemon: {pokemon:[{name:string, url:string}]}, slot: number; } ) => {
+  let classes: string = 'nes-btn is-error my-2 mx-2';
+  let classesOutPut = '';
   const pokemon = props.pokemon.pokemon;
-  const pokemonList = pokemon.map((obj: { pokemon: { name: string } }) => (
-    <a
-      key={obj.pokemon.name}
-      className={`nes-btn is-error my-2 mx-2`}
-      href={'/pokemon/' + obj.pokemon.name}
+  const pokemonList: any = pokemon.map((pokemonItem: { name: string; url: string }) => {
+    if( getPokemonIDFromURL(pokemonItem.url) > 151) { 
+      classesOutPut = classes + ' hidden';
+    } else {
+      classesOutPut = classes;
+    }
+    return (<a
+      key={pokemonItem.name}
+      className={classesOutPut} 
+      href={'/pokemon/' + pokemonItem.name}
     >
-      {prettyName(obj.pokemon.name)}
+      {prettyName(pokemonItem.name)}
     </a>
-  ));
-  return (
+  )});
+  // console.log('Pokemon: ', pokemon);
+  // console.log('Pokemon List: ', pokemonList);
+  return ( 
     <>
       <div className='row py-4 px-4'>
         <h2 className='responsive-h2 text-center gameboy'>Pokemon</h2>
