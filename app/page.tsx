@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import ErrorHomePokemon from '@/app/(pages)/home/ErrorHomePokemon';
-import PendingHomePokemon from '@/app/(pages)/home/PendingHomePokemon';
-import ResultHomePokemon from '@/app/(pages)/home/ResultHomePokemon';
+import ErrorHomePokemon from '@/app/components/HomePagePokemon/ErrorHomePokemon';
+import PendingHomePokemon from '@/app/components/HomePagePokemon/PendingHomePokemon';
+import ResultHomePokemon from '@/app/components/HomePagePokemon/ResultHomePokemon';
 
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
