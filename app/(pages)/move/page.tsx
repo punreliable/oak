@@ -2,38 +2,33 @@
 import React, { useEffect, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import Error from './ErrorMove';
-import Pending from './PendingMove';
+import ErrorMove from './ErrorMove';
+import PendingMove from './PendingMove';
 import Result from './ResultMove';
 
-const getMoveId = () => {
-  const number = Math.floor(Math.random() * 151) + 1;
-  if (number < 10) {
-    return `0${number}`;
-  }
-  return `${number}`;
-};
+interface MovePageProps {
+  moveID: string; // Define the type of the prop
+}
 
-const MovePage = () => {
+const MovePage = ({moveID}: MovePageProps) => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
   }, []);
   const { data, error, isLoading } = useQuery({
-    queryKey: ['ability'],
+    queryKey: ['ability', moveID],
     queryFn: async () => {
-      const id = getMoveId();
-      const response = await axios.get(`https://pokeapi.co/api/v2/move/${id}`);
+      const response = await axios.get(`https://pokeapi.co/api/v2/move/${moveID}`);
       return response.data;
     },
   });
   if (!isClient) {
     return null;
   }
-  if (isLoading) return <Pending />;
+  if (isLoading) return <PendingMove />;
 
-  if (error) return <Error />;
+  if (error) return <ErrorMove />;
 
   return (
     <div className='App'>
