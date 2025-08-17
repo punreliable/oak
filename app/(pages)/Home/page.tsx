@@ -30,7 +30,9 @@ const OtherHome = () => {
 
   return (
     <div className='App' style={{ margin: 'auto' }}>
-      <section className='nesContainer nes-container'>{data && <ResultHomePokemon pokemon={data} />}</section>
+      <section className='nesContainer nes-container'>
+        {data && <ResultHomePokemon pokemon={data} />}
+      </section>
     </div>
   );
 };

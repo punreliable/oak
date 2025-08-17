@@ -10,7 +10,6 @@ import Message from '@/app/components/ProfessorOak/Message';
 const ResultHomePokemon = (props: any) => {
   return (
     <div className='App'>
-      
       <h1 className='oakHello'>Hello,</h1>
 
       <h1 className='pokemonName'>{prettyName(props?.pokemon.name)}</h1>
@@ -25,7 +24,6 @@ const ResultHomePokemon = (props: any) => {
       />
 
       <div className='row rowStats'>
-
         <div className='col-lg-3 stats'>
           {props.height && <p>Height: {props.pokemon.height}in</p>}
           {props.weight && <p>Weight: {props.pokemon.weight}lb</p>}
@@ -38,9 +36,7 @@ const ResultHomePokemon = (props: any) => {
       </div>
 
       <div className='row'>
-        <h3 className="h3-responsive">
-          Type
-        </h3>
+        <h3 className='h3-responsive'>Type</h3>
       </div>
 
       <div className='row my-4'>
@@ -48,7 +44,7 @@ const ResultHomePokemon = (props: any) => {
       </div>
 
       <div className='row my-4'>
-        <h3 className="h3-responsive gameboy">Abilities</h3>
+        <h3 className='h3-responsive gameboy'>Abilities</h3>
       </div>
 
       <div className='row my-4'>
@@ -56,7 +52,7 @@ const ResultHomePokemon = (props: any) => {
       </div>
 
       <div className='row my-4'>
-        <h3 className="h3-responsive gameboy">Moves</h3>
+        <h3 className='h3-responsive gameboy'>Moves</h3>
       </div>
 
       <div className='row'>
@@ -66,9 +62,7 @@ const ResultHomePokemon = (props: any) => {
       <div className='row'>
         <Message pokemon={props.pokemon.id} />
       </div>
-
     </div>
-  
   );
 };
 
