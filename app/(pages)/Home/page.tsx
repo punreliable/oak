@@ -2,9 +2,9 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import Error from './Error';
-import Pending from './Pending';
-import Result from './Result';
+import ErrorHomePokemon from '@/app/(pages)/home/ErrorHomePokemon';
+import PendingHomePokemon from '@/app/(pages)/home/PendingHomePokemon';
+import ResultHomePokemon from '@/app/(pages)/home/ResultHomePokemon';
 
 const getPokemonNumber = () => {
   const number = Math.floor(Math.random() * 151) + 1;
@@ -24,13 +24,13 @@ const OtherHome = () => {
     },
   });
 
-  if (isLoading) return <Pending />;
+  if (isLoading) return <PendingHomePokemon />;
 
-  if (error) return <Error />;
+  if (error) return <ErrorHomePokemon />;
 
   return (
     <div className='App' style={{ margin: 'auto' }}>
-      <section className='nesContainer nes-container'>{data && <Result pokemon={data} />}</section>
+      <section className='nesContainer nes-container'>{data && <ResultHomePokemon pokemon={data} />}</section>
     </div>
   );
 };

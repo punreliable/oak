@@ -36,7 +36,7 @@ const PokemonDescription: React.FC<PokemonDescriptionProps> = ({ pokemon }) => {
   }
 
   return (
-    <div style={style}>
+    <div className="col-md-12" style={style}>
       {data && (
         <>
           <p>Description: {data.data.flavor_text_entries[0].flavor_text}</p>

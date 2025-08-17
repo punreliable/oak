@@ -3,7 +3,7 @@ import Image from 'next/image';
 import unknown from '../../../assets/0.png';
 import professorOak from '../../../assets/oak.svg';
 
-const Error = () => {
+const ErrorHomePokemon = () => {
   return (
     <div className='App'>
       <section className='nesContainer nes-container'>
@@ -42,4 +42,4 @@ const Error = () => {
   );
 };
 
-export default Error;
+export default ErrorHomePokemon;
