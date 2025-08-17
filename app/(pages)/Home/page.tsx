@@ -2,9 +2,9 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import ErrorHomePokemon from '@/app/(pages)/home/ErrorHomePokemon';
-import PendingHomePokemon from '@/app/(pages)/home/PendingHomePokemon';
-import ResultHomePokemon from '@/app/(pages)/home/ResultHomePokemon';
+import ErrorHomePokemon from '@/app/components/HomePagePokemon/ErrorHomePokemon';
+import PendingHomePokemon from '@/app/components/HomePagePokemon/PendingHomePokemon';
+import ResultHomePokemon from '@/app/components/HomePagePokemon/ResultHomePokemon';
 
 const getPokemonNumber = () => {
   const number = Math.floor(Math.random() * 151) + 1;
