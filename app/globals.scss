@@ -27,7 +27,6 @@
 }
 
 body {
-
   color: var(--foreground);
   background: var(--background);
   margin: 0;
@@ -39,24 +38,19 @@ body {
 }
 
 .nes-container {
-
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   place-items: center;
-  // padding: 1rem !important;
 
   .row {
-      
     .imgProfessorOak {
-  
       margin-top: 3rem;
       height: 256px;
       width: 256px;
       
     }
-
     &.row-types {
       display: flex;
       flex-direction: row;
@@ -64,39 +58,33 @@ body {
       align-items: center;
       place-items: center;
       padding: 1rem 0;
-    }
-  
-  }
 
+    }
+  }
 }
 
 .nes-balloon {
+  justify-content: flex-end;
 
   p {
-
     margin-top: 0 !important;
-  }
-  
-justify-content: flex-end;
 
+  }
 }
 
 .avatar {
-  
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   
 }
 
 .pokemonAvatar {
-  
   height: auto;
   width: 96px;
   
 }
 
 .itemAvatar {
-  
   height: auto;
   margin: auto;
   width: 64px;
@@ -104,25 +92,22 @@ justify-content: flex-end;
 }
 
 .wrapperOak {
-  
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   align-content: flex-end;
   justify-content: flex-end;
-  
   width: 100%;
 
   .imgProfessorOak {
     align-self: flex-end;
-    // justify-content: flex-end;
     
   }
-
 }
 
 #professorMessages {
   padding-top: 1.5rem;
+
 }
 
 .pokemonName {
@@ -142,6 +127,7 @@ h1 {
     sup {
       font-size: 1.6rem;
       top: -0.8rem;
+
     }
   }
 }
@@ -182,13 +168,11 @@ h1 {
 }
 
 .linkSmall > * {
-
   font-size: 60%;
   word-wrap: break-word;
 }
 
 dialog ul li {
-
   list-style: none;
   margin-bottom: .5rem;
 
@@ -235,14 +219,12 @@ a {
 }
 
 h1 {
-  
   font-size: 3.2em;
   line-height: 1.1;
   
 }
 
 button {
-  
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
