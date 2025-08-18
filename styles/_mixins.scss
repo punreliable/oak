@@ -60,7 +60,7 @@ $color-white: $color-text;
 	  @include border-image-repeat();
 
 	  @if $isDark {
-		@include compact-border-image($brightest-green);
+		@include compact-border-image(variables.$brightest-green);
 		border-image-outset: 0;
 
 	  } @else {
