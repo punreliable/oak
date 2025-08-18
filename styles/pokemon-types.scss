@@ -446,10 +446,8 @@ Shield
 	
 //	03. Flying
 .wrapper-flying {	
-	// variables.$color-flying: #A890F0;
-	// variables.$border-color-flying: #6D5E9C;
 	color: variables.$border-color-flying;
-	background-color: lighten(variables.$color-flying, .1);
+	background-color: color.adjust(variables.$color-flying, $lightness: 10%, $space: oklch);
 }	
 	
 //	04. Posion
