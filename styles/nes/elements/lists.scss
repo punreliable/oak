@@ -30,6 +30,12 @@ $default-colors: (
   "shadow": $darker-green
 );
 
+$base-colors: (
+  "normal": $primary-green,
+  "hover": $brighter-green,
+  "shadow": $darker-green
+);
+
 @mixin list-before(
   $class,
   $disc-or-circle,
