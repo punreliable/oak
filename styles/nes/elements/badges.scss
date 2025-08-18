@@ -1,4 +1,5 @@
 @use '../../variables' as variables;
+@use '../../pokemon-types';
 
 @mixin span-style-is-icon($color, $background-color, $display, $width, $font-size) {
   display: $display;
@@ -76,9 +77,6 @@
   white-space: nowrap;
   vertical-align: top;
   user-select: none;
-  
-  
-  $background-color: variables.$background-color;
 
   // Other styles
   // prettier-ignore
