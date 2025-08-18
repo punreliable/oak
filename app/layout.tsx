@@ -13,7 +13,7 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
-  subsets: ['latin'],å
+  subsets: ['latin'],
 });
 
 const pressStart2P = Press_Start_2P({
