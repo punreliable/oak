@@ -6,7 +6,7 @@
     outline-color: $outline;
   }
 
-  @include compact-rounded-corners();
+  // @include compact-rounded-corners();
 
   width: calc(100% - #{2 * $border-size});
   padding: 0.5rem 1rem;

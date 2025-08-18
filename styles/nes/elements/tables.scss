@@ -60,7 +60,7 @@
     border-spacing: 0;
     border-collapse: separate;
 
-    @include compact-rounded-corners();
+    // @include compact-rounded-corners();
   }
 
   &.is-dark {
