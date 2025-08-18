@@ -19,16 +19,16 @@ p,
 li,
 a,
 button {
-  font-family: "Press Start 2P", cursive !important;
+  font-family: "Press Start 2P";
 
   &.gameboy {
-    font-family: "Press Start 2P", cursive !important;
+    font-family: "Press Start 2P";
 
   }
 }
 
 input[type="text"].gameboy {
-  font-family: "Press Start 2P", cursive;
+  font-family: "Press Start 2P";
   margin-left: 2em;
 }
 
@@ -39,11 +39,11 @@ input[type="text"].gameboy {
 
   &:hover,
   &:focus {
-    background-color: lighten(variables.$darker-green, 3%) !important;
+    background-color: color.adjust(variables.$darker-green, $lightness: 3%, $space: oklch);
   }
 
   &.active {
-    background-color: darken(variables.$darker-green, 15%) !important;
+    background-color: color.adjust(variables.$darker-green, $lightness: -15%, $space: oklch);
     @extend .z-depth-1-half !optional;
   }
 }

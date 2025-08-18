@@ -272,16 +272,6 @@ a {
 }
 
 /*
-
-Game List
-
-$color-game-red: #FF0000;
-$color-game-blue: #0000FF;
-$color-game-yellow: #FFFF00;
-
-*/
-
-/*
 Game List
 Red
 Blue
@@ -542,204 +532,129 @@ Shield
 //	01. Normal
 
 a.type-normal {
-
-	$color-normal: #A8A878;
-	$border-color-normal: #6D6D4E;
-
 	&:hover {
-
-		background-color: darken($color-normal, 10%);
+		background-color: color.adjust(variables.$color-normal, $lightness: -10%, $space: oklch);
 		
 	}
 }
 
 //	02. Fighting
 a.type-fighting {
-	$color-fighting: #C03028;
-	$border-color-fighting: #7D1F1A;
-
 	&:hover {
-
-		background-color: darken($color-fighting, 10%);
+		background-color: color.adjust(variables.$color-fighting, $lightness: -10%, $space: oklch);
 	}
 }
 
 //	03. Flying
 a.type-flying {
-	$color-flying: #A890F0;
-	$border-color-flying: #6D5E9C;
-
 	&:hover {
-
-		background-color: darken($color-flying, 10%);
+		background-color: color.adjust(variables.$color-flying, $lightness: -10%, $space: oklch);
 	}
 }
 
 //	04. Posion
 a.type-posion {
-	$color-poison: #A040A0;
-	$border-color-poison: #682A68;
-
 	&:hover {
-
-		background-color: darken($color-poison, 10%);
+		background-color: color.adjust(variables.$color-poison, $lightness: -10%, $space: oklch);
 	}
 }
 
 //	05. Ground
 a.type-ground {
-	$color-ground: #E0C068;
-	$border-color-ground: #927D44;
-
 	&:hover {
-
-		background-color: darken($color-ground, 10%);
+		background-color: color.adjust(variables.$color-ground, $lightness: -10%, $space: oklch);
 	}
 }
 
 //	06. Rock
 a.type-rock {
-	$color-rock: #B8A038;
-	$border-color-rock: #786824;
-
 	&:hover {
-
-		background-color: darken($color-rock, 10%);
+		background-color: color.adjust(variables.$color-rock, $lightness: -10%, $space: oklch);
 	}
 }
 
 //	07. Bug
 a.type-bug {
-	$color-bug: #A8B820;
-	$border-color-bug: #6D7815;
-
 	&:hover {
-
-		background-color: darken($color-bug, 10%);
+		background-color: color.adjust(variables.$color-bug, $lightness: -10%, $space: oklch);
 	}
 }
 
 //	08. Ghost
 a.type-ghost {
-	$color-ghost: #705898;
-	$border-color-ghost: #493963;
-
 	&:hover {
-
-		background-color: darken($color-ghost, 10%);
+		background-color: color.adjust(variables.$color-ghost, $lightness: -10%, $space: oklch);
 	}
 }
 
 //	09. Steel
 a.type-steel {
-	$color-steel: #B8B8D0;
-	$border-color-steel: #787887;
-
 	&:hover {
-
-		background-color: darken($color-steel, 10%);
+		background-color: color.adjust(variables.$color-steel, $lightness: -10%, $space: oklch);
 	}
 }
 
 //	10. Fire
 a.type-fire {
-	$color-fire: #F08030;
-	$border-color-fire: #9C531F;
-
 	&:hover {
-
-		background-color: darken($color-fire, 10%);
+		background-color: color.adjust(variables.$color-fire, $lightness: -10%, $space: oklch);
 	}
 }
 
 //	11. Water
 a.type-water {
-	$color-water: #6890F0;
-	$border-color-water: #445E9C;
-
 	&:hover {
-
-		background-color: darken($color-water, 10%);
+		background-color: color.adjust(variables.$color-water, $lightness: -10%, $space: oklch);
 	}
 }
 
 //	12. Grass
 a.type-grass {
-
-	$color-grass: #78C850;
-	$border-color-grass: #4E8234;
-
 	&:hover {
-
-		background-color: darken($color-grass, 10%);
+		background-color: color.adjust(variables.$color-grass, $lightness: -10%, $space: oklch);
 	}
 }
 
 //	13. Electric
 a.type-electric {
-	$color-electric: #F8D030;
-	$border-color-: #A1871F;
-
 	&:hover {
+		background-color: color.adjust(variables.$color-electric, $lightness: -10%, $space: oklch);
 
-		background-color: darken($color-electric, 10%);
 	}
 }
 
 //	14. Psychic
 a.type-psychic {
-	$color-psychic: #F85888;
-	$border-color-psychic: #A13959;
-
 	&:hover {
-
-		background-color: darken($color-psychic, 10%);
+		background-color: color.adjust(variables.$color-psychic, $lightness: -10%, $space: oklch);
 	}
 }
 
 //	15. Ice
 a.type-ice {
-	$color-ice: #98D8D8;
-	$border-color-ice: #638D8D;
-
 	&:hover {
-
-		background-color: darken($color-ice, 10%);
+		background-color: color.adjust(variables.$color-ice, $lightness: -10%, $space: oklch);
 	}
 }
 
 //	16. Dragon
 a.type-dragon {
-
-	$color-dragon: #7038F8;
-	$border-color-dragon: #4924A1;
-
 	&:hover {
-
-		background-color: darken($color-dragon, 10%);
+		background-color: color.adjust(variables.$color-dragon, $lightness: -10%, $space: oklch);
 	}
 }
 
 //	17. Dark
 a.type-dark {
-	$color-dark: #705848;
-	$border-color-dark: #49392F;
-
 	&:hover {
-
-		background-color: darken($color-dark, 10%);
+		background-color: color.adjust(variables.$color-dark, $lightness: -10%, $space: oklch);
 	}
 }
 
 //	18. Fairy
 a.type-fairy {
-
-	$color-fairy: #EE99AC;
-	$border-color-fairy: #9B6470;
-
 	&:hover {
-
-		background-color: darken($color-fairy, 10%);
+		background-color: color.adjust(variables.$color-fairy, $lightness: -10%, $space: oklch);
 	}
 }
 
@@ -1814,7 +1729,9 @@ $base-color: $color-bug;
 	background-size: 3em;
 	position: relative;
 	padding: 1.5rem 2rem;
-	border-color: darken( $color-bug, 20% );
+	background-color: color.adjust(variables.$color-bug, $lightness: -20%, $space: oklch);
+
+	
 	border-style: solid;
 	border-width: 4px;
 	min-height: 250px;
