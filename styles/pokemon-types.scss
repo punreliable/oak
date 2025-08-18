@@ -1129,23 +1129,23 @@ $base-color: variables.$color-normal;
 
 	@extend .type-container;
 
-	background-color: $color-normal;
+	background-color: variables.$color-normal;
 	background-image: url('../assets/type-icons-color-dark/01-normal.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
 
-	border-color: $border-color-normal;
+	border-color: variables.$border-color-normal;
 	
 	min-height: 250px;
 	min-width: 320px;
 
   &.is-dark {
 	position: relative;
-	margin: $border-size;
-	color: $background-color;
+	margin: variables.$border-size;
+	color: variables.$background-color;
 	background-color: $base-color;
-	border-color: $color-normal;
+	border-color: variables.$color-normal;
 
 	&::after {
 	  position: absolute;
@@ -1222,8 +1222,8 @@ $base-color: variables.$color-normal;
 
 }
 
-$background-color: $color-dark;
-$base-color: $color-dark;
+$background-color: variables.$color-dark;
+$base-color: variables.$color-dark;
 
 .type-fighting-container, .container-type-fighting {
 
