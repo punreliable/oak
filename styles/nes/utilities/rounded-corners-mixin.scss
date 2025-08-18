@@ -2,7 +2,7 @@
 
 %rounded-corner-defaults {
   border-style: solid;
-  border-width: $border-size;
+  border-width: 4px;
 }
 
 @mixin border-image($color) {
