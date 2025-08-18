@@ -1,78 +1,81 @@
-// @use '../../mixins' as mixins;
-// .nes-select {
-//   // prettier-ignore
-//   $dropdown: (
-//     (1,1,1,1,1,1,1),
-//     (1,1,1,1,1,1,1),
-//     (0,1,1,1,1,1,0),
-//     (0,1,1,1,1,1,0),
-//     (0,0,1,1,1,0,0),
-//     (0,0,0,1,0,0,0),
-//   );
-//   $colors: ($base-color, map-get($default-colors, "shadow"));
+@use '../../mixins' as mixins;
+@use '../../variables' as variables;
+@use '../base/variables' as nesVariables;
 
-//   position: relative;
-//   width: calc(100% - #{2 * $border-size});
-//   margin: 4px;
+.nes-select {
+  // prettier-ignore
+  $dropdown: (
+    (1,1,1,1,1,1,1),
+    (1,1,1,1,1,1,1),
+    (0,1,1,1,1,1,0),
+    (0,1,1,1,1,1,0),
+    (0,0,1,1,1,0,0),
+    (0,0,0,1,0,0,0),
+  );
+  $colors: (variables.$base-color, map-get(nesVariables.$default-colors, "shadow"));
 
-//   select {
-//     // @use compact-rounded-corners();
+  position: relative;
+  width: calc(100% - #{2 * variables.$border-size});
+  margin: 4px;
 
-//     width: 100%;
-//     padding: 0.5rem 2.5rem 0.5rem 1rem;
-//     // cursor: $cursor-click-url, pointer;
-//     border-radius: 0;
-//     outline-color: map-get($default-colors, "hover");
-//     -webkit-appearance: none;
-//     appearance: none;
+  select {
+    @include mixins.compact-rounded-corners();
 
-//     &:invalid {
-//       color: map-get($disabled-colors, shadow);
-//     }
-//   }
+    width: 100%;
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    // cursor: $cursor-click-url, pointer;
+    border-radius: 0;
+    outline-color: map-get(nesVariables.$default-colors, "hover");
+    -webkit-appearance: none;
+    appearance: none;
 
-//   &.is-dark select {
-//     color: $background-color;
-//     background-color: $base-color;
-//   }
+    &:invalid {
+      color: map-get(nesVariables.$disabled-colors, shadow);
+    }
+  }
 
-//   &::after {
-//     @include pixelize(3px, $dropdown, $colors);
+  &.is-dark select {
+    color: variables.$background-color;
+    background-color: variables.$base-color;
+  }
 
-//     position: absolute;
-//     top: calc(50% - 11px);
-//     right: 36px;
-//     pointer-events: none;
-//     content: "";
-//   }
+  &::after {
+    // @include pixelize(3px, $dropdown, $colors);
 
-//   // prettier-ignore
-//   $types:
-//     "dark" map-get($default-colors, "normal") map-get($default-colors, "hover"),
-//     "success" map-get($success-colors, "normal") map-get($success-colors, "hover"),
-//     "warning" map-get($warning-colors, "normal") map-get($warning-colors, "hover"),
-//     "error" map-get($error-colors, "normal") map-get($error-colors, "hover"),
-//     "disable" map-get($disabled-colors, "normal") map-get($disabled-colors, "shadow");
-//   @each $type in $types {
-//     &.is-#{nth($type, 1)} {
-//       $color: nth($type, 2);
+    position: absolute;
+    top: calc(50% - 11px);
+    right: 36px;
+    pointer-events: none;
+    content: "";
+  }
 
-//       &::after {
-//         color: $color;
-//       }
+  // prettier-ignore
+  $types:
+    "dark" map-get(nesVariables.$default-colors, "normal") map-get(nesVariables.$default-colors, "hover"),
+    "success" map-get(nesVariables.$success-colors, "normal") map-get(nesVariables.$success-colors, "hover"),
+    "warning" map-get(nesVariables.$warning-colors, "normal") map-get(nesVariables.$warning-colors, "hover"),
+    "error" map-get(nesVariables.$error-colors, "normal") map-get(nesVariables.$error-colors, "hover"),
+    "disable" map-get(nesVariables.$disabled-colors, "normal") map-get(nesVariables.$disabled-colors, "shadow");
+  @each $type in $types {
+    &.is-#{nth($type, 1)} {
+      $color: nth($type, 2);
 
-//       select {
-//         @include compact-border-image($color);
+      &::after {
+        color: $color;
+      }
 
-//         outline-color: nth($type, 3);
-//       }
-//     }
-//   }
-//   &.is-disabled {
-//     @extend .is-disable;
-//     select {
-//       color: map-get($disabled-colors, "normal");
-//       cursor: not-allowed;
-//     }
-//   }
-// }
+      select {
+        @include mixins.compact-border-image($color);
+
+        outline-color: nth($type, 3);
+      }
+    }
+  }
+  &.is-disabled {
+    @extend .is-disable;
+    select {
+      color: map-get(nesVariables.$disabled-colors, "normal");
+      cursor: not-allowed;
+    }
+  }
+}
