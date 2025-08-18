@@ -1,4 +1,5 @@
 @use '../../mixins' as mixins;
+$border-size: 4px;
 .nes-container, .nesContainer {
   margin: auto;
   display: flex;
