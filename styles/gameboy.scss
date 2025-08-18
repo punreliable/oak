@@ -1,7 +1,7 @@
 // Gameboy Color Palette
 
 @use 'nes/nes';
-@use './variables' as variables;
+@use './variables.scss' as variables;
 
 $darkest-green: #202119;
 $darker-green: #4d513a;

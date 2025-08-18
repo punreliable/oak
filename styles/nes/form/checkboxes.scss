@@ -1,136 +1,136 @@
-@use '../../variables.scss' as variables;
+// @use '../../variables.scss' as variables;
 
-.nes-checkbox {
-  // prettier-ignore
-  $checkbox: (
-    (1,1,1,1,1,1,1,1,0,0),
-    (1,0,0,0,0,0,0,1,0,0),
-    (1,0,0,0,0,0,0,1,0,0),
-    (1,0,0,0,0,0,0,1,0,0),
-    (1,0,0,0,0,0,0,1,0,0),
-    (1,0,0,0,0,0,0,1,0,0),
-    (1,0,0,0,0,0,0,1,0,0),
-    (1,1,1,1,1,1,1,1,0,0),
-  );
+// .nes-checkbox {
+//   // prettier-ignore
+//   $checkbox: (
+//     (1,1,1,1,1,1,1,1,0,0),
+//     (1,0,0,0,0,0,0,1,0,0),
+//     (1,0,0,0,0,0,0,1,0,0),
+//     (1,0,0,0,0,0,0,1,0,0),
+//     (1,0,0,0,0,0,0,1,0,0),
+//     (1,0,0,0,0,0,0,1,0,0),
+//     (1,0,0,0,0,0,0,1,0,0),
+//     (1,1,1,1,1,1,1,1,0,0),
+//   );
 
-  // prettier-ignore
-  $checkbox-checked: (
-    (1,1,1,1,1,1,1,0,1,1),
-    (1,0,0,0,0,0,0,1,1,1),
-    (1,0,0,0,0,0,1,1,0,0),
-    (1,1,0,0,0,1,1,0,0,0),
-    (1,1,1,0,1,1,0,1,0,0),
-    (1,0,1,1,1,0,0,1,0,0),
-    (1,0,0,1,0,0,0,1,0,0),
-    (1,1,1,1,1,1,1,1,0,0)
-  );
-  // prettier-ignore
-  $checkbox-focus: (
-    (2,2,2,2,2,2,2,2,0,0),
-    (2,0,0,0,0,0,0,2,0,0),
-    (2,0,0,0,0,0,0,2,0,0),
-    (2,0,0,0,0,0,0,2,0,0),
-    (2,0,0,0,0,0,0,2,0,0),
-    (2,0,0,0,0,0,0,2,0,0),
-    (2,0,0,0,0,0,0,2,0,0),
-    (2,2,2,2,2,2,2,2,0,0),
-  );
+//   // prettier-ignore
+//   $checkbox-checked: (
+//     (1,1,1,1,1,1,1,0,1,1),
+//     (1,0,0,0,0,0,0,1,1,1),
+//     (1,0,0,0,0,0,1,1,0,0),
+//     (1,1,0,0,0,1,1,0,0,0),
+//     (1,1,1,0,1,1,0,1,0,0),
+//     (1,0,1,1,1,0,0,1,0,0),
+//     (1,0,0,1,0,0,0,1,0,0),
+//     (1,1,1,1,1,1,1,1,0,0)
+//   );
+//   // prettier-ignore
+//   $checkbox-focus: (
+//     (2,2,2,2,2,2,2,2,0,0),
+//     (2,0,0,0,0,0,0,2,0,0),
+//     (2,0,0,0,0,0,0,2,0,0),
+//     (2,0,0,0,0,0,0,2,0,0),
+//     (2,0,0,0,0,0,0,2,0,0),
+//     (2,0,0,0,0,0,0,2,0,0),
+//     (2,0,0,0,0,0,0,2,0,0),
+//     (2,2,2,2,2,2,2,2,0,0),
+//   );
 
-  // prettier-ignore
-  $checkbox-checked-focus: (
-    (2,2,2,2,2,2,2,0,1,1),
-    (2,0,0,0,0,0,0,1,1,1),
-    (1,0,0,0,0,0,1,1,0,0),
-    (1,1,0,0,0,1,1,0,0,0),
-    (2,1,1,0,1,1,0,2,0,0),
-    (2,0,1,1,1,0,0,2,0,0),
-    (2,0,0,1,0,0,0,2,0,0),
-    (2,2,2,2,2,2,2,2,0,0)
-  );
-  $colors: ($base-color, map-get($default-colors, "shadow"));
-  $colors-checkbox-dark: ($color-white, map-get($default-colors, "shadow"));
+//   // prettier-ignore
+//   $checkbox-checked-focus: (
+//     (2,2,2,2,2,2,2,0,1,1),
+//     (2,0,0,0,0,0,0,1,1,1),
+//     (1,0,0,0,0,0,1,1,0,0),
+//     (1,1,0,0,0,1,1,0,0,0),
+//     (2,1,1,0,1,1,0,2,0,0),
+//     (2,0,1,1,1,0,0,2,0,0),
+//     (2,0,0,1,0,0,0,2,0,0),
+//     (2,2,2,2,2,2,2,2,0,0)
+//   );
+//   $colors: ($base-color, map-get($default-colors, "shadow"));
+//   $colors-checkbox-dark: ($color-white, map-get($default-colors, "shadow"));
 
-  margin-left: 28px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+//   margin-left: 28px;
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+//   appearance: none;
 
-  @include visually-hidden();
+//   @include visually-hidden();
 
-  & + span {
-    position: relative;
-    // cursor: $cursor-click-url, pointer;
-  }
+//   & + span {
+//     position: relative;
+//     // cursor: $cursor-click-url, pointer;
+//   }
 
-  & + span::before,
-  &:checked + span::before {
-    position: absolute;
-    top: -3px;
-    left: -28px;
-    content: "";
-  }
+//   & + span::before,
+//   &:checked + span::before {
+//     position: absolute;
+//     top: -3px;
+//     left: -28px;
+//     content: "";
+//   }
 
-  // prettier-ignore
-  & + span::before { /* stylelint-disable-line no-descending-specificity */
-    @include pixelize(2px, $checkbox, $colors);
-  }
-  // prettier-ignore
-  &:focus + span::before { /* stylelint-disable-line no-descending-specificity */
-    @include pixelize(2px, $checkbox-focus, $colors);
-  }
+//   // prettier-ignore
+//   & + span::before { /* stylelint-disable-line no-descending-specificity */
+//     @include pixelize(2px, $checkbox, $colors);
+//   }
+//   // prettier-ignore
+//   &:focus + span::before { /* stylelint-disable-line no-descending-specificity */
+//     @include pixelize(2px, $checkbox-focus, $colors);
+//   }
 
-  &:checked + span::before {
-    @include pixelize(2px, $checkbox-checked, $colors);
-  }
-  &:checked:focus + span::before {
-    @include pixelize(2px, $checkbox-checked-focus, $colors);
-  }
-  &.is-dark {
-    + span {
-      color: variables.$color-white;
-    }
-    // prettier-ignore
-    + span::before { /* stylelint-disable-line no-descending-specificity */
-      color: variables.$color-white;
-    }
+//   &:checked + span::before {
+//     @include pixelize(2px, $checkbox-checked, $colors);
+//   }
+//   &:checked:focus + span::before {
+//     @include pixelize(2px, $checkbox-checked-focus, $colors);
+//   }
+//   &.is-dark {
+//     + span {
+//       color: variables.$color-white;
+//     }
+//     // prettier-ignore
+//     + span::before { /* stylelint-disable-line no-descending-specificity */
+//       color: variables.$color-white;
+//     }
 
-    &:checked + span::before {
-      @include pixelize(2px, $checkbox-checked-focus, $colors-checkbox-dark);
+//     &:checked + span::before {
+//       @include pixelize(2px, $checkbox-checked-focus, $colors-checkbox-dark);
 
-      color: variables.$color-white;
-    }
-    &:checked:focus + span::before {
-      @include pixelize(2px, $checkbox-checked-focus, $colors-checkbox-dark);
+//       color: variables.$color-white;
+//     }
+//     &:checked:focus + span::before {
+//       @include pixelize(2px, $checkbox-checked-focus, $colors-checkbox-dark);
 
-      color: variables.$color-white;
-    }
-  }
-  &.is-disabled {
-    $color: map-get($disabled-colors, "normal");
-    $colors-radio-disabled: ($color, map-get($disabled-colors, "shadow"));
+//       color: variables.$color-white;
+//     }
+//   }
+//   &.is-disabled {
+//     $color: map-get($disabled-colors, "normal");
+//     $colors-radio-disabled: ($color, map-get($disabled-colors, "shadow"));
 
-    + span {
-      color: $color;
-      cursor: not-allowed;
-    }
+//     + span {
+//       color: $color;
+//       cursor: not-allowed;
+//     }
 
-    /* stylelint-disable-next-line no-descending-specificity */
-    + span::before {
-      color: $color;
-      cursor: not-allowed;
-    }
+//     /* stylelint-disable-next-line no-descending-specificity */
+//     + span::before {
+//       color: $color;
+//       cursor: not-allowed;
+//     }
 
-    /* stylelint-disable-next-line no-descending-specificity */
-    &:checked + span::before {
-      @include pixelize(2px, $checkbox-checked-focus, $colors-radio-disabled);
+//     /* stylelint-disable-next-line no-descending-specificity */
+//     &:checked + span::before {
+//       @include pixelize(2px, $checkbox-checked-focus, $colors-radio-disabled);
 
-      color: $color;
-    }
+//       color: $color;
+//     }
 
-    &:checked:focus + span::before {
-      @include pixelize(2px, $checkbox-checked-focus, $colors-radio-disabled);
+//     &:checked:focus + span::before {
+//       @include pixelize(2px, $checkbox-checked-focus, $colors-radio-disabled);
 
-      color: $color;
-    }
-  }
-}
+//       color: $color;
+//     }
+//   }
+// }

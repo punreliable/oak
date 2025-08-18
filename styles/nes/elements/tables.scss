@@ -1,3 +1,9 @@
+@use '../../variables' as variables;
+
+$primary-green: #8d956e;
+$base-color: $primary-green;
+$background-color: variables.$background-color;
+
 .nes-table-responsive {
   max-width: 100%;
   overflow-x: auto;
@@ -67,9 +73,9 @@
     color: $background-color;
     background-color: $base-color;
 
-    &.is-bordered {
-      @include compact-rounded-corners(true);
-    }
+    // &.is-bordered {
+    //   @include compact-rounded-corners(true);
+    // }
 
     th,
     td {

@@ -1,4 +1,28 @@
-@use './variables' as variables;
+@use '../../variables' as variables;
+
+$darkest-green: #202119;
+$darker-green: #4d513a;
+$primary-green: #8d956e;
+$brighter-green: #c5d1a3;
+$brightest-green: #e6ecca;
+
+$background-color: $primary-green;
+$color-white: $brightest-green;
+$darker-green: $darker-green;
+$base-color: $darker-green;
+
+// Here for posterity
+// $default-colors: (
+//   "normal":  #007bff,
+//   "hover": #0056b3,
+//   "shadow": rgba(0, 0, 0, 0.2)
+// );
+
+$default-colors: (
+  "normal": $primary-green,
+  "hover": $brighter-green,
+  "shadow": $darker-green
+);
 
 @mixin list-before(
   $class,
@@ -11,7 +35,7 @@
     left: -22px;
     content: "";
 
-    @include pixelize(2px, $disc-or-circle, $colors);
+    // @include pixelize(2px, $disc-or-circle, $colors);
   }
 }
 

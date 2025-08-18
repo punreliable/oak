@@ -1,3 +1,41 @@
+@forward '../../variables';
+
+$darkest-green: #202119;
+$darker-green: #4d513a;
+$primary-green: #8d956e;
+$brighter-green: #c5d1a3;
+$brightest-green: #e6ecca;
+
+$primary-colors: (
+  "normal": $primary-green,
+  "hover": $brighter-green,
+  "shadow": $darker-green
+);
+
+$success-colors: (
+  "normal": $primary-green,
+  "hover": $brighter-green,
+  "shadow": $darker-green
+);
+
+$warning-colors: (
+  "normal": $primary-green,
+  "hover": $brighter-green,
+  "shadow": $darker-green
+);
+
+$error-colors: (
+  "normal": $primary-green,
+  "hover": $brighter-green,
+  "shadow": $darker-green
+);
+
+$disabled-colors: (
+  "normal": $primary-green,
+  "hover": $brighter-green,
+  "shadow": $darker-green
+);
+
 .nes-text {
   &.is-primary {
     color: map-get($primary-colors, "normal");

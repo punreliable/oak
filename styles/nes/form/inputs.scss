@@ -1,3 +1,13 @@
+$border-size: 4px;
+// Gameboy Greens
+$darkest-green: #202119;
+$darker-green: #4d513a;
+$primary-green: #8d956e;
+$brighter-green: #c5d1a3;
+$brightest-green: #e6ecca;
+$background-color: $primary-green;
+$base-color: $darkest-green;
+
 .nes-input,
 .nes-textarea {
   @mixin border-style($border, $outline) {
