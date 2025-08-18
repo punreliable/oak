@@ -1,26 +1,26 @@
 // reaction
-@import "heart.scss";
-@import "star.scss";
-@import "like.scss";
+@use "heart.scss";
+@use "star.scss";
+@use "like.scss";
 
 // sns
-@import "twitter.scss";
-@import "facebook.scss";
-@import "github.scss";
-@import "youtube.scss";
-@import "google.scss";
-@import "medium.scss";
-@import "twitch.scss";
-@import "reddit.scss";
-@import "whatsapp.scss";
-@import "gmail.scss";
-@import "linkedin.scss";
-@import "instagram.scss";
+@use "twitter.scss";
+@use "facebook.scss";
+@use "github.scss";
+@use "youtube.scss";
+@use "google.scss";
+@use "medium.scss";
+@use "twitch.scss";
+@use "reddit.scss";
+@use "whatsapp.scss";
+@use "gmail.scss";
+@use "linkedin.scss";
+@use "instagram.scss";
 
 // others
-@import "close.scss";
-@import "trophy.scss";
-@import "coin.scss";
+@use "close.scss";
+@use "trophy.scss";
+@use "coin.scss";
 
 .nes-icon {
   $default-size: 1px;

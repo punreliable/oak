@@ -1,4 +1,4 @@
-@import '../../variables';
+@use '../../variables';
 
 @mixin span-style-is-icon($color, $background-color, $display, $width, $font-size) {
   display: $display;

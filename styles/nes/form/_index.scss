@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@import "inputs.scss";
-@import "radios.scss";
-@import "checkboxes.scss";
-@import "selects.scss";
+@use "inputs.scss";
+@use "radios.scss";
+@use "checkboxes.scss";
+@use "selects.scss";
