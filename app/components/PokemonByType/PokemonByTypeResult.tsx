@@ -12,7 +12,7 @@ export function getPokemonIDFromURL(url: string) {
 
 const PokemonByTypeResult = (props: {
   pokemon: { pokemon: [{ name: string; url: string }] };
-  slot: number;
+  slot?: number;
 }) => {
   const classes: string = 'nes-btn is-error my-2 mx-2';
   let classesOutPut = '';
