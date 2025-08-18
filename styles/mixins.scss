@@ -2,6 +2,11 @@
 @use './variables' as variables;
 
 $border-size: 4px !default;
+$color-text: #F7F9F6;
+$color-text-shadow: #7E746B;
+
+$color-black: $color-text-shadow;
+$color-white: $color-text;
 
 %rounded-corner-defaults {
 	  border-style: solid;
@@ -39,7 +44,7 @@ $border-size: 4px !default;
 	  @include border-image-repeat();
 
 	  @if $isDark {
-		@include border-image($color-white);
+		@include border-image(variables.$color-white);
 
 		border-image-outset: 0;
 	  } @else {
