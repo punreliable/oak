@@ -111,7 +111,6 @@
 
     &:checked:focus + span::before {
     //   @include pixelize(2px, $radio-checked-focus, $colors-radio-disabled);
-
       color: $color;
     }
   }
