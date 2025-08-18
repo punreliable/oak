@@ -1,6 +1,322 @@
 $border-size: 4px;
 
 // List Box Styles for Pokemon Types
+// List Box Styles for Pokemon Types
+
+// There are 18 Types of Pokemon they are;
+
+//	01. Normal
+$color-normal: #a8a878;
+$border-color-normal: #6d6d4e;
+
+//	02. Fighting
+$color-fighting: #c03028;
+$border-color-fighting: #7d1f1a;
+
+//	03. Flying
+$color-flying: #a890f0;
+$border-color-flying: #6d5e9c;
+
+//	04. Poison
+$color-poison: #a040a0;
+$border-color-poison: #682a68;
+
+//	05. Ground
+$color-ground: #e0c068;
+$border-color-ground: #927d44;
+
+//	06. Rock
+$color-rock: #b8a038;
+$border-color-rock: #786824;
+
+//	07. Bug
+$color-bug: #a8b820;
+$border-color-bug: #6d7815;
+
+//	08. Ghost
+$color-ghost: #705898;
+$border-color-ghost: #493963;
+
+//	09. Steel
+$color-steel: #b8b8d0;
+$border-color-steel: #787887;
+
+//	10. Fire
+$color-fire: #f08030;
+$border-color-fire: #9c531f;
+
+//	11. Water
+$color-water: #6890f0;
+$border-color-water: #445e9c;
+
+//	12. Grass
+$color-grass: #78c850;
+$border-color-grass: #4e8234;
+
+//	13. Electric
+$color-electric: #f8d030;
+$border-color-electric: #a1871f;
+
+//	14. Psychic
+$color-psychic: #f85888;
+$border-color-psychic: #a13959;
+
+//	15. Ice
+$color-ice: #98d8d8;
+$border-color-ice: #638d8d;
+
+//	16. Dragon
+$color-dragon: #7038f8;
+$border-color-dragon: #4924a1;
+
+//	17. Dark
+$color-dark: #705848;
+$border-color-dark: #49392f;
+
+//	18. Fairy
+$color-fairy: #ee99ac;
+$border-color-fairy: #9b6470;
+
+//	01. Normal
+.type-normal {
+  background-color: $color-normal;
+  border: 1px solid $border-color-normal;
+}
+
+//	02. Fighting
+.type-fighting {
+  background-color: $color-fighting;
+  border: 1px solid $border-color-fighting;
+}
+
+//	03. Flying
+.type-flying {
+  background-color: $color-flying;
+  border: 1px solid $border-color-flying;
+}
+
+//	04. poison
+.type-poison {
+  background-color: $color-poison;
+  border: 1px solid $border-color-poison;
+}
+
+//	05. Ground
+.type-ground {
+  background-color: $color-ground;
+  border: 1px solid $border-color-ground;
+}
+
+//	06. Rock
+.type-rock {
+  background-color: $color-rock;
+  border: 1px solid $border-color-rock;
+}
+
+//	07. Bug
+.type-bug {
+  background-color: $color-bug;
+  border: 1px solid $border-color-bug;
+}
+
+//	08. Ghost
+.type-ghost {
+  background-color: $color-ghost;
+  border: 1px solid $border-color-ghost;
+}
+
+//	09. Steel
+.type-steel {
+  background-color: $color-steel;
+  border: 1px solid $border-color-steel;
+}
+
+//	10. Fire
+.type-fire {
+  background-color: $color-fire;
+  border: 1px solid $border-color-fire;
+}
+
+//	11. Water
+.type-water {
+  background-color: $color-water;
+  border: 1px solid $border-color-water;
+}
+
+//	12. Grass
+.type-grass {
+  background-color: $color-grass;
+  border: 1px solid $border-color-grass;
+}
+
+//	13. Electric
+.type-electric {
+  background-color: $color-electric;
+  border: 1px solid $border-color-electric;
+}
+
+//	14. Psychic
+.type-psychic {
+  background-color: $color-psychic;
+  border: 1px solid $border-color-psychic;
+}
+
+//	15. Ice
+.type-ice {
+  background-color: $color-ice;
+  border: 1px solid $border-color-ice;
+}
+
+//	16. Dragon
+.type-dragon {
+  background-color: $color-dragon;
+  border: 1px solid $border-color-dragon;
+}
+
+//	17. Dark
+.type-dark {
+  background-color: $color-dark;
+  border: 1px solid $border-color-dark;
+}
+
+//	18. Fairy
+.type-fairy {
+  background-color: $color-fairy;
+  border: 1px solid $border-color-fairy;
+}
+
+// Text Effects
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a {
+  &.text-normal {
+    color: $color-normal;
+  }
+
+  &.text-fighting {
+    color: $color-fighting;
+  }
+
+  &.text-flying {
+    color: $color-flying;
+  }
+
+  &.text-poison {
+    color: $color-poison;
+  }
+
+  &.text-ground {
+    color: $color-ground;
+  }
+
+  &.text-rock {
+    color: $color-rock;
+  }
+
+  &.text-bug {
+    color: $color-bug;
+  }
+
+  &.text-ghost {
+    color: $color-ghost;
+  }
+
+  &.text-steel {
+    color: $color-steel;
+  }
+
+  &.text-fire {
+    color: $color-fire !important;
+  }
+
+  &.text-water {
+    color: $color-water;
+  }
+
+  &.text-grass {
+    color: $color-grass;
+  }
+
+  &.text-electric {
+    color: $color-electric;
+  }
+
+  &.text-psychic {
+    color: $color-psychic;
+  }
+
+  &.text-ice {
+    color: $color-ice;
+  }
+
+  &.text-dragon {
+    color: $color-dragon;
+  }
+
+  &.text-dark {
+    color: $color-dark;
+  }
+
+  &.text-fairy {
+    color: $color-fairy;
+  }
+
+}
+
+/*
+
+Game List
+
+$color-game-red: #FF0000;
+$color-game-blue: #0000FF;
+$color-game-yellow: #FFFF00;
+
+*/
+
+/*
+Game List
+Red
+Blue
+Yellow
+Gold
+Silver
+Crystal
+Ruby
+Sapphire
+FireRed
+LeafGreen
+Emerald
+Diamond
+Pearl
+Platinum
+HeartGold
+SoulSilver
+Black
+White
+Black 2
+White 2
+X
+Y
+Omega Ruby
+Alpha Sapphire
+Sun
+Moon
+Ultra Sun
+Ultra Moon
+Let's Go Pikachu
+Let's Go Eevee
+Sword
+Shield
+
+*/
+
 
 // There are 18 Types of Pokemon they are:
 
