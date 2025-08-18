@@ -431,18 +431,14 @@ Shield
 // WRAPPERS
 //	01. Normal
 .wrapper-normal {	
-	$color-normal: #A8A878;
-	$border-color-normal: #6D6D4E;
 	color: variables.$border-color-normal;
-	background-color: lighten($color-normal, .1);
+	background-color: color.adjust(variables.$color-normal, $lightness: 10%, $space: oklch);
 }
 	
 //	02. Fighting
 .wrapper-fighting {	
-	$color-fighting: #C03028;
-	$border-color-fighting: #7D1F1A;
 	color: variables.$border-color-fighting;
-	background-color: lighten($color-fighting, .1);
+	background-color: color.adjust(variables.$color-fighting, $lightness: 10%, $space: oklch);
 }	
 	
 //	03. Flying
@@ -453,121 +449,92 @@ Shield
 	
 //	04. Posion
 .wrapper-posion {	
-	$color-poison: #A040A0;
-	$border-color-poison: #682A68;
 	color: variables.$border-color-poison;
-	background-color: lighten($color-poison, .1);
+	background-color: color.adjust(variables.$color-poison, $lightness: 10%, $space: oklch);
 }	
 	
 //	05. Ground
 .wrapper-ground {	
-	$color-ground: #E0C068;
-	$border-color-ground: #927D44;
 	color: variables.$border-color-ground;
-	background-color: lighten($color-ground, .1);
+	background-color: color.adjust(variables.$color-ground, $lightness: 10%, $space: oklch);
 }
 	
 //	06. Rock
 .wrapper-rock {	
-	$color-rock: #B8A038;
-	$border-color-rock: #786824;
 	color: variables.$border-color-rock;
-	background-color: lighten($color-rock, .1);
+	background-color: color.adjust(variables.$color-rock, $lightness: 10%, $space: oklch);
 }	
 	
 //	07. Bug
 .wrapper-bug {	
-	$color-bug: #A8B820;
-	$border-color-bug: #6D7815;
 	color: variables.$border-color-bug;
-	background-color: lighten($color-bug, .1);
+	background-color: color.adjust(variables.$color-bug, $lightness: 10%, $space: oklch);
 }	
 	
 //	08. Ghost
 .wrapper-ghost {	
-	$color-ghost: #705898;
-	$border-color-ghost: #493963;
 	color: variables.$border-color-ghost;
-	background-color: lighten($color-ghost, .1);
+	background-color: color.adjust(variables.$color-ghost, $lightness: 10%, $space: oklch);
 }	
 	
 //	09. Steel
 .wrapper-steel {	
-	$color-steel: #B8B8D0;
-	$border-color-steel: #787887;
 	color: variables.$border-color-steel;
-	background-color: lighten($color-steel, .1);
+	background-color: color.adjust(variables.$color-steel, $lightness: 10%, $space: oklch);
 }	
 	
 //	10. Fire
 .wrapper-fire {	
-	$color-fire: #F08030;
-	$border-color-fire: #9C531F;
 	color: variables.$border-color-fire;
-	background-color: lighten($color-fire, .1);
+	background-color: color.adjust(variables.$color-fire, $lightness: 10%, $space: oklch);
 }	
 	
 //	11. Water
 .wrapper-water {	
-	$color-water: #6890F0;
-	$border-color-water: #445E9C;
 	color: variables.$border-color-water;
-	background-color: lighten($color-water, .1);
+	background-color: color.adjust(variables.$color-water, $lightness: 10%, $space: oklch);
 }	
 	
 //	12. Grass
 .wrapper-grass {	
-	$color-grass: #78C850;
-	$border-color-grass: #4E8234;
+
 	color: variables.$border-color-grass;
-	background-color: lighten($color-grass, .1);
+	background-color: color.adjust(variables.$color-grass, $lightness: 10%, $space: oklch);
 }	
 	
 //	13. Electric
-.wrapper-electric {	
-	$color-electric: #F8D030;
-	$border-color-electric: #A1871F;
+.wrapper-electric {
 	color: variables.$border-color-electric;
-	background-color: lighten($color-electric, .1);
+	background-color: color.adjust(variables.$color-electric, $lightness: 10%, $space: oklch);
 }	
 	
 //	14. Psychic
-.wrapper-psyhic {	
-	$color-psychic: #F85888;
-	$border-color-psychic: #A13959;
+.wrapper-psyhic {
 	color: variables.$border-color-psychic;
-	background-color: lighten($color-psychic, .1);
+	background-color: color.adjust(variables.$color-psychic, $lightness: 10%, $space: oklch);
 }	
 	
 //	15. Ice
 .wrapper-ice {	
-	$color-ice: #98D8D8;
-	$border-color-ice: #638D8D;
 	color: variables.$border-color-ice;
-	background-color: lighten($color-ice, .1);
+	background-color: color.adjust(variables.$color-ice, $lightness: 10%, $space: oklch);
 }	
 	
 //	16. Dragon
 .wrapper-dragon {	
-	$color-dragon: #7038F8;
-	$border-color-dragon: #4924A1;
 	color: variables.$border-color-dragon;
-	background-color: lighten($color-dragon, .1);
+	background-color: color.adjust(variables.$color-dragon, $lightness: 10%, $space: oklch);
 }
 	
 //	17. Dark
 .wrapper-dark {	
-	$color-dark: #705848;
-	$border-color-dark: #49392F;	
 	color: variables.$border-color-dark;
-	background-color: lighten($color-dark, .1);
+	background-color: color.adjust(variables.$color-dark, $lightness: 10%, $space: oklch);
 }	
 //	18. Fairy
 .wrapper-fairy {	
-	$color-fairy: #EE99AC;
-	$border-color-fairy: #9B6470;
 	color: variables.$border-color-fairy;
-	background-color: lighten($color-fairy, .1);
+	background-color: color.adjust(variables.$color-fairy, $lightness: 10%, $space: oklch);
 }
 
 // LINKS
@@ -582,6 +549,7 @@ a.type-normal {
 	&:hover {
 
 		background-color: darken($color-normal, 10%);
+		
 	}
 }
 
