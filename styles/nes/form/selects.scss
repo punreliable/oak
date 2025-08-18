@@ -1,6 +1,7 @@
 @use '../../mixins' as mixins;
 @use '../../variables' as variables;
 @use '../base/variables' as nesVariables;
+@use '../utilities/icon-mixin.scss' as pixelize;
 
 .nes-select {
   // prettier-ignore
@@ -40,8 +41,7 @@
   }
 
   &::after {
-    // @include pixelize(3px, $dropdown, $colors);
-
+    @include pixelize.pixelize(3px, $dropdown, $colors);
     position: absolute;
     top: calc(50% - 11px);
     right: 36px;
