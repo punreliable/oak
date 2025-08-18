@@ -15,7 +15,7 @@
     @include rounded-corners();
 
     &.is-dark {
-      @include rounded-corners(true);
+      @include mixins.rounded-corners(true);
     }
   }
   &.is-dark {

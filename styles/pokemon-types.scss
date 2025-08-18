@@ -1195,7 +1195,7 @@ $base-color: $color-normal;
 	}
 
 	&.is-dark {
-	  @include rounded-corners(true);
+	  @include mixins.rounded-corners(true);
 	  &::after {
 		content: none;
 	  }
@@ -1403,7 +1403,7 @@ $base-color: $color-flying;
 	}
 
 	&.is-dark {
-	  @include rounded-corners(true);
+	  @include mixins.rounded-corners(true);
 	  &::after {
 		content: none;
 	  }
@@ -1537,7 +1537,7 @@ $base-color: $color-poison;
 	}
 
 	&.is-dark {
-	  @include rounded-corners(true);
+	  @include mixins.rounded-corners(true);
 	  &::after {
 		content: none;
 	  }
@@ -1672,7 +1672,7 @@ $base-color: $color-ground;
 		}
 
 		&.is-dark {
-			@include rounded-corners(true);
+			@include mixins.rounded-corners(true);
 			&::after {
 				content: none;
 			}
@@ -1808,7 +1808,7 @@ $base-color: $color-rock;
 	}
 
 	&.is-dark {
-	  @include rounded-corners(true);
+	  @include mixins.rounded-corners(true);
 	  &::after {
 		content: none;
 	  }
@@ -1942,7 +1942,7 @@ $base-color: $color-bug;
 	}
 
 	&.is-dark {
-	  @include rounded-corners(true);
+	  @include mixins.rounded-corners(true);
 	  &::after {
 		content: none;
 	  }
@@ -2081,7 +2081,7 @@ $base-color: $color-ghost;
 	}
 
 	&.is-dark {
-	  @include rounded-corners(true);
+	  @include mixins.rounded-corners(true);
 	  &::after {
 		content: none;
 	  }
@@ -2219,7 +2219,7 @@ $base-color: $color-steel;
 	}
 
 	&.is-dark {
-	  @include rounded-corners(true);
+	  @include mixins.rounded-corners(true);
 	  &::after {
 		content: none;
 	  }
@@ -2353,7 +2353,7 @@ $base-color: $color-fire;
 	}
 
 	&.is-dark {
-	  @include rounded-corners(true);
+	  @include mixins.rounded-corners(true);
 	  &::after {
 		content: none;
 	  }
@@ -2485,7 +2485,7 @@ $base-color: $color-water;
 	}
 
 	&.is-dark {
-	  @include rounded-corners(true);
+	  @include mixins.rounded-corners(true);
 	  &::after {
 		content: none;
 	  }
@@ -2618,7 +2618,7 @@ $base-color: $color-grass;
 	}
 
 	&.is-dark {
-	  @include rounded-corners(true);
+	  @include mixins.rounded-corners(true);
 	  &::after {
 		content: none;
 	  }
@@ -2751,7 +2751,7 @@ $base-color: $color-electric;
 	}
 
 	&.is-dark {
-	  @include rounded-corners(true);
+	  @include mixins.rounded-corners(true);
 	  &::after {
 		content: none;
 	  }
@@ -2898,7 +2898,7 @@ $base-color: $color-psychic;
 	}
 
 	&.is-dark {
-	  @include rounded-corners(true);
+	  @include mixins.rounded-corners(true);
 	  &::after {
 		content: none;
 	  }
@@ -3033,7 +3033,7 @@ $base-color: $color-ice;
 	}
 
 	&.is-dark {
-	  @include rounded-corners(true);
+	  @include mixins.rounded-corners(true);
 	  &::after {
 		content: none;
 	  }
@@ -3169,7 +3169,7 @@ $base-color: $color-dragon;
 	}
 
 	&.is-dark {
-	  @include rounded-corners(true);
+	  @include mixins.rounded-corners(true);
 	  &::after {
 		content: none;
 	  }
@@ -3302,7 +3302,7 @@ $base-color: $color-dark;
 	}
 
 	&.is-dark {
-	  @include rounded-corners(true);
+	  @include mixins.rounded-corners(true);
 	  &::after {
 		content: none;
 	  }

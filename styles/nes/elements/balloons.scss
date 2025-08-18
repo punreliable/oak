@@ -43,7 +43,7 @@
   }
 
   &.is-dark {
-    @include rounded-corners(true);
+    @include mixins.rounded-corners(true);
 
     color: $background-color;
     background: $base-color;
