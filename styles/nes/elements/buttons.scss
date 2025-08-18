@@ -66,15 +66,15 @@ $base-color: $color-black !default;
   &.is-disabled:hover,
   &.is-disabled:focus {
     color: $base-color;
-    cursor: not-allowed;
-    background-color: map-get($disabled-colors, "normal");
-    box-shadow: inset -4px -4px map-get($disabled-colors, "shadow");
+    // cursor: not-allowed;
+    // background-color: map-get($disabled-colors, "normal");
+    // box-shadow: inset -4px -4px map-get($disabled-colors, "shadow");
     opacity: 0.6;
   }
 
-  &.is-disabled:hover::after {
-    box-shadow: inset -4px -4px map-get($disabled-colors, "shadow");
-  }
+  // &.is-disabled:hover::after {
+  //   box-shadow: inset -4px -4px map-get($disabled-colors, "shadow");
+  // }
 
   $primary-colors: (
   "normal": #007bff,
