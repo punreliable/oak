@@ -4,7 +4,7 @@
 @forward '../styles/palette-town';
 // @use '../styles/types';
 @use '../styles/gameboy';
-@use '../styles/pokemon-type-containers';
+@forward '../styles/pokemon-type-containers';
 // $color-black: #212529;
 
 :root {
