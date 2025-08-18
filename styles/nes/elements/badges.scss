@@ -1,7 +1,30 @@
 @use '../../variables' as variables;
 @use '../../pokemon-types';
 
+$color-default-hover: #e7e7e7;
+$color-default-shadow: #adafbc;
+
+$color-disabled-normal: #d3d3d3;
+$color-disabled-shadow: #adafbc;
+
+$color-primary-normal: #209cee;
+$color-primary-hover: #108de0;
+$color-primary-shadow: #006bb3;
+
+$color-success-normal: #92cc41;
+$color-success-hover: #76c442;
+$color-success-shadow: #4aa52e;
+
+$color-warning-normal: #f7d51d;
+$color-warning-hover: #f2c409;
+$color-warning-shadow: #e59400;
+
+$color-error-normal: #e76e55;
+$color-error-hover: #ce372b;
+$color-error-shadow: #8c2022;
+
 $background-color: #A8A878;
+
 $default-colors: (
   normal: $background-color,
   hover: #e7e7e7,
