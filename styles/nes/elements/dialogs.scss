@@ -1,6 +1,7 @@
+@use '../../variables' as variables;
 @use '../../mixins' as mixins;
 
-$border-size: 4px;
+$border-size: variables.$border-size;
 
 .nes-dialog {
   padding: 1.5rem 2rem;
@@ -16,16 +17,16 @@ $border-size: 4px;
   }
 
   &.is-rounded {
-    @include rounded-corners();
+    @include mixins.rounded-corners();
 
     &.is-dark {
       @include mixins.rounded-corners(true);
     }
   }
   &.is-dark {
-    color: $background-color;
-    background-color: $base-color;
-    border-color: $background-color;
+    color: variables.$background-color;
+    background-color: variables.$base-color;
+    border-color: variables.$background-color;
 
     &:not(.is-rounded)::before {
       position: absolute;
@@ -35,7 +36,7 @@ $border-size: 4px;
       left: -$border-size * 2;
       z-index: -1;
       content: "";
-      border: $border-size solid $base-color;
+      border: $border-size solid variables.$base-color;
     }
   }
 }
