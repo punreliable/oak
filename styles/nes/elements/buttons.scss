@@ -1,4 +1,6 @@
 $border-size: 4px;
+$color-black: #212529;
+$base-color: $color-black !default;
 
 @mixin btn-style($color, $background, $hover-background, $shadow) {
   color: $color;
