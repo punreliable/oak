@@ -366,7 +366,7 @@ input[type=text].gameboy {
 }
 
 .text-dark {
-  color: $color-text-shadow;
+  color: variables.$color-text-shadow;
 }
 
 .nes-button {
