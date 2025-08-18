@@ -1,6 +1,6 @@
 @forward '../styles/variables';
 // @forward '../styles/mixins';
-@forward '../node_modules/bootstrap/scss/bootstrap.scss';
+@use '../node_modules/bootstrap/scss/bootstrap.scss';
 @forward '../styles/palette-town';
 @forward '../styles/types';
 @forward '../styles/gameboy';
