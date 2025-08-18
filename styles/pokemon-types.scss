@@ -8,9 +8,6 @@ $border-size: variables.$border-size;
 
 // There are 18 Types of Pokemon they are;
 
-//	01. Normal
-$color-normal: #A8A878;
-$border-color-normal: #6d6d4e;
 
 //	02. Fighting
 $color-fighting: #c03028;
@@ -82,110 +79,110 @@ $border-color-fairy: #9b6470;
 
 //	01. Normal
 .type-normal {
-  background-color: $color-normal;
-  border: 1px solid $border-color-normal;
+  background-color: variables.$color-normal;
+  border: 1px solid variables.$border-color-normal;
 }
 
 //	02. Fighting
 .type-fighting {
-  background-color: $color-fighting;
-  border: 1px solid $border-color-fighting;
+  background-color: variables.$color-fighting;
+  border: 1px solid variables.$border-color-fighting;
 }
 
 //	03. Flying
 .type-flying {
-  background-color: $color-flying;
-  border: 1px solid $border-color-flying;
+  background-color: variables.$color-flying;
+  border: 1px solid variables.$border-color-flying;
 }
 
 //	04. poison
 .type-poison {
-  background-color: $color-poison;
-  border: 1px solid $border-color-poison;
+  background-color: variables.$color-poison;
+  border: 1px solid variables.$border-color-poison;
 }
 
 //	05. Ground
 .type-ground {
-  background-color: $color-ground;
-  border: 1px solid $border-color-ground;
+  background-color: variables.$color-ground;
+  border: 1px solid variables.$border-color-ground;
 }
 
 //	06. Rock
 .type-rock {
-  background-color: $color-rock;
-  border: 1px solid $border-color-rock;
+  background-color: variables.$color-rock;
+  border: 1px solid variables.$border-color-rock;
 }
 
 //	07. Bug
 .type-bug {
-  background-color: $color-bug;
-  border: 1px solid $border-color-bug;
+  background-color: variables.$color-bug;
+  border: 1px solid variables.$border-color-bug;
 }
 
 //	08. Ghost
 .type-ghost {
-  background-color: $color-ghost;
-  border: 1px solid $border-color-ghost;
+  background-color: variables.$color-ghost;
+  border: 1px solid variables.$border-color-ghost;
 }
 
 //	09. Steel
 .type-steel {
-  background-color: $color-steel;
-  border: 1px solid $border-color-steel;
+  background-color: variables.$color-steel;
+  border: 1px solid variables.$border-color-steel;
 }
 
 //	10. Fire
 .type-fire {
-  background-color: $color-fire;
-  border: 1px solid $border-color-fire;
+  background-color: variables.$color-fire;
+  border: 1px solid variables.$border-color-fire;
 }
 
 //	11. Water
 .type-water {
-  background-color: $color-water;
-  border: 1px solid $border-color-water;
+  background-color: variables.$color-water;
+  border: 1px solid variables.$border-color-water;
 }
 
 //	12. Grass
 .type-grass {
-  background-color: $color-grass;
-  border: 1px solid $border-color-grass;
+  background-color: variables.$color-grass;
+  border: 1px solid variables.$border-color-grass;
 }
 
 //	13. Electric
 .type-electric {
-  background-color: $color-electric;
-  border: 1px solid $border-color-electric;
+  background-color: variables.$color-electric;
+  border: 1px solid variables.$border-color-electric;
 }
 
 //	14. Psychic
 .type-psychic {
-  background-color: $color-psychic;
-  border: 1px solid $border-color-psychic;
+  background-color: variables.$color-psychic;
+  border: 1px solid variables.$border-color-psychic;
 }
 
 //	15. Ice
 .type-ice {
-  background-color: $color-ice;
-  border: 1px solid $border-color-ice;
+  background-color: variables.$color-ice;
+  border: 1px solid variables.$border-color-ice;
 }
 
 //	16. Dragon
 .type-dragon {
-  background-color: $color-dragon;
-  border: 1px solid $border-color-dragon;
+  background-color: variables.$color-dragon;
+  border: 1px solid variables.$border-color-dragon;
 }
 
 //	17. Dark
 .type-dark {
-  background-color: $color-dark;
-  border: 1px solid $border-color-dark;
+  background-color: variables.$color-dark;
+  border: 1px solid variables.$border-color-dark;
 }
 
 //	18. Fairy
 .type-fairy {
-  background-color: $color-fairy;
-  border: 1px solid $border-color-fairy;
+  background-color: variables.$color-fairy;
+  border: 1px solid variables.$border-color-fairy;
 }
 
 // Text Effects
@@ -200,75 +197,75 @@ p,
 span,
 a {
   &.text-normal {
-    color: $color-normal;
+    color: variables.$color-normal;
   }
 
   &.text-fighting {
-    color: $color-fighting;
+    color: variables.$color-fighting;
   }
 
   &.text-flying {
-    color: $color-flying;
+    color: variables.$color-flying;
   }
 
   &.text-poison {
-    color: $color-poison;
+    color: variables.$color-poison;
   }
 
   &.text-ground {
-    color: $color-ground;
+    color: variables.$color-ground;
   }
 
   &.text-rock {
-    color: $color-rock;
+    color: variables.$color-rock;
   }
 
   &.text-bug {
-    color: $color-bug;
+    color: variables.$color-bug;
   }
 
   &.text-ghost {
-    color: $color-ghost;
+    color: variables.$color-ghost;
   }
 
   &.text-steel {
-    color: $color-steel;
+    color: variables.$color-steel;
   }
 
   &.text-fire {
-    color: $color-fire !important;
+    color: variables.$color-fire !important;
   }
 
   &.text-water {
-    color: $color-water;
+    color: variables.$color-water;
   }
 
   &.text-grass {
-    color: $color-grass;
+    color: variables.$color-grass;
   }
 
   &.text-electric {
-    color: $color-electric;
+    color: variables.$color-electric;
   }
 
   &.text-psychic {
-    color: $color-psychic;
+    color: variables.$color-psychic;
   }
 
   &.text-ice {
-    color: $color-ice;
+    color: variables.$color-ice;
   }
 
   &.text-dragon {
-    color: $color-dragon;
+    color: variables.$color-dragon;
   }
 
   &.text-dark {
-    color: $color-dark;
+    color: variables.$color-dark;
   }
 
   &.text-fairy {
-    color: $color-fairy;
+    color: variables.$color-fairy;
   }
 
 }
@@ -435,7 +432,7 @@ Shield
 .wrapper-normal {	
 	$color-normal: #A8A878;
 	$border-color-normal: #6D6D4E;
-	color: $border-color-normal;
+	color: variables.$border-color-normal;
 	background-color: lighten($color-normal, .1);
 }
 	
@@ -443,14 +440,14 @@ Shield
 .wrapper-fighting {	
 	$color-fighting: #C03028;
 	$border-color-fighting: #7D1F1A;
-	color: $border-color-fighting;
+	color: variables.$border-color-fighting;
 	background-color: lighten($color-fighting, .1);
 }	
 	
 //	03. Flying
 .wrapper-flying {	
-	// $color-flying: #A890F0;
-	// $border-color-flying: #6D5E9C;
+	// variables.$color-flying: #A890F0;
+	// variables.$border-color-flying: #6D5E9C;
 	color: variables.$border-color-flying;
 	background-color: lighten(variables.$color-flying, .1);
 }	
@@ -459,7 +456,7 @@ Shield
 .wrapper-posion {	
 	$color-poison: #A040A0;
 	$border-color-poison: #682A68;
-	color: $border-color-poison;
+	color: variables.$border-color-poison;
 	background-color: lighten($color-poison, .1);
 }	
 	
@@ -467,7 +464,7 @@ Shield
 .wrapper-ground {	
 	$color-ground: #E0C068;
 	$border-color-ground: #927D44;
-	color: $border-color-ground;
+	color: variables.$border-color-ground;
 	background-color: lighten($color-ground, .1);
 }
 	
@@ -475,7 +472,7 @@ Shield
 .wrapper-rock {	
 	$color-rock: #B8A038;
 	$border-color-rock: #786824;
-	color: $border-color-rock;
+	color: variables.$border-color-rock;
 	background-color: lighten($color-rock, .1);
 }	
 	
@@ -483,7 +480,7 @@ Shield
 .wrapper-bug {	
 	$color-bug: #A8B820;
 	$border-color-bug: #6D7815;
-	color: $border-color-bug;
+	color: variables.$border-color-bug;
 	background-color: lighten($color-bug, .1);
 }	
 	
@@ -491,7 +488,7 @@ Shield
 .wrapper-ghost {	
 	$color-ghost: #705898;
 	$border-color-ghost: #493963;
-	color: $border-color-ghost;
+	color: variables.$border-color-ghost;
 	background-color: lighten($color-ghost, .1);
 }	
 	
@@ -499,7 +496,7 @@ Shield
 .wrapper-steel {	
 	$color-steel: #B8B8D0;
 	$border-color-steel: #787887;
-	color: $border-color-steel;
+	color: variables.$border-color-steel;
 	background-color: lighten($color-steel, .1);
 }	
 	
@@ -507,7 +504,7 @@ Shield
 .wrapper-fire {	
 	$color-fire: #F08030;
 	$border-color-fire: #9C531F;
-	color: $border-color-fire;
+	color: variables.$border-color-fire;
 	background-color: lighten($color-fire, .1);
 }	
 	
@@ -515,7 +512,7 @@ Shield
 .wrapper-water {	
 	$color-water: #6890F0;
 	$border-color-water: #445E9C;
-	color: $border-color-water;
+	color: variables.$border-color-water;
 	background-color: lighten($color-water, .1);
 }	
 	
@@ -523,7 +520,7 @@ Shield
 .wrapper-grass {	
 	$color-grass: #78C850;
 	$border-color-grass: #4E8234;
-	color: $border-color-grass;
+	color: variables.$border-color-grass;
 	background-color: lighten($color-grass, .1);
 }	
 	
@@ -531,7 +528,7 @@ Shield
 .wrapper-electric {	
 	$color-electric: #F8D030;
 	$border-color-electric: #A1871F;
-	color: $border-color-electric;
+	color: variables.$border-color-electric;
 	background-color: lighten($color-electric, .1);
 }	
 	
@@ -539,7 +536,7 @@ Shield
 .wrapper-psyhic {	
 	$color-psychic: #F85888;
 	$border-color-psychic: #A13959;
-	color: $border-color-psychic;
+	color: variables.$border-color-psychic;
 	background-color: lighten($color-psychic, .1);
 }	
 	
@@ -547,7 +544,7 @@ Shield
 .wrapper-ice {	
 	$color-ice: #98D8D8;
 	$border-color-ice: #638D8D;
-	color: $border-color-ice;
+	color: variables.$border-color-ice;
 	background-color: lighten($color-ice, .1);
 }	
 	
@@ -555,7 +552,7 @@ Shield
 .wrapper-dragon {	
 	$color-dragon: #7038F8;
 	$border-color-dragon: #4924A1;
-	color: $border-color-dragon;
+	color: variables.$border-color-dragon;
 	background-color: lighten($color-dragon, .1);
 }
 	
@@ -563,14 +560,14 @@ Shield
 .wrapper-dark {	
 	$color-dark: #705848;
 	$border-color-dark: #49392F;	
-	color: $border-color-dark;
+	color: variables.$border-color-dark;
 	background-color: lighten($color-dark, .1);
 }	
 //	18. Fairy
 .wrapper-fairy {	
 	$color-fairy: #EE99AC;
 	$border-color-fairy: #9B6470;
-	color: $border-color-fairy;
+	color: variables.$border-color-fairy;
 	background-color: lighten($color-fairy, .1);
 }
 
@@ -783,181 +780,181 @@ a.type-fairy {
 //	01. Normal
 .text-normal {
 	$color-normal: #A8A878;
-	color: $color-normal;
+	color: variables.$color-normal;
 
 	&.dark{
 		$color-normal: #6D6D4E;
-		color: $color-normal;
+		color: variables.$color-normal;
 	}
 }
 
 //	02. Fighting
 .text-fighting {	
 	$color-fighting: #C03028;
-	color: $color-fighting;
+	color: variables.$color-fighting;
 	&.dark{
 		$color-fighting: #7D1F1A;
-		color: $color-fighting;
+		color: variables.$color-fighting;
 	}
 }
 
 //	03. Flying
 .text-flying {	
 	$color-flying: #A890F0;
-	color: $color-flying;
+	color: variables.$color-flying;
 	&.dark{
 		$color-flying: #6D5E9C;
-		color: $color-flying;
+		color: variables.$color-flying;
 	}
 }
 
 //	04. Posion
 .text-posion {	
 	$color-poison: #A040A0;
-	color: $color-poison;
+	color: variables.$color-poison;
 	&.dark{
 		$color-poison: #682A68;
-		color: $color-poison;
+		color: variables.$color-poison;
 	}
 }
 
 //	05. Ground
 .text-ground {	
 	$color-ground: #E0C068;
-	color: $color-ground;
+	color: variables.$color-ground;
 	&.dark{
 		$color-ground: #927D44;
-		color: $color-ground;
+		color: variables.$color-ground;
 	}
 }
 
 //	06. Rock
 .text-rock {	
 	$color-rock: #B8A038;
-	color: $color-rock;
+	color: variables.$color-rock;
 	&.dark{
 		$color-rock: #786824;
-		color: $color-rock;
+		color: variables.$color-rock;
 	}
 }
 
 //	07. Bug
 .text-bug {	
 	$color-bug: #A8B820;
-	color: $color-bug;
+	color: variables.$color-bug;
 	&.dark{
 		$color-bug: #6D7815;
-		color: $color-bug;
+		color: variables.$color-bug;
 	}
 }
 
 //	08. Ghost
 .text-ghost {	
 	$color-ghost: #705898;
-	color: $color-ghost;
+	color: variables.$color-ghost;
 	&.dark{
 		$color-ghost: #493963;
-		color: $color-ghost;
+		color: variables.$color-ghost;
 	}
 }
 
 //	09. Steel
 .text-steel {	
 	$color-steel: #B8B8D0;
-	color: $color-steel;
+	color: variables.$color-steel;
 	&.dark{
 		$color-steel: #787887;
-		color: $color-steel;
+		color: variables.$color-steel;
 	}
 }
 
 //	10. Fire
 .text-fire {	
 	$color-fire: #F08030;
-	color: $color-fire;
+	color: variables.$color-fire;
 	&.dark{
 		$color-fire: #9C531F;
-		color: $color-fire;
+		color: variables.$color-fire;
 	}
 }
 
 //	11. Water
 .text-water {	
 	$color-water: #6890F0;
-	color: $color-water;
+	color: variables.$color-water;
 	&.dark{
 		$color-water: #445E9C;
-		color: $color-water;
+		color: variables.$color-water;
 	}
 }
 
 //	12. Grass
 .text-grass {	
 	$color-grass: #78C850;
-	color: $color-grass;
+	color: variables.$color-grass;
 	&.dark{
 		$color-grass: #4E8234;
-		color: $color-grass;
+		color: variables.$color-grass;
 	}
 }
 
 //	13. Electric
 .text-electric {	
 	$color-electric: #F8D030;
-	color: $color-electric;
+	color: variables.$color-electric;
 	&.dark{
 		$color-electric: #A1871F;
-		color: $color-electric;
+		color: variables.$color-electric;
 	}
 }
 
 //	14. Psychic
 .text-psyhic {	
 	$color-psychic: #F85888;
-	color: $color-psychic;
+	color: variables.$color-psychic;
 	&.dark{
 		$color-psychic: #A13959;
-		color: $color-psychic;
+		color: variables.$color-psychic;
 	}
 }
 
 //	15. Ice
 .text-ice {	
 	$color-ice: #98D8D8;
-	color: $color-ice;
+	color: variables.$color-ice;
 	&.dark{
 		$color-ice: #638D8D;
-		color: $color-ice;
+		color: variables.$color-ice;
 	}
 }
 
 //	16. Dragon
 .text-dragon {	
 	$color-dragon: #7038F8;
-	color: $color-dragon;	
+	color: variables.$color-dragon;	
 	&.dark{
 		$color-dragon: #4924A1;
-		color: $color-dragon;
+		color: variables.$color-dragon;
 	}
 }
 
 //	17. Dark
 .text-dark {	
 	$color-dark: #705848;
-	color: $color-dark;
+	color: variables.$color-dark;
 	&.dark{
 		$color-dark: #49392F;	
-		color: $color-dark;
+		color: variables.$color-dark;
 	}
 }
 
 //	18. Fairy
 .text-fairy {	
 	$color-fairy: #EE99AC;
-	color: $color-fairy;
+	color: variables.$color-fairy;
 	&.dark{
 		$color-fairy: #9B6470;
-		color: $color-fairy;
+		color: variables.$color-fairy;
 	}
 }
 
@@ -996,7 +993,7 @@ button {
 
 	min-height: 250px;
 	min-width: 320px;
-	// background-color: $color-normal;
+	// background-color: variables.$color-normal;
 	background-image: url('../assets/type-icons-color-dark/01-normal.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
@@ -1026,7 +1023,7 @@ button {
 	  padding: 0 0.5rem;
 	  margin: -1.8rem 0 1rem;
 	  font-size: 1rem;
-	//   background-color: $color-normal;
+	//   background-color: variables.$color-normal;
 	}
 
 	&.is-centered {
@@ -1044,9 +1041,9 @@ button {
 
   &.is-dark {
 	position: relative;
-	margin: $border-size;
-	// color: $background-color;
-	// background-color: $base-color;
+	margin: variables.$border-size;
+	// color: variables.$background-color;
+	// background-color: variables.$base-color;
 	border-color: white;
 
 	&::after {
@@ -1057,13 +1054,13 @@ button {
 	  left: -$border-size * 1.8;
 	  z-index: -1;
 	  content: "";
-	//   background-color: $base-color;
+	//   background-color: variables.$base-color;
 	}
 
 	// &.with-title {
 	//   > .title {
-	// 	color: $background-color;
-	// 	background-color: $base-color;
+	// 	color: variables.$background-color;
+	// 	background-color: variables.$base-color;
 	//   }
 	// }
   }
@@ -1072,7 +1069,7 @@ button {
 	// @include mixins.rounded-corners();
 
 	// padding: 1rem 1.5rem;
-	margin: $border-size;
+	margin: variables.$border-size;
 
 	&.with-title {
 	  > .title {
@@ -1125,8 +1122,8 @@ button {
   }
 }
 
-$background-color: $color-normal;
-$base-color: $color-normal;
+$background-color: variables.$color-normal;
+$base-color: variables.$color-normal;
 
 .type-normal-container, .container-type-normal {
 
