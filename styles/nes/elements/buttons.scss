@@ -48,12 +48,12 @@ $base-color: $color-black !default;
   // cursor: $cursor-click-url, pointer;
   user-select: none;
 
-  @include btn-style(
-    $base-color,
-    map-get($default-colors, "normal"),
-    map-get($default-colors, "hover"),
-    map-get($default-colors, "shadow")
-  );
+  // @include btn-style(
+  //   $base-color,
+  //   map-get($default-colors, "normal"),
+  //   map-get($default-colors, "hover"),
+  //   map-get($default-colors, "shadow")
+  // );
 
   &:focus {
     outline: 0;
@@ -99,14 +99,14 @@ $base-color: $color-black !default;
     "steel" $base-color map-get($steel-type-colors, "normal") map-get($steel-type-colors, "hover") map-get($steel-type-colors, "shadow"),
     "water" $background-color map-get($water-type-colors, "normal") map-get($water-type-colors, "hover") map-get($water-type-colors, "shadow");
 
-  @each $type in $types {
-    &.is-#{nth($type, 1)} {
-      @include btn-style(nth($type, 2), nth($type, 3), nth($type, 4), nth($type, 5));
-    }
-    &.is#{nth($type, 1)} {
-      @include btn-style(nth($type, 2), nth($type, 3), nth($type, 4), nth($type, 5));
-    }
-  }
+  // @each $type in $types {
+  //   &.is-#{nth($type, 1)} {
+  //     @include btn-style(nth($type, 2), nth($type, 3), nth($type, 4), nth($type, 5));
+  //   }
+  //   &.is#{nth($type, 1)} {
+  //     @include btn-style(nth($type, 2), nth($type, 3), nth($type, 4), nth($type, 5));
+  //   }
+  // }
 
   input[type="file"] {
     position: absolute;
