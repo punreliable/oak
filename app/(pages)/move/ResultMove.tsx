@@ -1,6 +1,6 @@
 import React from 'react';
-import prettyName from '../../../utilities/prettyName';
-import { dashRemover } from '../../../utilities/dashRemover';
+import prettyName from '@/utilities/prettyName';
+import { dashRemover } from '@/utilities/dashRemover';
 
 const ResultMove = (props: any) => {
   return (
