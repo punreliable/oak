@@ -2,6 +2,7 @@
 
 @use 'nes/nes' as nes;
 @use './variables.scss' as variables;
+@use "sass:color";
 
 $darkest-green: #202119;
 $darker-green: #4d513a;
@@ -19,23 +20,23 @@ p,
 li,
 a,
 button {
-  font-family: variable.$font-family-primary;
+  font-family: variables.$font-family-primary;
 
   &.gameboy {
-    font-family: variable.$font-family-primary;
+    font-family: variables.$font-family-primary;
 
   }
 }
 
 input[type="text"].gameboy {
-  font-family: variable.$font-family-primary;
+  font-family: variables.$font-family-primary;
   margin-left: 2em;
 }
 
 // Gameboy Styles
 .btn-gameboy {
   background: variables.$darkest-green;
-  font-family: variable.$font-family-primary;
+  font-family: variables.$font-family-primary;
 
   &:hover,
   &:focus {
@@ -81,7 +82,7 @@ footer {
   &.gameboy {
     color: variables.$color-white;
     background-color: variables.$darker-green;
-    font-family: variable.$font-family-primary;
+    font-family: variables.$font-family-primary;
   }
 }
 
@@ -90,7 +91,7 @@ a {
 	text-decoration: none;
 
 	&.btn-gameboy {
-		font-family: variable.$font-family-primary;
+		font-family: variables.$font-family-primary;
 		text-decoration: none;
 
 		&:hover {
