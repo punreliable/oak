@@ -1,5 +1,7 @@
 @use '../../variables' as variables;
 
+$font-family: "Press Start 2P" !default;
+
 // Override reboot.scss
 
 html,
@@ -8,7 +10,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: variables.$font-family;
+  font-family: $font-family;
 }
 
 // html {
