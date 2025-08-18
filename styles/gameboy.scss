@@ -50,7 +50,7 @@ input[type="text"].gameboy {
 
   &.active {
     background-color: darken($darker-green, 15%) !important;
-    @extend .z-depth-1-half;
+    @extend .z-depth-1-half !optional;
   }
 }
 
