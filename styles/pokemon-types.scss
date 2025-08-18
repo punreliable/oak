@@ -1,4 +1,6 @@
 @use './variables';
+@use '../styles/mixins' as mixins;
+
 
 $border-size: 4px;
 
@@ -1068,7 +1070,7 @@ button {
   }
 
   &.is-rounded {
-	@use rounded-corners();
+	@include mixins.rounded-corners();
 
 	padding: 1rem 1.5rem;
 	margin: $border-size;
@@ -1169,7 +1171,7 @@ $base-color: $color-normal;
   }
 
   &.is-rounded {
-	@use rounded-corners();
+	@include mixins.rounded-corners();
 
 	padding: 1rem 1.5rem;
 	margin: $border-size;
@@ -1377,7 +1379,7 @@ $base-color: $color-flying;
   }
 
   &.is-rounded {
-	@use rounded-corners();
+	@include mixins.rounded-corners();
 
 	padding: 1rem 1.5rem;
 	margin: $border-size;
@@ -1511,7 +1513,7 @@ $base-color: $color-poison;
   }
 
   &.is-rounded {
-	@use rounded-corners();
+	@include mixins.rounded-corners();
 
 	padding: 1rem 1.5rem;
 	margin: $border-size;
@@ -1646,7 +1648,7 @@ $base-color: $color-ground;
 	}
 
 	&.is-rounded {
-		@use rounded-corners();
+		@include mixins.rounded-corners();
 
 		padding: 1rem 1.5rem;
 		margin: $border-size;
@@ -1782,7 +1784,7 @@ $base-color: $color-rock;
   }
 
   &.is-rounded {
-	@use rounded-corners();
+	@include mixins.rounded-corners();
 
 	padding: 1rem 1.5rem;
 	margin: $border-size;
@@ -1916,7 +1918,7 @@ $base-color: $color-bug;
   }
 
   &.is-rounded {
-	@use rounded-corners();
+	@include mixins.rounded-corners();
 
 	padding: 1rem 1.5rem;
 	margin: $border-size;
@@ -2055,7 +2057,7 @@ $base-color: $color-ghost;
   }
 
   &.is-rounded {
-	@use rounded-corners();
+	@include mixins.rounded-corners();
 
 	padding: 1rem 1.5rem;
 	margin: $border-size;
@@ -2193,7 +2195,7 @@ $base-color: $color-steel;
   }
 
   &.is-rounded {
-	@use rounded-corners();
+	@include mixins.rounded-corners();
 
 	padding: 1rem 1.5rem;
 	margin: $border-size;
@@ -2327,7 +2329,7 @@ $base-color: $color-fire;
   }
 
   &.is-rounded {
-	@use rounded-corners();
+	@include mixins.rounded-corners();
 
 	padding: 1rem 1.5rem;
 	margin: $border-size;
@@ -2459,7 +2461,7 @@ $base-color: $color-water;
   }
 
   &.is-rounded {
-	@use rounded-corners();
+	@include mixins.rounded-corners();
 
 	padding: 1rem 1.5rem;
 	margin: $border-size;
@@ -2592,7 +2594,7 @@ $base-color: $color-grass;
   }
 
   &.is-rounded {
-	@use rounded-corners();
+	@include mixins.rounded-corners();
 
 	padding: 1rem 1.5rem;
 	margin: $border-size;
@@ -2725,7 +2727,7 @@ $base-color: $color-electric;
   }
 
   &.is-rounded {
-	@use rounded-corners();
+	@include mixins.rounded-corners();
 
 	padding: 1rem 1.5rem;
 	margin: $border-size;
@@ -2872,7 +2874,7 @@ $base-color: $color-psychic;
   }
 
   &.is-rounded {
-	@use rounded-corners();
+	@include mixins.rounded-corners();
 
 	padding: 1rem 1.5rem;
 	margin: $border-size;
@@ -3007,7 +3009,7 @@ $base-color: $color-ice;
   }
 
   &.is-rounded {
-	@use rounded-corners();
+	@include mixins.rounded-corners();
 
 	padding: 1rem 1.5rem;
 	margin: $border-size;
@@ -3143,7 +3145,7 @@ $base-color: $color-dragon;
   }
 
   &.is-rounded {
-	@use rounded-corners();
+	@include mixins.rounded-corners();
 
 	padding: 1rem 1.5rem;
 	margin: $border-size;
@@ -3276,7 +3278,7 @@ $base-color: $color-dark;
   }
 
   &.is-rounded {
-	@use rounded-corners();
+	@include mixins.rounded-corners();
 
 	padding: 1rem 1.5rem;
 	margin: $border-size;
