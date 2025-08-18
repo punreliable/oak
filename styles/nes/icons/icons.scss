@@ -1,28 +1,28 @@
 @use '../utilities/icon-mixin' as pixelize;
 
 // reaction
-@use "heart.scss" as heart;
-@use "star.scss" as star;
-@use "like.scss" as like;
+@use "heart" as heart;
+@use "star" as star;
+@use "like" as like;
 
 // sns
-@use "twitter.scss" as twitter;
-@use "facebook.scss" as facebook;
-@use "github.scss" as github;
-@use "youtube.scss" as youtube;
-@use "google.scss" as google;
-@use "medium.scss" as medium;
-@use "twitch.scss" as twitch;
-@use "reddit.scss" as reddit;
-@use "whatsapp.scss" as whatsapp;
-@use "gmail.scss" as gmail;
-@use "linkedin.scss" as linkedin;
-@use "instagram.scss" as instagram;
+@use "twitter" as twitter;
+@use "facebook" as facebook;
+@use "github" as github;
+@use "youtube" as youtube;
+@use "google" as google;
+@use "medium" as medium;
+@use "twitch" as twitch;
+@use "reddit" as reddit;
+@use "whatsapp" as whatsapp;
+@use "gmail" as gmail;
+@use "linkedin" as linkedin;
+@use "instagram" as instagram;
 
 // others
-@use "close.scss" as close;
-@use "trophy.scss" as trophy;
-@use "coin.scss" as coin;
+@use "close" as close;
+@use "trophy" as trophy;
+@use "coin" as coin;
 
 .nes-icon {
   $default-size: 1px;

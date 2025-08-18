@@ -1,6 +1,6 @@
 @charset "utf-8";
 
 @use "nes-core";
-// @use "components/_index";
-@use "icons/_index";
-@use "pixel-arts/_index";
+@use "components/index" as components;
+@use "icons/index" as icons;
+@use "pixel-arts/index" as pixelArts;
