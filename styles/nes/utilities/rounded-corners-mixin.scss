@@ -1,3 +1,5 @@
+@use '../../variables.scss';
+
 %rounded-corner-defaults {
   border-style: solid;
   border-width: $border-size;
