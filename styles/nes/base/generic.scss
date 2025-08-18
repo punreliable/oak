@@ -1,6 +1,7 @@
 @use '../../variables' as variables;
 
 $font-family: "Press Start 2P" !default;
+$font-size: 16px !default;
 
 // Override reboot.scss
 
@@ -18,9 +19,9 @@ samp {
 // }
 
 body {
-  font-size: variables.$font-size;
-  color: variables.$base-color;
-  background-color: variables.$background-color;
+  font-size: $font-size;
+  // color: variables.$base-color;
+  // background-color: variables.$background-color;
   -webkit-font-smoothing: antialiased;
 }
 
