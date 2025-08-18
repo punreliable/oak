@@ -5,9 +5,9 @@
 
 
 :root {
-  color-scheme: lightå dark;
+  color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  font-family: 'Press Start 2P', Inter, Helvetica, Arial, system-ui, sans-serif;
+  font-family: $font-family-primary;
   font-synthesis: none;
   font-weight: 400;
   line-height: 1.5;

@@ -19,23 +19,23 @@ p,
 li,
 a,
 button {
-  font-family: "Press Start 2P";
+  font-family: variable.$font-family-primary;
 
   &.gameboy {
-    font-family: "Press Start 2P";
+    font-family: variable.$font-family-primary;
 
   }
 }
 
 input[type="text"].gameboy {
-  font-family: "Press Start 2P";
+  font-family: variable.$font-family-primary;
   margin-left: 2em;
 }
 
 // Gameboy Styles
 .btn-gameboy {
   background: variables.$darkest-green;
-  font-family: "Press Start 2P";
+  font-family: variable.$font-family-primary;
 
   &:hover,
   &:focus {
@@ -77,26 +77,25 @@ div {
 
 }
 
-footer.gameboy {
-color: variables.$color-white;
-background-color: variables.$darker-green;
-font-family: "Press Start 2P";
-
+footer {
+  &.gameboy {
+    color: variables.$color-white;
+    background-color: variables.$darker-green;
+    font-family: variable.$font-family-primary;
+  }
 }
 
 a {
-
 	color: variables.$color-white;
 	text-decoration: none;
 
 	&.btn-gameboy {
-
-		font-family: "Press Start 2P" !important;
+		font-family: variable.$font-family-primary;
 		text-decoration: none;
 
 		&:hover {
-
 			text-decoration: none;
+
 		}
 	}
 }
