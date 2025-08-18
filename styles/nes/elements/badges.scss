@@ -1,6 +1,8 @@
 @use '../../variables' as variables;
 @use '../../pokemon-types';
 
+$background-color: #A8A878;
+
 @mixin span-style-is-icon($color, $background-color, $display, $width, $font-size) {
   display: $display;
   align-items: center;
