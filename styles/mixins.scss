@@ -1,5 +1,5 @@
 // NES.css SCSS Mixins
-@use './variables';
+@use './variables' as variables;
 
 $border-size: 4px !default;
 
@@ -43,7 +43,7 @@ $border-size: 4px !default;
 
 		border-image-outset: 0;
 	  } @else {
-		@include border-image($color-black);
+		@include border-image(variables.$color-black);
 
 		border-image-outset: 2;
 	  }

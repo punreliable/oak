@@ -1,4 +1,4 @@
-@use '../../variables.scss';
+@use '../../variables.scss' as variables;
 
 %rounded-corner-defaults {
   border-style: solid;
@@ -36,11 +36,11 @@
   @include border-image-repeat();
 
   @if $isDark {
-    @include border-image($color-white);
+    @include border-image(variables.$color-white);
 
     border-image-outset: 0;
   } @else {
-    @include border-image($color-black);
+    @include border-image(variables.$color-black);
 
     border-image-outset: 2;
   }

@@ -1094,7 +1094,7 @@ button {
 	}
 
 	&.is-dark {
-	  @include rounded-corners(true);
+	  @include mixins.rounded-corners(true);
 	  &::after {
 		content: none;
 	  }
