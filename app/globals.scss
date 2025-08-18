@@ -1,4 +1,4 @@
-@use '../styles/variables';
+@use '../styles/variables' as variables;
 @use '../styles/mixins';
 @use '../node_modules/bootstrap/scss/bootstrap.scss';
 @use '../styles/gameboy';
@@ -316,7 +316,7 @@ section {
     section.message { 
       div.nes-balloon {
         p {
-          color: $color-black;
+          color: variables.$color-black;
         }
       }
     }
