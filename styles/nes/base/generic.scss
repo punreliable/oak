@@ -1,3 +1,5 @@
+@use '../../variables' as variables;
+
 // Override reboot.scss
 
 html,
@@ -6,7 +8,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: $font-family;
+  font-family: variables.$font-family;
 }
 
 // html {
@@ -14,9 +16,9 @@ samp {
 // }
 
 body {
-  font-size: $font-size;
-  color: $base-color;
-  background-color: $background-color;
+  font-size: variables.$font-size;
+  color: variables.$base-color;
+  background-color: variables.$background-color;
   -webkit-font-smoothing: antialiased;
 }
 
