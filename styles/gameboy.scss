@@ -1,6 +1,7 @@
 // Gameboy Color Palette
 
 @use 'nes/nes';
+@use './variables' as variables;
 
 $darkest-green: #202119;
 $darker-green: #4d513a;
@@ -77,7 +78,7 @@ div {
 }
 
 footer.gameboy {
-color: $color-white;
+color: variables.$color-white;
 background-color: $darker-green;
 font-family: "Press Start 2P", cursive;
 
@@ -85,7 +86,7 @@ font-family: "Press Start 2P", cursive;
 
 a {
 
-	color: $color-white;
+	color: variables.$color-white;
 	text-decoration: none;
 
 	&.btn-gameboy {

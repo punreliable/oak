@@ -1,3 +1,5 @@
+@use './variables' as variables;
+
 @mixin list-before(
   $class,
   $disc-or-circle,
@@ -49,7 +51,7 @@
     @include list-before("circle", $circle, $dark-colors);
 
     li {
-      color: $color-white;
+      color: variables.$color-white;
     }
   }
 }

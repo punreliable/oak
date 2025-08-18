@@ -1,4 +1,4 @@
-
+@use '../../variables.scss' as variables;
 
 // Stylesheet to control Home Page Styles
 
@@ -16,7 +16,7 @@
 			
 			margin-top: 0;
 			padding-top: 0;
-			background-color: $color-white;
+			background-color: variables.$color-white;
 			background-image: url ('images/whos-that-pokemon.png');
 			//background-size:cover;
 			background-size: auto 100%;

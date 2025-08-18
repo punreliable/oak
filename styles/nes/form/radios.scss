@@ -1,3 +1,5 @@
+@use '../../variables.scss' as variables;
+
 .nes-radio {
   // prettier-ignore
   $radio: (
@@ -57,22 +59,22 @@
   }
   &.is-dark {
     + span {
-      color: $color-white;
+      color: variables.$color-white;
     }
     // prettier-ignore
     + span::before { /* stylelint-disable-line no-descending-specificity */
-      color: $color-white;
+      color: variables.$color-white;
     }
 
     &:checked + span::before {
       @include pixelize(2px, $radio-checked-focus, $colors-radio-dark);
 
-      color: $color-white;
+      color: variables.$color-white;
     }
     &:checked:focus + span::before {
       @include pixelize(2px, $radio-checked-focus, $colors-radio-dark);
 
-      color: $color-white;
+      color: variables.$color-white;
     }
   }
   &.is-disabled {
