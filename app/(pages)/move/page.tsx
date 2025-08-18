@@ -10,7 +10,7 @@ interface MovePageProps {
   moveID: string; // Define the type of the prop
 }
 
-const MovePage = ({moveID}: MovePageProps) => {
+const MovePage = ({ moveID }: MovePageProps) => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
