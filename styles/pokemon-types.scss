@@ -6,7 +6,7 @@ $border-size: 4px;
 // There are 18 Types of Pokemon they are;
 
 //	01. Normal
-$color-normal: #a8a878;
+$color-normal: #A8A878;
 $border-color-normal: #6d6d4e;
 
 //	02. Fighting
@@ -993,8 +993,7 @@ button {
 
 	min-height: 250px;
 	min-width: 320px;
-
-	background-color: $color-normal;
+	// background-color: $color-normal;
 	background-image: url('../assets/type-icons-color-dark/01-normal.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
@@ -1024,7 +1023,7 @@ button {
 	  padding: 0 0.5rem;
 	  margin: -1.8rem 0 1rem;
 	  font-size: 1rem;
-	  //background-color: $background-color;
+	//   background-color: $color-normal;
 	}
 
 	&.is-centered {
@@ -1043,8 +1042,8 @@ button {
   &.is-dark {
 	position: relative;
 	margin: $border-size;
-	color: $background-color;
-	background-color: $base-color;
+	// color: $background-color;
+	// background-color: $base-color;
 	border-color: white;
 
 	&::after {
@@ -1055,15 +1054,15 @@ button {
 	  left: -$border-size * 1.8;
 	  z-index: -1;
 	  content: "";
-	  background-color: $base-color;
+	//   background-color: $base-color;
 	}
 
-	&.with-title {
-	  > .title {
-		color: $background-color;
-		background-color: $base-color;
-	  }
-	}
+	// &.with-title {
+	//   > .title {
+	// 	color: $background-color;
+	// 	background-color: $base-color;
+	//   }
+	// }
   }
 
   &.is-rounded {
