@@ -469,6 +469,7 @@ a.type-fairy {
 		color: $color-normal;
 	}
 }
+
 //	02. Fighting
 .text-fighting {	
 	$color-fighting: #C03028;
@@ -478,6 +479,7 @@ a.type-fairy {
 		color: $color-fighting;
 	}
 }
+
 //	03. Flying
 .text-flying {	
 	$color-flying: #A890F0;
@@ -487,6 +489,7 @@ a.type-fairy {
 		color: $color-fighting;
 	}
 }
+
 //	04. Posion
 .text-posion {	
 	$color-poison: #A040A0;
@@ -496,6 +499,7 @@ a.type-fairy {
 		color: $color-poison;
 	}
 }
+
 //	05. Ground
 .text-ground {	
 	$color-ground: #E0C068;
@@ -505,6 +509,7 @@ a.type-fairy {
 		color: $color-ground;
 	}
 }
+
 //	06. Rock
 .text-rock {	
 	$color-rock: #B8A038;
@@ -514,6 +519,7 @@ a.type-fairy {
 		color: $color-rock;
 	}
 }
+
 //	07. Bug
 .text-bug {	
 	$color-bug: #A8B820;
@@ -523,6 +529,7 @@ a.type-fairy {
 		color: $color-bug;
 	}
 }
+
 //	08. Ghost
 .text-ghost {	
 	$color-ghost: #705898;
@@ -532,6 +539,7 @@ a.type-fairy {
 		color: $color-ghost;
 	}
 }
+
 //	09. Steel
 .text-steel {	
 	$color-steel: #B8B8D0;
@@ -541,6 +549,7 @@ a.type-fairy {
 		color: $color-steel;
 	}
 }
+
 //	10. Fire
 .text-fire {	
 	$color-fire: #F08030;
@@ -550,6 +559,7 @@ a.type-fairy {
 		color: $color-fire;
 	}
 }
+
 //	11. Water
 .text-water {	
 	$color-water: #6890F0;
@@ -559,6 +569,7 @@ a.type-fairy {
 		color: $color-water;
 	}
 }
+
 //	12. Grass
 .text-grass {	
 	$color-grass: #78C850;
@@ -568,6 +579,7 @@ a.type-fairy {
 		color: $color-grass;
 	}
 }
+
 //	13. Electric
 .text-electric {	
 	$color-electric: #F8D030;
@@ -577,6 +589,7 @@ a.type-fairy {
 		color: $color-electric;
 	}
 }
+
 //	14. Psychic
 .text-psyhic {	
 	$color-psychic: #F85888;
@@ -586,6 +599,7 @@ a.type-fairy {
 		color: $color-psychic;
 	}
 }
+
 //	15. Ice
 .text-ice {	
 	$color-ice: #98D8D8;
@@ -595,6 +609,7 @@ a.type-fairy {
 		color: $color-ice;
 	}
 }
+
 //	16. Dragon
 .text-dragon {	
 	$color-dragon: #7038F8;
@@ -604,6 +619,7 @@ a.type-fairy {
 		color: $color-dragon;
 	}
 }
+
 //	17. Dark
 .text-dark {	
 	$color-dark: #705848;
@@ -613,6 +629,7 @@ a.type-fairy {
 		color: $color-dark;
 	}
 }
+
 //	18. Fairy
 .text-fairy {	
 	$color-fairy: #EE99AC;
@@ -623,11 +640,9 @@ a.type-fairy {
 	}
 }
 
-
 .single-type-page {
 
 	@media screen and (min-width: 768px) {
-		
 
 		h2 {
 
@@ -635,23 +650,18 @@ a.type-fairy {
 			padding-bottom: 3rem;
 
 		}
-
 	}
 
 	@media screen and (max-width: 768px) {
 		
-
 		h2 {
 
 			padding-top: 4rem;
 			padding-bottom: 2rem;
 
 		}
-
 	}
-
 }
-
 
 button {
 	&.btnPokemon {
@@ -660,4 +670,3 @@ button {
 
 	}
 }
-

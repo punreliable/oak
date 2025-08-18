@@ -1,16 +1,13 @@
-@import '../styles/variables';
+@use '../styles/variables' as *;
 @import '../styles/mixins';
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 @import '../styles/palette-town';
 @import '../styles/types';
 @import '../styles/gameboy';
 @import '../styles/pokemon-type-containers';
-
-
 // $color-black: #212529;
 
 :root {
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   font-family: 'Press Start 2P', Inter, Helvetica, Arial, system-ui, sans-serif;
