@@ -1,10 +1,16 @@
 @use '../../variables' as variables;
 
-$darkest-green: #202119;
-$darker-green: #4d513a;
-$primary-green: #8d956e;
-$brighter-green: #c5d1a3;
-$brightest-green: #e6ecca;
+$darkest-green: variables.$darkest-green;
+$darker-green: variables.$darker-green;
+$primary-green: variables.$primary-green;
+$brighter-green: variables.$brighter-green;
+$brightest-green: variables.$brightest-green;
+
+// $darkest-green: #202119;
+// $darker-green: #4d513a;
+// $primary-green: #8d956e;
+// $brighter-green: #c5d1a3;
+// $brightest-green: #e6ecca;
 
 $background-color: $primary-green;
 $color-white: $brightest-green;
