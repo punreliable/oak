@@ -1,6 +1,6 @@
 // Gameboy Color Palette
 
-@use 'nes/nes';
+@use 'nes/nes' as nes;
 @use './variables.scss' as variables;
 
 $darkest-green: #202119;
@@ -34,32 +34,32 @@ input[type="text"].gameboy {
 
 // Gameboy Styles
 .btn-gameboy {
-  background: $darkest-green;
-  font-family: "Press Start 2P", cursive;
+  background: variables.$darkest-green;
+  font-family: "Press Start 2P";
 
   &:hover,
   &:focus {
-    background-color: lighten($darker-green, 3%) !important;
+    background-color: lighten(variables.$darker-green, 3%) !important;
   }
 
   &.active {
-    background-color: darken($darker-green, 15%) !important;
+    background-color: darken(variables.$darker-green, 15%) !important;
     @extend .z-depth-1-half !optional;
   }
 }
 
 body.gameboy {
-  background-color: $brightest-green;
+  background-color: variables.$brightest-green;
 }
 
 nav.gameboy {
-  background-color: $darker-green;
+  background-color: variables.$darker-green;
 }
 
 .jumbotron {
   &.gameboy {
-    color: $darker-green;
-    background-color: $brighter-green !important;
+    color: variables.$darker-green;
+    background-color: variables.$brighter-green !important;
   }
 }
 
@@ -69,7 +69,7 @@ div {
 
 		&.gameboy {
 
-			background-color: $brighter-green;
+			background-color: variables.$brighter-green;
 
 		}
 
@@ -79,8 +79,8 @@ div {
 
 footer.gameboy {
 color: variables.$color-white;
-background-color: $darker-green;
-font-family: "Press Start 2P", cursive;
+background-color: variables.$darker-green;
+font-family: "Press Start 2P";
 
 }
 
@@ -91,7 +91,7 @@ a {
 
 	&.btn-gameboy {
 
-		font-family: "Press Start 2P", cursive !important;
+		font-family: "Press Start 2P" !important;
 		text-decoration: none;
 
 		&:hover {
