@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Press_Start_2P } from 'next/font/google';
-import '@/node_modules/bootstrap/scss/bootstrap.scss';
+import '@/node_modules/bootstrap/css/bootstrap.css';
 import './globals.scss';
 import { TanstackProvider } from './components/providers/tanstack-provider';
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -13,7 +13,7 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
-  subsets: ['latin'],
+  subsets: ['latin'],å
 });
 
 const pressStart2P = Press_Start_2P({

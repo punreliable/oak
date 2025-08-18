@@ -1,8 +1,7 @@
 @use './variables' as variables;
 @use '../styles/mixins' as mixins;
 
-
-$border-size: 4px;
+$border-size: variables.$border-size;
 
 // List Box Styles for Pokemon Types
 // List Box Styles for Pokemon Types
