@@ -1,5 +1,5 @@
 @use '../styles/variables';
-// @forward '../styles/mixins';
+@forward '../styles/mixins';
 @use '../node_modules/bootstrap/scss/bootstrap.scss';
 @use '../styles/gameboy';
 @use '../styles/pokemon-types';
