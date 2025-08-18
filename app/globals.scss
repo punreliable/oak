@@ -1,6 +1,6 @@
 @use '../styles/variables' as *;
-@import '../styles/mixins';
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@forward '../styles/mixins';
+@forward '../node_modules/bootstrap/scss/bootstrap.scss';
 @import '../styles/palette-town';
 @import '../styles/types';
 @import '../styles/gameboy';
