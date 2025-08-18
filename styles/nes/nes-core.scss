@@ -6,8 +6,8 @@
 #{build-data()}
 \*****************************************************************************/
 
-@use "base/_index.scss";
-@use "utilities/_index.scss";
-@use "helpers/_index.scss";
-@use "elements/_index.scss";
-@use "form/_index.scss";
+@use "base/_index.scss" as base;
+@use "utilities/_index.scss" as utilities;
+@use "helpers/_index.scss" as helpers;
+@use "elements/_index.scss" as elements;
+@use "form/_index.scss" as form;
