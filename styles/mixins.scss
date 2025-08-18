@@ -1,5 +1,7 @@
 // NES.css SCSS Mixins
 
+$border-size: 4px !default;
+
 %rounded-corner-defaults {
 	  border-style: solid;
 	  border-width: $border-size;
