@@ -1,6 +1,6 @@
 // Gameboy Color Palette
 
-@import 'nes/nes';
+@use 'nes/nes';
 
 $darkest-green: #202119;
 $darker-green: #4d513a;
@@ -18,27 +18,20 @@ p,
 li,
 a,
 button {
-
   font-family: "Press Start 2P", cursive !important;
 
   &.gameboy {
-
     font-family: "Press Start 2P", cursive !important;
 
-    // color: $darker-green;
-
   }
-
 }
 
 input[type="text"].gameboy {
-  // background-color: $brighter-green;
   font-family: "Press Start 2P", cursive;
   margin-left: 2em;
 }
 
 // Gameboy Styles
-
 .btn-gameboy {
   background: $darkest-green;
   font-family: "Press Start 2P", cursive;
@@ -84,7 +77,6 @@ div {
 }
 
 footer.gameboy {
-
 color: $color-white;
 background-color: $darker-green;
 font-family: "Press Start 2P", cursive;
