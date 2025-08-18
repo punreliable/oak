@@ -1,3 +1,6 @@
+@use '../utilities/icon-mixin' as pixelize;
+@use '../utilities/fill-gaps' as fillGaps;
+
 .nes-phone {
   $phone-colors: (#596985, #3c4665, #000);
   // prettier-ignore
@@ -38,7 +41,7 @@
     content: "";
     background: transparent;
 
-    @include pixelize($size, $phone, $phone-colors);
-    @include fill-gaps();
+    @include pixelize.pixelize($size, $phone, $phone-colors);
+    @include fillGaps.fill-gaps();
   }
 }

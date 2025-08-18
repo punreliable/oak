@@ -1,5 +1,7 @@
-$base-color: $color-black !default;
-$background-color: $color-white !default;
+@use '../../variables' as variables;
+
+$base-color: variables.$color-black !default;
+$background-color: variables.$color-white !default;
 
 $icon-close-colors: ($base-color);
 // prettier-ignore

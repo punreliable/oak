@@ -1,3 +1,6 @@
+@use '../utilities/icon-mixin' as pixelize;
+@use '../utilities/fill-gaps' as fillGaps;
+
 .nes-logo {
   $logo-colors: (#3e3634, #c3c3c3, #787973, #bf1710);
 
@@ -28,7 +31,7 @@
     content: "";
     background: transparent;
 
-    @include pixelize($size, $logo, $logo-colors);
-    @include fill-gaps();
+    @include pixelize.pixelize($size, $logo, $logo-colors);
+    @include fillGaps.fill-gaps();
   }
 }
