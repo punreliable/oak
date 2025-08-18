@@ -1,3 +1,7 @@
+@use '../../mixins' as mixins;
+@use '../../variables' as variables;
+@use '../base/variables' as nesVariables;
+
 $border-size: 4px;
 // Gameboy Greens
 $darkest-green: #202119;
@@ -11,39 +15,39 @@ $base-color: $darkest-green;
 .nes-input,
 .nes-textarea {
   @mixin border-style($border, $outline) {
-    @include compact-border-image($border);
+    @include mixins.compact-border-image($border);
 
     outline-color: $outline;
   }
 
-  // @include compact-rounded-corners();
+  @include mixins.compact-rounded-corners();
 
-  width: calc(100% - #{2 * $border-size});
+  width: calc(100% - #{2 * variables.$border-size});
   padding: 0.5rem 1rem;
   margin: 4px;
   background-clip: padding-box;
 
   &.is-dark {
-    // @include border-style(map-get($default-colors, "normal"), map-get($default-colors, "hover"));
+    @include border-style(map-get(nesVariables.$default-colors, "normal"), map-get(nesVariables.$default-colors, "hover"));
 
     color: $background-color;
     background-color: $base-color;
   }
-  // &.is-success {
-  //   @include border-style(map-get($success-colors, "normal"), map-get($success-colors, "hover"));
-  // }
-  // &.is-warning {
-  //   @include border-style(map-get($warning-colors, "normal"), map-get($warning-colors, "hover"));
-  // }
-  // &.is-error {
-  //   @include border-style(map-get($error-colors, "normal"), map-get($error-colors, "hover"));
-  // }
-  // &.is-disabled {
-  //   @include border-style(map-get($disabled-colors, "normal"), map-get($disabled-colors, "shadow"));
+  &.is-success {
+    @include border-style(map-get(nesVariables.$success-colors, "normal"), map-get(nesVariables.$success-colors, "hover"));
+  }
+  &.is-warning {
+    @include border-style(map-get(nesVariables.$warning-colors, "normal"), map-get(nesVariables.$warning-colors, "hover"));
+  }
+  &.is-error {
+    @include border-style(map-get(nesVariables.$error-colors, "normal"), map-get(nesVariables.$error-colors, "hover"));
+  }
+  &.is-disabled {
+    @include border-style(map-get(nesVariables.$disabled-colors, "normal"), map-get(nesVariables.$disabled-colors, "shadow"));
 
-  //   color: map-get($disabled-colors, "normal");
-  //   cursor: not-allowed;
-  // }
+    color: map-get(nesVariables.$disabled-colors, "normal");
+    cursor: not-allowed;
+  }
 }
 
 .nes-field {
