@@ -8,7 +8,6 @@ import PendingMove from './PendingMove';
 import ResultMove from './ResultMove';
 
 const MovePage = () => {
-
   const moveID = 'cut';
   const { data, error, isLoading } = useQuery({
     queryKey: ['move', moveID],
@@ -21,7 +20,6 @@ const MovePage = () => {
   if (isLoading) return <PendingMove />;
   if (error) return <ErrorMove />;
   if (data) return <ResultMove move={data} />;
-  
 };
 
 export default MovePage;
