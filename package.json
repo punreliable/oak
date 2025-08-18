@@ -61,7 +61,7 @@
     "@types/uuid": "^10.0.0",
     "@vitejs/plugin-react": "^4.3.1",
     "@vitest/coverage-v8": "^2.1.5",
-    "@vitest/ui": "^0.34.2",
+    "@vitest/ui": "3.2.4",
     "csstype": "^3.0.10",
     "dotenv": "^16.4.5",
     "eslint": "^9",
