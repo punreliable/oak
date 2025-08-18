@@ -1,4 +1,4 @@
-@use './variables';
+@use './variables' as variables;
 @use '../styles/mixins' as mixins;
 
 
@@ -3368,25 +3368,25 @@ $base-color: $color-fairy;
 	margin: $border-size;
 	color: $background-color;
 	background-color: $base-color;
-	border-color: $color-white;
+	border-color: variables.$color-white;
 
 	&::after {
 
 	  position: absolute;
-	  background-color: $base-color;
+	//   background-color: $base-color;
 
 	}
 
-	&.with-title {
+	// &.with-title {
 
-	  > .title {
+	//   > .title {
 
-		color: $background-color;
-		background-color: $base-color;
+		// color: $background-color;
+		// background-color: $base-color;
 
-	  }
+	//   }
 
-	}
+	// }
 
   }
 
