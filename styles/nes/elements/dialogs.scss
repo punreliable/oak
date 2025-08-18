@@ -1,3 +1,4 @@
+@use '../../mixins' as mixins;
 .nes-dialog {
   padding: 1.5rem 2rem;
   border-width: $border-size;

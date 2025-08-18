@@ -1,3 +1,5 @@
+@use '../../mixins' as mixins;
+
 @mixin box-shadow($color, $fromLeft: true) {
   @if $fromLeft {
     // prettier-ignore
