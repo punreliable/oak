@@ -1,10 +1,9 @@
 // Font
 @use '../../../styles/variables' as variables;
 
-//$color-black: #000;
 $border-size: 4px !default;
 
-// $color-default-normal: $background-color;
+$color-default-normal: variables.$background-color;
 $color-default-hover: #e7e7e7;
 $color-default-shadow: #adafbc;
 
@@ -12,7 +11,7 @@ $color-disabled-normal: #d3d3d3;
 $color-disabled-shadow: #adafbc;
 
 $color-primary-normal: #209cee;
-$color-primary-hover: #108de0;
+$color-primary-hover: rgba(5, 6, 7);
 $color-primary-shadow: #006bb3;
 
 $color-success-normal: #92cc41;
@@ -27,8 +26,8 @@ $color-error-normal: #e76e55;
 $color-error-hover: #ce372b;
 $color-error-shadow: #8c2022;
 
-$font-family: "Press Start 2P" !default;
-$font-size: 16px !default;
+$font-family: variables.$font-family-primary;
+$font-size: variables.$font-size-p;
 
 $base-color: variables.$color-black !default;
 $background-color: variables.$color-white !default;
@@ -36,15 +35,15 @@ $background-color: variables.$color-white !default;
 // $cursor-url: url( get-file-as-data-uri( "../../../../public/cursor.png" ) ) !default;
 // $cursor-click-url: url( get-file-as-data-uri( "../../../../public/cursor-click.png" ) ) 14 0 !default;
 
-$cursor-url: '' !default;
-$cursor-click-url: '' !default;
+// $cursor-url: '' !default;
+// $cursor-click-url: '' !default;
 
-$border-size: 4px !default;
+$border-size: variables.$border-size;
 
 $default-colors: (
   normal: $background-color,
-  hover: #e7e7e7,
-  shadow: #adafbc
+  hover: $color-default-hover,
+  shadow: $color-default-shadow
 ) !default;
 $disabled-colors: (
   normal: #d3d3d3,

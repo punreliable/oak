@@ -1,7 +1,6 @@
 @use '../../variables' as variables;
 
-$font-family: "Press Start 2P" !default;
-$font-size: 16px !default;
+// $font-size: 16px !default;
 
 // Override reboot.scss
 
@@ -11,27 +10,27 @@ pre,
 code,
 kbd,
 samp {
-  font-family: $font-family;
+  font-family: variables.$font-family-primary;
 }
 
 // html {
-//   // cursor: $cursor-url, auto;
+//   cursor: variables.$cursor-url, auto;
 // }
 
 body {
-  font-size: $font-size;
-  // color: variables.$base-color;
-  // background-color: variables.$background-color;
+  font-size: variables.$font-size-p;
+  color: variables.$base-color;
+  background-color: variables.$background-color;
   -webkit-font-smoothing: antialiased;
 }
 
-label {
-  cursor: inherit;
-}
+// label {
+//   cursor: inherit;
+// }
 
 // a,
 // button {
-//   cursor: $cursor-click-url, pointer;
+//   cursor: variables.$cursor-click-url, pointer;
 // }
 
 button,

@@ -37,7 +37,6 @@ $color-white: $color-text;
 
 	@mixin rounded-corners($isDark: false) {
 	  @extend %rounded-corner-defaults;
-
 	  border-image-slice: 3;
 	  border-image-width: 3;
 
@@ -56,19 +55,17 @@ $color-white: $color-text;
 
 	@mixin compact-rounded-corners($isDark: false) {
 	  @extend %rounded-corner-defaults;
-
 	  border-image-slice: 2;
 	  border-image-width: 2;
-
 	  @include border-image-repeat();
 
 	  @if $isDark {
 		@include compact-border-image($brightest-green);
-
 		border-image-outset: 0;
+
 	  } @else {
 		@include compact-border-image($darker-green);
-
 		border-image-outset: 2;
+
 	  }
 	}

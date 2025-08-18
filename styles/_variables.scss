@@ -40,6 +40,7 @@ $vote-color: #FFEB3B;
 // $color-text: #F7F9F6;
 $color-text: $brightest-green;
 $color-text-shadow: #7E746B;
+$base-color: $color-text-shadow;
 
 $color-black: $color-text-shadow;
 $color-white: $color-text;
@@ -258,8 +259,6 @@ $font-size-p: 1.4rem;
 
 // NES.css Dependency for custom Gameboy tables
 $border-size: 4px !default;
-
-$border-size: 4px;
 
 // List Box Styles for Pokemon Types
 
