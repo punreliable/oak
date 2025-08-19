@@ -1,4 +1,4 @@
-@use '../../variables' as variables;
+@use '../../variables' as vars;
 @use '../../pokemon-types' as pokemonTypes;
 
 $color-default-hover: #e7e7e7;
@@ -137,26 +137,26 @@ $error-colors: (
   $types:
     "primary" $background-color map-get($primary-colors, "normal"),
     "success" $background-color map-get($success-colors, "normal"),
-    "warning" variables.$base-color map-get($warning-colors, "normal"),
+    "warning" vars.$base-color map-get($warning-colors, "normal"),
     "error" $background-color map-get($error-colors, "normal"), 
-    "normal" variables.$color-type-normal-highlight variables.$color-type-normal-shadow,
-    "fighting" variables.$color-type-fighting-highlight variables.$color-type-fighting-shadow,
-    "flying" variables.$color-type-flying-highlight variables.$color-type-flying-shadow,
-    "poison" variables.$color-type-poison-highlight variables.$color-type-poison-shadow,
-    "ground" variables.$color-type-ground-highlight variables.$color-type-ground-shadow,
-    "rock" variables.$color-type-rock-highlight variables.$color-type-rock-shadow,
-    "bug" variables.$color-type-bug-highlight variables.$color-type-bug-shadow,
-    "ghost" variables.$color-type-ghost-highlight variables.$color-type-ghost-shadow,
-    "steel" variables.$color-type-steel-highlight variables.$color-type-steel-shadow,
-    "fire" variables.$color-type-fire-highlight variables.$color-type-fire-shadow,
-    "water" variables.$color-type-water-highlight variables.$color-type-water-shadow,
-    "grass" variables.$color-type-grass-highlight variables.$color-type-grass-shadow,
-    "electric" variables.$color-type-electric-highlight variables.$color-type-electric-shadow,
-    "psychic" variables.$color-type-psychic-highlight variables.$color-type-psychic-shadow,
-    "ice" variables.$color-type-ice-highlight variables.$color-type-ice-shadow,
-    "dragon" variables.$color-type-dragon-highlight variables.$color-type-dragon-shadow,
-    "dark" variables.$color-type-dark-highlight variables.$color-type-dark-shadow,
-    "fairy" variables.$color-type-fairy-highlight variables.$color-type-fairy-shadow;
+    "normal" vars.$color-type-normal-highlight vars.$color-type-normal-shadow,
+    "fighting" vars.$color-type-fighting-highlight vars.$color-type-fighting-shadow,
+    "flying" vars.$color-type-flying-highlight vars.$color-type-flying-shadow,
+    "poison" vars.$color-type-poison-highlight vars.$color-type-poison-shadow,
+    "ground" vars.$color-type-ground-highlight vars.$color-type-ground-shadow,
+    "rock" vars.$color-type-rock-highlight vars.$color-type-rock-shadow,
+    "bug" vars.$color-type-bug-highlight vars.$color-type-bug-shadow,
+    "ghost" vars.$color-type-ghost-highlight vars.$color-type-ghost-shadow,
+    "steel" vars.$color-type-steel-highlight vars.$color-type-steel-shadow,
+    "fire" vars.$color-type-fire-highlight vars.$color-type-fire-shadow,
+    "water" vars.$color-type-water-highlight vars.$color-type-water-shadow,
+    "grass" vars.$color-type-grass-highlight vars.$color-type-grass-shadow,
+    "electric" vars.$color-type-electric-highlight vars.$color-type-electric-shadow,
+    "psychic" vars.$color-type-psychic-highlight vars.$color-type-psychic-shadow,
+    "ice" vars.$color-type-ice-highlight vars.$color-type-ice-shadow,
+    "dragon" vars.$color-type-dragon-highlight vars.$color-type-dragon-shadow,
+    "dark" vars.$color-type-dark-highlight vars.$color-type-dark-shadow,
+    "fairy" vars.$color-type-fairy-highlight vars.$color-type-fairy-shadow;
   //  "shadow" $color-type-shadow-highlight $color-type-shadow-shadow
   
   
@@ -180,7 +180,7 @@ $error-colors: (
       @include badge-style(nth($type, 2), nth($type, 3));
     }
     a { 
-      color: variables.$color-text;
+      color: vars.$color-text;
     }
   }
 
