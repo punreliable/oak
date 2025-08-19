@@ -7,6 +7,8 @@ import PendingHomePokemon from '@/app/components/HomePagePokemon/PendingHomePoke
 import ResultHomePokemon from '@/app/components/HomePagePokemon/ResultHomePokemon';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
+export const dynamicParams = true;
+
 const getPokemonNumber = () => {
   const number = Math.floor(Math.random() * 151) + 1;
   if (number < 10) {

@@ -41,7 +41,6 @@
     border-image-outset: 0;
   } @else {
     @include border-image(variables.$color-black);
-
     border-image-outset: 2;
   }
 }

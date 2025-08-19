@@ -1,16 +1,18 @@
-// Font
-@use '../../../styles/variables' as variables;
+@use '../../../styles/variables' as vars;
+@use '../../gameboy' as gb;
+@use "sass:color";
 
 $border-size: 4px !default;
 
-$color-default-normal: variables.$background-color;
+$color-default-normal: vars.$background-color;
 $color-default-hover: #e7e7e7;
 $color-default-shadow: #adafbc;
 
 $color-disabled-normal: #d3d3d3;
+$color-disabled-normal: color.adjust(#d3d3d3, $lightness: 5%, $space: oklch);
 $color-disabled-shadow: #adafbc;
 
-$color-primary-normal: #209cee;
+$color-primary-normal: #040506;
 $color-primary-hover: #108de0;
 $color-primary-shadow: #006bb3;
 
@@ -26,27 +28,27 @@ $color-error-normal: #e76e55;
 $color-error-hover: #ce372b;
 $color-error-shadow: #8c2022;
 
-$font-family: variables.$font-family-primary;
-$font-size: variables.$font-size-p;
+$font-family: vars.$font-family-primary;
+$font-size: vars.$font-size-p;
 
-$base-color: variables.$color-black !default;
-$background-color: variables.$color-white !default;
+$base-color: vars.$color-text !default;
+$background-color: vars.$color-white !default;
 
 // $cursor-url: url( get-file-as-data-uri( "../../../../public/cursor.png" ) ) !default;
 // $cursor-click-url: url( get-file-as-data-uri( "../../../../public/cursor-click.png" ) ) 14 0 !default;
-
 // $cursor-url: '' !default;
 // $cursor-click-url: '' !default;
 
-$border-size: variables.$border-size;
+$border-size: vars.$border-size;
 
 $default-colors: (
-  normal: $background-color,
+  normal: $base-color,
   hover: $color-default-hover,
   shadow: $color-default-shadow
 ) !default;
 $disabled-colors: (
   normal: $color-disabled-normal,
+  hover:  $color-disabled-normal,
   shadow: $color-disabled-shadow
 ) !default;
 $primary-colors: (

@@ -5,7 +5,6 @@ import axios from 'axios';
 import DamageRelationsError from '@/app/components/DamageRelations/DamageRelationsError';
 import DamageRelationsPending from '@/app/components/DamageRelations/DamageRelationsPending';
 import DamageRelationsResult from '@/app/components/DamageRelations/DamageRelationsResult';
-import PokemonByTypeResult from '@/app/components/PokemonByType/PokemonByTypeResult';
 import prettyName from '@/utilities/prettyName';
 const PokemonTypeBugPage = () => {
   const typeID: string = 'bug';
@@ -28,7 +27,6 @@ const PokemonTypeBugPage = () => {
         <h1 className='responsive-h1 text-center gameboy mb-4'>{prettyName(typeID)} Type</h1>
       </div>
       {data && <DamageRelationsResult damage_relations={data} />}
-      {data && <PokemonByTypeResult pokemon={data} />}
     </section>
   );
 };

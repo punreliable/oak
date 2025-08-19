@@ -1,4 +1,5 @@
-$color-black: #212529;
+$border-size: 4px !default;
+// $color-black: #212529;
 
 // Gameboy Greens
 $darkest-green: #202119;
@@ -7,9 +8,26 @@ $primary-green: #8d956e;
 $brighter-green: #c5d1a3;
 $brightest-green: #e6ecca;
 
-$background-color: $primary-green;
+$background-color: $darker-green;
+$base-color: $primary-green;
+$color-black: $darkest-green;
+$color-text: $brightest-green;
+$color-text-shadow: $brighter-green;
+$color-white: $color-text;
 
 $font-family-primary: 'Press Start 2P', Inter, Helvetica, Arial, system-ui, sans-serif;
+
+$font-size-h1: 2.5rem;
+$font-size-h2: 2.2rem;
+$font-size-h3: 1.8rem;
+$font-size-h4: 1.6rem;
+$font-size-h5: 1.4rem;
+$font-size-h6: 1.2rem;
+$font-size-p: 1.0rem;
+
+$font-weight-bold: 700;
+$font-weight-normal: 500;
+$font-weight-thin: 300;
 
 // ComicUI Specific Variables
 $apps-color: #607d8b;
@@ -37,13 +55,6 @@ $spin-color: #00bcd4;
 $user-color: #9E9E9E;
 $vote-color: #FFEB3B;
 
-$color-text: $brightest-green;
-$color-text-shadow: #7E746B;
-$base-color: $color-text-shadow;
-
-$color-black: $color-text-shadow;
-$color-white: $color-text;
-
 $color-type-bug: #A8B821;
 $color-type-bug-highlight: #d6df36;
 $color-type-bug-shadow: #7A8E11;
@@ -64,8 +75,8 @@ $color-type-fairy: #fb8ead;
 $color-type-fairy-highlight: #f9bfb4;
 $color-type-fairy-shadow: #945b61;
 
-$color-type-fighting: #c03028;
-$color-type-fighting-highlight: #f17e2e;
+$color-type-fighting: #C03028;
+$color-type-fighting-highlight: #F17E2E;
 $color-type-fighting-shadow: #454233;
 
 $color-type-fire: #f07f2f;
@@ -123,145 +134,132 @@ $Lg: 992px;
 $XL: 1200px;
 $XxL: 400px;
 
-$bug-type-colors: (
-  normal: $color-type-bug,
-  hover: $color-type-bug-highlight,
-  shadow: $color-type-bug-shadow
-) !default;
-
-$dark-type-colors: (
-  normal: $color-type-dark,
-  hover: $color-type-dark-highlight,
-  shadow: $color-type-dark-shadow
-) !default;
-
-$dragon-type-colors: (
-  normal: $color-type-dragon,
-  hover: $color-type-dragon-highlight,
-  shadow: $color-type-dragon-shadow
-) !default;
-
-$fairy-type-colors: (
-  normal: $color-type-fairy,
-  hover: $color-type-fairy-highlight,
-  shadow: $color-type-fairy-shadow
-) !default;
-
-$electric-type-colors: (
-  normal: $color-type-electric,
-  hover: $color-type-electric-highlight,
-  shadow: $color-type-electric-shadow
-) !default;
-
-$fairy-type-colors: (
-  normal: $color-type-fairy,
-  hover: $color-type-fairy-highlight,
-  shadow: $color-type-fairy-shadow
-) !default;
-
-$fighting-type-colors: (
-  normal: $color-type-fighting,
-  hover: $color-type-fighting-highlight,
-  shadow: $color-type-fighting-shadow
-) !default;
-
-$fire-type-colors: (
-  normal: $color-type-fire,
-  hover: $color-type-fire-highlight,
-  shadow: $color-type-fire-shadow
-) !default;
-
-$ice-type-colors: (
-  normal: $color-type-ice,
-  hover: $color-type-ice-highlight,
-  shadow: $color-type-ice-shadow
-) !default;
-
-$flying-type-colors: (
-  normal: $color-type-flying,
-  hover: $color-type-flying-highlight,
-  shadow: $color-type-flying-shadow
-) !default;
-
-$ghost-type-colors: (
-  normal: $color-type-ghost,
-  hover: $color-type-ghost-highlight,
-  shadow: $color-type-ghost-shadow
-) !default;
-
-$grass-type-colors: (
-  normal: $color-type-grass,
-  hover: $color-type-grass-highlight,
-  shadow: $color-type-grass-shadow
-) !default;
-
-$ground-type-colors: (
-  normal: $color-type-ground,
-  hover: $color-type-ground-highlight,
-  shadow: $color-type-ground-shadow
-) !default;
-
-$ice-type-colors: (
-  normal: $color-type-ice,
-  hover: $color-type-ice-highlight,
-  shadow: $color-type-ice-shadow
-) !default;
-
+// 01. Normal
 $normal-type-colors: (
   normal: $color-type-normal,
   hover: $color-type-normal-highlight,
   shadow: $color-type-normal-shadow
 ) !default;
 
+//	02. Fighting
+$fighting-type-colors: (
+  normal: $color-type-fighting,
+  hover: $color-type-fighting-highlight,
+  shadow: $color-type-fighting-shadow
+) !default;
+
+//	03. Flying
+$flying-type-colors: (
+  normal: $color-type-flying,
+  hover: $color-type-flying-highlight,
+  shadow: $color-type-flying-shadow
+) !default;
+
+//	04. Poison
 $poison-type-colors: (
   normal: $color-type-poison,
   hover: $color-type-poison-highlight,
   shadow: $color-type-poison-shadow
 ) !default;
 
-$psychic-type-colors: (
-  normal: $color-type-psychic,
-  hover: $color-type-psychic-highlight,
-  shadow: $color-type-psychic-shadow
+//	05. Ground
+$ground-type-colors: (
+  normal: $color-type-ground,
+  hover: $color-type-ground-highlight,
+  shadow: $color-type-ground-shadow
 ) !default;
 
+//	06. Rock
 $rock-type-colors: (
   normal: $color-type-rock,
   hover: $color-type-rock-highlight,
   shadow: $color-type-rock-shadow
 ) !default;
 
+//	07. Bug
+$bug-type-colors: (
+  normal: $color-type-bug,
+  hover: $color-type-bug-highlight,
+  shadow: $color-type-bug-shadow
+) !default;
+
+//	08. Ghost
+$ghost-type-colors: (
+  normal: $color-type-ghost,
+  hover: $color-type-ghost-highlight,
+  shadow: $color-type-ghost-shadow
+) !default;
+
+//	09. Steel
 $steel-type-colors: (
   normal: $color-type-steel,
   hover: $color-type-steel-highlight,
   shadow: $color-type-steel-shadow
 ) !default;
 
+//	10. Fire
+$fire-type-colors: (
+  normal: $color-type-fire,
+  hover: $color-type-fire-highlight,
+  shadow: $color-type-fire-shadow
+) !default;
+
+//	11. Water
 $water-type-colors: (
   normal: $color-type-water,
   hover: $color-type-water-highlight,
   shadow: $color-type-water-shadow
 ) !default;
 
-$font-weight-bold: 700;
-$font-weight-normal: 500;
-$font-weight-thin: 300;
+//	12. Grass
+$grass-type-colors: (
+  normal: $color-type-grass,
+  hover: $color-type-grass-highlight,
+  shadow: $color-type-grass-shadow
+) !default;
 
-$font-size-h1: 3rem;
-$font-size-h2: 2.5rem;
-$font-size-h3: 2.2rem;
-$font-size-h4: 2.0rem;
-$font-size-h5: 1.8rem;
-$font-size-h6: 1.6rem;
+//	13. Electric
+$electric-type-colors: (
+  normal: $color-type-electric,
+  hover: $color-type-electric-highlight,
+  shadow: $color-type-electric-shadow
+) !default;
 
-$font-size-p: 1.0rem;
+//	14. Psychic
+$psychic-type-colors: (
+  normal: $color-type-psychic,
+  hover: $color-type-psychic-highlight,
+  shadow: $color-type-psychic-shadow
+) !default;
 
-// NES.css Dependency for custom Gameboy tables
-$border-size: 4px !default;
+//	15. Ice
+$ice-type-colors: (
+  normal: $color-type-ice,
+  hover: $color-type-ice-highlight,
+  shadow: $color-type-ice-shadow
+) !default;
 
-// List Box Styles for Pokemon Types
+//	16. Dragon
+$dragon-type-colors: (
+  normal: $color-type-dragon,
+  hover: $color-type-dragon-highlight,
+  shadow: $color-type-dragon-shadow
+) !default;
 
-// There are 18 Types of Pokemon they are;
+//	17. Dark
+$dark-type-colors: (
+  normal: $color-type-dark,
+  hover: $color-type-dark-highlight,
+  shadow: $color-type-dark-shadow
+) !default;
+
+//	18. Fairy
+$fairy-type-colors: (
+  normal: $color-type-fairy,
+  hover: $color-type-fairy-highlight,
+  shadow: $color-type-fairy-shadow
+) !default;
+
 
 //	01. Normal
 $color-normal: #A8A878;

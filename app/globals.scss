@@ -1,13 +1,13 @@
-@use '../styles/variables' as variables;
-@use '../styles/mixins';
-@use '../styles/gameboy';
-@use '../styles/pokemon-types';
+@use '../styles/variables' as vars;
+@use '../styles/mixins' as mixins;
+@use '../styles/gameboy' as gb;
+@use '../styles/pokemon-types' as pokemon;
 
 
 :root {
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  font-family: variables.$font-family-primary;
+  font-family: vars.$font-family-primary;
   font-synthesis: none;
   font-weight: 400;
   line-height: 1.5;
@@ -315,7 +315,7 @@ section {
     section.message { 
       div.nes-balloon {
         p {
-          color: variables.$color-black;
+          color: vars.$color-black;
         }
       }
     }
@@ -365,7 +365,7 @@ input[type=text].gameboy {
 }
 
 .text-dark {
-  color: variables.$color-text-shadow;
+  color: vars.$color-text-shadow;
 }
 
 .nes-button {

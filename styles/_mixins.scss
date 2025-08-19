@@ -44,7 +44,6 @@ $color-white: $color-text;
 
 	  @if $isDark {
 		@include border-image(variables.$color-white);
-
 		border-image-outset: 0;
 	  } @else {
 		@include border-image(variables.$color-black);
