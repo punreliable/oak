@@ -11,7 +11,7 @@ $color-disabled-normal: #d3d3d3;
 $color-disabled-shadow: #adafbc;
 
 $color-primary-normal: #209cee;
-$color-primary-hover: rgba(5, 6, 7);
+$color-primary-hover: #108de0;
 $color-primary-shadow: #006bb3;
 
 $color-success-normal: #92cc41;
@@ -46,23 +46,23 @@ $default-colors: (
   shadow: $color-default-shadow
 ) !default;
 $disabled-colors: (
-  normal: #d3d3d3,
-  shadow: #adafbc
+  normal: $color-disabled-normal,
+  shadow: $color-disabled-shadow
 ) !default;
 $primary-colors: (
-  normal: #209cee,
-  hover: #108de0,
-  shadow: #006bb3
+  normal: $color-primary-normal,
+  hover: $color-primary-hover,
+  shadow: $color-primary-shadow
 ) !default;
 $success-colors: (
-  normal: #92cc41,
-  hover: #76c442,
-  shadow: #4aa52e
+  normal: $color-success-normal,
+  hover: $color-success-hover,
+  shadow: $color-success-shadow
 ) !default;
 $warning-colors: (
-  normal: #f7d51d,
-  hover: #f2c409,
-  shadow: #e59400
+  normal: $color-warning-normal,
+  hover: $color-warning-hover,
+  shadow: $color-warning-shadow
 ) !default;
 $error-colors: (
   normal: $color-error-normal,

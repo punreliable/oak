@@ -66,8 +66,8 @@
 
       select {
         @include mixins.compact-border-image($color);
-
         outline-color: nth($type, 3);
+		
       }
     }
   }

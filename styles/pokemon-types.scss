@@ -3215,35 +3215,26 @@ $background-color: $color-fairy;
 $base-color: $color-fairy;
 
 .type-fairy-container, .container-type-fairy {
-
 	background-color: $color-fairy;
 	background-image: url('../assets/type-icons-color-dark/18-fairy.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
-
 	position: relative;
 	padding: 1.5rem 2rem;
 	border-color: black;
 	border-style: solid;
 	border-width: 4px;
-
 	min-height: 250px;
 	min-width: 320px;
 
-
   &.with-title {
-
 	> .title {
-
 	  background-color: $background-color;
-
 	}
-
   }
 
   &.is-dark {
-
 	position: relative;
 	margin: $border-size;
 	color: $background-color;
@@ -3251,27 +3242,22 @@ $base-color: $color-fairy;
 	border-color: variables.$color-white;
 
 	&::after {
-
 	  position: absolute;
-	//   background-color: $base-color;
+	  background-color: variables.$base-color;
 
 	}
 
-	// &.with-title {
+	&.with-title {
+	  > .title {
+		color: variables.$background-color;
+		background-color: variables.$base-color;
 
-	//   > .title {
-
-		// color: $background-color;
-		// background-color: $base-color;
-
-	//   }
-
-	// }
-
+	  }
+	}
   }
 
   h1 {
 	margin-top: 4.5rem;
-  }
 
+  }
 }

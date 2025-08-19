@@ -21,10 +21,8 @@ li,
 a,
 button {
   font-family: variables.$font-family-primary;
-
   &.gameboy {
     font-family: variables.$font-family-primary;
-
   }
 }
 
@@ -89,14 +87,11 @@ footer {
 a {
 	color: variables.$color-white;
 	text-decoration: none;
-
 	&.btn-gameboy {
 		font-family: variables.$font-family-primary;
 		text-decoration: none;
-
 		&:hover {
 			text-decoration: none;
-
 		}
 	}
 }

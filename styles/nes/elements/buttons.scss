@@ -7,8 +7,8 @@ $color-black: #212529;
 $base-color: variables.$color-black !default;
 
 @mixin btn-style($color, $background, $hover-background, $shadow) {
-  color: variables.$color;
-  background-color: variables.$background;
+  color: $color;
+  background-color: $background;
 
   &::after {
     position: absolute;
@@ -17,25 +17,25 @@ $base-color: variables.$color-black !default;
     bottom: -$border-size;
     left: -$border-size;
     content: "";
-    box-shadow: inset -4px -4px variables.$shadow;
+    box-shadow: inset -4px -4px $shadow;
   }
 
   &:hover {
     color: $color;
     text-decoration: none;
-    background-color: variables.$hover-background;
+    background-color: $hover-background;
 
     &::after {
-      box-shadow: inset -6px -6px variables.$shadow;
+      box-shadow: inset -6px -6px $shadow;
     }
   }
 
   &:focus {
-    box-shadow: 0 0 0 6px rgba(variables.$shadow, 0.3);
+    box-shadow: 0 0 0 6px rgba($shadow, 0.3);
   }
 
   &:active:not(.is-disabled)::after {
-    box-shadow: inset 4px 4px variables.$shadow;
+    box-shadow: inset 4px 4px $shadow;
   }
 }
 
@@ -52,22 +52,23 @@ $base-color: variables.$color-black !default;
   // cursor: variables.$cursor-click-url, pointer;
   user-select: none;
 
-  // @include btn-style(
-  //   variables.$base-color,
-  //   map-get($default-colors, "normal"),
-  //   map-get($default-colors, "hover"),
-  //   map-get($default-colors, "shadow")
-  // );
+  @include btn-style(
+    variables.$base-color,
+    map-get(nesVariables.$default-colors, "normal"),
+    map-get(nesVariables.$default-colors, "hover"),
+    map-get(nesVariables.$default-colors, "shadow")
+  );
 
   &:focus {
     outline: 0;
+
   }
 
   &.is-disabled,
   &.is-disabled:hover,
   &.is-disabled:focus {
     color: variables.$base-color;
-    // cursor: not-allowed;
+    cursor: not-allowed;
     background-color: map-get(nesVariables.$disabled-colors, "normal");
     box-shadow: inset -4px -4px map-get(nesVariables.$disabled-colors, "shadow");
     opacity: 0.6;
@@ -76,12 +77,6 @@ $base-color: variables.$color-black !default;
   &.is-disabled:hover::after {
     box-shadow: inset -4px -4px map-get(nesVariables.$disabled-colors, "shadow");
   }
-
-//     nesVariables.$primary-colors: (
-//   "normal": #007bff,
-//   "hover": #0056b3,
-//   "shadow": rgba(0, 0, 0, 0.2)
-// );
 
   // Other styles
   // prettier-ignore
@@ -95,7 +90,7 @@ $base-color: variables.$color-black !default;
     "dragon" variables.$background-color map-get(variables.$dragon-type-colors, "normal") map-get(variables.$dragon-type-colors, "hover") map-get(variables.$dragon-type-colors, "shadow"),
     "electric" variables.$base-color map-get(variables.$electric-type-colors, "normal") map-get(variables.$electric-type-colors, "hover") map-get(variables.$electric-type-colors, "shadow"),
     "fairy" variables.$background-color map-get(variables.$fairy-type-colors, "normal") map-get(variables.$fairy-type-colors, "hover") map-get(variables.$fairy-type-colors, "shadow"),
-    "fight" variables.$background-color map-get(variables.$fighting-type-colors, "normal") map-get(variables.$fighting-type-colors, "hover") map-get(variables.$fighting-type-colors, "shadow"),
+    "fight" variables.$color-fighting map-get(variables.$fighting-type-colors, "normal") map-get(variables.$fighting-type-colors, "hover") map-get(variables.$fighting-type-colors, "shadow"),
     "fire" variables.$base-color map-get(variables.$fire-type-colors, "normal") map-get(variables.$fire-type-colors, "hover") map-get(variables.$fire-type-colors, "shadow"),
     "flying" variables.$background-color map-get(variables.$flying-type-colors, "normal") map-get(variables.$flying-type-colors, "hover") map-get(variables.$flying-type-colors, "shadow"),
     "ghost" variables.$background-color map-get(variables.$ghost-type-colors, "normal") map-get(variables.$ghost-type-colors, "hover") map-get(variables.$ghost-type-colors, "shadow"),
@@ -109,14 +104,14 @@ $base-color: variables.$color-black !default;
     "steel" variables.$base-color map-get(variables.$steel-type-colors, "normal") map-get(variables.$steel-type-colors, "hover") map-get(variables.$steel-type-colors, "shadow"),
     "water" variables.$background-color map-get(variables.$water-type-colors, "normal") map-get(variables.$water-type-colors, "hover") map-get(variables.$water-type-colors, "shadow");
 
-  // @each $type in $types {
-  //   &.is-#{nth($type, 1)} {
-  //     @include btn-style(nth($type, 2), nth($type, 3), nth($type, 4), nth($type, 5));
-  //   }
-  //   &.is#{nth($type, 1)} {
-  //     @include btn-style(nth($type, 2), nth($type, 3), nth($type, 4), nth($type, 5));
-  //   }
-  // }
+  @each $type in $types {
+    &.is-#{nth($type, 1)} {
+      @include btn-style(nth($type, 2), nth($type, 3), nth($type, 4), nth($type, 5));
+    }
+    &.is#{nth($type, 1)} {
+      @include btn-style(nth($type, 2), nth($type, 3), nth($type, 4), nth($type, 5));
+    }
+  }
 
   input[type="file"] {
     position: absolute;
