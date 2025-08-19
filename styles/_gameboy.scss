@@ -1,0 +1,97 @@
+// Gameboy Color Palette
+
+@use 'nes/nes' as nes;
+@use './variables' as vars;
+@use "sass:color";
+
+$darkest-green: #202119;
+$darker-green: #4d513a;
+$primary-green: #8d956e;
+$brighter-green: #c5d1a3;
+$brightest-green: #e6ecca;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+a,
+button {
+  font-family: vars.$font-family-primary;
+  &.gameboy {
+    font-family: vars.$font-family-primary;
+  }
+}
+
+input[type="text"].gameboy {
+  font-family: vars.$font-family-primary;
+  margin-left: 2em;
+}
+
+// Gameboy Styles
+.btn-gameboy {
+  background: vars.$darkest-green;
+  font-family: vars.$font-family-primary;
+
+  &:hover,
+  &:focus {
+    background-color: color.adjust(vars.$darker-green, $lightness: 3%, $space: oklch);
+  }
+
+  &.active {
+    background-color: color.adjust(vars.$darker-green, $lightness: -15%, $space: oklch);
+    @extend .z-depth-1-half !optional;
+  }
+}
+
+body.gameboy {
+  background-color: vars.$brightest-green;
+}
+
+nav.gameboy {
+  background-color: vars.$darker-green;
+}
+
+.jumbotron {
+  &.gameboy {
+    color: vars.$darker-green;
+    background-color: vars.$brighter-green !important;
+  }
+}
+
+div {
+
+	&.card-body {
+
+		&.gameboy {
+
+			background-color: vars.$brighter-green;
+
+		}
+
+	}
+
+}
+
+footer {
+  &.gameboy {
+    color: vars.$color-white;
+    background-color: vars.$darker-green;
+    font-family: vars.$font-family-primary;
+  }
+}
+
+a {
+	color: vars.$color-white;
+	text-decoration: none;
+	&.btn-gameboy {
+		font-family: vars.$font-family-primary;
+		text-decoration: none;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

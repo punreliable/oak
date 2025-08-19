@@ -1,5 +1,5 @@
 // NES.css SCSS Mixins
-@use './variables' as variables;
+@use './variables' as vars;
 
 $border-size: 4px !default;
 $color-text: #F7F9F6;
@@ -43,10 +43,10 @@ $color-white: $color-text;
 	  @include border-image-repeat();
 
 	  @if $isDark {
-		@include border-image(variables.$color-white);
+		@include border-image(vars.$color-white);
 		border-image-outset: 0;
 	  } @else {
-		@include border-image(variables.$color-black);
+		@include border-image(vars.$color-black);
 
 		border-image-outset: 2;
 	  }
@@ -58,10 +58,10 @@ $color-white: $color-text;
 	  border-image-width: 2;
 	  @include border-image-repeat();
 	  @if $isDark {
-		@include compact-border-image(variables.$brightest-green);
+		@include compact-border-image(vars.$brightest-green);
 		border-image-outset: 0;
 	  } @else {
-		@include compact-border-image(variables.$darker-green);
+		@include compact-border-image(vars.$darker-green);
 		border-image-outset: 2;
 	  }
 	}
