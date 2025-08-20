@@ -3,7 +3,7 @@
 
 $border-size: 4px !default;
 
-$color-default-normal: vars.$background-color;
+$color-default-normal: vars.$darker-green;
 $color-default-hover: #e7e7e7;
 $color-default-shadow: #adafbc;
 
@@ -30,15 +30,13 @@ $color-error-shadow: #8c2022;
 $font-family: vars.$font-family-primary;
 $font-size: vars.$font-size-p;
 
-$base-color: vars.$color-text !default;
-$background-color: vars.$color-white !default;
+$base-color: vars.$darkest-green !default;
+$background-color: vars.$primary-green !default;
 
 // $cursor-url: url( get-file-as-data-uri( "../../../../public/cursor.png" ) ) !default;
 // $cursor-click-url: url( get-file-as-data-uri( "../../../../public/cursor-click.png" ) ) 14 0 !default;
 // $cursor-url: '' !default;
 // $cursor-click-url: '' !default;
-
-$border-size: vars.$border-size;
 
 $default-colors: (
   normal: $base-color,

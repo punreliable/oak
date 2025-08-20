@@ -986,7 +986,7 @@ a.type-fairy {
   }
 }
 
-$background-color: vars.$color-normal;
+// $background-color: vars.$color-normal;
 $base-color: vars.$color-normal;
 
 .type-normal-container, .container-type-normal {
@@ -1022,7 +1022,7 @@ $base-color: vars.$color-normal;
 
 	&.with-title {
 	  > .title {
-		color: $background-color;
+		color: vars.$background-color;
 		background-color: $base-color;
 	  }
 	}

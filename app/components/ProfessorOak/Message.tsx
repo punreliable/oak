@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import professorOak from '@/assets/oak.svg';
-
-const Message = (props: { pokemon: { id: number } }) => {
+const Message = (props: { pokemon: string }) => {
   return (
     <section
       className='message-list messageList'
@@ -11,7 +10,7 @@ const Message = (props: { pokemon: { id: number } }) => {
       <section className='message -right'>
         <div className='nes-balloon from-right'>
           <p>
-            Entry #{props.pokemon.id} in <br />
+            Entry #{props.pokemon} in <br />
             Kanto Pokedex!
           </p>
         </div>

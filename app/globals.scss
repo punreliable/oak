@@ -5,8 +5,9 @@
 
 
 :root {
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  // color-scheme: light dark;
+  // color: rgba(255, 255, 255, 0.87);
+  color: vars.$darkest-green;
   font-family: vars.$font-family-primary;
   font-synthesis: none;
   font-weight: 400;
@@ -24,8 +25,8 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  // color: var(--foreground);
+  // background: var(--background);
   margin: 0;
   min-height: 100vh;
   min-width: 320px;
@@ -65,27 +66,23 @@ body {
 
   p {
     margin-top: 0 !important;
-
   }
 }
 
 .avatar {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-  
 }
 
 .pokemonAvatar {
   height: auto;
   width: 96px;
-  
 }
 
 .itemAvatar {
   height: auto;
   margin: auto;
   width: 64px;
-
 }
 
 .wrapperOak {
@@ -98,19 +95,16 @@ body {
 
   .imgProfessorOak {
     align-self: flex-end;
-    
   }
 }
 
 #professorMessages {
   padding-top: 1.5rem;
-
 }
 
 .pokemonName {
   font-size: 1.2rem;
   text-align: center;
-  
 }
 
 h1 { 
@@ -147,10 +141,6 @@ h1 {
 
 .card {
   padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
 
 .rowStats {
@@ -195,7 +185,7 @@ header {
   h5,
   h6,
   p {
-    color: #ffffff;
+    color: vars.$darkest-green;
     opacity: 1;
     text-shadow: 2px 2px #880e4f;
   }
@@ -205,15 +195,14 @@ header {
   width: 100%;
 }
 
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-  &:hover {
-    color: #535bf2;
-  }
-}
+// a {
+//   font-weight: 500;
+//   color: #646cff;
+//   text-decoration: inherit;
+//   &:hover {
+//     color: #535bf2;
+//   }
+// }
 
 h1 {
   font-size: 3.2em;
@@ -228,13 +217,13 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: vars.$darker-green;
   cursor: pointer;
   transition: border-color 0.25s;
 
-  &:hover {
-    border-color: #646cff;
-  }
+  // &:hover {
+  //   border-color: #646cff;
+  // }
 
   &:focus,
   &:focus-visible {
@@ -253,46 +242,49 @@ button {
   
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+  // :root {
+  //   // --background: #0a0a0a;
+  //   // --foreground: #ededed;
+  // }
+
+  .nes-container {
+    background-color: vars.$primary-green;
+    color: vars.$darkest-green;
+  }
+  .nes-balloon {
+    background-color: vars.$brighter-green;
+    color: vars.$darkest-green;
   }
 
-  .nes-container, .nes-balloon {
-    background-color: --background;
-    color: --foreground;
-  }
 
-}
-
-@media (prefers-color-scheme: light) {
+// @media (prefers-color-scheme: light) {
   
-  :root {
-    --foreground: #0a0a0a;
-    --background: #ededed;
-    color: --foreground;
-    background-color: --background;
-  }
+  // :root {
+    // --foreground: #0a0a0a;
+    // --background: #ededed;
+  //   color: --foreground;
+  //   background-color: --background;
+  // }
 
-  .nes-container, .nes-balloon {
-    background-color: --background;
-    color: --foreground;
-  }
+  // .nes-container, .nes-balloon {
+  //   background-color: --background;
+  //   color: --foreground;
+  // }
   
-  a:hover {
+  // a:hover {
     
-    color: #747bff;
+  //   color: #747bff;
     
-  }
+  // }
   
-  button {
+  // button {
     
-    background-color: #f9f9f9;
+  //   background-color: #f9f9f9;
     
-  }
+  // }
 
-}
+// }
 
 @keyframes logo-spin {
   from {
@@ -309,48 +301,39 @@ button {
   }
 }
 
-
-section {
-  &#professorMessages {
-    section.message { 
-      div.nes-balloon {
-        p {
-          color: vars.$color-black;
-        }
-      }
-    }
-  }
-}
-
+// section {
+//   &#professorMessages {
+//     section.message { 
+//       div.nes-balloon {
+//         p {
+//           color: vars.$color-black;
+//         }
+//       }
+//     }
+//   }
+// }
 
 body {
-
-  background-color: #4D513A !important;
-
+  background-color: vars.$primary-green;
 }
 
-footer {
-  &.page-footer {
-
-    margin-top: 0 !important;
-  }
-}
+// footer {
+//   &.page-footer {
+//     margin-top: 0 !important;
+//   }
+// }
 
 label {
-
   padding-left: 1em;
   padding-bottom: inherit;
   text-align: center;
-
 }
 
 label:hover,
 label:active,
 label:focus {
-
   margin-bottom:.5em;
   padding-bottom: 1.325em;
-
 }
 
 input[type=text].gameboy {
@@ -359,19 +342,16 @@ input[type=text].gameboy {
 
 }
 
-
 .feature-image {
   background-image: url('https://punreliable-oak.s3.us-east-1.amazonaws.com/assets/whos-that-pokemon.png');
 }
 
 .text-dark {
-  color: vars.$color-text-shadow;
+  color: vars.$darkest-green;
 }
 
 .nes-button {
-
   &.hidden {
     display: none;
   }
-
 }

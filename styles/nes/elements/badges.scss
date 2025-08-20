@@ -180,7 +180,7 @@ $error-colors: (
       @include badge-style(nth($type, 2), nth($type, 3));
     }
     a { 
-      color: vars.$color-text;
+      color: vars.$darkest-green;
     }
   }
 

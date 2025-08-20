@@ -1,13 +1,6 @@
 // NES.css SCSS Mixins
 @use './variables' as vars;
 
-$border-size: 4px !default;
-$color-text: vars.$brightest-green;
-$color-text-shadow: vars.$darker-green;
-
-$color-black: $color-text-shadow;
-$color-white: $color-text;
-
 %rounded-corner-defaults {
 	  border-style: solid;
 	  border-width: 4px;
@@ -43,10 +36,10 @@ $color-white: $color-text;
 	  @include border-image-repeat();
 
 	  @if $isDark {
-		@include border-image(vars.$color-white);
+		@include border-image(vars.$brightest-green);
 		border-image-outset: 0;
 	  } @else {
-		@include border-image(vars.$color-black);
+		@include border-image(vars.$darker-green);
 
 		border-image-outset: 2;
 	  }

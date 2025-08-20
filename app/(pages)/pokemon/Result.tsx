@@ -8,6 +8,8 @@ import prettyName from '@/utilities/prettyName';
 import Message from '@/app/components/ProfessorOak/Message';
 
 const Result = (props: any) => {
+  const pokemonID: string = props.pokemon.id;
+
   return (
     <section className='App container'>
       <div className='row'>
@@ -46,7 +48,7 @@ const Result = (props: any) => {
       <div className='row'>
         <PokemonMoveList moves={props.pokemon.moves} />
       </div>
-      <Message pokemon={props.pokemon.id} />
+      <Message pokemon={pokemonID} />
     </section>
   );
 };

@@ -33,7 +33,7 @@
 		// border-top: 10px solid rgba( $color-text-shadow, 1 );
 		// border-bottom: 10px solid rgba( $color-text-shadow, 1 );
 
-		color: $color-text;
+		color: $darkest-green;
 
 		display: block;
 
@@ -46,7 +46,7 @@
 
 		&:hover {
 
-			color: darken($color-text, 20%);
+			color: darken($darkest-green, 20%);
 			transition: all ease-in-out .3s;
 			text-decoration: underline;
 

@@ -1,4 +1,4 @@
-@use '../../variables' as variables;
+@use '../../variables' as vars;
 @use '../../mixins' as mixins;
 
 @mixin box-shadow($color, $fromLeft: true) {
@@ -34,7 +34,7 @@
   padding: 1rem 1.5rem;
   margin: 8px;
   margin-bottom: 30px;
-  background-color: variables.$background-color;
+  background-color: vars.$brighter-green;
 
   > :last-child {
     margin-bottom: 0;
@@ -49,39 +49,39 @@
   &.is-dark {
     @include mixins.rounded-corners(true);
 
-    color: variables.$background-color;
-    background: variables.$base-color;
+    color: vars.$darkest-green;
+    background: vars.$brightest-green;
     border-image-outset: 2;
-    box-shadow: 0 0 0 8px variables.$base-color;
+    box-shadow: 0 0 0 8px vars.$darkest-green;
 
     &.from-left,
     &.from-right {
       &::before {
-        background-color: variables.$base-color;
-        border-color: variables.$background-color;
+        background-color: vars.$brighter-green;
+        border-color: vars.$darkest-green;
       }
 
       &::after {
-        color: variables.$background-color;
-        background-color: variables.$base-color;
+        color: vars.$brightest-green;
+        background-color: vars.$brighter-green;
       }
     }
 
     &.from-left {
       &::before {
-        box-shadow: -5px 10px 0 6px variables.$base-color;
+        box-shadow: -5px 10px 0 6px vars.$brightest-green;
       }
       &::after {
-        @include box-shadow(variables.$base-color);
+        @include box-shadow(vars.$darkest-green);
       }
     }
 
     &.from-right {
       &::before {
-        box-shadow: 5px 10px 0 6px variables.$base-color;
+        box-shadow: 5px 10px 0 6px vars.$brightest-green;
       }
       &::after {
-        @include box-shadow(variables.$base-color, false);
+        @include box-shadow(vars.$darkest-green, false);
       }
     }
   }
@@ -96,9 +96,9 @@
       bottom: -14px;
       width: 26px;
       height: 10px;
-      background-color: variables.$background-color;
-      border-right: 4px solid variables.$base-color;
-      border-left: 4px solid variables.$base-color;
+      background-color: vars.$brighter-green;
+      border-right: 4px solid vars.$darkest-green;
+      border-left: 4px solid vars.$darkest-green;
     }
 
     &::after {
@@ -106,9 +106,9 @@
       width: 18px;
       height: 4px;
       margin-right: 8px;
-      color: variables.$base-color;
-      background-color: variables.$background-color;
-      @include box-shadow(variables.$background-color);
+      color: vars.$brightest-green;
+      background-color: vars.$brighter-green;
+      @include box-shadow(vars.$darkest-green);
     }
   }
 
@@ -122,9 +122,9 @@
       bottom: -14px;
       width: 26px;
       height: 10px;
-      background-color: variables.$background-color;
-      border-right: 4px solid variables.$base-color;
-      border-left: 4px solid variables.$base-color;
+      background-color: vars.$brighter-green;
+      border-right: 4px solid vars.$darkest-green;
+      border-left: 4px solid vars.$darkest-green;
     }
 
     &::after {
@@ -132,8 +132,8 @@
       width: 18px;
       height: 4px;
       margin-left: 8px;
-      background-color: variables.$background-color;
-      @include box-shadow(variables.$background-color, false);
+      background-color: vars.$brighter-green;
+      @include box-shadow(vars.$darkest-green, false);
     }
   }
 }

@@ -1,4 +1,4 @@
-@use '../../variables' as variables;
+@use '../../variables' as vars;
 
 // Override reboot.scss
 html,
@@ -7,17 +7,17 @@ pre,
 code,
 kbd,
 samp {
-  font-family: variables.$font-family-primary;
+  font-family: vars.$font-family-primary;
 }
 
 // html {
-//   cursor: variables.$cursor-url, auto;
+//   cursor: vars.$cursor-url, auto;
 // }
 
 body {
-  font-size: variables.$font-size-p;
-  color: variables.$base-color;
-  background-color: variables.$background-color;
+  font-size: vars.$font-size-p;
+  color: vars.$base-color;
+  background-color: vars.$background-color;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -27,7 +27,7 @@ body {
 
 // a,
 // button {
-//   cursor: variables.$cursor-click-url, pointer;
+//   cursor: vars.$cursor-click-url, pointer;
 // }
 
 button,
