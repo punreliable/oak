@@ -6,6 +6,8 @@ import './globals.scss';
 import { TanstackProvider } from './components/providers/tanstack-provider';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
+export const dynamicParams = true;
+
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],

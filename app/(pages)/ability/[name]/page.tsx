@@ -1,8 +1,23 @@
+
 interface Post {
   id: string;
   title: string;
   content: string;
 }
+
+interface Ability {
+  name: string;
+  url: string;
+}
+
+interface AbilityListResponse {
+  count: number;
+  next: string | null;
+  previous: string | null;
+  results: Ability[];
+}
+
+
 
 // Next.js will invalidate the cache when a
 // request comes in, at most once every 60 seconds.
