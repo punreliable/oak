@@ -31,13 +31,29 @@ export async function generateStaticParams() {
 }
 
 export default async function Page({ params }: { params: any }) {
-  // Corrected: params type
-  const { name } = await params;
-  const post: Post = await fetch(`https://api.vercel.app/blog/${name}`).then((res) => res.json());
+
+  console.log('Hello World!');
+  // const { id } = await params;
+  const id = 1;
+
+  console.log('ID: ', id)
+
+  const post: Post = await fetch(`https://api.vercel.app/blog/${id}`).then((res) => res.json());
+  console.log('Post: ', post);
+
   return (
-    <main>
-      <h1>{post.title}</h1>
-      <p>{post.content}</p>
+    <main className="App">
+      <div className="row">
+        <div className="col-md-6">
+          <h1 className="darkest-green">Hello</h1>
+          <h2 className="darkest-green">Title:</h2>
+          <p className="darkest-green">Content:</p>
+        </div>
+        <div className="col-md-6">
+          {post.title && <h1 className="darkest-green">{post.title}</h1>}
+          {post.content && <h1 className="darkest-green">{post.content}</h1>}
+        </div>
+      </div>
     </main>
   );
 }
