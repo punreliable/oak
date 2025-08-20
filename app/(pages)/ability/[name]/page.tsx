@@ -30,15 +30,32 @@ export default async function Page({ params }: { params: any }) {
   );
 
   return (
-    <main className='App'>
-      <div className='row'>
-        <h1 className='darkest-green'>Ability</h1>
+    <section className='App nes-container container'>
+      <div className='row' style={{ display: 'block', width: '100%' }}>
+        <h1
+          className='responsive-h1 text-center gameboy mb-4'
+          style={{ display: 'block', minWidth: '100%' }}
+        >
+          Type
+        </h1>
       </div>
-      <div className='row'>
+      <div className='row' style={{ display: 'block', width: '100%' }}>
         <div className='col-md-12'>
-          {post.name && <h1 className='darkest-green'>Name: {prettyName(post.name)}</h1>}
+          {post.name && (
+            <h2
+              className='responsive-h2 text-center gameboy mb-4-green'
+              style={{ display: 'block', width: '100%' }}
+            >
+              {prettyName(post.name)}
+            </h2>
+          )}
         </div>
       </div>
-    </main>
+      <div className='row' style={{ display: 'block', width: '100%' }}>
+        <div className='col-md-12'>
+          <h3 className='responsive-h3 darkest-green my-4'>More Details Coming Soon</h3>
+        </div>
+      </div>
+    </section>
   );
 }
