@@ -1,17 +1,15 @@
 /* eslint-disable-next-line */
 import prettyName from '@/utilities/prettyName';
 
-export interface Results {
+export interface Result {
   name: string;
   url: string;
 }
 export interface AbilityListResponse {
-  content?: string;
-  name?: string;
   count: number;
   next: string | null;
   previous: string | null;
-  results: Results[];
+  results: Result[];
 }
 
 export const revalidate = 60;
@@ -27,11 +25,9 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }: { params: any }) {
   const { name } = await params;
-  const post: AbilityListResponse = await fetch(`https://pokeapi.co/api/v2/ability/${name}`).then(
-    (res) => res.json(),
+  const post: Result = await fetch(`https://pokeapi.co/api/v2/ability/${name}`).then((res) =>
+    res.json(),
   );
-  const name: string | undefined = post.name;
-  const prettyName: string = prettyName(name);
 
   return (
     <main className='App'>
@@ -40,8 +36,7 @@ export default async function Page({ params }: { params: any }) {
       </div>
       <div className='row'>
         <div className='col-md-12'>
-          {post.name && <h1 className='darkest-green'>Name: {name}</h1>}
-          {post.content && <p className='darkest-green'>Content: {post.content}</p>}
+          {post.name && <h1 className='darkest-green'>Name: {prettyName(post.name)}</h1>}
         </div>
       </div>
     </main>
