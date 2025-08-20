@@ -11,14 +11,14 @@ export const revalidate = 60;
 export async function generateStaticParams() {
   const posts: Post[] = await fetch('https://api.vercel.app/blog').then((res) => res.json());
   return posts.map((post) => ({
-    slug: String(post.id),
+    name: String(post.id),
   }));
 }
 
 export default async function Page({ params }: { params: any }) {
   // Corrected: params type
-  const { slug } = await params;
-  const post: Post = await fetch(`https://api.vercel.app/blog/${slug}`).then((res) => res.json());
+  const { name } = await params;
+  const post: Post = await fetch(`https://api.vercel.app/blog/${name}`).then((res) => res.json());
   return (
     <main>
       <h1>{post.title}</h1>
