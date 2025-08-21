@@ -1,3 +1,5 @@
-export function capitalizeAllCharacters(input: string): string {
+const capitalizeAllCharacters = (input: string): string => {
   return input.toUpperCase();
-}
+};
+
+export default capitalizeAllCharacters;

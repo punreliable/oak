@@ -1,5 +1,4 @@
-/* eslint-disable-next-line */
-import prettyName from '@/utilities/prettyName';
+import transformWords from '@/utilities/transformWords';
 
 export interface Result {
   name: string;
@@ -46,7 +45,7 @@ export default async function Page({ params }: { params: any }) {
               className='responsive-h2 text-center gameboy mb-4-green'
               style={{ display: 'block', width: '100%' }}
             >
-              {prettyName(post.name)}
+              {transformWords(post.name)}
             </h2>
           )}
         </div>
