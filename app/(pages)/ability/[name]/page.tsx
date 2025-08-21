@@ -1,4 +1,5 @@
 import transformWords from '@/utilities/transformWords';
+import { AbilityDetail } from '@/types/ability';
 
 export interface Result {
   name: string;
@@ -24,9 +25,15 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }: { params: any }) {
   const { name } = await params;
-  const post: Result = await fetch(`https://pokeapi.co/api/v2/ability/${name}`).then((res) =>
+  const post: AbilityDetail = await fetch(`https://pokeapi.co/api/v2/ability/${name}`).then((res) =>
     res.json(),
   );
+
+  const description = post.flavor_text_entries.map((flavor) => {
+    if (flavor.language.name == 'en' && flavor.version_group.name == 'scarlet-violet') {
+      return flavor.flavor_text;
+    }
+  });
 
   return (
     <section className='App nes-container container'>
@@ -50,9 +57,24 @@ export default async function Page({ params }: { params: any }) {
           )}
         </div>
       </div>
-      <div className='row' style={{ display: 'block', width: '100%' }}>
+      {post.flavor_text_entries && description && (
+        <div className='row' style={{ display: 'block', width: '100%' }}>
+          <div className='col-md-12'>
+            <h3 className='responsive-h3 darkest-green my-4'>Description</h3>
+            <p className='my-4'>{description}</p>
+          </div>
+        </div>
+      )}
+      <div className='row my-4' style={{ display: 'block', width: '100%' }}>
+        <div className='col-md-12 my-4'>
+          <a href={`/`} className={`nes-btn is-warning`}>
+            Home
+          </a>
+        </div>
+      </div>
+      <div className='row'>
         <div className='col-md-12'>
-          <h3 className='responsive-h3 darkest-green my-4'>More Details Coming Soon</h3>
+          <p className='responsive-h3 darkest-green my-4'>More Details Coming Soon</p>
         </div>
       </div>
     </section>
