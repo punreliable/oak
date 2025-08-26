@@ -28,17 +28,20 @@ const PokemonDescription: React.FC<PokemonDescriptionProps> = ({ pokemon }) => {
     queryFn: () => fetchPokemonBaseHappiness(requestURL),
   });
 
-  const description = data?.data.flavor_text_entries.map((flavor: 
-    {
-      flavor_text: string; 
-      language: {name: string; url: string;}; 
-      version: {name: string; url:string;};
-    }
-  ) => {
-    if (flavor.language.name == 'en' && (flavor.version.name === 'red' || flavor.version.name === 'blue' ) ) {
-      return flavor.flavor_text;
-    }
-  });
+  const description = data?.data.flavor_text_entries.map(
+    (flavor: {
+      flavor_text: string;
+      language: { name: string; url: string };
+      version: { name: string; url: string };
+    }) => {
+      if (
+        flavor.language.name == 'en' &&
+        (flavor.version.name === 'red' || flavor.version.name === 'blue')
+      ) {
+        return flavor.flavor_text;
+      }
+    },
+  );
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -47,7 +50,7 @@ const PokemonDescription: React.FC<PokemonDescriptionProps> = ({ pokemon }) => {
   if (isError) {
     return <div>Error: {error.message}</div>;
   }
-    
+
   return (
     <div className='col-md-12' style={style}>
       <p>Description: {description}</p>
@@ -55,7 +58,7 @@ const PokemonDescription: React.FC<PokemonDescriptionProps> = ({ pokemon }) => {
       <p>Capture Rate: {data?.data.capture_rate}</p>
       <p>Color: {prettyName(data?.data.color.name)}</p>
     </div>
-  )
+  );
 };
 
 export default PokemonDescription;
