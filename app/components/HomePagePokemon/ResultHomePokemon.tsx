@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import PokemonDescription from '@/app/components/PokemonDescription';
+import PokemonStats from '@/app/components/PokemonStats';
 import PokemonAbilitiesList from '@/app/components/PokemonAbilitiesList';
 import PokemonTypeList from '@/app/components/PokemonTypeList';
 import PokemonMoveList from '@/app/components/PokemonMoveList';
@@ -22,19 +23,14 @@ const ResultHomePokemon = (props: any) => {
         width={256}
         height={256}
       />
-
-      <div className='row rowStats'>
-        <div className='col-lg-3 stats'>
-          {props.height && <p>Height: {props.pokemon.height}in</p>}
-          {props.weight && <p>Weight: {props.pokemon.weight}lb</p>}
-          {props.pokemon.base_experience && <p>Base XP: {props.pokemon.base_experience}xp</p>}
+      <div className='row'>
+      <div className='col-lg-8'>
+          <PokemonDescription pokemon={props.pokemon.id} />
+        </div>
+        <div className='col-lg-4'>
+          <PokemonStats pokemon={props.pokemon} />
         </div>
       </div>
-
-      <div className='row'>
-        <PokemonDescription pokemon={props.pokemon.id} />
-      </div>
-
       <div className='row'>
         <h3 className='h3-responsive'>Type</h3>
       </div>

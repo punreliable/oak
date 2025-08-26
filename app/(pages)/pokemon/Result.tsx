@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import PokemonDescription from '@/app/components/PokemonDescription';
+import PokemonStats from '@/app/components/PokemonStats';
 import PokemonAbilitiesList from '@/app/components/PokemonAbilitiesList';
 import PokemonTypeList from '@/app/components/PokemonTypeList';
 import PokemonMoveList from '@/app/components/PokemonMoveList';
@@ -29,9 +30,7 @@ const Result = (props: any) => {
 
       <div className='row rowStats'>
         <div className='col-md-12 col-lg-3 stats'>
-          {props.height && <p>Height: {props.pokemon.height}in</p>}
-          {props.weight && <p>Weight: {props.pokemon.weight}lb</p>}
-          {props.pokemon.base_experience && <p>Base XP: {props.pokemon.base_experience}xp</p>}
+          <PokemonStats pokemon={props.pokemon} />
         </div>
       </div>
       <div className='row'>

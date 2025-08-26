@@ -54,9 +54,6 @@ const PokemonDescription: React.FC<PokemonDescriptionProps> = ({ pokemon }) => {
   return (
     <div className='col-md-12' style={style}>
       <p>Description: {description}</p>
-      <p>Base Happiness: {data?.data.base_happiness}</p>
-      <p>Capture Rate: {data?.data.capture_rate}</p>
-      <p>Color: {prettyName(data?.data.color.name)}</p>
     </div>
   );
 };
