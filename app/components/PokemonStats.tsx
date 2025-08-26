@@ -52,14 +52,19 @@ const PokemonStats: React.FC<PokemonStatsProps> = ({ pokemon }) => {
   }
 
   return (
-  <div>
-    {pokemon.height && <p className="text-right">Height: {pokemon.height}in</p>}
-    {pokemon.weight && <p className="text-right">Weight: {pokemon.weight}lb</p>}
-    {pokemon.base_experience && <p className="text-right">Base XP: {pokemon.base_experience}xp</p>}
-    {data?.data.base_happiness && <p className="text-right">Base Happiness: {data.data.base_happiness}</p>}
-    {data?.data.capture_rate && <p className="text-right">Capture Rate: {data.data.capture_rate}</p>}
-    {data?.data.color.name && <p className="text-right">Color: {prettyName(data.data.color.name)}</p>}
-  </div>
+    <div>
+      {pokemon.height && <p>Height: {pokemon.height}in</p>}
+      {pokemon.weight && <p>Weight: {pokemon.weight}lb</p>}
+      {pokemon.base_experience && <p>Base XP: {pokemon.base_experience}xp</p>}
+      {data?.data.base_happiness && <p>Base Happiness: {data.data.base_happiness}</p>}
+      {data?.data.capture_rate && <p>Capture Rate: {data.data.capture_rate}</p>}
+      {data?.data.color.name && <p>Color: {prettyName(data.data.color.name)}</p>}
+      {data?.data.gender_rate && <p>Gender Rate: {data.data.gender_rate}</p>}
+      {data?.data.hatch_counter && <p>Hatch Counter: {data.data.hatch_counter}</p>}
+      {data?.data.is_baby && <p className='nes-text is-primary'>This is a Baby Pokemon: {data.data.is_baby}</p>}
+      {data?.data.is_legendary && <p className='nes-text is-error'>This is a Legendary Pokemon: {data.data.is_legendary}</p>}
+      {data?.data.is_legendary && <p className='nes-text is-warning'>This is a Mythical Pokemon</p>}
+    </div>
   );
 };
 

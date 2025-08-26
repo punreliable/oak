@@ -43,6 +43,7 @@ const PokemonDescription: React.FC<PokemonDescriptionProps> = ({ pokemon }) => {
     },
   );
 
+
   if (isLoading) {
     return <div>Loading...</div>;
   }

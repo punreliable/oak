@@ -24,7 +24,7 @@ const ResultHomePokemon = (props: any) => {
         height={256}
       />
       <div className='row'>
-      <div className='col-lg-8'>
+        <div className='col-lg-8'>
           <PokemonDescription pokemon={props.pokemon.id} />
         </div>
         <div className='col-lg-4'>
