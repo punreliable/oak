@@ -61,8 +61,8 @@ const PokemonStats: React.FC<PokemonStatsProps> = ({ pokemon }) => {
       {data?.data.color.name && <p>Color: {prettyName(data.data.color.name)}</p>}
       {data?.data.gender_rate && <p>Gender Rate: {data.data.gender_rate}</p>}
       {data?.data.hatch_counter && <p>Hatch Counter: {data.data.hatch_counter}</p>}
-      {data?.data.is_baby && <p className='nes-text is-primary'>This is a Baby Pokemon: {data.data.is_baby}</p>}
-      {data?.data.is_legendary && <p className='nes-text is-error'>This is a Legendary Pokemon: {data.data.is_legendary}</p>}
+      {data?.data.is_baby && <p className='nes-text is-primary'>This is a Baby Pokemon</p>}
+      {data?.data.is_legendary && <p className='nes-text is-error'>This is a Legendary Pokemon</p>}
       {data?.data.is_legendary && <p className='nes-text is-warning'>This is a Mythical Pokemon</p>}
     </div>
   );
