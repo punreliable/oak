@@ -15,10 +15,6 @@ const fetchPokemonSpeciesStats = async (requestURL: string) => {
   return response;
 };
 
-const style: React.CSSProperties = {
-  textAlign: 'left',
-};
-
 const PokemonStats: React.FC<PokemonStatsProps> = ({ pokemon }) => {
   const requestURL = `https://pokeapi.co/api/v2/pokemon-species/${parseInt(pokemon.id.toString())}/`;
 
@@ -27,21 +23,6 @@ const PokemonStats: React.FC<PokemonStatsProps> = ({ pokemon }) => {
     queryKey: ['pokemon-species', requestURL],
     queryFn: () => fetchPokemonSpeciesStats(requestURL),
   });
-
-  const description = data?.data.flavor_text_entries.map(
-    (flavor: {
-      flavor_text: string;
-      language: { name: string; url: string };
-      version: { name: string; url: string };
-    }) => {
-      if (
-        flavor.language.name == 'en' &&
-        (flavor.version.name === 'red' || flavor.version.name === 'blue')
-      ) {
-        return flavor.flavor_text;
-      }
-    },
-  );
 
   if (isLoading) {
     return <div>Loading...</div>;

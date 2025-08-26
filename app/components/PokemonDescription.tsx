@@ -1,8 +1,7 @@
-"use client";
+'use client';
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import prettyName from '@/utilities/prettyName';
 
 interface PokemonDescriptionProps {
   pokemon: number;
@@ -43,7 +42,6 @@ const PokemonDescription: React.FC<PokemonDescriptionProps> = ({ pokemon }) => {
       }
     },
   );
-
 
   if (isLoading) {
     return <div>Loading...</div>;
