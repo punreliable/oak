@@ -1,11 +1,11 @@
 import transformWords from '@/utilities/transformWords';
-import { AbilityDetail } from '@/types/ability';
+import { Move } from '@/types/move';
 
 export interface Result {
   name: string;
   url: string;
 }
-export interface AbilityListResponse {
+export interface MoveListResponse {
   count: number;
   next: string | null;
   previous: string | null;
@@ -15,17 +15,17 @@ export interface AbilityListResponse {
 export const revalidate = 60;
 
 export async function generateStaticParams() {
-  const abilityList: AbilityListResponse = await fetch(`https://pokeapi.co/api/v2/ability/`).then(
-    (res) => res.json(),
+  const moveList: MoveListResponse = await fetch(`https://pokeapi.co/api/v2/move/`).then((res) =>
+    res.json(),
   );
-  return abilityList.results.map((result) => ({
+  return moveList.results.map((result) => ({
     name: String(result.name),
   }));
 }
 
 export default async function Page({ params }: { params: any }) {
   const { name } = await params;
-  const post: AbilityDetail = await fetch(`https://pokeapi.co/api/v2/ability/${name}`).then((res) =>
+  const post: Move = await fetch(`https://pokeapi.co/api/v2/move/${name}`).then((res) =>
     res.json(),
   );
 
@@ -42,7 +42,7 @@ export default async function Page({ params }: { params: any }) {
           className='responsive-h1 text-center gameboy mb-4'
           style={{ display: 'block', minWidth: '100%' }}
         >
-          Ability
+          Move
         </h1>
       </div>
       <div className='row' style={{ display: 'block', width: '100%' }}>

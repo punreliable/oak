@@ -2917,20 +2917,16 @@ $base-color: $color-dragon;
 	
 	min-height: 250px;
 	min-width: 320px;
-
-	background-color: $color-fighting;
+	background-color: $color-dragon;
 	background-image: url('../assets/type-icons-color-dark/16-dragon.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
 	background-size: 3em;
-
-
-
-  position: relative;
-  padding: 1.5rem 2rem;
-  border-color: black;
-  border-style: solid;
-  border-width: 4px;
+	position: relative;
+	padding: 1.5rem 2rem;
+	border-color: black;
+	border-style: solid;
+	border-width: 4px;
 
   > :last-child {
 	margin-bottom: 0;
