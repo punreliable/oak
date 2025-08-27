@@ -1,5 +1,4 @@
 import React from 'react';
-// import { PokemonFromAPI } from '../../types';
 
 export function PokemonModal(pokemonData: any) {
   return (
