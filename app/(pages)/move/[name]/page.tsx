@@ -1,5 +1,6 @@
 import transformWords from '@/utilities/transformWords';
 import { Move } from '@/types/move';
+import ButtonHome from '@/app/components/Buttons/ButtonHome';
 
 export interface Result {
   name: string;
@@ -57,7 +58,7 @@ export default async function Page({ params }: { params: any }) {
           )}
         </div>
       </div>
-      {post.flavor_text_entries && description && (
+      {post.flavor_text_entries && (
         <div className='row' style={{ display: 'block', width: '100%' }}>
           <div className='col-md-12'>
             <h3 className='responsive-h3 darkest-green my-4'>Description</h3>
@@ -72,13 +73,9 @@ export default async function Page({ params }: { params: any }) {
           </div>
         </div>
         <div className='row'>
-          <div className='col-md-12 my-4'>
-            <a href={`/`} className={`nes-btn is-warning`}>
-              Home
-            </a>
+          <ButtonHome />
           </div>
         </div>
-      </div>
     </section>
   );
 }

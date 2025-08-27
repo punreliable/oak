@@ -52,7 +52,7 @@ const ResultHomePokemon = (props: any) => {
       </div>
 
       <div className='row'>
-        <PokemonMoveList moves={props.pokemon.moves} />
+      { props.pokemon.id && props.pokemon.moves && <PokemonMoveList moves={props.pokemon.moves} from={props.pokemon.id} /> }
       </div>
 
       <div className='row'>

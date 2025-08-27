@@ -196,12 +196,12 @@ const PagePokemonTypeList = () => {
         </div>
       </div>
       <div className='row'>
-          <div className='col-md-12 my-4'>
-            <a href={`/`} className={`nes-btn is-warning`}>
-              Home
-            </a>
-          </div>
+        <div className='col-md-12 my-4'>
+          <a href={`/`} className={`nes-btn is-warning`}>
+            Home
+          </a>
         </div>
+      </div>
     </main>
   );
 };

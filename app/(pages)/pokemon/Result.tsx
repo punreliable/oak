@@ -10,6 +10,7 @@ import Message from '@/app/components/ProfessorOak/Message';
 
 const Result = (props: any) => {
   const pokemonID: string = props.pokemon.id;
+  console.log('Pokemon ID: ', pokemonID);
 
   return (
     <section className='App container'>
@@ -45,7 +46,7 @@ const Result = (props: any) => {
         <PokemonAbilitiesList abilities={props.pokemon.abilities} />
       </div>
       <div className='row'>
-        <PokemonMoveList moves={props.pokemon.moves} />
+        { pokemonID && props.pokemon.moves && <PokemonMoveList moves={props.pokemon.moves} from={pokemonID} /> }
       </div>
       <Message pokemon={pokemonID} />
     </section>

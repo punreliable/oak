@@ -37,7 +37,9 @@ const PokemonStats: React.FC<PokemonStatsProps> = ({ pokemon }) => {
       {pokemon.height && <p>Height: {pokemon.height}in</p>}
       {pokemon.weight && <p>Weight: {pokemon.weight}lb</p>}
       {pokemon.base_experience && <p>Base XP: {pokemon.base_experience}xp</p>}
-      {(data?.data.base_happiness || data?.data.base_happiness === 0) && <p>Base Happiness: {data.data.base_happiness}</p>}
+      {(data?.data.base_happiness || data?.data.base_happiness === 0) && (
+        <p>Base Happiness: {data.data.base_happiness}</p>
+      )}
       {data?.data.capture_rate && <p>Capture Rate: {data.data.capture_rate}</p>}
       {data?.data.color.name && <p>Color: {prettyName(data.data.color.name)}</p>}
       {data?.data.gender_rate && <p>Gender Rate: {data.data.gender_rate}</p>}
