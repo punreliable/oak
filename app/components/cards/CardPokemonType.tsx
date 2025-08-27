@@ -6,7 +6,7 @@ const CardPokemonType = (props: { type: { name: string; link: string; container:
       <div className='card-body' style={{ position: 'relative' }}>
         <div className='avatar gameboy'></div>
       </div>
-      <Link href={props.type.link} className='nes-btn is-primary gameboy white-text'>
+      <Link href={props.type.link} className='nes-btn gameboy'>
         {props.type.name}
       </Link>
     </div>

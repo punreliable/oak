@@ -1,12 +1,12 @@
 import './PokemonTypesPage.scss';
-import CardPokemonType from './CardPokemonType';
+import CardPokemonType from '@/app/components/cards/CardPokemonType';
 
 const PagePokemonTypeList = () => {
   return (
-    <main className='nes-container gameboy gameboy-screen pb-4 my-2'>
+    <main className='nes-container gameboy gameboy-screen py-4'>
       <div className='row pb-4'>
         <div className='jumbotron gameboy col-lg-12 pb-4'>
-          <h1 className='h1-responsive text-center gameboy'>Pokémon Types</h1>
+          <h1 className='h1-responsive text-center gameboy pb-2'>Pokémon Types</h1>
 
           <h2 className='h3-responsive text-center gameboy'>
             Learn all of their&nbsp;advantages, and&nbsp;disadvantages.
@@ -14,7 +14,7 @@ const PagePokemonTypeList = () => {
         </div>
       </div>
 
-      <div className='row pb-4'>
+      <div className='row'>
         <div className='col-lg-4 col-sm-6'>
           <CardPokemonType
             type={{
@@ -195,6 +195,13 @@ const PagePokemonTypeList = () => {
           />
         </div>
       </div>
+      <div className='row'>
+          <div className='col-md-12 my-4'>
+            <a href={`/`} className={`nes-btn is-warning`}>
+              Home
+            </a>
+          </div>
+        </div>
     </main>
   );
 };

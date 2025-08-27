@@ -71,10 +71,12 @@ export default async function Page({ params }: { params: any }) {
             <p className='responsive-h3 darkest-green my-4'>More Details Coming Soon</p>
           </div>
         </div>
-        <div className='col-md-12 my-4'>
-          <a href={`/`} className={`nes-btn is-warning`}>
-            Home
-          </a>
+        <div className='row'>
+          <div className='col-md-12 my-4'>
+            <a href={`/`} className={`nes-btn is-warning`}>
+              Home
+            </a>
+          </div>
         </div>
       </div>
     </section>
