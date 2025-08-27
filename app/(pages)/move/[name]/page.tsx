@@ -74,8 +74,8 @@ export default async function Page({ params }: { params: any }) {
         </div>
         <div className='row'>
           <ButtonHome />
-          </div>
         </div>
+      </div>
     </section>
   );
 }

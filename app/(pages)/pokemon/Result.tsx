@@ -46,7 +46,9 @@ const Result = (props: any) => {
         <PokemonAbilitiesList abilities={props.pokemon.abilities} />
       </div>
       <div className='row'>
-        { pokemonID && props.pokemon.moves && <PokemonMoveList moves={props.pokemon.moves} from={pokemonID} /> }
+        {pokemonID && props.pokemon.moves && (
+          <PokemonMoveList moves={props.pokemon.moves} from={pokemonID} />
+        )}
       </div>
       <Message pokemon={pokemonID} />
     </section>
