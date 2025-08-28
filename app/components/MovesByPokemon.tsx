@@ -26,7 +26,6 @@ const PokemonMoveList = (props: MoveList) => {
 
   const moves = props.moves;
   const fromPage = props.from;
-  console.log('Moves: ', moves);
 
   const minified = moves.map((x: any) => (
     <tr key={uuidv4()}>
