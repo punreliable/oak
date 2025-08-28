@@ -38,7 +38,7 @@ const ResultAbility = (props: any) => {
 
       <PokemonAbilitiesList abilities={props.pokemon.abilities} />
 
-      <PokemonMoveList moves={props.pokemon.moves} />
+      <PokemonMoveList moves={props.pokemon.moves} from={props.pokemon.id} />
 
       <section
         className='message-list messageList'
