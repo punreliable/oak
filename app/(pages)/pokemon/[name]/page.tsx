@@ -1,6 +1,8 @@
 import prettyName from '@/utilities/prettyName';
 import { Pokemon } from '@/types/pokemon';
 import PokemonDescription from '@/app/components/PokemonDescription';
+import { Suspense } from 'react';
+import PendingPokemon from '../Pending';
 
 export interface Result {
   name: string;

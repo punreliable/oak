@@ -1,8 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-import unknown from '../../../assets/0.png';
-import professorOak from '../../../assets/oak.svg';
-const Pending = () => {
+import unknown from '@/assets/0.png';
+import professorOak from '@/assets/oak.svg';
+
+const PendingPokemon = () => {
   return (
     <>
       <h1 className='oakHello'>Loading...</h1>
@@ -13,6 +14,8 @@ const Pending = () => {
         id='avatar'
         src={unknown}
       />
+
+      <i className="nes-pokeball"></i>
 
       <div className='row'>
         <div className='col-md-12'>
@@ -37,4 +40,4 @@ const Pending = () => {
   );
 };
 
-export default Pending;
+export default PendingPokemon;
