@@ -1,3 +1,5 @@
+import type MoveList from '@/types/move-list';
+
 export interface Pokemon {
   abilities: {
     ability: {
@@ -40,23 +42,19 @@ export interface Pokemon {
   id: number;
   is_default: boolean;
   location_area_encounters: string;
-  moves: {
-    move: {
+  moves: MoveList;
+
+  version_group_details: {
+    level_learned_at: number;
+    move_learn_method: {
       name: string;
       url: string;
     };
-    version_group_details: {
-      level_learned_at: number;
-      move_learn_method: {
-        name: string;
-        url: string;
-      };
-      order: any;
-      version_group: {
-        name: string;
-        url: string;
-      };
-    }[];
+    order: any;
+    version_group: {
+      name: string;
+      url: string;
+    };
   }[];
   name: string;
   order: number;

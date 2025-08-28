@@ -2,6 +2,7 @@ import transformWords from '@/utilities/transformWords';
 import { Move } from '@/types/move';
 import ButtonHome from '@/app/components/Buttons/ButtonHome';
 import { Suspense } from 'react';
+import Loading from '@/app/components/Loading';
 
 export interface Result {
   name: string;
@@ -38,7 +39,7 @@ export default async function Page({ params }: { params: any }) {
   });
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Loading />}>
       <section className='App nes-container container'>
         <div className='row' style={{ display: 'block', width: '100%' }}>
           <h1

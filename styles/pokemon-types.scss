@@ -912,7 +912,8 @@ a.type-fairy {
 	border-color: white;
 
 	&::after {
-	  position: absolute;
+	  // position: absolute;
+position: relative;
 	  top: -$border-size * 1.8;
 	  right: -$border-size * 1.8;
 	  bottom: -$border-size * 1.8;
@@ -1010,7 +1011,8 @@ $base-color: vars.$color-normal;
 	border-color: vars.$color-normal;
 
 	&::after {
-	  position: absolute;
+	  // position: absolute;
+position: relative;
 	  top: -$border-size * 1.8;
 	  right: -$border-size * 1.8;
 	  bottom: -$border-size * 1.8;
@@ -1122,7 +1124,8 @@ $base-color: vars.$color-dark;
 		border-color: $border-color-fighting;
 		&::after {
 			background-color: $color-fighting;
-			position: absolute;
+			// position: absolute;
+position: relative;
 			top: -$border-size * 1.8;
 			right: -$border-size * 1.8;
 			bottom: -$border-size * 1.8;
@@ -1206,7 +1209,8 @@ $base-color: $color-flying;
 	border-color: white;
 
 	&::after {
-	  position: absolute;
+	  // position: absolute;
+position: relative;
 	  top: -$border-size * 1.8;
 	  right: -$border-size * 1.8;
 	  bottom: -$border-size * 1.8;
@@ -1340,7 +1344,8 @@ $base-color: $color-poison;
 	border-color: white;
 
 	&::after {
-	  position: absolute;
+	  // position: absolute;
+position: relative;
 	  top: -$border-size * 1.8;
 	  right: -$border-size * 1.8;
 	  bottom: -$border-size * 1.8;
@@ -1475,7 +1480,8 @@ $base-color: $color-ground;
 		border-color: white;
 
 		&::after {
-		position: absolute;
+		// position: absolute;
+position: relative;
 		top: -$border-size * 1.8;
 		right: -$border-size * 1.8;
 		bottom: -$border-size * 1.8;
@@ -1611,7 +1617,8 @@ $base-color: $color-rock;
 	border-color: white;
 
 	&::after {
-	  position: absolute;
+	  // position: absolute;
+position: relative;
 	  top: -$border-size * 1.8;
 	  right: -$border-size * 1.8;
 	  bottom: -$border-size * 1.8;
@@ -1747,7 +1754,8 @@ $base-color: $color-bug;
 	border-color: white;
 
 	&::after {
-	  position: absolute;
+	  // position: absolute;
+position: relative;
 	  top: -$border-size * 1.8;
 	  right: -$border-size * 1.8;
 	  bottom: -$border-size * 1.8;
@@ -1886,7 +1894,8 @@ $base-color: $color-ghost;
 	border-color: white;
 
 	&::after {
-	  position: absolute;
+	  // position: absolute;
+position: relative;
 	  top: -$border-size * 1.8;
 	  right: -$border-size * 1.8;
 	  bottom: -$border-size * 1.8;
@@ -2024,7 +2033,8 @@ $base-color: $color-steel;
 	border-color: white;
 
 	&::after {
-	  position: absolute;
+	  // position: absolute;
+position: relative;
 	  top: -$border-size * 1.8;
 	  right: -$border-size * 1.8;
 	  bottom: -$border-size * 1.8;
@@ -2158,7 +2168,8 @@ $base-color: $color-fire;
 	border-color: white;
 
 	&::after {
-	  position: absolute;
+	  // position: absolute;
+position: relative;
 	  top: -$border-size * 1.8;
 	  right: -$border-size * 1.8;
 	  bottom: -$border-size * 1.8;
@@ -2290,7 +2301,8 @@ $base-color: $color-water;
 	border-color: white;
 
 	&::after {
-	  position: absolute;
+	  // position: absolute;
+position: relative;
 	  top: -$border-size * 1.8;
 	  right: -$border-size * 1.8;
 	  bottom: -$border-size * 1.8;
@@ -2423,7 +2435,8 @@ $base-color: $color-grass;
 	border-color: white;
 
 	&::after {
-	  position: absolute;
+	  // position: absolute;
+position: relative;
 	  top: -$border-size * 1.8;
 	  right: -$border-size * 1.8;
 	  bottom: -$border-size * 1.8;
@@ -2556,7 +2569,8 @@ $base-color: $color-electric;
 	border-color: white;
 
 	&::after {
-	  position: absolute;
+	  // position: absolute;
+position: relative;
 	  top: -$border-size * 1.8;
 	  right: -$border-size * 1.8;
 	  bottom: -$border-size * 1.8;
@@ -2703,7 +2717,8 @@ $base-color: $color-psychic;
 	border-color: white;
 
 	&::after {
-	  position: absolute;
+	  // position: absolute;
+position: relative;
 	  top: -$border-size * 1.8;
 	  right: -$border-size * 1.8;
 	  bottom: -$border-size * 1.8;
@@ -2838,7 +2853,8 @@ $base-color: $color-ice;
 	border-color: white;
 
 	&::after {
-	  position: absolute;
+	  // position: absolute;
+position: relative;
 	  top: -$border-size * 1.8;
 	  right: -$border-size * 1.8;
 	  bottom: -$border-size * 1.8;
@@ -2970,7 +2986,8 @@ $base-color: $color-dragon;
 	border-color: white;
 
 	&::after {
-	  position: absolute;
+	  // position: absolute;
+position: relative;
 	  top: -$border-size * 1.8;
 	  right: -$border-size * 1.8;
 	  bottom: -$border-size * 1.8;
@@ -3103,7 +3120,8 @@ $base-color: $color-dark;
 	border-color: white;
 
 	&::after {
-	  position: absolute;
+	  // position: absolute;
+position: relative;
 	  top: -$border-size * 1.8;
 	  right: -$border-size * 1.8;
 	  bottom: -$border-size * 1.8;
@@ -3206,7 +3224,8 @@ $base-color: $color-fairy;
 	border-color: vars.$color-white;
 
 	&::after {
-	  position: absolute;
+	  // position: absolute;
+position: relative;
 	  background-color: vars.$base-color;
 
 	}

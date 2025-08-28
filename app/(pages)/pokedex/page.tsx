@@ -13,17 +13,20 @@ const KantoPokedex = () => {
     <div className='container'>
       <section className='nesContainer nes-container'>
         <div className='row'>
-          <h1 className='text-center'>Kanto Pokedex</h1>
+          <div className='col-md-12'>
+            <h1 className='text-center'>Kanto Pokedex</h1>
+          </div>
         </div>
-
-        <div className='nes-table-responsive'>
-          <PokedexRowOne />
-          <PokedexRowTwo />
-          <PokedexRowThree />
-          <PokedexRowFour />
-          <PokedexRowFive />
-          <PokedexRowSix />
-          <PokedexRowSeven />
+        <div className='row'>
+          <div className='nes-table-responsive'>
+            <PokedexRowOne />
+            <PokedexRowTwo />
+            <PokedexRowThree />
+            <PokedexRowFour />
+            <PokedexRowFive />
+            <PokedexRowSix />
+            <PokedexRowSeven />
+          </div>
         </div>
       </section>
     </div>

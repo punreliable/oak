@@ -1,34 +1,9 @@
+'use client';
 import prettyName from '../../utilities/prettyName';
 import { v4 as uuidv4 } from 'uuid';
+import type { MoveList } from '@/types/move-list';
 
-export type Move = {
-  name: string;
-  url: string;
-};
-
-export type VersionGroup = {
-  name: string;
-  url: string;
-};
-
-export type VersionGroupDetails = {
-  level_learned_at: number;
-  move_learn_method: object;
-  order: number | null;
-  version_group: VersionGroup;
-};
-
-export type MoveList = {
-  move: Move[];
-  version_group_details: VersionGroupDetails[];
-};
-
-export type Properties = {
-  moves: MoveList[];
-  from: string;
-};
-
-const PokemonMoveList = (props: Properties) => {
+const PokemonMoveList = (props: MoveList) => {
   const moves = props.moves;
   const fromPage = props.from;
   console.log('Props: ', props);
