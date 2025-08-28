@@ -4,13 +4,13 @@ import PokemonDescription from '@/app/components/PokemonDescription';
 import PokemonStats from '@/app/components/PokemonStats';
 import PokemonAbilitiesList from '@/app/components/PokemonAbilitiesList';
 import PokemonTypeList from '@/app/components/PokemonTypeList';
-import PokemonMoveList from '@/app/components/PokemonMoveList';
+import MovesByPokemon from '@/app/components/MovesByPokemon';
 import prettyName from '@/utilities/prettyName';
 import Message from '@/app/components/ProfessorOak/Message';
 
 const ResultHomePokemon = (props: any) => {
   return (
-    <div className='App'>
+    <div className='container'>
       <h1 className='oakHello'>Hello,</h1>
 
       <h1 className='pokemonName'>{prettyName(props?.pokemon.name)}</h1>
@@ -53,7 +53,7 @@ const ResultHomePokemon = (props: any) => {
 
       <div className='row'>
         {props.pokemon.id && props.pokemon.moves && (
-          <PokemonMoveList moves={props.pokemon.moves} from={props.pokemon.id} />
+          <MovesByPokemon moves={props.pokemon.moves} from={props.pokemon.id} />
         )}
       </div>
 
