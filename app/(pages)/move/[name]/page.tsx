@@ -1,6 +1,7 @@
 import transformWords from '@/utilities/transformWords';
 import { Move } from '@/types/move';
 import ButtonHome from '@/app/components/Buttons/ButtonHome';
+import { Suspense } from 'react';
 
 export interface Result {
   name: string;
@@ -37,45 +38,47 @@ export default async function Page({ params }: { params: any }) {
   });
 
   return (
-    <section className='App nes-container container'>
-      <div className='row' style={{ display: 'block', width: '100%' }}>
-        <h1
-          className='responsive-h1 text-center gameboy mb-4'
-          style={{ display: 'block', minWidth: '100%' }}
-        >
-          Move
-        </h1>
-      </div>
-      <div className='row' style={{ display: 'block', width: '100%' }}>
-        <div className='col-md-12'>
-          {post.name && (
-            <h2
-              className='responsive-h2 text-center gameboy mb-4-green'
-              style={{ display: 'block', width: '100%' }}
-            >
-              {transformWords(post.name)}
-            </h2>
-          )}
+    <Suspense fallback={<div>Loading...</div>}>
+      <section className='App nes-container container'>
+        <div className='row' style={{ display: 'block', width: '100%' }}>
+          <h1
+            className='responsive-h1 text-center gameboy mb-4'
+            style={{ display: 'block', minWidth: '100%' }}
+          >
+            Move
+          </h1>
         </div>
-      </div>
-      {post.flavor_text_entries && (
         <div className='row' style={{ display: 'block', width: '100%' }}>
           <div className='col-md-12'>
-            <h3 className='responsive-h3 darkest-green my-4'>Description</h3>
-            <p className='my-4'>{description}</p>
+            {post.name && (
+              <h2
+                className='responsive-h2 text-center gameboy mb-4-green'
+                style={{ display: 'block', width: '100%' }}
+              >
+                {transformWords(post.name)}
+              </h2>
+            )}
           </div>
         </div>
-      )}
-      <div className='row my-4' style={{ display: 'block', width: '100%' }}>
-        <div className='row'>
-          <div className='col-md-12'>
-            <p className='responsive-h3 darkest-green my-4'>More Details Coming Soon</p>
+        {post.flavor_text_entries && (
+          <div className='row' style={{ display: 'block', width: '100%' }}>
+            <div className='col-md-12'>
+              <h3 className='responsive-h3 darkest-green my-4'>Description</h3>
+              <p className='my-4'>{description}</p>
+            </div>
+          </div>
+        )}
+        <div className='row my-4' style={{ display: 'block', width: '100%' }}>
+          <div className='row'>
+            <div className='col-md-12'>
+              <p className='responsive-h3 darkest-green my-4'>More Details Coming Soon</p>
+            </div>
+          </div>
+          <div className='row'>
+            <ButtonHome />
           </div>
         </div>
-        <div className='row'>
-          <ButtonHome />
-        </div>
-      </div>
-    </section>
+      </section>
+    </Suspense>
   );
 }
