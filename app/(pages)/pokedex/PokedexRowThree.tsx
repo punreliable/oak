@@ -54,10 +54,10 @@ export function PokedexRowThree() {
               height={96}
               className='rounded-sm'
             />
-            </Link>
-            <Link className='nes-badge' href={`/${pokemon.name}`}>
-              <span className='is-dark'>{prettyName(pokemon.name)}</span>
-            </Link>
+          </Link>
+          <Link className='nes-badge' href={`/${pokemon.name}`}>
+            <span className='is-dark'>{prettyName(pokemon.name)}</span>
+          </Link>
         </div>
       </div>
     );

@@ -35,14 +35,13 @@ const EvolvesFromSpecies = (props: { url: string }) => {
 
   {
     data && data.data.evolves_from_species.url && (
-
-		<>
-			<div className='row'>
-			<h1>Evolves From</h1>
-			<ResultEvolvesFromSpecies pokemon={data.evolves_from_species.url} />
-			</div>
-		</>
-	);
+      <>
+        <div className='row'>
+          <h1>Evolves From</h1>
+          <ResultEvolvesFromSpecies pokemon={data.evolves_from_species.url} />
+        </div>
+      </>
+    );
   }
 };
 

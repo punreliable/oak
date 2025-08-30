@@ -19,13 +19,13 @@ const KantoPokedex = () => {
         </div>
         <div className='row'>
           {/* <div className='nes-table-responsive'> */}
-            <PokedexRowOne />
-            <PokedexRowTwo />
-            <PokedexRowThree />
-            <PokedexRowFour />
-            <PokedexRowFive />
-            <PokedexRowSix />
-            <PokedexRowSeven />
+          <PokedexRowOne />
+          <PokedexRowTwo />
+          <PokedexRowThree />
+          <PokedexRowFour />
+          <PokedexRowFive />
+          <PokedexRowSix />
+          <PokedexRowSeven />
           {/* </div> */}
         </div>
       </section>
