@@ -1,8 +1,8 @@
-@use '../../variables' as variables;
+@use '../../variables' as vars;
+@use '../../mixins' as mixins;
 
-$primary-green: #8d956e;
-$base-color: $primary-green;
-$background-color: variables.$background-color;
+$base-color: vars.$primary-green;
+$background-color: vars.$background-color;
 
 .nes-table-responsive {
   max-width: 100%;
@@ -66,16 +66,16 @@ $background-color: variables.$background-color;
     border-spacing: 0;
     border-collapse: separate;
 
-    // @include compact-rounded-corners();
+    @include mixins.compact-rounded-corners(true);
   }
 
   &.is-dark {
     color: $background-color;
     background-color: $base-color;
 
-    // &.is-bordered {
-    //   @include compact-rounded-corners(true);
-    // }
+    &.is-bordered {
+      @include mixins.compact-rounded-corners(true);
+    }
 
     th,
     td {

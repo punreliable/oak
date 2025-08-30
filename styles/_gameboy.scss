@@ -62,18 +62,10 @@ nav.gameboy {
   }
 }
 
-div {
-
-	&.card-body {
-
-		&.gameboy {
-
-			background-color: vars.$brighter-green;
-
-		}
-
-	}
-
+div.card-body {
+  &.gameboy {
+    background-color: vars.$brighter-green;
+  }
 }
 
 footer {

@@ -909,7 +909,7 @@ a.type-fairy {
   &.is-dark {
 	position: relative;
 	margin: vars.$border-size;
-	border-color: white;
+	border-color: vars.$darkest-green;
 
 	&::after {
 	  // position: absolute;

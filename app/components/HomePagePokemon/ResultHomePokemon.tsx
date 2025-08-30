@@ -23,6 +23,7 @@ const ResultHomePokemon = (props: any) => {
         width={256}
         height={256}
       />
+
       <div className='row'>
         <div className='col-lg-8'>
           <PokemonDescription pokemon={props.pokemon.id} />
@@ -31,6 +32,7 @@ const ResultHomePokemon = (props: any) => {
           <PokemonStats pokemon={props.pokemon} />
         </div>
       </div>
+
       <div className='row'>
         <h3 className='h3-responsive'>Type</h3>
       </div>
@@ -51,11 +53,9 @@ const ResultHomePokemon = (props: any) => {
         <h3 className='h3-responsive gameboy'>Moves</h3>
       </div>
 
-      <div className='row'>
-        {props.pokemon.id && props.pokemon.moves && (
-          <MovesByPokemon moves={props.pokemon.moves} from={props.pokemon.id} />
-        )}
-      </div>
+      {props.pokemon.id && props.pokemon.moves && (
+        <MovesByPokemon moves={props.pokemon.moves} from={props.pokemon.id} />
+      )}
 
       <div className='row'>
         <Message pokemon={props.pokemon.id} />

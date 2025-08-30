@@ -1,5 +1,4 @@
-// @use 'comicui/variables';
-@use './mixins';
+@use './mixins' as mixins;
 
 .gameboy-table-responsive {
 
@@ -70,7 +69,7 @@
 		border-spacing: 0;
 		border-collapse: separate;
 
-		// @include compact-rounded-corners();
+		@include mixins.compact-rounded-corners();
 	}
 
 	&.is-dark {
@@ -79,7 +78,7 @@
 		color: $brightest-green;
 
 		&.is-bordered {
-			@include compact-rounded-corners(true);
+			@include mixins.compact-rounded-corners(true);
 		}
 
 		th,
