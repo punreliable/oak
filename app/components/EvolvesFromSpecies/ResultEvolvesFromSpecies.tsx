@@ -7,10 +7,9 @@ import PokemonTypeList from '@/app/components/PokemonTypeList';
 import MovesByPokemon from '@/app/components/MovesByPokemon';
 import prettyName from '@/utilities/prettyName';
 import Message from '@/app/components/ProfessorOak/Message';
-import Evolutions from '@/app/components/Evolutions';
+// import Evolutions from '@/app/components/Evolutions';
 
 const ResultEvolvesFromSpecies = (props: any) => {
-  
   console.log('Pokemon Data: ', props);
 
   return (

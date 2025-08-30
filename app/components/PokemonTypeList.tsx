@@ -14,8 +14,7 @@ const PokemonTypeList = (props: any) => {
     </div>
   ));
 
-  return(<>{minified}</>);
-  
+  return <>{minified}</>;
 };
 
 export default PokemonTypeList;

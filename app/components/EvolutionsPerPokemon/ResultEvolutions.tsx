@@ -10,7 +10,6 @@ import Message from '@/app/components/ProfessorOak/Message';
 import Evolutions from '@/app/components/Evolutions';
 
 const ResultEvolutions = (props: any) => {
-  
   console.log('Pokemon Data: ', props);
 
   return (
