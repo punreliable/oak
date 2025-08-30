@@ -9,7 +9,7 @@ export function PokedexRowThree() {
   const { data, isLoading, isError } = useQuery({
     queryKey: ['pokedex-row-three'],
     queryFn: async () => {
-      const rowStart = 49;
+      const rowStart = 48;
       const res = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=24&offset=${rowStart}`);
       return res.data;
     },
@@ -39,7 +39,7 @@ export function PokedexRowThree() {
       >
         <div className='nes-container is-rounded with-title'>
           <Link
-            href={`/pokedex/${pokemon.name}`}
+            href={`/pokemon/${pokemon.name}`}
             style={{
               display: 'flex',
               flexDirection: 'column',
@@ -54,10 +54,10 @@ export function PokedexRowThree() {
               height={96}
               className='rounded-sm'
             />
+            </Link>
             <Link className='nes-badge' href={`/${pokemon.name}`}>
               <span className='is-dark'>{prettyName(pokemon.name)}</span>
             </Link>
-          </Link>
         </div>
       </div>
     );
