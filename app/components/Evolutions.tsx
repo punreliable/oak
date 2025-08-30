@@ -8,7 +8,12 @@ import ErrorEvolutions from './EvolutionsPerPokemon/ErrorEvolutions';
 import PendingEvolutions from './EvolutionsPerPokemon/PendingEvolutions';
 // import ResultEvolutions from './EvolutionsPerPokemon/ResultEvolutions';
 import EvolvesFromSpecies from '@/app/components/EvolvesFromSpecies';
-// import Pokemon from '@/types/pokemon';
+import type {PokemonSpecies} from '@/types/pokemon-species';
+
+interface PokemonSpeciesAPIResponse {
+	data: PokemonSpecies;
+	status: number;
+}
 
 const Evolutions = (props: any) => {
   const id = props.id;
@@ -16,7 +21,7 @@ const Evolutions = (props: any) => {
   const requestURL = `https://pokeapi.co/api/v2/pokemon-species/${parseInt(id.toString())}/`;
 
   const fetchEvolutionChains = async (requestURL: string) => {
-    const response = await axios.get(requestURL);
+    const response: PokemonSpeciesAPIResponse = await axios.get(requestURL);
     if (response.status !== 200) {
       throw new Error('Evolution Chaions could not be found.');
     }
@@ -28,9 +33,13 @@ const Evolutions = (props: any) => {
     queryFn: () => fetchEvolutionChains(requestURL),
   });
 
-  console.log('Evo Data: ', data);
-  console.log('Evolves From: ', data?.data.evolves_from_species);
-  console.log('Evolution Chain: ', data?.data.evolution_chain);
+	// console.log('Evo Data: ', data);
+
+	const evolvesFromSpecies = data?.data.evolves_from_species ? data.data.evolves_from_species.url: null;
+	const evolutionChain= data?.data.evolution_chain ? data.data.evolution_chain: null;
+
+//   console.log('Evolves From: ', evolvesFromSpecies);
+//   console.log('Evolution Chain: ', evolutionChain);
 
   {
     isLoading && <PendingEvolutions />;
@@ -41,13 +50,22 @@ const Evolutions = (props: any) => {
   }
 
   {
-    data && data.data.evolves_from_species.url && (
+    data && evolvesFromSpecies && (
       <>
         <div className='row'>
           <h1>Evolves From</h1>
         </div>
         <div className='row'>
-          <EvolvesFromSpecies evolves={data?.data.evolves_from_species.url} />
+          <EvolvesFromSpecies species={evolvesFromSpecies} />
+        </div>
+      </>
+    );
+  }
+  {
+    data && !evolvesFromSpecies && (
+      <>
+        <div className='row'>
+          <h2>Does not evovle from another pokemon</h2>
         </div>
       </>
     );

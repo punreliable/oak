@@ -88,7 +88,6 @@ interface Variety {
 }
 
 export interface PokemonSpecies {
-  data: {
     base_happiness: number;
     capture_rate: number;
     color: PokemonColor;
@@ -119,6 +118,4 @@ export interface PokemonSpecies {
     pokedex_numbers: PokedexNumber[];
     shape: Shape;
     varieties: Variety[];
-    status?: number;
-  };
 }
