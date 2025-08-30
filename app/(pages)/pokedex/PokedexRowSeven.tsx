@@ -54,7 +54,7 @@ export function PokedexRowSeven() {
               height={96}
               className='rounded-sm'
             />
-            <Link className='nes-badge' href={`/${pokemon.name}`}>
+            <Link className='nes-badge' href={`/pokemon/${pokemon.name}`}>
               <span className='is-dark'>{prettyName(pokemon.name)}</span>
             </Link>
           </Link>

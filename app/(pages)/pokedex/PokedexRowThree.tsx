@@ -10,7 +10,7 @@ export function PokedexRowThree() {
     queryKey: ['pokedex-row-three'],
     queryFn: async () => {
       const rowStart = 49;
-      const res = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=25&offset=${rowStart}`);
+      const res = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=24&offset=${rowStart}`);
       return res.data;
     },
   });

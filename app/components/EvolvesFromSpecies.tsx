@@ -7,29 +7,23 @@ import axios from 'axios';
 import ErrorEvolvesFromSpecies from '@/app/components/EvolvesFromSpecies/ErrorEvolvesFromSpecies';
 import PendingEvolvesFromSpecies from '@/app/components/EvolvesFromSpecies/PendingEvolvesFromSpecies';
 import ResultEvolvesFromSpecies from '@/app/components/EvolvesFromSpecies/ResultEvolvesFromSpecies';
+import type { PokemonSpecies } from '@/types/pokemon-species';
 
 const EvolvesFromSpecies = (props: { url: string }) => {
   const url = props.url;
-  // console.log('ID: ', id);
-  const requestURL = url;
 
   const fetchEvolutionChains = async (requestURL: string) => {
-    const response = await axios.get(requestURL);
-    if (response.status !== 200) {
+    const response: PokemonSpecies = await axios.get(requestURL);
+    if (response?.status !== 200) {
       throw new Error('Evolution Chaions could not be found.');
     }
     return response;
   };
 
-  // console.log(requestURL);
   const { data, error, isLoading, isError } = useQuery({
-    queryKey: ['pokemon-species', requestURL],
-    queryFn: () => fetchEvolutionChains(requestURL),
+    queryKey: ['pokemon-species', url],
+    queryFn: () => fetchEvolutionChains(url),
   });
-
-  console.log('Evo Data: ', data);
-  console.log('Evolves From: ', data?.data.evolves_from_species);
-  console.log('Evolution Chain: ', data?.data.evolution_chain);
 
   {
     isLoading && <PendingEvolvesFromSpecies />;
@@ -40,15 +34,15 @@ const EvolvesFromSpecies = (props: { url: string }) => {
   }
 
   {
-    data && data?.data.evolves_from_species.url && (
-	return(
+    data && data.data.evolves_from_species.url && (
+
 		<>
 			<div className='row'>
 			<h1>Evolves From</h1>
-			<ResultEvolvesFromSpecies pokemon={data?.data.evolves_from_species.url} />
+			<ResultEvolvesFromSpecies pokemon={data.evolves_from_species.url} />
 			</div>
 		</>
-	));
+	);
   }
 };
 

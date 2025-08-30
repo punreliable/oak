@@ -34,10 +34,7 @@ const PokemonDescription: React.FC<PokemonDescriptionProps> = ({ pokemon }) => {
       language: { name: string; url: string };
       version: { name: string; url: string };
     }) => {
-      if (
-        flavor.language.name == 'en' &&
-        (flavor.version.name === 'red' || flavor.version.name === 'blue')
-      ) {
+      if (flavor.language.name == 'en' && flavor.version.name === 'yellow') {
         return flavor.flavor_text;
       }
     },

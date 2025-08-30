@@ -10,7 +10,7 @@ export function PokedexRowOne() {
     queryKey: ['pokedex-row-one'],
     queryFn: async () => {
       const rowStart = 0;
-      const res = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=25&offset=${rowStart}`);
+      const res = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=24&offset=${rowStart}`);
       return res.data;
     },
   });
@@ -39,7 +39,7 @@ export function PokedexRowOne() {
       >
         <div className='nes-container is-rounded with-title'>
           <Link
-            href={`/pokedex/${pokemon.name}`}
+            href={`/pokemon/${pokemon.name}`}
             style={{
               display: 'flex',
               flexDirection: 'column',
@@ -54,7 +54,7 @@ export function PokedexRowOne() {
               height={96}
               className='rounded-sm'
             />
-            <Link className='nes-badge' href={`/${pokemon.name}`}>
+            <Link className='nes-badge' href={`/pokemon/${pokemon.name}`}>
               <span className='is-dark'>{prettyName(pokemon.name)}</span>
             </Link>
           </Link>

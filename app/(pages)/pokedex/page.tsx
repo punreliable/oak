@@ -18,7 +18,7 @@ const KantoPokedex = () => {
           </div>
         </div>
         <div className='row'>
-          <div className='nes-table-responsive'>
+          {/* <div className='nes-table-responsive'> */}
             <PokedexRowOne />
             <PokedexRowTwo />
             <PokedexRowThree />
@@ -26,7 +26,7 @@ const KantoPokedex = () => {
             <PokedexRowFive />
             <PokedexRowSix />
             <PokedexRowSeven />
-          </div>
+          {/* </div> */}
         </div>
       </section>
     </div>
