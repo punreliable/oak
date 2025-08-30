@@ -9,8 +9,8 @@ import prettyName from '@/utilities/prettyName';
 import Message from '@/app/components/ProfessorOak/Message';
 import Evolutions from '@/app/components/Evolutions';
 
-const ResultHomePokemon = (props: any) => {
-
+const ResultEvolutions = (props: any) => {
+  
   console.log('Pokemon Data: ', props);
 
   return (
@@ -48,7 +48,7 @@ const ResultHomePokemon = (props: any) => {
       <div className='row'>
         <h3 className='h3-responsive'>Evolutions</h3>
       </div>
-      <Evolutions id={props.pokemon.id} />
+      <Evolutions />
 
       <div className='row my-4'>
         <h3 className='h3-responsive gameboy'>Abilities</h3>
@@ -73,4 +73,4 @@ const ResultHomePokemon = (props: any) => {
   );
 };
 
-export default ResultHomePokemon;
+export default ResultEvolutions;
