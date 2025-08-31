@@ -10,11 +10,11 @@ import ResultEvolvesFromSpecies from '@/app/components/EvolvesFromSpecies/Result
 import type { PokemonSpecies } from '@/types/pokemon-species';
 
 interface PokemonSpeciesFromAPI {
-	data: PokemonSpecies;
-	status: number;
+  data: PokemonSpecies;
+  status: number;
 }
 
-const EvolvesFromSpecies = (props: {url: string} ) => {
+const EvolvesFromSpecies = (props: { url: string }) => {
   const url = props.url;
 
   const fetchEvolutionChains = async (requestURL: string) => {
@@ -30,7 +30,9 @@ const EvolvesFromSpecies = (props: {url: string} ) => {
     queryFn: () => fetchEvolutionChains(url),
   });
 
-  const evolvesFromSpecies = data?.data?.evolves_from_species?.url ? data.data.evolves_from_species.url : null;
+  const evolvesFromSpecies = data?.data?.evolves_from_species?.url
+    ? data.data.evolves_from_species.url
+    : null;
 
   {
     isLoading && <PendingEvolvesFromSpecies />;

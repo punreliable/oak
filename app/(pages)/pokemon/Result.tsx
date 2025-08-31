@@ -5,7 +5,6 @@ import PokemonStats from '@/app/components/PokemonStats';
 import PokemonAbilitiesList from '@/app/components/PokemonAbilitiesList';
 import PokemonTypeList from '@/app/components/PokemonTypeList';
 import PokemonMoveList from '@/app/components/PokemonMoveList';
-import prettyName from '@/utilities/prettyName';
 import transformWords from '@/utilities/transformWords';
 import Message from '@/app/components/ProfessorOak/Message';
 

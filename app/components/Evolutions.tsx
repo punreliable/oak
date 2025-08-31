@@ -15,8 +15,7 @@ interface PokemonSpeciesAPIResponse {
   status: number;
 }
 
-const Evolutions = (props: {id: number}) => {
-
+const Evolutions = (props: { id: number }) => {
   const id = props.id.toString();
   const requestURL = `https://pokeapi.co/api/v2/pokemon-species/${id}/`;
 
@@ -39,8 +38,8 @@ const Evolutions = (props: {id: number}) => {
 
   const evolutionChain = data?.data.evolution_chain ? data.data.evolution_chain : null;
 
-    console.log('Evolves From: ', evolvesFromSpecies);
-    console.log('Evolution Chain: ', evolutionChain);
+  console.log('Evolves From: ', evolvesFromSpecies);
+  console.log('Evolution Chain: ', evolutionChain);
 
   {
     isLoading && <PendingEvolutions />;
@@ -51,25 +50,25 @@ const Evolutions = (props: {id: number}) => {
   }
 
   {
-	data && evolvesFromSpecies ? (
-	  <>
-		<div className='row'>
-		  <h1>Evolves From</h1>
-		</div>
-		<div className='row'>
-			<p>A Pokemon</p>
-		  {/* <EvolvesFromSpecies url={evolvesFromSpecies} /> */}
-		</div>
-	  </>
-	) : (
-	  data && ( // Ensures this renders only if data exists
-		<>
-		  <div className='row'>
-			<h2>Does not evolve from another pokemon</h2>
-		  </div>
-		</>
-	  )
-	);
+    data && evolvesFromSpecies ? (
+      <>
+        <div className='row'>
+          <h1>Evolves From</h1>
+        </div>
+        <div className='row'>
+          <p>A Pokemon</p>
+          {/* <EvolvesFromSpecies url={evolvesFromSpecies} /> */}
+        </div>
+      </>
+    ) : (
+      data && ( // Ensures this renders only if data exists
+        <>
+          <div className='row'>
+            <h2>Does not evolve from another pokemon</h2>
+          </div>
+        </>
+      )
+    );
   }
 };
 

@@ -8,7 +8,7 @@ import MovesByPokemon from '@/app/components/MovesByPokemon';
 import prettyName from '@/utilities/prettyName';
 import Message from '@/app/components/ProfessorOak/Message';
 import Evolutions from '@/app/components/Evolutions';
-import type {Pokemon} from '@/types/pokemon';
+import type { Pokemon } from '@/types/pokemon';
 
 interface PokemonFromAPI {
   pokemon: Pokemon;
@@ -16,7 +16,6 @@ interface PokemonFromAPI {
 }
 
 const ResultHomePokemon = (props: PokemonFromAPI) => {
-
   return (
     <div className='container'>
       <h1 className='oakHello'>Hello,</h1>

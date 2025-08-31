@@ -10,7 +10,6 @@ import Message from '@/app/components/ProfessorOak/Message';
 import Evolutions from '@/app/components/Evolutions';
 
 const ResultEvolutions = (props: any) => {
-
   return (
     <div className='container'>
       <h1 className='oakHello'>Hello,</h1>
