@@ -5,6 +5,7 @@ import axios from 'axios';
 import ErrorHomePokemon from '@/app/components/HomePagePokemon/ErrorHomePokemon';
 import PendingHomePokemon from '@/app/components/HomePagePokemon/PendingHomePokemon';
 import ResultHomePokemon from '@/app/components/HomePagePokemon/ResultHomePokemon';
+import type {Pokemon} from '@/types/pokemon';
 
 const getPokemonNumber = () => {
   const number = Math.floor(Math.random() * 151) + 1;
@@ -14,12 +15,16 @@ const getPokemonNumber = () => {
   return `${number}`;
 };
 
+interface PokemonFromAPI {
+  data: Pokemon;
+}
+
 const OtherHome = () => {
   const { data, error, isLoading } = useQuery({
     queryKey: ['pokemon'],
     queryFn: async () => {
       const id = getPokemonNumber();
-      const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
+      const response: PokemonFromAPI = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
       return response.data;
     },
   });

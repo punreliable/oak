@@ -12,10 +12,10 @@ import type { Pokemon } from '@/types/pokemon';
 
 interface PokemonFromAPI {
   pokemon: Pokemon;
-  status: number;
 }
 
 const ResultHomePokemon = (props: PokemonFromAPI) => {
+  const pokemonID: number = props.pokemon.id;
   return (
     <div className='container'>
       <h1 className='oakHello'>Hello,</h1>
@@ -33,7 +33,7 @@ const ResultHomePokemon = (props: PokemonFromAPI) => {
 
       <div className='row'>
         <div className='col-lg-8'>
-          <PokemonDescription pokemon={props.pokemon.id} />
+          <PokemonDescription pokemon={pokemonID} />
         </div>
         <div className='col-lg-4'>
           <PokemonStats pokemon={props.pokemon} />
@@ -52,7 +52,7 @@ const ResultHomePokemon = (props: PokemonFromAPI) => {
         <h3 className='h3-responsive'>Evolutions</h3>
       </div>
       <div className='row my-4'>
-        <Evolutions id={props.pokemon.id} />
+        <Evolutions id={pokemonID} />
       </div>
 
       <div className='row my-4'>
@@ -68,11 +68,11 @@ const ResultHomePokemon = (props: PokemonFromAPI) => {
       </div>
 
       {props.pokemon.id && props.pokemon.moves && (
-        <MovesByPokemon moves={props.pokemon.moves} from={props.pokemon.id} />
+        <MovesByPokemon moves={props.pokemon.moves} from={props.pokemon.id.toString()} />
       )}
 
       <div className='row'>
-        <Message pokemon={props.pokemon.id} />
+        <Message pokemon={props.pokemon.id.toString()} />
       </div>
     </div>
   );
