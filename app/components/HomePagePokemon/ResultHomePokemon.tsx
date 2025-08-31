@@ -5,9 +5,9 @@ import PokemonStats from '@/app/components/PokemonStats';
 import PokemonAbilitiesList from '@/app/components/PokemonAbilitiesList';
 import PokemonTypeList from '@/app/components/PokemonTypeList';
 import MovesByPokemon from '@/app/components/MovesByPokemon';
-import prettyName from '@/utilities/prettyName';
+import transformWords from '@/utilities/transformWords';
 import Message from '@/app/components/ProfessorOak/Message';
-import Evolutions from '@/app/components/Evolutions';
+import EvolutionsHandler from '@/app/components/EvolutionsByPokemon/EvolutionsHandler';
 import type { Pokemon } from '@/types/pokemon';
 
 interface PokemonFromAPI {
@@ -20,11 +20,11 @@ const ResultHomePokemon = (props: PokemonFromAPI) => {
     <div className='container'>
       <h1 className='oakHello'>Hello,</h1>
 
-      <h1 className='pokemonName'>{prettyName(props?.pokemon.name)}</h1>
+      <h1 className='pokemonName'>{transformWords(props?.pokemon.name)}</h1>
 
       <Image
         className='nes-avatar avatar pokemonAvatar'
-        alt={'Image of a ' + prettyName(props?.pokemon.name)}
+        alt={'Image of a ' + transformWords(props?.pokemon.name)}
         id='avatar'
         src={props?.pokemon.sprites?.front_default}
         width={256}
@@ -48,11 +48,9 @@ const ResultHomePokemon = (props: PokemonFromAPI) => {
         <PokemonTypeList types={props.pokemon.types} />
       </div>
 
-      <div className='row'>
-        <h3 className='h3-responsive'>Evolutions</h3>
-      </div>
+
       <div className='row my-4'>
-        <Evolutions id={pokemonID} />
+        <EvolutionsHandler id={pokemonID} />
       </div>
 
       <div className='row my-4'>

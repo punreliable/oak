@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import ErrorEvolvesFromSpecies from '@/app/components/EvolvesFromSpecies/ErrorEvolvesFromSpecies';
 import PendingEvolvesFromSpecies from '@/app/components/EvolvesFromSpecies/PendingEvolvesFromSpecies';
-// import ResultEvolvesFromSpecies from '@/app/components/EvolvesFromSpecies/ResultEvolvesFromSpecies';
+import ResultEvolvesFromSpecies from '@/app/components/EvolvesFromSpecies/ResultEvolvesFromSpecies';
 import type { PokemonSpecies } from '@/types/pokemon-species';
 
 interface PokemonSpeciesFromAPI {
@@ -45,7 +45,7 @@ const EvolvesFromSpecies = (props: { url: string }) => {
       <>
         <div className='row'>
           <h1>Evolves From</h1>
-          {/* <ResultEvolvesFromSpecies pokemon={evolvesFromSpecies} /> */}
+          <ResultEvolvesFromSpecies pokemon={evolvesFromSpecies} />
         </div>
       </>
     );
