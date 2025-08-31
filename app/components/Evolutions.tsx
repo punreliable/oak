@@ -5,6 +5,7 @@ import axios from 'axios';
 import ErrorEvolutions from './EvolutionsPerPokemon/ErrorEvolutions';
 import PendingEvolutions from './EvolutionsPerPokemon/PendingEvolutions';
 import type { PokemonSpecies } from '@/types/pokemon-species';
+import EvolvesFromSpecies from '@/app/components/EvolvesFromSpecies';
 
 interface PokemonSpeciesAPIResponse {
   data: PokemonSpecies;
@@ -13,7 +14,7 @@ interface PokemonSpeciesAPIResponse {
 
 const Evolutions = (props: { id: number }) => {
   const id = props.id.toString();
-  const requestURL: string = 'https://pokeapi.co/api/v2/pokemon-species/' + id + '/';
+  const requestURL = `https://pokeapi.co/api/v2/pokemon-species/${id}/`;
 
   const fetchEvolutionChains = async (requestURL: string) => {
     const response: PokemonSpeciesAPIResponse = await axios.get(requestURL);
@@ -32,34 +33,36 @@ const Evolutions = (props: { id: number }) => {
     ? data.data.evolves_from_species.url
     : null;
 
-  {
-    isLoading && <PendingEvolutions />;
-  }
+  const evolutionChain = data?.data.evolution_chain ? data.data.evolution_chain : null;
 
-  {
-    isError && <ErrorEvolutions />;
-  }
+  console.log('Evolves From: ', evolvesFromSpecies);
+  console.log('Evolution Chain: ', evolutionChain);
 
-  {
-    data && evolvesFromSpecies ? (
-      <>
-        <div className='row'>
-          <h1>Evolves From</h1>
-        </div>
-        <div className='row'>
-          <p>A Pokemon</p>
-        </div>
-      </>
-    ) : (
-      data && (
+  return (
+    // <--- Added return statement
+    <>
+      {isLoading && <PendingEvolutions />}
+      {isError && <ErrorEvolutions />}
+      {data && (
         <>
-          <div className='row'>
-            <h2>Does not evolve from another pokemon</h2>
-          </div>
+          {evolvesFromSpecies ? (
+            <>
+              <div className='row'>
+                <h1>Evolves From</h1>
+              </div>
+              <div className='row'>
+                <EvolvesFromSpecies url={evolvesFromSpecies} />
+              </div>
+            </>
+          ) : (
+            <div className='row'>
+              <h2>Does not evolve from another pokemon</h2>
+            </div>
+          )}
         </>
-      )
-    );
-  }
+      )}
+    </>
+  );
 };
 
 export default Evolutions;
