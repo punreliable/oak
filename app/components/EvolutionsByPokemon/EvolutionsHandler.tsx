@@ -44,10 +44,9 @@ const EvolutionsHandler = (props: { id: number }) => {
           : 'This is a basic Pokemon.',
       );
   }
-  // Example condition: display ExtraComponent if `status` equals "active"
+
   const showEvolvesFromSpecies = data?.evolves_from_species?.url;
   const showEvolutionChain = data?.evolution_chain?.url;
-  // console.log('Show Extra: ', showExtra);
 
   return (
     <div className='nes-container'>
