@@ -8,11 +8,11 @@ import ErrorEvolutions from './EvolutionsPerPokemon/ErrorEvolutions';
 import PendingEvolutions from './EvolutionsPerPokemon/PendingEvolutions';
 // import ResultEvolutions from './EvolutionsPerPokemon/ResultEvolutions';
 import EvolvesFromSpecies from '@/app/components/EvolvesFromSpecies';
-import type {PokemonSpecies} from '@/types/pokemon-species';
+import type { PokemonSpecies } from '@/types/pokemon-species';
 
 interface PokemonSpeciesAPIResponse {
-	data: PokemonSpecies;
-	status: number;
+  data: PokemonSpecies;
+  status: number;
 }
 
 const Evolutions = (props: any) => {
@@ -33,13 +33,15 @@ const Evolutions = (props: any) => {
     queryFn: () => fetchEvolutionChains(requestURL),
   });
 
-	// console.log('Evo Data: ', data);
+  // console.log('Evo Data: ', data);
 
-	const evolvesFromSpecies = data?.data.evolves_from_species ? data.data.evolves_from_species.url: null;
-	const evolutionChain= data?.data.evolution_chain ? data.data.evolution_chain: null;
+  const evolvesFromSpecies = data?.data.evolves_from_species
+    ? data.data.evolves_from_species.url
+    : null;
+  const evolutionChain = data?.data.evolution_chain ? data.data.evolution_chain : null;
 
-//   console.log('Evolves From: ', evolvesFromSpecies);
-//   console.log('Evolution Chain: ', evolutionChain);
+  //   console.log('Evolves From: ', evolvesFromSpecies);
+  //   console.log('Evolution Chain: ', evolutionChain);
 
   {
     isLoading && <PendingEvolutions />;

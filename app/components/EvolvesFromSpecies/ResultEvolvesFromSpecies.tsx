@@ -1,74 +1,80 @@
 import React from 'react';
 import Image from 'next/image';
-import PokemonDescription from '@/app/components/PokemonDescription';
-import PokemonStats from '@/app/components/PokemonStats';
-import PokemonAbilitiesList from '@/app/components/PokemonAbilitiesList';
-import PokemonTypeList from '@/app/components/PokemonTypeList';
-import MovesByPokemon from '@/app/components/MovesByPokemon';
-import prettyName from '@/utilities/prettyName';
-import Message from '@/app/components/ProfessorOak/Message';
-// import Evolutions from '@/app/components/Evolutions';
+import Link from 'next/link';
+import {useQuery} from '@tanstack/react-query';
+import axios from 'axios';
+import type {Pokemon} from '@/types/pokemon';
+import transformWords from '@/utilities/transformWords';
+import PendingPokemon from '@/app/components/TilePokemon/Pending';
+import ErrorPokemon from '@/app/components/TilePokemon/Error';
 
-const ResultEvolvesFromSpecies = (props: any) => {
+const ResultEvolvesFromSpecies = ( props: string ) => {
+  
+  const url = props;
+
+  interface PokemonFromAPI {
+    data: Pokemon;
+    status: number;
+  }
+
   console.log('Pokemon Data: ', props);
 
-  return (
-    <div className='container'>
-      <h1 className='oakHello'>Hello,</h1>
+  const fetchParentPokemon = async (requestURL: string) => {
+    const response: PokemonFromAPI = await axios.get(requestURL);
+    if (response?.status !== 200) {
+      throw new Error('Evolution Chains could not be found.');
+    }
+    return response;
+  };
 
-      <h1 className='pokemonName'>{prettyName(props?.pokemon.name)}</h1>
+  const { data, error, isLoading, isError } = useQuery({
+    queryKey: ['parent', url],
+    queryFn: () => fetchParentPokemon(url),
+  });
 
-      <Image
-        className='nes-avatar avatar pokemonAvatar'
-        alt={'Image of a ' + prettyName(props?.pokemon.name)}
-        id='avatar'
-        src={props?.pokemon.sprites?.front_default}
-        width={256}
-        height={256}
-      />
-
-      <div className='row'>
-        <div className='col-lg-8'>
-          <PokemonDescription pokemon={props.pokemon.id} />
+  {isLoading && <PendingPokemon />}
+  
+  {isError && <ErrorPokemon />}
+  {data && 
+    <div className='contributors'>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: 'auto',
+          height: 'auto',
+          float: 'left',
+        }}
+      >
+        <div className='nes-container is-rounded with-title'>
+          <Link
+            href={`/pokemon/${data.data?.name}`}
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <Image
+              src={data.data.sprites.front_default}
+              alt={transformWords(data.data.name)}
+              width={96}
+              height={96}
+              className='rounded-sm'
+            />
+          </Link>
+          <Link className='nes-badge' href={`/pokemon/${data.data.name}`}>
+            <span className='is-dark'>{transformWords(data.data.name)}</span>
+          </Link>
         </div>
-        <div className='col-lg-4'>
-          <PokemonStats pokemon={props.pokemon} />
-        </div>
-      </div>
-
-      <div className='row'>
-        <h3 className='h3-responsive'>Type</h3>
-      </div>
-
-      <div className='row my-4'>
-        <PokemonTypeList types={props.pokemon.types} />
-      </div>
-
-      <div className='row'>
-        <h3 className='h3-responsive'>Evolutions</h3>
-      </div>
-
-      <div className='row my-4'>
-        <h3 className='h3-responsive gameboy'>Abilities</h3>
-      </div>
-
-      <div className='row my-4'>
-        <PokemonAbilitiesList abilities={props.pokemon.abilities} />
-      </div>
-
-      <div className='row my-4'>
-        <h3 className='h3-responsive gameboy'>Moves</h3>
-      </div>
-
-      {props.pokemon.id && props.pokemon.moves && (
-        <MovesByPokemon moves={props.pokemon.moves} from={props.pokemon.id} />
-      )}
-
-      <div className='row'>
-        <Message pokemon={props.pokemon.id} />
       </div>
     </div>
-  );
+
+  }
 };
 
 export default ResultEvolvesFromSpecies;
