@@ -39,7 +39,7 @@ export function PokedexRowSix() {
       >
         <div className='nes-container is-rounded with-title'>
           <Link
-            href={`/pokedex/${pokemon.name}`}
+            href={`/pokemon/${pokemon.name}`}
             style={{
               display: 'flex',
               flexDirection: 'column',
@@ -55,7 +55,7 @@ export function PokedexRowSix() {
               className='rounded-sm'
             />
           </Link>
-          <Link className='nes-badge' href={`/${pokemon.name}`}>
+          <Link className='nes-badge' href={`/pokemon/${pokemon.name}`}>
             <span className='is-dark'>{prettyName(pokemon.name)}</span>
           </Link>
         </div>
