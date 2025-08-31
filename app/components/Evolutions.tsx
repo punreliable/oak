@@ -13,7 +13,7 @@ interface PokemonSpeciesAPIResponse {
 
 const Evolutions = (props: { id: number }) => {
   const id = props.id.toString();
-  const requestURL = `https://pokeapi.co/api/v2/pokemon-species/${id}/`;
+  const requestURL: string = 'https://pokeapi.co/api/v2/pokemon-species/' + id + '/';
 
   const fetchEvolutionChains = async (requestURL: string) => {
     const response: PokemonSpeciesAPIResponse = await axios.get(requestURL);
@@ -31,15 +31,6 @@ const Evolutions = (props: { id: number }) => {
   const evolvesFromSpecies = data?.data.evolves_from_species
     ? data.data.evolves_from_species.url
     : null;
-
-  const evolutionChain = data?.data.evolution_chain ? data.data.evolution_chain : null;
-
-  if (evolvesFromSpecies) {
-    console.log('Evolves From: ', evolvesFromSpecies);
-  }
-  if (evolutionChain) {
-    console.log('Evolution Chain: ', evolutionChain);
-  }
 
   {
     isLoading && <PendingEvolutions />;

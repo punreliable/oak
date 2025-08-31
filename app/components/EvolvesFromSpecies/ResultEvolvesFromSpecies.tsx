@@ -8,8 +8,8 @@ import transformWords from '@/utilities/transformWords';
 import PendingPokemon from '@/app/components/TilePokemon/Pending';
 import ErrorPokemon from '@/app/components/TilePokemon/Error';
 
-const ResultEvolvesFromSpecies = (props: string) => {
-  const url = props;
+const ResultEvolvesFromSpecies = (props: { url: string }) => {
+  const url = props.url;
 
   interface PokemonFromAPI {
     data: Pokemon;
