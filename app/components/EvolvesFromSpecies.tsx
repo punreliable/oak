@@ -14,8 +14,8 @@ interface PokemonSpeciesFromAPI {
 	status: number;
 }
 
-const EvolvesFromSpecies = (props: string ) => {
-  const url = props;
+const EvolvesFromSpecies = (props: {url: string} ) => {
+  const url = props.url;
 
   const fetchEvolutionChains = async (requestURL: string) => {
     const response: PokemonSpeciesFromAPI = await axios.get(requestURL);

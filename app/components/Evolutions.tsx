@@ -15,33 +15,32 @@ interface PokemonSpeciesAPIResponse {
   status: number;
 }
 
-const Evolutions = (props: number) => {
+const Evolutions = (props: {id: number}) => {
 
-  const id = props;
+  const id = props.id.toString();
   const requestURL = `https://pokeapi.co/api/v2/pokemon-species/${id}/`;
 
   const fetchEvolutionChains = async (requestURL: string) => {
     const response: PokemonSpeciesAPIResponse = await axios.get(requestURL);
     if (response.status !== 200) {
-      throw new Error('Evolution Chaions could not be found.');
+      throw new Error('Evolution Chains could not be found.');
     }
     return response;
   };
 
   const { data, isLoading, isError } = useQuery({
-    queryKey: ['pokemon-species', requestURL],
+    queryKey: ['evolution', requestURL],
     queryFn: () => fetchEvolutionChains(requestURL),
   });
-
-  // console.log('Evo Data: ', data);
 
   const evolvesFromSpecies = data?.data.evolves_from_species
     ? data.data.evolves_from_species.url
     : null;
+
   const evolutionChain = data?.data.evolution_chain ? data.data.evolution_chain : null;
 
-  //   console.log('Evolves From: ', evolvesFromSpecies);
-  //   console.log('Evolution Chain: ', evolutionChain);
+    console.log('Evolves From: ', evolvesFromSpecies);
+    console.log('Evolution Chain: ', evolutionChain);
 
   {
     isLoading && <PendingEvolutions />;
@@ -52,25 +51,25 @@ const Evolutions = (props: number) => {
   }
 
   {
-    data && evolvesFromSpecies && (
-      <>
-        <div className='row'>
-          <h1>Evolves From</h1>
-        </div>
-        <div className='row'>
-          <EvolvesFromSpecies species={evolvesFromSpecies} />
-        </div>
-      </>
-    );
-  }
-  {
-    data && !evolvesFromSpecies && (
-      <>
-        <div className='row'>
-          <h2>Does not evovle from another pokemon</h2>
-        </div>
-      </>
-    );
+	data && evolvesFromSpecies ? (
+	  <>
+		<div className='row'>
+		  <h1>Evolves From</h1>
+		</div>
+		<div className='row'>
+			<p>A Pokemon</p>
+		  {/* <EvolvesFromSpecies url={evolvesFromSpecies} /> */}
+		</div>
+	  </>
+	) : (
+	  data && ( // Ensures this renders only if data exists
+		<>
+		  <div className='row'>
+			<h2>Does not evolve from another pokemon</h2>
+		  </div>
+		</>
+	  )
+	);
   }
 };
 

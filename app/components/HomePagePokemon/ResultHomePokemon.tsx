@@ -8,9 +8,14 @@ import MovesByPokemon from '@/app/components/MovesByPokemon';
 import prettyName from '@/utilities/prettyName';
 import Message from '@/app/components/ProfessorOak/Message';
 import Evolutions from '@/app/components/Evolutions';
+import type {Pokemon} from '@/types/pokemon';
 
-const ResultHomePokemon = (props: any) => {
-  console.log('Pokemon Data: ', props);
+interface PokemonFromAPI {
+  pokemon: Pokemon;
+  status: number;
+}
+
+const ResultHomePokemon = (props: PokemonFromAPI) => {
 
   return (
     <div className='container'>
@@ -47,7 +52,9 @@ const ResultHomePokemon = (props: any) => {
       <div className='row'>
         <h3 className='h3-responsive'>Evolutions</h3>
       </div>
-      <Evolutions id={props.pokemon.id} />
+      <div className='row my-4'>
+        <Evolutions id={props.pokemon.id} />
+      </div>
 
       <div className='row my-4'>
         <h3 className='h3-responsive gameboy'>Abilities</h3>
