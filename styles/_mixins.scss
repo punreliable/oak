@@ -58,3 +58,7 @@
 		border-image-outset: 2;
 	  }
 	}
+
+	@mixin standard-padding() {
+		padding: 1rem 1.5rem;
+	}

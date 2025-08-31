@@ -31,7 +31,7 @@
   @include mixins.rounded-corners();
   position: relative;
   display: inline-block;
-  padding: 1rem 1.5rem;
+  @include mixins.standard-padding();
   margin: 8px;
   margin-bottom: 30px;
   background-color: vars.$brighter-green;
