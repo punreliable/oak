@@ -18,8 +18,6 @@ const fetchPokemonSpeciesStats = async (requestURL: string) => {
 
 const PokemonStats: React.FC<PokemonStatsProps> = ({ pokemon }) => {
   const requestURL = `https://pokeapi.co/api/v2/pokemon-species/${parseInt(pokemon.id.toString())}/`;
-
-  console.log(requestURL);
   const { data, error, isLoading, isError } = useQuery({
     queryKey: ['pokemon-species', requestURL],
     queryFn: () => fetchPokemonSpeciesStats(requestURL),

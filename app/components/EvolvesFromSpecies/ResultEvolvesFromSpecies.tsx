@@ -17,8 +17,6 @@ const ResultEvolvesFromSpecies = ( props: string ) => {
     status: number;
   }
 
-  console.log('Pokemon Data: ', props);
-
   const fetchParentPokemon = async (requestURL: string) => {
     const response: PokemonFromAPI = await axios.get(requestURL);
     if (response?.status !== 200) {

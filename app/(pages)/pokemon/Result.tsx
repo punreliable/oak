@@ -6,6 +6,7 @@ import PokemonAbilitiesList from '@/app/components/PokemonAbilitiesList';
 import PokemonTypeList from '@/app/components/PokemonTypeList';
 import PokemonMoveList from '@/app/components/PokemonMoveList';
 import prettyName from '@/utilities/prettyName';
+import transformWords from '@/utilities/transformWords';
 import Message from '@/app/components/ProfessorOak/Message';
 
 const Result = (props: any) => {
@@ -16,12 +17,12 @@ const Result = (props: any) => {
     <section className='App container'>
       <div className='row'>
         <h1 className='oakHello'>Hello,</h1>
-        <h1 className='pokemonName'>{prettyName(props?.pokemon.name)}</h1>
+        <h1 className='pokemonName'>{transformWords(props?.pokemon.name)}</h1>
       </div>
       <div className='row'>
         <Image
           className='nes-avatar avatar pokemonAvatar mx-auto'
-          alt={'Image of a ' + prettyName(props?.pokemon.name)}
+          alt={'Image of a ' + transformWords(props?.pokemon.name)}
           id='avatar'
           src={props?.pokemon.sprites?.front_default}
           width={256}

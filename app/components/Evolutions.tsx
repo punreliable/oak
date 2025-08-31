@@ -15,10 +15,10 @@ interface PokemonSpeciesAPIResponse {
   status: number;
 }
 
-const Evolutions = (props: any) => {
-  const id = props.id;
+const Evolutions = (props: number) => {
 
-  const requestURL = `https://pokeapi.co/api/v2/pokemon-species/${parseInt(id.toString())}/`;
+  const id = props;
+  const requestURL = `https://pokeapi.co/api/v2/pokemon-species/${id}/`;
 
   const fetchEvolutionChains = async (requestURL: string) => {
     const response: PokemonSpeciesAPIResponse = await axios.get(requestURL);
