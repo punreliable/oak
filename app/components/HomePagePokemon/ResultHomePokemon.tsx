@@ -48,7 +48,6 @@ const ResultHomePokemon = (props: PokemonFromAPI) => {
         <PokemonTypeList types={props.pokemon.types} />
       </div>
 
-
       <div className='row my-4'>
         <EvolutionsHandler id={pokemonID} />
       </div>
