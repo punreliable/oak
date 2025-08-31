@@ -5,7 +5,7 @@ import axios from 'axios';
 import ErrorHomePokemon from '@/app/components/HomePagePokemon/ErrorHomePokemon';
 import PendingHomePokemon from '@/app/components/HomePagePokemon/PendingHomePokemon';
 import ResultHomePokemon from '@/app/components/HomePagePokemon/ResultHomePokemon';
-import type {Pokemon} from '@/types/pokemon';
+import type { Pokemon } from '@/types/pokemon';
 
 const getPokemonNumber = () => {
   const number = Math.floor(Math.random() * 151) + 1;

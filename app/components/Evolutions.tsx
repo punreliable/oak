@@ -12,7 +12,6 @@ interface PokemonSpeciesAPIResponse {
 }
 
 const Evolutions = (props: { id: number }) => {
-
   const id = props.id.toString();
   const requestURL: string = 'https://pokeapi.co/api/v2/pokemon-species/' + id + '/';
 
