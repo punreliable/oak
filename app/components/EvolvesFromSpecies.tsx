@@ -25,7 +25,7 @@ const EvolvesFromSpecies = (props: { url: string }) => {
     return response;
   };
 
-  const { data, error, isLoading, isError } = useQuery({
+  const { data, isLoading, isError } = useQuery({
     queryKey: ['evolution-chain', url],
     queryFn: () => fetchEvolutionChains(url),
   });

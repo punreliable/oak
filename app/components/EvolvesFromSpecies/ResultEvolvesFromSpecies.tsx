@@ -24,7 +24,7 @@ const ResultEvolvesFromSpecies = (props: string) => {
     return response;
   };
 
-  const { data, error, isLoading, isError } = useQuery({
+  const { data, isLoading, isError } = useQuery({
     queryKey: ['parent', url],
     queryFn: () => fetchParentPokemon(url),
   });

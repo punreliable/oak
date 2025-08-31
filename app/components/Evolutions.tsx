@@ -2,12 +2,8 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-// import prettyName from '../../utilities/prettyName';
-// import { v4 as uuidv4 } from 'uuid';
 import ErrorEvolutions from './EvolutionsPerPokemon/ErrorEvolutions';
 import PendingEvolutions from './EvolutionsPerPokemon/PendingEvolutions';
-// import ResultEvolutions from './EvolutionsPerPokemon/ResultEvolutions';
-import EvolvesFromSpecies from '@/app/components/EvolvesFromSpecies';
 import type { PokemonSpecies } from '@/types/pokemon-species';
 
 interface PokemonSpeciesAPIResponse {
@@ -38,8 +34,12 @@ const Evolutions = (props: { id: number }) => {
 
   const evolutionChain = data?.data.evolution_chain ? data.data.evolution_chain : null;
 
-  console.log('Evolves From: ', evolvesFromSpecies);
-  console.log('Evolution Chain: ', evolutionChain);
+  if (evolvesFromSpecies) {
+    console.log('Evolves From: ', evolvesFromSpecies);
+  }
+  if (evolutionChain) {
+    console.log('Evolution Chain: ', evolutionChain);
+  }
 
   {
     isLoading && <PendingEvolutions />;
@@ -57,11 +57,10 @@ const Evolutions = (props: { id: number }) => {
         </div>
         <div className='row'>
           <p>A Pokemon</p>
-          {/* <EvolvesFromSpecies url={evolvesFromSpecies} /> */}
         </div>
       </>
     ) : (
-      data && ( // Ensures this renders only if data exists
+      data && (
         <>
           <div className='row'>
             <h2>Does not evolve from another pokemon</h2>

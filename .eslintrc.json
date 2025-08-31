@@ -6,7 +6,8 @@
   ],
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "@typescript-eslint/no-explicit-any": "off"
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-expressions": "off"
     // You typically don't need to add formatting rules like "quotes" here
     // because Prettier will handle them.
   }
