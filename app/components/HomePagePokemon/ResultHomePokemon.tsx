@@ -8,6 +8,7 @@ import MovesByPokemon from '@/app/components/MovesByPokemon';
 import transformWords from '@/utilities/transformWords';
 import Message from '@/app/components/ProfessorOak/Message';
 import EvolutionsHandler from '@/app/components/EvolutionsByPokemon/EvolutionsHandler';
+import EvolvesFromSpecies from '@/app/components/EvolutionsByPokemon/EvolvesFromSpecies';
 import type { Pokemon } from '@/types/pokemon';
 
 interface PokemonFromAPI {
@@ -33,7 +34,7 @@ const ResultHomePokemon = (props: PokemonFromAPI) => {
 
       <div className='row'>
         <div className='col-lg-8'>
-          <PokemonDescription pokemon={pokemonID} />
+          <PokemonDescription pokemon={props.pokemon.id} />
         </div>
         <div className='col-lg-4'>
           <PokemonStats pokemon={props.pokemon} />
@@ -46,10 +47,6 @@ const ResultHomePokemon = (props: PokemonFromAPI) => {
 
       <div className='row my-4'>
         <PokemonTypeList types={props.pokemon.types} />
-      </div>
-
-      <div className='row my-4'>
-        <EvolutionsHandler id={pokemonID} />
       </div>
 
       <div className='row my-4'>

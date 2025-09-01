@@ -1,44 +1,49 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 import EvolutionChainHandler from '@/app/components/EvolutionsByPokemon/EvolutionChainHandler';
-import EvolvesFromSpecies from '@/app/components/EvolutionsByPokemon/EvolvesFromSpecies';
 import type { PokemonSpecies } from '@/types/pokemon-species';
+import ErrorPokemon from '@/app/components/ErrorPokemon';
+import PendingPokemon from '@/app/components/PendingPokemon';
+
+interface PokemonSpeciesAPIResponse {
+  data: PokemonSpecies;
+  status: number;
+}
 
 const EvolutionsHandler = (props: { id: number }) => {
-
-  const [data, setData] = useState<PokemonSpecies | null>(null);
-  const [loading, setLoading] = useState(true);
   const pokemonID = props.id.toString();
+  const requestURL = `https://pokeapi.co/api/v2/pokemon-species/${pokemonID}`;
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${pokemonID}`);
-        const result: PokemonSpecies = await response.json();
-        setData(result);
-      } catch (err) {
-        console.error('Error fetching data:', err);
-      } finally {
-        setLoading(false);
-      }
+  async function fetchPokemonSpeciesData(requestURL: string) {
+    const response: PokemonSpeciesAPIResponse = await axios.get(requestURL);
+    if (response.status !== 200) {
+      throw new Error('Evolves from Species, could not be found.');
     }
-    fetchData();
-  }, [pokemonID]);
+    return response;
+  }
 
-  if (loading) return <p>Loading...</p>;
+  const { data, isLoading, isError } = useQuery({
+    queryKey: ['evolution-handler', requestURL],
+    queryFn: () => fetchPokemonSpeciesData(requestURL),
+  });
 
-  const showEvolvesFromSpecies = data?.evolves_from_species?.url;
-  const showEvolutionChain = data?.evolution_chain?.url;
+  if (isLoading) <PendingPokemon />;
+  if (isError) <ErrorPokemon />;
+
+  const showEvolutionChain = data?.data.evolution_chain?.url
+    ? data.data.evolution_chain?.url
+    : 'none';
 
   return (
     <div className='nes-container'>
-      {data && (showEvolutionChain || showEvolvesFromSpecies) && (
-        <div className='row' style={{ 'width': '100%' }}>
-          <h3 className='h3-responsive mb-4'>Evolutions</h3>
-        </div>
-      )}
-      {data && showEvolvesFromSpecies && <EvolvesFromSpecies species={showEvolvesFromSpecies} />}
-      {data && showEvolutionChain && <EvolutionChainHandler url={showEvolutionChain} />}
+      <div className='row' style={{ width: '100%' }}>
+        <h3 className='h3-responsive mb-4'>Evolution Chain</h3>
+      </div>
+      <div className='row' style={{ width: '100%' }}>
+        <EvolutionChainHandler url={showEvolutionChain} />
+      </div>
     </div>
   );
 };

@@ -2,6 +2,7 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
+import EvolvesFromSpecies from '@/app/components/EvolutionsByPokemon/EvolvesFromSpecies';
 
 interface PokemonDescriptionProps {
   pokemon: number;
@@ -40,6 +41,8 @@ const PokemonDescription: React.FC<PokemonDescriptionProps> = ({ pokemon }) => {
     },
   );
 
+  const isBasicPokemon = data?.data.evolves_from_species;
+
   if (isLoading) {
     return <div>Loading...</div>;
   }
@@ -51,6 +54,9 @@ const PokemonDescription: React.FC<PokemonDescriptionProps> = ({ pokemon }) => {
   return (
     <div className='col-md-12' style={style}>
       <p>Description: {description}</p>
+      {data?.data.evolves_from_species && (
+        <EvolvesFromSpecies species={data?.data.evolves_from_species.url} />
+      )}
     </div>
   );
 };
