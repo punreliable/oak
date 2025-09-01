@@ -31,10 +31,10 @@ const ResultHomePokemon = (props: PokemonFromAPI) => {
       />
 
       <div className='row'>
-        <div className='col-lg-8'>
+        <div className='col-lg-8' style={{ order: '2' }}>
           <PokemonDescription pokemon={props.pokemon.id} />
         </div>
-        <div className='col-lg-4'>
+        <div className='col-lg-4' style={{ order: '1' }}>
           <PokemonStats pokemon={props.pokemon} />
         </div>
       </div>

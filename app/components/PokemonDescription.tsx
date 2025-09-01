@@ -53,7 +53,8 @@ const PokemonDescription: React.FC<PokemonDescriptionProps> = ({ pokemon }) => {
 
   return (
     <div className='col-md-12' style={style}>
-      <p>Description: {description}</p>
+      <h4 className='responsive-h4'>Description:</h4>
+      <p>{description}</p>
       {isBasicPokemon && <EvolvesFromSpecies species={isBasicPokemon.url} />}
     </div>
   );

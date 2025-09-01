@@ -6,6 +6,7 @@ import type { EvolutionChainFromAPI } from '@/types/evolution-chain';
 import PendingPokemon from '@/app/components/PendingPokemon';
 import ErrorPokemon from '@/app/components/ErrorPokemon';
 import transformWords from '@/utilities/transformWords';
+import { v4 as uuidv4 } from 'uuid';
 
 const EvolutionChainHandler = (props: { url: string }) => {
   const chainURL: string = props.url;
@@ -30,17 +31,15 @@ const EvolutionChainHandler = (props: { url: string }) => {
     isError && <ErrorPokemon />;
   }
 
+  const evolvesTo = data?.data.chain.evolves_to.map((evolves_to) => {
+    return <p key={uuidv4()}>{transformWords(evolves_to.species.name)}</p>;
+  });
+
   return (
     <>
-      {data && (
-        <>
-          <p>This is part of an Evolution Chain</p>
-          <p>
-            {transformWords(data.data.chain.species.name)} evolves into{' '}
-            {transformWords(data.data.chain.evolves_to[0].species.name)}
-          </p>
-        </>
-      )}
+      <p>{data && transformWords(data.data.chain.species.name) + ' evolves into '}</p>
+
+      {data && evolvesTo}
     </>
   );
 };

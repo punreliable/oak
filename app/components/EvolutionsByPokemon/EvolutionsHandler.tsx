@@ -37,14 +37,14 @@ const EvolutionsHandler = (props: { id: number }) => {
     : 'none';
 
   return (
-    <div className='nes-container'>
+    <>
       <div className='row' style={{ width: '100%' }}>
         <h3 className='h3-responsive mb-4'>Evolution Chain</h3>
       </div>
       <div className='row' style={{ width: '100%' }}>
         <EvolutionChainHandler url={showEvolutionChain} />
       </div>
-    </div>
+    </>
   );
 };
 
