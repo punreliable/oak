@@ -39,6 +39,10 @@ const ResultHomePokemon = (props: PokemonFromAPI) => {
         </div>
       </div>
 
+      <div className='row my-4'>
+        <EvolutionsHandler id={props.pokemon.id} />
+      </div>
+
       <div className='row'>
         <h3 className='h3-responsive'>Type</h3>
       </div>
@@ -53,10 +57,6 @@ const ResultHomePokemon = (props: PokemonFromAPI) => {
 
       <div className='row my-4'>
         <PokemonAbilitiesList abilities={props.pokemon.abilities} />
-      </div>
-
-      <div className='row my-4'>
-        <EvolutionsHandler id={props.pokemon.id} />
       </div>
 
       <div className='row my-4'>
