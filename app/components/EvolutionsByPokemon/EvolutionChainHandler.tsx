@@ -1,11 +1,48 @@
+'use client';
+import React from 'react';
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
+import type { EvolutionChainFromAPI } from '@/types/evolution-chain';
+import PendingPokemon from '@/app/components/PendingPokemon';
+import ErrorPokemon from '@/app/components/ErrorPokemon';
+import transformWords from '@/utilities/transformWords';
+
 const EvolutionChainHandler = (props: { url: string }) => {
-  const chainURL = props.url;
+  const chainURL: string = props.url;
+
+  const fetchEvolutionChain = async (requestURL: string) => {
+    const response: EvolutionChainFromAPI = await axios.get(requestURL);
+    if (response.status !== 200) {
+      throw new Error('Evolution Chain could not be found.');
+    }
+    return response;
+  };
+
+  const { data, isLoading, isError } = useQuery({
+    queryKey: ['evolution-chain', chainURL],
+    queryFn: () => fetchEvolutionChain(chainURL),
+  });
+
+  {
+    isLoading && <PendingPokemon />;
+  }
+  {
+    isError && <ErrorPokemon />;
+  }
 
   return (
     <>
-      <p>This is part of an Evolution Chain</p>
-      <p>{chainURL}</p>
+      {data && (
+        <>
+          <p>This is part of an Evolution Chain</p>
+          <p>
+            {transformWords(data.data.chain.species.name)} evolves into{' '}
+            {transformWords(data.data.chain.evolves_to[0].species.name)}
+          </p>
+        </>
+      )}
     </>
   );
 };
+
 export default EvolutionChainHandler;

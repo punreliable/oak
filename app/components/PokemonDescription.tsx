@@ -54,9 +54,7 @@ const PokemonDescription: React.FC<PokemonDescriptionProps> = ({ pokemon }) => {
   return (
     <div className='col-md-12' style={style}>
       <p>Description: {description}</p>
-      {data?.data.evolves_from_species && (
-        <EvolvesFromSpecies species={data?.data.evolves_from_species.url} />
-      )}
+      {isBasicPokemon && <EvolvesFromSpecies species={isBasicPokemon.url} />}
     </div>
   );
 };

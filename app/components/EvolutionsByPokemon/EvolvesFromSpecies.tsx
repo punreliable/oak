@@ -42,7 +42,7 @@ const EvolvesFromSpecies = (props: { species: string }) => {
 
   return (
     <div className='row'>
-      <h4 className='h4-responsive'>This Evolves from Another Species.</h4>
+      <h5 className='h5-responsive'>Evolves from Another Species:</h5>
       {name && <p>{transformWords(name)}</p>}
     </div>
   );
