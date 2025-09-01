@@ -37,9 +37,10 @@ const EvolutionChainHandler = (props: { url: string }) => {
 
   return (
     <>
-      <p>{data && transformWords(data.data.chain.species.name) + ' evolves into '}</p>
-
-      {data && evolvesTo}
+      <p>
+        {data && transformWords(data.data.chain.species.name) + ' evolves into '}
+        {data && evolvesTo}
+      </p>
     </>
   );
 };

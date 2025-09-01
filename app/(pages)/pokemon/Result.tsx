@@ -7,6 +7,7 @@ import PokemonTypeList from '@/app/components/PokemonTypeList';
 import PokemonMoveList from '@/app/components/PokemonMoveList';
 import transformWords from '@/utilities/transformWords';
 import Message from '@/app/components/ProfessorOak/Message';
+import EvolutionsHandler from '@/app/components/EvolutionsByPokemon/EvolutionsHandler';
 
 const Result = (props: any) => {
   const pokemonID: string = props.pokemon.id;
@@ -29,16 +30,19 @@ const Result = (props: any) => {
         />
       </div>
 
-      <div className='row rowStats'>
-        <div className='col-md-12 col-lg-3 stats'>
+      <div className='row'>
+        <div className='col-lg-8' style={{ order: '2' }}>
+          <PokemonDescription pokemon={props.pokemon.id} />
+        </div>
+        <div className='col-lg-4' style={{ order: '1' }}>
           <PokemonStats pokemon={props.pokemon} />
         </div>
       </div>
-      <div className='row'>
-        <div className='col-md-12 col-lg-9'>
-          <PokemonDescription pokemon={props.pokemon.id} />
-        </div>
+
+      <div className='row my-4'>
+        <EvolutionsHandler id={props.pokemon.id} />
       </div>
+
       <div className='row'>
         <PokemonTypeList types={props.pokemon.types} />
       </div>

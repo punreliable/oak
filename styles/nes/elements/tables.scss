@@ -13,6 +13,7 @@ $background-color: vars.$background-color;
 .nes-table {
   table-layout: fixed;
   background-color: $background-color;
+  width: 100%;
 
   tr {
     margin-left: -0.25em;
@@ -66,7 +67,7 @@ $background-color: vars.$background-color;
     border-spacing: 0;
     border-collapse: separate;
 
-    @include mixins.compact-rounded-corners(true);
+    // @include mixins.compact-rounded-corners(true);
   }
 
   &.is-dark {
