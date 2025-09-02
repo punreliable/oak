@@ -52,13 +52,13 @@
     color: vars.$darkest-green;
     background: vars.$brightest-green;
     border-image-outset: 2;
-    box-shadow: 0 0 0 8px vars.$darkest-green;
+    box-shadow: 0 0 0 8px vars.$primary-green;
 
     &.from-left,
     &.from-right {
       &::before {
         background-color: vars.$brighter-green;
-        border-color: vars.$darkest-green;
+        border-color: vars.$darker-green;
       }
 
       &::after {
@@ -72,7 +72,7 @@
         box-shadow: -5px 10px 0 6px vars.$brightest-green;
       }
       &::after {
-        @include box-shadow(vars.$darkest-green);
+        @include box-shadow(vars.$darker-green);
       }
     }
 
@@ -81,7 +81,7 @@
         box-shadow: 5px 10px 0 6px vars.$brightest-green;
       }
       &::after {
-        @include box-shadow(vars.$darkest-green, false);
+        @include box-shadow(vars.$primary-green, false);
       }
     }
   }
@@ -108,7 +108,7 @@
       margin-right: 8px;
       color: vars.$brightest-green;
       background-color: vars.$brighter-green;
-      @include box-shadow(vars.$darkest-green);
+      @include box-shadow(vars.$primary-green);
     }
   }
 
@@ -133,7 +133,7 @@
       height: 4px;
       margin-left: 8px;
       background-color: vars.$brighter-green;
-      @include box-shadow(vars.$darkest-green, false);
+      @include box-shadow(vars.$primary-green, false);
     }
   }
 }
