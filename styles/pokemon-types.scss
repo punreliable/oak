@@ -1,6 +1,5 @@
 @use './variables' as vars;
 @use './mixins' as mixins;
-// @use '../gameboy' as gb;
 @use "sass:color";
 
 $border-size: vars.$border-size;
@@ -3220,8 +3219,7 @@ $base-color: $color-fairy;
 	border-color: vars.$color-white;
 
 	&::after {
-	  // position: absolute;
-position: relative;
+	  position: relative;
 	  background-color: vars.$base-color;
 
 	}

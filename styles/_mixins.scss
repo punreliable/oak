@@ -51,10 +51,10 @@
 	  border-image-width: 2;
 	  @include border-image-repeat();
 	  @if $isDark {
-		@include compact-border-image(vars.$brightest-green);
+		@include compact-border-image(vars.$darker-green);
 		border-image-outset: 0;
 	  } @else {
-		@include compact-border-image(vars.$darker-green);
+		@include compact-border-image(vars.$darkest-green);
 		border-image-outset: 2;
 	  }
 	}
