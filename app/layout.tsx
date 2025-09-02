@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Press_Start_2P } from 'next/font/google';
-import '@/node_modules/bootstrap/dist/css/bootstrap.css';
+// import '@/node_modules/bootstrap/dist/css/bootstrap.css';
 import './globals.scss';
 import { TanstackProvider } from './components/providers/tanstack-provider';
 import { SpeedInsights } from '@vercel/speed-insights/next';

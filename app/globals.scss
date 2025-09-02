@@ -349,3 +349,26 @@ h1, h2, h3, h4, h5, h6, p {
   }
 
 }
+
+.hide-on-small {
+  @media (max-width: 669px) {
+    display: none;
+  }
+}
+
+.hide-on-large {
+  @media (min-width: 670px) {
+    display: none;
+  }
+}
+
+@media (max-width: 669px) {
+  p > .nes-badge.basic {
+
+    width: 99%;
+    display: flex;
+    justify-content: center;
+    overflow: scroll;
+    
+  }
+}

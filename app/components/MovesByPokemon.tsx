@@ -18,9 +18,15 @@ const PokemonMoveList = (props: MoveList) => {
 
   function detectMoveLearnMethod(data: versionGroupDetails) {
     if (data.version_group_details[0].move_learn_method.name == 'level-up') {
-      return <td>Level: {data.version_group_details[0].level_learned_at}</td>;
+      return (
+        <td className='hide-on-small'>
+          <span className='hide-on-small'>Level: </span>
+          <span className='hide-on-large'>lvl </span>
+          {data.version_group_details[0].level_learned_at}
+        </td>
+      );
     } else {
-      return <td>N/A</td>;
+      return <td className='hide-on-small'>N/A</td>;
     }
   }
 
@@ -34,7 +40,9 @@ const PokemonMoveList = (props: MoveList) => {
           {transformWords(x.move.name)}
         </a>
       </td>
-      <td>{transformWords(x.version_group_details[0].move_learn_method.name)}</td>
+      <td className='hide-on-small'>
+        {transformWords(x.version_group_details[0].move_learn_method.name)}
+      </td>
       {detectMoveLearnMethod(x)}
     </tr>
   ));
@@ -44,8 +52,10 @@ const PokemonMoveList = (props: MoveList) => {
         <thead>
           <tr>
             <th>Move Name</th>
-            <th>Learned Method</th>
-            <th>Level Learned</th>
+            <th className='hide-on-small'>Learned Method</th>
+            <th className='hide-on-small'>
+              <span className='hide-on-small'>Level </span>Learned
+            </th>
           </tr>
         </thead>
         <tbody>{minified}</tbody>

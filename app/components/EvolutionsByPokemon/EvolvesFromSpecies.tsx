@@ -6,6 +6,7 @@ import transformWords from '@/utilities/transformWords';
 import PendingPokemon from '@/app/components/PendingPokemon';
 import ErrorPokemon from '@/app/components/ErrorPokemon';
 import type { PokemonSpecies } from '@/types/pokemon-species';
+import Link from 'next/link';
 
 interface PokemonSpeciesFromAPI {
   data: PokemonSpecies;
@@ -15,7 +16,7 @@ interface PokemonSpeciesFromAPI {
 const EvolvesFromSpecies = (props: { species: string }) => {
   const species = props.species;
   const requestURL: string = species;
-  console.log('Evolves From Species: ', props.species);
+  // console.log('Evolves From Species: ', props.species);
 
   async function fetchEvolvesFromSpecies(requestURL: string) {
     const response: PokemonSpeciesFromAPI = await axios.get(requestURL);
@@ -42,8 +43,14 @@ const EvolvesFromSpecies = (props: { species: string }) => {
 
   return (
     <div className='row'>
-      <h5 className='h5-responsive'>Evolves from Another Species:</h5>
-      {name && <p>{transformWords(name)}</p>}
+      <h5 className='h5-responsive pt-4'>Evolves from:</h5>
+      <p>
+        <Link href={`/pokemon/${name}`} className='nes-badge'>
+          <span className='is-warning' style={{ paddingLeft: '1rem', paddingRight: '1rem' }}>
+            {transformWords(name)}
+          </span>
+        </Link>
+      </p>
     </div>
   );
 };

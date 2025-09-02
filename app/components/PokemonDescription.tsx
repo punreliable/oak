@@ -3,6 +3,7 @@ import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import EvolvesFromSpecies from '@/app/components/EvolutionsByPokemon/EvolvesFromSpecies';
+import BasicPokemon from '@/app/components/EvolutionsByPokemon/BasicPokemon';
 
 interface PokemonDescriptionProps {
   pokemon: number;
@@ -56,6 +57,7 @@ const PokemonDescription: React.FC<PokemonDescriptionProps> = ({ pokemon }) => {
       <h4 className='responsive-h4'>Description:</h4>
       <p>{description}</p>
       {isBasicPokemon && <EvolvesFromSpecies species={isBasicPokemon.url} />}
+      {!isBasicPokemon && <BasicPokemon />}
     </div>
   );
 };

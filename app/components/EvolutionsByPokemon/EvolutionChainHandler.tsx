@@ -32,7 +32,7 @@ const EvolutionChainHandler = (props: { url: string }) => {
   }
 
   const evolvesTo = data?.data.chain.evolves_to.map((evolves_to) => {
-    return <p key={uuidv4()}>{transformWords(evolves_to.species.name)}</p>;
+    return <span key={uuidv4()}>{transformWords(evolves_to.species.name)}</span>;
   });
 
   return (
