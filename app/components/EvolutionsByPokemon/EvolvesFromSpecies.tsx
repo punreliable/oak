@@ -7,6 +7,7 @@ import PendingPokemon from '@/app/components/PendingPokemon';
 import ErrorPokemon from '@/app/components/ErrorPokemon';
 import type { PokemonSpecies } from '@/types/pokemon-species';
 import Link from 'next/link';
+import CardPokemon from '@/app/components/cards/CardPokemon';
 
 interface PokemonSpeciesFromAPI {
   data: PokemonSpecies;
@@ -16,7 +17,6 @@ interface PokemonSpeciesFromAPI {
 const EvolvesFromSpecies = (props: { species: string }) => {
   const species = props.species;
   const requestURL: string = species;
-  // console.log('Evolves From Species: ', props.species);
 
   async function fetchEvolvesFromSpecies(requestURL: string) {
     const response: PokemonSpeciesFromAPI = await axios.get(requestURL);
@@ -32,11 +32,9 @@ const EvolvesFromSpecies = (props: { species: string }) => {
   });
 
   const name: string = data?.data.name ? data.data.name : 'Unknown';
-
   {
     isLoading && <PendingPokemon />;
   }
-
   {
     isError && <ErrorPokemon />;
   }
@@ -44,6 +42,7 @@ const EvolvesFromSpecies = (props: { species: string }) => {
   return (
     <div className='row'>
       <h5 className='h5-responsive pt-4'>Evolves from:</h5>
+      <CardPokemon name={name} />
       <p>
         <Link href={`/pokemon/${name}`} className='nes-badge'>
           <span className='is-warning' style={{ paddingLeft: '1rem', paddingRight: '1rem' }}>

@@ -2,12 +2,18 @@
 import React, { useEffect, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import ErrorHomePokemon from '@/app/components/HomePagePokemon/ErrorHomePokemon';
-import PendingHomePokemon from '@/app/components/HomePagePokemon/PendingHomePokemon';
+import ErrorPokemon from '@/app/components/ErrorPokemon';
+import PendingPokemon from '@/app/components/PendingPokemon';
 import ResultHomePokemon from '@/app/components/HomePagePokemon/ResultHomePokemon';
+import type {Pokemon} from '@/types/pokemon';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 export const dynamicParams = true;
+
+interface PokemonFromAPI {
+  data: Pokemon,
+  status: number
+}
 
 const getPokemonNumber = () => {
   const number = Math.floor(Math.random() * 151) + 1;
@@ -22,19 +28,19 @@ const Home = () => {
   useEffect(() => {
     setIsClient(true);
   }, []);
-  const { data, error, isLoading } = useQuery({
+  const { data, isError, isLoading } = useQuery({
     queryKey: ['pokemon'],
     queryFn: async () => {
       const id = getPokemonNumber();
-      const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
+      const response: PokemonFromAPI = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
       return response.data;
     },
   });
   if (!isClient) {
     return null;
   }
-  if (isLoading) return <PendingHomePokemon />;
-  if (error) return <ErrorHomePokemon />;
+  {isLoading &&  <PendingPokemon />}
+  {isError && <ErrorPokemon />}
 
   return (
     <div className='App' style={{ margin: 'auto' }}>
