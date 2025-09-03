@@ -32,11 +32,11 @@ const Result = (props: any) => {
 
       <div className='row'>
         <div className='col-lg-8' style={{ order: '2' }}>
-          <PokemonDescription pokemon={props.pokemon.id} />
+          <PokemonDescription data={props.pokemon} />
         </div>
-        <div className='col-lg-4' style={{ order: '1' }}>
+        {/* <div className='col-lg-4' style={{ order: '1' }}>
           <PokemonStats pokemon={props.pokemon} />
-        </div>
+        </div> */}
       </div>
 
       <div className='row my-4'>

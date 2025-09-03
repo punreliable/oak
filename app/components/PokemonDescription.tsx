@@ -4,33 +4,17 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import EvolvesFromSpecies from '@/app/components/EvolutionsByPokemon/EvolvesFromSpecies';
 import BasicPokemon from '@/app/components/EvolutionsByPokemon/BasicPokemon';
+import type {PokemonSpecies} from '@/types/pokemon-species';
 
 interface PokemonDescriptionProps {
-  pokemon: number;
+  data: PokemonSpecies;
 }
 
-const fetchPokemonBaseHappiness = async (requestURL: string) => {
-  const response = await axios.get(requestURL);
-  if (response.status !== 200) {
-    throw new Error('Happiness could not be found.');
-  }
-  return response;
-};
+const PokemonDescription = ( props: PokemonDescriptionProps ) => {
+ 
+  console.log('Stats in Description: ', props.data);
 
-const style: React.CSSProperties = {
-  textAlign: 'left',
-};
-
-const PokemonDescription: React.FC<PokemonDescriptionProps> = ({ pokemon }) => {
-  const requestURL = `https://pokeapi.co/api/v2/pokemon-species/${parseInt(pokemon.toString())}/`;
-
-  // console.log(requestURL);
-  const { data, error, isLoading, isError } = useQuery({
-    queryKey: ['pokemon-species', requestURL],
-    queryFn: () => fetchPokemonBaseHappiness(requestURL),
-  });
-
-  const description = data?.data.flavor_text_entries.map(
+  const description = props?.data?.flavor_text_entries.map(
     (flavor: {
       flavor_text: string;
       language: { name: string; url: string };
@@ -41,24 +25,23 @@ const PokemonDescription: React.FC<PokemonDescriptionProps> = ({ pokemon }) => {
       }
     },
   );
-
-  const isBasicPokemon = data?.data.evolves_from_species;
-
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
-  if (isError) {
-    return <div>Error: {error.message}</div>;
-  }
+  const isBasicPokemon = props.data?.evolves_from_species;
 
   return (
-    <div className='col-md-12' style={style}>
-      <h4 className='responsive-h4'>Description:</h4>
-      <p>{description}</p>
-      {isBasicPokemon && <EvolvesFromSpecies species={isBasicPokemon.url} />}
-      {!isBasicPokemon && <BasicPokemon />}
-    </div>
+    <>
+      {description &&
+        <>
+          <h4 className='responsive-h4'>Description:</h4>
+          <p>{description}</p>
+        </>
+      }
+
+      <div className='col-md-12'>
+        {isBasicPokemon && <EvolvesFromSpecies species={props.data} />}
+        {!isBasicPokemon && <BasicPokemon />}
+      </div>
+    </>
+
   );
 };
 

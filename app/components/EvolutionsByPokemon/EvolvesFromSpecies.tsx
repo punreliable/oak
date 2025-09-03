@@ -14,9 +14,9 @@ interface PokemonSpeciesFromAPI {
   status: number;
 }
 
-const EvolvesFromSpecies = (props: { species: string }) => {
+const EvolvesFromSpecies = (props: { species: PokemonSpecies }) => {
   const species = props.species;
-  const requestURL: string = species;
+  const requestURL: string = `https://pokeapi.co/pokemon/${species.name}`;
 
   async function fetchEvolvesFromSpecies(requestURL: string) {
     const response: PokemonSpeciesFromAPI = await axios.get(requestURL);
@@ -42,7 +42,7 @@ const EvolvesFromSpecies = (props: { species: string }) => {
   return (
     <div className='row'>
       <h5 className='h5-responsive pt-4'>Evolves from:</h5>
-      <CardPokemon name={name} />
+      {/* <CardPokemon name={name} /> */}
       <p>
         <Link href={`/pokemon/${name}`} className='nes-badge'>
           <span className='is-warning' style={{ paddingLeft: '1rem', paddingRight: '1rem' }}>

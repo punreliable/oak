@@ -1,20 +1,53 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Image from 'next/image';
+import {useQuery} from '@tanstack/react-query';
+import axios from 'axios';
+import PendingPokemon from '@/app/components/PendingPokemon';
+import ErrorPokemon from '@/app/components/ErrorPokemon';
 import PokemonDescription from '@/app/components/PokemonDescription';
 import PokemonStats from '@/app/components/PokemonStats';
 import PokemonAbilitiesList from '@/app/components/PokemonAbilitiesList';
 import PokemonTypeList from '@/app/components/PokemonTypeList';
 import MovesByPokemon from '@/app/components/MovesByPokemon';
+import EvolvesFromSpecies from '@/app/components/EvolutionsByPokemon/EvolvesFromSpecies';
+import BasicPokemon from '@/app/components/EvolutionsByPokemon/BasicPokemon';
 import transformWords from '@/utilities/transformWords';
 import Message from '@/app/components/ProfessorOak/Message';
 import EvolutionsHandler from '@/app/components/EvolutionsByPokemon/EvolutionsHandler';
 import type { Pokemon } from '@/types/pokemon';
+import type { PokemonSpecies } from '@/types/pokemon-species';
 
 interface PokemonFromAPI {
   pokemon: Pokemon;
 }
 
+interface PokemonSpeciesFromAPI {
+  data: PokemonSpecies,
+  status: number
+}
+
 const ResultHomePokemon = (props: PokemonFromAPI) => {
+
+  async function fetchSpeciesData(requestURL: string) {
+    const response: PokemonSpeciesFromAPI = await axios.get(requestURL);
+    if (response.status !== 200) {
+      throw new Error('Evolves from Species, could not be found.');
+    }
+    return response;
+  }
+
+  const {data, isLoading, isError} = useQuery({
+    queryKey: ['species'],
+    queryFn: () => fetchSpeciesData(`https://pokeapi.co/api/v2/pokemon-species/${props.pokemon.name}`)
+
+  });
+
+  {isLoading && <PendingPokemon />}
+  
+  {isError && <ErrorPokemon />}
+
+  {data && console.log('Pokemon or Species: ', data?.data)}
+
   return (
     <div className='container'>
       <h1 className='oakHello'>Hello,</h1>
@@ -31,11 +64,11 @@ const ResultHomePokemon = (props: PokemonFromAPI) => {
       />
 
       <div className='row'>
-        <div className='col-lg-8' style={{ order: '2' }}>
-          <PokemonDescription pokemon={props.pokemon.id} />
-        </div>
         <div className='col-lg-4' style={{ order: '1' }}>
-          <PokemonStats pokemon={props.pokemon} />
+          {data && <PokemonStats data={props.pokemon} stats={data.data}/>}
+        </div>
+        <div className='col-lg-8' style={{ order: '2' }}>
+          {data && <PokemonDescription data={data.data}/>}
         </div>
       </div>
 

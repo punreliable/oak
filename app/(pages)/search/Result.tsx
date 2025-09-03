@@ -30,7 +30,7 @@ const Result = (props: any) => {
           {props.pokemon.base_experience && <p>Base XP: {props.pokemon.base_experience}xp</p>}
         </div>
         <div className='col-md-12 col-lg-9'>
-          <PokemonDescription pokemon={props.pokemon.id} />
+          <PokemonDescription data={props.pokemon} />
         </div>
       </div>
 

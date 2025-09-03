@@ -60,11 +60,11 @@ export default async function Page({ params }: { params: any }) {
           />
           <div className='row'>
             <div className='col-lg-8'>
-              <PokemonDescription pokemon={pokemon.id} />
+              <PokemonDescription data={pokemon} />
             </div>
-            <div className='col-lg-4'>
+            {/* <div className='col-lg-4'>
               <PokemonStats pokemon={pokemon} />
-            </div>
+            </div> */}
           </div>
           <div className='row'>
             <h3 className='h3-responsive'>Type</h3>

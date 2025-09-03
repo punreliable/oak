@@ -3,49 +3,33 @@ import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import prettyName from '@/utilities/prettyName';
+import type {Pokemon} from '@/types/pokemon';
+import type {PokemonSpecies} from '@/types/pokemon-species';
 
-interface PokemonStatsProps {
-  pokemon: any; // Or a more specific type for the pokemon object
+interface PokemonStatsAsProps {
+  data: Pokemon,
+  stats: PokemonSpecies
 }
 
-const fetchPokemonSpeciesStats = async (requestURL: string) => {
-  const response = await axios.get(requestURL);
-  if (response.status !== 200) {
-    throw new Error('Stats could not be found.');
-  }
-  return response;
-};
-
-const PokemonStats: React.FC<PokemonStatsProps> = ({ pokemon }) => {
-  const requestURL = `https://pokeapi.co/api/v2/pokemon-species/${parseInt(pokemon.id.toString())}/`;
-  const { data, error, isLoading, isError } = useQuery({
-    queryKey: ['pokemon-species', requestURL],
-    queryFn: () => fetchPokemonSpeciesStats(requestURL),
-  });
-
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
-  if (isError) {
-    return <div>Error: {error.message}</div>;
-  }
+const PokemonStats = ( props: PokemonStatsAsProps ) => {
+  // console.log('Stats: ', props.stats);
+  // console.log('Data: ', props.data);
 
   return (
     <div>
-      {pokemon.height && <p>Height: {pokemon.height}in</p>}
-      {pokemon.weight && <p>Weight: {pokemon.weight}lb</p>}
-      {pokemon.base_experience && <p>Base XP: {pokemon.base_experience}xp</p>}
-      {(data?.data.base_happiness || data?.data.base_happiness === 0) && (
-        <p>Base Happiness: {data.data.base_happiness}</p>
+      {props.data.height && <p>Height: {props.data.height}in</p>}
+      {props.data.weight && <p>Weight: {props.data.weight}lb</p>}
+      {props.data.base_experience && <p>Base XP: {props.data.base_experience}xp</p>}
+      {(props?.stats.base_happiness || props?.stats.base_happiness === 0) && (
+        <p>Base Happiness: {props.stats.base_happiness}</p>
       )}
-      {data?.data.capture_rate && <p>Capture Rate: {data.data.capture_rate}</p>}
-      {data?.data.color.name && <p>Color: {prettyName(data.data.color.name)}</p>}
-      {data?.data.gender_rate && <p>Gender Rate: {data.data.gender_rate}</p>}
-      {data?.data.hatch_counter && <p>Hatch Counter: {data.data.hatch_counter}</p>}
-      {data?.data.is_baby && <p className='nes-text is-primary'>This is a Baby Pokemon</p>}
-      {data?.data.is_legendary && <p className='nes-text is-error'>This is a Legendary Pokemon</p>}
-      {data?.data.is_legendary && <p className='nes-text is-warning'>This is a Mythical Pokemon</p>}
+      {props.stats.capture_rate && <p>Capture Rate: {props.stats.capture_rate}</p>}
+      {props.stats.color.name && <p>Color: {prettyName(props.stats.color.name)}</p>}
+      {props.stats.gender_rate && <p>Gender Rate: {props.stats.gender_rate}</p>}
+      {props.stats.hatch_counter && <p>Hatch Counter: {props.stats.hatch_counter}</p>}
+      {props.stats.is_baby && <p className='nes-text is-primary'>This is a Baby Pokemon</p>}
+      {props.stats.is_legendary && <p className='nes-text is-error'>This is a Legendary Pokemon</p>}
+      {props.stats.is_legendary && <p className='nes-text is-warning'>This is a Mythical Pokemon</p>}
     </div>
   );
 };
