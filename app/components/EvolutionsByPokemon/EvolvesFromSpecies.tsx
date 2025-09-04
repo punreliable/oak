@@ -7,7 +7,7 @@ import PendingPokemon from '@/app/components/PendingPokemon';
 import ErrorPokemon from '@/app/components/ErrorPokemon';
 import type { PokemonSpecies } from '@/types/pokemon-species';
 import Link from 'next/link';
-import CardPokemon from '@/app/components/cards/CardPokemon';
+// import CardPokemon from '@/app/components/cards/CardPokemon';
 
 interface PokemonSpeciesFromAPI {
   data: PokemonSpecies;

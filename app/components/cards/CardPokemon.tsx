@@ -18,7 +18,7 @@ const CardPokemonType = (props: { link: string }) => {
   setLink(props.link);
 
   async function fetchParentPokemon(url: string) {
-    const response = await axios.get(url);
+    const response: PokemonFromAPI = await axios.get(url);
     return response.data;
   }
 

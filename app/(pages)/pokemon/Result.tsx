@@ -1,5 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
+import axios from 'axios';
+import { useQuery } from '@tanstack/react-query';
 import PokemonDescription from '@/app/components/PokemonDescription';
 import PokemonStats from '@/app/components/PokemonStats';
 import PokemonAbilitiesList from '@/app/components/PokemonAbilitiesList';
@@ -8,11 +10,38 @@ import PokemonMoveList from '@/app/components/PokemonMoveList';
 import transformWords from '@/utilities/transformWords';
 import Message from '@/app/components/ProfessorOak/Message';
 import EvolutionsHandler from '@/app/components/EvolutionsByPokemon/EvolutionsHandler';
+import type { PokemonSpecies } from '@/types/pokemon-species';
+import PendingPokemon from '@/app/components/PendingPokemon';
+import ErrorPokemon from '@/app/components/ErrorPokemon';
+
+interface PokemonSpeciesFromAPI {
+  species: PokemonSpecies;
+  status: number;
+}
 
 const Result = (props: any) => {
   const pokemonID: string = props.pokemon.id;
-  console.log('Pokemon ID: ', pokemonID);
 
+  async function fetchSpeciesData(requestURL: string) {
+    const response: PokemonSpeciesFromAPI = await axios.get(requestURL);
+    if (response.status !== 200) {
+      throw new Error('Evolves from Species, could not be found.');
+    }
+    return response;
+  }
+
+  const { data, isLoading, isError } = useQuery({
+    queryKey: ['species'],
+    queryFn: () =>
+      fetchSpeciesData(`https://pokeapi.co/api/v2/pokemon-species/${props.pokemon.name}`),
+  });
+
+  {
+    isLoading && <PendingPokemon />;
+  }
+  {
+    isError && <ErrorPokemon />;
+  }
   return (
     <section className='App container'>
       <div className='row'>
@@ -34,9 +63,9 @@ const Result = (props: any) => {
         <div className='col-lg-8' style={{ order: '2' }}>
           <PokemonDescription data={props.pokemon} />
         </div>
-        {/* <div className='col-lg-4' style={{ order: '1' }}>
-          <PokemonStats pokemon={props.pokemon} />
-        </div> */}
+        <div className='col-lg-4' style={{ order: '1' }}>
+          {data && <PokemonStats data={props.pokemon} stats={data.species} />}
+        </div>
       </div>
 
       <div className='row my-4'>

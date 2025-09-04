@@ -2,7 +2,7 @@ import prettyName from '@/utilities/prettyName';
 import Image from 'next/image';
 import { Pokemon } from '@/types/pokemon';
 import PokemonDescription from '@/app/components/PokemonDescription';
-import PokemonStats from '@/app/components/PokemonStats';
+// import PokemonStats from '@/app/components/PokemonStats';
 import PokemonAbilitiesList from '@/app/components/PokemonAbilitiesList';
 import PokemonMoveList from '@/app/components/PokemonMoveList';
 import PokemonTypeList from '@/app/components/PokemonTypeList';
@@ -63,7 +63,7 @@ export default async function Page({ params }: { params: any }) {
               <PokemonDescription data={pokemon} />
             </div>
             {/* <div className='col-lg-4'>
-              <PokemonStats pokemon={pokemon} />
+              <PokemonStats data={pokemon} stats={} />
             </div> */}
           </div>
           <div className='row'>

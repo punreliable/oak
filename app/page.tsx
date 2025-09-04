@@ -5,14 +5,14 @@ import axios from 'axios';
 import ErrorPokemon from '@/app/components/ErrorPokemon';
 import PendingPokemon from '@/app/components/PendingPokemon';
 import ResultHomePokemon from '@/app/components/HomePagePokemon/ResultHomePokemon';
-import type {Pokemon} from '@/types/pokemon';
+import type { Pokemon } from '@/types/pokemon';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 export const dynamicParams = true;
 
 interface PokemonFromAPI {
-  data: Pokemon,
-  status: number
+  data: Pokemon;
+  status: number;
 }
 
 const getPokemonNumber = () => {
@@ -39,8 +39,12 @@ const Home = () => {
   if (!isClient) {
     return null;
   }
-  {isLoading &&  <PendingPokemon />}
-  {isError && <ErrorPokemon />}
+  {
+    isLoading && <PendingPokemon />;
+  }
+  {
+    isError && <ErrorPokemon />;
+  }
 
   return (
     <div className='App' style={{ margin: 'auto' }}>
