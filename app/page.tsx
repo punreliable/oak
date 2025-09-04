@@ -8,8 +8,6 @@ import ResultHomePokemon from '@/app/components/HomePagePokemon/ResultHomePokemo
 import type { Pokemon } from '@/types/pokemon';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
-export const dynamicParams = true;
-
 interface PokemonFromAPI {
   data: Pokemon;
   status: number;
