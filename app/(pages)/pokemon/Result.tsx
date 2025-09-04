@@ -42,6 +42,7 @@ const Result = (props: any) => {
   {
     isError && <ErrorPokemon />;
   }
+
   return (
     <section className='App container'>
       <div className='row'>
