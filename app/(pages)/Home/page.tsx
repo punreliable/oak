@@ -2,8 +2,8 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import ErrorHomePokemon from '@/app/components/HomePagePokemon/ErrorHomePokemon';
-import PendingHomePokemon from '@/app/components/HomePagePokemon/PendingHomePokemon';
+import ErrorPokemon from '@/app/components/ErrorPokemon';
+import PendingPokemon from '@/app/components/PendingPokemon';
 import ResultHomePokemon from '@/app/components/HomePagePokemon/ResultHomePokemon';
 import type { Pokemon } from '@/types/pokemon';
 
@@ -29,9 +29,9 @@ const OtherHome = () => {
     },
   });
 
-  if (isLoading) return <PendingHomePokemon />;
+  if (isLoading) return <PendingPokemon />;
 
-  if (error) return <ErrorHomePokemon />;
+  if (error) return <ErrorPokemon />;
 
   return (
     <div className='App' style={{ margin: 'auto' }}>
