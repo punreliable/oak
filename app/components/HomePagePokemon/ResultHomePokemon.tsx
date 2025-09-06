@@ -43,7 +43,7 @@ const ResultHomePokemon = (props: PokemonFromAPI) => {
 	console.log('Props: ', props);
 
 	const baseStats = props?.pokemon.stats;
-
+	console.log('baseStats: ', baseStats);
 	{
 		isLoading && <PendingPokemon />;
 	}

@@ -7,4 +7,6 @@ export interface PokemonBaseStat {
 	};
 }
 
-export type PokemonBaseStats = PokemonBaseStat[];
+export type PokemonBaseStats = {
+	stats: PokemonBaseStat[];
+};

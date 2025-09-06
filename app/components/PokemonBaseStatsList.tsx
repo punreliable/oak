@@ -2,9 +2,8 @@
 import transformWords from '@/utilities/transformWords';
 import type { PokemonBaseStat, PokemonBaseStats } from '@/types/pokemon-base-stats';
 
-const PokemonBaseStatsList = (stats: PokemonBaseStats) => {
-	const listedStats = stats?.stats;
-	const output = listedStats.map((listedStat: PokemonBaseStat) => {
+const PokemonBaseStatsList = (props: PokemonBaseStats) => {
+	const output = props.stats.map((listedStat: PokemonBaseStat) => {
 		return (
 			<li key={listedStat.stat.name}>
 				{transformWords(listedStat.stat.name)}: {listedStat.base_stat}
