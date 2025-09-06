@@ -43,7 +43,6 @@ export interface Pokemon {
 	is_default: boolean;
 	location_area_encounters: string;
 	moves: MoveList;
-
 	version_group_details: {
 		level_learned_at: number;
 		move_learn_method: {

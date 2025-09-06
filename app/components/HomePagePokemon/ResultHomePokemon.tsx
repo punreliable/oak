@@ -5,6 +5,7 @@ import axios from 'axios';
 import PendingPokemon from '@/app/components/PendingPokemon';
 import ErrorPokemon from '@/app/components/ErrorPokemon';
 import PokemonDescription from '@/app/components/PokemonDescription';
+import PokemonBaseStatsList from '@/app/components/PokemonBaseStatsList';
 import PokemonStats from '@/app/components/PokemonStats';
 import PokemonAbilitiesList from '@/app/components/PokemonAbilitiesList';
 import PokemonTypeList from '@/app/components/PokemonTypeList';
@@ -39,6 +40,10 @@ const ResultHomePokemon = (props: PokemonFromAPI) => {
 			fetchSpeciesData(`https://pokeapi.co/api/v2/pokemon-species/${props.pokemon.name}`),
 	});
 
+	console.log('Props: ', props);
+
+	const baseStats = props?.pokemon.stats;
+
 	{
 		isLoading && <PendingPokemon />;
 	}
@@ -64,6 +69,8 @@ const ResultHomePokemon = (props: PokemonFromAPI) => {
 
 			<div className='row'>
 				<div className='col-lg-4' style={{ order: '1' }}>
+					{baseStats && <PokemonBaseStatsList stats={baseStats} />}
+
 					{data && <PokemonStats data={props.pokemon} stats={data.data} />}
 				</div>
 				<div className='col-lg-8' style={{ order: '2' }}>

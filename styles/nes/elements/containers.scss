@@ -1,5 +1,5 @@
 @use '../../mixins' as mixins;
-@use '../../variables' as variables;
+@use '../../variables' as vars;
 
 .nes-container, .nesContainer {
   margin: auto;
@@ -8,7 +8,8 @@
   flex-wrap: wrap;
   position: relative;
   padding: 1.5rem 2rem;
-  border-color: black;
+//  border-color: black;
+  border-color: vars.$darkest-green;
   border-style: solid;
   border-width: 4px;
 
@@ -30,7 +31,7 @@
       padding: 0 0.5rem;
       margin: -1.8rem 0 1rem;
       font-size: 1rem;
-      background-color: variables.$background-color;
+      background-color: vars.$background-color;
     }
 
     &.is-centered {
@@ -48,26 +49,26 @@
 
   &.is-dark, .isDark {
     position: relative;
-    margin: variables.$border-size;
-    color: variables.$background-color;
-    background-color: variables.$base-color;
-    border-color: white;
+    margin: vars.$border-size;
+    color: vars.$background-color;
+    background-color: vars.$base-color;
+    border-color: vars.$darker-green;
 
     &::after {
       position: absolute;
-      top: - variables.$border-size * 1.8;
-      right: - variables.$border-size * 1.8;
-      bottom: - variables.$border-size * 1.8;
-      left: - variables.$border-size * 1.8;
+      top: - vars.$border-size * 1.8;
+      right: - vars.$border-size * 1.8;
+      bottom: - vars.$border-size * 1.8;
+      left: - vars.$border-size * 1.8;
       z-index: -1;
       content: "";
-      background-color: variables.$base-color;
+      background-color: vars.$base-color;
     }
 
     &.with-title {
       > .title {
-        color: variables.$background-color;
-        background-color: variables.$base-color;
+        color: vars.$background-color;
+        background-color: vars.$base-color;
       }
     }
   }
@@ -75,7 +76,7 @@
   &.is-rounded {
     @include mixins.rounded-corners();
     @include mixins.standard-padding();
-    margin: variables.$border-size;
+    margin: vars.$border-size;
 
     &.with-title {
       > .title {

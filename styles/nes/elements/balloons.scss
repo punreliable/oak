@@ -1,5 +1,6 @@
 @use '../../variables' as vars;
 @use '../../mixins' as mixins;
+@use "sass:color";
 
 @mixin box-shadow($color, $fromLeft: true) {
   @if $fromLeft {
@@ -19,6 +20,7 @@
       -4px 0,
       4px 0,
       4px 4px $color,
+      // 4px 4px color.adjust($color, $lightness: 10),
       0 4px,
       8px 4px,
       4px 8px,
@@ -81,7 +83,7 @@
         box-shadow: 5px 10px 0 6px vars.$brightest-green;
       }
       &::after {
-        @include box-shadow(vars.$primary-green, false);
+        @include box-shadow(vars.$darker-green, false);
       }
     }
   }
