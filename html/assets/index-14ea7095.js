@@ -30617,28 +30617,26 @@ function hdt({ center: t, config: e, graph: r, selection: o }) {
 }
 function ddt({ config: t, center: e, graph: r, selection: o }) {
 	o == null ||
-		o
-			.select('.link__label')
-			.attr('transform', (l) =>
-				l.source.x === void 0 ||
-				l.source.y === void 0 ||
-				l.target.x === void 0 ||
-				l.target.y === void 0
-					? 'translate(0, 0)'
-					: l.source.id === l.target.id
-						? Go.reflexive.labelTransform({ config: t, node: l.source, center: e })
-						: Eb(r, l.source, l.target)
-							? Go.arc.labelTransform({
-									config: t,
-									source: l.source,
-									target: l.target,
-								})
-							: Go.line.labelTransform({
-									config: t,
-									source: l.source,
-									target: l.target,
-								}),
-			);
+		o.select('.link__label').attr('transform', (l) =>
+			l.source.x === void 0 ||
+			l.source.y === void 0 ||
+			l.target.x === void 0 ||
+			l.target.y === void 0
+				? 'translate(0, 0)'
+				: l.source.id === l.target.id
+					? Go.reflexive.labelTransform({ config: t, node: l.source, center: e })
+					: Eb(r, l.source, l.target)
+						? Go.arc.labelTransform({
+								config: t,
+								source: l.source,
+								target: l.target,
+							})
+						: Go.line.labelTransform({
+								config: t,
+								source: l.source,
+								target: l.target,
+							}),
+		);
 }
 function Eb(t, e, r) {
 	return (
