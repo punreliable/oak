@@ -1,5 +1,5 @@
 const capitalizeAllCharacters = (input: string): string => {
-  return input.toUpperCase();
+	return input.toUpperCase();
 };
 
 export default capitalizeAllCharacters;

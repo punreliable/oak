@@ -2,20 +2,20 @@
 import React from 'react';
 
 export interface SinglePokemonData {
-  name: string;
-  url: string;
+	name: string;
+	url: string;
 }
 
 export interface TilePokemonProps {
-  pokemon: SinglePokemonData;
+	pokemon: SinglePokemonData;
 }
 
 const TilePokemon = () => {
-  return (
-    <div className='tilePokemon'>
-      <h1>Hello World!</h1>
-    </div>
-  );
+	return (
+		<div className='tilePokemon'>
+			<h1>Hello World!</h1>
+		</div>
+	);
 };
 
 export default TilePokemon;

@@ -7,20 +7,20 @@ import Pending from './Pending';
 import Result from './Result';
 
 const PokemonPage = (pokemon: { pokemon: string }) => {
-  const search: string = pokemon.pokemon;
-  const { data, error, isLoading } = useQuery({
-    queryKey: ['pokemon'],
-    queryFn: async () => {
-      const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${search}`);
-      return response.data;
-    },
-  });
+	const search: string = pokemon.pokemon;
+	const { data, error, isLoading } = useQuery({
+		queryKey: ['pokemon'],
+		queryFn: async () => {
+			const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${search}`);
+			return response.data;
+		},
+	});
 
-  if (isLoading) return <Pending />;
+	if (isLoading) return <Pending />;
 
-  if (error) return <Error />;
+	if (error) return <Error />;
 
-  if (data) return <Result pokemon={data} />;
+	if (data) return <Result pokemon={data} />;
 };
 
 export default PokemonPage;

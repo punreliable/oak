@@ -7,28 +7,30 @@ import DamageRelationsPending from '@/app/components/DamageRelations/DamageRelat
 import DamageRelationsResult from '@/app/components/DamageRelations/DamageRelationsResult';
 import prettyName from '@/utilities/prettyName';
 const PokemonTypeBugPage = () => {
-  const typeID: string = 'bug';
-  const { data, error, isLoading } = useQuery({
-    queryKey: ['type'],
-    queryFn: async () => {
-      const id: string = typeID;
-      const response = await axios.get(`https://pokeapi.co/api/v2/type/${id}`);
-      return response.data;
-    },
-  });
+	const typeID: string = 'bug';
+	const { data, error, isLoading } = useQuery({
+		queryKey: ['type'],
+		queryFn: async () => {
+			const id: string = typeID;
+			const response = await axios.get(`https://pokeapi.co/api/v2/type/${id}`);
+			return response.data;
+		},
+	});
 
-  if (isLoading) return <DamageRelationsPending />;
+	if (isLoading) return <DamageRelationsPending />;
 
-  if (error) return <DamageRelationsError />;
+	if (error) return <DamageRelationsError />;
 
-  return (
-    <section className={`App container container-type-${typeID}`}>
-      <div className='row'>
-        <h1 className='responsive-h1 text-center gameboy mb-4'>{prettyName(typeID)} Type</h1>
-      </div>
-      {data && <DamageRelationsResult damage_relations={data} />}
-    </section>
-  );
+	return (
+		<section className={`App container container-type-${typeID}`}>
+			<div className='row'>
+				<h1 className='responsive-h1 text-center gameboy mb-4'>
+					{prettyName(typeID)} Type
+				</h1>
+			</div>
+			{data && <DamageRelationsResult damage_relations={data} />}
+		</section>
+	);
 };
 
 export default PokemonTypeBugPage;

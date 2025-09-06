@@ -1,7 +1,7 @@
 declare module '*.svg' {
-  const content: any;
+	const content: any;
 
-  export default content;
+	export default content;
 }
 
 export type SVG = any;
