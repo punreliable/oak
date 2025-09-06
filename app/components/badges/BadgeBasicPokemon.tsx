@@ -1,4 +1,4 @@
-const BasicPokemon = () => {
+const BadgeBasicPokemon = () => {
 	return (
 		<p className='nes-badge basic'>
 			<span className='is-dark' style={{ paddingLeft: '1rem', paddingRight: '1rem' }}>
@@ -8,4 +8,4 @@ const BasicPokemon = () => {
 	);
 };
 
-export default BasicPokemon;
+export default BadgeBasicPokemon;

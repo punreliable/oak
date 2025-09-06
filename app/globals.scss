@@ -283,11 +283,11 @@ button {
 }
 .nes-container {
   background-color: vars.$primary-green;
-  color: vars.$darkest-green;
+  color: vars.$darker-green;
 }
 .nes-balloon {
   background-color: vars.$brighter-green;
-  color: vars.$darkest-green;
+  color: vars.$darker-green;
 }
 
 @keyframes logo-spin {
@@ -362,13 +362,25 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 
-@media (max-width: 669px) {
-  p > .nes-badge.basic {
+// @media (max-width: 669px) {
+//   p > .nes-badge.basic {
 
-    width: 99%;
-    display: flex;
-    justify-content: center;
-    overflow: scroll;
+//     // width: 99%;
+//     // justify-content: center;
+//     // overflow: scroll;
     
+//   }
+// }
+
+p {   
+  width: auto;
+  &.nes-badge {
+    display: inlinflex;
+    width: auto;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }

@@ -23,13 +23,6 @@ const PokemonStats = (props: PokemonStatsAsProps) => {
 			{props.stats.color.name && <p>Color: {prettyName(props.stats.color.name)}</p>}
 			{props.stats.gender_rate && <p>Gender Rate: {props.stats.gender_rate}</p>}
 			{props.stats.hatch_counter && <p>Hatch Counter: {props.stats.hatch_counter}</p>}
-			{props.stats.is_baby && <p className='nes-text is-primary'>This is a Baby Pokemon</p>}
-			{props.stats.is_legendary && (
-				<p className='nes-text is-error'>This is a Legendary Pokemon</p>
-			)}
-			{props.stats.is_legendary && (
-				<p className='nes-text is-warning'>This is a Mythical Pokemon</p>
-			)}
 		</div>
 	);
 };
