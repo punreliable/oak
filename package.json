@@ -91,8 +91,16 @@
     "trailingComma": "all",
     "singleQuote": true,
     "jsxSingleQuote": true,
-    "tabWidth": 2,
-    "useTabs": false,
-    "endOfLine": "auto"
+    "tabWidth": 4,
+    "useTabs": true,
+    "endOfLine": "auto",
+    "overrides": [
+      {
+        "files": ["**/*.scss"],
+        "options": {
+          "parser": "scss"
+        }
+      }
+    ]
   }
 }
