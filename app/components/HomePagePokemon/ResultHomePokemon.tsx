@@ -40,8 +40,6 @@ const ResultHomePokemon = (props: PokemonFromAPI) => {
 			fetchSpeciesData(`https://pokeapi.co/api/v2/pokemon-species/${props.pokemon.name}`),
 	});
 
-	console.log('baseStats: ', props?.pokemon.stats);
-
 	const baseStats: { base_stat: number; effort: number; stat: { name: string; url: string; }; }[]  = props?.pokemon.stats;
 
 	{
