@@ -53,7 +53,9 @@
 
     color: vars.$darkest-green;
     background: vars.$brightest-green;
-    border-image-outset: 2;
+    
+    @include mixins.standard-border-image-outset();
+    // border-image-outset: 2;
     box-shadow: 0 0 0 8px vars.$primary-green;
 
     &.from-left,

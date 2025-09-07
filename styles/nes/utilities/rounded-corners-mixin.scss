@@ -1,4 +1,5 @@
 @use '../../variables.scss' as variables;
+@use '../../mixins.scss' as mixins;
 
 %rounded-corner-defaults {
   border-style: solid;
@@ -41,7 +42,8 @@
     border-image-outset: 0;
   } @else {
     @include border-image(variables.$color-black);
-    border-image-outset: 2;
+    @include standard-border-image-outset();
+    // border-image-outset: 2;
   }
 }
 
@@ -60,6 +62,7 @@
   } @else {
     @include compact-border-image($color-black);
 
-    border-image-outset: 2;
+    @include standard-border-image-outset();
+    // border-image-outset: 2;
   }
 }

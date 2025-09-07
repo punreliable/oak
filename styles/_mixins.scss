@@ -40,7 +40,7 @@
 		border-image-outset: 0;
 	} @else {
 		@include border-image(vars.$darker-green);
-		border-image-outset: 2;
+		@include standard-border-image-outset();
 	}
 }
 
@@ -54,7 +54,7 @@
 		border-image-outset: 0;
 	} @else {
 		@include compact-border-image(vars.$darker-green);
-		border-image-outset: 2;
+		@include standard-border-image-outset();
 	}
 }
 
@@ -63,4 +63,8 @@
 	padding-right: 1.5rem;
 	padding-bottom: 1rem;
 	padding-left: 1.5rem;
+}
+
+@mixin standard-border-image-outset() {
+	border-image-outset: 2;
 }
