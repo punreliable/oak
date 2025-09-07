@@ -362,16 +362,6 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 
-// @media (max-width: 669px) {
-//   p > .nes-badge.basic {
-
-//     // width: 99%;
-//     // justify-content: center;
-//     // overflow: scroll;
-    
-//   }
-// }
-
 p {   
   width: auto;
   &.nes-badge {
@@ -383,4 +373,39 @@ p {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+}
+
+.list-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content:center;
+  align-items: stretch;
+  width: 100%;
+  
+  li {
+    width: 100%;
+    text-align: left;
+    display: inline-flex;
+  }
+  
+}
+
+span {
+
+  &.left {
+    align-content: flex-start;
+    text-align: left;
+    flex-grow: 0;
+  }
+
+  &.right {
+    text-align: right;
+    flex-grow: 0;
+  }
+
+  &.spacer {
+    flex-grow: 1;
+  }
+
 }

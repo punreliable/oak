@@ -45,12 +45,14 @@ const PokemonDescription = (props: PokemonDescriptionProps) => {
 				<>
 					<h4 className='responsive-h4'>Description:</h4>
 					<p>{description}</p>
-					<p>Catch Rate: {catchRate}%</p>
-					<p>Color: {transformWords(color)}</p>
-					<p>Base Happiness: {happiness}</p>
-					<p>Gender Rate: {genderRate}</p>
-					<p>Growth Rate: {transformWords(growthRate.name)}</p>
-					<p>Hatch Counter: {hatchCounter}</p>
+					<ul className='nes-list is-disc list-stats'>
+						<li><span className='left'>Catch Rate:</span><span className='spacer'>&nbsp;</span><span className='right'>{catchRate}%</span></li>
+						<li><span className='left'>Color: </span><span className='spacer'>&nbsp;</span><span className='right'>{transformWords(color)}</span></li>
+						<li><span className='left'>Base Happiness: </span><span className='spacer'>&nbsp;</span><span className='right'>{happiness}</span></li>
+						<li><span className='left'>Gender Rate: </span><span className='spacer'>&nbsp;</span><span className='right'>{genderRate}</span></li>
+						<li><span className='left'>Growth Rate: </span><span className='spacer'>&nbsp;</span><span className='right'>{transformWords(growthRate.name)}</span></li>
+						<li><span className='left'>Hatch Counter: </span><span className='spacer'>&nbsp;</span><span className='right'>{hatchCounter}</span></li>
+					</ul>
 				</>
 			)}
 
