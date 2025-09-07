@@ -15,7 +15,6 @@ import Message from '@/app/components/ProfessorOak/Message';
 import EvolutionsHandler from '@/app/components/EvolutionsByPokemon/EvolutionsHandler';
 import type { Pokemon } from '@/types/pokemon';
 import type { PokemonSpecies } from '@/types/pokemon-species';
-import type {PokemonBaseStat, PokemonBaseStats} from '@/types/pokemon-base-stats';
 interface PokemonFromAPI {
 	pokemon: Pokemon;
 }
@@ -40,7 +39,8 @@ const ResultHomePokemon = (props: PokemonFromAPI) => {
 			fetchSpeciesData(`https://pokeapi.co/api/v2/pokemon-species/${props.pokemon.name}`),
 	});
 
-	const baseStats: { base_stat: number; effort: number; stat: { name: string; url: string; }; }[]  = props?.pokemon.stats;
+	const baseStats: { base_stat: number; effort: number; stat: { name: string; url: string } }[] =
+		props?.pokemon.stats;
 
 	{
 		isLoading && <PendingPokemon />;
