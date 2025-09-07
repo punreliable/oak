@@ -15,7 +15,6 @@ import Message from '@/app/components/ProfessorOak/Message';
 import EvolutionsHandler from '@/app/components/EvolutionsByPokemon/EvolutionsHandler';
 import type { Pokemon } from '@/types/pokemon';
 import type { PokemonSpecies } from '@/types/pokemon-species';
-// import type { PokemonBaseStat, PokemonBaseStats } from '@/types/pokemon-base-stats';
 interface PokemonFromAPI {
 	pokemon: Pokemon;
 }
