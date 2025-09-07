@@ -6,7 +6,9 @@ const PokemonBaseStatsList = (stats: PokemonBaseStats) => {
 	const output = stats.stats.map((stat: PokemonBaseStat) => {
 		return (
 			<li key={stat.stat.name}>
-				<span className='left'>{transformWords(stat.stat.name)}</span>:<span className='spacer'>&nbsp;</span> <span className='right'>{stat.base_stat}</span>
+				<span className='left'>{transformWords(stat.stat.name)}</span>:
+				<span className='spacer'>&nbsp;</span>{' '}
+				<span className='right'>{stat.base_stat}</span>
 			</li>
 		);
 	});
