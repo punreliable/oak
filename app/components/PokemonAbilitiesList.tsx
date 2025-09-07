@@ -22,7 +22,15 @@ const PokemonAbilitiesList = (props: any) => {
 			</a>
 		</div>
 	));
-	return <>{minified}</>;
+	return (
+		<>
+			<div className='row my-4'>
+				<h3 className='h3-responsive gameboy'>Abilities</h3>
+			</div>
+
+			<div className='row my-4'>{minified}</div>
+		</>
+	);
 };
 
 export default PokemonAbilitiesList;

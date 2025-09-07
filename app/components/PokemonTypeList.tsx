@@ -17,7 +17,15 @@ const PokemonTypeList = (props: any) => {
 		</div>
 	));
 
-	return <>{minified}</>;
+	return (
+		<>
+			<div className='row'>
+				<h3 className='h3-responsive'>Type</h3>
+			</div>
+
+			<div className='row my-4'>{minified}</div>
+		</>
+	);
 };
 
 export default PokemonTypeList;

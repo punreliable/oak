@@ -50,20 +50,25 @@ const PokemonMoveList = (props: MoveList) => {
 		</tr>
 	));
 	return (
-		<div className='nes-table-responsive'>
-			<table className='nes-table is-bordered is-centered is-dark'>
-				<thead>
-					<tr>
-						<th>Move Name</th>
-						<th className='hide-on-small'>Learned Method</th>
-						<th className='hide-on-small'>
-							<span className='hide-on-small'>Level </span>Learned
-						</th>
-					</tr>
-				</thead>
-				<tbody>{minified}</tbody>
-			</table>
-		</div>
+		<>
+			<div className='row my-4'>
+				<h3 className='h3-responsive gameboy'>Moves</h3>
+			</div>
+			<div className='nes-table-responsive'>
+				<table className='nes-table is-bordered is-centered is-dark'>
+					<thead>
+						<tr>
+							<th>Move Name</th>
+							<th className='hide-on-small'>Learned Method</th>
+							<th className='hide-on-small'>
+								<span className='hide-on-small'>Level </span>Learned
+							</th>
+						</tr>
+					</thead>
+					<tbody>{minified}</tbody>
+				</table>
+			</div>
+		</>
 	);
 };
 

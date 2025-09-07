@@ -51,7 +51,7 @@ const ResultHomePokemon = (props: PokemonFromAPI) => {
 	}
 
 	return (
-		<div className='container'>
+		<section className='container'>
 			<h1 className='oakHello'>Hello,</h1>
 
 			<h1 className='pokemonName'>{transformWords(props?.pokemon.name)}</h1>
@@ -80,34 +80,22 @@ const ResultHomePokemon = (props: PokemonFromAPI) => {
 				<EvolutionsHandler id={props.pokemon.id} />
 			</div>
 
-			<div className='row'>
-				<h3 className='h3-responsive'>Type</h3>
-			</div>
+			{props.pokemon.types && <PokemonTypeList types={props.pokemon.types} />}
 
-			<div className='row my-4'>
-				<PokemonTypeList types={props.pokemon.types} />
-			</div>
-
-			<div className='row my-4'>
-				<h3 className='h3-responsive gameboy'>Abilities</h3>
-			</div>
-
-			<div className='row my-4'>
+			{props.pokemon.abilities && (
 				<PokemonAbilitiesList abilities={props.pokemon.abilities} />
-			</div>
-
-			<div className='row my-4'>
-				<h3 className='h3-responsive gameboy'>Moves</h3>
-			</div>
+			)}
 
 			{props.pokemon.id && props.pokemon.moves && (
 				<MovesByPokemon moves={props.pokemon.moves} from={props.pokemon.id.toString()} />
 			)}
 
-			<div className='row'>
-				<Message pokemon={props.pokemon.id.toString()} />
-			</div>
-		</div>
+			{props.pokemon.id && (
+				<div className='row'>
+					<Message pokemon={props.pokemon.id.toString()} />
+				</div>
+			)}
+		</section>
 	);
 };
 
