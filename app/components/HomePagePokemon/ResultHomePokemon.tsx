@@ -40,10 +40,8 @@ const ResultHomePokemon = (props: PokemonFromAPI) => {
 			fetchSpeciesData(`https://pokeapi.co/api/v2/pokemon-species/${props.pokemon.name}`),
 	});
 
-	console.log('Props: ', props);
-
 	const baseStats = props?.pokemon.stats;
-	console.log('baseStats: ', baseStats);
+	// console.log('baseStats: ', baseStats);
 	{
 		isLoading && <PendingPokemon />;
 	}

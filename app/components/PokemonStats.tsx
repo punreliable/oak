@@ -12,7 +12,7 @@ interface PokemonStatsAsProps {
 const PokemonStats = (props: PokemonStatsAsProps) => {
 	return (
 		<div>
-			<h3 className='responsive-h3'>Stats</h3>
+			<h3 className='responsive-h3'>Additional Stats</h3>
 			{props.data.height && <p>Height: {props.data.height}in</p>}
 			{props.data.weight && <p>Weight: {props.data.weight}lb</p>}
 			{props.data.base_experience && <p>Base XP: {props.data.base_experience}xp</p>}

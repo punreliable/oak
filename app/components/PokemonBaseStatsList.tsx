@@ -1,12 +1,12 @@
 'use client';
 import transformWords from '@/utilities/transformWords';
-import type { PokemonBaseStat, PokemonBaseStats } from '@/types/pokemon-base-stats';
+import type { PokemonBaseStat } from '@/types/pokemon-base-stats';
 
-const PokemonBaseStatsList = (props: PokemonBaseStats) => {
-	const output = props.stats.map((listedStat: PokemonBaseStat) => {
+const PokemonBaseStatsList = (stats: PokemonBaseStat) => {
+	const output = stats.stats.map((stat: PokemonBaseStat) => {
 		return (
-			<li key={listedStat.stat.name}>
-				{transformWords(listedStat.stat.name)}: {listedStat.base_stat}
+			<li key={stat.stat.name}>
+				{transformWords(stat.stat.name)}: {stat.base_stat}
 			</li>
 		);
 	});

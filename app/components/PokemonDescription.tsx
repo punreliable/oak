@@ -39,8 +39,8 @@ const PokemonDescription = (props: PokemonDescriptionProps) => {
 			)}
 
 			<div className='col-md-12'>
-				{!isBasicPokemon && <EvolvesFromSpecies species={props.data} />}
-				{isBasicPokemon && <BadgeBasicPokemon />}
+				{isBasicPokemon && <EvolvesFromSpecies species={props.data} />}
+				{!isBasicPokemon && <BadgeBasicPokemon />}
 				{isBabyPokemon && <BadgeBabyPokemon />}
 				{isLegendaryPokemon && <BadgeLegendaryPokemon />}
 				{isMythicalPokemon && <BadgeMythicalPokemon />}
