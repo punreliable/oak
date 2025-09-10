@@ -1,9 +1,9 @@
-import transformWords from '@/utilities/transformWords';
 import { Move } from '@/types/move';
 import ButtonHome from '@/app/components/Buttons/ButtonHome';
 import { Suspense } from 'react';
 import Loading from '@/app/components/Loading';
-
+import transformWords from '@/utilities/transformWords';
+import generationName from '@/utilities/generationName';
 export interface Result {
 	name: string;
 	url: string;
@@ -61,25 +61,59 @@ export default async function Page({ params }: { params: any }) {
 						)}
 					</div>
 				</div>
-				{post.flavor_text_entries && (
-					<div className='row' style={{ display: 'block', width: '100%' }}>
-						<div className='col-md-12'>
+				<div className='row' style={{ display: 'inline-flex', width: '100%' }}>
+					{post.flavor_text_entries && (
+						<div className='col-md-8'>
 							<h3 className='responsive-h3 darkest-green my-4'>Description</h3>
 							<p className='my-4'>{description}</p>
 						</div>
+					)}
+					<div className='col-md-4'>
+						{post.power && (
+							<>
+								<h3 className='responsive-h3 darkest-green my-4'>Power</h3>
+								<p className='my-4'>{post.power}</p>
+							</>
+						)}
+						{post.accuracy && (
+							<>
+								<h3 className='responsive-h3 darkest-green my-4'>Accuracy</h3>
+								<p className='my-4'>{post.accuracy}</p>
+							</>
+						)}
+						{post.pp && (
+							<>
+								<h3 className='responsive-h3 darkest-green my-4'>PP</h3>
+								<p className='my-4'>{post.pp}</p>
+							</>
+						)}
 					</div>
-				)}
-				<div className='row my-4' style={{ display: 'block', width: '100%' }}>
-					<div className='row'>
-						<div className='col-md-12'>
-							<p className='responsive-h3 darkest-green my-4'>
-								More Details Coming Soon
+				</div>
+				<div className='row my-4' style={{ display: 'inline-flex', width: '100%' }}>
+					{post.damage_class && (
+						<div className='col-md-6'>
+							<h3 className='responsive-h3 my-4'>Damage Class:</h3>
+							<p className='responsive-p my-4'>
+								{transformWords(post.damage_class.name)}
 							</p>
 						</div>
+					)}
+
+					{post.generation && (
+						<div className='col-md-6'>
+							<h3 className='responsive-h3 darkest-green my-4'>Generation</h3>
+							<p>{generationName(post.generation.name)}</p>
+						</div>
+					)}
+				</div>
+				<div className='row my-4' style={{ display: 'block', width: '100%' }}>
+					<div className='col-md-12'>
+						<p className='responsive-h3 darkest-green my-4'>More Details Coming Soon</p>
 					</div>
-					<div className='row'>
-						<ButtonHome />
-					</div>
+				</div>
+
+				<div className='row'>
+					<ButtonHome />
 				</div>
 			</section>
 		</Suspense>
