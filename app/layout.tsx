@@ -1,7 +1,6 @@
-"use client";
+'use client';
 
 import React from 'react';
-import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Press_Start_2P } from 'next/font/google';
 import '@/node_modules/bootstrap/dist/css/bootstrap.css';
 import './globals.scss';
@@ -9,6 +8,7 @@ import { TanstackProvider } from './components/providers/tanstack-provider';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Provider } from 'react-redux';
 import store from '../reducers/store';
+import { Helmet } from 'react-helmet';
 
 export const dynamicParams = true;
 
@@ -28,7 +28,6 @@ const pressStart2P = Press_Start_2P({
 	weight: '400',
 });
 
-
 export default function RootLayout({
 	children,
 }: Readonly<{
@@ -39,6 +38,10 @@ export default function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} ${pressStart2P.variable} antialiased`}
 			>
+				<Helmet>
+					<title>Oak</title>
+					<meta name='description' content='Which Pokemon will you encounter Next?' />
+				</Helmet>
 				<Provider store={store}>
 					<TanstackProvider>{children}</TanstackProvider>
 					<SpeedInsights />
