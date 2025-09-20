@@ -7,6 +7,8 @@ import PendingPokemon from '@/app/components/PendingPokemon';
 import ResultHomePokemon from '@/app/components/HomePagePokemon/ResultHomePokemon';
 import type { Pokemon } from '@/types/pokemon';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+// import { useSelector } from 'react-redux';
+// import rootReducer from '@/reducers/index';
 
 interface PokemonFromAPI {
 	data: Pokemon;

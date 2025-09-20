@@ -1,12 +1,13 @@
 'use client';
 import transformWords from '@/utilities/transformWords';
+import { specialLabeler } from '@/utilities/specialLabeler';
 import type { PokemonBaseStat, PokemonBaseStats } from '@/types/pokemon-base-stats';
 
 const PokemonBaseStatsList = (stats: PokemonBaseStats) => {
 	const output = stats.stats.map((stat: PokemonBaseStat) => {
 		return (
 			<li key={stat.stat.name}>
-				<span className='left'>{transformWords(stat.stat.name)}</span>:
+				<span className='left'>{transformWords(specialLabeler(stat.stat.name))}</span>:
 				<span className='spacer'>&nbsp;</span>{' '}
 				<span className='right'>{stat.base_stat}</span>
 			</li>
