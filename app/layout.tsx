@@ -6,7 +6,7 @@ import './globals.scss';
 import { TanstackProvider } from './components/providers/tanstack-provider';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Provider } from 'react-redux';
-import store from '../reducers/store';
+import store from '@/store/index';
 import ClientLayout from '@/app/ClientLayout';
 
 export const dynamicParams = true;
