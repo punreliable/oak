@@ -43,7 +43,7 @@ const PokemonDescription = (props: PokemonDescriptionProps) => {
 		<>
 			{description && (
 				<>
-					<h4 className='responsive-h4'>Description:</h4>
+					<h4 className='responsive-h4'>Description</h4>
 					<p>{description}</p>
 					<ul className='nes-list is-disc list-stats'>
 						<li>
@@ -82,10 +82,10 @@ const PokemonDescription = (props: PokemonDescriptionProps) => {
 
 			<div className='col-md-12'>
 				{isNotBasicPokemon && <EvolvesFromSpecies species={props.data} />}
-				{!isNotBasicPokemon && <BadgeBasicPokemon />}
 				{isBabyPokemon && <BadgeBabyPokemon />}
 				{isLegendaryPokemon && <BadgeLegendaryPokemon />}
 				{isMythicalPokemon && <BadgeMythicalPokemon />}
+				{!isNotBasicPokemon && <BadgeBasicPokemon />}
 			</div>
 		</>
 	);
