@@ -32,18 +32,18 @@ const Counter = () => {
 					marginTop: '2rem',
 				}}
 			>
-				<div style={{ width: '50%', maxWidth: '100%' }}>
+				<div style={{ maxWidth: '100%', paddingRight: '1rem' }}>
 					<button onClick={incrementHandler} className={`nes-btn is-success`}>
 						Increment
 					</button>
 				</div>
-				<div style={{ width: '50%', maxWidth: '100%' }}>
+				<div style={{ marginTop: '1rem', paddingRight: '1rem' }}>
 					<button onClick={decrementHandler} className={`nes-btn is-error`}>
 						Decrement
 					</button>
 				</div>
 			</div>
-			<div style={{ width: '100%', maxWidth: '100%', marginTop: '2rem' }}>
+			<div style={{ width: '100%', maxWidth: '100%', marginTop: '1rem' }}>
 				<button onClick={toggleCounterHandler} className={`nes-btn is-warning`}>
 					Toggle
 				</button>
