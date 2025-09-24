@@ -7,6 +7,8 @@ import PendingPokemon from '@/app/components/PendingPokemon';
 import ResultHomePokemon from '@/app/components/HomePagePokemon/ResultHomePokemon';
 import type { Pokemon } from '@/types/pokemon';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import {useDispatch} from 'react-redux';
+import { savePokemon } from '@/reducers/pokemonReducer'; 
 
 interface PokemonFromAPI {
 	data: Pokemon;
@@ -23,9 +25,12 @@ const getPokemonNumber = () => {
 
 const Home = () => {
 	const [isClient, setIsClient] = useState(false);
+	const dispatch = useDispatch();
+	
 	useEffect(() => {
 		setIsClient(true);
 	}, []);
+
 	const { data, isError, isLoading } = useQuery({
 		queryKey: ['pokemon'],
 		queryFn: async () => {
@@ -34,6 +39,9 @@ const Home = () => {
 				`https://pokeapi.co/api/v2/pokemon/${id}`,
 			);
 			return response.data;
+		},		
+		onSuccess: (data) => { // {{change 3}} Add onSuccess callback
+			dispatch(savePokemon(data)); // Dispatch the savePokemon action
 		},
 	});
 	if (!isClient) {
