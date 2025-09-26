@@ -9,7 +9,6 @@ interface PokemonState {
 	currentPokemon?: Pokemon; // {{change 1}} Add currentPokemon to the state
 }
 
-
 const initialState: PokemonState = {
 	popular: [],
 	new: [],
@@ -25,7 +24,8 @@ const pokemonSlice = createSlice({
 		fetchPokemonSuccess(state, action: PayloadAction<any[]>) {
 			state.popular = action.payload; // Example: Update popular Pokemon
 		},
-		savePokemon(state, action: PayloadAction<Pokemon>) { // {{change 3}} Add savePokemon reducer
+		savePokemon(state, action: PayloadAction<Pokemon>) {
+			// {{change 3}} Add savePokemon reducer
 			state.currentPokemon = action.payload;
 		},
 		// Add other reducers here to handle different actions
