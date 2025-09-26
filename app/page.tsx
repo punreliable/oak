@@ -10,6 +10,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { useDispatch } from 'react-redux';
 import { savePokemon } from '@/reducers/pokemonReducer';
 import { AppDispatch } from '@/reducers/store';
+import { UseQueryOptions } from '@tanstack/react-query';
 
 interface PokemonFromAPI {
 	data: Pokemon;
@@ -32,7 +33,7 @@ const Home = () => {
 		setIsClient(true);
 	}, []);
 
-	const { data, isError, isLoading } = useQuery({
+	const { data, isError, isLoading } = useQuery<Pokemon, Error, Pokemon, string[]>({
 		queryKey: ['pokemon'],
 		queryFn: async () => {
 			const id = getPokemonNumber();
@@ -46,7 +47,7 @@ const Home = () => {
 			console.log('Data being dispatched:', data);
 			dispatch(savePokemon(data)); // Dispatch the savePokemon action
 		},
-	});
+	} as UseQueryOptions<Pokemon, Error, Pokemon, string[]>);
 	if (!isClient) {
 		return null;
 	}
