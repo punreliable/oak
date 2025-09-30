@@ -4,6 +4,10 @@ import { Suspense } from 'react';
 import Loading from '@/app/components/Loading';
 import transformWords from '@/utilities/transformWords';
 import generationName from '@/utilities/generationName';
+import getMachineName from '@/utilities/getMachineName';
+import Link from 'next/link';
+import { v4 as uuidv4 } from 'uuid';
+
 export interface Result {
 	name: string;
 	url: string;
@@ -35,6 +39,20 @@ export default async function Page({ params }: { params: any }) {
 	const description = post.flavor_text_entries.map((flavor) => {
 		if (flavor.language.name == 'en' && flavor.version_group.name == 'scarlet-violet') {
 			return flavor.flavor_text;
+		}
+	});
+
+	const machines = post.machines.map((machine) => {
+		if (machine.version_group.name == 'yellow') {
+			return (
+				<Link
+					href={`/machine/` + getMachineName(machine.machine.url)}
+					className='nes-btn is-error'
+					key={uuidv4()}
+				>
+					{`Machine #` + getMachineName(machine.machine.url)}
+				</Link>
+			);
 		}
 	});
 
@@ -106,11 +124,21 @@ export default async function Page({ params }: { params: any }) {
 						</div>
 					)}
 				</div>
+
 				<div className='row my-4' style={{ display: 'block', width: '100%' }}>
 					<div className='col-md-12'>
 						<p className='responsive-h3 darkest-green my-4'>More Details Coming Soon</p>
 					</div>
 				</div>
+
+				{post.machines && post.machines.length > 0 && (
+					<div className='row my-4' style={{ display: 'inline-flex', width: '100%' }}>
+						<div className='col-md-12'>
+							<h3 className='responsive-h3 darkest-green my-4'>Machines</h3>
+							<p>{machines}</p>
+						</div>
+					</div>
+				)}
 
 				<div className='row'>
 					<ButtonHome />

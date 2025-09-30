@@ -2,6 +2,7 @@
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
 import Loading from '@/app/components/Loading';
+import Link from 'next/link';
 
 const ButtonHome = () => {
 	const searchParams = useSearchParams(); // Use the hook
@@ -9,9 +10,9 @@ const ButtonHome = () => {
 	return (
 		<Suspense fallback={<Loading />}>
 			<div className='col-md-12 my-4'>
-				<a href={`/pokemon/${from}`} className={`nes-btn is-warning`}>
+				<Link href={`/pokemon/${from}`} className={`nes-btn is-warning`}>
 					Home
-				</a>
+				</Link>
 			</div>
 		</Suspense>
 	);
