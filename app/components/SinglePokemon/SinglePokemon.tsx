@@ -33,8 +33,6 @@ const SinglePokemon = (url: string) => {
 		isError && <ErrorPokemon />;
 	}
 
-	console.log('Data: ', data);
-
 	return (
 		<>
 			<Suspense fallback={<PendingPokemon />}>

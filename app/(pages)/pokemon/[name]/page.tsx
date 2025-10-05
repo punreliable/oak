@@ -1,8 +1,13 @@
 import { Suspense } from 'react';
 import ButtonNewPokemon from '@/app/components/Buttons/ButtonNewPokemon';
-// import SinglePokemon from '@/app/components/SinglePokemon/SinglePokemon';
 import PendingPokemon from '@/app/components/PendingPokemon';
-
+import transformWords from '@/utilities/transformWords';
+import { Pokemon } from '@/types/pokemon';
+import Message from '@/app/components/ProfessorOak/Message';
+import PokemonMoveList from '@/app/components/PokemonMoveList';
+import PokemonAbilitiesList from '@/app/components/PokemonAbilitiesList';
+import PokemonTypeList from '@/app/components/PokemonTypeList';
+import Image from 'next/image';
 export interface Result {
 	name: string;
 	url: string;
@@ -25,11 +30,9 @@ export async function generateStaticParams() {
 	}));
 }
 
-// export default async function Page({ params }: { params: any }) {
-export default async function Page() {
-	// { params: { name: string }}
-	//const pokemonID: string = await params.name;
-	//const requestURL: string = `https://pokeapi.co/api/v2/pokemon/${pokemonID}`;
+export default async function Page({ params }: { params: { name: string } }) {
+	const requestURL: string = await `https://pokeapi.co/api/v2/pokemon/${params.name}`;
+	const post: Pokemon = await fetch(requestURL).then((res) => res.json());
 
 	return (
 		<div className='App' style={{ margin: 'auto', display: 'block' }}>
@@ -37,13 +40,54 @@ export default async function Page() {
 				className='nesContainer nes-container'
 				style={{ margin: 'auto', display: 'block' }}
 			>
-				<h1>Coming Soon</h1>
 				<Suspense fallback={<PendingPokemon />}>
-					{/* <SinglePokemon name={requestURL} /> */}
-					<div className='row my-4' style={{ display: 'block', width: '100%' }}>
-						<ButtonNewPokemon />
-					</div>
+					<>
+						<h1 className='oakHello'>Hello,</h1>
+
+						{post && (
+							<>
+								<h1 className='pokemonName'>{transformWords(post.name)}</h1>
+
+								<Image
+									className='nes-avatar avatar pokemonAvatar'
+									alt={'Image of a ' + transformWords(post.name)}
+									id='avatar'
+									src={post.sprites.front_default}
+									width={256}
+									height={256}
+								/>
+
+								<div className='row my-4'>
+									<PokemonTypeList types={post.types} />
+								</div>
+
+								<div className='row my-4'>
+									<PokemonAbilitiesList abilities={post.abilities} />
+								</div>
+
+								<div className='row my-4'>
+									<h3 className='h3-responsive gameboy'>Moves</h3>
+								</div>
+
+								<div className='row'>
+									{post.id && post.moves && (
+										<PokemonMoveList
+											moves={post.moves}
+											from={post.id.toString()}
+										/>
+									)}
+								</div>
+
+								<div className='row'>
+									<Message pokemon={post.id.toString()} />
+								</div>
+							</>
+						)}
+					</>
 				</Suspense>
+				<div className='row my-4' style={{ display: 'block', width: '100%' }}>
+					<ButtonNewPokemon />
+				</div>
 			</section>
 		</div>
 	);

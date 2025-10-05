@@ -41,10 +41,7 @@ export default async function Page({ params }: { params: any }) {
 	const sprite = post.sprites.default;
 
 	const description = post.flavor_text_entries.map((entry) => {
-		if (
-			(entry.language.name == 'en' && entry.version_group.name == 'yellow') ||
-			entry.version_group.name == 'red-blue'
-		) {
+		if (entry.language.name == 'en' && entry.version_group.name == 'yellow') {
 			return entry.text;
 		}
 	});
@@ -69,19 +66,22 @@ export default async function Page({ params }: { params: any }) {
 				<div className='row' style={{ display: 'block', width: '100%' }}>
 					<div className='col-md-12'>
 						{post.sprites.default && (
-							<Image src={sprite} alt={post.name + ` Image`} width={64} height={64} />
+							<Image src={sprite} alt={post.name + ` Image`} width={60} height={60} />
 						)}
 					</div>
 				</div>
 				<div className='row' style={{ display: 'block', width: '100%' }}>
 					<div className='col-md-12'>
 						{post.flavor_text_entries && (
-							<p
-								className='responsive-h2 text-center gameboy mb-4-green'
-								style={{ display: 'block', width: '100%' }}
-							>
-								{description}
-							</p>
+							<>
+								<h2>Description</h2>
+								<p
+									className='responsive-h2 text-center gameboy mb-4-green'
+									style={{ display: 'block', width: '100%' }}
+								>
+									{description}
+								</p>
+							</>
 						)}
 					</div>
 				</div>
