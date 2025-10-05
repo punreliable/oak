@@ -30,9 +30,11 @@ export async function generateStaticParams() {
 	}));
 }
 
-export default async function Page({ params }: { params: { name: string } }) {
-	const requestURL: string = await `https://pokeapi.co/api/v2/pokemon/${params.name}`;
-	const post: Pokemon = await fetch(requestURL).then((res) => res.json());
+export default async function Page({ params }: { params: any }) {
+	const { name } = await params.name;
+	const post: Pokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`).then((res) =>
+		res.json(),
+	);
 
 	return (
 		<div className='App' style={{ margin: 'auto', display: 'block' }}>
