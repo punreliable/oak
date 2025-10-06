@@ -4,7 +4,7 @@ import PendingPokemon from '@/app/components/PendingPokemon';
 import transformWords from '@/utilities/transformWords';
 import { Pokemon } from '@/types/pokemon';
 import Message from '@/app/components/ProfessorOak/Message';
-import PokemonMoveList from '@/app/components/PokemonMoveList';
+import MovesByPokemon from '@/app/components/MovesByPokemon';
 import PokemonAbilitiesList from '@/app/components/PokemonAbilitiesList';
 import PokemonTypeList from '@/app/components/PokemonTypeList';
 import Image from 'next/image';
@@ -31,22 +31,32 @@ export async function generateStaticParams() {
 }
 
 export default async function Page({ params }: { params: any }) {
-	const { name } = await params.name;
-	const post: Pokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`).then((res) =>
-		res.json(),
-	);
+	const { name } = await params;
+    const post: Pokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${name.toString()}`)
+		.then((res) => {
+			if (!res.ok) {
+				throw new Error(`Pokemon not found`);
+			}
+			return res.json();
+		})
+		.catch((error) => {
+			console.error(error);
+			return null; // Or redirect to an error page
+		});
+
 
 	return (
+		<Suspense fallback={<PendingPokemon />}>
 		<div className='App' style={{ margin: 'auto', display: 'block' }}>
 			<section
 				className='nesContainer nes-container'
 				style={{ margin: 'auto', display: 'block' }}
 			>
-				<Suspense fallback={<PendingPokemon />}>
+
 					<>
 						<h1 className='oakHello'>Hello,</h1>
 
-						{post && (
+						{post ? (
 							<>
 								<h1 className='pokemonName'>{transformWords(post.name)}</h1>
 
@@ -57,8 +67,7 @@ export default async function Page({ params }: { params: any }) {
 									src={post.sprites.front_default}
 									width={256}
 									height={256}
-								/>
-
+								/> 
 								<div className='row my-4'>
 									<PokemonTypeList types={post.types} />
 								</div>
@@ -67,13 +76,9 @@ export default async function Page({ params }: { params: any }) {
 									<PokemonAbilitiesList abilities={post.abilities} />
 								</div>
 
-								<div className='row my-4'>
-									<h3 className='h3-responsive gameboy'>Moves</h3>
-								</div>
-
 								<div className='row'>
 									{post.id && post.moves && (
-										<PokemonMoveList
+										<MovesByPokemon
 											moves={post.moves}
 											from={post.id.toString()}
 										/>
@@ -84,13 +89,14 @@ export default async function Page({ params }: { params: any }) {
 									<Message pokemon={post.id.toString()} />
 								</div>
 							</>
-						)}
+						):(<p>Pokemon Not Found, please try again.</p>)}
 					</>
-				</Suspense>
+
 				<div className='row my-4' style={{ display: 'block', width: '100%' }}>
 					<ButtonNewPokemon />
 				</div>
 			</section>
 		</div>
+		</Suspense>
 	);
 }
