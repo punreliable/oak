@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import prettyName from '@/utilities/prettyName';
+import Link from 'next/link';
 
 const DamageRelationsResult = (props: any) => {
 	const doubleDamageFrom = props.damage_relations.damage_relations.double_damage_from;
@@ -10,58 +11,34 @@ const DamageRelationsResult = (props: any) => {
 	const halfDamageTo = props.damage_relations.damage_relations.half_damage_to;
 	const noDamageTo = props.damage_relations.damage_relations.no_damage_to;
 	const doubleDamageFromOutput = doubleDamageFrom.map((obj: { name: any }) => (
-		<a
-			key={obj.name}
-			className={`nes-btn type-${obj.name} is-${obj.name} pr-4`}
-			href={'/type/' + obj.name}
-		>
+		<Link key={obj.name} className={`nes-btn is-${obj.name} pr-4`} href={'/type/' + obj.name}>
 			{prettyName(obj.name)}
-		</a>
+		</Link>
 	));
 	const doubleDamageToOutput = doubleDamageTo.map((obj: { name: any }) => (
-		<a
-			key={obj.name}
-			className={`nes-btn type-${obj.name} is-${obj.name} pr-4`}
-			href={'/type/' + obj.name}
-		>
+		<Link key={obj.name} className={`nes-btn is-${obj.name} pr-4`} href={'/type/' + obj.name}>
 			{prettyName(obj.name)}
-		</a>
+		</Link>
 	));
 	const halfDamageFromOutput = halfDamageFrom.map((obj: { name: any }) => (
-		<a
-			key={obj.name}
-			className={`nes-btn type-${obj.name} is-${obj.name} pr-4`}
-			href={'/type/' + obj.name}
-		>
+		<Link key={obj.name} className={`nes-btn is-${obj.name} pr-4`} href={'/type/' + obj.name}>
 			{prettyName(obj.name)}
-		</a>
+		</Link>
 	));
 	const halfDamageToOutput = halfDamageTo.map((obj: { name: any }) => (
-		<a
-			key={obj.name}
-			className={`nes-btn type-${obj.name} is-${obj.name} pr-4`}
-			href={'/type/' + obj.name}
-		>
+		<Link key={obj.name} className={`nes-btn is-${obj.name} pr-4`} href={'/type/' + obj.name}>
 			{prettyName(obj.name)}
-		</a>
+		</Link>
 	));
 	const noDamageFromOutput = noDamageFrom.map((obj: { name: any }) => (
-		<a
-			key={obj.name}
-			className={`nes-btn type-${obj.name} is-${obj.name} pr-4`}
-			href={'/type/' + obj.name}
-		>
+		<Link key={obj.name} className={`nes-btn is-${obj.name} pr-4`} href={'/type/' + obj.name}>
 			{prettyName(obj.name)}
-		</a>
+		</Link>
 	));
 	const noDamageToOutput = noDamageTo.map((obj: { name: any }) => (
-		<a
-			key={obj.name}
-			className={`nes-btn type-${obj.name} is-${obj.name} pr-4`}
-			href={'/type/' + obj.name}
-		>
+		<Link key={obj.name} className={`nes-btn is-${obj.name} pr-4`} href={'/type/' + obj.name}>
 			{prettyName(obj.name)}
-		</a>
+		</Link>
 	));
 	return (
 		<>
