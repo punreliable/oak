@@ -32,7 +32,7 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }: { params: any }) {
 	const { name } = await params;
-    const post: Pokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${name.toString()}`)
+	const post: Pokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${name.toString()}`)
 		.then((res) => {
 			if (!res.ok) {
 				throw new Error(`Pokemon not found`);
@@ -44,15 +44,13 @@ export default async function Page({ params }: { params: any }) {
 			return null; // Or redirect to an error page
 		});
 
-
 	return (
 		<Suspense fallback={<PendingPokemon />}>
-		<div className='App' style={{ margin: 'auto', display: 'block' }}>
-			<section
-				className='nesContainer nes-container'
-				style={{ margin: 'auto', display: 'block' }}
-			>
-
+			<div className='App' style={{ margin: 'auto', display: 'block' }}>
+				<section
+					className='nesContainer nes-container'
+					style={{ margin: 'auto', display: 'block' }}
+				>
 					<>
 						<h1 className='oakHello'>Hello,</h1>
 
@@ -67,7 +65,7 @@ export default async function Page({ params }: { params: any }) {
 									src={post.sprites.front_default}
 									width={256}
 									height={256}
-								/> 
+								/>
 								<div className='row my-4'>
 									<PokemonTypeList types={post.types} />
 								</div>
@@ -89,14 +87,16 @@ export default async function Page({ params }: { params: any }) {
 									<Message pokemon={post.id.toString()} />
 								</div>
 							</>
-						):(<p>Pokemon Not Found, please try again.</p>)}
+						) : (
+							<p>Pokemon Not Found, please try again.</p>
+						)}
 					</>
 
-				<div className='row my-4' style={{ display: 'block', width: '100%' }}>
-					<ButtonNewPokemon />
-				</div>
-			</section>
-		</div>
+					<div className='row my-4' style={{ display: 'block', width: '100%' }}>
+						<ButtonNewPokemon />
+					</div>
+				</section>
+			</div>
 		</Suspense>
 	);
 }
