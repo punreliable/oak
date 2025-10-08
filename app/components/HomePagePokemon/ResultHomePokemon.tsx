@@ -9,6 +9,7 @@ import PokemonBaseStatsList from '@/app/components/PokemonBaseStatsList';
 import PokemonDescription from '@/app/components/PokemonDescription';
 import PokemonStats from '@/app/components/PokemonStats';
 import PokemonTypeList from '@/app/components/PokemonTypeList';
+import PokemonLocationAreaEncounters from '@/app/components/PokemonLocationAreaEncounters';
 import MovesByPokemon from '@/app/components/MovesByPokemon';
 import transformWords from '@/utilities/transformWords';
 import Message from '@/app/components/ProfessorOak/Message';
@@ -83,6 +84,10 @@ const ResultHomePokemon = (props: PokemonFromAPI) => {
 
 			{props.pokemon.abilities && (
 				<PokemonAbilitiesList abilities={props.pokemon.abilities} />
+			)}
+
+			{props.pokemon.location_area_encounters && (
+				<PokemonLocationAreaEncounters locations={props.pokemon.location_area_encounters} />
 			)}
 
 			{props.pokemon.id && props.pokemon.moves && (

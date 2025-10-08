@@ -32,8 +32,6 @@ const PokemonDescription = (props: PokemonDescriptionProps) => {
 		},
 	);
 
-	console.log('Props: ', props);
-
 	const isNotBasicPokemon = props.data?.evolves_from_species;
 	const isBabyPokemon = props.data?.is_baby;
 	const isLegendaryPokemon = props.data?.is_legendary;
