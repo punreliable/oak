@@ -8,6 +8,7 @@ import MovesByPokemon from '@/app/components/MovesByPokemon';
 import PokemonAbilitiesList from '@/app/components/PokemonAbilitiesList';
 import PokemonTypeList from '@/app/components/PokemonTypeList';
 import Image from 'next/image';
+import PokemonLocationAreaEncounters from '@/app/components/PokemonLocationAreaEncounters';
 export interface Result {
 	name: string;
 	url: string;
@@ -73,6 +74,8 @@ export default async function Page({ params }: { params: any }) {
 								<div className='row my-4'>
 									<PokemonAbilitiesList abilities={post.abilities} />
 								</div>
+
+								<PokemonLocationAreaEncounters locations={post.location_area_encounters}/>
 
 								<div className='row'>
 									{post.id && post.moves && (

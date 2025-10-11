@@ -1,44 +1,57 @@
-'use client';
-import {useQuery} from '@tanstack/react-query';
+// "use client";
 import { v4 as uuidv4 } from 'uuid';
 import Link from 'next/link';
 import transformWords from '@/utilities/transformWords';
 import { LocationAreaEncounter } from '@/types/locationAreaEncounter';
 import axios from 'axios';
+import PendingPokeball from '@/app/components/PendingPokeball';
+import Suspense from 'react';
+import Loading from '@/app/components/Loading';
+import { useEffect, useState } from 'react'; // Import useEffect and useState
 
-const PokemonLocationAreaEncounters = (locations: string) => {
 
+const PokemonLocationAreaEncounters = ( params: { locations: string } ) => {
+	
 	type LocationAreaEncounterFromAPI = {
 		data: LocationAreaEncounter;
 		result: number;
 	}
 
-	async function fetchPokemonLocations() {
-	
-		const response: LocationAreaEncounterFromAPI = await axios.get(
-				`https://pokeapi.co/api/v2/pokemon/${id}`,
-		);
+	const [locationData, setLocationData] = useState<LocationAreaEncounterFromAPI | null>(null);
 
-		return response.data;
+	async function fetchPokemonLocations(url: string): Promise<LocationAreaEncounterFromAPI> {
+		try {
+				const response = await axios.get(url.toString());
+				console.log('Axios Response:', response.data); // Log the actual data
+				return response.data; // Return only the data
+		} catch (error) {
+				console.error("There was an error fetching the location data", error);
+				throw error; // Re-throw the error to be caught by the caller
+		}
 	}
 
-	const {data, isLoading, isError} = useQuery({
-		queryKey: ['locations'],
-		queryFn: () => fetchPokemonLocations()
-	});
+	useEffect(() => {
+		async function getLocationData() {
+			console.log('About to get data...');
+			try {
+					const data = await fetchPokemonLocations(params.locations);
+					setLocationData(data);
+					// Log the data in a separate useEffect to ensure it's logged after the state update
+			} catch (error) {
+					console.error("Failed to fetch location data", error);
+			}
+		}
 
-	{data && console.log('Data: ', data)}
+		getLocationData();
+	}, [params.locations]);
 
-	// const locationList = data.map();
-	
+	let locationList = [];
+
 	return(
-		<div className='' style={{ display: 'inline' }} key={uuidv4()}>
-			<h3 className='responsive-h3'>Location Encounters</h3>
-			{/* {locationList}
-			<Link href={`/location/${x.type.name}`} className={`nes-btn is-${x.type.name}`}>
-				<span className={`is-${x.type.name}`}>{transformWords(x.type.name)}</span>
-			</Link> */}
-		</div>
+			<div className='row' style={{ display: 'inline' }} key={uuidv4()}>
+				<h3 className='responsive-h3'>Location Encounters</h3>
+				{/* {locationList} */}
+			</div>
 	);
 }
 
