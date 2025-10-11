@@ -1,5 +1,5 @@
 const PendingPokeball = () => {
-	return(
+	return (
 		<main className='container'>
 			<div className='App nes-container'>
 				<div className='row'>
@@ -10,6 +10,6 @@ const PendingPokeball = () => {
 			</div>
 		</main>
 	);
-}
+};
 
 export default PendingPokeball;

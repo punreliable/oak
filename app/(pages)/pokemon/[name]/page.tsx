@@ -75,7 +75,9 @@ export default async function Page({ params }: { params: any }) {
 									<PokemonAbilitiesList abilities={post.abilities} />
 								</div>
 
-								<PokemonLocationAreaEncounters locations={post.location_area_encounters}/>
+								<PokemonLocationAreaEncounters
+									locations={post.location_area_encounters}
+								/>
 
 								<div className='row'>
 									{post.id && post.moves && (
