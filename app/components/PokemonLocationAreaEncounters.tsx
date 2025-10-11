@@ -12,18 +12,17 @@ const PokemonLocationAreaEncounters = (params: { locations: string }) => {
 
 	const [locationData, setLocationData] = useState<LocationAreaEncounterFromAPI | null>(null);
 
-	async function fetchPokemonLocations(url: string): Promise<LocationAreaEncounterFromAPI> {
-		try {
-			const response: LocationAreaEncounterFromAPI = await axios.get(url.toString());
-			console.log('Axios Response:', response.data); // Log the actual data
-			return response.data; // Return only the data
-		} catch (error) {
-			console.error('There was an error fetching the location data', error);
-			throw error; // Re-throw the error to be caught by the caller
-		}
-	}
-
 	useEffect(() => {
+		async function fetchPokemonLocations(url: string): Promise<LocationAreaEncounterFromAPI> {
+			try {
+				const response: LocationAreaEncounterFromAPI = await axios.get(url.toString());
+				console.log('Axios Response:', response.data); // Log the actual data
+				return response; // Return only the data
+			} catch (error) {
+				console.error('There was an error fetching the location data', error);
+				throw error; // Re-throw the error to be caught by the caller
+			}
+		}
 		async function getLocationData() {
 			console.log('About to get data...');
 			try {
@@ -36,11 +35,10 @@ const PokemonLocationAreaEncounters = (params: { locations: string }) => {
 		}
 
 		getLocationData();
-	}, [fetchPokemonLocations, params.locations]);
-
-	// let locationList = locationData.map(location => {
-	// 	return location.location_area.name;
-	// });
+	}, [
+		// fetchPokemonLocations,
+		params.locations,
+	]);
 
 	return (
 		<div className='row' style={{ display: 'inline' }} key={uuidv4()}>
