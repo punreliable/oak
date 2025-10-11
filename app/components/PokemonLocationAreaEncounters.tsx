@@ -1,12 +1,7 @@
 // "use client";
 import { v4 as uuidv4 } from 'uuid';
-import Link from 'next/link';
-import transformWords from '@/utilities/transformWords';
 import { LocationAreaEncounter } from '@/types/locationAreaEncounter';
 import axios from 'axios';
-import PendingPokeball from '@/app/components/PendingPokeball';
-import Suspense from 'react';
-import Loading from '@/app/components/Loading';
 import { useEffect, useState } from 'react'; // Import useEffect and useState
 
 const PokemonLocationAreaEncounters = (params: { locations: string }) => {
@@ -41,7 +36,7 @@ const PokemonLocationAreaEncounters = (params: { locations: string }) => {
 		}
 
 		getLocationData();
-	}, [params.locations]);
+	}, [fetchPokemonLocations, params.locations]);
 
 	// let locationList = locationData.map(location => {
 	// 	return location.location_area.name;
