@@ -11,11 +11,14 @@ const PokemonLocationAreaEncounters = (params: { locations: string }) => {
 		result: number;
 	};
 
-	type LocationAreaEncounterResponse = { location_area: { name: string }, version_details: {encounter_details: {version:{name: string}}}};
+	type LocationAreaEncounterResponse = {
+		location_area: { name: string };
+		version_details: { encounter_details: { version: { name: string } } };
+	};
 
 	const { data, isLoading } = usePLAE(params.locations);
 	const locationsData: LocationAreaEncounterFromAPI[] = data?.data;
-	console.log('Data: ', locationsData)
+	console.log('Data: ', locationsData);
 	const locationList = data?.data.map((location: LocationAreaEncounterResponse) => {
 		return <li key={uuidv4()}>{transformWords(location.location_area.name)}</li>;
 	});
