@@ -11,11 +11,12 @@ const PokemonLocationAreaEncounters = (params: { locations: string }) => {
 		result: number;
 	};
 
+	type LocationAreaEncounterResponse = { location_area: { name: string }, version_details: {encounter_details: {version:{name: string}}}};
+
 	const { data, isLoading } = usePLAE(params.locations);
 	const locationsData: LocationAreaEncounterFromAPI[] = data?.data;
-	console.log('Locations Data Type: ', locationsData.length);
-	console.log('Locations Data: ', locationsData);
-	const locationList = data?.data.map((location: { location_area: { name: string } }) => {
+	console.log('Data: ', locationsData)
+	const locationList = data?.data.map((location: LocationAreaEncounterResponse) => {
 		return <li key={uuidv4()}>{transformWords(location.location_area.name)}</li>;
 	});
 
@@ -26,7 +27,9 @@ const PokemonLocationAreaEncounters = (params: { locations: string }) => {
 	return (
 		<div className='row' style={{ display: 'inline' }}>
 			<h3 className='responsive-h3'>Location Encounters</h3>
-			<ul>{locationList}</ul>
+			<div className='lists'>
+				<ul className='nes-list is-circle'>{locationList}</ul>
+			</div>
 		</div>
 	);
 };
