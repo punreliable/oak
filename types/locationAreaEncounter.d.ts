@@ -23,4 +23,5 @@ export interface LocationAreaEncounter {
 			url: string;
 		};
 	}[];
-}[];
+}
+[];
