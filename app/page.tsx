@@ -11,19 +11,14 @@ import { useDispatch } from 'react-redux';
 import { savePokemon } from '@/reducers/pokemonReducer';
 import { AppDispatch } from '@/reducers/store';
 import { UseQueryOptions } from '@tanstack/react-query';
+import {getRandomKantoPokemonByID} from '@/utilities/getRandomKantoPokemonByID';
 
 interface PokemonFromAPI {
 	data: Pokemon;
 	status: number;
 }
 
-const getPokemonNumber = () => {
-	const number = Math.floor(Math.random() * 151) + 1;
-	if (number < 10) {
-		return `0${number}`;
-	}
-	return `${number}`;
-};
+const getPokemonNumber = getRandomKantoPokemonByID();
 
 const Home = () => {
 	const [isClient, setIsClient] = useState(false);
@@ -36,7 +31,7 @@ const Home = () => {
 	const { data, isError, isLoading } = useQuery<Pokemon, Error, Pokemon, string[]>({
 		queryKey: ['pokemon'],
 		queryFn: async () => {
-			const id = getPokemonNumber();
+			const id = getPokemonNumber;
 			const response: PokemonFromAPI = await axios.get(
 				`https://pokeapi.co/api/v2/pokemon/${id}`,
 			);
