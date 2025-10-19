@@ -11,7 +11,7 @@ import { useDispatch } from 'react-redux';
 import { savePokemon } from '@/reducers/pokemonReducer';
 import { AppDispatch } from '@/reducers/store';
 import { UseQueryOptions } from '@tanstack/react-query';
-import {getRandomKantoPokemonByID} from '@/utilities/getRandomKantoPokemonByID';
+import { getRandomKantoPokemonByID } from '@/utilities/getRandomKantoPokemonByID';
 
 interface PokemonFromAPI {
 	data: Pokemon;
