@@ -9,6 +9,7 @@ import PokemonAbilitiesList from '@/app/components/PokemonAbilitiesList';
 import PokemonTypeList from '@/app/components/PokemonTypeList';
 import Image from 'next/image';
 import PokemonLocationAreaEncounters from '@/app/components/PokemonLocationAreaEncounters';
+import EvolutionsHandler from '@/app/components/EvolutionsByPokemon/EvolutionsHandler';
 export interface Result {
 	name: string;
 	url: string;
@@ -67,6 +68,11 @@ export default async function Page({ params }: { params: any }) {
 									width={256}
 									height={256}
 								/>
+
+								<div className='row my-4'>
+									<EvolutionsHandler id={post.evolution_chain.url} />
+								</div>
+
 								<div className='row my-4'>
 									<PokemonTypeList types={post.types} />
 								</div>

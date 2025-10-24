@@ -20,7 +20,6 @@ import type { PokemonSpecies } from '@/types/pokemon-species';
 interface PokemonFromAPI {
 	pokemon: Pokemon;
 }
-
 interface PokemonSpeciesFromAPI {
 	data: PokemonSpecies;
 	status: number;

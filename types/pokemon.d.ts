@@ -1,6 +1,7 @@
 import type MoveList from '@/types/move-list';
 
 export interface Pokemon {
+	[x: string]: any;
 	abilities: {
 		ability: {
 			name: string;
