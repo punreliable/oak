@@ -9,7 +9,8 @@ import PokemonAbilitiesList from '@/app/components/PokemonAbilitiesList';
 import PokemonTypeList from '@/app/components/PokemonTypeList';
 import Image from 'next/image';
 import PokemonLocationAreaEncounters from '@/app/components/PokemonLocationAreaEncounters';
-import EvolutionsHandler from '@/app/components/EvolutionsByPokemon/EvolutionsHandler';
+import PokemonSpecies from '@/app/components/PokemonSpecies';
+
 export interface Result {
 	name: string;
 	url: string;
@@ -43,7 +44,7 @@ export default async function Page({ params }: { params: any }) {
 		})
 		.catch((error) => {
 			console.error(error);
-			return null; // Or redirect to an error page
+			return null;
 		});
 
 	return (
@@ -70,7 +71,7 @@ export default async function Page({ params }: { params: any }) {
 								/>
 
 								<div className='row my-4'>
-									<EvolutionsHandler id={post.evolution_chain.url} />
+									<PokemonSpecies id={post.id} />
 								</div>
 
 								<div className='row my-4'>

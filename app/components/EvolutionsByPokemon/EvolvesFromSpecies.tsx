@@ -16,7 +16,7 @@ interface PokemonSpeciesFromAPI {
 
 const EvolvesFromSpecies = (props: { species: PokemonSpecies }) => {
 	const species = props.species;
-	const requestURL: string = `https://pokeapi.co/pokemon/${species.name}`;
+	const requestURL: string = `https://pokeapi.co/pokemon-species/${species.name}`;
 
 	async function fetchEvolvesFromSpecies(requestURL: string) {
 		const response: PokemonSpeciesFromAPI = await axios.get(requestURL);
