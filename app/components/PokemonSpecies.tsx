@@ -51,9 +51,11 @@ const PokemonDescription = (props: { id: number }) => {
 	const isLegendaryPokemon = data?.data.is_legendary;
 	const isMythicalPokemon = data?.data.is_mythical;
 
-	const evolutionTo = chain?.data.chain.evolves_to.map((evolve) => {
-		return transformWords(evolve.species.name);
-	});
+	const evolutionTo = chain?.data.chain.evolves_to.map(
+		(evolve: { species: { name: string } }) => {
+			return transformWords(evolve.species.name);
+		},
+	);
 
 	if (isLoading) <PendingPokeball />;
 
