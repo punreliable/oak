@@ -71,7 +71,9 @@ export default async function Page({ params }: { params: any }) {
 								/>
 
 								<div className='row my-4'>
-									<PokemonSpecies id={post.id} />
+									<Suspense fallback={<PendingPokemon />}>
+										<PokemonSpecies id={post.id} />
+									</Suspense>
 								</div>
 
 								<div className='row my-4'>
