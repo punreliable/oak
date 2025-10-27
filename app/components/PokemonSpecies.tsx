@@ -7,13 +7,13 @@ import BadgeLegendaryPokemon from '@/app/components/badges/BadgeLegendaryPokemon
 import BadgeMythicalPokemon from '@/app/components/badges/BadgeMythicalPokemon';
 import type { PokemonSpecies } from '@/types/pokemon-species';
 import transformWords from '@/utilities/transformWords';
-import {useQuery} from '@tanstack/react-query';
+import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 interface PokemonDescriptionProps {
 	data: PokemonSpecies;
 }
 
-const PokemonDescription = (props: {id: number}) => {
+const PokemonDescription = (props: { id: number }) => {
 	const id = props.id;
 
 	const { data, isLoading, isError } = useQuery({
@@ -21,7 +21,7 @@ const PokemonDescription = (props: {id: number}) => {
 		queryFn: () => {
 			const res = axios.get(`https://pokeapi.co/api/v2/pokemon-species/${id}`);
 			return res;
-		}
+		},
 	});
 
 	const catchRate: number = data?.data.capture_rate;
@@ -33,15 +33,19 @@ const PokemonDescription = (props: {id: number}) => {
 	const hasEvolutionChain: string = data?.data.evolution_chain.url
 		? data.data.evolution_chain.url
 		: 'none';
-	
+
 	const evolutionChainURL = data?.data.evolution_chain.url;
 
-	const {status, fetchStatus, data: chain } = useQuery({
+	const {
+		status,
+		fetchStatus,
+		data: chain,
+	} = useQuery({
 		queryKey: ['evolution-chain', evolutionChainURL],
 		queryFn: () => axios.get(evolutionChainURL),
-		enabled: !!evolutionChainURL
+		enabled: !!evolutionChainURL,
 	});
-	
+
 	// console.log('This pokemon has an evoution chain: ', hasEvolutionChain);
 
 	const description = data?.data.flavor_text_entries.map(
@@ -63,7 +67,7 @@ const PokemonDescription = (props: {id: number}) => {
 	const isLegendaryPokemon = data?.data.is_legendary;
 	const isMythicalPokemon = data?.data.is_mythical;
 	const evolutionDetails = chain?.data.chain?.evolution_details;
-	const speciesName = chain?.data?.species?.name ? chain.data.species.name: 'This Pokemon';
+	const speciesName = chain?.data?.species?.name ? chain.data.species.name : 'This Pokemon';
 	const evolvesToEvolutionDetails = chain?.data?.chain.evolves_to.evolution_details;
 
 	// const evolvesTo = data?.data.evolves_to;
@@ -73,9 +77,9 @@ const PokemonDescription = (props: {id: number}) => {
 	// 	});
 	// }
 
-	 const evolutionTo = chain?.data.chain.evolves_to.map( ( evolve ) => {
+	const evolutionTo = chain?.data.chain.evolves_to.map((evolve) => {
 		return transformWords(evolve.species.name);
-	 });
+	});
 
 	return (
 		<>
@@ -126,13 +130,15 @@ const PokemonDescription = (props: {id: number}) => {
 			</div>
 
 			{status == 'success' && chain && (
-				<div className="col-md-12">
-					<h3 className="my-4">Evolution</h3>
+				<div className='col-md-12'>
+					<h3 className='my-4'>Evolution</h3>
 					<p>Evolves into: {evolutionTo}</p>
-					<p>Baby Trigger Item: {data?.data.baby_trigger_item ? data.data.baby_trigger_item : 'None.'}</p>
+					<p>
+						Baby Trigger Item:{' '}
+						{data?.data.baby_trigger_item ? data.data.baby_trigger_item : 'None.'}
+					</p>
 				</div>
 			)}
-
 		</>
 	);
 };
