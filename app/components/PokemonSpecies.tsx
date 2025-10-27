@@ -5,22 +5,18 @@ import BadgeBasicPokemon from '@/app/components/badges/BadgeBasicPokemon';
 import BadgeBabyPokemon from '@/app/components/badges/BadgeBasicPokemon';
 import BadgeLegendaryPokemon from '@/app/components/badges/BadgeLegendaryPokemon';
 import BadgeMythicalPokemon from '@/app/components/badges/BadgeMythicalPokemon';
-import type { PokemonSpecies } from '@/types/pokemon-species';
 import transformWords from '@/utilities/transformWords';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-interface PokemonDescriptionProps {
-	data: PokemonSpecies;
-}
+import PendingPokeball from '@/app/components/PendingPokeball';
 
 const PokemonDescription = (props: { id: number }) => {
 	const id = props.id;
 
-	const { data, isLoading, isError } = useQuery({
+	const { data, isLoading } = useQuery({
 		queryKey: ['species'],
 		queryFn: () => {
-			const res = axios.get(`https://pokeapi.co/api/v2/pokemon-species/${id}`);
-			return res;
+			return axios.get(`https://pokeapi.co/api/v2/pokemon-species/${id}`);
 		},
 	});
 
@@ -30,23 +26,13 @@ const PokemonDescription = (props: { id: number }) => {
 	const genderRate: number = data?.data.gender_rate;
 	const growthRate: { name: string; url: string } = data?.data.growth_rate;
 	const hatchCounter: number = data?.data.hatch_counter;
-	const hasEvolutionChain: string = data?.data.evolution_chain.url
-		? data.data.evolution_chain.url
-		: 'none';
-
 	const evolutionChainURL = data?.data.evolution_chain.url;
 
-	const {
-		status,
-		fetchStatus,
-		data: chain,
-	} = useQuery({
+	const { status, data: chain } = useQuery({
 		queryKey: ['evolution-chain', evolutionChainURL],
 		queryFn: () => axios.get(evolutionChainURL),
 		enabled: !!evolutionChainURL,
 	});
-
-	// console.log('This pokemon has an evoution chain: ', hasEvolutionChain);
 
 	const description = data?.data.flavor_text_entries.map(
 		(flavor: {
@@ -60,26 +46,16 @@ const PokemonDescription = (props: { id: number }) => {
 		},
 	);
 
-	// console.log('Data: ', chain?.data);
-
 	const isNotBasicPokemon = data?.data.evolves_from_species;
 	const isBabyPokemon = data?.data.is_baby;
 	const isLegendaryPokemon = data?.data.is_legendary;
 	const isMythicalPokemon = data?.data.is_mythical;
-	const evolutionDetails = chain?.data.chain?.evolution_details;
-	const speciesName = chain?.data?.species?.name ? chain.data.species.name : 'This Pokemon';
-	const evolvesToEvolutionDetails = chain?.data?.chain.evolves_to.evolution_details;
-
-	// const evolvesTo = data?.data.evolves_to;
-	// if(data?.data.evolves_to > 0) {
-	// 	const evolutionTo = evolvesTo.map( evolve => {
-	// 		return <p>{evolve.species.name}</p>;
-	// 	});
-	// }
 
 	const evolutionTo = chain?.data.chain.evolves_to.map((evolve) => {
 		return transformWords(evolve.species.name);
 	});
+
+	if (isLoading) <PendingPokeball />;
 
 	return (
 		<>
