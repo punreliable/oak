@@ -4,7 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
  
-## [Unreleased] - 2025-11-01
+## [Unreleased] - 2026-03-14
+
+## [2.8.2] - 2026-03-14
+
+### Changed
+
+- [v2.8.2](https://github.com/punreliable/oak/releases/tag/v2.8.2)
 
 ## [2.8.1] - 2025-11-01
 
