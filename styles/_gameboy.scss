@@ -52,7 +52,7 @@ body.gameboy {
 }
 
 nav.gameboy {
-  background-color: vars.$darker-green;
+  background-color: vars.$firered-bg;
 }
 
 .jumbotron {
@@ -64,14 +64,14 @@ nav.gameboy {
 
 div.card-body {
   &.gameboy {
-    background-color: vars.$brighter-green;
+    background-color: vars.$firered-bg;
   }
 }
 
 footer {
   &.gameboy {
     color: vars.$color-white;
-    background-color: vars.$darker-green;
+    background-color: vars.$firered-bg;
     font-family: vars.$font-family-primary;
   }
 }

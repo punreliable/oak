@@ -8,7 +8,11 @@ $primary-green: #8d956e;
 $brighter-green: #c5d1a3;
 $brightest-green: #e6ecca;
 
-$background-color: $darker-green;
+// FireRed Colors
+$firered-bg: #c4b58c;
+
+//$background-color: $darker-green;
+$background-color: $firered-bg;
 $base-color: $primary-green;
 $color-black: $darkest-green;
 // $color-text: $brightest-green;
@@ -126,6 +130,7 @@ $color-type-steel-shadow: #817670;
 $color-type-water: #6890f0;
 $color-type-water-highlight: #99d8dd;
 $color-type-water-shadow: #807573;
+
 
 $XSmall: 575px;
 $Small: 576px;

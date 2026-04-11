@@ -992,8 +992,8 @@ $base-color: vars.$color-normal;
 .type-normal-container, .container-type-normal {
 
 	@extend .type-container;
-
-	background-color: vars.$color-normal;
+	//background-color: vars.$color-normal;
+	background-color: vars.$firered-bg;
 	background-image: url('../assets/type-icons-color-dark/01-normal.svg');
 	background-position: top 2em center;
 	background-repeat: no-repeat;
@@ -1005,8 +1005,9 @@ $base-color: vars.$color-normal;
   &.is-dark {
 	position: relative;
 	margin: vars.$border-size;
-	color: vars.$background-color;
-	background-color: $base-color;
+	color: vars.$color-black;
+	//background-color: $base-color;
+	background-color: vars.$firered-bg;
 	border-color: vars.$color-normal;
 
 	&::after {

@@ -33,22 +33,24 @@ const PokemonMoveList = (props: MoveList) => {
 	const moves = props.moves;
 	const fromPage = props.from;
 
-	const minified = moves.map((x: any) => (
-		<tr key={uuidv4()}>
-			<td>
-				<a
-					href={`/move/${x.move.name}?from=${fromPage}`}
-					className={`nes-btn is-error my-1`}
-				>
-					{transformWords(x.move.name)}
-				</a>
-			</td>
-			<td className='hide-on-small'>
-				{transformWords(x.version_group_details[0].move_learn_method.name)}
-			</td>
-			{detectMoveLearnMethod(x)}
-		</tr>
-	));
+	const minified = moves
+		.filter((x: any) => x.version_group_details[0].move_learn_method.name === 'level-up')
+		.map((x: any) => (
+			<tr key={uuidv4()}>
+				<td>
+					<a
+						href={`/move/${x.move.name}?from=${fromPage}`}
+						className={`nes-btn is-error my-1`}
+					>
+						{transformWords(x.move.name)}
+					</a>
+				</td>
+				<td className='hide-on-small'>
+					{transformWords(x.version_group_details[0].move_learn_method.name)}
+				</td>
+				{detectMoveLearnMethod(x)}
+			</tr>
+		));
 	return (
 		<>
 			<div className='row my-4'>

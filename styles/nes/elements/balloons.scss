@@ -36,7 +36,7 @@
   @include mixins.standard-padding();
   margin: 8px;
   margin-bottom: 30px;
-  background-color: vars.$brighter-green;
+  background-color: vars.$firered-bg;
 
   > :last-child {
     margin-bottom: 0;
@@ -61,13 +61,13 @@
     &.from-left,
     &.from-right {
       &::before {
-        background-color: vars.$brighter-green;
+        background-color: vars.$firered-bg;
         border-color: vars.$darker-green;
       }
 
       &::after {
         color: vars.$brightest-green;
-        background-color: vars.$brighter-green;
+        background-color: vars.$firered-bg;
       }
     }
 
@@ -100,7 +100,7 @@
       bottom: -14px;
       width: 26px;
       height: 10px;
-      background-color: vars.$brighter-green;
+      background-color: vars.$firered-bg;
       border-right: 4px solid vars.$darker-green;
       border-left: 4px solid vars.$darker-green;
     }
@@ -111,7 +111,7 @@
       height: 4px;
       margin-right: 8px;
       color: vars.$brightest-green;
-      background-color: vars.$brighter-green;
+      background-color: vars.$firered-bg;
       @include box-shadow(vars.$primary-green);
     }
   }
@@ -126,7 +126,7 @@
       bottom: -14px;
       width: 26px;
       height: 10px;
-      background-color: vars.$brighter-green;
+      background-color: vars.$firered-bg;
       border-right: 4px solid vars.$darker-green;
       border-left: 4px solid vars.$darker-green;
     }
@@ -136,7 +136,7 @@
       width: 18px;
       height: 4px;
       margin-left: 8px;
-      background-color: vars.$brighter-green;
+      background-color: vars.$firered-bg;
       @include box-shadow(vars.$primary-green, false);
     }
   }

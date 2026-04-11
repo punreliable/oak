@@ -4,8 +4,6 @@ import { usePLAE } from '@/app/queries/usePLAE';
 import transformWords from '@/utilities/transformWords';
 import PendingPokeball from '@/app/components/PendingPokeball';
 import type { PokemonLocationAreaEncounter } from '@/types/pokemon-location-area-encounters';
-import Link from 'next/link';
-import { getURLtoPath } from '@/utilities/getURLtoPath';
 
 const PokemonLocationAreaEncounters = (params: { locations: string }) => {
 	const { data, isLoading } = usePLAE(params.locations);
@@ -18,7 +16,6 @@ const PokemonLocationAreaEncounters = (params: { locations: string }) => {
 	return (
 		<div className='row' style={{ display: 'inline' }}>
 			<h3 className='responsive-h3'>Location Encounters</h3>
-
 			<div className='nes-table-responsive'>
 				<table className='nes-table is-bordered is-centered is-dark'>
 					<thead>
@@ -34,7 +31,7 @@ const PokemonLocationAreaEncounters = (params: { locations: string }) => {
 	);
 
 	function locationsHandler() {
-		const validVersions = ['yellow', 'red', 'blue'];
+		const validVersions = ['firered', 'leafgreen'];
 		return data?.data
 			.filter((location: any) =>
 				location.version_details.some((versionDetail: any) =>
@@ -45,9 +42,9 @@ const PokemonLocationAreaEncounters = (params: { locations: string }) => {
 				return (
 					<tr key={uuidv4()}>
 						<td>
-							<Link href={getURLtoPath(location.location_area.url)}>
+							<p>
 								{transformWords(location.location_area.name)}
-							</Link>
+							</p>
 						</td>
 						<td className='hide-on-small'>
 							<ul>

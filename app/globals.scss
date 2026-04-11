@@ -263,7 +263,7 @@ button {
   font-size: 1rem;
   font-weight: 500;
   font-family: inherit;
-  background-color: vars.$darker-green;
+  background-color: vars.$firered-bg;
   cursor: pointer;
   transition: border-color 0.25s;
 
@@ -284,11 +284,12 @@ button {
   width: 100%;
 }
 .nes-container {
-  background-color: vars.$primary-green;
+  //background-color: vars.$primary-green;
+  background-color: vars.$firered-bg;
   color: vars.$darker-green;
 }
 .nes-balloon {
-  background-color: vars.$brighter-green;
+  background-color: vars.$firered-bg;
   color: vars.$darker-green;
 }
 
@@ -308,7 +309,7 @@ button {
 }
 
 body {
-  background-color: vars.$primary-green;
+  background-color: vars.$firered-bg;
 }
 
 label {

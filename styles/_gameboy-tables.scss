@@ -5,13 +5,15 @@
 	max-width: 100%;
 	overflow-x: auto;
 	overflow-y: hidden;
-	border-color: $darker-green;
+	// border-color: $darker-green;
+	border-color: $firered-bg;
 }
 
 .gameboy-table {
 
 	table-layout: fixed;
-	background-color: $brightest-green !important;
+	//background-color: $brightest-green !important;
+	background-color: $firered-bg !important;
 
 	tr {
 
@@ -25,7 +27,7 @@
 		position: relative;
 		padding: 0.5rem;
 		word-wrap: break-word;
-		border-color: $darker-green;
+		border-color: $firered-bg;
 		border-style: solid;
 		border-width: 0 0.25em 0.25em 0;
 
@@ -40,7 +42,8 @@
 			width: 0.25em;
 			height: 0.25em;
 			content: "";
-			background-color: $brighter-green;
+			//background-color: $brighter-green;
+			background-color: $firered-bg;
 		}
 
 		&::after {
@@ -74,7 +77,8 @@
 
 	&.is-dark {
 
-		background-color: $darkest-green !important;
+		//background-color: $darkest-green !important;
+		background-color: $firered-bg !important;
 		color: $brightest-green;
 
 		&.is-bordered {
@@ -83,8 +87,8 @@
 
 		th,
 		td {
-			border-color: $brightest-green;
-
+			//border-color: $brightest-green;
+			border-color: $firered-bg;
 			&::after,
 			&::before {
 				display: none;
