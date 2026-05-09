@@ -68,5 +68,7 @@
 }
 
 @mixin standard-border-image-outset() {
-	border-image-outset: 2;
+	& {
+		border-image-outset: 2;
+	}
 }
