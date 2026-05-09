@@ -1,8 +1,10 @@
 @use '../../variables' as vars;
 @use '../../mixins' as mixins;
 
-$base-color: vars.$primary-green;
-$background-color: vars.$background-color;
+//$base-color: vars.$primary-green;
+//$background-color: vars.$background-color;
+$base-color: vars.$color-black;
+$background-color: vars.$firered-bg;
 
 .nes-table-responsive {
   max-width: 100%;
@@ -73,6 +75,7 @@ $background-color: vars.$background-color;
   &.is-dark {
     color: $background-color;
     background-color: $base-color;
+    // background-color: vars.$firered-bg;
 
     &.is-bordered {
       @include mixins.compact-rounded-corners(true);
@@ -80,7 +83,9 @@ $background-color: vars.$background-color;
 
     th,
     td {
-      border-color: $background-color;
+      //border-color: $background-color;
+      border-color: vars.$firered-bg;
+
 
       &::after,
       &::before {

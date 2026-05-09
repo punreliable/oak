@@ -4,7 +4,9 @@
 
 $border-size: 4px;
 $color-black: #212529;
-$base-color: vars.$color-black !default;
+$color-white: vars.$color-white;
+// $base-color: vars.$color-black !default;
+$base-color: vars.$color-white;
 
 @mixin btn-style($color, $background, $hover-background, $shadow) {
   color: $color;
@@ -21,7 +23,7 @@ $base-color: vars.$color-black !default;
   }
 
   &:hover {
-    color: $color;
+    color: $color-white;
     text-decoration: none;
     background-color: $hover-background;
 

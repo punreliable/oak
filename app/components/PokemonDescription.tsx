@@ -31,7 +31,7 @@ const PokemonDescription = (props: PokemonDescriptionProps) => {
 			language: { name: string; url: string };
 			version: { name: string; url: string };
 		}) => {
-			if (flavor.language.name == 'en' && flavor.version.name === 'yellow') {
+			if (flavor.language.name == 'en' && flavor.version.name === 'firered') {
 				return flavor.flavor_text;
 			}
 		},

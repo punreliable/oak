@@ -8,13 +8,16 @@ $primary-green: #8d956e;
 $brighter-green: #c5d1a3;
 $brightest-green: #e6ecca;
 
+$color-abs-black: #000000;
+
 // FireRed Colors
 $firered-bg: #c4b58c;
 
 //$background-color: $darker-green;
 $background-color: $firered-bg;
 $base-color: $primary-green;
-$color-black: $darkest-green;
+// $color-black: $darkest-green;
+$color-black: $color-abs-black;
 // $color-text: $brightest-green;
 $color-text-shadow: $brighter-green;
 $color-white: $brightest-green;

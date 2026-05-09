@@ -4,7 +4,8 @@
 @use '../styles/pokemon-types' as pokemon;
 
 :root {
-  color: vars.$darkest-green;
+  //color: vars.$darkest-green;
+  color: vars.$color-black;
   font-family: vars.$font-family-primary;
   font-synthesis: none;
   font-weight: 400;
@@ -348,7 +349,8 @@ input[type=text].gameboy {
 
 h1, h2, h3, h4, h5, h6, p {
   &.darkest-green {
-    color: vars.$darker-green;
+    //color: vars.$darker-green;
+    color: vars.$color-black;
   }
 
 }
