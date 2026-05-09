@@ -1,5 +1,4 @@
 import type { NextConfig } from 'next';
-const path = require('path');
 
 const nextConfig: NextConfig = {
 	images: {
@@ -9,7 +8,7 @@ const nextConfig: NextConfig = {
 		silenceDeprecations: ['color-functions', 'global-builtin'],
 	},
 	turbopack: {
-		root: path.join(__dirname, '..'),
+		root: __dirname,
 	},
 };
 
