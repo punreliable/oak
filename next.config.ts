@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
 	images: {
 		unoptimized: true,
 	},
+	sassOptions: {
+    	silenceDeprecations: ['color-functions', 'global-builtin'],
+  	},
 	turbopack: {
 		root: path.join(__dirname, '..'),
 	},
