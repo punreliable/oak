@@ -35,8 +35,10 @@ const PokemonMoveList = (props: MoveList) => {
 
 	const minified = moves
 		.filter((x: any) => x.version_group_details[0].move_learn_method.name === 'level-up')
-		.sort((a: any, b: any) => 
-			a.version_group_details[0].level_learned_at - b.version_group_details[0].level_learned_at
+		.sort(
+			(a: any, b: any) =>
+				a.version_group_details[0].level_learned_at -
+				b.version_group_details[0].level_learned_at,
 		)
 		.map((x: any) => (
 			<tr key={uuidv4()}>
