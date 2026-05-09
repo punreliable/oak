@@ -41,7 +41,9 @@
 
 	@if $isDark {
 		@include border-image(vars.$brighter-green);
-		border-image-outset: 0;
+		& {
+			border-image-outset: 0;
+		}
 	} @else {
 		@include border-image(vars.$darker-green);
 		@include standard-border-image-outset();

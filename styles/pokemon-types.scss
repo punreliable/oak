@@ -1036,7 +1036,9 @@ position: relative;
   &.is-rounded {
 	@include mixins.rounded-corners();
 	@include mixins.standard-padding();
-	margin: $border-size;
+	& {
+		margin: $border-size;
+	}
 
 	&.with-title {
 	  > .title {
