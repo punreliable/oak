@@ -42,9 +42,7 @@ const PokemonLocationAreaEncounters = (params: { locations: string }) => {
 				return (
 					<tr key={uuidv4()}>
 						<td>
-							<p>
-								{transformWords(location.location_area.name)}
-							</p>
+							<p>{transformWords(location.location_area.name)}</p>
 						</td>
 						<td className='hide-on-small'>
 							<ul>

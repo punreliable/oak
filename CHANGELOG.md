@@ -1,9 +1,10 @@
 # Changelog
+
 All notable changes to this project will be documented in this file.
- 
+
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
- 
+
 ## [Unreleased] - 2026-03-14
 
 ## [2.8.2] - 2026-03-14
@@ -19,6 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - [v2.8.1](https://github.com/punreliable/oak/releases/tag/v2.8.1)
 
 ### Created
+
 - CHANGELOG.md created and populated with Changes
 
 ## [2.8.0] - 2025-10-24
@@ -150,8 +152,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - [v2.4.2](https://github.com/punreliable/oak/releases/tag/v2.4.2)
 
 ### Added
-- Added 'from' props to PokemonMoveList in Search > Result component
 
+- Added 'from' props to PokemonMoveList in Search > Result component
 
 ## [2.4.3] - 2025-08-27
 
@@ -160,6 +162,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - [v2.4.2](https://github.com/punreliable/oak/releases/tag/v2.4.2)
 
 ### Added
+
 - Added 'from' props to PokemonMoveList in Search > Result component
 
 ## [2.4.2] - 2025-08-27
@@ -169,130 +172,131 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - [v2.4.2](https://github.com/punreliable/oak/releases/tag/v2.4.2)
 
 ### Added
+
 - Added 'from' props to PokemonMoveList in Search > Result component
 
 ## [2.4.1] - 2025-08-27
 
 ### Removed
+
 - Removed unused regions page
 
 ### Changed
-  
+
 - [v2.4.1](https://github.com/punreliable/oak/releases/tag/v2.4.1)
 
 ## [2.4.0] - 2025-08-27
- 
+
 ### Changed
-  
+
 - [v2.4.0](https://github.com/punreliable/oak/releases/tag/v2.4.0)
 
-
 ## [2.3.1] - 2025-08-27
- 
+
 ### Changed
-  
+
 - [v2.3.1](https://github.com/punreliable/oak/releases/tag/v2.3.1)
 - Type file formatted and linted
 
 ## [2.2.2] - 2025-08-26
- 
+
 ### Changed
-  
+
 - [v2.2.2](https://github.com/punreliable/oak/releases/tag/v2.2.2)
 
 ## [2.2.1] - 2025-08-20
- 
+
 ### Changed
-  
+
 - [v1.9.0](https://github.com/punreliable/oak/releases/tag/v2.0.1)
-- 
+-
+
 ## [2.2.0] - 2025-08-20
- 
+
 ### Changed
-  
+
 - [v1.9.0](https://github.com/punreliable/oak/releases/tag/v2.0.1)
 
 ## [2.1.1] - 2025-08-19
- 
+
 ### Changed
-  
+
 - [v2.1.1](https://github.com/punreliable/oak/releases/tag/v2.1.1)
 - Style still being cleaned up
 
 ## [2.1.0] - 2025-08-18
- 
+
 ### Changed
-  
+
 - [v2.1.0](https://github.com/punreliable/oak/releases/tag/v2.1.0)
 
 ## [2.0.2] - 2025-08-17
- 
+
 ### Changed
-  
+
 - [v2.0.2](https://github.com/punreliable/oak/releases/tag/v2.0.2)
 
 ## [2.0.1] - 2025-08-06
- 
+
 ### Changed
-  
+
 - [v1.9.0](https://github.com/punreliable/oak/releases/tag/v2.0.1)
 
 ## [2.0.0] - 2025-08-05
- 
+
 ### Changed
-  
+
 - [v2.0.0](https://github.com/punreliable/oak/releases/tag/v2.0.0)
 
 ## [1.9.1] - 2025-08-03
 
 ### Changed
-  
+
 - [v1.9.1](https://github.com/punreliable/oak/releases/tag/v1.9.1)
 
-
 ## [1.9.0] - 2025-08-02
- 
+
 ### Changed
-  
+
 - [v1.9.0](https://github.com/punreliable/oak/releases/tag/v1.9.0)
 - Linting, clean up
 
 ## [1.8.9] - 2025-07-10
 
 ### Changed
-  
+
 - [v1.8.9](https://github.com/punreliable/oak/releases/tag/v1.8.9)
 - Updated versions to v1.8.9
 
 ## [1.8.8] - 2025-07-09
 
 ### Changed
-  
+
 - [v1.8.8](https://github.com/punreliable/oak/releases/tag/v1.8.8)
 - ran yarn format
 
 ## [1.8.7] - 2025-07-09
 
 ### Changed
-  
+
 - [v1.8.7](https://github.com/punreliable/oak/releases/tag/v1.8.7)
   Attempt 1 at Padding and layout updates, also first Prettier
 
 ## [1.8.6] - 2025-06-23
 
 ### Changed
-  
+
 - [v1.8.6](https://github.com/punreliable/oak/releases/tag/v1.8.6)
 
 ## [1.8.5] - 2025-05-29
 
 ### Changed
-  
+
 - [v1.8.5](https://github.com/punreliable/oak/releases/tag/v1.8.5)
 - Pokemon Search Page is functional
 
 ## [1.8.4] - 2025-05-29
- 
+
 ### Changed
 
 - [v1.8.4](https://github.com/punreliable/oak/releases/tag/v1.8.4)
@@ -302,7 +306,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Some linting in Types pages
 
 ## [1.8.3] - 2025-01-14
- 
+
 ### Changed
 
 - [v1.8.3](https://github.com/punreliable/oak/releases/tag/v1.8.3)
@@ -312,14 +316,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Regions list is rendering
 
 ## [1.8.2] - 2025-04-24
- 
+
 ### Changed
 
 - [v1.8.2](https://github.com/punreliable/oak/releases/tag/v1.8.2)
 - Updated to v1.8.2
 
 ## [1.7.1] - 2025-04-22
- 
+
 ### Changed
 
 - [v1.7.1](https://github.com/punreliable/oak/releases/tag/v1.7.1)
@@ -329,7 +333,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Created a page for pulling data of a random berry
 
 ## [1.8.1] - 2025-04-22
- 
+
 ### Changed
 
 - [v1.8.1](https://github.com/punreliable/oak/releases/tag/v1.8.1)
@@ -339,7 +343,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Updating to v1.8.1
 
 ## [1.7.2] - 2025-04-22
- 
+
 ### Changed
 
 - [v1.7.2](https://github.com/punreliable/oak/releases/tag/v1.7.2)
@@ -349,27 +353,27 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Fixed relative path issue in berries components
 
 ## [1.7.0] - 2025-03-04
- 
+
 ### Changed
 
 - [v1.7.0](https://github.com/punreliable/oak/releases/tag/v1.7.0)
 - Using Next Navigation to let Users Search for new Moves
 
 ## [1.6.2] - 2025-02-19
- 
+
 ### Changed
 
 - [v1.6.2](https://github.com/punreliable/oak/releases/tag/v1.6.2)
 - Dark Mode added
 
 ## [1.6.1] - 2025-01-17
- 
+
 ### Changed
 
 - [v1.6.1](https://github.com/punreliable/oak/releases/tag/v1.6.1)
 
 ## [1.6.0] - 2025-01-17
- 
+
 ### Changed
 
 - [v1.6.0](https://github.com/punreliable/oak/releases/tag/v1.6.0)
@@ -379,7 +383,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Updated README, this will be v1.6
 
 ## [1.5.1] - 2025-01-14
- 
+
 ### Changed
 
 - [v1.5.1](https://github.com/punreliable/oak/releases/tag/v1.5.1)
@@ -389,7 +393,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Updated Readme with version number
 
 ## [1.5.0] - 2025-01-06
- 
+
 ### Changed
 
 - [v1.5.0](https://github.com/punreliable/oak/releases/tag/v1.5.0)
@@ -399,7 +403,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Saved my changes this time
 
 ## [1.4.3] - 2024-12-24
- 
+
 ### Changed
 
 - [v1.4.3](https://github.com/punreliable/oak/releases/tag/v1.4.3)
@@ -408,8 +412,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Drastically cleaned up Home Page
 
- ## [1.4.4] - 2024-12-24
- 
+## [1.4.4] - 2024-12-24
+
 ### Changed
 
 - [v1.4.4](https://github.com/punreliable/oak/releases/tag/v1.4.4)
@@ -419,7 +423,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Type Pages moved for slimmer main component
 
 ## [1.4.2] - 2024-12-16
- 
+
 ### Changed
 
 - [v1.4.2](https://github.com/punreliable/oak/releases/tag/v1.4.2)
@@ -429,16 +433,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Working
 
 ## [1.4.1] - 2024-11-24
- 
+
 ### Changed
 
 - [v1.4.1](https://github.com/punreliable/oak/releases/tag/v1.4.1)
 
 ### Fixed
+
 - Merging
 
 ## [1.4.0] - 2024-06-30
- 
+
 ### Changed
 
 - [v1.4.0](https://github.com/punreliable/oak/releases/tag/v1.4.0)
@@ -448,7 +453,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - All tests are passing
 
 ## [1.3.6] - 2024-04-05
- 
+
 ### Changed
 
 - [v1.3.6](https://github.com/punreliable/oak/releases/tag/v1.3.6)
@@ -458,7 +463,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Home Page is back
 
 ## [1.3.4] - 2024-04-05
- 
+
 ### Changed
 
 - [v1.3.4](https://github.com/punreliable/oak/releases/tag/v1.3.4)
@@ -468,14 +473,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Home Page is back
 
 ## [1.3.3] - 2024-04-04
- 
+
 ### Changed
 
 - [v1.3.3](https://github.com/punreliable/oak/releases/tag/v1.3.3)
 - Carousel is fully randomized
 
 ## [1.3.2] - 2024-04-04
- 
+
 ### Changed
 
 - [v1.3.2](https://github.com/punreliable/oak/releases/tag/v1.3.2)
@@ -485,7 +490,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Changed how useState works in Carousel
 
 ## [1.3.1] - 2024-04-04
- 
+
 ### Changed
 
 - [v1.3.1](https://github.com/punreliable/oak/releases/tag/v1.3.1)
@@ -495,7 +500,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Carousel is useState and useEffect on 8 pokemon
 
 ## [1.3.0] - 2024-03-16
- 
+
 ### Changed
 
 - [v1.3.0](https://github.com/punreliable/oak/releases/tag/v1.3.0)
@@ -505,7 +510,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Added Playwright, and unit test for prettyName util
 
 ## [1.1.27] - 2024-03-03
- 
+
 ### Changed
 
 - [v1.1.27](https://github.com/punreliable/oak/releases/tag/v1.1.27)
@@ -515,7 +520,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Water Pokemon Type Page is loading all Water Type Pokemon
 
 ## [1.2.2] - 2024-02-01
- 
+
 ### Changed
 
 - [v1.2.2](https://github.com/punreliable/oak/releases/tag/v1.2.2)
@@ -525,14 +530,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Minor Housekeeping, all class attrs updated to className
 
 ## [1.2.1] - 2024-02-01
- 
+
 ### Changed
 
 - [v1.2.1](https://github.com/punreliable/oak/releases/tag/v1.2.1)
 - No Pagination yet, but all 151 listed
 
 ## [1.2.0] - 2024-01-27
- 
+
 ### Changed
 
 - [v1.2.0](https://github.com/punreliable/oak/releases/tag/v1.2.0)
@@ -542,7 +547,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Routing is working
 
 ## [1.1.26] - 2024-01-22
- 
+
 ### Changed
 
 - [v1.1.26](https://github.com/punreliable/oak/releases/tag/v1.1.26)
@@ -552,7 +557,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - MainNavigation is rendering
 
 ## [1.1.25] - 2024-01-08
- 
+
 ### Changed
 
 - [v1.1.25](https://github.com/punreliable/oak/releases/tag/v1.1.25)
@@ -562,7 +567,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Removed untitled file
 
 ## [1.1.24] - 2024-01-08
- 
+
 ### Changed
 
 - [v1.1.24](https://github.com/punreliable/oak/releases/tag/v1.1.24)
@@ -572,7 +577,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Couple types were missing
 
 ## [1.1.23] - 2024-01-08
- 
+
 ### Changed
 
 - [v1.1.23](https://github.com/punreliable/oak/releases/tag/v1.1.23)
@@ -582,21 +587,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Stable build again.
 
 ## [1.1.22] - 2024-01-08
- 
+
 ### Changed
 
 - [v1.1.22](https://github.com/punreliable/oak/releases/tag/v1.1.22)
 - I was missing all these files to produce Type pages
 
 ## [1.1.21] - 2024-01-08
- 
+
 ### Changed
 
 - [v1.1.21](https://github.com/punreliable/oak/releases/tag/v1.1.21)
 - Coming Soon Pages Created for all Pokemon Types
 
 ## [1.1.20] - 2024-01-08
- 
+
 ### Changed
 
 - [v1.1.20](https://github.com/punreliable/oak/releases/tag/v1.1.20)
@@ -606,7 +611,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Pokemon Type List now dynamically links to Type Route
 
 ## [1.1.19] - 2024-01-07
- 
+
 ### Changed
 
 - [v1.1.19](https://github.com/punreliable/oak/releases/tag/v1.1.19)
@@ -616,7 +621,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Fixed PokemonTypeList Component
 
 ## [1.1.18] - 2024-01-07
- 
+
 ### Changed
 
 - [v1.1.18](https://github.com/punreliable/oak/releases/tag/v1.1.18)
@@ -626,7 +631,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Merge branch 'redux'
 
 ## [1.1.17] - 2024-01-04
- 
+
 ### Changed
 
 - [v1.1.17](https://github.com/punreliable/oak/releases/tag/v1.1.17)
@@ -636,28 +641,28 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Pokemon Types are buttons not badges
 
 ## [1.1.16] - 2023-11-27
- 
+
 ### Changed
 
 - [v1.1.16](https://github.com/punreliable/oak/releases/tag/v1.1.16)
 - Added unresolved attr to Professor Oak section
-  
+
 ## [1.1.15] - 2023-11-27
- 
+
 ### Changed
 
 - [v1.1.15](https://github.com/punreliable/oak/releases/tag/v1.1.15)
 - Added entrance animation to Prof. Oak
 
 ## [1.1.14] - 2023-11-23
- 
+
 ### Changed
 
 - [v1.1.14](https://github.com/punreliable/oak/releases/tag/v1.1.14)
 - Redux store WiP
 
 ## [1.1.13] - 2023-11-13
- 
+
 ### Changed
 
 - [v1.1.13](https://github.com/punreliable/oak/releases/tag/v1.1.13)
@@ -667,7 +672,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Extensive SCSS Clean-up
 
 ## [1.1.12] - 2023-11-13
- 
+
 ### Changed
 
 - [v1.1.12](https://github.com/punreliable/oak/releases/tag/v1.1.12)
@@ -677,29 +682,28 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Type List is working
 
 ## [1.1.11] - 2023-11-10
- 
+
 ### Changed
 
 - [v1.1.11](https://github.com/punreliable/oak/releases/tag/v1.1.11)
 - Working on Pokemon with One Type
 
-
 ## [1.1.10] - 2023-11-10
- 
+
 ### Changed
 
 - [v1.1.10](https://github.com/punreliable/oak/releases/tag/v1.1.10)
 - Issues, but start of Friday check-in
 
 ## [1.1.9] - 2023-11-06
- 
+
 ### Changed
 
 - [v1.1.9](https://github.com/punreliable/oak/releases/tag/v1.1.9)
 - Issues with PokemonType component
 
 ## [1.1.8] - 2023-11-06
- 
+
 ### Changed
 
 - Working PokemonTypeList component into main component
@@ -710,7 +714,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Removed
 
 - Pokemon Type still causing issues, hidden
- 
+
 ### Changed
 
 - [v1.1.7](https://github.com/punreliable/oak/releases/tag/v1.1.7)

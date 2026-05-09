@@ -6,8 +6,8 @@ const nextConfig: NextConfig = {
 		unoptimized: true,
 	},
 	sassOptions: {
-    	silenceDeprecations: ['color-functions', 'global-builtin'],
-  	},
+		silenceDeprecations: ['color-functions', 'global-builtin'],
+	},
 	turbopack: {
 		root: path.join(__dirname, '..'),
 	},
