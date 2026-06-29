@@ -34,7 +34,7 @@ const SinglePokemon = (url: string) => {
 
 						<Image
 							className='nes-avatar avatar pokemonAvatar'
-							alt={'Image of a ' + transformWords(data.name)}
+							alt={`Image of a ${transformWords(data.name)}`}
 							id='avatar'
 							src={data.sprites.front_default}
 							width={256}

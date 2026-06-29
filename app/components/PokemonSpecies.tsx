@@ -1,8 +1,9 @@
 'use client';
+
 import React from 'react';
 import EvolvesFromSpecies from '@/app/components/EvolutionsByPokemon/EvolvesFromSpecies';
 import BadgeBasicPokemon from '@/app/components/badges/BadgeBasicPokemon';
-import BadgeBabyPokemon from '@/app/components/badges/BadgeBasicPokemon';
+import BadgeBabyPokemon from '@/app/components/badges/BadgeBabyPokemon';
 import BadgeLegendaryPokemon from '@/app/components/badges/BadgeLegendaryPokemon';
 import BadgeMythicalPokemon from '@/app/components/badges/BadgeMythicalPokemon';
 import transformWords from '@/utilities/transformWords';
@@ -57,7 +58,7 @@ const PokemonDescription = (props: { id: number }) => {
 		},
 	);
 
-	if (isLoading) <PendingPokeball />;
+	if (isLoading) return <PendingPokeball />;
 
 	return (
 		<>

@@ -1,4 +1,5 @@
 'use client';
+
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import prettyName from '@/utilities/prettyName';
@@ -10,16 +11,16 @@ export function getPokemonIDFromURL(url: string) {
 	return Number(output);
 }
 
-const PokemonByTypeResult = (props: {
+const PokemonByTypeResult = ({ pokemon: pokemonData }: {
 	pokemon: { pokemon: [{ name: string; url: string }] };
 	slot?: number;
 }) => {
 	const classes: string = 'nes-btn is-error my-2 mx-2';
-	let classesOutPut = '';
-	const pokemon = props.pokemon.pokemon;
+	const pokemon = pokemonData.pokemon;
 	const pokemonList: any = pokemon.map((pokemonItem: { name: string; url: string }) => {
+		let classesOutPut = '';
 		if (getPokemonIDFromURL(pokemonItem.url) > 151) {
-			classesOutPut = classes + ' hidden';
+			classesOutPut = `${classes} hidden`;
 		} else {
 			classesOutPut = classes;
 		}
@@ -27,7 +28,7 @@ const PokemonByTypeResult = (props: {
 			<a
 				key={pokemonItem.name}
 				className={classesOutPut}
-				href={'/pokemon/' + pokemonItem.name}
+				href={`/pokemon/${pokemonItem.name}`}
 			>
 				{prettyName(pokemonItem.name)}
 			</a>

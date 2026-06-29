@@ -7,10 +7,6 @@ const Counter = () => {
 
 	const counter = useSelector((state: { counter: number }) => state.counter);
 
-	const toggleCounterHandler = () => {
-		console.log('Toggling...');
-	};
-
 	const incrementHandler = () => {
 		dispatch({ type: 'increment' });
 	};
@@ -43,11 +39,6 @@ const Counter = () => {
 						Decrement
 					</button>
 				</div>
-			</div>
-			<div style={{ width: '100%', maxWidth: '100%', marginTop: '1rem' }}>
-				<button onClick={toggleCounterHandler} className={`nes-btn is-warning`}>
-					Toggle
-				</button>
 			</div>
 		</div>
 	);
