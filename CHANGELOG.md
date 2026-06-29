@@ -7,11 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased] - 2026-05-09
 
-## [2.9.0] - 2026-05-09
+## [2.9.0] - 2026-06-29
 
 ### Changed
 
 - [v2.9.0](https://github.com/punreliable/oak/releases/tag/v2.9.0)
+- Fully Linted App
+- Abilities Page updated
 - Moving forward the source of truth for this app is Pokemon FireRed & LeafGreen
 
 ## [2.8.2] - 2026-03-14
