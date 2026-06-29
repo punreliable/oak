@@ -20,23 +20,14 @@ const PokemonDescription = (props: PokemonDescriptionProps) => {
 	const genderRate: number = props?.data?.gender_rate;
 	const growthRate: { name: string; url: string } = props?.data?.growth_rate;
 	const hatchCounter: number = props?.data?.hatch_counter;
-	const hasEvolutionChain: string = props?.data?.evolution_chain.url
-		? props?.data?.evolution_chain.url
-		: 'none';
 
-	console.log('This pokemon has an evoution chain: ', hasEvolutionChain);
-
-	const description = props?.data?.flavor_text_entries.map(
+	const description = props?.data?.flavor_text_entries.find(
 		(flavor: {
 			flavor_text: string;
 			language: { name: string; url: string };
 			version: { name: string; url: string };
-		}) => {
-			if (flavor.language.name == 'en' && flavor.version.name === 'firered') {
-				return flavor.flavor_text;
-			}
-		},
-	);
+		}) => flavor.language.name === 'en' && flavor.version.name === 'firered-leafgreen',
+	)?.flavor_text;
 
 	const isNotBasicPokemon = props.data?.evolves_from_species;
 	const isBabyPokemon = props.data?.is_baby;
