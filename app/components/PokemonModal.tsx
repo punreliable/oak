@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function PokemonModal(pokemonData: any) {
+export default function PokemonModal(pokemonData: any) {
 	return (
 		<section>
 			<dialog className='nes-dialog' id='dialogSinglePokemon'>

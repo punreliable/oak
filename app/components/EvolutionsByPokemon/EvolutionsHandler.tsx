@@ -1,4 +1,5 @@
 'use client';
+
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
@@ -30,8 +31,8 @@ const EvolutionsHandler = (props: { id: number }) => {
 		queryFn: async () => await fetchPokemonSpeciesData(requestURL),
 	});
 
-	if (isLoading) <PendingPokemon />;
-	if (isError) <ErrorPokemon />;
+	if (isLoading) return <PendingPokemon />;
+	if (isError) return <ErrorPokemon />;
 
 	return (
 		<>
