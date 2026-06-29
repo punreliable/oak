@@ -1,4 +1,5 @@
 'use client';
+
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
@@ -21,6 +22,8 @@ const PokemonPage = (pokemon: { pokemon: string }) => {
 	if (error) return <Error />;
 
 	if (data) return <Result pokemon={data} />;
+
+	return null;
 };
 
 export default PokemonPage;

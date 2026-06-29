@@ -31,12 +31,11 @@ export default async function Page({ params }: { params: any }) {
 		res.json(),
 	);
 
-	const areas = post.areas;
+	const { areas, game_indices: gameIndices } = post;
 	const areaList = areas.map((area) => {
 		return <li key={uuidv4()}>{transformWords(area.name)}</li>;
 	});
 
-	const gameIndices = post.game_indices;
 	const gameList = gameIndices.map((game) => {
 		return <li key={uuidv4()}>{generationName(game.generation.name)}</li>;
 	});

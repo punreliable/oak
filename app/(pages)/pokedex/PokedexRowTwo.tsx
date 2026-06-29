@@ -18,7 +18,7 @@ export function PokedexRowTwo() {
 	});
 
 	const rowData = data.results.map((pokemon: any) => {
-		const url = pokemon.url;
+		const { url } = pokemon;
 		const id = url.split('/')[6];
 		const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
 

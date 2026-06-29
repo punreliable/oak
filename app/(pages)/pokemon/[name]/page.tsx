@@ -35,13 +35,14 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }: { params: any }) {
 	const { name } = await params;
-	const post: Pokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${name.toString()}`)
-		.then((res) => {
+	const post: Pokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${name.toString()}`).then(
+		(res) => {
 			if (!res.ok) {
 				throw new Error(`Pokemon not found`);
 			}
 			return res.json();
-		});
+		},
+	);
 
 	return (
 		<Suspense fallback={<PendingPokemon />}>

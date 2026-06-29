@@ -36,12 +36,8 @@ const Result = (props: any) => {
 			fetchSpeciesData(`https://pokeapi.co/api/v2/pokemon-species/${props.pokemon.name}`),
 	});
 
-	{
-		isLoading && <PendingPokemon />;
-	}
-	{
-		isError && <ErrorPokemon />;
-	}
+	if (isLoading) return <PendingPokemon />;
+	if (isError) return <ErrorPokemon />;
 
 	return (
 		<section className='App container'>
@@ -52,7 +48,7 @@ const Result = (props: any) => {
 			<div className='row'>
 				<Image
 					className='nes-avatar avatar pokemonAvatar mx-auto'
-					alt={'Image of a ' + transformWords(props?.pokemon.name)}
+					alt={`Image of a ${transformWords(props?.pokemon.name)}`}
 					id='avatar'
 					src={props?.pokemon.sprites?.front_default}
 					width={256}

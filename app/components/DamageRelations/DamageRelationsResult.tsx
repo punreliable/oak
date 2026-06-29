@@ -13,33 +13,33 @@ const DamageRelationsResult = (props: any) => {
 	const noDamageTo = props.damage_relations.damage_relations.no_damage_to;
 
 	const doubleDamageFromOutput = doubleDamageFrom.map((obj: { name: any }) => (
-		<Link key={obj.name} className={`nes-btn is-${obj.name} pr-4`} href={'/type/' + obj.name}>
+		<Link key={obj.name} className={`nes-btn is-${obj.name} pr-4`} href={`/type/${obj.name}`}>
 			{prettyName(obj.name)}
 		</Link>
 	));
-	
+
 	const doubleDamageToOutput = doubleDamageTo.map((obj: { name: any }) => (
-		<Link key={obj.name} className={`nes-btn is-${obj.name} pr-4`} href={'/type/' + obj.name}>
+		<Link key={obj.name} className={`nes-btn is-${obj.name} pr-4`} href={`/type/${obj.name}`}>
 			{prettyName(obj.name)}
 		</Link>
 	));
 	const halfDamageFromOutput = halfDamageFrom.map((obj: { name: any }) => (
-		<Link key={obj.name} className={`nes-btn is-${obj.name} pr-4`} href={'/type/' + obj.name}>
+		<Link key={obj.name} className={`nes-btn is-${obj.name} pr-4`} href={`/type/${obj.name}`}>
 			{prettyName(obj.name)}
 		</Link>
 	));
 	const halfDamageToOutput = halfDamageTo.map((obj: { name: any }) => (
-		<Link key={obj.name} className={`nes-btn is-${obj.name} pr-4`} href={'/type/' + obj.name}>
+		<Link key={obj.name} className={`nes-btn is-${obj.name} pr-4`} href={`/type/${obj.name}`}>
 			{prettyName(obj.name)}
 		</Link>
 	));
 	const noDamageFromOutput = noDamageFrom.map((obj: { name: any }) => (
-		<Link key={obj.name} className={`nes-btn is-${obj.name} pr-4`} href={'/type/' + obj.name}>
+		<Link key={obj.name} className={`nes-btn is-${obj.name} pr-4`} href={`/type/${obj.name}`}>
 			{prettyName(obj.name)}
 		</Link>
 	));
 	const noDamageToOutput = noDamageTo.map((obj: { name: any }) => (
-		<Link key={obj.name} className={`nes-btn is-${obj.name} pr-4`} href={'/type/' + obj.name}>
+		<Link key={obj.name} className={`nes-btn is-${obj.name} pr-4`} href={`/type/${obj.name}`}>
 			{prettyName(obj.name)}
 		</Link>
 	));

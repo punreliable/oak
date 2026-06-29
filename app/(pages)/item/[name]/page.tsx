@@ -40,17 +40,11 @@ export default async function Page({ params }: { params: any }) {
 
 	const sprite = post.sprites.default;
 
-	const description = post.flavor_text_entries.map((entry) => {
-		if (entry.language.name === 'en' && entry.version_group.name === 'firered-leafgreen') {
-			return entry.text;
-		}
-	});
+	const description = post.flavor_text_entries.find(
+		(entry) => entry.language.name === 'en' && entry.version_group.name === 'firered-leafgreen',
+	)?.text;
 
-	const effects = post.effect_entries.map((effect) => {
-		if (effect.language.name === 'en') {
-			return effect.effect;
-		}
-	});
+	const effects = post.effect_entries.find((effect) => effect.language.name === 'en')?.effect;
 
 	return (
 		<Suspense fallback={<Loading />}>
@@ -66,7 +60,7 @@ export default async function Page({ params }: { params: any }) {
 				<div className='row' style={{ display: 'block', width: '100%' }}>
 					<div className='col-md-12'>
 						{post.sprites.default && (
-							<Image src={sprite} alt={post.name + ` Image`} width={60} height={60} />
+							<Image src={sprite} alt={`${post.name} Image`} width={60} height={60} />
 						)}
 					</div>
 				</div>

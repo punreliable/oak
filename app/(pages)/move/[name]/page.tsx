@@ -36,25 +36,21 @@ export default async function Page({ params }: { params: any }) {
 		res.json(),
 	);
 
-	const description = post.flavor_text_entries.map((flavor) => {
-		if (flavor.language.name == 'en' && flavor.version_group.name == 'scarlet-violet') {
-			return flavor.flavor_text;
-		}
-	});
+	const description = post.flavor_text_entries.find(
+		(flavor) =>
+			flavor.language.name === 'en' && flavor.version_group.name === 'firered-leafgreen',
+	)?.flavor_text;
 
-	const machines = post.machines.map((machine) => {
-		if (machine.version_group.name == 'yellow') {
+	const machines = post.machines
+		.filter((machine) => machine.version_group.name === 'yellow')
+		.map((machine) => {
+			const machineName = getMachineName(machine.machine.url);
 			return (
-				<Link
-					href={`/machine/` + getMachineName(machine.machine.url)}
-					className='nes-btn is-error'
-					key={uuidv4()}
-				>
-					{`Machine #` + getMachineName(machine.machine.url)}
+				<Link href={`/machine/${machineName}`} className='nes-btn is-error' key={uuidv4()}>
+					{`Machine #${machineName}`}
 				</Link>
 			);
-		}
-	});
+		});
 
 	return (
 		<Suspense fallback={<Loading />}>

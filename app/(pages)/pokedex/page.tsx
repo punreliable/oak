@@ -1,4 +1,5 @@
 'use client';
+
 import React from 'react';
 import { PokedexRowOne } from './PokedexRowOne';
 import { PokedexRowTwo } from './PokedexRowTwo';
@@ -18,7 +19,6 @@ const KantoPokedex = () => {
 					</div>
 				</div>
 				<div className='row'>
-					{/* <div className='nes-table-responsive'> */}
 					<PokedexRowOne />
 					<PokedexRowTwo />
 					<PokedexRowThree />
@@ -26,7 +26,6 @@ const KantoPokedex = () => {
 					<PokedexRowFive />
 					<PokedexRowSix />
 					<PokedexRowSeven />
-					{/* </div> */}
 				</div>
 			</section>
 		</div>
