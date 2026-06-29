@@ -11,9 +11,7 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import PendingPokeball from '@/app/components/PendingPokeball';
 
-const PokemonDescription = (props: { id: number }) => {
-	const id = props.id;
-
+const PokemonDescription = ({ id }: { id: number }) => {
 	const { data, isLoading } = useQuery({
 		queryKey: ['species'],
 		queryFn: () => {
@@ -35,17 +33,13 @@ const PokemonDescription = (props: { id: number }) => {
 		enabled: !!evolutionChainURL,
 	});
 
-	const description = data?.data.flavor_text_entries.map(
+	const description = data?.data.flavor_text_entries.find(
 		(flavor: {
 			flavor_text: string;
 			language: { name: string; url: string };
 			version: { name: string; url: string };
-		}) => {
-			if (flavor.language.name == 'en' && flavor.version.name === 'yellow') {
-				return flavor.flavor_text;
-			}
-		},
-	);
+		}) => flavor.language.name === 'en' && flavor.version.name === 'firered-leafgreen',
+	)?.flavor_text;
 
 	const isNotBasicPokemon = data?.data.evolves_from_species;
 	const isBabyPokemon = data?.data.is_baby;
@@ -108,7 +102,7 @@ const PokemonDescription = (props: { id: number }) => {
 				{!isNotBasicPokemon && <BadgeBasicPokemon />}
 			</div>
 
-			{status == 'success' && chain && (
+			{status === 'success' && chain && (
 				<div className='col-md-12'>
 					<h3 className='my-4'>Evolution</h3>
 					<p>Evolves into: {evolutionTo}</p>

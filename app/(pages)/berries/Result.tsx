@@ -17,17 +17,17 @@ const Result = (props: any) => {
 					id='avatar'
 					height={64}
 					width={64}
-					src={bucketUrl + `${props.berry.name}-berry.png`}
+					src={`${bucketUrl}${props.berry.name}-berry.png`}
 				/>
 			)}
 
 			<div className='row rowStats'>
-				<div className='col-md-12 col-lg- stats'>
-					{props.height && <p>Height: {props.berry.height}in</p>}
-					{props.weight && <p>Weight: {props.berry.weight}in</p>}
+				<div className='col-md-12 col-lg-3 stats'>
+					{props.berry.height && <p>Height: {props.berry.height}in</p>}
+					{props.berry.weight && <p>Weight: {props.berry.weight}in</p>}
 					{props.berry.growth_time && <p>Growth Time: {props.berry.growth_time} days</p>}
 					{props.berry.max_harvest && <p>Max Harvest: {props.berry.max_harvest}</p>}
-					{props.natural_gift_power && (
+					{props.berry.natural_gift_power && (
 						<p>Natural Gift Power: {props.berry.natural_gift_power}</p>
 					)}
 					{props.berry.size && <p>Size: {props.berry.size}in</p>}

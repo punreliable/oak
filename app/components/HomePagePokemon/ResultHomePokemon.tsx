@@ -2,8 +2,6 @@ import React from 'react';
 import Image from 'next/image';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import PendingPokemon from '@/app/components/PendingPokemon';
-import ErrorPokemon from '@/app/components/ErrorPokemon';
 import PokemonAbilitiesList from '@/app/components/PokemonAbilitiesList';
 import PokemonBaseStatsList from '@/app/components/PokemonBaseStatsList';
 import PokemonDescription from '@/app/components/PokemonDescription';
@@ -34,21 +32,13 @@ const ResultHomePokemon = (props: PokemonFromAPI) => {
 		return response;
 	}
 
-	const { data, isLoading, isError } = useQuery({
+	const { data } = useQuery({
 		queryKey: ['species'],
 		queryFn: () =>
 			fetchSpeciesData(`https://pokeapi.co/api/v2/pokemon-species/${props.pokemon.name}`),
 	});
 
 	const baseStats: any = props.pokemon.stats;
-
-	{
-		isLoading && <PendingPokemon />;
-	}
-
-	{
-		isError && <ErrorPokemon />;
-	}
 
 	return (
 		<section className='container'>

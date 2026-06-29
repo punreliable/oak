@@ -1,10 +1,10 @@
+/* eslint-disable camelcase */
 'use client';
+
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import type { EvolutionChainFromAPI } from '@/types/evolution-chain';
-import PendingPokemon from '@/app/components/PendingPokemon';
-import ErrorPokemon from '@/app/components/ErrorPokemon';
 import transformWords from '@/utilities/transformWords';
 
 const EvolutionChainHandler = (props: { url: string }) => {
@@ -18,17 +18,10 @@ const EvolutionChainHandler = (props: { url: string }) => {
 		return response;
 	};
 
-	const { data, isLoading, isError } = useQuery({
+	const { data } = useQuery({
 		queryKey: ['evolution-chain', chainURL],
 		queryFn: () => fetchEvolutionChain(chainURL),
 	});
-
-	{
-		isLoading && <PendingPokemon />;
-	}
-	{
-		isError && <ErrorPokemon />;
-	}
 
 	const evolvesTo = data?.data.chain.evolves_to.map((evolves_to) => {
 		return <span key={evolves_to.species.name}>{transformWords(evolves_to.species.name)}</span>;

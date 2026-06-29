@@ -13,12 +13,11 @@ interface PokemonSpeciesAPIResponse {
 }
 
 const EvolutionsHandler = (props: { id: number }) => {
-
 	const pokemonID = props.id.toString();
 	const requestURL = `https://pokeapi.co/api/v2/pokemon-species/${pokemonID}`;
 
-	async function fetchPokemonSpeciesData(requestURL: string) {
-		const response: PokemonSpeciesAPIResponse = await axios.get(requestURL);
+	async function fetchPokemonSpeciesData(url: string) {
+		const response: PokemonSpeciesAPIResponse = await axios.get(url);
 		if (response.status !== 200) {
 			throw new Error('Evolves from Species, could not be found.');
 		}
@@ -27,8 +26,11 @@ const EvolutionsHandler = (props: { id: number }) => {
 
 	const { isLoading, isError } = useQuery({
 		queryKey: ['evolution-handler', requestURL],
-		queryFn: async () => await fetchPokemonSpeciesData(requestURL),
+		queryFn: () => fetchPokemonSpeciesData(requestURL),
 	});
+
+	if (isLoading) return <PendingPokemon />;
+	if (isError) return <ErrorPokemon />;
 
 	return (
 		<>

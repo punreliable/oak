@@ -41,13 +41,13 @@ export default async function Page({ params }: { params: any }) {
 	const sprite = post.sprites.default;
 
 	const description = post.flavor_text_entries.map((entry) => {
-		if (entry.language.name == 'en' && entry.version_group.name == 'yellow') {
+		if (entry.language.name === 'en' && entry.version_group.name === 'firered-leafgreen') {
 			return entry.text;
 		}
 	});
 
 	const effects = post.effect_entries.map((effect) => {
-		if (effect.language.name == 'en') {
+		if (effect.language.name === 'en') {
 			return effect.effect;
 		}
 	});

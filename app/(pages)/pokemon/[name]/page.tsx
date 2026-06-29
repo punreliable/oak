@@ -41,10 +41,6 @@ export default async function Page({ params }: { params: any }) {
 				throw new Error(`Pokemon not found`);
 			}
 			return res.json();
-		})
-		.catch((error) => {
-			console.error(error);
-			return null;
 		});
 
 	return (
@@ -63,7 +59,7 @@ export default async function Page({ params }: { params: any }) {
 
 								<Image
 									className='nes-avatar avatar pokemonAvatar'
-									alt={'Image of a ' + transformWords(post.name)}
+									alt={`Image of a ${transformWords(post.name)}`}
 									id='avatar'
 									src={post.sprites.front_default}
 									width={256}

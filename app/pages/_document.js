@@ -1,6 +1,8 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 class MyDocument extends Document {
+	// Next.js requires this render signature for custom Document.
+	// eslint-disable-next-line class-methods-use-this
 	render() {
 		return (
 			<Html>

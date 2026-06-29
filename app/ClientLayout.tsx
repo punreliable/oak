@@ -1,4 +1,5 @@
 // app/ClientLayout.tsx (Server Component - with metadata)
+/* eslint-disable camelcase */ 
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Press_Start_2P } from 'next/font/google';
 import React from 'react';

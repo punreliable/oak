@@ -1,4 +1,5 @@
 'use client';
+
 import React from 'react';
 import prettyName from '@/utilities/prettyName';
 
@@ -13,7 +14,7 @@ const Result = (props: any) => {
 		<a
 			key={obj.name}
 			className={`nes-btn type-${obj.name} is-${obj.name}`}
-			href={'/type/' + obj.name}
+			href={`/type/${obj.name}`}
 		>
 			{prettyName(obj.name)}
 		</a>
@@ -22,7 +23,7 @@ const Result = (props: any) => {
 		<a
 			key={obj.name}
 			className={`nes-btn type-${obj.name} is-${obj.name}`}
-			href={'/type/' + obj.name}
+			href={`/type/${obj.name}`}
 		>
 			{prettyName(obj.name)}
 		</a>
@@ -31,7 +32,7 @@ const Result = (props: any) => {
 		<a
 			key={obj.name}
 			className={`nes-btn type-${obj.name} is-${obj.name}`}
-			href={'/type/' + obj.name}
+			href={`/type/${obj.name}`}
 		>
 			{prettyName(obj.name)}
 		</a>
@@ -40,7 +41,7 @@ const Result = (props: any) => {
 		<a
 			key={obj.name}
 			className={`nes-btn type-${obj.name} is-${obj.name}`}
-			href={'/type/' + obj.name}
+			href={`/type/${obj.name}`}
 		>
 			{prettyName(obj.name)}
 		</a>
@@ -49,7 +50,7 @@ const Result = (props: any) => {
 		<a
 			key={obj.name}
 			className={`nes-btn type-${obj.name} is-${obj.name}`}
-			href={'/type/' + obj.name}
+			href={`/type/${obj.name}`}
 		>
 			{prettyName(obj.name)}
 		</a>
@@ -58,7 +59,7 @@ const Result = (props: any) => {
 		<a
 			key={obj.name}
 			className={`nes-btn type-${obj.name} is-${obj.name}`}
-			href={'/type/' + obj.name}
+			href={`/type/${obj.name}`}
 		>
 			{prettyName(obj.name)}
 		</a>

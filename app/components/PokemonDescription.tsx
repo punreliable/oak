@@ -3,7 +3,7 @@
 import React from 'react';
 import EvolvesFromSpecies from '@/app/components/EvolutionsByPokemon/EvolvesFromSpecies';
 import BadgeBasicPokemon from '@/app/components/badges/BadgeBasicPokemon';
-import BadgeBabyPokemon from '@/app/components/badges/BadgeBasicPokemon';
+import BadgeBabyPokemon from '@/app/components/badges/BadgeBabyPokemon';
 import BadgeLegendaryPokemon from '@/app/components/badges/BadgeLegendaryPokemon';
 import BadgeMythicalPokemon from '@/app/components/badges/BadgeMythicalPokemon';
 import type { PokemonSpecies } from '@/types/pokemon-species';
