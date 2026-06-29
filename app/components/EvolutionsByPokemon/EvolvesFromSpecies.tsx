@@ -12,12 +12,11 @@ interface PokemonSpeciesFromAPI {
 	status: number;
 }
 
-const EvolvesFromSpecies = (props: { species: PokemonSpecies }) => {
-	const species = props.species;
+const EvolvesFromSpecies = ({ species }: { species: PokemonSpecies }) => {
 	const requestURL: string = `https://pokeapi.co/pokemon-species/${species.name}`;
 
-	async function fetchEvolvesFromSpecies(requestURL: string) {
-		const response: PokemonSpeciesFromAPI = await axios.get(requestURL);
+	async function fetchEvolvesFromSpecies(url: string) {
+		const response: PokemonSpeciesFromAPI = await axios.get(url);
 		if (response.status !== 200) {
 			throw new Error('Evolves from Species, could not be found.');
 		}
