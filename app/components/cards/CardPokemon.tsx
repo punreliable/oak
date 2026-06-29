@@ -1,12 +1,11 @@
 'use client';
+
 import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import Image from 'next/image';
 import Link from 'next/link';
 import transformWords from '@/utilities/transformWords';
-import PendingPokemon from '@/app/components/PendingPokemon';
-import ErrorPokemon from '@/app/components/ErrorPokemon';
 import type { Pokemon } from '@/types/pokemon';
 
 interface PokemonFromAPI {
@@ -22,19 +21,10 @@ const CardPokemonType = (props: { link: string }) => {
 		return response.data;
 	}
 
-	const { data, isError, isLoading } = useQuery({
+	const { data } = useQuery({
 		queryKey: ['parent-pokemon'],
 		queryFn: async () => fetchParentPokemon(link),
 	});
-
-	console.log('Props: ', data);
-
-	{
-		isLoading && <PendingPokemon />;
-	}
-	{
-		isError && <ErrorPokemon />;
-	}
 	{
 		data && (
 			<div className='card is-dark member-card clickable'>

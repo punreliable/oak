@@ -6,7 +6,7 @@ import axios from 'axios';
 import prettyName from '@/utilities/prettyName';
 
 export function PokedexRowTwo() {
-	const { data, isLoading, isError } = useQuery({
+	const { data } = useQuery({
 		queryKey: ['pokedex-row-two'],
 		queryFn: async () => {
 			const rowStart = 24;
@@ -16,9 +16,6 @@ export function PokedexRowTwo() {
 			return res.data;
 		},
 	});
-
-	if (isLoading) return <p>Loading...</p>;
-	if (isError) return <p>Something went wrong!</p>;
 
 	const rowData = data.results.map((pokemon: any) => {
 		const url = pokemon.url;
@@ -67,3 +64,5 @@ export function PokedexRowTwo() {
 
 	return <div className='contributors'>{rowData}</div>;
 }
+
+export default PokedexRowTwo;

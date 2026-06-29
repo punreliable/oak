@@ -16,7 +16,7 @@ const Result = (props: any) => {
 
 			<Image
 				className='nes-avatar avatar pokemonAvatar'
-				alt={'Image of a ' + prettyName(props?.pokemon.name)}
+				alt={`Image of a ${prettyName(props?.pokemon.name)}`}
 				id='avatar'
 				src={props?.pokemon.sprites?.front_default}
 				width={256}

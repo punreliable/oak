@@ -1,13 +1,11 @@
 'use client';
+
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import transformWords from '@/utilities/transformWords';
-import PendingPokemon from '@/app/components/PendingPokemon';
-import ErrorPokemon from '@/app/components/ErrorPokemon';
 import type { PokemonSpecies } from '@/types/pokemon-species';
 import Link from 'next/link';
-// import CardPokemon from '@/app/components/cards/CardPokemon';
 
 interface PokemonSpeciesFromAPI {
 	data: PokemonSpecies;
@@ -26,18 +24,12 @@ const EvolvesFromSpecies = (props: { species: PokemonSpecies }) => {
 		return response;
 	}
 
-	const { data, isLoading, isError } = useQuery({
+	const { data } = useQuery({
 		queryKey: ['evolves-from-species', requestURL],
 		queryFn: async () => fetchEvolvesFromSpecies(requestURL),
 	});
 
 	const name: string = data?.data.name ? data.data.name : 'Unknown';
-	{
-		isLoading && <PendingPokemon />;
-	}
-	{
-		isError && <ErrorPokemon />;
-	}
 
 	return (
 		<div className='row'>

@@ -67,3 +67,5 @@ export function PokedexRowSeven() {
 
 	return <div className='contributors'>{rowData}</div>;
 }
+
+export default PokedexRowSeven;

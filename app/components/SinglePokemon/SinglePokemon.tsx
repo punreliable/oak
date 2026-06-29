@@ -1,12 +1,10 @@
 'use client';
+
 import { Suspense } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import PendingPokemon from '@/app/components/PendingPokemon';
-import ErrorPokemon from '@/app/components/ErrorPokemon';
 import type { Pokemon } from '@/types/pokemon';
-// import PokemonDescription from '@/app/components/PokemonDescription';
-// import PokemonStats from '@/app/components/PokemonStats';
 import PokemonAbilitiesList from '@/app/components/PokemonAbilitiesList';
 import PokemonMoveList from '@/app/components/PokemonMoveList';
 import PokemonTypeList from '@/app/components/PokemonTypeList';
@@ -20,18 +18,10 @@ async function fetchSinglePokemon(url: string) {
 }
 
 const SinglePokemon = (url: string) => {
-	const { data, isLoading, isError } = useQuery({
+	const { data } = useQuery({
 		queryKey: ['single-pokemon'],
 		queryFn: async () => fetchSinglePokemon(url),
 	});
-
-	{
-		isLoading && <PendingPokemon />;
-	}
-
-	{
-		isError && <ErrorPokemon />;
-	}
 
 	return (
 		<>
@@ -50,14 +40,7 @@ const SinglePokemon = (url: string) => {
 							width={256}
 							height={256}
 						/>
-						<div className='row'>
-							{/* <div className='col-lg-8'>
-				<PokemonDescription data={pokemon} />
-			</div> */}
-							{/* <div className='col-lg-4'>
-				<PokemonStats data={pokemon} stats={} />
-			</div> */}
-						</div>
+
 						<div className='row'>
 							<h3 className='h3-responsive'>Type</h3>
 						</div>

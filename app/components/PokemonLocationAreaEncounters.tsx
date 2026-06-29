@@ -1,18 +1,13 @@
 'use client';
+
 import { v4 as uuidv4 } from 'uuid';
 import { usePLAE } from '@/app/queries/usePLAE';
 import transformWords from '@/utilities/transformWords';
-import PendingPokeball from '@/app/components/PendingPokeball';
 import type { PokemonLocationAreaEncounter } from '@/types/pokemon-location-area-encounters';
 
 const PokemonLocationAreaEncounters = (params: { locations: string }) => {
-	const { data, isLoading } = usePLAE(params.locations);
+	const { data } = usePLAE(params.locations);
 	const locationList = locationsHandler();
-
-	{
-		isLoading && <PendingPokeball />;
-	}
-
 	return (
 		<div className='row' style={{ display: 'inline' }}>
 			<h3 className='responsive-h3'>Location Encounters</h3>

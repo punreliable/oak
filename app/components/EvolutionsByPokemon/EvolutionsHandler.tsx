@@ -13,7 +13,6 @@ interface PokemonSpeciesAPIResponse {
 }
 
 const EvolutionsHandler = (props: { id: number }) => {
-	console.log('Evolutions Handler Begins...');
 
 	const pokemonID = props.id.toString();
 	const requestURL = `https://pokeapi.co/api/v2/pokemon-species/${pokemonID}`;
@@ -30,9 +29,6 @@ const EvolutionsHandler = (props: { id: number }) => {
 		queryKey: ['evolution-handler', requestURL],
 		queryFn: async () => await fetchPokemonSpeciesData(requestURL),
 	});
-
-	if (isLoading) return <PendingPokemon />;
-	if (isError) return <ErrorPokemon />;
 
 	return (
 		<>

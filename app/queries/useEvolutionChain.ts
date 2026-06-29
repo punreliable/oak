@@ -8,5 +8,4 @@ const useEvolutionChain = (url: string) =>
 		enabled: !!url,
 	});
 
-
 export default useEvolutionChain;
