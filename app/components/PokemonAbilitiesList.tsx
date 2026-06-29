@@ -1,18 +1,17 @@
 import transformWords from '@/utilities/transformWords';
 import { v4 as uuidv4 } from 'uuid';
 
-const PokemonAbilitiesList = (props: any) => {
-	const abilities = props.abilities;
-	const count = props.abilities.length;
+const PokemonAbilitiesList = ({ abilities }: any) => {
+	const count = abilities.length;
 	let columns = `px-4 my-2`;
 	if (count > 2) {
-		columns = columns + ` col-md-4`;
+		columns += ` col-md-4`;
 	}
 	if (count > 1 && count < 3) {
-		columns = columns + ` col-md-6`;
+		columns += ` col-md-6`;
 	}
 	if (count > 2) {
-		columns = columns + ` col-md-12`;
+		columns += ` col-md-12`;
 	}
 
 	const minified = abilities.map((x: any) => (
