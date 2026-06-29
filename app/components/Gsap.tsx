@@ -2,7 +2,7 @@
 // import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin'
 
 export default function Gsap() {
-	//gsap.registerPlugin( MotionPathPlug )
+	// gsap.registerPlugin( MotionPathPlug )
 	// gsap.to(
 	//   "#imgProfessorOak", {
 	//     delay: 0,

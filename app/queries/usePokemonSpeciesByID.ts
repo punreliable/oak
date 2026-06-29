@@ -6,3 +6,5 @@ export const usePokemonSpeciesDataByID = (url: string) =>
 		queryKey: ['species'],
 		queryFn: () => axios.get(url),
 	});
+
+export default usePokemonSpeciesDataByID;

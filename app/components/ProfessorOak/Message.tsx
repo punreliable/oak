@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import professorOak from '@/assets/oak.svg';
+
 const Message = (props: { pokemon: string }) => {
 	return (
 		<section

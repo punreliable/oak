@@ -6,3 +6,5 @@ export const usePLAE = (url: string) =>
 		queryKey: ['locations'],
 		queryFn: () => axios.get(url),
 	});
+
+export default usePLAE;

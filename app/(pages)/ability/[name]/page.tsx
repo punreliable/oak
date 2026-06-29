@@ -29,17 +29,12 @@ export default async function Page({ params }: { params: any }) {
 		(res) => res.json(),
 	);
 
-	const description = post.flavor_text_entries.map((flavor) => {
-		if (flavor.language.name == 'en' && flavor.version_group.name == 'firered-leafgreen') {
-			return flavor.flavor_text;
-		}
-	});
+	const description = post.flavor_text_entries.find(
+		(flavor) =>
+			flavor.language.name === 'en' && flavor.version_group.name === 'firered-leafgreen',
+	)?.flavor_text;
 
-	const effectEntry = post.effect_entries.map((effect) => {
-		if (effect.language.name == 'en') {
-			return effect.effect;
-		}
-	});
+	const effectEntry = post.effect_entries.find((effect) => effect.language.name === 'en')?.effect;
 
 	return (
 		<section className='App nes-container container'>

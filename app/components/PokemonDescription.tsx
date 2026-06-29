@@ -1,4 +1,5 @@
 'use client';
+
 import React from 'react';
 import EvolvesFromSpecies from '@/app/components/EvolutionsByPokemon/EvolvesFromSpecies';
 import BadgeBasicPokemon from '@/app/components/badges/BadgeBasicPokemon';

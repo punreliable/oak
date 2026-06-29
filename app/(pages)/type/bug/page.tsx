@@ -1,4 +1,5 @@
 'use client';
+
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
@@ -6,6 +7,7 @@ import DamageRelationsError from '@/app/components/DamageRelations/DamageRelatio
 import DamageRelationsPending from '@/app/components/DamageRelations/DamageRelationsPending';
 import DamageRelationsResult from '@/app/components/DamageRelations/DamageRelationsResult';
 import prettyName from '@/utilities/prettyName';
+
 const PokemonTypeBugPage = () => {
 	const typeID: string = 'bug';
 	const { data, error, isLoading } = useQuery({

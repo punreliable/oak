@@ -1,4 +1,5 @@
 'use client';
+
 import { Suspense } from 'react';
 import Loading from '@/app/components/Loading';
 

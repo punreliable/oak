@@ -1,4 +1,5 @@
 'use client';
+
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
@@ -6,6 +7,7 @@ import Error from '@/app/(pages)/type/Error';
 import Pending from '@/app/(pages)/type/Pending';
 import Result from '@/app/(pages)/type/Result';
 import prettyName from '@/utilities/prettyName';
+
 const PokemonTypeGrassPage = () => {
 	const typeID: string = 'grass';
 	const { data, error, isLoading } = useQuery({

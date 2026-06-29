@@ -1,4 +1,5 @@
 'use client';
+
 import React from 'react';
 import prettyName from '@/utilities/prettyName';
 import Link from 'next/link';
@@ -10,11 +11,13 @@ const DamageRelationsResult = (props: any) => {
 	const doubleDamageTo = props.damage_relations.damage_relations.double_damage_to;
 	const halfDamageTo = props.damage_relations.damage_relations.half_damage_to;
 	const noDamageTo = props.damage_relations.damage_relations.no_damage_to;
+
 	const doubleDamageFromOutput = doubleDamageFrom.map((obj: { name: any }) => (
 		<Link key={obj.name} className={`nes-btn is-${obj.name} pr-4`} href={'/type/' + obj.name}>
 			{prettyName(obj.name)}
 		</Link>
 	));
+	
 	const doubleDamageToOutput = doubleDamageTo.map((obj: { name: any }) => (
 		<Link key={obj.name} className={`nes-btn is-${obj.name} pr-4`} href={'/type/' + obj.name}>
 			{prettyName(obj.name)}

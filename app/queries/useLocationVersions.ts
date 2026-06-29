@@ -6,3 +6,5 @@ export const useKantoLocations = (url: string) =>
 		queryKey: ['locations', 'inKanto'],
 		queryFn: () => axios.get(url),
 	});
+
+export default useKantoLocations;

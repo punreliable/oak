@@ -1,9 +1,10 @@
 'use client';
+
 import transformWords from '@/utilities/transformWords';
 import { v4 as uuidv4 } from 'uuid';
 import type { MoveList } from '@/types/move-list';
 
-const PokemonMoveList = (props: MoveList) => {
+const PokemonMoveList = ({ moves, from: fromPage }: MoveList) => {
 	interface versionGroupDetails {
 		version_group_details: [
 			{
@@ -17,7 +18,7 @@ const PokemonMoveList = (props: MoveList) => {
 	}
 
 	function detectMoveLearnMethod(data: versionGroupDetails) {
-		if (data.version_group_details[0].move_learn_method.name == 'level-up') {
+		if (data.version_group_details[0].move_learn_method.name === 'level-up') {
 			return (
 				<td className='hide-on-small'>
 					<span className='hide-on-small'>Level: </span>
@@ -29,9 +30,6 @@ const PokemonMoveList = (props: MoveList) => {
 			return <td className='hide-on-small'>N/A</td>;
 		}
 	}
-
-	const moves = props.moves;
-	const fromPage = props.from;
 
 	const minified = moves
 		.filter((x: any) => x.version_group_details[0].move_learn_method.name === 'level-up')
