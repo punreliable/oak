@@ -25,14 +25,14 @@ const CardPokemonType = (props: { link: string }) => {
 		queryKey: ['parent-pokemon'],
 		queryFn: async () => fetchParentPokemon(link),
 	});
-	{
+	return (
 		data && (
 			<div className='card is-dark member-card clickable'>
 				<div className='card-body' style={{ position: 'relative' }}>
 					<div className='avatar gameboy'>
 						<Image
 							className='nes-avatar avatar pokemonAvatar'
-							alt={'Image of a ' + transformWords(data?.name)}
+							alt={`Image of a ${transformWords(data?.name)}`}
 							id='avatar'
 							src={data?.sprites?.front_default}
 							width={256}
@@ -44,8 +44,8 @@ const CardPokemonType = (props: { link: string }) => {
 					{transformWords(data.name)}
 				</Link>
 			</div>
-		);
-	}
+		)
+	);
 };
 
 export default CardPokemonType;

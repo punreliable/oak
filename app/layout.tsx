@@ -7,7 +7,7 @@ import ClientLayout from '@/app/ClientLayout';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Provider } from 'react-redux';
 import store from '@/store/index';
-import { TanstackProvider } from './components/providers/tanstack-provider';
+import TanstackProvider from './components/providers/tanstack-provider';
 
 export const dynamicParams = true;
 

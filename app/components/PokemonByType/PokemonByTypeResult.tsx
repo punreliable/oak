@@ -11,12 +11,14 @@ export function getPokemonIDFromURL(url: string) {
 	return Number(output);
 }
 
-const PokemonByTypeResult = ({ pokemon: pokemonData }: {
+const PokemonByTypeResult = ({
+	pokemon: pokemonData,
+}: {
 	pokemon: { pokemon: [{ name: string; url: string }] };
 	slot?: number;
 }) => {
 	const classes: string = 'nes-btn is-error my-2 mx-2';
-	const pokemon = pokemonData.pokemon;
+	const { pokemon } = pokemonData;
 	const pokemonList: any = pokemon.map((pokemonItem: { name: string; url: string }) => {
 		let classesOutPut = '';
 		if (getPokemonIDFromURL(pokemonItem.url) > 151) {

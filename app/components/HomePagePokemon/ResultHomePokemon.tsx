@@ -48,7 +48,7 @@ const ResultHomePokemon = (props: PokemonFromAPI) => {
 
 			<Image
 				className='nes-avatar avatar pokemonAvatar'
-				alt={'Image of a ' + transformWords(props?.pokemon.name)}
+				alt={`Image of a ${transformWords(props?.pokemon.name)}`}
 				id='avatar'
 				src={props?.pokemon.sprites?.front_default}
 				width={256}

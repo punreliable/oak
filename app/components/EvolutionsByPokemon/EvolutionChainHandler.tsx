@@ -1,4 +1,5 @@
 /* eslint-disable camelcase */
+
 'use client';
 
 import React from 'react';
@@ -30,7 +31,7 @@ const EvolutionChainHandler = (props: { url: string }) => {
 	return (
 		<>
 			<p>
-				{data && transformWords(data.data.chain.species.name) + ' evolves into '}
+				{data && `${transformWords(data.data.chain.species.name)} evolves into `}
 				{data && evolvesTo}
 			</p>
 		</>

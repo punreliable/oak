@@ -35,8 +35,8 @@ const Home = () => {
 			);
 			return response.data;
 		},
-		onSuccess: (data: Pokemon) => {
-			dispatch(savePokemon(data)); // Dispatch the savePokemon action
+		onSuccess: (pokemonData: Pokemon) => {
+			dispatch(savePokemon(pokemonData)); // Dispatch the savePokemon action
 		},
 	} as UseQueryOptions<Pokemon, Error, Pokemon, string[]>);
 	if (!isClient) {

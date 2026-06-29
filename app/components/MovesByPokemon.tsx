@@ -26,9 +26,8 @@ const PokemonMoveList = ({ moves, from: fromPage }: MoveList) => {
 					{data.version_group_details[0].level_learned_at}
 				</td>
 			);
-		} else {
-			return <td className='hide-on-small'>N/A</td>;
 		}
+		return <td className='hide-on-small'>N/A</td>;
 	}
 
 	const minified = moves

@@ -7,25 +7,7 @@ import type { PokemonLocationAreaEncounter } from '@/types/pokemon-location-area
 
 const PokemonLocationAreaEncounters = (params: { locations: string }) => {
 	const { data } = usePLAE(params.locations);
-	const locationList = locationsHandler();
-	return (
-		<div className='row' style={{ display: 'inline' }}>
-			<h3 className='responsive-h3'>Location Encounters</h3>
-			<div className='nes-table-responsive'>
-				<table className='nes-table is-bordered is-centered is-dark'>
-					<thead>
-						<tr>
-							<th>Location Name</th>
-							<th className='hide-on-small'>Encounter Chance</th>
-						</tr>
-					</thead>
-					<tbody>{locationList}</tbody>
-				</table>
-			</div>
-		</div>
-	);
-
-	function locationsHandler() {
+	const locationsHandler = () => {
 		const validVersions = ['firered', 'leafgreen'];
 		return data?.data
 			.filter((location: any) =>
@@ -57,7 +39,24 @@ const PokemonLocationAreaEncounters = (params: { locations: string }) => {
 					</tr>
 				);
 			});
-	}
+	};
+	const locationList = locationsHandler();
+	return (
+		<div className='row' style={{ display: 'inline' }}>
+			<h3 className='responsive-h3'>Location Encounters</h3>
+			<div className='nes-table-responsive'>
+				<table className='nes-table is-bordered is-centered is-dark'>
+					<thead>
+						<tr>
+							<th>Location Name</th>
+							<th className='hide-on-small'>Encounter Chance</th>
+						</tr>
+					</thead>
+					<tbody>{locationList}</tbody>
+				</table>
+			</div>
+		</div>
+	);
 };
 
 export default PokemonLocationAreaEncounters;
