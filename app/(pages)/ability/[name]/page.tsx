@@ -30,10 +30,7 @@ export default async function Page({ params }: { params: any }) {
 	);
 
 	const description = post.flavor_text_entries.map((flavor) => {
-		if (
-			flavor.language.name == 'en' && 
-			flavor.version_group.name == 'firered-leafgreen'
-		) {
+		if (flavor.language.name == 'en' && flavor.version_group.name == 'firered-leafgreen') {
 			return flavor.flavor_text;
 		}
 	});
@@ -66,19 +63,19 @@ export default async function Page({ params }: { params: any }) {
 					)}
 				</div>
 			</div>
-			{
-			post.flavor_text_entries && description && (
+			{post.flavor_text_entries && description && (
 				<div className='row' style={{ display: 'block', width: '100%' }}>
 					<div className='col-md-12'>
 						<p className='my-4'>{description}</p>
 					</div>
 				</div>
 			)}
-			{
-			post.effect_entries && effectEntry && (
+			{post.effect_entries && effectEntry && (
 				<div className='row' style={{ display: 'block', width: '100%' }}>
 					<div className='col-md-12'>
-						<h3 className='responsive-h3 darkest-green my-4'>FireRed & LeafGreen Effects</h3>
+						<h3 className='responsive-h3 darkest-green my-4'>
+							FireRed & LeafGreen Effects
+						</h3>
 						<p className='my-4'>{effectEntry}</p>
 					</div>
 				</div>

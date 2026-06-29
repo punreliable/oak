@@ -1,6 +1,7 @@
 'use client';
+
 import React, { useEffect, useState } from 'react';
-import { useQuery } from '@tanstack/react-query';
+import { useQuery, UseQueryOptions } from '@tanstack/react-query';
 import axios from 'axios';
 import ErrorPokemon from '@/app/components/ErrorPokemon';
 import PendingPokemon from '@/app/components/PendingPokemon';
@@ -10,7 +11,6 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { useDispatch } from 'react-redux';
 import { savePokemon } from '@/reducers/pokemonReducer';
 import { AppDispatch } from '@/reducers/store';
-import { UseQueryOptions } from '@tanstack/react-query';
 import { getRandomKantoPokemonByID } from '@/utilities/getRandomKantoPokemonByID';
 
 interface PokemonFromAPI {

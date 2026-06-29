@@ -1,4 +1,5 @@
-'use client'; // Add this if it's a client component
+'use client';
+
 import React from 'react';
 
 export interface SinglePokemonData {

@@ -1,4 +1,5 @@
 'use client';
+
 import transformWords from '@/utilities/transformWords';
 import { specialLabeler } from '@/utilities/specialLabeler';
 import type { PokemonBaseStat, PokemonBaseStats } from '@/types/pokemon-base-stats';

@@ -3,11 +3,11 @@
 import React from 'react';
 import '@/node_modules/bootstrap/dist/css/bootstrap.css';
 import './globals.scss';
+import ClientLayout from '@/app/ClientLayout';
 import { TanstackProvider } from './components/providers/tanstack-provider';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Provider } from 'react-redux';
 import store from '@/store/index';
-import ClientLayout from '@/app/ClientLayout';
 
 export const dynamicParams = true;
 
