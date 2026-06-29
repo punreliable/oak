@@ -7,13 +7,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased] - 2026-05-09
 
-## [2.9.0] - 2026-06-29
+## [2.9.1] - 2026-06-29
+
+### Changed
+
+- [v2.9.1](https://github.com/punreliable/oak/releases/tag/v2.9.1)
+- Fully Linted App
+- Abilities Page updated
+
+## [2.9.0] - 2026-05-09
 
 ### Changed
 
 - [v2.9.0](https://github.com/punreliable/oak/releases/tag/v2.9.0)
-- Fully Linted App
-- Abilities Page updated
 - Moving forward the source of truth for this app is Pokemon FireRed & LeafGreen
 
 ## [2.8.2] - 2026-03-14
@@ -808,7 +814,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - [v1.0.0](https://github.com/punreliable/oak/releases/tag/v1.0.0)
 - Oak fetches Ditto Data from API
 
-[unreleased]: https://github.com/olivierlacan/keep-a-changelog/compare/v2.9.0...HEAD
+[unreleased]: https://github.com/olivierlacan/keep-a-changelog/compare/v2.9.1...HEAD
+[2.9.0]: https://github.com/punreliable/oak/compare/v2.9.1...v2.9.0
 [2.9.0]: https://github.com/punreliable/oak/compare/v2.9.0...v2.8.2
 [2.8.2]: https://github.com/punreliable/oak/compare/v2.8.2...v2.8.1
 [2.8.1]: https://github.com/punreliable/oak/compare/v2.8.1...v2.8.0
