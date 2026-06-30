@@ -34,7 +34,7 @@ export default async function Page({ params }: { params: any }) {
 			flavor.language.name === 'en' && flavor.version_group.name === 'firered-leafgreen',
 	)?.flavor_text;
 
-	const effectEntry = post.effect_entries.find((effect) => effect.language.name === 'en')?.effect;
+	const effectEntry = post.effect_entries.find((effect) => effect.language.name == 'en')?.effect;
 
 	return (
 		<section className='App nes-container container'>
@@ -69,7 +69,7 @@ export default async function Page({ params }: { params: any }) {
 				<div className='row' style={{ display: 'block', width: '100%' }}>
 					<div className='col-md-12'>
 						<h3 className='responsive-h3 darkest-green my-4'>
-							FireRed & LeafGreen Effects
+							Effects
 						</h3>
 						<p className='my-4'>{effectEntry}</p>
 					</div>
