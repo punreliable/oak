@@ -26,7 +26,9 @@ const PokemonDescription = (props: PokemonDescriptionProps) => {
 			flavor_text: string;
 			language: { name: string; url: string };
 			version: { name: string; url: string };
-		}) => flavor.language.name === 'en' && ( flavor.version.name === 'firered' || flavor.version.name === 'leafgreen' ),
+		}) =>
+			flavor.language.name === 'en' &&
+			(flavor.version.name === 'firered' || flavor.version.name === 'leafgreen'),
 	)?.flavor_text;
 
 	const isNotBasicPokemon = props.data?.evolves_from_species;

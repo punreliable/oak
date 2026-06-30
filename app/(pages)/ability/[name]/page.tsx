@@ -34,6 +34,7 @@ export default async function Page({ params }: { params: any }) {
 			flavor.language.name === 'en' && flavor.version_group.name === 'firered-leafgreen',
 	)?.flavor_text;
 
+	// eslint-disable-next-line eqeqeq
 	const effectEntry = post.effect_entries.find((effect) => effect.language.name == 'en')?.effect;
 
 	return (
@@ -68,9 +69,7 @@ export default async function Page({ params }: { params: any }) {
 			{post.effect_entries && effectEntry && (
 				<div className='row' style={{ display: 'block', width: '100%' }}>
 					<div className='col-md-12'>
-						<h3 className='responsive-h3 darkest-green my-4'>
-							Effects
-						</h3>
+						<h3 className='responsive-h3 darkest-green my-4'>Effects</h3>
 						<p className='my-4'>{effectEntry}</p>
 					</div>
 				</div>
