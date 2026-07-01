@@ -1,11 +1,15 @@
 import Link from 'next/link';
 
 const Footer = () => {
+	const currentYear: string = new Date().getFullYear().toString();
+
 	const social: { facebook: string; github: string; instagram: string } = {
 		facebook: 'https://facebook.com/punreliable',
 		github: 'https://github.com/punreliable',
 		instagram: 'https://instagram.com/punreliable',
 	};
+
+
 
 	return (
 		<footer className='page-footer fixed-bottom gameboy text-center'>
@@ -31,7 +35,12 @@ const Footer = () => {
 			</div>
 			<div className='row mb-3'>
 				<div className='col-md-12 footer-text'>
-					&copy;&nbsp;2025&nbsp;
+					<p>
+						Created for educational purposes by Punreliable.
+					</p>
+				</div>
+				<div className='col-md-12 footer-text'>
+					&copy;&nbsp;{currentYear}&nbsp;
 					<Link href='http://punreliable.com' target='_blank'>
 						Punreliable.com
 					</Link>
