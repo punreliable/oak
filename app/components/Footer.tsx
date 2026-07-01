@@ -9,8 +9,6 @@ const Footer = () => {
 		instagram: 'https://instagram.com/punreliable',
 	};
 
-
-
 	return (
 		<footer className='page-footer fixed-bottom gameboy text-center'>
 			<div className='row mb-3'>
@@ -35,9 +33,7 @@ const Footer = () => {
 			</div>
 			<div className='row mb-3'>
 				<div className='col-md-12 footer-text'>
-					<p>
-						Created for educational purposes by Punreliable.
-					</p>
+					<p>Created for educational purposes by Punreliable.</p>
 				</div>
 				<div className='col-md-12 footer-text'>
 					&copy;&nbsp;{currentYear}&nbsp;
