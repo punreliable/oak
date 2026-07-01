@@ -13,7 +13,7 @@ interface PokemonSpeciesFromAPI {
 }
 
 const EvolvesFromSpecies = ({ species }: { species: PokemonSpecies }) => {
-	const requestURL: string = `https://pokeapi.co/pokemon-species/${species.name}`;
+	const requestURL: string = `https://pokeapi.co/api/v2/pokemon-species/${species.name}`;
 
 	async function fetchEvolvesFromSpecies(url: string) {
 		const response: PokemonSpeciesFromAPI = await axios.get(url);
@@ -26,9 +26,10 @@ const EvolvesFromSpecies = ({ species }: { species: PokemonSpecies }) => {
 	const { data } = useQuery({
 		queryKey: ['evolves-from-species', requestURL],
 		queryFn: async () => fetchEvolvesFromSpecies(requestURL),
+		enabled: !!species?.name,
 	});
 
-	const name: string = data?.data.name ? data.data.name : 'Unknown';
+	const name: string = data?.data.name ?? species?.name ?? 'Unknown';
 
 	return (
 		<div className='row'>

@@ -1,15 +1,17 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 import EvolvesFromSpecies from '@/app/components/EvolutionsByPokemon/EvolvesFromSpecies';
 import BadgeBasicPokemon from '@/app/components/badges/BadgeBasicPokemon';
 import BadgeBabyPokemon from '@/app/components/badges/BadgeBabyPokemon';
 import BadgeLegendaryPokemon from '@/app/components/badges/BadgeLegendaryPokemon';
 import BadgeMythicalPokemon from '@/app/components/badges/BadgeMythicalPokemon';
 import transformWords from '@/utilities/transformWords';
-import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
 import PendingPokeball from '@/app/components/PendingPokeball';
+import PokemonEvolutionChain from '@/app/components/EvolutionsByPokemon/PokemonEvolutionChain';
 
 const PokemonDescription = ({ id }: { id: number }) => {
 	const { data, isLoading } = useQuery({
@@ -38,7 +40,7 @@ const PokemonDescription = ({ id }: { id: number }) => {
 			flavor_text: string;
 			language: { name: string; url: string };
 			version: { name: string; url: string };
-		}) => flavor.language.name === 'en' && flavor.version.name === 'firered-leafgreen',
+		}) => flavor.language.name === 'en' && flavor.version.name === 'firered',
 	)?.flavor_text;
 
 	const isNotBasicPokemon = data?.data.evolves_from_species;
@@ -46,7 +48,7 @@ const PokemonDescription = ({ id }: { id: number }) => {
 	const isLegendaryPokemon = data?.data.is_legendary;
 	const isMythicalPokemon = data?.data.is_mythical;
 
-	const evolutionTo = chain?.data.chain.evolves_to.map(
+	const evolvesFrom = chain?.data.chain.evolves_to.map(
 		(evolve: { species: { name: string } }) => {
 			return transformWords(evolve.species.name);
 		},
@@ -95,7 +97,9 @@ const PokemonDescription = ({ id }: { id: number }) => {
 				</>
 			)}
 			<div className='col-md-12'>
-				{isNotBasicPokemon && <EvolvesFromSpecies species={data?.data} />}
+				{isNotBasicPokemon && <EvolvesFromSpecies species={data?.data.evolves_from_species} />}
+			</div>
+			<div className='col-md-12'>
 				{isBabyPokemon && <BadgeBabyPokemon />}
 				{isLegendaryPokemon && <BadgeLegendaryPokemon />}
 				{isMythicalPokemon && <BadgeMythicalPokemon />}
@@ -103,14 +107,7 @@ const PokemonDescription = ({ id }: { id: number }) => {
 			</div>
 
 			{status === 'success' && chain && (
-				<div className='col-md-12'>
-					<h3 className='my-4'>Evolution</h3>
-					<p>Evolves into: {evolutionTo}</p>
-					<p>
-						Baby Trigger Item:{' '}
-						{data?.data.baby_trigger_item ? data.data.baby_trigger_item : 'None.'}
-					</p>
-				</div>
+				<PokemonEvolutionChain id={id} evolvesFrom={evolvesFrom} data={chain} />
 			)}
 		</>
 	);
