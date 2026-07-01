@@ -11,7 +11,6 @@ import BadgeLegendaryPokemon from '@/app/components/badges/BadgeLegendaryPokemon
 import BadgeMythicalPokemon from '@/app/components/badges/BadgeMythicalPokemon';
 import transformWords from '@/utilities/transformWords';
 import PendingPokeball from '@/app/components/PendingPokeball';
-import PokemonEvolutionChain from '@/app/components/EvolutionsByPokemon/PokemonEvolutionChain';
 
 const PokemonDescription = ({ id }: { id: number }) => {
 	const { data, isLoading } = useQuery({
@@ -105,10 +104,6 @@ const PokemonDescription = ({ id }: { id: number }) => {
 				{isMythicalPokemon && <BadgeMythicalPokemon />}
 				{!isNotBasicPokemon && <BadgeBasicPokemon />}
 			</div>
-
-			{status === 'success' && chain && (
-				<PokemonEvolutionChain id={id} evolvesFrom={evolvesFrom} data={chain} />
-			)}
 		</>
 	);
 };

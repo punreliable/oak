@@ -33,12 +33,12 @@ const EvolvesFromSpecies = ({ species }: { species: PokemonSpecies }) => {
 
 	return (
 		<div className='row'>
-			<h5 className='h5-responsive pt-4'>Evolves from:</h5>
-			<p>
-				<Link href={`/pokemon/${name}`} className='nes-badge'>
+			<div className='col-md-12 d-flex justify-content-center align-items-center flex-wrap'>
+				<h5 className='h5-responsive pt-4'>Evolves from:</h5>
+				<Link href={`/pokemon/${name}`} className='nes-badge evolution-badge'>
 					<span className='is-warning'>{transformWords(name)}</span>
 				</Link>
-			</p>
+			</div>
 		</div>
 	);
 };

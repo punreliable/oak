@@ -424,3 +424,10 @@ span {
 .nes-table-responsive {
   overflow-x: hidden;
 }
+
+.evolution-badge {
+  justify-content: flex-start;
+  &:hover {
+    text-decoration: none !important;
+  }
+}
