@@ -1,7 +1,5 @@
 'use client';
 
-import React from 'react';
-import Link from 'next/link';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import EvolvesFromSpecies from '@/app/components/EvolutionsByPokemon/EvolvesFromSpecies';
@@ -26,13 +24,6 @@ const PokemonDescription = ({ id }: { id: number }) => {
 	const genderRate: number = data?.data.gender_rate;
 	const growthRate: { name: string; url: string } = data?.data.growth_rate;
 	const hatchCounter: number = data?.data.hatch_counter;
-	const evolutionChainURL = data?.data.evolution_chain.url;
-
-	const { status, data: chain } = useQuery({
-		queryKey: ['evolution-chain', evolutionChainURL],
-		queryFn: () => axios.get(evolutionChainURL),
-		enabled: !!evolutionChainURL,
-	});
 
 	const description = data?.data.flavor_text_entries.find(
 		(flavor: {
@@ -46,12 +37,6 @@ const PokemonDescription = ({ id }: { id: number }) => {
 	const isBabyPokemon = data?.data.is_baby;
 	const isLegendaryPokemon = data?.data.is_legendary;
 	const isMythicalPokemon = data?.data.is_mythical;
-
-	const evolvesFrom = chain?.data.chain.evolves_to.map(
-		(evolve: { species: { name: string } }) => {
-			return transformWords(evolve.species.name);
-		},
-	);
 
 	if (isLoading) return <PendingPokeball />;
 
@@ -96,7 +81,9 @@ const PokemonDescription = ({ id }: { id: number }) => {
 				</>
 			)}
 			<div className='col-md-12'>
-				{isNotBasicPokemon && <EvolvesFromSpecies species={data?.data.evolves_from_species} />}
+				{isNotBasicPokemon && (
+					<EvolvesFromSpecies species={data?.data.evolves_from_species} />
+				)}
 			</div>
 			<div className='col-md-12'>
 				{isBabyPokemon && <BadgeBabyPokemon />}
