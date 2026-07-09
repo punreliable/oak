@@ -61,7 +61,7 @@ const Result = (props: any) => {
 					<PokemonDescription data={props.pokemon} />
 				</div>
 				<div className='col-lg-4' style={{ order: '1' }}>
-					{data && <PokemonStats data={props.pokemon} stats={data.species} />}
+					{data && <PokemonStats data={props.pokemon} />}
 				</div>
 			</div>
 
