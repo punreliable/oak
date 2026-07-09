@@ -59,7 +59,7 @@ const ResultHomePokemon = (props: PokemonFromAPI) => {
 				<div className='col-lg-4' style={{ order: '1' }}>
 					{baseStats && <PokemonBaseStatsList stats={baseStats} />}
 
-					{data && <PokemonStats data={props.pokemon} stats={data.data} />}
+					{data && <PokemonStats data={props.pokemon} />}
 				</div>
 				<div className='col-lg-8' style={{ order: '2' }}>
 					{data && <PokemonDescription data={data.data} />}
