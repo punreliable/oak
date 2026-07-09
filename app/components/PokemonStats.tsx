@@ -2,12 +2,12 @@
 
 import React from 'react';
 import type { Pokemon } from '@/types/pokemon';
+
 interface PokemonStatsAsProps {
 	data: Pokemon;
 }
 
 const PokemonStats = (props: PokemonStatsAsProps) => {
-
 	return (
 		<div>
 			<ul className='nes-list is-disc list-stats'>
