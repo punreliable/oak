@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased] - 2026-06-30
 
+## [2.9.3] - 2026-07-09
+
+### Changed
+
+- [v2.9.3](https://github.com/punreliable/oak/releases/tag/v2.9.3)
+- Updated pokemon/[name].tsx component so that PokemonStats render.
+
 ## [2.9.2] - 2026-06-30
 
 ### Changed
@@ -822,7 +829,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - [v1.0.0](https://github.com/punreliable/oak/releases/tag/v1.0.0)
 - Oak fetches Ditto Data from API
 
-[unreleased]: https://github.com/olivierlacan/keep-a-changelog/compare/v2.9.2...HEAD
+[unreleased]: https://github.com/olivierlacan/keep-a-changelog/compare/v2.9.3...HEAD
+[2.9.3]: https://github.com/punreliable/oak/compare/v2.9.3...v2.9.2
 [2.9.2]: https://github.com/punreliable/oak/compare/v2.9.2...v2.9.1
 [2.9.1]: https://github.com/punreliable/oak/compare/v2.9.1...v2.9.0
 [2.9.0]: https://github.com/punreliable/oak/compare/v2.9.0...v2.8.2
