@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 import ButtonNewPokemon from '@/app/components/Buttons/ButtonNewPokemon';
 import PendingPokemon from '@/app/components/PendingPokemon';
 import transformWords from '@/utilities/transformWords';
-import { Pokemon } from '@/types/pokemon';
+// import { Pokemon } from '@/types/pokemon';
 import Message from '@/app/components/ProfessorOak/Message';
 import MovesByPokemon from '@/app/components/MovesByPokemon';
 import PokemonAbilitiesList from '@/app/components/PokemonAbilitiesList';
@@ -10,6 +10,9 @@ import PokemonTypeList from '@/app/components/PokemonTypeList';
 import Image from 'next/image';
 import PokemonLocationAreaEncounters from '@/app/components/PokemonLocationAreaEncounters';
 import PokemonSpecies from '@/app/components/PokemonSpecies';
+import PokemonStats from '@/app/components/PokemonStats';
+import type { Pokemon } from '@/types/pokemon';
+import type { PokemonSpeciesAsType } from '@/types/pokemon-species-as-type';
 
 export interface Result {
 	name: string;
@@ -20,6 +23,11 @@ export interface PokemonListResponse {
 	next: string | null;
 	previous: string | null;
 	results: Result[];
+}
+
+interface PokemonStatsAsProps {
+	data: Pokemon;
+	stats: PokemonSpeciesAsType;
 }
 
 export const revalidate = 60;
@@ -66,7 +74,7 @@ export default async function Page({ params }: { params: any }) {
 									width={256}
 									height={256}
 								/>
-
+								{post && <PokemonStats data={post} />}
 								<div className='row my-4'>
 									<Suspense fallback={<PendingPokemon />}>
 										<PokemonSpecies id={post.id} />
