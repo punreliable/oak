@@ -5,7 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased] - 2026-06-30
+## [Unreleased] - 2026-07-13
+
+## [2.9.3] - 2026-07-13
+
+### Changed
+
+- [v2.9.4](https://github.com/punreliable/oak/releases/tag/v2.9.4)
+- Updated pokemon/[name].tsx component so that PokemonBaseStats load with PokemonStats.
 
 ## [2.9.3] - 2026-07-09
 

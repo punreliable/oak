@@ -11,6 +11,7 @@ import PokemonLocationAreaEncounters from '@/app/components/PokemonLocationAreaE
 import PokemonSpecies from '@/app/components/PokemonSpecies';
 import PokemonStats from '@/app/components/PokemonStats';
 import type { Pokemon } from '@/types/pokemon';
+import PokemonBaseStatsList from '@/app/components/PokemonBaseStatsList';
 
 export interface Result {
 	name: string;
@@ -67,7 +68,12 @@ export default async function Page({ params }: { params: any }) {
 									width={256}
 									height={256}
 								/>
-								{post && <PokemonStats data={post} />}
+								{post && (
+									<>
+										<PokemonBaseStatsList stats={post.stats} />
+										<PokemonStats data={post} />
+									</>
+								)}
 								<div className='row my-4'>
 									<Suspense fallback={<PendingPokemon />}>
 										<PokemonSpecies id={post.id} />
