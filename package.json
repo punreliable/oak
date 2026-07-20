@@ -86,6 +86,9 @@
 		"vitest": "3.2.4",
 		"webpack": "5.27.0"
 	},
+	"engines": {
+  	"node": ">=24 <25"
+	},
 	"prettier": {
 		"arrowParens": "always",
 		"printWidth": 100,
