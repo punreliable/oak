@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased] - 2026-07-20
 
+## [2.9.7] - 2026-07-20
+
+### Changed
+
+- [v2.9.7](https://github.com/punreliable/oak/releases/tag/v2.9.7)
+- Updated Engine version in package.json to Node v24
+
 ## [2.9.6] - 2026-07-20
 
 ### Changed
@@ -850,7 +857,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - [v1.0.0](https://github.com/punreliable/oak/releases/tag/v1.0.0)
 - Oak fetches Ditto Data from API
 
-[unreleased]: https://github.com/olivierlacan/keep-a-changelog/compare/v2.9.6...HEAD
+[unreleased]: https://github.com/punreliable/oak/compare/v2.9.7...HEAD
+[2.9.7]: https://github.com/punreliable/oak/compare/v2.9.7...v2.9.6
 [2.9.6]: https://github.com/punreliable/oak/compare/v2.9.6...v2.9.5
 [2.9.5]: https://github.com/punreliable/oak/compare/v2.9.5...v2.9.4
 [2.9.4]: https://github.com/punreliable/oak/compare/v2.9.4...v2.9.3
