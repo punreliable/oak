@@ -19,13 +19,15 @@ const KantoPokedex = () => {
 					</div>
 				</div>
 				<div className='row'>
-					<PokedexRowOne />
-					<PokedexRowTwo />
-					<PokedexRowThree />
-					<PokedexRowFour />
-					<PokedexRowFive />
-					<PokedexRowSix />
-					<PokedexRowSeven />
+					<>
+						<PokedexRowOne />
+						<PokedexRowTwo />
+						<PokedexRowThree />
+						<PokedexRowFour />
+						<PokedexRowFive />
+						<PokedexRowSix />
+						<PokedexRowSeven />
+					</>
 				</div>
 			</section>
 		</div>

@@ -9,7 +9,7 @@ export function PokedexRowFour() {
 	const { data, isLoading, isError } = useQuery({
 		queryKey: ['pokedex-row-four'],
 		queryFn: async () => {
-			const rowStart = 73;
+			const rowStart = 72;
 			const res = await axios.get(
 				`https://pokeapi.co/api/v2/pokemon?limit=24&offset=${rowStart}`,
 			);
