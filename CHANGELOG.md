@@ -7,7 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased] - 2026-07-13
 
-## [2.9.3] - 2026-07-13
+## [2.9.5] - 2026-07-20
+
+### Changed
+
+- [v2.9.5](https://github.com/punreliable/oak/releases/tag/v2.9.5)
+- Fixed Pokedex, which was missing one pokemon.
+
+## [2.9.4] - 2026-07-13
 
 ### Changed
 
@@ -836,7 +843,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - [v1.0.0](https://github.com/punreliable/oak/releases/tag/v1.0.0)
 - Oak fetches Ditto Data from API
 
-[unreleased]: https://github.com/olivierlacan/keep-a-changelog/compare/v2.9.3...HEAD
+[unreleased]: https://github.com/olivierlacan/keep-a-changelog/compare/v2.9.5...HEAD
+[2.9.5]: https://github.com/punreliable/oak/compare/v2.9.5...v2.9.4
+[2.9.4]: https://github.com/punreliable/oak/compare/v2.9.4...v2.9.3
 [2.9.3]: https://github.com/punreliable/oak/compare/v2.9.3...v2.9.2
 [2.9.2]: https://github.com/punreliable/oak/compare/v2.9.2...v2.9.1
 [2.9.1]: https://github.com/punreliable/oak/compare/v2.9.1...v2.9.0
