@@ -64,9 +64,9 @@ export default async function Page({ params }: { params: any }) {
 									className='nes-avatar avatar pokemonAvatar'
 									alt={`Image of a ${transformWords(post.name)}`}
 									id='avatar'
-									src={post.sprites.other.dream_world.front_default}
-									width={320}
-									height={320}
+									src={post.sprites.front_default}
+									width={256}
+									height={256}
 								/>
 								{post && (
 									<>
@@ -100,16 +100,7 @@ export default async function Page({ params }: { params: any }) {
 										/>
 									)}
 								</div>
-								<div className='row'>
-									<Image
-										className='nes-avatar avatar pokemonAvatar'
-										alt={'Image of a ' + transformWords(post.name)}
-										id='avatar'
-										src={post.sprites.front_default}
-										width={256}
-										height={256}
-									/>
-								</div>
+
 								<div className='row'>
 									<Message pokemon={post.id.toString()} />
 								</div>
