@@ -1,6 +1,6 @@
 {
 	"name": "oak",
-	"version": "2.9.7",
+	"version": "2.9.8",
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
@@ -87,7 +87,7 @@
 		"webpack": "5.27.0"
 	},
 	"engines": {
-  	"node": ">=24 <25"
+		"node": ">=24 <25"
 	},
 	"prettier": {
 		"arrowParens": "always",

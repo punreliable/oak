@@ -5,7 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased] - 2026-07-20
+## [Unreleased] - 2026-09-19
+
+## [2.9.8] - 2026-09-19
+
+### Added
+
+- [v2.9.7](https://github.com/punreliable/oak/releases/tag/v2.9.7)
+- /dream-world/[name] now renders pokemon with dream-world SVG image.
+- TS-Config now runs off ES2022 (updated from 5)
 
 ## [2.9.7] - 2026-07-20
 
@@ -857,7 +865,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - [v1.0.0](https://github.com/punreliable/oak/releases/tag/v1.0.0)
 - Oak fetches Ditto Data from API
 
-[unreleased]: https://github.com/punreliable/oak/compare/v2.9.7...HEAD
+[unreleased]: https://github.com/punreliable/oak/compare/v2.9.8...HEAD
+[2.9.7]: https://github.com/punreliable/oak/compare/v2.9.8...v2.9.7
 [2.9.7]: https://github.com/punreliable/oak/compare/v2.9.7...v2.9.6
 [2.9.6]: https://github.com/punreliable/oak/compare/v2.9.6...v2.9.5
 [2.9.5]: https://github.com/punreliable/oak/compare/v2.9.5...v2.9.4
