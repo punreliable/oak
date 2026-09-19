@@ -66,8 +66,8 @@ export default async function Page({ params }: { params: any }) {
 									alt={'Image of a ' + transformWords(post.name)}
 									id='avatar'
 									src={post.sprites.other.dream_world.front_default}
-									width={320}
-									height={320}
+									width={240}
+									height={240}
 								/>
 
 								<div className='row my-4'>
