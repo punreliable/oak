@@ -60,8 +60,6 @@ export default async function Page({ params }: { params: any }) {
 							<>
 								<h1 className='pokemonName'>{transformWords(post.name)}</h1>
 
-
-
 								<Image
 									className='nes-avatar avatar pokemonAvatar'
 									alt={`Image of a ${transformWords(post.name)}`}
@@ -103,14 +101,14 @@ export default async function Page({ params }: { params: any }) {
 									)}
 								</div>
 								<div className='row'>
-								<Image
-									className='nes-avatar avatar pokemonAvatar'
-									alt={'Image of a ' + transformWords(post.name)}
-									id='avatar'
-									src={post.sprites.front_default}
-									width={256}
-									height={256}
-								/>
+									<Image
+										className='nes-avatar avatar pokemonAvatar'
+										alt={'Image of a ' + transformWords(post.name)}
+										id='avatar'
+										src={post.sprites.front_default}
+										width={256}
+										height={256}
+									/>
 								</div>
 								<div className='row'>
 									<Message pokemon={post.id.toString()} />
