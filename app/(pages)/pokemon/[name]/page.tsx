@@ -61,13 +61,15 @@ export default async function Page({ params }: { params: any }) {
 							<>
 								<h1 className='pokemonName'>{transformWords(post.name)}</h1>
 
+
+
 								<Image
-									className='nes-avatar avatar pokemonAvatar'
+									className='text-center my-4'
 									alt={'Image of a ' + transformWords(post.name)}
 									id='avatar'
-									src={post.sprites.front_default}
-									width={256}
-									height={256}
+									src={post.sprites.other.dream_world.front_default}
+									width={320}
+									height={320}
 								/>
 
 								<div className='row my-4'>
@@ -96,7 +98,16 @@ export default async function Page({ params }: { params: any }) {
 										/>
 									)}
 								</div>
-
+								<div className='row'>
+								<Image
+									className='nes-avatar avatar pokemonAvatar'
+									alt={'Image of a ' + transformWords(post.name)}
+									id='avatar'
+									src={post.sprites.front_default}
+									width={256}
+									height={256}
+								/>
+								</div>
 								<div className='row'>
 									<Message pokemon={post.id.toString()} />
 								</div>
