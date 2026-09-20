@@ -22,7 +22,7 @@ const PokemonImagesByVersion = (props: { sprites?: PokemonSprites; name?: string
 				imageSources.map((imageSource, index) => (
 					<Image
 						key={`${imageSource}-${index}`}
-						className='nes-avatar avatar pokemonAvatar'
+						className='nes-avatar avatar pokemonAvatar mx-4'
 						alt={'Image of ' + (props?.name ?? 'Pokemon Name')}
 						title={'Image of ' + (props?.name ?? 'Pokemon Name')}
 						id={`avatar-${index}`}
