@@ -10,6 +10,7 @@ import PokemonTypeList from '@/app/components/PokemonTypeList';
 import Image from 'next/image';
 import PokemonLocationAreaEncounters from '@/app/components/PokemonLocationAreaEncounters';
 import PokemonSpecies from '@/app/components/PokemonSpecies';
+import PokemonImagesByVersion from '@/app/components/PokemonImagesByVersion/PokemonImagesByVersion';
 
 export interface Result {
 	name: string;
@@ -105,6 +106,9 @@ export default async function Page({ params }: { params: any }) {
 										width={256}
 										height={256}
 									/>
+								</div>
+								<div className='row my-4'>
+									<PokemonImagesByVersion sprites={post.sprites} />
 								</div>
 								<div className='row'>
 									<Message pokemon={post.id.toString()} />
