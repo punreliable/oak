@@ -107,9 +107,9 @@ export default async function Page({ params }: { params: any }) {
 										height={256}
 									/>
 								</div>
-								<div className='row my-4'>
-									<PokemonImagesByVersion sprites={post.sprites} />
-								</div>
+
+								<PokemonImagesByVersion sprites={post.sprites} />
+
 								<div className='row'>
 									<Message pokemon={post.id.toString()} />
 								</div>
