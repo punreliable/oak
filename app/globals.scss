@@ -32,6 +32,12 @@ body {
   text-align: center;
 }
 
+.nes-btn,
+[class^='nes-btn'],
+[class*=' nes-btn'] {
+  color: #fff !important;
+}
+
 .nes-container {
   display: flex;
   flex-direction: row;
