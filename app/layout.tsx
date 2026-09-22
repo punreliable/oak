@@ -1,7 +1,9 @@
 'use client';
 
 import React from 'react';
-import '@/node_modules/bootstrap/dist/css/bootstrap.css';
+// @ts-expect-error Bootstrap CSS is resolved by Next.js at build time.
+import 'bootstrap/dist/css/bootstrap.css';
+// @ts-expect-error Global SCSS is resolved by Next.js at build time.
 import './globals.scss';
 import ClientLayout from '@/app/ClientLayout';
 import { SpeedInsights } from '@vercel/speed-insights/next';
