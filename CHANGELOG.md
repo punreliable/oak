@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased] - 2026-09-20
 
+## [2.9.10] - 2026-09-22
+
+### Changed
+
+- [v2.9.10](https://github.com/punreliable/oak/releases/tag/v2.9.10)
+- Updated dev dependencies to minimize vulnerabilities
+
+
 ## [2.9.9] - 2026-09-20
 
 ### Changed
@@ -873,7 +881,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - [v1.0.0](https://github.com/punreliable/oak/releases/tag/v1.0.0)
 - Oak fetches Ditto Data from API
 
-[unreleased]: https://github.com/punreliable/oak/compare/v2.9.9...HEAD
+[unreleased]: https://github.com/punreliable/oak/compare/v2.9.10...HEAD
+[2.9.10]: https://github.com/punreliable/oak/compare/v2.9.10...v2.9.9
 [2.9.9]: https://github.com/punreliable/oak/compare/v2.9.9...v2.9.8
 [2.9.8]: https://github.com/punreliable/oak/compare/v2.9.8...v2.9.7
 [2.9.7]: https://github.com/punreliable/oak/compare/v2.9.7...v2.9.6
