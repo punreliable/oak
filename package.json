@@ -25,7 +25,7 @@
 		"@tanstack/react-query": "5.103.2",
 		"@tanstack/react-query-devtools": "^5.103.2",
 		"@tanstack/router-devtools": "^1.167.2",
-		"@tanstack/zod-form-adapter": "^0.26.4",
+		"@tanstack/zod-form-adapter": "^0.42.1",
 		"@vercel/analytics": "^1.1.1",
 		"@vercel/speed-insights": "^1.1.0",
 		"axios": "^1.20.0",
@@ -34,7 +34,7 @@
 		"css-loader": "7.1.5",
 		"framer-motion": "^10.16.5",
 		"glob": "13.0.6",
-		"gsap": "^3.12.2",
+		"gsap": "^3.15.0",
 		"jquery": "^3.4.1",
 		"micromatch": "^4.0.8",
 		"minimatch": "^10.2.6",
@@ -43,14 +43,14 @@
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-redux": "^8.1.3",
-		"redux": "^4.2.1",
+		"redux": "5.0.1",
 		"redux-thunk": "^2.4.2",
 		"sass": "1.105.0",
 		"scss-loader": "^0.0.1",
 		"style-loader": "^3.3.2",
 		"styled-components": "^6.5.3",
-		"uuid": "^9.0.1",
-		"zod": "^3.23.8"
+		"uuid": "14.0.2",
+		"zod": "4.6.5"
 	},
 	"devDependencies": {
 		"@tanstack/eslint-plugin-query": "^5.103.2",
@@ -91,6 +91,10 @@
 		"vite-tsconfig-paths": "^5.0.1",
 		"vitest": "5.0.1",
 		"webpack": "5.111.1"
+	},
+	"resolutions": {
+		"micromatch/picomatch": "^2.3.2",
+		"**/picomatch": "^4.0.7"
 	},
 	"engines": {
 		"node": ">=24 <25"
